@@ -12,6 +12,8 @@ This skill directs the execution of high-rigor literature reviews, transforming 
 - PRISMA 2020 Flow Protocol: [prisma_flow_template.md](./resources/prisma_flow_template.md)
 - Synthesis Matrix Template: [literature_matrix_template.md](./resources/literature_matrix_template.md)
 - Scopus / WoS Advanced Search Guide: [scopus_wos_search_guide.md](./references/scopus_wos_search_guide.md)
+- Anti-Hallucination Citation Protocol: [anti_hallucination_citation_protocol.md](./references/anti_hallucination_citation_protocol.md)
+- Citation Authenticity Verifier Script: [citation_verifier.py](./scripts/citation_verifier.py)
 
 ---
 
