@@ -17,6 +17,7 @@
 - **Chuyên ngành**: Quản trị kinh doanh  
 - **Mã số chuyên ngành**: 9340101  
 - **Cơ sở đào tạo**: Trường Đại học Tôn Đức Thắng (TDTU)  
+- **Thời gian đào tạo**: 36 tháng (Khóa tuyển sinh: Tháng 10/2027 – Bảo vệ dự kiến: Tháng 10/2030)  
 
 ---
 
@@ -176,12 +177,14 @@ flowchart LR
 ## 9. DANH MỤC TÀI LIỆU THAM KHẢO CHỌN LỌC (VERIFIED REFERENCES - APA 7th)
 
 1. Al-Natour, S., Benbasat, I., & Cenfetelli, R. (2011). The adoption of online shopping assistants: Perceived similarity as an antecedent to evaluative beliefs. *Journal of the Association for Information Systems*, 12(5), 347–374. https://doi.org/10.17705/1jais.00267
-2. Anderson, R. E., & Srinivasan, S. S. (2003). E-satisfaction and e-loyalty: A contingency framework. *Psychology & Marketing*, 20(2), 123–138. https://doi.org/10.1002/mar.10063
-3. Beatty, S. E., & Ferrell, M. E. (1998). Impulse buying: Modeling its precursors. *Journal of Retailing*, 74(2), 169–191. https://doi.org/10.1016/S0022-4359(98)90009-4
-4. Hair, J. F., Risher, J. J., Sarstedt, M., & Ringle, C. M. (2019). When to use and how to report the results of PLS-SEM. *European Business Review*, 31(1), 2–24. https://doi.org/10.1108/EBR-11-2018-0203
-5. Mehrabian, A., & Russell, J. A. (1974). *An approach to environmental psychology*. MIT Press.
-6. Oliver, R. L. (1980). A cognitive model of the antecedents and consequences of satisfaction decisions. *Journal of Marketing Research*, 17(4), 460–469. https://doi.org/10.1177/002224378001700405
-7. Rook, D. W., & Fisher, R. J. (1995). Normative influences on impulsive buying behavior. *Journal of Consumer Research*, 22(3), 305–313. https://doi.org/10.1086/209452
-8. Shanahan, T., Tran, T. P., & Taylor, E. C. (2019). Getting personal: How social media recommendation agents and personal relevance influence consumer attitudes. *Journal of Business Research*, 103, 408–416. https://doi.org/10.1016/j.jbusres.2019.02.049
-9. Verhagen, T., & van Dolen, W. (2011). The influence of online store beliefs on consumer online impulse buying: A model and empirical application. *Information & Management*, 48(8), 320–327. https://doi.org/10.1016/j.im.2011.08.001
-10. Xiao, B., & Benbasat, I. (2018). An empirical examination of the influence of biased product recommendation agents on credibility and user behavior. *Decision Support Systems*, 111, 22–32. https://doi.org/10.1016/j.dss.2018.04.004
+2. Ampadu, S., Jiang, Y., Debrah, E., Antwi, C. O., Amankwa, E., & Kankam, W. A. (2022). Online personalized recommended product quality and e-impulse buying: A conditional mediation analysis. *Journal of Retailing and Consumer Services*, 64, 102789. https://doi.org/10.1016/j.jretconser.2021.102789
+3. Anderson, R. E., & Srinivasan, S. S. (2003). E-satisfaction and e-loyalty: A contingency framework. *Psychology & Marketing*, 20(2), 123–138. https://doi.org/10.1002/mar.10063
+4. Beatty, S. E., & Ferrell, M. E. (1998). Impulse buying: Modeling its precursors. *Journal of Retailing*, 74(2), 169–191. https://doi.org/10.1016/S0022-4359(98)90009-4
+5. Ferrentino, R., & Boniello, C. (2018). Customer satisfaction: A mathematical framework for its analysis and its measurement. *Computational Management Science*, 15(3), 395–417. https://doi.org/10.1007/s10287-018-0305-1
+6. Hair, J. F., Risher, J. J., Sarstedt, M., & Ringle, C. M. (2019). When to use and how to report the results of PLS-SEM. *European Business Review*, 31(1), 2–24. https://doi.org/10.1108/EBR-11-2018-0203
+7. Mehrabian, A., & Russell, J. A. (1974). *An approach to environmental psychology*. MIT Press.
+8. Oliver, R. L. (1980). A cognitive model of the antecedents and consequences of satisfaction decisions. *Journal of Marketing Research*, 17(4), 460–469. https://doi.org/10.1177/002224378001700405
+9. Rook, D. W., & Fisher, R. J. (1995). Normative influences on impulsive buying behavior. *Journal of Consumer Research*, 22(3), 305–313. https://doi.org/10.1086/209452
+10. Shanahan, T., Tran, T. P., & Taylor, E. C. (2019). Getting personal: How social media recommendation agents and personal relevance influence consumer attitudes. *Journal of Business Research*, 103, 408–416. https://doi.org/10.1016/j.jbusres.2019.02.049
+11. Verhagen, T., & van Dolen, W. (2011). The influence of online store beliefs on consumer online impulse buying: A model and empirical application. *Information & Management*, 48(8), 320–327. https://doi.org/10.1016/j.im.2011.08.001
+12. Xiao, B., & Benbasat, I. (2018). An empirical examination of the influence of biased product recommendation agents on credibility and user behavior. *Decision Support Systems*, 111, 22–32. https://doi.org/10.1016/j.dss.2018.04.004

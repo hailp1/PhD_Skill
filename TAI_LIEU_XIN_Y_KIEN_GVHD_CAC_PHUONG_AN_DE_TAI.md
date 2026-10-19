@@ -6,6 +6,7 @@
 **Mã số NCS**: 262901002 | **Lớp**: 26290101  
 **Chuyên ngành**: Quản trị kinh doanh  
 **Đơn vị đào tạo**: Trường Đại học Tôn Đức Thắng (TDTU)  
+**Thời gian đào tạo**: 36 tháng (Khóa tuyển sinh: Tháng 10/2027 – Bảo vệ: Tháng 10/2030)  
 
 ---
 
@@ -48,9 +49,9 @@ Kính mong Thầy/Cô cho ý kiến chỉ đạo để em lựa chọn phương 
   - *Biến trung gian (Organism - O)*: Sự hài lòng trực tuyến (E-Satisfaction - ESAT).
   - *Biến phụ thuộc (Response - R)*: Hành vi mua bốc đồng trực tuyến (Online Impulse Buying - OIB).
 - **Ưu điểm**: Khớp từng câu chữ với quyết định giao đề tài của Viện/Trường; mô hình thanh thoát, dễ giải thích trước Hội đồng.
-- **Tiềm năng 02 bài báo**:
-  - *Bài 1 (WoS Q1)*: Tác động của 3 khía cạnh AI đến Sự hài lòng trực tuyến.
-  - *Bài 2 (Scopus Q1)*: Mô hình trung gian toàn phần kiểm định trên phần mềm SmartPLS 4.
+- **Tiềm năng 02 bài báo (Căn cứ literature thực tế đã xác thực Crossref)**:
+  - *Bài 1 (WoS SSCI Q1)*: Tác động của các chiều kích gợi ý AI đến Sự hài lòng trực tuyến (Dựa trên Xiao & Benbasat, 2018; Shanahan et al., 2019; Ferrentino & Boniello, 2018).
+  - *Bài 2 (Scopus Q1 / WoS Q1)*: Mô hình trung gian toàn phần AI $\rightarrow$ Sự hài lòng $\rightarrow$ Mua bốc đồng (Dựa trên Ampadu et al., 2022 - *JRCS*, DOI: `10.1016/j.jretconser.2021.102789`; Rook & Fisher, 1995; SmartPLS 4).
 
 ---
 
