@@ -149,6 +149,9 @@ def scan_file_for_citations(file_path: str):
     verified_count = 0
     hallucinated_count = 0
 
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
     for i, doi in enumerate(found_dois, 1):
         # Strip trailing punctuation often captured by regex
         clean = re.sub(r"[.)>,;]+$", "", doi)
@@ -156,17 +159,17 @@ def scan_file_for_citations(file_path: str):
         print(f"\n[{i}/{len(found_dois)}] Checking DOI: {clean}")
         if res["status"] == "VERIFIED":
             verified_count += 1
-            print(f"  ✓ STATUS: AUTHENTIC / VERIFIED")
+            print(f"  [PASS] STATUS: AUTHENTIC / VERIFIED")
             print(f"    Title:   {res['title']}")
             print(f"    Authors: {res['authors']}")
             print(f"    Journal: {res['journal']} ({res['year']})")
             print(f"    URL:     {res['doi_url']}")
         elif res["status"] == "HALLUCINATION_ALERT":
             hallucinated_count += 1
-            print(f"  ❌ STATUS: FAKE / HALLUCINATED DOI (NOT FOUND IN REGISTRY)")
+            print(f"  [FAIL] STATUS: FAKE / HALLUCINATED DOI (NOT FOUND IN REGISTRY)")
             print(f"    Warning: This DOI does not exist. Do NOT include in your dissertation!")
         else:
-            print(f"  ⚠ STATUS: {res.get('status')} - {res.get('error')}")
+            print(f"  [WARN] STATUS: {res.get('status')} - {res.get('error')}")
 
     print("\n" + "=" * 70)
     print(f"AUDIT SUMMARY: {verified_count} Verified | {hallucinated_count} Fake/Hallucinated")

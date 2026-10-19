@@ -153,8 +153,11 @@ def main():
     print(f"Em-dashes detected: {result['em_dash_count']} (Warning: Excessive em-dashes indicate AI generation)")
     print(f"Total issues flagged: {result['total_issues']}\n")
 
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
     if result["total_issues"] == 0:
-        print("✓ EXCELLENT: No typical AI clichés, boastful claims, or boilerplate formulas detected!")
+        print("[PASS] EXCELLENT: No typical AI clichés, boastful claims, or boilerplate formulas detected!")
         print("The text demonstrates appropriate academic tone and scholarly hedging.")
     else:
         print("--- FLAGGED ISSUES & RECOMMENDATIONS ---")
