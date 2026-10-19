@@ -1,67 +1,68 @@
-# BẢN THẢO ĐỀ CƯƠNG NGHIÊN CỨU LUẬN ÁN TIẾN SĨ
-*(DOCTORAL RESEARCH PROPOSAL DRAFT)*
+# ĐỀ CƯƠNG NGHIÊN CỨU LUẬN ÁN TIẾN SĨ
+*(DOCTORAL DISSERTATION RESEARCH PROPOSAL)*
 
 ---
 
-## TÊN ĐỀ TÀI (DISSERTATION TITLE)
+## TÊN ĐỀ TÀI ĐÃ ĐĂNG KÝ CHÍNH THỨC
+*(OFFICIALLY REGISTERED TITLE)*
 
-- **Tiếng Việt**:
-  > **Tác động của hệ thống đề xuất cá nhân hóa dựa trên AI đến hành vi mua bốc đồng của người tiêu dùng trực tuyến: Vai trò trung gian của trải nghiệm dòng chảy, sự thôi thúc mua và sự điều tiết của lo ngại quyền riêng tư.**
-- **Tiếng Anh**:
-  > **The Impact of AI-Driven Personalized Recommendation Systems on Online Consumer Impulse Buying Behavior: The Mediating Roles of Flow Experience and Urge to Buy Impulsively, and the Moderating Role of AI Privacy Concerns.**
+- **Tiếng Việt**: 
+  > **Tác động của hệ thống đề xuất cá nhân hóa dựa trên AI đến hành vi mua bốc đồng của người tiêu dùng trực tuyến: Vai trò trung gian của sự hài lòng trực tuyến**
+- **Tiếng Anh**: 
+  > **The Impact of AI-Driven Personalized Recommendation Systems on Online Consumer Impulse Buying Behavior: The Mediating Role of E-Satisfaction**
 
 - **Chuyên ngành**: Marketing & Quản trị Kinh doanh (Business Administration)
 - **Mã số chuyên ngành**: 9340101 / 9340115
 
 ---
 
-## 1. TÍNH CẤP THIẾT VÀ BỐI CẢNH NGHIÊN CỨU (RATIONALE)
+## 1. TÍNH CẤP THIẾT CỦA ĐỀ TÀI (RATIONALE)
 
-Trong kỷ nguyên kinh tế số, các nền tảng thương mại điện tử (Shopee, TikTok Shop, Lazada, Amazon) đang chuyển dịch mạnh mẽ từ các thuật toán gợi ý dựa trên quy tắc đơn giản (rule-based) sang **Hệ thống đề xuất thông minh ứng dụng Trí tuệ Nhân tạo (AI-Driven Personalized Recommendation Systems)**. Nhờ khả năng xử lý dữ liệu lớn theo thời gian thực (hành vi lướt web, lịch sử tìm kiếm, thời gian dừng trên từng sản phẩm), AI có thể dự đoán và gợi ý các sản phẩm có độ cá nhân hóa cực cao, thậm chí trước khi người tiêu dùng kịp định hình nhu cầu rõ ràng.
+Trong bối cảnh bùng nổ thương mại điện tử và trí tuệ nhân tạo (AI), các nền tảng bán lẻ trực tuyến lớn tại Việt Nam (Shopee, TikTok Shop, Lazada) đang cạnh tranh khốc liệt bằng việc ứng dụng **Hệ thống đề xuất cá nhân hóa dựa trên AI (AI-Driven Personalized Recommendation Systems)**. Thay vì hiển thị danh mục sản phẩm cố định, thuật toán AI liên tục học sâu (deep learning) từ dữ liệu hành vi thời gian thực để gợi ý sản phẩm phù hợp tối đa với sở thích và nhu cầu tức thời của từng khách hàng.
 
-Hành vi **mua bốc đồng trực tuyến (Online Impulse Buying)** đóng góp một tỷ trọng doanh thu khổng lồ cho các nhà bán lẻ trực tuyến (ước tính chiếm từ 40% đến 80% tổng các giao dịch thương mại điện tử). Mặc dù các doanh nghiệp đầu tư hàng triệu USD vào AI để kích thích doanh số, cơ chế tâm lý lý giải cách thức các gợi ý của AI chuyển hóa thành quyết định mua sắm bộc phát vẫn còn nhiều mắt xích chưa được khai phá thấu đáo:
-- Các nghiên cứu trước đây thường tiếp cận theo mô hình duy lý (Rational decision-making), xem sự hài lòng chức năng (Functional satisfaction) là biến trung gian. Tuy nhiên, mua bốc đồng về bản chất là một **hành vi cảm xúc bộc phát phi kế hoạch**. Khách hàng chỉ hài lòng đơn thuần sẽ có xu hướng cân nhắc kỹ lưỡng thay vì mua sắm bốc đồng.
-- Sự can thiệp quá sâu của AI làm nảy sinh mối lo ngại về việc xâm phạm đời tư (**AI Privacy Concerns**). Khi người tiêu dùng cảm thấy bị thuật toán theo dõi, họ có thể xuất hiện tâm lý đề phòng và phản kháng (Psychological reactance), làm suy giảm tác động tích cực của hệ thống AI.
+Hành vi **mua bốc đồng trực tuyến (Online Impulse Buying Behavior)** là một trong những động lực thúc đẩy doanh số lớn nhất trong bán lẻ kỹ thuật số. Tuy nhiên, mối liên kết cơ chế giữa tính thông minh của hệ thống AI và hành vi mua bốc đồng thông qua **Sự hài lòng trực tuyến (E-Satisfaction)** vẫn tồn tại những vấn đề học thuật quan trọng:
+- Đa phần các nghiên cứu truyền thống xem sự hài lòng là kết quả của việc đánh giá duy lý sau mua sắm (Post-purchase evaluation). Trong môi trường thương mại điện tử tích hợp AI, sự hài lòng nảy sinh **ngay trong quá trình tương tác (In-process E-Satisfaction)**: Khi hệ thống AI gợi ý đúng sản phẩm người dùng đang quan tâm, họ trải nghiệm cảm giác thỏa mãn, thích thú và giảm bớt nỗ lực tìm kiếm, từ đó tạo tiền đề kích hoạt quyết định mua sắm bộc phát.
+- Để luận án đạt độ sâu tiến sĩ với tên đề tài đã đăng ký, hệ thống đề xuất AI cần được phân rã thành các **chiều kích cốt lõi** phản ánh tính năng công nghệ (Độ chính xác cảm nhận - Perceived Accuracy, Tính cá nhân hóa cảm nhận - Perceived Personalization, và Tính mới/bất ngờ của gợi ý - Recommendation Novelty), đồng thời sự hài lòng trực tuyến được tiếp cận toàn diện cả về **nhận thức (Cognitive)** lẫn **cảm xúc (Affective)**.
 
 ---
 
 ## 2. KHOẢNG TRỐNG NGHIÊN CỨU (RESEARCH GAPS)
 
 1. **Khoảng trống lý thuyết (Theoretical Gap)**:
-   - Các công trình hiện hữu chủ yếu áp dụng Mô hình Chấp nhận Công nghệ (TAM) để giải thích ý định sử dụng AI, nhưng chưa giải thích được cơ chế chuyển hóa từ tác nhân công nghệ sang hành vi cảm xúc bốc phát. Nghiên cứu này kết hợp **Khung lý thuyết S-O-R** và **Thuyết Tính toán Quyền riêng tư (Privacy Calculus Theory)** để xây dựng mô hình giải thích đa chiều.
+   - Các nghiên cứu trước đây về hệ thống khuyến nghị (Recommendation Agents) chủ yếu sử dụng Mô hình Chấp nhận Công nghệ (TAM) để dự báo ý định mua có kế hoạch (Planned purchase). Nghiên cứu này kết hợp **Lý thuyết Kích thích - Cơ thể - Phản ứng (S-O-R Framework)** và **Lý thuyết Kỳ vọng - Xác nhận (Expectation-Confirmation Theory - ECT)** để giải thích cách thức sự hài lòng trực tuyến đóng vai trò "cầu nối" chuyển hóa kích thích thuật toán thành hành vi phi kế hoạch (Impulse buying).
 2. **Khoảng trống thực nghiệm (Empirical Gap)**:
-   - Kết quả thực nghiệm về vai trò của cá nhân hóa AI đối với hành vi tiêu dùng còn mâu thuẫn: một số học giả chỉ ra rằng cá nhân hóa gia tăng mức độ gắn kết, trong khi số khác phát hiện hiệu ứng "thung lũng kỳ lạ" (Uncanny valley) hoặc tâm lý bất an khi thuật toán "quá hiểu" người dùng. Sự thiếu đồng thuận này đòi hỏi phải kiểm định vai trò điều tiết của **Lo ngại quyền riêng tư AI (AI Privacy Concerns)**.
+   - Kết quả thực nghiệm về tác động của sự hài lòng trực tuyến đến hành vi mua bốc đồng còn nhiều tranh luận: Một số nghiên cứu cho rằng sự hài lòng thúc đẩy tâm lý mua sắm bộc phát do tâm trạng tích cực (Positive affect), nhưng số khác lại cho rằng người tiêu dùng hài lòng sẽ có xu hướng suy nghĩ thận trọng hơn. Luận án này làm sáng tỏ cơ chế tác động trực tiếp và gián tiếp trong bối cảnh thuật toán AI định hướng.
 3. **Khoảng trống bối cảnh (Contextual Gap)**:
-   - Đa số nghiên cứu về hệ thống gợi ý AI được tiến hành tại các thị trường phát triển phương Tây (Mỹ, Châu Âu), nơi người tiêu dùng có mức độ hiểu biết số và văn hóa cá nhân chủ nghĩa. Việc kiểm chứng mô hình tại **thị trường mới nổi như Việt Nam** (đặc trưng bởi văn hóa tập thể, mức độ bảo vệ dữ liệu cá nhân đang hoàn thiện và sự bùng nổ của thế hệ Gen Z mua sắm qua livestream/social commerce) mang lại đóng góp thực tiễn quan trọng.
+   - Các công trình quốc tế chủ yếu thực hiện tại thị trường phát triển. Việc kiểm định mô hình tại thị trường thương mại điện tử mới nổi và tăng trưởng hàng đầu khu vực như Việt Nam sẽ mang lại những đóng góp thực chứng giá trị cho cả giới học thuật và doanh nghiệp bán lẻ số.
 
 ---
 
-## 3. CÂU HỎI NGHIÊN CỨU VÀ MỤC TIÊU NGHIÊN CỨU
+## 3. MỤC TIÊU VÀ CÂU HỎI NGHIÊN CỨU
 
 ### 3.1. Câu hỏi nghiên cứu (Research Questions - RQs)
-- **RQ1**: Các khía cạnh của hệ thống đề xuất cá nhân hóa dựa trên AI (Độ cá nhân hóa cảm nhận và Tính bất ngờ thú vị) tác động như thế nào đến trạng thái nội tâm của người tiêu dùng trực tuyến?
-- **RQ2**: Cơ chế trung gian kép của Trải nghiệm dòng chảy (Flow experience) và Sự thôi thúc mua bốc đồng (Urge to buy impulsively) giải thích mối quan hệ giữa hệ thống AI và hành vi mua bốc đồng như thế nào?
-- **RQ3**: Mối lo ngại quyền riêng tư AI (AI Privacy Concerns) điều tiết mối quan hệ giữa kích thích từ hệ thống gợi ý AI và trạng thái tâm lý của người tiêu dùng ra sao?
-- **RQ4**: Các nhà bán lẻ trực tuyến và doanh nghiệp thương mại điện tử cần thực thi những giải pháp chiến lược nào để vừa kích hoạt hành vi mua sắm, vừa giảm thiểu tâm lý e ngại quyền riêng tư của khách hàng?
+- **RQ1**: Các khía cạnh đặc tính của hệ thống đề xuất cá nhân hóa dựa trên AI (Cá nhân hóa cảm nhận, Độ chính xác cảm nhận, Tính mới mẻ của gợi ý) tác động như thế nào đến Sự hài lòng trực tuyến của khách hàng?
+- **RQ2**: Sự hài lòng trực tuyến tác động như thế nào đến Hành vi mua bốc đồng của người tiêu dùng trực tuyến?
+- **RQ3**: Sự hài lòng trực tuyến đóng vai trò trung gian như thế nào trong mối quan hệ giữa hệ thống đề xuất cá nhân hóa dựa trên AI và Hành vi mua bốc đồng?
+- **RQ4**: Doanh nghiệp thương mại điện tử cần thực thi các hàm ý quản trị nào về thuật toán AI và thiết kế giao diện để gia tăng sự hài lòng và kích hoạt hành vi mua sắm hiệu quả?
 
 ### 3.2. Mục tiêu nghiên cứu (Research Objectives - ROs)
-- **RO1**: Hệ thống hóa cơ sở lý luận và xác định các nhân tố cấu thành hệ thống đề xuất AI tác động đến tâm lý người tiêu dùng.
-- **RO2**: Kiểm định thực nghiệm vai trò trung gian nối tiếp của Trải nghiệm dòng chảy tâm lý và Sự thôi thúc mua bộc phát.
-- **RO3**: Đánh giá điều kiện biên (vai trò điều tiết) của Lo ngại quyền riêng tư đối với hiệu quả của hệ thống gợi ý AI.
-- **RO4**: Đề xuất các hàm ý quản trị và kiến nghị chính sách nhằm tối ưu hóa trải nghiệm khách hàng và hiệu quả kinh doanh số.
+- **RO1**: Xác định và đo lường các chiều kích cấu thành Hệ thống đề xuất cá nhân hóa dựa trên AI tác động đến Sự hài lòng trực tuyến.
+- **RO2**: Kiểm định thực nghiệm tác động của Sự hài lòng trực tuyến đến Hành vi mua bốc đồng của người tiêu dùng.
+- **RO3**: Đánh giá và kiểm định vai trò trung gian (Mediating effect) của Sự hài lòng trực tuyến.
+- **RO4**: Đề xuất hệ thống giải pháp và hàm ý quản trị cho các nhà bán lẻ trực tuyến tại Việt Nam.
 
 ---
 
-## 4. KHUNG LÝ THUYẾT NỀN TẢNG (THEORETICAL FOUNDATIONS)
+## 4. CƠ SỞ LÝ THUYẾT NỀN TẢNG (THEORETICAL FOUNDATIONS)
 
-Luận án dựa trên 2 lý thuyết nền tảng tương hỗ:
+Luận án được xây dựng dựa trên 2 khung lý thuyết nền:
 
-1. **Khung lý thuyết Kích thích - Cơ thể - Phản ứng (S-O-R Framework)** *(Mehrabian & Russell, 1974; Jacoby, 2002)*:
-   - **Kích thích môi trường (Stimulus - S)**: Bao gồm *Độ cá nhân hóa cảm nhận (Perceived Personalization)* và *Tính bất ngờ thú vị (Serendipity)* của hệ thống đề xuất AI.
-   - **Trạng thái nội tâm (Organism - O)**: Trạng thái đắm chìm vào không gian số (*Flow Experience*) và phản ứng cảm xúc thôi thúc bộc phát (*Urge to Buy Impulsively*).
-   - **Phản ứng hành vi (Response - R)**: Quyết định thực hiện *Hành vi mua bốc đồng trực tuyến (Online Impulse Buying)*.
-2. **Thuyết Tính toán Quyền riêng tư (Privacy Calculus Theory)** *(Culnan & Bies, 2003)*:
-   - Người tiêu dùng luôn đặt lên bàn cân giữa **Lợi ích nhận được** (sự tiện lợi, tìm thấy sản phẩm ưa thích nhanh chóng nhờ AI) và **Cái giá phải trả** (dữ liệu cá nhân, hành vi bị theo dõi). Khi nỗi lo ngại quyền riêng tư vượt ngưỡng, nó sẽ tạo ra rào cản tâm lý kìm hãm phản ứng tích cực đối với hệ thống gợi ý.
+1. **Khung lý thuyết S-O-R (Stimulus - Organism - Response)** *(Mehrabian & Russell, 1974; Jacoby, 2002)*:
+   - **Tác nhân kích thích (Stimulus - S)**: Hệ thống đề xuất cá nhân hóa dựa trên AI với 3 đặc tính: *Cá nhân hóa cảm nhận (Perceived Personalization)*, *Độ chính xác cảm nhận (Perceived Accuracy)*, và *Tính mới mẻ của gợi ý (Recommendation Novelty)*.
+   - **Trạng thái nội tâm (Organism - O)**: *Sự hài lòng trực tuyến (E-Satisfaction)*, phản ánh trạng thái đánh giá tích cực của người tiêu dùng về trải nghiệm tương tác với hệ thống.
+   - **Phản ứng hành vi (Response - R)**: *Hành vi mua bốc đồng trực tuyến (Online Consumer Impulse Buying Behavior)*.
+2. **Lý thuyết Kỳ vọng - Xác nhận (Expectation-Confirmation Theory - ECT)** *(Oliver, 1980; Bhattacherjee, 2001)*:
+   - Khi gợi ý của AI đáp ứng hoặc vượt quá kỳ vọng của người tiêu dùng về sự chính xác và tiện lợi, sự xác nhận kỳ vọng sẽ hình thành nên sự hài lòng trực tuyến cao, tạo ra trạng thái tâm lý thoải mái, sẵn sàng đón nhận và ra quyết định mua hàng nhanh chóng mà không cần đắn đo dài dòng.
 
 ---
 
@@ -70,17 +71,17 @@ Luận án dựa trên 2 lý thuyết nền tảng tương hỗ:
 ```mermaid
 flowchart LR
     %% Subgraph Stimulus
-    subgraph S ["1. KÍCH THÍCH MÔI TRƯỜNG (STIMULUS)"]
+    subgraph S ["1. HỆ THỐNG ĐỀ XUẤT CÁ NHÂN HÓA AI (STIMULUS)"]
         direction TB
         PP["Cá nhân hóa cảm nhận<br/>(Perceived Personalization - PP)"]
-        SER["Tính bất ngờ thú vị<br/>(AI Serendipity - SER)"]
+        ACC["Độ chính xác cảm nhận<br/>(Perceived Accuracy - ACC)"]
+        NOV["Tính mới mẻ của gợi ý<br/>(Recommendation Novelty - NOV)"]
     end
 
-    %% Subgraph Organism
-    subgraph O ["2. TRẠNG THÁI NỘI TÂM (ORGANISM)"]
+    %% Subgraph Organism / Mediator
+    subgraph O ["2. VAI TRÒ TRUNG GIAN (ORGANISM)"]
         direction TB
-        FLOW["Trải nghiệm dòng chảy<br/>(Flow Experience - FLOW)"]
-        UBI["Sự thôi thúc mua bộc phát<br/>(Urge to Buy Impulsively - UBI)"]
+        ESAT["Sự hài lòng trực tuyến<br/>(E-Satisfaction - ESAT)"]
     end
 
     %% Subgraph Response
@@ -88,89 +89,95 @@ flowchart LR
         OIB["Hành vi mua bốc đồng trực tuyến<br/>(Online Impulse Buying - OIB)"]
     end
 
-    %% Moderator
-    subgraph M ["ĐIỀU KIỆN BIÊN"]
-        PC["Lo ngại quyền riêng tư AI<br/>(AI Privacy Concerns - PC)"]
-    end
+    %% Direct Relationships to Mediator
+    PP -->|H1| ESAT
+    ACC -->|H2| ESAT
+    NOV -->|H3| ESAT
 
-    %% Direct & Mediating Relationships
-    PP -->|H1| FLOW
-    PP -->|H3| UBI
-    SER -->|H2| FLOW
-    SER -->|H4| UBI
-    FLOW -->|H5| UBI
-    FLOW -->|H6| OIB
-    UBI -->|H7| OIB
+    %% Direct Relationships to DV
+    PP -->|H4| OIB
+    ACC -->|H5| OIB
+    NOV -->|H6| OIB
 
-    %% Moderating Relationships (Dashed lines)
-    PC -.->|H8a: Điều tiết âm| FLOW
-    PC -.->|H8b: Điều tiết âm| UBI
+    %% Mediator to DV
+    ESAT -->|H7| OIB
 
     %% Styling
     classDef stimulus fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
-    classDef organism fill:#fff3e0,stroke:#e65100,stroke-width:2px;
+    classDef mediator fill:#fff3e0,stroke:#e65100,stroke-width:2px;
     classDef response fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
-    classDef moderator fill:#fce4ec,stroke:#c2185b,stroke-width:2px,stroke-dasharray: 5 5;
 
-    class PP,SER stimulus;
-    class FLOW,UBI organism;
+    class PP,ACC,NOV stimulus;
+    class ESAT mediator;
     class OIB response;
-    class PC moderator;
 ```
 
 ---
 
 ## 6. HỆ THỐNG GIẢ THUYẾT NGHIÊN CỨU (HYPOTHESES DEVELOPMENT)
 
-- **$H_1$**: *Mức độ cá nhân hóa cảm nhận của hệ thống gợi ý AI có tác động tích cực đến Trải nghiệm dòng chảy tâm lý của người tiêu dùng.*
-- **$H_2$**: *Tính bất ngờ thú vị (Serendipity) của hệ thống gợi ý AI có tác động tích cực đến Trải nghiệm dòng chảy tâm lý.*
-- **$H_3$**: *Mức độ cá nhân hóa cảm nhận của hệ thống gợi ý AI có tác động tích cực đến Sự thôi thúc mua sắm bộc phát.*
-- **$H_4$**: *Tính bất ngờ thú vị của hệ thống gợi ý AI có tác động tích cực đến Sự thôi thúc mua sắm bộc phát.*
-- **$H_5$**: *Trải nghiệm dòng chảy tâm lý có tác động tích cực đến Sự thôi thúc mua sắm bộc phát.*
-- **$H_6$**: *Trải nghiệm dòng chảy tâm lý có tác động tích cực đến Hành vi mua bốc đồng trực tuyến.*
-- **$H_7$**: *Sự thôi thúc mua sắm bộc phát có tác động tích cực đến Hành vi mua bốc đồng trực tuyến.*
-- **$H_{8a}$**: *Mối lo ngại quyền riêng tư AI điều tiết tiêu cực mối quan hệ giữa Cá nhân hóa cảm nhận và Trải nghiệm dòng chảy, sao cho tác động tích cực này sẽ suy giảm khi lo ngại quyền riêng tư ở mức cao.*
-- **$H_{8b}$**: *Mối lo ngại quyền riêng tư AI điều tiết tiêu cực mối quan hệ giữa Cá nhân hóa cảm nhận và Sự thôi thúc mua sắm bộc phát.*
-- **$H_9$**: *Sự thôi thúc mua sắm bộc phát đóng vai trò trung gian trong mối quan hệ giữa Cá nhân hóa cảm nhận và Hành vi mua bốc đồng trực tuyến.*
+### 6.1. Tác động của các khía cạnh Hệ thống đề xuất AI đến Sự hài lòng trực tuyến
+- **$H_1$**: *Cá nhân hóa cảm nhận của hệ thống đề xuất AI có tác động tích cực đến Sự hài lòng trực tuyến của người tiêu dùng.*
+  - *Cơ sở*: Khi khách hàng cảm nhận sản phẩm gợi ý được thiết kế "đo ni đóng giày" cho riêng họ, nỗ lực tìm kiếm giảm đi và cảm xúc thỏa mãn gia tăng (Shanahan et al., 2019; Xiao & Benbasat, 2018).
+- **$H_2$**: *Độ chính xác cảm nhận của hệ thống đề xuất AI có tác động tích cực đến Sự hài lòng trực tuyến.*
+  - *Cơ sở*: Thuật toán đề xuất chính xác các mặt hàng đúng thời điểm và sở thích đáp ứng kỳ vọng của người mua, củng cố mức độ thỏa mãn dịch vụ (Al-Natour et al., 2011).
+- **$H_3$**: *Tính mới mẻ của gợi ý AI có tác động tích cực đến Sự hài lòng trực tuyến.*
+  - *Cơ sở*: Sự gợi ý những sản phẩm mới lạ, độc đáo nhưng phù hợp đem lại cảm giác ngạc nhiên thú vị (Serendipity/Novelty), kích hoạt sự hài lòng cảm xúc (Foster & Ford, 2003).
+
+### 6.2. Tác động trực tiếp đến Hành vi mua bốc đồng trực tuyến
+- **$H_4$**: *Cá nhân hóa cảm nhận có tác động tích cực trực tiếp đến Hành vi mua bốc đồng trực tuyến.*
+- **$H_5$**: *Độ chính xác cảm nhận có tác động tích cực trực tiếp đến Hành vi mua bốc đồng trực tuyến.*
+- **$H_6$**: *Tính mới mẻ của gợi ý có tác động tích cực trực tiếp đến Hành vi mua bốc đồng trực tuyến.*
+
+### 6.3. Tác động của Sự hài lòng trực tuyến và Vai trò trung gian
+- **$H_7$**: *Sự hài lòng trực tuyến có tác động tích cực đến Hành vi mua bốc đồng trực tuyến.*
+  - *Cơ sở*: Khách hàng đang trong trạng thái hài lòng và có tâm trạng tích cực thường hạ thấp nhận thức về rủi ro, nới lỏng kiểm soát tài chính và dễ đưa ra quyết định mua sắm bộc phát (Beatty & Ferrell, 1998; Verhagen & van Dolen, 2011).
+- **$H_{8a}$**: *Sự hài lòng trực tuyến đóng vai trò trung gian trong mối quan hệ giữa Cá nhân hóa cảm nhận và Hành vi mua bốc đồng trực tuyến.*
+- **$H_{8b}$**: *Sự hài lòng trực tuyến đóng vai trò trung gian trong mối quan hệ giữa Độ chính xác cảm nhận và Hành vi mua bốc đồng trực tuyến.*
+- **$H_{8c}$**: *Sự hài lòng trực tuyến đóng vai trò trung gian trong mối quan hệ giữa Tính mới mẻ của gợi ý và Hành vi mua bốc đồng trực tuyến.*
 
 ---
 
-## 7. BẢNG THAO TÁC HÓA CÁC KHÁI NIỆM (OPERATIONALIZATION OF CONSTRUCTS)
-*(Chuẩn mực APA 7th: Bảng 3 đường kẻ ngang, không có đường kẻ dọc)*
+## 7. BẢNG THAO TÁC HÓA CÁC BIẾN SỐ VÀ THANG ĐO KẾ THỪA
+*(Chuẩn mực APA 7th: Bảng 3 đường kẻ ngang)*
 
 | Khái niệm (Construct) | Định nghĩa thao tác hóa (Operational Definition) | Số mục hỏi | Nguồn kế thừa thang đo (Reference Source) |
 | :--- | :--- | :---: | :--- |
-| **Cá nhân hóa cảm nhận (PP)** | Mức độ người tiêu dùng cảm nhận các gợi ý từ AI phản ánh chính xác sở thích, thói quen và nhu cầu độc bản của họ. | 4 | Shanahan et al. (2019); Xiao & Benbasat (2018) |
-| **Tính bất ngờ thú vị (SER)** | Khả năng thuật toán gợi ý những sản phẩm bất ngờ, mới lạ nhưng lại có giá trị tích cực ngoài sự mong đợi của người dùng. | 3 | Foster & Ford (2003); Zhang et al. (2021) |
-| **Trải nghiệm dòng chảy (FLOW)** | Trạng thái người tiêu dùng hoàn toàn đắm chìm, tập trung cao độ và quên đi thời gian trong quá trình tương tác với nền tảng. | 4 | Csikszentmihalyi (1990); Novak et al. (2000) |
-| **Thôi thúc mua bộc phát (UBI)** | Cảm giác thôi thúc mãnh liệt, đột ngột nảy sinh muốn mua sản phẩm ngay lập tức mà không có kế hoạch trước. | 4 | Beatty & Ferrell (1998); Rook & Fisher (1995) |
-| **Mua bốc đồng trực tuyến (OIB)** | Hành động thực tế mua sắm phi kế hoạch diễn ra nhanh chóng sau khi tiếp nhận gợi ý trên nền tảng số. | 3 | Verhagen & van Dolen (2011); Stern (1962) |
-| **Lo ngại quyền riêng tư AI (PC)** | Mức độ bất an của khách hàng về việc thuật toán AI thu thập, giám sát và khai thác dữ liệu hành vi cá nhân của họ. | 4 | Dinev & Hart (2006); Xu et al. (2011) |
+| **Cá nhân hóa cảm nhận (PP)** | Mức độ khách hàng cảm thấy gợi ý phản ánh đúng sở thích, lịch sử duyệt và nhu cầu riêng của bản thân. | 4 | Shanahan et al. (2019); Xiao & Benbasat (2018) |
+| **Độ chính xác cảm nhận (ACC)** | Mức độ sản phẩm được gợi ý đúng với mong muốn thực tế và có tính ứng dụng cao. | 3 | Al-Natour et al. (2011); Komiak & Benbasat (2006) |
+| **Tính mới mẻ của gợi ý (NOV)** | Mức độ các gợi ý mang tính sáng tạo, bất ngờ và kích thích khám phá những mặt hàng mới. | 3 | Zhang et al. (2021); Foster & Ford (2003) |
+| **Sự hài lòng trực tuyến (ESAT)** | Đánh giá tổng thể tích cực và sự thỏa mãn của khách hàng đối với trải nghiệm được gợi ý bởi hệ thống AI. | 4 | Anderson & Srinivasan (2003); Oliver (1980, 1993) |
+| **Mua bốc đồng trực tuyến (OIB)** | Hành động mua sắm phi kế hoạch diễn ra nhanh chóng dưới tác động trực tiếp của các đề xuất AI trên nền tảng. | 4 | Beatty & Ferrell (1998); Rook & Fisher (1995); Verhagen & van Dolen (2011) |
 
 ---
 
 ## 8. PHƯƠNG PHÁP NGHIÊN CỨU DỰ KIẾN (METHODOLOGY)
 
-1. **Phương pháp tiếp cận**: Thực chứng (Positivism), phương pháp suy diễn (Deductive approach) kết hợp nghiên cứu hỗn hợp (Mixed-methods):
-   - *Giai đoạn 1 (Định tính)*: Thảo luận nhóm chuyên gia ($n=6-8$) để dịch ngược (Back-translation) và thích ứng các thang đo quốc tế sang ngữ cảnh người tiêu dùng Việt Nam. Khảo sát thử nghiệm Pilot study ($n=80$).
-   - *Giai đoạn 2 (Định lượng chính thức)*: Khảo sát mẫu lớn người tiêu dùng trực tuyến đã từng mua sắm qua các nền tảng có ứng dụng đề xuất AI (Shopee, TikTok Shop, Lazada).
-2. **Cỡ mẫu tối thiểu**:
-   - Tính toán bằng **G\*Power 3.1** với effect size $f^2 = 0.15$, $\alpha = 0.05$, Power ($1 - \beta$) = $0.95$, số biến dự báo tối đa = 5 $\rightarrow$ Cỡ mẫu lý thuyết tối thiểu là 138 quan sát.
-   - Theo tỷ lệ biến quan sát $10:1$ (Hair et al., 2019) với 22 câu hỏi đo lường $\rightarrow$ Cỡ mẫu cần thiết tối thiểu là $22 \times 10 = 220$ quan sát.
-   - Quy mô khảo sát mục tiêu: **$N = 450 - 500$ phiếu khảo sát hợp lệ**.
-3. **Kỹ thuật phân tích dữ liệu**:
-   - Sử dụng **PLS-SEM (SmartPLS 4)**: Thích hợp cho mô hình dự báo hành vi phức tạp, có cả biến trung gian nối tiếp và biến điều tiết.
-   - Kiểm soát sai lệch phương pháp chung (**Common Method Bias - CMB**) qua phép kiểm định đơn nhân tố của Harman (Harman's Single Factor test) và hệ số đa cộng tuyến toàn diện (Full Collinearity VIF).
+1. **Thiết kế nghiên cứu**:
+   - Nghiên cứu định tính sơ bộ: Phỏng vấn sâu 6 chuyên gia (giảng viên marketing và giám đốc e-commerce) để hoàn thiện bảng dịch thang đo.
+   - Nghiên cứu thử nghiệm (Pilot study): $N = 60 - 80$ người tiêu dùng trực tuyến nhằm kiểm tra độ tin cậy sơ bộ Cronbach's Alpha ($\ge 0.70$).
+   - Nghiên cứu định lượng chính thức: Khảo sát người tiêu dùng trực tuyến thường xuyên mua sắm trên các sàn thương mại điện tử có thuật toán đề xuất (Shopee, TikTok Shop, Lazada).
+2. **Cỡ mẫu**:
+   - Xác định bằng **G\*Power 3.1** ($f^2 = 0.15, \alpha = 0.05$, Power = $0.95$, số biến dự báo = 4) $\rightarrow$ Cỡ mẫu tối thiểu 129 quan sát.
+   - Tỷ lệ quan sát theo Hair et al. (2019): Thang đo gồm 18 biến quan sát $\rightarrow$ Cỡ mẫu khuyến nghị tối thiểu $18 \times 10 = 180$ mẫu.
+   - **Mục tiêu thu thập thực tế**: **$N = 350 - 450$ phiếu khảo sát hợp lệ**.
+3. **Phân tích dữ liệu**:
+   - Mô hình phương trình cấu trúc bình phương bé nhất từng phần (**PLS-SEM**) trên phần mềm SmartPLS 4.
+   - Kiểm tra Common Method Bias (CMB) bằng kiểm định Harman's Single Factor test.
+   - Đánh giá mô hình đo lường (Outer Loadings $\ge 0.708$, Cronbach's $\alpha \ge 0.70$, $\text{CR} \ge 0.70$, $\text{AVE} \ge 0.50$, $\text{HTMT} < 0.85$).
+   - Đánh giá mô hình cấu trúc (Bootstrapping 5,000 mẫu để kiểm định các giả thuyết trực tiếp và gián tiếp/trung gian).
 
 ---
 
-## 9. TÀI LIỆU THAM KHẢO CHỌN LỌC (KEY VERIFIED REFERENCES - APA 7th)
+## 9. DANH MỤC TÀI LIỆU THAM KHẢO CHỌN LỌC (VERIFIED REFERENCES - APA 7th)
 
-1. Beatty, S. E., & Ferrell, M. E. (1998). Impulse buying: Modeling its precursors. *Journal of Retailing*, 74(2), 169–191. https://doi.org/10.1016/S0022-4359(98)90009-4
-2. Culnan, M. J., & Bies, R. J. (2003). Consumer privacy: Balancing economic and justice considerations. *Journal of Social Issues*, 59(2), 323–342. https://doi.org/10.1111/1540-4560.00067
-3. Dinev, T., & Hart, P. (2006). An extended privacy calculus model for e-commerce transactions. *Information Systems Research*, 17(1), 61–80. https://doi.org/10.1287/isre.1060.0080
+1. Al-Natour, S., Benbasat, I., & Cenfetelli, R. (2011). The adoption of online shopping assistants: Perceived similarity as an antecedent to evaluative beliefs. *Journal of the Association for Information Systems*, 12(5), 347–374. https://doi.org/10.17705/1jais.00267
+2. Anderson, R. E., & Srinivasan, S. S. (2003). E-satisfaction and e-loyalty: A contingency framework. *Psychology & Marketing*, 20(2), 123–138. https://doi.org/10.1002/mar.10063
+3. Beatty, S. E., & Ferrell, M. E. (1998). Impulse buying: Modeling its precursors. *Journal of Retailing*, 74(2), 169–191. https://doi.org/10.1016/S0022-4359(98)90009-4
 4. Hair, J. F., Risher, J. J., Sarstedt, M., & Ringle, C. M. (2019). When to use and how to report the results of PLS-SEM. *European Business Review*, 31(1), 2–24. https://doi.org/10.1108/EBR-11-2018-0203
 5. Mehrabian, A., & Russell, J. A. (1974). *An approach to environmental psychology*. MIT Press.
-6. Rook, D. W., & Fisher, R. J. (1995). Normative influences on impulsive buying behavior. *Journal of Consumer Research*, 22(3), 305–313. https://doi.org/10.1086/209452
-7. Verhagen, T., & van Dolen, W. (2011). The influence of online store beliefs on consumer online impulse buying: A model and empirical application. *Information & Management*, 48(8), 320–327. https://doi.org/10.1016/j.im.2011.08.001
-8. Xiao, B., & Benbasat, I. (2018). An empirical examination of the influence of biased product recommendation agents on credibility and user behavior. *Decision Support Systems*, 111, 22–32. https://doi.org/10.1016/j.dss.2018.04.004
+6. Oliver, R. L. (1980). A cognitive model of the antecedents and consequences of satisfaction decisions. *Journal of Marketing Research*, 17(4), 460–469. https://doi.org/10.1177/002224378001700405
+7. Rook, D. W., & Fisher, R. J. (1995). Normative influences on impulsive buying behavior. *Journal of Consumer Research*, 22(3), 305–313. https://doi.org/10.1086/209452
+8. Shanahan, T., Tran, T. P., & Taylor, E. C. (2019). Getting personal: How social media recommendation agents and personal relevance influence consumer attitudes. *Journal of Business Research*, 103, 408–416. https://doi.org/10.1016/j.jbusres.2019.02.049
+9. Verhagen, T., & van Dolen, W. (2011). The influence of online store beliefs on consumer online impulse buying: A model and empirical application. *Information & Management*, 48(8), 320–327. https://doi.org/10.1016/j.im.2011.08.001
+10. Xiao, B., & Benbasat, I. (2018). An empirical examination of the influence of biased product recommendation agents on credibility and user behavior. *Decision Support Systems*, 111, 22–32. https://doi.org/10.1016/j.dss.2018.04.004
