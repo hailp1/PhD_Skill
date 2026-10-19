@@ -1,10 +1,11 @@
 # TÀI LIỆU XIN Ý KIẾN GIÁO VIÊN HƯỚNG DẪN: CÁC PHƯƠNG ÁN PHÁT TRIỂN ĐỀ TÀI LUẬN ÁN TIẾN SĨ
 *(DOCTORAL DISSERTATION TOPIC CONSULTATION DOSSIER)*
 
-**Kính gửi**: Giáo sư / Phó Giáo sư / Tiến sĩ Hướng dẫn khoa học  
-**Nghiên cứu sinh**: [Họ và tên Nghiên cứu sinh]  
-**Chuyên ngành**: Marketing & Quản trị Kinh doanh (Business Administration)  
-**Mã số chuyên ngành**: 9340101 / 9340115  
+**Kính gửi**: TS. Phùng Minh Tuấn (Người hướng dẫn khoa học)  
+**Nghiên cứu sinh**: Lê Phúc Hải  
+**Mã số NCS**: 262901002 | **Lớp**: 26290101  
+**Chuyên ngành**: Quản trị kinh doanh  
+**Đơn vị đào tạo**: Trường Đại học Tôn Đức Thắng (TDTU)  
 
 ---
 
@@ -140,4 +141,5 @@ Kính thưa Thầy/Cô, để hoàn thiện bản đề cương chính thức, e
 *Em xin chân thành cảm ơn sự quan tâm, chỉ dẫn tận tình và những ý kiến quý báu của Thầy/Cô!*
 
 **Nghiên cứu sinh kính trình**  
-*[Ký và ghi rõ họ tên]*
+**Lê Phúc Hải**  
+*(Mã NCS: 262901002 - Lớp: 26290101)*

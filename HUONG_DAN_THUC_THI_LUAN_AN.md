@@ -11,10 +11,15 @@
   > **Tác động của hệ thống đề xuất cá nhân hóa dựa trên AI đến hành vi mua bốc đồng của người tiêu dùng trực tuyến: Vai trò trung gian của sự hài lòng trực tuyến**
 - **Tên đề tài Tiếng Anh**:
   > **The Impact of AI-Driven Personalized Recommendation Systems on Online Consumer Impulse Buying Behavior: The Mediating Role of E-Satisfaction**
-- **Chuyên ngành**: Marketing & Quản trị Kinh doanh (Business Administration)
+- **Nghiên cứu sinh**: **Lê Phúc Hải** (Mã NCS: **262901002** | Lớp: **26290101**)
+- **Người hướng dẫn khoa học**: **TS. Phùng Minh Tuấn**
+- **Cơ sở đào tạo**: **Trường Đại học Tôn Đức Thắng (TDTU)**
+- **Chuyên ngành**: Quản trị kinh doanh (Business Administration) - Mã ngành: 9340101
 - **Đối tượng khảo sát**: Người tiêu dùng trực tuyến thường xuyên mua sắm trên các nền tảng thương mại điện tử ứng dụng thuật toán AI đề xuất (Shopee, TikTok Shop, Lazada).
 - **Mô hình nghiên cứu trực quan**: [mo_hinh_nghien_cuu.html](file:///d:/SE_Project/khoahoc/mo_hinh_nghien_cuu.html) *(có nút chuyển bản màu và trắng đen in ấn)*.
 - **Bản thảo đề cương chi tiết**: [de_cuong_nghien_cuu_chi_tiet.md](file:///d:/SE_Project/khoahoc/de_cuong_nghien_cuu_chi_tiet.md).
+- **Tài liệu tham vấn GVHD 5 phương án**: [TAI_LIEU_XIN_Y_KIEN_GVHD_CAC_PHUONG_AN_DE_TAI.md](file:///d:/SE_Project/khoahoc/TAI_LIEU_XIN_Y_KIEN_GVHD_CAC_PHUONG_AN_DE_TAI.md).
+- **File Excel theo dõi tiến độ tổng thể**: [BANG_THEO_DOI_TIEN_DO_LUAN_AN_VA_BAI_BAO.xlsx](file:///d:/SE_Project/khoahoc/BANG_THEO_DOI_TIEN_DO_LUAN_AN_VA_BAI_BAO.xlsx).
 
 ---
 

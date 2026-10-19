@@ -11,8 +11,12 @@
 - **Tiếng Anh**: 
   > **The Impact of AI-Driven Personalized Recommendation Systems on Online Consumer Impulse Buying Behavior: The Mediating Role of E-Satisfaction**
 
-- **Chuyên ngành**: Marketing & Quản trị Kinh doanh (Business Administration)
-- **Mã số chuyên ngành**: 9340101 / 9340115
+- **Nghiên cứu sinh**: Lê Phúc Hải  
+- **Mã số NCS**: 262901002 | **Lớp**: 26290101  
+- **Người hướng dẫn khoa học**: TS. Phùng Minh Tuấn  
+- **Chuyên ngành**: Quản trị kinh doanh  
+- **Mã số chuyên ngành**: 9340101  
+- **Cơ sở đào tạo**: Trường Đại học Tôn Đức Thắng (TDTU)  
 
 ---
 
