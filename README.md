@@ -1,6 +1,8 @@
 # PhD Research Skill Suite: Marketing & Business Administration
 *(Bộ Kỹ Năng Nghiên Cứu Luận Án Tiến Sĩ: Chuyên Ngành Marketing & Quản Trị Kinh Doanh)*
 
+> 📌 **Tài liệu điều hành cốt lõi**: Xem hướng dẫn thực thi toàn diện và lộ trình 02 bài báo quốc tế (01 WoS, 01 Scopus) tại: **[HUONG_DAN_THUC_THI_LUAN_AN.md](HUONG_DAN_THUC_THI_LUAN_AN.md)**.
+
 Hệ thống kỹ năng học thuật hỗ trợ toàn diện lộ trình nghiên cứu tiến sĩ từ lúc xây dựng Đề cương (Research Proposal), Tổng quan tài liệu (PRISMA SLR), Thiết kế thang đo & phương pháp (Methodology), Phân tích dữ liệu mô hình cấu trúc SEM (PLS-SEM / CB-SEM) đến Viết luận án 5 chương và công bố bài báo quốc tế (Scopus Q1/Q2, ABS/AJG 3-4*).
 
 Đặc biệt, hệ thống tích hợp **Quy chuẩn Triệt tiêu Văn phong AI & Thực hành Khiêm tốn Học thuật (Anti-AI & Academic Hedging)** nhằm đảm bảo tính liêm chính và sự điềm đạm của một nhà nghiên cứu khoa học chân chính.
