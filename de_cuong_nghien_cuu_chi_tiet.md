@@ -185,6 +185,7 @@ flowchart LR
 7. Mehrabian, A., & Russell, J. A. (1974). *An approach to environmental psychology*. MIT Press.
 8. Oliver, R. L. (1980). A cognitive model of the antecedents and consequences of satisfaction decisions. *Journal of Marketing Research*, 17(4), 460–469. https://doi.org/10.1177/002224378001700405
 9. Rook, D. W., & Fisher, R. J. (1995). Normative influences on impulsive buying behavior. *Journal of Consumer Research*, 22(3), 305–313. https://doi.org/10.1086/209452
-10. Shanahan, T., Tran, T. P., & Taylor, E. C. (2019). Getting personal: How social media recommendation agents and personal relevance influence consumer attitudes. *Journal of Business Research*, 103, 408–416. https://doi.org/10.1016/j.jbusres.2019.02.049
+10. Shanahan, T., Tran, T. P., & Taylor, E. C. (2019). Getting to know you: Social media personalization as a means of enhancing brand loyalty and perceived quality. *Journal of Retailing and Consumer Services*, 47, 177–187. https://doi.org/10.1016/j.jretconser.2018.10.007
 11. Verhagen, T., & van Dolen, W. (2011). The influence of online store beliefs on consumer online impulse buying: A model and empirical application. *Information & Management*, 48(8), 320–327. https://doi.org/10.1016/j.im.2011.08.001
-12. Xiao, B., & Benbasat, I. (2018). An empirical examination of the influence of biased product recommendation agents on credibility and user behavior. *Decision Support Systems*, 111, 22–32. https://doi.org/10.1016/j.dss.2018.04.004
+12. Xiao, B., & Benbasat, I. (2018). An empirical examination of the influence of biased personalized product recommendations on consumers' decision making outcomes. *Decision Support Systems*, 110, 46–57. https://doi.org/10.1016/j.dss.2018.03.005
+13. Xiao, B., & Benbasat, I. (2007). E-Commerce product recommendation agents: Use, characteristics, and impact. *MIS Quarterly*, 31(1), 137–209. https://doi.org/10.2307/25148784
