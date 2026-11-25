@@ -2,9 +2,14 @@
 Script: clean_dimensions_prisma.py
 Mục đích: 
   Làm sạch bộ dữ liệu 2,500 bài báo từ Dimensions theo chuẩn 4 giai đoạn PRISMA 2020.
-  Lọc bỏ bài chưa bình duyệt (SSRN, preprints), kỷ yếu hội thảo, bài trước 2018, 
-  và các nghiên cứu ngoài phạm vi hành vi người tiêu dùng.
-  Xuất file CSV dữ liệu sạch và tạo báo cáo số liệu chuẩn để đưa vào slide thuyết trình.
+  
+Chuỗi truy vấn Boolean đầu vào (PRISMA Identification Search String):
+  ("AI recommendation" OR "AI-driven recommendation" OR "recommender system" OR "recommender systems" OR "personalized recommendation" OR "recommendation agent" OR "algorithmic curation") AND ("impulse buying" OR "impulsive buying" OR "unplanned purchase" OR "urge to buy impulsively" OR "impulsive purchase") AND ("satisfaction" OR "e-satisfaction" OR "customer experience" OR "self-control" OR "self-regulation")
+
+Bộ lọc xuất:
+  - Khung thời gian: 2018 - 2026
+  - Ngôn ngữ: Tiếng Anh
+  - Loại hình: Article / Review / Peer-reviewed
 """
 
 import csv

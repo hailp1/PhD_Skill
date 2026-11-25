@@ -65,6 +65,31 @@
         </button>
     </header>
 
+    <!-- Khối Chuỗi Truy Vấn Boolean Đầu Vào (Search Strategy) -->
+    <div class="mb-6 bg-slate-900 text-slate-100 rounded-xl p-4 border border-slate-700 shadow-md">
+        <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-sky-400 flex items-center space-x-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <span>Chuỗi Truy Vấn Boolean Đầu Vào (PRISMA Identification Search String)</span>
+            </span>
+            <span class="text-[11px] text-slate-400">Dimensions / Scopus / WoS (2018–2026, Peer-reviewed)</span>
+        </div>
+        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 text-xs font-mono text-emerald-400 break-words leading-relaxed select-all">
+            ("AI recommendation" OR "AI-driven recommendation" OR "recommender system" OR "recommender systems" OR "personalized recommendation" OR "recommendation agent" OR "algorithmic curation") AND ("impulse buying" OR "impulsive buying" OR "unplanned purchase" OR "urge to buy impulsively" OR "impulsive purchase") AND ("satisfaction" OR "e-satisfaction" OR "customer experience" OR "self-control" OR "self-regulation")
+        </div>
+        <div class="mt-2.5 grid grid-cols-1 md:grid-cols-3 gap-2 text-[11px] text-slate-300">
+            <div class="bg-slate-800/80 px-2.5 py-1.5 rounded border border-slate-700">
+                <b class="text-sky-300 block">Khối 1 (Tech Stimuli):</b> Hệ thống & tác nhân đề xuất AI
+            </div>
+            <div class="bg-slate-800/80 px-2.5 py-1.5 rounded border border-slate-700">
+                <b class="text-rose-300 block">Khối 2 (Behavioral Outcome):</b> Hành vi mua sắm bốc đồng
+            </div>
+            <div class="bg-slate-800/80 px-2.5 py-1.5 rounded border border-slate-700">
+                <b class="text-amber-300 block">Khối 3 (Organism / Boundary):</b> Sự hài lòng & Tự kiểm soát
+            </div>
+        </div>
+    </div>
+
     <!-- Sơ đồ Luồng PRISMA 4 Giai đoạn -->
     <div class="space-y-6">
         <!-- GIAI ĐOẠN 1: IDENTIFICATION -->
@@ -76,7 +101,8 @@
                 <div class="prisma-box">
                     <b class="text-sky-900 block mb-1 text-sm font-semibold">Bản ghi thu thập ban đầu từ cơ sở dữ liệu:</b>
                     <div class="text-slate-600">
-                        • Nguồn Dimensions (Scopus & Crossref indexed): <b>n = 2,500</b> bài
+                        • Nguồn Dimensions (Scopus & Crossref indexed): <b>n = 2,500</b> bài<br>
+                        <span class="text-xs text-sky-700 font-medium">↳ Từ chuỗi truy vấn Boolean 3 khối khái niệm ở trên</span>
                     </div>
                 </div>
                 <div class="prisma-box-ex">

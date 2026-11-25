@@ -32,20 +32,21 @@ Chuỗi truy vấn được cấu trúc thành 3 khối khái niệm giao thoa �
 $$\text{Tập hợp bài báo} = \text{Khối 1 (Hệ thống đề xuất AI)} \cap \text{Khối 2 (Hành vi mua bốc đồng)} \cap \text{Khối 3 (Tiến trình nhận thức - cảm xúc)}$$
 
 ```text
-TITLE-ABS-KEY (
-    ("AI recommendation" OR "AI-driven recommendation*" OR "recommender system*" 
-     OR "personalized recommendation*" OR "recommendation agent*" OR "algorithmic curation")
-    AND ("impulse buy*" OR "impulsive buy*" OR "unplanned buy*" OR "urge to buy impulsively" 
-     OR "impulsive purchase" OR "online impulse shopping")
-    AND ("satisfaction" OR "e-satisfaction" OR "customer experience" OR "self-control" 
-     OR "self-regulation" OR "affective state" OR "perceived personalization")
-)
-AND (LIMIT-TO (DOCTYPE, "ar") OR LIMIT-TO (DOCTYPE, "re"))
-AND (LIMIT-TO (LANGUAGE, "English"))
-AND (LIMIT-TO (PUBYEAR, 2018) OR LIMIT-TO (PUBYEAR, 2019) OR LIMIT-TO (PUBYEAR, 2020) 
-     OR LIMIT-TO (PUBYEAR, 2021) OR LIMIT-TO (PUBYEAR, 2022) OR LIMIT-TO (PUBYEAR, 2023) 
-     OR LIMIT-TO (PUBYEAR, 2024) OR LIMIT-TO (PUBYEAR, 2025) OR LIMIT-TO (PUBYEAR, 2026))
+("AI recommendation" OR "AI-driven recommendation" OR "recommender system" OR "recommender systems" OR "personalized recommendation" OR "recommendation agent" OR "algorithmic curation") AND ("impulse buying" OR "impulsive buying" OR "unplanned purchase" OR "urge to buy impulsively" OR "impulsive purchase") AND ("satisfaction" OR "e-satisfaction" OR "customer experience" OR "self-control" OR "self-regulation")
 ```
+
+**Chi tiết 3 Khối từ khóa Boolean:**
+- **Khối 1 - Công nghệ Đề xuất AI (Independent Variables & Tech Stimuli):**  
+  `"AI recommendation" OR "AI-driven recommendation" OR "recommender system" OR "recommender systems" OR "personalized recommendation" OR "recommendation agent" OR "algorithmic curation"`
+- **Khối 2 - Hành vi Mua bốc đồng (Outcome / Dependent Variables):**  
+  `"impulse buying" OR "impulsive buying" OR "unplanned purchase" OR "urge to buy impulsively" OR "impulsive purchase"`
+- **Khối 3 - Yếu tố Nhận thức, Cảm xúc & Ranh giới (Mediating / Moderating Variables):**  
+  `"satisfaction" OR "e-satisfaction" OR "customer experience" OR "self-control" OR "self-regulation"`
+
+**Điều kiện lọc bổ sung trên các cơ sở dữ liệu:**
+- Loại hình: Article / Review
+- Ngôn ngữ: English
+- Khung thời gian: 2018 – 2026
 
 ### 2.2. Bảng Tiêu chí Lựa chọn và Loại trừ (Eligibility Criteria)
 
