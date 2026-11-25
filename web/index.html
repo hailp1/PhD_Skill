@@ -274,23 +274,41 @@
                     <div>
                         <div class="flex items-center space-x-2">
                             <span class="bg-emerald-600 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded tracking-wide">
-                                CWTS Leiden University Web App
+                                CWTS Leiden University Web App (Local)
                             </span>
-                            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-0.5 rounded">Port 8600</span>
+                            <span class="bg-emerald-950 text-emerald-300 border border-emerald-700 text-xs px-2 py-0.5 rounded flex items-center space-x-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span>Máy Chủ: http://localhost:8600</span>
+                            </span>
                         </div>
                         <h2 class="text-xl font-bold text-white mt-1">Bản Đồ Mạng Lưới Đồng Xuất Hiện Từ Khóa (VOSviewer Online)</h2>
                         <p class="text-xs text-slate-400">Trực quan hóa 28 khái niệm & 309 liên kết thực chứng từ 1,441 bài báo Scopus Q1</p>
                     </div>
 
-                    <div class="flex items-center space-x-3">
-                        <a href="http://localhost:8600/?json=data/luan_an_real_network.json" target="_blank" class="bg-slate-700 hover:bg-slate-600 text-white px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center space-x-1 border border-slate-600">
+                    <div class="flex items-center space-x-2.5">
+                        <button onclick="reloadVosIframe()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg text-xs font-semibold shadow transition flex items-center space-x-1.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                            <span>Tải Lại Mạng Lưới</span>
+                        </button>
+                        <a href="http://localhost:8600/?json=data/luan_an_real_network.json" target="_blank" class="bg-slate-700 hover:bg-slate-600 text-white px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center space-x-1.5 border border-slate-600">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            <span>Mở Cửa Sổ Riêng</span>
-                        </a>
-                        <a href="https://app.vosviewer.com" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg text-xs font-semibold shadow transition flex items-center space-x-1">
-                            <span>Mở Cloud app.vosviewer.com ➔</span>
+                            <span>Mở Toàn Màn Hình (Port 8600) ↗</span>
                         </a>
                     </div>
+                </div>
+
+                <!-- Chuyển đổi giữa Local VOSviewer và Offline Canvas -->
+                <div class="flex items-center justify-between mb-3 text-xs">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-slate-400 font-medium">Chế độ hiển thị:</span>
+                        <button id="btn-mode-local" onclick="switchVosMode('local')" class="px-2.5 py-1 rounded bg-indigo-600 text-white font-semibold transition">
+                            VOSviewer Online (Port 8600)
+                        </button>
+                        <button id="btn-mode-offline" onclick="switchVosMode('offline')" class="px-2.5 py-1 rounded bg-slate-700 text-slate-300 hover:text-white transition">
+                            Bản Đồ Canvas Thuần (Offline)
+                        </button>
+                    </div>
+                    <span class="text-slate-400 hidden sm:inline text-[11px]">Dữ liệu: <code>data/luan_an_real_network.json</code> (1,441 bài báo)</span>
                 </div>
 
                 <!-- Chú giải 4 Cụm & 3 Khoảng trống -->
@@ -317,13 +335,13 @@
                 <div class="relative w-full h-[650px] bg-slate-950 rounded-xl overflow-hidden border border-slate-700">
                     <iframe 
                         id="vosIframe"
-                        src="http://localhost:8600/?json=data/luan_an_real_network.json" 
+                        src="" 
                         class="w-full h-full border-0"
                         title="VOSviewer Online Hub">
                     </iframe>
                     <!-- Thông báo trợ giúp nếu chưa bật server -->
                     <div id="iframeNotice" class="absolute bottom-4 right-4 bg-slate-900/90 backdrop-blur-md p-3 rounded-lg border border-slate-700 text-xs text-slate-300 max-w-sm pointer-events-auto shadow-xl">
-                        💡 <b>Mẹo:</b> Nếu khung web báo lỗi kết nối, bạn chỉ cần nhấp đúp file <code class="text-amber-400">CHAY_VOSVIEWER_ONLINE.bat</code> trong thư mục dự án để bật máy chủ cổng 8600.
+                        💡 <b>Mẹo:</b> VOSviewer đang chạy qua máy chủ nội bộ. Nếu cần khởi động lại, bạn chỉ cần nhấp đúp file <code class="text-amber-400">start_vosviewer_online.bat</code> trong thư mục dự án.
                     </div>
                 </div>
             </div>
@@ -555,11 +573,44 @@
                 activeBtn.classList.add('active');
             }
 
-            // Nếu chuyển sang tab VOSviewer, tải lại iframe để bảo đảm kết nối
+            // Nếu chuyển sang tab VOSviewer, nạp URL Local nếu chưa có
             if (tabId === 'tab-vos') {
                 const iframe = document.getElementById('vosIframe');
-                if (iframe && (!iframe.src || iframe.src === 'about:blank')) {
+                if (iframe && (!iframe.src || iframe.src === 'about:blank' || iframe.getAttribute('src') === '')) {
                     iframe.src = 'http://localhost:8600/?json=data/luan_an_real_network.json';
+                }
+            }
+        }
+
+        // Tải lại iframe VOSviewer Online Local
+        function reloadVosIframe() {
+            const iframe = document.getElementById('vosIframe');
+            if (iframe) {
+                iframe.src = 'http://localhost:8600/?json=data/luan_an_real_network.json&t=' + Date.now();
+            }
+        }
+
+        // Chuyển đổi giữa Local VOSviewer và Offline Canvas
+        function switchVosMode(mode) {
+            const iframe = document.getElementById('vosIframe');
+            const btnLocal = document.getElementById('btn-mode-local');
+            const btnOffline = document.getElementById('btn-mode-offline');
+
+            if (mode === 'local') {
+                if (iframe) iframe.src = 'http://localhost:8600/?json=data/luan_an_real_network.json';
+                if (btnLocal) {
+                    btnLocal.className = 'px-2.5 py-1 rounded bg-indigo-600 text-white font-semibold transition';
+                }
+                if (btnOffline) {
+                    btnOffline.className = 'px-2.5 py-1 rounded bg-slate-700 text-slate-300 hover:text-white transition';
+                }
+            } else {
+                if (iframe) iframe.src = 'interactive_science_map.html';
+                if (btnOffline) {
+                    btnOffline.className = 'px-2.5 py-1 rounded bg-indigo-600 text-white font-semibold transition';
+                }
+                if (btnLocal) {
+                    btnLocal.className = 'px-2.5 py-1 rounded bg-slate-700 text-slate-300 hover:text-white transition';
                 }
             }
         }
