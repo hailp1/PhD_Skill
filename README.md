@@ -1,101 +1,91 @@
-# PhD Research Skill Suite: Marketing & Business Administration
-*(Bộ Kỹ Năng Nghiên Cứu Luận Án Tiến Sĩ: Chuyên Ngành Marketing & Quản Trị Kinh Doanh)*
+# PH.D. DISSERTATION RESEARCH REPOSITORY
+*(Kho Lưu Trữ Nghiên Cứu Luận Án Tiến Sĩ: Chuyên Ngành Marketing & Quản Trị Kinh Doanh)*
 
-> 📌 **Tài liệu điều hành cốt lõi**: Xem hướng dẫn thực thi toàn diện và lộ trình 02 bài báo quốc tế (01 WoS, 01 Scopus) tại: **[HUONG_DAN_THUC_THI_LUAN_AN.md](HUONG_DAN_THUC_THI_LUAN_AN.md)**.
-
-Hệ thống kỹ năng học thuật hỗ trợ toàn diện lộ trình nghiên cứu tiến sĩ từ lúc xây dựng Đề cương (Research Proposal), Tổng quan tài liệu (PRISMA SLR), Thiết kế thang đo & phương pháp (Methodology), Phân tích dữ liệu mô hình cấu trúc SEM (PLS-SEM / CB-SEM) đến Viết luận án 5 chương và công bố bài báo quốc tế (Scopus Q1/Q2, ABS/AJG 3-4*).
-
-Đặc biệt, hệ thống tích hợp **Quy chuẩn Triệt tiêu Văn phong AI & Thực hành Khiêm tốn Học thuật (Anti-AI & Academic Hedging)** nhằm đảm bảo tính liêm chính và sự điềm đạm của một nhà nghiên cứu khoa học chân chính.
+**Đề tài**: Tác động của hệ thống đề xuất cá nhân hóa dựa trên AI đến hành vi mua bốc đồng của người tiêu dùng trực tuyến: Vai trò trung gian của sự hài lòng trực tuyến  
+**NCS**: Lê Phúc Hải | **Cơ sở đào tạo**: Trường Đại học Tôn Đức Thắng (TDTU)  
+**Tiêu chuẩn hướng tới**: Scopus Q1 (ABS/AJG 3-4*), PRISMA 2020 Statement, và Trắc lượng thư mục VOSviewer  
 
 ---
 
-## 📁 Cấu Trúc Hệ Thống Kỹ Năng (`.agents/skills/`)
+## 🏛️ CẤU TRÚC THƯ MỤC CHUẨN QUỐC TẾ (REPOSITORY ARCHITECTURE)
+
+Kho lưu trữ được tổ chức theo tiêu chuẩn mở OSF (Open Science Framework) và cấu trúc quản lý luận án tiến sĩ quốc tế:
 
 ```text
-.agents/skills/
-├── phd-research-proposal/           # Giai đoạn 1: Xây dựng Đề cương nghiên cứu
-│   ├── SKILL.md
-│   ├── resources/proposal_template.md
-│   └── references/theories_in_marketing.md
+khoahoc/
+├── docs/                                # Hồ sơ học thuật và tài liệu đề cương (Documentation)
+│   ├── proposal_detailed.md             # Đề cương chi tiết (Mô hình trung gian chuỗi có điều tiết)
+│   ├── literature_matrix.md             # Ma trận tổng quan 8 bài Scopus Q1 xác thực mã DOI Crossref
+│   ├── prisma_2020_protocol.md          # Giao thức tổng quan y văn hệ thống chuẩn PRISMA 2020
+│   ├── guidelines_dissertation.md       # Cẩm nang hướng dẫn thực thi và chiến lược 02 bài báo quốc tế
+│   ├── notes_advisor_consultation.md    # Biên bản tổng hợp ý kiến góp ý của GVHD
+│   ├── notes_ferrentino_2018.md         # Ghi chú phân tích bài báo nền tảng Ferrentino (2018)
+│   └── progress_tracker.xlsx            # Bảng theo dõi tiến độ tổng thể luận án & bài báo
 │
-├── phd-literature-review/            # Giai đoạn 2: Tổng quan tài liệu có hệ thống (SLR)
-│   ├── SKILL.md
-│   ├── resources/prisma_flow_template.md
-│   ├── resources/literature_matrix_template.md
-│   └── references/scopus_wos_search_guide.md
+├── data/                                # Quản lý dữ liệu thực nghiệm (Research Data)
+│   ├── raw/                             # Dữ liệu xuất thô từ cơ sở dữ liệu quốc tế
+│   │   └── dimensions_raw_export.csv    # 2,500 bài báo thô xuất từ Dimensions
+│   ├── processed/                       # Dữ liệu sạch sau sàng lọc PRISMA 2020
+│   │   ├── dimensions_clean_included.csv# 1,441 bài báo Scopus Q1/Q2 cốt lõi (100% có DOI)
+│   │   └── prisma_2020_slide_report.md  # Thống kê chi tiết & kịch bản nói 2 phút cho Slide
+│   ├── vosviewer/                       # Tệp tọa độ và ma trận liên kết nạp vào VOSviewer
+│   │   ├── keywords_map.txt             # Tọa độ 2D, tần suất xuất hiện và phân cụm từ khóa
+│   │   └── keywords_network.txt         # 309 cặp liên kết đồng xuất hiện thực chứng
+│   └── references/                      # Kho lưu trữ tệp PDF bài báo gốc
+│       └── ferrentino_2018.pdf          # Tệp toàn văn bài báo Ferrentino et al. (2018)
 │
-├── phd-methodology-design/          # Giai đoạn 3: Phương pháp luận & Thang đo
-│   ├── SKILL.md
-│   ├── resources/scale_development_protocol.md
-│   ├── resources/sample_size_guidelines.md
-│   └── resources/survey_questionnaire_template.md
+├── web/                                 # Giao diện trực quan hóa và Dashboard điều khiển (Web UI)
+│   ├── index.html                       # 🌟 DASHBOARD TRUNG TÂM THỐNG NHẤT (SPA 4 Tabs)
+│   ├── prisma_flowchart.html            # Sơ đồ dòng chảy PRISMA 2020 tương tác (có nút in PDF)
+│   ├── conceptual_model.html            # Mô hình khái niệm tương tác SVG (Chế độ Màu & Đơn sắc APA 7th)
+│   └── interactive_science_map.html     # Bản đồ mạng lưới tương tác 3 chế độ (Network/Overlay/Density)
 │
-├── phd-data-analysis/               # Giai đoạn 4: Phân tích dữ liệu & Mô hình SEM
-│   ├── SKILL.md
-│   ├── scripts/research_data_toolkit.py
-│   └── references/sem_analysis_guide.md
+├── .agents/skills/                      # Hệ sinh thái kỹ năng AI nội bộ (AI Advisory Suite)
+│   ├── phd-research-proposal/           # Kỹ năng xây dựng đề cương & giả thuyết nghiên cứu
+│   ├── phd-literature-review/           # Kỹ năng PRISMA 2020, VOSviewer & Thẩm định trích dẫn Crossref
+│   ├── phd-methodology-design/          # Kỹ năng thiết kế phương pháp, cỡ mẫu & thang đo dịch ngược
+│   ├── phd-data-analysis/               # Kỹ năng phân tích PLS-SEM, CB-SEM & Kiểm soát CMB
+│   └── phd-dissertation-writing/        # Kỹ năng viết 5 chương, thảo luận kết quả & tone audit v2.0
 │
-└── phd-dissertation-writing/        # Giai đoạn 5: Viết luận án & Bài báo Scopus
-    ├── SKILL.md
-    ├── scripts/academic_tone_audit.py
-    ├── resources/dissertation_structure_template.md
-    ├── resources/academic_phrasebank_marketing.md
-    ├── references/anti_ai_academic_hedging_guide.md
-    └── references/journal_publication_strategy.md
+├── start_vosviewer_desktop.bat          # Kích hoạt 1-chạm VOSviewer Desktop (Đã nhúng Java 21)
+├── start_vosviewer_online.bat           # Kích hoạt 1-chạm VOSviewer Online (Port 8600)
+├── .gitignore                           # Danh mục loại trừ tệp tạm và dữ liệu lớn
+├── GEMINI.md                            # Bộ quy chuẩn cố vấn học thuật độc quyền
+├── LICENSE                              # Bản quyền mã nguồn mở MIT
+└── README.md                            # Hướng dẫn tổng quan kho lưu trữ
 ```
 
 ---
 
-## 🚀 Chi Tiết 5 Kỹ Năng Chuyên Sâu
+## 🚀 HƯỚNG DẪN KHỞI ĐỘNG VÀ TRẢI NGHIỆM HỆ THỐNG
 
-### 1. `phd-research-proposal`
-- **Xác định 4 khoảng trống nghiên cứu (Research Gaps)**: Theoretical gap, Empirical gap, Contextual gap, Methodological gap.
-- **Hệ thống lý thuyết nền (Grounding Theories)**: S-O-R, TAM/UTAUT, TPB, Cognitive Appraisal, Flow Theory, RBV, Dynamic Capabilities, Service-Dominant Logic, Social Exchange Theory, Signaling Theory.
-- **Xây dựng mô hình khái niệm & hệ thống giả thuyết** ($H_1, H_2...$).
+### 1. Trải nghiệm Dashboard Nghiên Cứu Thống Nhất (Tất cả trong một)
+Bạn chỉ cần mở tệp:  
+👉 **[web/index.html](web/index.html)** trên trình duyệt.  
+Hệ thống cho phép bạn chuyển đổi mượt mà giữa 4 Tab chính:
+* **Tab 1: Lưu Đồ PRISMA 2020** (2,500 thô $\to$ 1,441 bài sạch, kèm nút xuất PDF cho Slide).
+* **Tab 2: VOSviewer Online** (Khung hiển thị web chính thức của Leiden University nạp sẵn dữ liệu).
+* **Tab 3: Mô Hình Khái Niệm** (Kiến trúc trung gian chuỗi có điều tiết chuẩn Scopus Q1).
+* **Tab 4: Báo Cáo Slide** (Kịch bản thuyết trình 2 phút trước Hội đồng & Top 8 tạp chí Q1).
 
-### 2. `phd-literature-review`
-- **Quy trình tổng quan hệ thống PRISMA 2020**: 4 giai đoạn sàng lọc minh bạch (Identification $\rightarrow$ Screening $\rightarrow$ Eligibility $\rightarrow$ Included).
-- **Ma trận tổng hợp tài liệu (Literature Synthesis Matrix)**: Chuẩn hóa trích xuất dữ liệu bài báo.
-- **Chiến lược truy vấn Boolean**: Dành riêng cho Scopus và Web of Science Core Collection.
+### 2. Khởi động VOSviewer Desktop (Đã tích hợp sẵn Java 21 không lỗi)
+Nhấp đúp chuột vào tệp:  
+👉 **[start_vosviewer_desktop.bat](start_vosviewer_desktop.bat)**  
+Ứng dụng sẽ tự động khởi động và nạp sẵn toàn bộ bản đồ 1,441 bài báo với 3 chế độ xem (kể cả *Density Heatmap*).
 
-### 3. `phd-methodology-design`
-- **Quy trình thích ứng thang đo (Scale Adaptation)**: Kế thừa thang đo chuẩn từ các tạp chí uy tín (*JM, JAMS, JCR, JBR, IJRM*), dịch ngược (Back-translation), phỏng vấn chuyên gia (Expert panel), và khảo sát thử nghiệm (Pilot study $N=50-100$).
-- **Xác định cỡ mẫu tối thiểu**: Phân tích lực lượng thống kê G*Power ($1-\beta = 0.80 - 0.95$), quy tắc Hair et al. (2019) và tỷ lệ quan sát 5:1 đến 10:1.
-- **Mẫu bảng câu hỏi khảo sát cấu trúc chuẩn Likert**.
-
-### 4. `phd-data-analysis`
-- **Công cụ tự động hóa Python**:
-  ```bash
-  # 1. Thống kê mô tả & Kiểm tra phân phối chuẩn Kline (2016)
-  python .agents/skills/phd-data-analysis/scripts/research_data_toolkit.py --file data.csv --task descriptive
-
-  # 2. Kiểm định sai lệch phương pháp chung (Harman's Single Factor test)
-  python .agents/skills/phd-data-analysis/scripts/research_data_toolkit.py --file data.csv --task harman
-
-  # 3. Tính độ tin cậy Cronbach's Alpha và tương quan biến - tổng
-  python .agents/skills/phd-data-analysis/scripts/research_data_toolkit.py --file data.csv --task alpha --items PU1,PU2,PU3,PU4
-  ```
-- **Tiêu chuẩn đánh giá mô hình đo lường & cấu trúc SEM**: Hướng dẫn chi tiết PLS-SEM và CB-SEM (Outer loadings $\ge 0.708$, $\text{CR} \ge 0.70$, $\text{AVE} \ge 0.50$, $\text{HTMT} < 0.85/0.90$, Bootstrapping $5000-10000$ mẫu).
-
-### 5. `phd-dissertation-writing`
-- **Kết cấu chuẩn 5 chương của Luận án Tiến sĩ**.
-- **Thảo luận kết quả học thuật (Academic Discussion)**: Đối thoại với các công trình trước đây thay vì chỉ đọc lại số liệu thống kê.
-- **Ngân hàng mẫu câu học thuật song ngữ (Academic Phrasebank)**.
-- **Chiến lược công bố Scopus Q1/Q2 từ Luận án**: Trích xuất thành 2–3 bài báo và kỹ thuật trả lời phản biện (Response to Reviewers).
+### 3. Khởi động VOSviewer Online Local (Port 8600)
+Nhấp đúp chuột vào tệp:  
+👉 **[start_vosviewer_online.bat](start_vosviewer_online.bat)**  
+Máy chủ nội bộ sẽ bật và mở trình duyệt tại `http://localhost:8600/?json=data/luan_an_real_network.json`.
 
 ---
 
-## 🛡️ Bộ Quy Chuẩn Anti-AI & Khiêm Tốn Học Thuật (Academic Hedging)
-- **Công cụ kiểm duyệt tự động**:
-  ```bash
-  python .agents/skills/phd-dissertation-writing/scripts/academic_tone_audit.py --file draft.md
-  ```
-- **Triệt tiêu các từ ngữ rập khuôn của AI**: *delve into, tapestry, testament to, beacon, game-changer, revolutionary, bức tranh toàn cảnh, chiếc chìa khóa vạn năng, minh chứng hùng hồn...*
-- **Triệt tiêu các khẳng định "chém gió" tuyệt đối**: Chuyển đổi các câu thiếu căn cứ (*"chứng minh hoàn toàn 100%"*, *"giải quyết triệt để mọi vấn đề"*) sang ngôn từ thận trọng, điềm đạm (*"lends empirical support to"*, *"cung cấp bằng chứng bước đầu"*, *"trong phạm vi điều kiện biên của mẫu"*).
-- **Loại bỏ các dấu hiệu nhận diện máy móc**: Giảm thiểu lạm dụng dấu gạch ngang dài (`—` em-dash), hạn chế liệt kê bullet point thay cho văn xuôi học thuật liên kết (cohesive paragraphs).
+## 📊 TỰ ĐỘNG HÓA QUY TRÌNH KHI CÓ DỮ LIỆU MỚI
 
----
+Khi bạn tải thêm bất kỳ tệp dữ liệu thô nào từ Dimensions / Scopus bỏ vào thư mục `data/raw/`, chỉ cần chạy 01 lệnh terminal:
 
-## 👤 Tác Giả & Bản Quyền
-- Dự án: **PhD Research Skill Suite (Marketing & Business Administration)**
-- Repository: [https://github.com/hailp1/PhD_Skill.git](https://github.com/hailp1/PhD_Skill.git)
+```bash
+python .agents/skills/phd-literature-review/scripts/pipeline_prisma_vosviewer.py
+```
+
+Toàn bộ quá trình lọc 4 tầng PRISMA 2020, làm sạch dữ liệu, tính toán ma trận tương quan và cập nhật bản đồ VOSviewer sẽ được tự động hoàn tất trong vòng 10 giây!

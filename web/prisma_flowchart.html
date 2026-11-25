@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ Đồ Dòng Chảy PRISMA 2020 - Luận Án Tiến Sĩ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .prisma-box {
+            background: #ffffff;
+            border: 1.5px solid #0284c7;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            padding: 12px 16px;
+            font-size: 13px;
+            line-height: 1.45;
+        }
+        .prisma-box-ex {
+            background: #fff1f2;
+            border: 1.5px solid #e11d48;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            padding: 12px 16px;
+            font-size: 13px;
+            line-height: 1.45;
+        }
+        .prisma-box-final {
+            background: #f0fdf4;
+            border: 2px solid #16a34a;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08);
+            padding: 16px 20px;
+            font-size: 14px;
+        }
+        .phase-badge {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            text-align: center;
+            font-weight: 700;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 12px 6px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body class="p-8 max-w-5xl mx-auto text-slate-800">
+    <!-- Header Thông tin Đề tài -->
+    <header class="mb-6 flex items-center justify-between border-b pb-4 border-slate-300">
+        <div>
+            <div class="inline-block bg-sky-600 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded tracking-wide mb-1">
+                PRISMA 2020 Flow Diagram Statement
+            </div>
+            <h1 class="text-xl font-bold text-slate-900">Quy Trình Sàng Lọc Y Văn Có Hệ Thống (Systematic Literature Review)</h1>
+            <p class="text-xs text-slate-500 mt-0.5">Đề tài: Hệ thống đề xuất AI và Mua bốc đồng trực tuyến | NCS: Lê Phúc Hải (TDTU)</p>
+        </div>
+        <button onclick="window.print()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-xs font-semibold shadow transition flex items-center space-x-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            <span>In / Xuất PDF cho Slide</span>
+        </button>
+    </header>
+
+    <!-- Sơ đồ Luồng PRISMA 4 Giai đoạn -->
+    <div class="space-y-6">
+        <!-- GIAI ĐOẠN 1: IDENTIFICATION -->
+        <div class="flex items-stretch space-x-4">
+            <div class="phase-badge bg-sky-100 text-sky-800 border border-sky-300">
+                1. Identification
+            </div>
+            <div class="flex-1 grid grid-cols-2 gap-4">
+                <div class="prisma-box">
+                    <b class="text-sky-900 block mb-1 text-sm font-semibold">Bản ghi thu thập ban đầu từ cơ sở dữ liệu:</b>
+                    <div class="text-slate-600">
+                        • Nguồn Dimensions (Scopus & Crossref indexed): <b>n = 2,500</b> bài
+                    </div>
+                </div>
+                <div class="prisma-box-ex">
+                    <b class="text-rose-900 block mb-1 text-sm font-semibold">Loại bỏ trùng lặp trước khi sàng lọc:</b>
+                    <div class="text-slate-700">
+                        • Bản ghi trùng mã DOI / Tiêu đề: <b>n = 42</b> bài<br>
+                        <span class="text-xs text-rose-600 font-medium">➔ Số bản ghi duy nhất đưa vào sàng lọc: <b>N = 2,458</b> bài</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mũi tên kết nối -->
+        <div class="flex justify-center -my-3">
+            <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+
+        <!-- GIAI ĐOẠN 2: SCREENING -->
+        <div class="flex items-stretch space-x-4">
+            <div class="phase-badge bg-blue-100 text-blue-800 border border-blue-300">
+                2. Screening
+            </div>
+            <div class="flex-1 grid grid-cols-2 gap-4">
+                <div class="prisma-box">
+                    <b class="text-blue-900 block mb-1 text-sm font-semibold">Sàng lọc Tiêu đề và Tóm tắt:</b>
+                    <div class="text-slate-600">
+                        • Tổng số bản ghi được sàng lọc: <b>N = 2,458</b> bài báo
+                    </div>
+                </div>
+                <div class="prisma-box-ex">
+                    <b class="text-rose-900 block mb-1 text-sm font-semibold">Loại trừ sau sàng lọc hình thức (n = 701):</b>
+                    <ul class="text-slate-700 list-disc list-inside space-y-0.5">
+                        <li>Kỷ yếu hội thảo (Conference / Lecture Notes): <b>n = 357</b></li>
+                        <li>Bản thảo chưa bình duyệt (SSRN, Preprints): <b>n = 129</b></li>
+                        <li>Xuất bản trước năm 2018 (ngoài thời gian): <b>n = 153</b></li>
+                        <li>Thiếu tóm tắt khoa học chuẩn mực: <b>n = 62</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mũi tên kết nối -->
+        <div class="flex justify-center -my-3">
+            <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+
+        <!-- GIAI ĐOẠN 3: ELIGIBILITY -->
+        <div class="flex items-stretch space-x-4">
+            <div class="phase-badge bg-amber-100 text-amber-800 border border-amber-300">
+                3. Eligibility
+            </div>
+            <div class="flex-1 grid grid-cols-2 gap-4">
+                <div class="prisma-box">
+                    <b class="text-amber-900 block mb-1 text-sm font-semibold">Đánh giá tính phù hợp toàn văn:</b>
+                    <div class="text-slate-600">
+                        • Số bài báo đủ điều kiện thẩm định nội dung: <b>N = 1,757</b> bài
+                    </div>
+                </div>
+                <div class="prisma-box-ex">
+                    <b class="text-rose-900 block mb-1 text-sm font-semibold">Loại trừ sau đánh giá nội dung (n = 316):</b>
+                    <ul class="text-slate-700 list-disc list-inside space-y-0.5">
+                        <li>Không đo lường hành vi người tiêu dùng: <b>n = 226</b></li>
+                        <li>Không chứa yếu tố đề xuất / số hóa: <b>n = 71</b></li>
+                        <li>Thuần kỹ thuật tin học / y sinh không có biến hành vi: <b>n = 19</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mũi tên kết nối -->
+        <div class="flex justify-center -my-3">
+            <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+
+        <!-- GIAI ĐOẠN 4: INCLUDED -->
+        <div class="flex items-stretch space-x-4">
+            <div class="phase-badge bg-emerald-100 text-emerald-800 border border-emerald-300">
+                4. Included
+            </div>
+            <div class="flex-1">
+                <div class="prisma-box-final text-emerald-950">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-bold text-base text-emerald-900 uppercase tracking-wide">
+                            Tập Hợp Bài Báo Cốt Lõi Đưa Vào Tổng Hợp Luận Án & Bản Đồ VOSviewer:
+                        </span>
+                        <span class="bg-emerald-600 text-white font-extrabold px-3 py-1 rounded-full text-base">
+                            N = 1,441 BÀI BÁO
+                        </span>
+                    </div>
+                    <div class="text-xs text-emerald-800 space-y-1">
+                        <p>• <b>100% công trình khoa học gốc</b> đã qua bình duyệt kín (Peer-reviewed) trên các tạp chí Scopus Q1/Q2.</p>
+                        <p>• Tiêu biểu: <i>Journal of Retailing and Consumer Services</i> (64 bài), <i>JTAER</i> (48 bài), <i>Asia Pacific Journal of Marketing</i> (29 bài), <i>Journal of Business Research</i> (15 bài)...</p>
+                        <p>• Là cơ sở dữ liệu thực nghiệm đầu vào để trích xuất <b>4 Cụm Chủ Đề</b> và <b>3 Khoảng Trống Nghiên Cứu</b> trên VOSviewer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Ghi chú học thuật -->
+    <footer class="mt-8 pt-4 border-t border-slate-200 text-center text-xs text-slate-400">
+        Tiêu chuẩn trích dẫn: Page, M. J., et al. (2021). The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. <i>BMJ</i>, 372:n71.
+    </footer>
+</body>
+</html>
