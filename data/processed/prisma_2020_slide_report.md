@@ -5,9 +5,15 @@
 
 ## 1. CÁC CON SỐ CHÍNH XÁC TỪNG GIAI ĐOẠN ĐỂ VẼ LƯU ĐỒ PRISMA 2020 TRÊN SLIDE
 
+### 1.0. Chuỗi Truy Vấn Boolean Đầu Vào (Search String)
+```text
+("AI recommendation" OR "AI-driven recommendation" OR "recommender system" OR "recommender systems" OR "personalized recommendation" OR "recommendation agent" OR "algorithmic curation") AND ("impulse buying" OR "impulsive buying" OR "unplanned purchase" OR "urge to buy impulsively" OR "impulsive purchase") AND ("satisfaction" OR "e-satisfaction" OR "customer experience" OR "self-control" OR "self-regulation")
+```
+
 ```
 +-----------------------------------------------------------------------------------------+
 | GIAI ĐOẠN 1: XÁC ĐỊNH (IDENTIFICATION)                                                  |
+| - Chuỗi từ khóa Boolean: 3 khối (AI Recommendation x Impulse Buying x Satisfaction/SC)  |
 | - Tổng số bản ghi xuất từ Dimensions: N = 2,500                                        |
 | - Số bản ghi trùng lặp bị loại bỏ (Duplicates removed): n = 42                       |
 |   => Số bản ghi duy nhất đưa vào sàng lọc: N = 2,458                                    |
