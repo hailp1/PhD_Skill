@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mô Hình Nghiên Cứu Luận Án Tiến Sĩ - Chế Độ Màu & Trắng Đen</title>
+    <title>Mô Hình Nghiên Cứu Luận Án Tiến Sĩ - Chuẩn Scopus Q1</title>
     <style>
         * {
             box-sizing: border-box;
@@ -22,7 +22,7 @@
         }
         .header {
             text-align: center;
-            max-width: 950px;
+            max-width: 980px;
             margin-bottom: 20px;
         }
         .header h1 {
@@ -90,8 +90,8 @@
             border-radius: 12px;
             box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
             border: 1px solid #e2e8f0;
-            padding: 30px;
-            max-width: 1020px;
+            padding: 25px;
+            max-width: 1100px;
             width: 100%;
             transition: all 0.3s ease;
         }
@@ -107,8 +107,11 @@
             border: 1.5px solid #000000;
         }
 
-        /* Box Fills & Strokes in B&W */
-        body.bw-mode svg .node-bg {
+        body.bw-mode svg .node-card,
+        body.bw-mode svg .node-mediator,
+        body.bw-mode svg .node-moderator,
+        body.bw-mode svg .node-dv,
+        body.bw-mode svg .node-control {
             fill: #ffffff !important;
             stroke: #000000 !important;
         }
@@ -117,41 +120,19 @@
             stroke: #000000 !important;
             stroke-dasharray: 4 4 !important;
         }
-        body.bw-mode svg .node-card {
-            fill: #ffffff !important;
-            stroke: #000000 !important;
-            stroke-width: 1.5px !important;
-        }
-        body.bw-mode svg .node-mediator {
-            fill: #ffffff !important;
-            stroke: #000000 !important;
-            stroke-width: 2.5px !important;
-        }
-        body.bw-mode svg .node-dv {
-            fill: #ffffff !important;
-            stroke: #000000 !important;
-            stroke-width: 2.5px !important;
-        }
 
-        /* All Text in B&W */
         body.bw-mode svg text {
             fill: #000000 !important;
         }
-        body.bw-mode svg .text-sub {
+        body.bw-mode svg .text-sub,
+        body.bw-mode svg .text-author {
             fill: #333333 !important;
         }
-        body.bw-mode svg .text-author {
-            fill: #444444 !important;
-            font-style: italic !important;
-        }
 
-        /* All Paths & Arrows in B&W */
-        body.bw-mode svg .path-line {
+        body.bw-mode svg .path-line,
+        body.bw-mode svg .path-moderation,
+        body.bw-mode svg .path-control {
             stroke: #000000 !important;
-        }
-        body.bw-mode svg .path-direct {
-            stroke: #000000 !important;
-            stroke-dasharray: 5 4 !important;
         }
         body.bw-mode svg .label-pill {
             fill: #ffffff !important;
@@ -161,13 +142,12 @@
             fill: #000000 !important;
         }
 
-        /* Print Media Query */
         @media print {
             body {
                 padding: 0;
                 background: white;
             }
-            .toolbar, .btn-toolbar, .header p {
+            .toolbar, .header p {
                 display: none !important;
             }
             .diagram-container {
@@ -181,13 +161,13 @@
 <body>
 
     <div class="header">
-        <h1 id="title-text">Mô Hình Nghiên Cứu Cấu Trúc Tam Giác Trung Gian</h1>
+        <h1 id="title-text">Mô Hình Nghiên Cứu Trung Gian Chuỗi Có Điều Tiết</h1>
         <p><b>Đề tài:</b> Tác động của hệ thống đề xuất cá nhân hóa dựa trên AI đến hành vi mua bốc đồng của người tiêu dùng trực tuyến: Vai trò trung gian của sự hài lòng trực tuyến</p>
         <p style="margin-top: 5px; font-size: 13px; color: #64748b;">
             <b>NCS:</b> Lê Phúc Hải (Mã NCS: 262901002 | Lớp: 26290101) &bull; 
             <b>GVHD:</b> TS. Phùng Minh Tuấn &bull; 
             <b>Cơ sở đào tạo:</b> Trường Đại học Tôn Đức Thắng (TDTU) &bull; 
-            <b>Khóa đào tạo:</b> 2027 – 2030 (36 tháng)
+            <b>Khóa đào tạo:</b> 2027 – 2030
         </p>
     </div>
 
@@ -208,114 +188,144 @@
     </div>
 
     <div class="diagram-container" id="capture-area">
-        <!-- SVG Canvas with Standard Triangular Mediation Layout -->
-        <svg id="research-svg" viewBox="0 0 920 540" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <svg id="research-svg" viewBox="0 0 1040 640" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <!-- Standard Sharp Arrowhead -->
                 <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
                     <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1e293b" />
                 </marker>
-                <!-- Direct Path Arrowhead -->
-                <marker id="arrow-direct" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
-                    <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#0284c7" />
+                <marker id="arrow-mod" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#be185d" />
                 </marker>
-                <!-- Subtle Drop Shadow -->
+                <marker id="arrow-ctrl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#64748b" />
+                </marker>
                 <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
                     <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.05"/>
                 </filter>
             </defs>
 
-            <!-- 1. BIẾN TRUNG GIAN (TOP CENTER - MEDIATOR) -->
-            <g transform="translate(330, 30)" filter="url(#card-shadow)">
-                <rect class="node-mediator" width="260" height="110" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
-                <text x="130" y="26" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309" letter-spacing="0.8">BIẾN TRUNG GIAN (ORGANISM)</text>
-                <text x="130" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Sự hài lòng trực tuyến</text>
-                <text class="text-sub" x="130" y="72" text-anchor="middle" font-size="13" font-weight="600" fill="#d97706">(E-Satisfaction - ESAT)</text>
-                <text class="text-author" x="130" y="94" text-anchor="middle" font-size="11" fill="#64748b">Oliver (1980); Anderson et al. (2003)</text>
+            <!-- 1. KÍCH THÍCH AI (LEFT - STIMULUS) -->
+            <rect class="node-group-bg" x="20" y="80" width="270" height="320" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4" />
+            <text x="155" y="105" text-anchor="middle" font-size="11" font-weight="700" fill="#0369a1" letter-spacing="0.5">KÍCH THÍCH THUẬT TOÁN AI (S)</text>
+
+            <!-- PP -->
+            <g transform="translate(35, 120)" filter="url(#card-shadow)">
+                <rect class="node-card" width="240" height="72" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+                <text x="120" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Cá nhân hóa cảm nhận</text>
+                <text class="text-sub" x="120" y="45" text-anchor="middle" font-size="11.5" fill="#0284c7" font-weight="600">(Personalization - PP)</text>
+                <text class="text-author" x="120" y="62" text-anchor="middle" font-size="10" fill="#64748b">Shanahan et al. (2019)</text>
             </g>
 
-            <!-- 2. BIẾN ĐỘC LẬP (BOTTOM LEFT - INDEPENDENT VARIABLES) -->
-            <rect class="node-group-bg" x="30" y="210" width="300" height="300" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4" />
-            <text x="180" y="235" text-anchor="middle" font-size="11" font-weight="700" fill="#0369a1" letter-spacing="0.5">HỆ THỐNG ĐỀ XUẤT CÁ NHÂN HÓA AI (STIMULUS)</text>
-
-            <!-- Dimension 1: PP -->
-            <g transform="translate(50, 250)" filter="url(#card-shadow)">
-                <rect class="node-card" width="260" height="70" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
-                <text x="130" y="28" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Cá nhân hóa cảm nhận</text>
-                <text class="text-sub" x="130" y="47" text-anchor="middle" font-size="11.5" fill="#0284c7" font-weight="600">(Perceived Personalization - PP)</text>
-                <text class="text-author" x="130" y="62" text-anchor="middle" font-size="10" fill="#64748b">Shanahan et al. (2019)</text>
+            <!-- ACC -->
+            <g transform="translate(35, 210)" filter="url(#card-shadow)">
+                <rect class="node-card" width="240" height="72" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+                <text x="120" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Độ chính xác cảm nhận</text>
+                <text class="text-sub" x="120" y="45" text-anchor="middle" font-size="11.5" fill="#0284c7" font-weight="600">(Accuracy - ACC)</text>
+                <text class="text-author" x="120" y="62" text-anchor="middle" font-size="10" fill="#64748b">Al-Natour et al. (2011)</text>
             </g>
 
-            <!-- Dimension 2: ACC -->
-            <g transform="translate(50, 335)" filter="url(#card-shadow)">
-                <rect class="node-card" width="260" height="70" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
-                <text x="130" y="28" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Độ chính xác cảm nhận</text>
-                <text class="text-sub" x="130" y="47" text-anchor="middle" font-size="11.5" fill="#0284c7" font-weight="600">(Perceived Accuracy - ACC)</text>
-                <text class="text-author" x="130" y="62" text-anchor="middle" font-size="10" fill="#64748b">Al-Natour et al. (2011)</text>
+            <!-- NOV -->
+            <g transform="translate(35, 300)" filter="url(#card-shadow)">
+                <rect class="node-card" width="240" height="72" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+                <text x="120" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Tính mới mẻ của gợi ý</text>
+                <text class="text-sub" x="120" y="45" text-anchor="middle" font-size="11.5" fill="#0284c7" font-weight="600">(Novelty - NOV)</text>
+                <text class="text-author" x="120" y="62" text-anchor="middle" font-size="10" fill="#64748b">Zhang et al. (2021)</text>
             </g>
 
-            <!-- Dimension 3: NOV -->
-            <g transform="translate(50, 420)" filter="url(#card-shadow)">
-                <rect class="node-card" width="260" height="70" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
-                <text x="130" y="28" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Tính mới mẻ của gợi ý</text>
-                <text class="text-sub" x="130" y="47" text-anchor="middle" font-size="11.5" fill="#0284c7" font-weight="600">(Recommendation Novelty - NOV)</text>
-                <text class="text-author" x="130" y="62" text-anchor="middle" font-size="10" fill="#64748b">Foster & Ford (2003)</text>
+            <!-- 2. TRUNG GIAN CHUỖI (CENTER - ORGANISM) -->
+            <!-- Mediator 1: ESAT -->
+            <g transform="translate(360, 90)" filter="url(#card-shadow)">
+                <rect class="node-mediator" width="250" height="95" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+                <text x="125" y="24" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b45309" letter-spacing="0.8">TRUNG GIAN 1 (THỎA MÃN TƯƠNG TÁC)</text>
+                <text x="125" y="48" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Sự hài lòng trong quá trình</text>
+                <text class="text-sub" x="125" y="67" text-anchor="middle" font-size="12" font-weight="600" fill="#d97706">(In-process E-Satisfaction - ESAT)</text>
+                <text class="text-author" x="125" y="85" text-anchor="middle" font-size="10" fill="#64748b">Xiao & Benbasat (2007); Oliver (1980)</text>
             </g>
 
-            <!-- 3. BIẾN PHỤ THUỘC (BOTTOM RIGHT - DEPENDENT VARIABLE) -->
-            <g transform="translate(630, 290)" filter="url(#card-shadow)">
-                <rect class="node-dv" width="260" height="140" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
-                <text x="130" y="28" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d" letter-spacing="0.8">BIẾN PHỤ THUỘC (RESPONSE)</text>
-                <text x="130" y="58" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Hành vi mua bốc đồng</text>
-                <text x="130" y="80" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">trực tuyến</text>
-                <text class="text-sub" x="130" y="103" text-anchor="middle" font-size="12" font-weight="600" fill="#16a34a">(Online Impulse Buying - OIB)</text>
-                <text class="text-author" x="130" y="123" text-anchor="middle" font-size="10.5" fill="#64748b">Beatty & Ferrell (1998); Verhagen (2011)</text>
+            <!-- Mediator 2: UBI -->
+            <g transform="translate(360, 290)" filter="url(#card-shadow)">
+                <rect class="node-mediator" width="250" height="95" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+                <text x="125" y="24" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b91c1c" letter-spacing="0.8">TRUNG GIAN 2 (XÚC CẢM BỘC PHÁT)</text>
+                <text x="125" y="48" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Sự thôi thúc mua bốc đồng</text>
+                <text class="text-sub" x="125" y="67" text-anchor="middle" font-size="12" font-weight="600" fill="#dc2626">(Urge to Buy Impulsively - UBI)</text>
+                <text class="text-author" x="125" y="85" text-anchor="middle" font-size="10" fill="#64748b">Beatty & Ferrell (1998); Badgaiyan (2015)</text>
             </g>
 
-            <!-- ==================== CÁC ĐƯỜNG DẪN CẤU TRÚC (STRUCTURAL PATHS) ==================== -->
+            <!-- 3. BIẾN PHỤ THUỘC (RIGHT - RESPONSE) -->
+            <g transform="translate(730, 220)" filter="url(#card-shadow)">
+                <rect class="node-dv" width="260" height="115" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.2"/>
+                <text x="130" y="26" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d" letter-spacing="0.8">PHẢN ỨNG HÀNH VI (RESPONSE)</text>
+                <text x="130" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Hành vi mua bốc đồng</text>
+                <text x="130" y="73" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">trực tuyến (OIB)</text>
+                <text class="text-sub" x="130" y="94" text-anchor="middle" font-size="12" font-weight="600" fill="#16a34a">(Online Impulse Buying)</text>
+                <text class="text-author" x="130" y="108" text-anchor="middle" font-size="10" fill="#64748b">Rook & Fisher (1995); Verhagen (2011)</text>
+            </g>
 
-            <!-- PATH NHÓM A: TÁC ĐỘNG LÊN TRUNG GIAN (X -> M) -->
-            <!-- H1: PP -> ESAT -->
-            <line class="path-line" x1="310" y1="265" x2="350" y2="140" stroke="#1e293b" stroke-width="1.6" marker-end="url(#arrow)" />
-            <rect class="label-pill" x="305" y="195" width="46" height="20" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-            <text x="328" y="209" text-anchor="middle" font-size="11" font-weight="700" fill="#1e293b">H1 (+)</text>
+            <!-- 4. BIẾN ĐIỀU TIẾT (TOP RIGHT - MODERATOR) -->
+            <g transform="translate(745, 25)" filter="url(#card-shadow)">
+                <rect class="node-moderator" width="230" height="90" rx="8" fill="#fdf2f8" stroke="#db2777" stroke-width="2" stroke-dasharray="5 3"/>
+                <text x="115" y="24" text-anchor="middle" font-size="10.5" font-weight="700" fill="#9d174d" letter-spacing="0.8">ĐIỀU KIỆN BIÊN (MODERATOR)</text>
+                <text x="115" y="47" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Khả năng tự kiểm soát</text>
+                <text class="text-sub" x="115" y="65" text-anchor="middle" font-size="11.5" font-weight="600" fill="#db2777">(Consumer Self-Control - SC)</text>
+                <text class="text-author" x="115" y="80" text-anchor="middle" font-size="9.5" fill="#64748b">Tangney et al. (2004); Baumeister (2007)</text>
+            </g>
 
-            <!-- H2: ACC -> ESAT -->
-            <line class="path-line" x1="310" y1="360" x2="410" y2="140" stroke="#1e293b" stroke-width="1.6" marker-end="url(#arrow)" />
-            <rect class="label-pill" x="340" y="240" width="46" height="20" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-            <text x="363" y="254" text-anchor="middle" font-size="11" font-weight="700" fill="#1e293b">H2 (+)</text>
+            <!-- 5. BIẾN KIỂM SOÁT (BOTTOM RIGHT - CONTROL VARIABLES) -->
+            <g transform="translate(730, 395)" filter="url(#card-shadow)">
+                <rect class="node-control" width="260" height="110" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <text x="130" y="22" text-anchor="middle" font-size="10.5" font-weight="700" fill="#475569" letter-spacing="0.5">BIẾN KIỂM SOÁT (CONTROL VARIABLES)</text>
+                <text x="20" y="44" font-size="11" fill="#0f172a">&bull; Khuynh hướng mua bốc đồng cố hữu (IBT)</text>
+                <text x="20" y="64" font-size="11" fill="#0f172a">&bull; Thu nhập khả dụng hàng tháng</text>
+                <text x="20" y="84" font-size="11" fill="#0f172a">&bull; Tần suất mua sắm trực tuyến &bull; Độ tuổi</text>
+                <text class="text-author" x="130" y="102" text-anchor="middle" font-size="9.5" fill="#64748b">Rook & Fisher (1995); Beatty & Ferrell (1998)</text>
+            </g>
 
-            <!-- H3: NOV -> ESAT -->
-            <line class="path-line" x1="310" y1="445" x2="440" y2="140" stroke="#1e293b" stroke-width="1.6" marker-end="url(#arrow)" />
-            <rect class="label-pill" x="350" y="285" width="46" height="20" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-            <text x="373" y="299" text-anchor="middle" font-size="11" font-weight="700" fill="#1e293b">H3 (+)</text>
+            <!-- Control arrow to OIB -->
+            <line class="path-control" x1="860" y1="395" x2="860" y2="340" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow-ctrl)" />
 
-            <!-- PATH NHÓM B: TÁC ĐỘNG TỪ TRUNG GIAN XUỐNG BIẾN KẾT QUẢ (M -> Y) -->
-            <!-- H7: ESAT -> OIB -->
-            <line class="path-line" x1="570" y1="140" x2="710" y2="290" stroke="#d97706" stroke-width="2.5" marker-end="url(#arrow)" />
-            <rect class="label-pill" x="635" y="205" width="48" height="22" rx="4" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
-            <text x="659" y="220" text-anchor="middle" font-size="11.5" font-weight="700" fill="#d97706">H7 (+)</text>
+            <!-- ==================== CÁC ĐƯỜNG DẪN CẤU TRÚC ==================== -->
 
-            <!-- PATH NHÓM C: CÁC ĐƯỜNG DẪN TRỰC TIẾP (DIRECT PATHS: X -> Y) -->
-            <!-- H4: PP -> OIB -->
-            <line class="path-direct" x1="310" y1="290" x2="630" y2="330" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-direct)" />
-            <rect class="label-pill" x="455" y="295" width="46" height="19" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
-            <text x="478" y="309" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0284c7">H4 (+)</text>
+            <!-- H1, H2, H3: Stimulus -> ESAT -->
+            <line class="path-line" x1="275" y1="145" x2="360" y2="130" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrow)" />
+            <rect class="label-pill" x="295" y="125" width="45" height="19" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+            <text x="317" y="139" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e293b">H1 (+)</text>
 
-            <!-- H5: ACC -> OIB -->
-            <line class="path-direct" x1="310" y1="375" x2="630" y2="365" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-direct)" />
-            <rect class="label-pill" x="455" y="360" width="46" height="19" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
-            <text x="478" y="374" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0284c7">H5 (+)</text>
+            <line class="path-line" x1="275" y1="240" x2="360" y2="155" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrow)" />
+            <rect class="label-pill" x="295" y="190" width="45" height="19" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+            <text x="317" y="204" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e293b">H2 (+)</text>
 
-            <!-- H6: NOV -> OIB -->
-            <line class="path-direct" x1="310" y1="460" x2="630" y2="400" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrow-direct)" />
-            <rect class="label-pill" x="455" y="420" width="46" height="19" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
-            <text x="478" y="434" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0284c7">H6 (+)</text>
+            <line class="path-line" x1="275" y1="330" x2="365" y2="175" stroke="#1e293b" stroke-width="1.8" marker-end="url(#arrow)" />
+            <rect class="label-pill" x="295" y="260" width="45" height="19" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+            <text x="317" y="274" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e293b">H3 (+)</text>
 
-            <!-- MEDIATION HYPOTHESES BADGE (H8a, H8b, H8c) -->
-            <g transform="translate(370, 480)">
-                <rect class="label-pill" width="240" height="30" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
-                <text x="120" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">H8a, H8b, H8c: Vai trò trung gian</text>
+            <!-- H4: ESAT -> UBI -->
+            <line class="path-line" x1="485" y1="185" x2="485" y2="290" stroke="#d97706" stroke-width="2.5" marker-end="url(#arrow)" />
+            <rect class="label-pill" x="460" y="225" width="50" height="22" rx="4" fill="#ffffff" stroke="#d97706" stroke-width="1.5"/>
+            <text x="485" y="240" text-anchor="middle" font-size="11" font-weight="700" fill="#d97706">H4 (+)</text>
+
+            <!-- H5: UBI -> OIB -->
+            <line class="path-line" x1="610" y1="325" x2="730" y2="295" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow)" />
+            <rect class="label-pill" x="655" y="298" width="50" height="22" rx="4" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+            <text x="680" y="313" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">H5 (+)</text>
+
+            <!-- H6: ESAT -> OIB -->
+            <path class="path-line" d="M 610 140 Q 700 160 730 230" fill="none" stroke="#1e293b" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#arrow)" />
+            <rect class="label-pill" x="665" y="165" width="46" height="19" rx="3" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+            <text x="688" y="179" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1e293b">H6 (+)</text>
+
+            <!-- H8: SC Moderation on UBI -> OIB -->
+            <path class="path-moderation" d="M 830 115 Q 780 210 685 300" fill="none" stroke="#be185d" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow-mod)" />
+            <rect class="label-pill" x="735" y="190" width="70" height="22" rx="4" fill="#ffffff" stroke="#db2777" stroke-width="1.5"/>
+            <text x="770" y="205" text-anchor="middle" font-size="10.5" font-weight="700" fill="#be185d">H8 (Điều tiết -)</text>
+
+            <!-- SUMMARY BADGES -->
+            <g transform="translate(190, 545)">
+                <rect class="label-pill" width="310" height="32" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+                <text x="155" y="21" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">H7a, H7b, H7c: Cơ chế trung gian chuỗi (Serial Mediation)</text>
+            </g>
+            <g transform="translate(540, 545)">
+                <rect class="label-pill" width="310" height="32" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="1.2"/>
+                <text x="155" y="21" text-anchor="middle" font-size="12" font-weight="700" fill="#9d174d">H9: Mô hình trung gian có điều tiết (Moderated Mediation)</text>
             </g>
         </svg>
     </div>
