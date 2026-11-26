@@ -348,86 +348,35 @@
         </section>
 
         <!-- ==================== TAB 3: MÔ HÌNH NGHIÊN CỨU ==================== -->
-        <section id="tab-model" class="tab-content hidden space-y-6">
+        <section id="tab-model" class="tab-content hidden space-y-4">
             <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-6 shadow-xl">
-                <div class="flex flex-col md:flex-row md:items-center justify-between pb-4 border-b border-slate-700 gap-4 mb-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between pb-4 border-b border-slate-700 gap-4 mb-4">
                     <div>
-                        <span class="bg-purple-600 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded tracking-wide">
-                            Đóng Góp Lý Thuyết Cốt Lõi (Theoretical Architecture)
-                        </span>
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-purple-600 text-white font-bold text-xs uppercase px-2.5 py-0.5 rounded tracking-wide">
+                                Đóng Góp Lý Thuyết Cốt Lõi (Theoretical Architecture)
+                            </span>
+                            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-0.5 rounded">Chuẩn Scopus Q1 / ABS 3*</span>
+                        </div>
                         <h2 class="text-xl font-bold text-white mt-1">Mô Hình Trung Gian Chuỗi Có Điều Tiết (Moderated Serial Mediation)</h2>
-                        <p class="text-xs text-slate-400">Kiến trúc giải quyết 3 khoảng trống nghiên cứu từ PRISMA 2020 và VOSviewer</p>
+                        <p class="text-xs text-slate-400">Kiến trúc giải quyết 3 khoảng trống nghiên cứu từ PRISMA 2020 và VOSviewer (NCS Lê Phúc Hải - TDTU)</p>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <span class="text-xs text-slate-300 bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-600">
-                            Chuẩn Tạp chí Scopus Q1 / ABS 3*
-                        </span>
+                    <div class="flex items-center space-x-2.5">
+                        <a href="conceptual_model.html" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold shadow transition flex items-center space-x-1.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <span>Mở Toàn Màn Hình (Xuất In / PDF) ↗</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Sơ đồ kiến trúc mô hình -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-700 overflow-x-auto text-center">
-                    <div class="inline-block min-w-[700px] text-left">
-                        <div class="grid grid-cols-4 gap-6 items-center">
-                            <!-- Cột S -->
-                            <div class="space-y-3">
-                                <div class="text-xs font-bold uppercase text-sky-400 text-center tracking-wider">KÍCH THÍCH AI (S)</div>
-                                <div class="bg-slate-800 p-3 rounded-lg border border-sky-500/50 text-xs text-center font-medium shadow">
-                                    Cá nhân hóa cảm nhận (PP)<br>
-                                    <span class="text-[10px] text-slate-400">(Xiao & Benbasat 2018)</span>
-                                </div>
-                                <div class="bg-slate-800 p-3 rounded-lg border border-sky-500/50 text-xs text-center font-medium shadow">
-                                    Độ chính xác cảm nhận (ACC)<br>
-                                    <span class="text-[10px] text-slate-400">(Gallin & Portes 2024)</span>
-                                </div>
-                                <div class="bg-slate-800 p-3 rounded-lg border border-sky-500/50 text-xs text-center font-medium shadow">
-                                    Tính mới mẻ & bất ngờ (NOV)<br>
-                                    <span class="text-[10px] text-slate-400">(Ping et al. 2025)</span>
-                                </div>
-                            </div>
-
-                            <!-- Mũi tên H1, H2, H3 sang O1 -->
-                            <div class="space-y-4">
-                                <div class="text-xs font-bold uppercase text-emerald-400 text-center tracking-wider">TRUNG GIAN 1 (O1)</div>
-                                <div class="bg-emerald-950/40 p-4 rounded-xl border border-emerald-500/60 text-xs text-center font-bold shadow text-emerald-200">
-                                    Hài lòng trong khi lướt web<br>
-                                    (In-process ESAT)<br>
-                                    <span class="text-[10px] font-normal text-emerald-300/80">(Xu et al. 2024)</span>
-                                </div>
-                                <div class="text-center text-xs text-slate-400">➔ Kích hoạt cảm xúc (H4)</div>
-                            </div>
-
-                            <!-- Sang O2 -->
-                            <div class="space-y-4">
-                                <div class="text-xs font-bold uppercase text-indigo-400 text-center tracking-wider">TRUNG GIAN 2 (O2)</div>
-                                <div class="bg-indigo-950/40 p-4 rounded-xl border border-indigo-500/60 text-xs text-center font-bold shadow text-indigo-200">
-                                    Thôi thúc mua bốc đồng<br>
-                                    (Urge to Buy - UBI)<br>
-                                    <span class="text-[10px] font-normal text-indigo-300/80">(Badgaiyan & Verma 2015)</span>
-                                </div>
-                                <div class="text-center text-xs text-slate-400">➔ Dẫn dắt hành vi (H5)</div>
-                            </div>
-
-                            <!-- Sang R -->
-                            <div class="space-y-4">
-                                <div class="text-xs font-bold uppercase text-amber-400 text-center tracking-wider">PHẢN ỨNG HÀNH VI (R)</div>
-                                <div class="bg-amber-950/40 p-4 rounded-xl border border-amber-500/60 text-xs text-center font-bold shadow text-amber-200">
-                                    Hành vi mua bốc đồng<br>
-                                    (Online Impulse Buying - OIB)<br>
-                                    <span class="text-[10px] font-normal text-amber-300/80">(Rook & Fisher 1995)</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Biến Điều Tiết SC -->
-                        <div class="mt-8 pt-6 border-t border-slate-800 flex justify-center">
-                            <div class="bg-rose-950/40 border border-rose-500/60 p-4 rounded-xl text-center max-w-md shadow">
-                                <span class="text-rose-400 font-bold text-xs uppercase tracking-wider block mb-1">BIẾN ĐIỀU TIẾT ÂM (MODERATOR - M)</span>
-                                <span class="text-sm font-semibold text-rose-200">Khả Năng Tự Kiểm Soát (Consumer Self-Control - SC)</span>
-                                <p class="text-[11px] text-rose-300/80 mt-1">Giảm thiểu tác động của ESAT đến UBI (H7) và UBI đến OIB (H8)</p>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Khung nhúng trực tiếp SVG Mô hình có Bản Màu & Bản Trắng - Đen -->
+                <div class="relative w-full h-[760px] bg-white rounded-xl overflow-hidden border border-slate-700 shadow-inner">
+                    <iframe 
+                        id="modelIframe"
+                        src="conceptual_model.html" 
+                        class="w-full h-full border-0"
+                        title="Mô Hình Nghiên Cứu Luận Án">
+                    </iframe>
                 </div>
             </div>
         </section>

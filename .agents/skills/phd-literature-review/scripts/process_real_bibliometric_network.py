@@ -162,9 +162,13 @@ def run_real_bibliometric_mapping():
             f.write(f"{src}\t{tgt}\t{weight}\n")
     print(f"-> Đã ghi đè data/vosviewer/keywords_network.txt với {len(real_edges)} LIÊN KẾT THỰC CHỨNG!")
 
-    # 3. Tạo tệp JSON chuẩn cho VOSviewer Online
-    json_path = os.path.join(workspace, "vosviewer-online", "dist", "vosviewer-online", "data", "luan_an_real_network.json")
-    os.makedirs(os.path.dirname(json_path), exist_ok=True)
+    # 3. Tạo tệp JSON chuẩn cho VOSviewer Online tại tất cả các vị trí cần thiết
+    json_destinations = [
+        os.path.join(workspace, "data", "vosviewer", "luan_an_real_network.json"),
+        os.path.join(workspace, "tools", "vosviewer-online", "dist", "vosviewer-online", "data", "luan_an_real_network.json"),
+        os.path.join(workspace, "vosviewer-online", "dist", "vosviewer-online", "data", "luan_an_real_network.json"),
+        os.path.join(workspace, "web", "data", "luan_an_real_network.json")
+    ]
     
     vos_json = {
         "info": {
@@ -197,9 +201,11 @@ def run_real_bibliometric_mapping():
             ]
         }
     }
-    with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(vos_json, f, ensure_ascii=False, indent=2)
-    print(f"-> Đã tạo tệp JSON chuẩn VOSviewer Online: {json_path}")
+    for jp in json_destinations:
+        os.makedirs(os.path.dirname(jp), exist_ok=True)
+        with open(jp, "w", encoding="utf-8") as f:
+            json.dump(vos_json, f, ensure_ascii=False, indent=2)
+        print(f"-> Đã đồng bộ JSON: {jp}")
 
     # 4. Cập nhật ứng dụng HTML interactive_science_map.html
     html_path = os.path.join(workspace, "web", "interactive_science_map.html")
@@ -213,16 +219,12 @@ def run_real_bibliometric_mapping():
         import re
         html = re.sub(r'const nodes = \[.*?\];', f'const nodes = {new_nodes_str};', html, flags=re.DOTALL)
         html = re.sub(r'const edges = \[.*?\];', f'const edges = {new_edges_str};', html, flags=re.DOTALL)
+        html = html.replace("Tập hợp 46 công trình Scopus Q1", f"Tập hợp {total_papers} công trình Scopus Q1/Q2")
+        html = html.replace("46 bài báo Scopus Q1", f"{total_papers} bài báo Scopus Q1/Q2")
 
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(html)
-        print(f"-> Đã cập nhật web/interactive_science_map.html với dữ liệu thực tế!")
-    html = re.sub(r'const nodes = \[.*?\];', f'const nodes = {new_nodes_str};', html, flags=re.DOTALL)
-    html = re.sub(r'const edges = \[.*?\];', f'const edges = {new_edges_str};', html, flags=re.DOTALL)
-
-    with open(html_path, "w", encoding="utf-8") as f:
-        f.write(html)
-    print(f"-> Đã cập nhật ứng dụng HTML tương tác: {html_path} với dữ liệu 1,441 bài báo thực tế!")
+        print(f"-> Đã cập nhật web/interactive_science_map.html với dữ liệu {total_papers} bài báo thực tế!")
 
 if __name__ == "__main__":
     run_real_bibliometric_mapping()

@@ -232,7 +232,7 @@ Khi chiếu slide, bạn chiếu bảng Top tạp chí này để chứng minh t
 
 | Tên Tạp chí Quốc tế | Xếp hạng Scopus | Số lượng bài sạch trong mẫu |
 | :--- | :--- | :---: |
-{chr(10).join(f"| **{s}** | Scopus Q1/Q2 | **{c} bài** |" for s, c in journal_counter.most_common(12))}
+{chr(10).join(f"| **{s if s else 'Springer Academic Monographs / Series'}** | Scopus Q1/Q2 | **{c} bài** |" for s, c in journal_counter.most_common(12))}
 
 ---
 
