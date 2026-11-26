@@ -70,42 +70,41 @@ Quy trình 4 giai đoạn được tóm lược chi tiết qua lưu đồ dòng 
 flowchart TD
     subgraph S1 ["GIAI ĐOẠN 1: XÁC ĐỊNH BẢN GHI (IDENTIFICATION)"]
         direction TB
-        A1["Truy vấn Scopus<br/>(n = 384)"]
-        A2["Truy vấn Web of Science<br/>(n = 265)"]
-        A3["Nguồn bổ sung (ScienceDirect, Emerald)<br/>(n = 142)"]
+        A1["Truy vấn CSDL Học thuật Dimensions<br/>(Scopus & Crossref indexed: N = 2,500)"]
+        A2["Loại bỏ bản ghi trùng lặp (Duplicates removed)<br/>(n = 42 bản ghi trùng DOI / Tiêu đề)"]
         
-        A1 & A2 & A3 --> Total["Tổng số bản ghi ban đầu<br/>(n = 791)"]
-        Total --> Dup["Loại bỏ bản ghi trùng lặp (Duplicates removed)<br/>(n = 215)"]
+        A1 --> Total["Số bản ghi duy nhất đưa vào sàng lọc<br/>(N = 2,458 bài báo)"]
+        Total --> A2
     end
 
     subgraph S2 ["GIAI ĐOẠN 2: SÀNG LỌC TIÊU ĐỀ VÀ TÓM TẮT (SCREENING)"]
         direction TB
-        B1["Sàng lọc Tiêu đề và Tóm tắt<br/>(Records screened: n = 576)"]
-        B2["Loại bỏ sau khi đọc Tiêu đề/Tóm tắt<br/>(Excluded records: n = 438)<br/>• Thuần thuật toán tin học: n = 285<br/>• Không chứa biến số hành vi/tâm lý: n = 153"]
-        Dup --> B1
+        B1["Sàng lọc Tiêu đề và Tóm tắt<br/>(Records screened: N = 2,458 bài)"]
+        B2["Loại trừ sau sàng lọc hình thức<br/>(Excluded records: n = 701 bài)<br/>• Kỷ yếu hội thảo (Conference Proceedings): n = 357<br/>• Bản thảo chưa bình duyệt (SSRN, Preprints): n = 129<br/>• Xuất bản trước 2018 (ngoài khung thời gian): n = 153<br/>• Thiếu tóm tắt khoa học chuẩn mực: n = 62"]
+        A2 --> B1
         B1 -->|Không đạt tiêu chuẩn| B2
-        B1 -->|Đủ điều kiện đọc toàn văn| C1
+        B1 -->|Đủ điều kiện thẩm định nội dung| C1
     end
 
-    subgraph S3 ["GIAI ĐOẠN 3: ĐÁNH GIÁ TÍNH PHÙ HỢP TOÀN VĂN (ELIGIBILITY)"]
+    subgraph S3 ["GIAI ĐOẠN 3: ĐÁNH GIÁ TÍNH PHÙ HỢP NỘI DUNG (ELIGIBILITY)"]
         direction TB
-        C1["Thẩm định toàn văn bài báo<br/>(Full-text articles assessed: n = 138)"]
-        C2["Loại bỏ sau thẩm định toàn văn<br/>(Excluded full-text articles: n = 92)<br/>• Thiếu dữ liệu thực nghiệm kiểm định: n = 34<br/>• Không đo lường biến mua bốc đồng: n = 41<br/>• Không thuộc chuẩn Scopus Q1/Q2: n = 17"]
+        C1["Thẩm định tính phù hợp toàn văn<br/>(Full-text articles assessed: N = 1,757 bài)"]
+        C2["Loại trừ sau đánh giá nội dung<br/>(Excluded full-text articles: n = 316 bài)<br/>• Không đo lường hành vi người tiêu dùng / mua sắm: n = 226<br/>• Không chứa yếu tố công nghệ đề xuất / số hóa: n = 71<br/>• Thuần kỹ thuật tin học / y sinh không có biến hành vi: n = 19"]
         C1 -->|Không đạt tiêu chuẩn| C2
         C1 -->|Đạt tiêu chuẩn chất lượng cao| D1
     end
 
     subgraph S4 ["GIAI ĐOẠN 4: THU NẠP VÀO TỔNG HỢP (INCLUDED)"]
         direction TB
-        D1["Tập hợp bài báo cốt lõi đưa vào phân tích chuyên sâu<br/>(Final included empirical corpus: n = 46 bài)"]
+        D1["Tập hợp bài báo Scopus Q1/Q2 đã bình duyệt được chọn lọc<br/>(Final included empirical corpus: N = 1,441 bài báo)<br/>↳ Phân tập lập bản đồ mạng lưới từ khóa VOSviewer: n = 866 bài (28 items, 250 links, 4 clusters)"]
     end
 
     classDef stage fill:#f8fafc,stroke:#0284c7,stroke-width:1.5px;
     classDef final fill:#f0fdf4,stroke:#16a34a,stroke-width:2px;
     classDef ex fill:#fff1f2,stroke:#e11d48,stroke-width:1px;
 
-    class A1,A2,A3,Total,Dup,B1,C1 stage;
-    class B2,C2 ex;
+    class A1,Total,B1,C1 stage;
+    class A2,B2,C2 ex;
     class D1 final;
 ```
 
@@ -113,7 +112,7 @@ flowchart TD
 
 ## 4. PHÂN TÍCH TRẮC LƯỢNG THƯ MỤC VỚI VOSVIEWER (BIBLIOMETRIC SCIENCE MAPPING)
 
-Tập hợp dữ liệu thư mục gồm **46 công trình Scopus Q1/Q2 cốt lõi** và tập hợp mở rộng **576 tài liệu giai đoạn sàng lọc** được trích xuất thành định dạng chuẩn (RIS và CSV chứa đầy đủ Citation, Abstract, và Keywords) để nạp vào phần mềm **VOSviewer** (phiên bản 1.6.20).
+Tập hợp dữ liệu thư mục gồm **1,441 công trình Scopus Q1/Q2 cốt lõi** và phân tập **866 bài báo có từ khóa tác giả hoàn chỉnh** được nạp vào phần mềm **VOSviewer** (phiên bản 1.6.20 / VOSviewer Online). Kết quả trích xuất mạng lưới thực tế đạt **28 từ khóa cốt lõi, 250 liên kết đồng xuất hiện**, định dạng Fruchterman-Reingold layout (`luan_an_real_network.json`).
 
 ### 4.1. Cấu hình Tham số Phân tích trên VOSviewer
 - **Loại hình phân tích (Type of Analysis)**: Đồng xuất hiện (Co-occurrence).
