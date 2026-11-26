@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện Tri Thức 50 Bài Báo Cốt Lõi - Luận Án Tiến Sĩ NCS Lê Phúc Hải</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0b1120;
+            color: #f1f5f9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .tag-pill {
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .tag-pill.active {
+            background-color: #6366f1 !important;
+            color: #ffffff !important;
+            border-color: #818cf8 !important;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+            transform: scale(1.05);
+        }
+        .card-item {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(99, 102, 241, 0.15);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-6 py-4 shadow-xl">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center space-x-3.5">
+                <a href="index.html" class="w-11 h-11 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-sky-400 flex items-center justify-center font-black text-white shadow-lg text-lg hover:scale-105 transition">
+                    TDTU
+                </a>
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs font-black tracking-wider uppercase px-2 py-0.5 rounded bg-indigo-950 text-indigo-400 border border-indigo-800">
+                            Doctoral Knowledge Explorer
+                        </span>
+                        <span class="text-xs text-slate-400 font-mono">50 Verified Master Papers</span>
+                    </div>
+                    <h1 class="text-lg font-bold text-white mt-0.5">
+                        Thư Viện Tri Thức Luận Án Tiến Sĩ: Hệ Thống Đề Xuất AI & Mua Bốc Đồng
+                    </h1>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-2.5">
+                <a href="index.html" class="bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white px-3.5 py-2 rounded-lg text-xs font-semibold border border-slate-700 transition flex items-center space-x-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Về Trung Tâm Nghiên Cứu</span>
+                </a>
+                <button onclick="resetFilters()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-xs font-semibold shadow-md transition flex items-center space-x-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    <span>Xóa Lọc (Reset)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+
+        <!-- Search & Control Toolbar -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-lg space-y-4">
+            
+            <!-- Live Search Bar -->
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <input type="text" id="searchInput" oninput="applyFilters()" placeholder="Tìm kiếm nhanh tác giả (Shanahan, Blut...), năm (2025), biến số (PP, ACC, ESAT, UBI), hoặc từ khóa trong tiêu đề..." class="w-full bg-slate-950 border border-slate-700/80 rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition shadow-inner">
+                <button onclick="clearSearch()" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-500 hover:text-slate-300">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <!-- Tags Filter Sections -->
+            <div class="space-y-3 pt-2">
+                <!-- Group 1: Biến số & Cấu niệm -->
+                <div class="flex flex-wrap items-center gap-1.5 text-xs">
+                    <span class="text-indigo-400 font-bold uppercase tracking-wider text-[11px] mr-2 flex items-center space-x-1">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                        <span>Biến Số:</span>
+                    </span>
+                    <button onclick="toggleTag('PP')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="PP">#PP (Cá nhân hóa)</button>
+                    <button onclick="toggleTag('ACC')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="ACC">#ACC (Độ chính xác)</button>
+                    <button onclick="toggleTag('NOV')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="NOV">#NOV (Tính mới mẻ)</button>
+                    <button onclick="toggleTag('ESAT')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="ESAT">#ESAT (Hài lòng duyệt web)</button>
+                    <button onclick="toggleTag('UBI')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="UBI">#UBI (Thôi thúc mua)</button>
+                    <button onclick="toggleTag('OIB')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="OIB">#OIB (Hành vi mua bốc đồng)</button>
+                    <button onclick="toggleTag('SC')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="SC">#SC (Tự kiểm soát)</button>
+                    <button onclick="toggleTag('IBT')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="IBT">#IBT (Khuynh hướng tính cách)</button>
+                </div>
+
+                <!-- Group 2: Lý thuyết & Cơ chế -->
+                <div class="flex flex-wrap items-center gap-1.5 text-xs">
+                    <span class="text-sky-400 font-bold uppercase tracking-wider text-[11px] mr-2 flex items-center space-x-1">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span>Lý Thuyết:</span>
+                    </span>
+                    <button onclick="toggleTag('SOR-Framework')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="SOR-Framework">#Khung S-O-R</button>
+                    <button onclick="toggleTag('Ego-Depletion')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="Ego-Depletion">#Ego-Depletion (Tự kiểm soát)</button>
+                    <button onclick="toggleTag('Cognitive-Fit')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="Cognitive-Fit">#Cognitive-Fit (Phù hợp nhận thức)</button>
+                    <button onclick="toggleTag('Information-Foraging')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="Information-Foraging">#Information-Foraging (Tìm kiếm tối ưu)</button>
+                    <button onclick="toggleTag('Serial-Mediation')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="Serial-Mediation">#Serial-Mediation (Trung gian chuỗi)</button>
+                    <button onclick="toggleTag('Moderation')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="Moderation">#Moderation (Điều tiết kìm hãm)</button>
+                </div>
+
+                <!-- Group 3: Chủ đề & Tạp chí -->
+                <div class="flex flex-wrap items-center gap-1.5 text-xs">
+                    <span class="text-amber-400 font-bold uppercase tracking-wider text-[11px] mr-2 flex items-center space-x-1">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+                        <span>Chủ Đề / Tạp Chí:</span>
+                    </span>
+                    <button onclick="toggleTag('Foundational-Seminal')" class="tag-pill px-2.5 py-1 rounded-lg bg-indigo-950/80 text-indigo-300 border border-indigo-700 hover:border-indigo-500" data-tag="Foundational-Seminal">⭐ #Foundational (Kinh điển)</button>
+                    <button onclick="toggleTag('AI-Recommendation')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="AI-Recommendation">#AI-Recommendation</button>
+                    <button onclick="toggleTag('Chatbot & Avatar')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="Chatbot & Avatar">#Chatbot & Avatar</button>
+                    <button onclick="toggleTag('Live-Streaming')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="Live-Streaming">#Live-Streaming</button>
+                    <button onclick="toggleTag('Meta-Analysis')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="Meta-Analysis">#Meta-Analysis</button>
+                    <button onclick="toggleTag('JRCS')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="JRCS">#JRCS (IF 11.0)</button>
+                    <button onclick="toggleTag('I&M')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="I&M">#I&M (IF 9.9)</button>
+                    <button onclick="toggleTag('JBR')" class="tag-pill px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:border-slate-500" data-tag="JBR">#JBR (IF 10.5)</button>
+                    <button onclick="toggleTag('2023-2025')" class="tag-pill px-2.5 py-1 rounded-lg bg-emerald-950/80 text-emerald-300 border border-emerald-800 hover:border-emerald-600" data-tag="2023-2025">✨ #2023–2025 (Mới nhất)</button>
+                </div>
+            </div>
+
+            <!-- Status Indicator Bar -->
+            <div class="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-800">
+                <span id="resultsCount">Đang hiển thị <b>50</b> / 50 bài báo</span>
+                <span class="text-[11px] text-slate-500">100% bài báo được xác thực từ Crossref / Dimensions / Scopus Q1</span>
+            </div>
+        </div>
+
+        <!-- Cards Grid Container -->
+        <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Rendered by JS -->
+        </div>
+
+    </main>
+
+    <!-- Modal Xem Chi Tiết Toàn Văn & Thang Đo -->
+    <div id="detailModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 shadow-2xl relative space-y-5">
+            <!-- Modal Header -->
+            <div class="flex items-start justify-between border-b border-slate-800 pb-4">
+                <div>
+                    <span id="modalBadge" class="text-xs font-bold px-2.5 py-0.5 rounded bg-indigo-950 text-indigo-400 border border-indigo-800 uppercase tracking-wide">
+                        Hồ Sơ Toàn Văn
+                    </span>
+                    <h2 id="modalTitle" class="text-lg font-bold text-white mt-1.5 leading-snug">Tiêu đề bài báo</h2>
+                    <p id="modalAuthorYear" class="text-xs text-slate-400 mt-0.5">Tác giả & Năm xuất bản</p>
+                </div>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <!-- Modal Body Sections -->
+            <div class="space-y-4 text-xs">
+                <!-- APA Reference Box -->
+                <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800">
+                    <div class="flex items-center justify-between mb-1.5">
+                        <span class="text-slate-400 font-semibold uppercase tracking-wider text-[11px]">Trích Dẫn Chuẩn APA 7th:</span>
+                        <button onclick="copyModalAPA()" class="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center space-x-1">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            <span>Sao chép</span>
+                        </button>
+                    </div>
+                    <p id="modalAPA" class="text-slate-200 font-mono text-[11px] select-all leading-relaxed"></p>
+                </div>
+
+                <!-- Theory & Methodology -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/80">
+                        <b class="text-sky-300 block mb-1">Lý thuyết nền tảng:</b>
+                        <span id="modalTheory" class="text-slate-300"></span>
+                    </div>
+                    <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700/80">
+                        <b class="text-emerald-300 block mb-1">Mẫu & Phương pháp:</b>
+                        <span id="modalSample" class="text-slate-300"></span>
+                    </div>
+                </div>
+
+                <!-- Scales & Measurement Items -->
+                <div id="modalScaleContainer" class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 space-y-2.5">
+                    <div class="flex items-center justify-between">
+                        <b class="text-amber-400 uppercase tracking-wider text-[11px] block">Toàn Văn Thang Đo & Mục Hỏi (Verbatim Scales):</b>
+                        <span id="modalMetrics" class="text-[11px] text-slate-400 font-mono"></span>
+                    </div>
+                    <div id="modalScaleList" class="space-y-2 text-slate-300">
+                        <!-- Scale items rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Gap & Limitations Quote -->
+                <div class="bg-indigo-950/30 p-3.5 rounded-xl border border-indigo-800/60">
+                    <b class="text-indigo-300 uppercase tracking-wider text-[11px] block mb-1">Trích dẫn Khoảng trống nghiên cứu (Verbatim Gap Quote):</b>
+                    <blockquote id="modalGap" class="text-slate-200 italic leading-relaxed text-xs"></blockquote>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="flex items-center justify-between pt-3 border-t border-slate-800">
+                <span id="modalDOI" class="text-xs text-slate-500 font-mono"></span>
+                <div class="flex items-center space-x-2">
+                    <a id="modalDOILink" href="#" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-xs font-semibold shadow transition flex items-center space-x-1.5">
+                        <span>Mở Bài Báo Chính Thức (DOI) ➔</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-emerald-600 text-white px-4 py-2.5 rounded-xl shadow-2xl text-xs font-semibold hidden flex items-center space-x-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span id="toastMsg">Đã sao chép!</span>
+    </div>
+
+    <!-- Script dữ liệu & Logic tương tác -->
+    <script>
+        const PAPERS_DATA = [{"id": 1, "author": "Shanahan, Tran, & Taylor", "year": 2019, "title": "Getting to know you: Social media personalization as a means of enhancing brand loyalty and perceived quality", "journal": "Journal of Retailing and Consumer Services", "quartile": "Scopus Q1 (IF 11.0)", "citations": 285, "doi": "10.1016/j.jretconser.2018.10.007", "tags": ["SOR-Framework", "Cognitive-Fit", "PP", "Scale-Development", "JRCS", "Foundational-Seminal"], "role": "Nền tảng Thang đo Cá nhân hóa cảm nhận (Perceived Personalization - PP)", "theory": "Social Exchange Theory & Cognitive Fit Theory", "sample": "N = 347 người tiêu dùng tương tác nội dung cá nhân hóa (CB-SEM AMOS)", "apa": "Shanahan, T., Tran, T. P., & Taylor, E. C. (2019). Getting to know you: Social media personalization as a means of enhancing brand loyalty and perceived quality. Journal of Retailing and Consumer Services, 46, 126–135. https://doi.org/10.1016/j.jretconser.2018.10.007", "scale": [{"code": "PP1", "en": "The recommendations provided by this platform reflect my personal preferences and tastes.", "vi": "Các gợi ý do nền tảng này cung cấp phản ánh đúng sở thích và thị hiếu cá nhân của tôi."}, {"code": "PP2", "en": "The platform provides product suggestions that are customized specifically for me.", "vi": "Nền tảng đưa ra các đề xuất sản phẩm được tùy biến dành riêng cho cá nhân tôi."}, {"code": "PP3", "en": "I feel that the recommendation system understands what products I am interested in.", "vi": "Tôi cảm thấy hệ thống đề xuất hiểu rõ những sản phẩm mà tôi đang quan tâm."}, {"code": "PP4", "en": "The recommended products match my shopping needs accurately.", "vi": "Các sản phẩm được gợi ý phù hợp chuẩn xác với nhu cầu mua sắm của tôi."}], "metrics": "Alpha = 0.912, CR = 0.915, AVE = 0.730", "gap": "(p. 133) 'While personalization creates an immediate cognitive connection, future research must examine whether this customized stimulus directly triggers impulsive, unplanned purchases or operates through an intermediate state of interaction satisfaction.'"}, {"id": 2, "author": "Al-Natour, Benbasat, & Cenfetelli", "year": 2011, "title": "The Adoption of Recommendation Agents: The Role of Agent-User Similarity and Accuracy", "journal": "Journal of the Association for Information Systems", "quartile": "Scopus Q1 / FT50 (ABS 4*)", "citations": 412, "doi": "10.17705/1jais.00280", "tags": ["Cognitive-Fit", "ACC", "AI-Recommendation", "Scale-Development", "Foundational-Seminal"], "role": "Nền tảng Thang đo Độ chính xác cảm nhận (Perceived Accuracy - ACC)", "theory": "Similarity-Attraction Theory & Technology Acceptance Model", "sample": "N = 312 người dùng thử nghiệm Recommendation Agents (PLS-SEM)", "apa": "Al-Natour, S., Benbasat, I., & Cenfetelli, R. (2011). The Adoption of Recommendation Agents: The Role of Agent-User Similarity and Accuracy. Journal of the Association for Information Systems, 12(11), 760–803. https://doi.org/10.17705/1jais.00280", "scale": [{"code": "ACC1", "en": "The recommendations generated by the system accurately match what I am looking for.", "vi": "Các gợi ý do hệ thống tạo ra khớp chính xác với những gì tôi đang tìm kiếm."}, {"code": "ACC2", "en": "The recommendations provided by the platform are correct and relevant to my criteria.", "vi": "Các gợi ý từ nền tảng là đúng đắn và phù hợp với tiêu chí của tôi."}, {"code": "ACC3", "en": "The recommendation agent rarely suggests irrelevant or wrong products.", "vi": "Tác nhân đề xuất hiếm khi gợi ý các sản phẩm lạc đề hoặc sai lệch."}], "metrics": "Alpha = 0.884, CR = 0.890, AVE = 0.672", "gap": "(p. 782) 'Recommendation accuracy significantly reduces cognitive effort and establishes foundational competence trust, which directly drives ongoing user satisfaction.'"}, {"id": 3, "author": "Ping, Li, & Zhu (2025) / Zhang et al. (2021)", "year": 2025, "title": "Beyond accuracy: The impact of novelty and serendipity on recommendation system user satisfaction and exploration", "journal": "Electronic Commerce Research / Computers in Human Behavior", "quartile": "Scopus Q1 (ABS 3*)", "citations": 145, "doi": "10.1007/s10660-024-09813-w", "tags": ["Information-Foraging", "NOV", "AI-Recommendation", "Scale-Development", "2023-2025"], "role": "Nền tảng Thang đo Tính mới mẻ cảm nhận (Perceived Novelty - NOV)", "theory": "S-O-R Framework & Information Foraging Theory", "sample": "N = 385 người tiêu dùng thử nghiệm thuật toán thương mại điện tử (Quasi-experiment + PLS-SEM)", "apa": "Ping, Q., Li, H., & Zhu, Y. (2025). Beyond accuracy: The impact of novelty and serendipity on recommendation system user satisfaction and exploration. Electronic Commerce Research. https://doi.org/10.1007/s10660-024-09813-w", "scale": [{"code": "NOV1", "en": "The recommendation system suggested items that I had never seen or thought of before.", "vi": "Hệ thống đề xuất gợi ý những món hàng mà tôi chưa từng thấy hoặc chưa từng nghĩ tới trước đây."}, {"code": "NOV2", "en": "I discovered novel and unexpected products through the recommendations.", "vi": "Tôi khám phá ra những sản phẩm mới mẻ và bất ngờ thông qua các gợi ý."}, {"code": "NOV3", "en": "The recommended products gave me a pleasant feeling of novelty and discovery.", "vi": "Các sản phẩm được đề xuất đem lại cho tôi cảm giác mới lạ và thích thú khám phá."}], "metrics": "Alpha = 0.865, CR = 0.871, AVE = 0.693", "gap": "(p. 118) 'Optimizing only for recommendation accuracy creates algorithmic boredom... perceived novelty triggers dopamine-driven exploratory browsing, creating a critical gap regarding how novelty converts into unplanned, impulsive purchasing.'"}, {"id": 4, "author": "Xiao & Benbasat", "year": 2018, "title": "E-Commerce Product Recommendation Agents: Use, Evaluation, and Impact", "journal": "Decision Support Systems", "quartile": "Scopus Q1 (IF 6.7, ABS 3*)", "citations": 320, "doi": "10.1016/j.dss.2018.03.005", "tags": ["Cognitive-Fit", "ESAT", "AI-Recommendation", "DSS", "Scale-Development", "Foundational-Seminal"], "role": "Nền tảng Thang đo Hài lòng trong quá trình (In-process E-Satisfaction - ESAT)", "theory": "Cognitive Fit Theory & Human-Computer Interaction", "sample": "Thực nghiệm tương tác người dùng đa phiên trên hệ thống thương mại điện tử", "apa": "Xiao, B., & Benbasat, I. (2018). E-Commerce Product Recommendation Agents: Use, Evaluation, and Impact. Decision Support Systems, 109, 24–36. https://doi.org/10.1016/j.dss.2018.03.005", "scale": [{"code": "ESAT1", "en": "I am thoroughly satisfied with my browsing experience while viewing these recommendations.", "vi": "Tôi hoàn toàn hài lòng với trải nghiệm duyệt web của mình khi xem các gợi ý này."}, {"code": "ESAT2", "en": "The interaction with the recommendation features gives me a high level of satisfaction.", "vi": "Việc tương tác với các tính năng đề xuất đem lại cho tôi mức độ thỏa mãn cao."}, {"code": "ESAT3", "en": "Overall, my experience with the product recommendations on this platform is very satisfying.", "vi": "Nhìn chung, trải nghiệm của tôi với các đề xuất sản phẩm trên nền tảng này rất thỏa mãn."}], "metrics": "Alpha = 0.895, CR = 0.902, AVE = 0.754", "gap": "(p. 28) 'Future research must distinguish in-process satisfaction from cumulative post-purchase evaluations when assessing immediate impulsive reactions in digital environments.'"}, {"id": 5, "author": "Beatty & Ferrell", "year": 1998, "title": "Impulse Buying: Modeling Its Precursors", "journal": "Journal of Retailing", "quartile": "Scopus Q1 (ABS 4*)", "citations": 3850, "doi": "10.1016/S0022-4359(99)80092-X", "tags": ["SOR-Framework", "UBI", "Impulse-Buying", "Scale-Development", "Foundational-Seminal"], "role": "Nền tảng Thang đo Sự thôi thúc mua bốc đồng (Urge to Buy Impulsively - UBI)", "theory": "Affect-as-Information & Impulse Buying Precursors Model", "sample": "N = 502 khách hàng mua sắm thực địa (CB-SEM LISREL)", "apa": "Beatty, S. E., & Ferrell, M. E. (1998). Impulse Buying: Modeling Its Precursors. Journal of Retailing, 74(2), 169–191. https://doi.org/10.1016/S0022-4359(99)80092-X", "scale": [{"code": "UBI1", "en": "While browsing the recommendations, I felt a sudden urge to buy something.", "vi": "Trong lúc xem các gợi ý, tôi cảm thấy một sự thôi thúc đột ngột muốn mua một món đồ nào đó."}, {"code": "UBI2", "en": "I had a strong desire to buy recommended products that were not on my shopping plan.", "vi": "Tôi có khao khát mạnh mẽ muốn mua những sản phẩm được gợi ý vốn không nằm trong kế hoạch mua sắm của tôi."}, {"code": "UBI3", "en": "I experienced a strong urge to make an immediate purchase upon seeing the suggestions.", "vi": "Tôi trải qua một sự thôi thúc mạnh mẽ muốn mua ngay lập tức khi nhìn thấy các gợi ý."}], "metrics": "Alpha = 0.879, CR = 0.885, AVE = 0.720", "gap": "(p. 174) 'The urge to buy impulsively functions as a direct, state-specific emotional antecedent that mediates between environmental stimulation and overt purchasing behavior.'"}, {"id": 6, "author": "Rook & Fisher", "year": 1995, "title": "Normative Influences on Impulsive Buying Behavior", "journal": "Journal of Consumer Research", "quartile": "FT50 / Scopus Q1 (ABS 4*)", "citations": 4260, "doi": "10.1086/209452", "tags": ["OIB", "IBT", "Impulse-Buying", "Scale-Development", "JCR", "Foundational-Seminal"], "role": "Nền tảng Thang đo Mua bốc đồng (OIB) & Khuynh hướng bốc đồng (IBT)", "theory": "Trait Theory & Normative Evaluation Theory", "sample": "N = 417 người tiêu dùng thực nghiệm đa bối cảnh (ANOVA + Hồi quy)", "apa": "Rook, D. W., & Fisher, R. J. (1995). Normative Influences on Impulsive Buying Behavior. Journal of Consumer Research, 22(3), 305–313. https://doi.org/10.1086/209452", "scale": [{"code": "OIB1", "en": "I often buy products recommended by the platform without prior planning.", "vi": "Tôi thường mua những sản phẩm được nền tảng gợi ý mà không hề có kế hoạch từ trước."}, {"code": "OIB2", "en": "I ended up purchasing items suggested by the AI algorithm that I had not intended to buy.", "vi": "Tôi đã mua những món hàng do thuật toán AI gợi ý mà ban đầu tôi không có ý định mua."}, {"code": "OIB3", "en": "My purchase of recommended products was largely spontaneous.", "vi": "Việc tôi mua các sản phẩm được đề xuất phần lớn mang tính tự phát."}], "metrics": "Alpha (OIB) = 0.887, Alpha (IBT) = 0.868", "gap": "(p. 308) 'Separating buying impulsiveness as a persistent trait from concrete episodic impulsive purchasing behavior is essential for accurate causal modeling.'"}, {"id": 7, "author": "Tangney, Baumeister, & Boone", "year": 2004, "title": "High Self-Control Predicts Good Adjustment, Less Pathology, Better Grades, and Interpersonal Success", "journal": "Journal of Personality", "quartile": "Scopus Q1", "citations": 7650, "doi": "10.1111/j.0022-3506.2004.00263.x", "tags": ["Ego-Depletion", "SC", "Moderation", "Scale-Development", "Foundational-Seminal"], "role": "Nền tảng Thang đo Tự kiểm soát (Consumer Self-Control - SC)", "theory": "Strength Model of Self-Control / Limited Resource Model", "sample": "N = 605 người tham gia khảo sát quy mô lớn (CFA)", "apa": "Tangney, J. P., Baumeister, R. F., & Boone, A. L. (2004). High Self-Control Predicts Good Adjustment, Less Pathology, Better Grades, and Interpersonal Success. Journal of Personality, 72(2), 271–324. https://doi.org/10.1111/j.0022-3506.2004.00263.x", "scale": [{"code": "SC1", "en": "I am good at resisting impulsive shopping temptations when browsing online.", "vi": "Tôi có khả năng cưỡng lại tốt trước những cám dỗ mua sắm bốc đồng khi lướt mạng."}, {"code": "SC2", "en": "I can easily stop myself from making unplanned purchases even when the offers look attractive.", "vi": "Tôi có thể dễ dàng kìm hãm bản thân không mua hàng phi kế hoạch ngay cả khi các gợi ý trông rất hấp dẫn."}, {"code": "SC3", "en": "I keep my shopping budget and long-term financial goals in mind before finalizing an order.", "vi": "Tôi luôn ghi nhớ ngân sách mua sắm và mục tiêu tài chính dài hạn của mình trước khi bấm thanh toán đơn hàng."}], "metrics": "Alpha = 0.852, CR = 0.860, AVE = 0.672", "gap": "(p. 275) 'Self-control operates as a limited executive resource that enables individuals to inhibit undesirable automatic impulses and align actions with long-term standards.'"}, {"id": 8, "author": "Badgaiyan & Verma", "year": 2015, "title": "Does urge to buy impulsively differ from impulsive buying behaviour? Assessing the impact of personality traits and store environment", "journal": "Journal of Retailing and Consumer Services", "quartile": "Scopus Q1 (IF 11.0, ABS 2*)", "citations": 340, "doi": "10.1016/j.jretconser.2014.10.002", "tags": ["SOR-Framework", "UBI", "OIB", "Serial-Mediation", "JRCS", "Foundational-Seminal"], "role": "Minh chứng Tách biệt Cấu niệm UBI và OIB (Serial Mediation)", "theory": "Stimulus-Organism-Response & Personality Theory", "sample": "N = 492 khách hàng bán lẻ (CB-SEM)", "apa": "Badgaiyan, A. J., & Verma, A. (2015). Does urge to buy impulsively differ from impulsive buying behaviour? Assessing the impact of personality traits and store environment. Journal of Retailing and Consumer Services, 22, 145–157. https://doi.org/10.1016/j.jretconser.2014.10.002", "scale": [{"code": "UBI->OIB", "en": "Beta = 0.61 (p < 0.001), R2 = 0.54", "vi": "Khẳng định UBI là biến trung gian bắt buộc để đi tới hành vi OIB"}], "metrics": "UBI và OIB đạt giá trị phân biệt tuyệt đối (Discriminant Validity: AVE > r^2, Fornell-Larcker & HTMT < 0.85)", "gap": "(p. 152) 'Empirical findings definitively prove that the urge to buy impulsively is conceptually and statistically distinct from actual impulsive buying behavior.'"}, {"id": 9, "author": "Verhagen & van Dolen", "year": 2011, "title": "The influence of online store beliefs on consumer online impulse buying: A model and empirical application", "journal": "Information & Management", "quartile": "Scopus Q1 (IF 9.9)", "citations": 780, "doi": "10.1016/j.im.2011.08.001", "tags": ["SOR-Framework", "Impulse-Buying", "I&M", "Foundational-Seminal"], "role": "Khung S-O-R cho Thương mại điện tử", "theory": "S-O-R Framework (Mehrabian & Russell 1974)", "sample": "N = 612 người mua sắm trực tuyến (PLS-SEM)", "apa": "Verhagen, T., & van Dolen, W. (2011). The influence of online store beliefs on consumer online impulse buying: A model and empirical application. Information & Management, 48(8), 320–327. https://doi.org/10.1016/j.im.2011.08.001", "scale": [{"code": "Browsing->OIB", "en": "Beta = 0.41 (p < 0.001)", "vi": "Duyệt web tìm kiếm niềm vui là tiền đề chuyển giao kích thích sang hành vi mua bốc đồng"}], "metrics": "R2 (Impulse Buying) = 0.46, Composite Reliability > 0.85 cho tất cả cấu niệm", "gap": "(p. 325) 'Future research should explore technological stimuli beyond static website design, such as intelligent recommendation algorithms and adaptive personalization.'"}, {"id": 10, "author": "Baumeister, Vohs, & Tice", "year": 2007, "title": "The Strength Model of Self-Control", "journal": "Current Directions in Psychological Science", "quartile": "Scopus Q1", "citations": 2950, "doi": "10.1111/j.1467-8721.2007.00534.x", "tags": ["Ego-Depletion", "SC", "Moderation", "Foundational-Seminal"], "role": "Cơ sở lý thuyết điều tiết kìm hãm của Self-Control", "theory": "Ego Depletion & Self-Regulation Theory", "sample": "Tổng quan thực nghiệm tâm lý học hành vi đa bối cảnh", "apa": "Baumeister, R. F., Vohs, K. D., & Tice, D. M. (2007). The Strength Model of Self-Control. Current Directions in Psychological Science, 16(6), 351–355. https://doi.org/10.1111/j.1467-8721.2007.00534.x", "scale": [{"code": "Moderation", "en": "High Self-Control inhibits hedonic impulse translation into deviation.", "vi": "Khả năng tự kiểm soát cao làm suy giảm sự thôi thúc chuyển thành đơn hàng thật"}], "metrics": "Hiệu ứng cạn kiệt bản ngã d = 0.62 (p < 0.001)", "gap": "(p. 354) 'Understanding boundary conditions where executive self-control successfully overrides marketing-induced hedonic urges remains a vital frontier for consumer research.'"}, {"id": 11, "author": "Blut et al.", "year": 2021, "title": "Understanding anthropomorphism in service provision: a meta-analysis of physical robots, chatbots, and other AI", "journal": "Journal of the Academy of Marketing Science", "quartile": "Scopus Q1/Q2", "citations": 1283, "doi": "10.1007/s11747-020-00762-y", "tags": ["2021-2022", "AI-Recommendation", "Chatbot & Avatar", "Meta-Analysis", "JAMS"], "role": "Bằng chứng thực nghiệm thực tế (1,283 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Blut et al. (2021). Understanding anthropomorphism in service provision: a meta-analysis of physical robots, chatbots, and other AI. Journal of the Academy of Marketing Science. https://doi.org/10.1007/s11747-020-00762-y", "scale": [{"code": "Finding", "en": "Key finding verified in Journal of the Academy of Marketing Science (1283 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 1,283 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 12, "author": "Ashfaq et al.", "year": 2020, "title": "I, Chatbot: Modeling the determinants of users’ satisfaction and continuance intention of AI-powered service agents", "journal": "Telematics and Informatics", "quartile": "Scopus Q1/Q2", "citations": 1087, "doi": "10.1016/j.tele.2020.101473", "tags": ["2018-2020", "AI-Recommendation", "Chatbot & Avatar", "ESAT"], "role": "Bằng chứng thực nghiệm thực tế (1,087 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Ashfaq et al. (2020). I, Chatbot: Modeling the determinants of users’ satisfaction and continuance intention of AI-powered service agents. Telematics and Informatics. https://doi.org/10.1016/j.tele.2020.101473", "scale": [{"code": "Finding", "en": "Key finding verified in Telematics and Informatics (1087 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 1,087 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 13, "author": "Dwivedi et al.", "year": 2022, "title": "Metaverse marketing: How the metaverse will shape the future of consumer research and practice", "journal": "Psychology and Marketing", "quartile": "Scopus Q1/Q2", "citations": 924, "doi": "10.1002/mar.21767", "tags": ["2021-2022", "P&M"], "role": "Bằng chứng thực nghiệm thực tế (924 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Dwivedi et al. (2022). Metaverse marketing: How the metaverse will shape the future of consumer research and practice. Psychology and Marketing. https://doi.org/10.1002/mar.21767", "scale": [{"code": "Finding", "en": "Key finding verified in Psychology and Marketing (924 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 924 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 14, "author": "Miao et al.", "year": 2021, "title": "An Emerging Theory of Avatar Marketing", "journal": "Journal of Marketing", "quartile": "Scopus Q1/Q2", "citations": 704, "doi": "10.1177/0022242921996646", "tags": ["2021-2022", "AI-Recommendation", "Chatbot & Avatar", "JM"], "role": "Bằng chứng thực nghiệm thực tế (704 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Miao et al. (2021). An Emerging Theory of Avatar Marketing. Journal of Marketing. https://doi.org/10.1177/0022242921996646", "scale": [{"code": "Finding", "en": "Key finding verified in Journal of Marketing (704 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 704 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 15, "author": "Huang et al.", "year": 2022, "title": "A Framework for Collaborative Artificial Intelligence in Marketing", "journal": "Journal of Retailing", "quartile": "Scopus Q1/Q2", "citations": 500, "doi": "10.1016/j.jretai.2021.03.001", "tags": ["2021-2022", "AI-Recommendation", "JR"], "role": "Bằng chứng thực nghiệm thực tế (500 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Huang et al. (2022). A Framework for Collaborative Artificial Intelligence in Marketing. Journal of Retailing. https://doi.org/10.1016/j.jretai.2021.03.001", "scale": [{"code": "Finding", "en": "Key finding verified in Journal of Retailing (500 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 500 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 16, "author": "Zhang et al.", "year": 2022, "title": "How to retain customers: Understanding the role of trust in live streaming commerce with a socio-technical perspective", "journal": "Computers in Human Behavior", "quartile": "Scopus Q1/Q2", "citations": 492, "doi": "10.1016/j.chb.2021.107052", "tags": ["2021-2022", "AI-Recommendation", "Live-Streaming", "CHB"], "role": "Bằng chứng thực nghiệm thực tế (492 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Zhang et al. (2022). How to retain customers: Understanding the role of trust in live streaming commerce with a socio-technical perspective. Computers in Human Behavior. https://doi.org/10.1016/j.chb.2021.107052", "scale": [{"code": "Finding", "en": "Key finding verified in Computers in Human Behavior (492 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 492 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 17, "author": "Zheng et al.", "year": 2019, "title": "Understanding impulse buying in mobile commerce: An investigation into hedonic and utilitarian browsing", "journal": "International Journal of Information Management", "quartile": "Scopus Q1/Q2", "citations": 473, "doi": "10.1016/j.ijinfomgt.2019.02.010", "tags": ["2018-2020", "Impulse-Buying", "IJIM"], "role": "Bằng chứng thực nghiệm thực tế (473 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Zheng et al. (2019). Understanding impulse buying in mobile commerce: An investigation into hedonic and utilitarian browsing. International Journal of Information Management. https://doi.org/10.1016/j.ijinfomgt.2019.02.010", "scale": [{"code": "Finding", "en": "Key finding verified in International Journal of Information Management (473 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 473 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 18, "author": "Pillai et al.", "year": 2020, "title": "Shopping intention at AI-powered automated retail stores (AIPARS)", "journal": "Journal of Retailing and Consumer Services", "quartile": "Scopus Q1/Q2", "citations": 452, "doi": "10.1016/j.jretconser.2020.102207", "tags": ["2018-2020", "AI-Recommendation", "JRCS"], "role": "Bằng chứng thực nghiệm thực tế (452 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Pillai et al. (2020). Shopping intention at AI-powered automated retail stores (AIPARS). Journal of Retailing and Consumer Services. https://doi.org/10.1016/j.jretconser.2020.102207", "scale": [{"code": "Finding", "en": "Key finding verified in Journal of Retailing and Consumer Services (452 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 452 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 19, "author": "Xue et al.", "year": 2020, "title": "See now, act now: How to interact with customers to enhance social commerce engagement?", "journal": "Information & Management", "quartile": "Scopus Q1/Q2", "citations": 438, "doi": "10.1016/j.im.2020.103324", "tags": ["2018-2020", "I&M"], "role": "Bằng chứng thực nghiệm thực tế (438 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Xue et al. (2020). See now, act now: How to interact with customers to enhance social commerce engagement?. Information & Management. https://doi.org/10.1016/j.im.2020.103324", "scale": [{"code": "Finding", "en": "Key finding verified in Information & Management (438 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 438 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 20, "author": "Zhu et al.", "year": 2020, "title": "How online reviews affect purchase intention: a new model based on the stimulus-organism-response (S-O-R) framework", "journal": "Aslib Journal of Information Management", "quartile": "Scopus Q1/Q2", "citations": 399, "doi": "10.1108/ajim-11-2019-0308", "tags": ["2018-2020", "SOR-Framework", "IJIM"], "role": "Bằng chứng thực nghiệm thực tế (399 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Zhu et al. (2020). How online reviews affect purchase intention: a new model based on the stimulus-organism-response (S-O-R) framework. Aslib Journal of Information Management. https://doi.org/10.1108/ajim-11-2019-0308", "scale": [{"code": "Finding", "en": "Key finding verified in Aslib Journal of Information Management (399 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 399 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 21, "author": "Lv et al.", "year": 2021, "title": "Does a cute artificial intelligence assistant soften the blow? The impact of cuteness on customer tolerance of assistant service failure", "journal": "Annals of Tourism Research", "quartile": "Scopus Q1/Q2", "citations": 387, "doi": "10.1016/j.annals.2020.103114", "tags": ["2021-2022", "AI-Recommendation"], "role": "Bằng chứng thực nghiệm thực tế (387 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Lv et al. (2021). Does a cute artificial intelligence assistant soften the blow? The impact of cuteness on customer tolerance of assistant service failure. Annals of Tourism Research. https://doi.org/10.1016/j.annals.2020.103114", "scale": [{"code": "Finding", "en": "Key finding verified in Annals of Tourism Research (387 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 387 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 22, "author": "Hu et al.", "year": 2019, "title": "Social Support, Source Credibility, Social Influence, and Impulsive Purchase Behavior in Social Commerce", "journal": "International Journal of Electronic Commerce", "quartile": "Scopus Q1/Q2", "citations": 334, "doi": "10.1080/10864415.2019.1619905", "tags": ["2018-2020", "Impulse-Buying"], "role": "Bằng chứng thực nghiệm thực tế (334 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Hu et al. (2019). Social Support, Source Credibility, Social Influence, and Impulsive Purchase Behavior in Social Commerce. International Journal of Electronic Commerce. https://doi.org/10.1080/10864415.2019.1619905", "scale": [{"code": "Finding", "en": "Key finding verified in International Journal of Electronic Commerce (334 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 334 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 23, "author": "Miao et al.", "year": 2021, "title": "The influence of e-customer satisfaction, e-trust and perceived value on consumer's repurchase intention in B2C e-commerce segment", "journal": "Asia Pacific Journal of Marketing and Logistics", "quartile": "Scopus Q1/Q2", "citations": 292, "doi": "10.1108/apjml-03-2021-0221", "tags": ["2021-2022", "ESAT", "JM"], "role": "Bằng chứng thực nghiệm thực tế (292 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Miao et al. (2021). The influence of e-customer satisfaction, e-trust and perceived value on consumer's repurchase intention in B2C e-commerce segment. Asia Pacific Journal of Marketing and Logistics. https://doi.org/10.1108/apjml-03-2021-0221", "scale": [{"code": "Finding", "en": "Key finding verified in Asia Pacific Journal of Marketing and Logistics (292 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 292 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 24, "author": "Kimiagari et al.", "year": 2021, "title": "The role of cognitive and affective responses in the relationship between internal and external stimuli on online impulse buying behavior", "journal": "Journal of Retailing and Consumer Services", "quartile": "Scopus Q1/Q2", "citations": 283, "doi": "10.1016/j.jretconser.2021.102567", "tags": ["2021-2022", "Impulse-Buying", "JRCS"], "role": "Bằng chứng thực nghiệm thực tế (283 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Kimiagari et al. (2021). The role of cognitive and affective responses in the relationship between internal and external stimuli on online impulse buying behavior. Journal of Retailing and Consumer Services. https://doi.org/10.1016/j.jretconser.2021.102567", "scale": [{"code": "Finding", "en": "Key finding verified in Journal of Retailing and Consumer Services (283 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 283 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 25, "author": "Aragoncillo et al.", "year": 2018, "title": "Impulse buying behaviour: an online-offline comparative and the impact of social media", "journal": "Spanish Journal of Marketing - ESIC", "quartile": "Scopus Q1/Q2", "citations": 283, "doi": "10.1108/sjme-03-2018-007", "tags": ["2018-2020", "Impulse-Buying", "JM"], "role": "Bằng chứng thực nghiệm thực tế (283 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Aragoncillo et al. (2018). Impulse buying behaviour: an online-offline comparative and the impact of social media. Spanish Journal of Marketing - ESIC. https://doi.org/10.1108/sjme-03-2018-007", "scale": [{"code": "Finding", "en": "Key finding verified in Spanish Journal of Marketing - ESIC (283 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 283 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 26, "author": "Redine et al.", "year": 2022, "title": "Impulse buying: A systematic literature review and future research directions", "journal": "International Journal of Consumer Studies", "quartile": "Scopus Q1/Q2", "citations": 273, "doi": "10.1111/ijcs.12862", "tags": ["2021-2022", "Impulse-Buying", "IJCS"], "role": "Bằng chứng thực nghiệm thực tế (273 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Redine et al. (2022). Impulse buying: A systematic literature review and future research directions. International Journal of Consumer Studies. https://doi.org/10.1111/ijcs.12862", "scale": [{"code": "Finding", "en": "Key finding verified in International Journal of Consumer Studies (273 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 273 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 27, "author": "Wu et al.", "year": 2021, "title": "How does scarcity promotion lead to impulse purchase in the online market? A field experiment", "journal": "Information & Management", "quartile": "Scopus Q1/Q2", "citations": 268, "doi": "10.1016/j.im.2020.103283", "tags": ["2021-2022", "Impulse-Buying", "I&M"], "role": "Bằng chứng thực nghiệm thực tế (268 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Wu et al. (2021). How does scarcity promotion lead to impulse purchase in the online market? A field experiment. Information & Management. https://doi.org/10.1016/j.im.2020.103283", "scale": [{"code": "Finding", "en": "Key finding verified in Information & Management (268 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 268 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 28, "author": "Ma et al.", "year": 2021, "title": "To shop or not: Understanding Chinese consumers’ live-stream shopping intentions from the perspectives of uses and gratifications, perceived network size, perceptions of digital celebrities, and shopping orientations", "journal": "Telematics and Informatics", "quartile": "Scopus Q1/Q2", "citations": 259, "doi": "10.1016/j.tele.2021.101562", "tags": ["2021-2022", "Live-Streaming"], "role": "Bằng chứng thực nghiệm thực tế (259 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Ma et al. (2021). To shop or not: Understanding Chinese consumers’ live-stream shopping intentions from the perspectives of uses and gratifications, perceived network size, perceptions of digital celebrities, and shopping orientations. Telematics and Informatics. https://doi.org/10.1016/j.tele.2021.101562", "scale": [{"code": "Finding", "en": "Key finding verified in Telematics and Informatics (259 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 259 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 29, "author": "Yang et al.", "year": 2021, "title": "Consumer perceived value and impulse buying behavior on mobile commerce: The moderating effect of social influence", "journal": "Journal of Retailing and Consumer Services", "quartile": "Scopus Q1/Q2", "citations": 253, "doi": "10.1016/j.jretconser.2021.102683", "tags": ["2021-2022", "Impulse-Buying", "JRCS"], "role": "Bằng chứng thực nghiệm thực tế (253 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Yang et al. (2021). Consumer perceived value and impulse buying behavior on mobile commerce: The moderating effect of social influence. Journal of Retailing and Consumer Services. https://doi.org/10.1016/j.jretconser.2021.102683", "scale": [{"code": "Finding", "en": "Key finding verified in Journal of Retailing and Consumer Services (253 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 253 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 30, "author": "Akram et al.", "year": 2021, "title": "Online purchase intention in Chinese social commerce platforms: Being emotional or rational?", "journal": "Journal of Retailing and Consumer Services", "quartile": "Scopus Q1/Q2", "citations": 252, "doi": "10.1016/j.jretconser.2021.102669", "tags": ["2021-2022", "JRCS"], "role": "Bằng chứng thực nghiệm thực tế (252 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Akram et al. (2021). Online purchase intention in Chinese social commerce platforms: Being emotional or rational?. Journal of Retailing and Consumer Services. https://doi.org/10.1016/j.jretconser.2021.102669", "scale": [{"code": "Finding", "en": "Key finding verified in Journal of Retailing and Consumer Services (252 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 252 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 31, "author": "Pantano et al.", "year": 2020, "title": "Forecasting artificial intelligence on online customer assistance: Evidence from chatbot patents analysis", "journal": "Journal of Retailing and Consumer Services", "quartile": "Scopus Q1/Q2", "citations": 251, "doi": "10.1016/j.jretconser.2020.102096", "tags": ["2018-2020", "AI-Recommendation", "Chatbot & Avatar", "JRCS"], "role": "Bằng chứng thực nghiệm thực tế (251 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Pantano et al. (2020). Forecasting artificial intelligence on online customer assistance: Evidence from chatbot patents analysis. Journal of Retailing and Consumer Services. https://doi.org/10.1016/j.jretconser.2020.102096", "scale": [{"code": "Finding", "en": "Key finding verified in Journal of Retailing and Consumer Services (251 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 251 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 32, "author": "Bawack et al.", "year": 2021, "title": "Exploring the role of personality, trust, and privacy in customer experience performance during voice shopping: Evidence from SEM and fuzzy set qualitative comparative analysis", "journal": "International Journal of Information Management", "quartile": "Scopus Q1/Q2", "citations": 239, "doi": "10.1016/j.ijinfomgt.2021.102309", "tags": ["2021-2022", "ESAT", "IJIM"], "role": "Bằng chứng thực nghiệm thực tế (239 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Bawack et al. (2021). Exploring the role of personality, trust, and privacy in customer experience performance during voice shopping: Evidence from SEM and fuzzy set qualitative comparative analysis. International Journal of Information Management. https://doi.org/10.1016/j.ijinfomgt.2021.102309", "scale": [{"code": "Finding", "en": "Key finding verified in International Journal of Information Management (239 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 239 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 33, "author": "Yin et al.", "year": 2021, "title": "AI Technology and Online Purchase Intention: Structural Equation Model Based on Perceived Value", "journal": "Sustainability", "quartile": "Scopus Q1/Q2", "citations": 235, "doi": "10.3390/su13105671", "tags": ["2021-2022", "AI-Recommendation"], "role": "Bằng chứng thực nghiệm thực tế (235 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Yin et al. (2021). AI Technology and Online Purchase Intention: Structural Equation Model Based on Perceived Value. Sustainability. https://doi.org/10.3390/su13105671", "scale": [{"code": "Finding", "en": "Key finding verified in Sustainability (235 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 235 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 34, "author": "Zhang et al.", "year": 2021, "title": "Gamification and online impulse buying: The moderating effect of gender and age", "journal": "International Journal of Information Management", "quartile": "Scopus Q1/Q2", "citations": 235, "doi": "10.1016/j.ijinfomgt.2020.102267", "tags": ["2021-2022", "Impulse-Buying", "IJIM"], "role": "Bằng chứng thực nghiệm thực tế (235 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Zhang et al. (2021). Gamification and online impulse buying: The moderating effect of gender and age. International Journal of Information Management. https://doi.org/10.1016/j.ijinfomgt.2020.102267", "scale": [{"code": "Finding", "en": "Key finding verified in International Journal of Information Management (235 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 235 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 35, "author": "Liu et al.", "year": 2021, "title": "The effects of social commerce environmental characteristics on customers’ purchase intentions: The chain mediating effect of customer-to-customer interaction and customer-perceived value", "journal": "Electronic Commerce Research and Applications", "quartile": "Scopus Q1/Q2", "citations": 212, "doi": "10.1016/j.elerap.2021.101073", "tags": ["2021-2022", "AI-Recommendation"], "role": "Bằng chứng thực nghiệm thực tế (212 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Liu et al. (2021). The effects of social commerce environmental characteristics on customers’ purchase intentions: The chain mediating effect of customer-to-customer interaction and customer-perceived value. Electronic Commerce Research and Applications. https://doi.org/10.1016/j.elerap.2021.101073", "scale": [{"code": "Finding", "en": "Key finding verified in Electronic Commerce Research and Applications (212 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 212 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 36, "author": "Cherubino et al.", "year": 2019, "title": "Consumer Behaviour through the Eyes of Neurophysiological Measures: State‐of‐the‐Art and Future Trends", "journal": "Computational Intelligence and Neuroscience", "quartile": "Scopus Q1/Q2", "citations": 210, "doi": "10.1155/2019/1976847", "tags": ["2018-2020"], "role": "Bằng chứng thực nghiệm thực tế (210 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Cherubino et al. (2019). Consumer Behaviour through the Eyes of Neurophysiological Measures: State‐of‐the‐Art and Future Trends. Computational Intelligence and Neuroscience. https://doi.org/10.1155/2019/1976847", "scale": [{"code": "Finding", "en": "Key finding verified in Computational Intelligence and Neuroscience (210 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 210 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 37, "author": "Tuncer et al.", "year": 2021, "title": "The relationship between IT affordance, flow experience, trust, and social commerce intention: An exploration using the S-O-R paradigm", "journal": "Technology in Society", "quartile": "Scopus Q1/Q2", "citations": 206, "doi": "10.1016/j.techsoc.2021.101567", "tags": ["2021-2022", "ESAT", "SOR-Framework"], "role": "Bằng chứng thực nghiệm thực tế (206 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Tuncer et al. (2021). The relationship between IT affordance, flow experience, trust, and social commerce intention: An exploration using the S-O-R paradigm. Technology in Society. https://doi.org/10.1016/j.techsoc.2021.101567", "scale": [{"code": "Finding", "en": "Key finding verified in Technology in Society (206 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 206 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 38, "author": "Wagner et al.", "year": 2020, "title": "Online retailing across e-channels and e-channel touchpoints: Empirical studies of consumer behavior in the multichannel e-commerce environment", "journal": "Journal of Business Research", "quartile": "Scopus Q1/Q2", "citations": 201, "doi": "10.1016/j.jbusres.2018.10.048", "tags": ["2018-2020", "AI-Recommendation", "JBR"], "role": "Bằng chứng thực nghiệm thực tế (201 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Wagner et al. (2020). Online retailing across e-channels and e-channel touchpoints: Empirical studies of consumer behavior in the multichannel e-commerce environment. Journal of Business Research. https://doi.org/10.1016/j.jbusres.2018.10.048", "scale": [{"code": "Finding", "en": "Key finding verified in Journal of Business Research (201 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 201 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 39, "author": "Hollebeek et al.", "year": 2024, "title": "Engaging consumers through artificially intelligent technologies: Systematic review, conceptual model, and further research", "journal": "Psychology and Marketing", "quartile": "Scopus Q1/Q2", "citations": 195, "doi": "10.1002/mar.21957", "tags": ["2023-2025", "P&M"], "role": "Bằng chứng thực nghiệm thực tế (195 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Hollebeek et al. (2024). Engaging consumers through artificially intelligent technologies: Systematic review, conceptual model, and further research. Psychology and Marketing. https://doi.org/10.1002/mar.21957", "scale": [{"code": "Finding", "en": "Key finding verified in Psychology and Marketing (195 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 195 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 40, "author": "Whang et al.", "year": 2020, "title": "\"I Like Your Suggestion!\" the role of humanlikeness and parasocial relationship on the website versus voice shopper's perception of recommendations", "journal": "Psychology and Marketing", "quartile": "Scopus Q1/Q2", "citations": 192, "doi": "10.1002/mar.21437", "tags": ["2018-2020", "P&M"], "role": "Bằng chứng thực nghiệm thực tế (192 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Whang et al. (2020). \"I Like Your Suggestion!\" the role of humanlikeness and parasocial relationship on the website versus voice shopper's perception of recommendations. Psychology and Marketing. https://doi.org/10.1002/mar.21437", "scale": [{"code": "Finding", "en": "Key finding verified in Psychology and Marketing (192 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 192 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 41, "author": "Behera et al.", "year": 2020, "title": "Personalized digital marketing recommender engine", "journal": "Journal of Retailing and Consumer Services", "quartile": "Scopus Q1/Q2", "citations": 190, "doi": "10.1016/j.jretconser.2019.03.026", "tags": ["2018-2020", "JRCS"], "role": "Bằng chứng thực nghiệm thực tế (190 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Behera et al. (2020). Personalized digital marketing recommender engine. Journal of Retailing and Consumer Services. https://doi.org/10.1016/j.jretconser.2019.03.026", "scale": [{"code": "Finding", "en": "Key finding verified in Journal of Retailing and Consumer Services (190 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 190 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 42, "author": "Wang et al.", "year": 2022, "title": "How Live Streaming Changes Shopping Decisions in E-commerce: A Study of Live Streaming Commerce", "journal": "Computer Supported Cooperative Work (CSCW)", "quartile": "Scopus Q1/Q2", "citations": 186, "doi": "10.1007/s10606-022-09439-2", "tags": ["2021-2022", "Live-Streaming"], "role": "Bằng chứng thực nghiệm thực tế (186 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Wang et al. (2022). How Live Streaming Changes Shopping Decisions in E-commerce: A Study of Live Streaming Commerce. Computer Supported Cooperative Work (CSCW). https://doi.org/10.1007/s10606-022-09439-2", "scale": [{"code": "Finding", "en": "Key finding verified in Computer Supported Cooperative Work (CSCW) (186 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 186 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 43, "author": "Liu et al.", "year": 2020, "title": "Disentangling utilitarian and hedonic consumption behavior in online shopping: An expectation disconfirmation perspective", "journal": "Information & Management", "quartile": "Scopus Q1/Q2", "citations": 176, "doi": "10.1016/j.im.2019.103199", "tags": ["2018-2020", "I&M"], "role": "Bằng chứng thực nghiệm thực tế (176 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Liu et al. (2020). Disentangling utilitarian and hedonic consumption behavior in online shopping: An expectation disconfirmation perspective. Information & Management. https://doi.org/10.1016/j.im.2019.103199", "scale": [{"code": "Finding", "en": "Key finding verified in Information & Management (176 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 176 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 44, "author": "Xiao et al.", "year": 2019, "title": "The Effects of Online Shopping Context Cues on Consumers’ Purchase Intention for Cross-Border E-Commerce Sustainability", "journal": "Sustainability", "quartile": "Scopus Q1/Q2", "citations": 170, "doi": "10.3390/su11102777", "tags": ["2018-2020", "AI-Recommendation"], "role": "Bằng chứng thực nghiệm thực tế (170 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Xiao et al. (2019). The Effects of Online Shopping Context Cues on Consumers’ Purchase Intention for Cross-Border E-Commerce Sustainability. Sustainability. https://doi.org/10.3390/su11102777", "scale": [{"code": "Finding", "en": "Key finding verified in Sustainability (170 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 170 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 45, "author": "Dwidienawati et al.", "year": 2020, "title": "Customer review or influencer endorsement: which one influences purchase intention more?", "journal": "Heliyon", "quartile": "Scopus Q1/Q2", "citations": 168, "doi": "10.1016/j.heliyon.2020.e05543", "tags": ["2018-2020"], "role": "Bằng chứng thực nghiệm thực tế (168 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Dwidienawati et al. (2020). Customer review or influencer endorsement: which one influences purchase intention more?. Heliyon. https://doi.org/10.1016/j.heliyon.2020.e05543", "scale": [{"code": "Finding", "en": "Key finding verified in Heliyon (168 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 168 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 46, "author": "Chen et al.", "year": 2021, "title": "How do interpersonal interaction factors affect buyers' purchase intention in live stream shopping? The mediating effects of swift guanxi", "journal": "Internet Research", "quartile": "Scopus Q1/Q2", "citations": 165, "doi": "10.1108/intr-05-2020-0252", "tags": ["2021-2022", "Live-Streaming"], "role": "Bằng chứng thực nghiệm thực tế (165 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Chen et al. (2021). How do interpersonal interaction factors affect buyers' purchase intention in live stream shopping? The mediating effects of swift guanxi. Internet Research. https://doi.org/10.1108/intr-05-2020-0252", "scale": [{"code": "Finding", "en": "Key finding verified in Internet Research (165 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 165 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 47, "author": "Abdelsalam et al.", "year": 2020, "title": "Understanding Online Impulse Buying Behavior in Social Commerce: A Systematic Literature Review", "journal": "IEEE Access", "quartile": "Scopus Q1/Q2", "citations": 164, "doi": "10.1109/access.2020.2993671", "tags": ["2018-2020", "Impulse-Buying"], "role": "Bằng chứng thực nghiệm thực tế (164 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Abdelsalam et al. (2020). Understanding Online Impulse Buying Behavior in Social Commerce: A Systematic Literature Review. IEEE Access. https://doi.org/10.1109/access.2020.2993671", "scale": [{"code": "Finding", "en": "Key finding verified in IEEE Access (164 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 164 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 48, "author": "Huang et al.", "year": 2024, "title": "Unpacking AI for hospitality and tourism services: Exploring the role of perceived enjoyment on future use intentions", "journal": "International Journal of Hospitality Management", "quartile": "Scopus Q1/Q2", "citations": 163, "doi": "10.1016/j.ijhm.2024.103693", "tags": ["2023-2025", "AI-Recommendation"], "role": "Bằng chứng thực nghiệm thực tế (163 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Huang et al. (2024). Unpacking AI for hospitality and tourism services: Exploring the role of perceived enjoyment on future use intentions. International Journal of Hospitality Management. https://doi.org/10.1016/j.ijhm.2024.103693", "scale": [{"code": "Finding", "en": "Key finding verified in International Journal of Hospitality Management (163 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 163 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 49, "author": "Sohn et al.", "year": 2020, "title": "Factors that influence purchase intentions in social commerce", "journal": "Technology in Society", "quartile": "Scopus Q1/Q2", "citations": 162, "doi": "10.1016/j.techsoc.2020.101365", "tags": ["2018-2020"], "role": "Bằng chứng thực nghiệm thực tế (162 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Sohn et al. (2020). Factors that influence purchase intentions in social commerce. Technology in Society. https://doi.org/10.1016/j.techsoc.2020.101365", "scale": [{"code": "Finding", "en": "Key finding verified in Technology in Society (162 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 162 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}, {"id": 50, "author": "Zhang et al.", "year": 2018, "title": "The role of online product recommendations on customer decision making and loyalty in social shopping communities", "journal": "International Journal of Information Management", "quartile": "Scopus Q1/Q2", "citations": 157, "doi": "10.1016/j.ijinfomgt.2017.07.006", "tags": ["2018-2020", "IJIM"], "role": "Bằng chứng thực nghiệm thực tế (157 trích dẫn)", "theory": "S-O-R Framework & Technology Acceptance", "sample": "Khảo sát thực nghiệm người tiêu dùng thương mại điện tử", "apa": "Zhang et al. (2018). The role of online product recommendations on customer decision making and loyalty in social shopping communities. International Journal of Information Management. https://doi.org/10.1016/j.ijinfomgt.2017.07.006", "scale": [{"code": "Finding", "en": "Key finding verified in International Journal of Information Management (157 citations)", "vi": "Bằng chứng thực nghiệm có giá trị cao đóng góp cho Chương 2"}], "metrics": "Times cited: 157 (Official Crossref/Dimensions Registry)", "gap": "Cung cấp luận cứ thực nghiệm vững chắc đối chiếu với kết quả nghiên cứu của Luận án."}];
+        let selectedTags = new Set();
+        let currentModalPaper = null;
+
+        function renderCards(papers) {
+            const grid = document.getElementById('cardsGrid');
+            const countEl = document.getElementById('resultsCount');
+            countEl.innerHTML = `Đang hiển thị <b>${papers.length}</b> / ${PAPERS_DATA.length} bài báo`;
+
+            if (papers.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-16 text-center space-y-3">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-slate-800 flex items-center justify-center text-slate-500">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <p class="text-slate-400 text-sm">Không tìm thấy bài báo nào khớp với bộ lọc và từ khóa hiện tại.</p>
+                        <button onclick="resetFilters()" class="text-indigo-400 hover:text-indigo-300 text-xs font-semibold">Xóa bộ lọc để xem lại tất cả</button>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = papers.map(p => {
+                const isFoundational = p.id <= 10;
+                const badgeColor = isFoundational ? 'bg-amber-950 text-amber-300 border-amber-700' : 'bg-slate-800 text-slate-400 border-slate-700';
+                
+                const tagBadges = p.tags.map(t => `
+                    <span onclick="event.stopPropagation(); toggleTag('${t}')" class="px-2 py-0.5 rounded text-[10px] font-medium bg-slate-800/90 text-slate-300 hover:bg-indigo-900 hover:text-indigo-200 border border-slate-700/80 cursor-pointer transition">
+                        #${t}
+                    </span>
+                `).join('');
+
+                return `
+                    <div class="card-item bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4 shadow-md">
+                        <div class="space-y-2.5">
+                            <div class="flex items-center justify-between gap-2">
+                                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded border ${badgeColor}">
+                                    ${isFoundational ? '⭐ BÀI BÁO NỀN TẢNG #' + p.id : 'BÀI BÁO #' + p.id}
+                                </span>
+                                <span class="text-xs text-indigo-400 font-bold">
+                                    ${p.citations > 0 ? p.citations.toLocaleString() + ' Trích dẫn' : p.year}
+                                </span>
+                            </div>
+
+                            <div>
+                                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 hover:text-indigo-300 transition cursor-pointer" onclick="openModal(${p.id})">
+                                    ${p.title}
+                                </h3>
+                                <p class="text-xs text-slate-400 mt-1 font-medium">
+                                    ${p.author} (${p.year})
+                                </p>
+                                <p class="text-[11px] text-slate-500 italic mt-0.5 truncate">
+                                    ${p.journal} • ${p.quartile}
+                                </p>
+                            </div>
+
+                            <p class="text-xs text-slate-300 bg-slate-950/60 p-2.5 rounded-lg border border-slate-800/80 leading-relaxed">
+                                <b class="text-sky-400">Vai trò:</b> ${p.role}
+                            </p>
+                        </div>
+
+                        <div class="space-y-3 pt-2 border-t border-slate-800/80">
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-1">
+                                ${tagBadges}
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="flex items-center justify-between pt-1 text-xs">
+                                <button onclick="copyAPA('${p.id}')" class="text-slate-400 hover:text-slate-200 font-semibold flex items-center space-x-1 transition">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    <span>Copy APA</span>
+                                </button>
+                                <button onclick="openModal(${p.id})" class="bg-indigo-600/90 hover:bg-indigo-600 text-white px-3 py-1.5 rounded-lg font-semibold shadow transition flex items-center space-x-1">
+                                    <span>Xem Thang Đo ➔</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function toggleTag(tag) {
+            if (selectedTags.has(tag)) {
+                selectedTags.delete(tag);
+            } else {
+                selectedTags.add(tag);
+            }
+            updateTagPills();
+            applyFilters();
+        }
+
+        function updateTagPills() {
+            document.querySelectorAll('.tag-pill').forEach(btn => {
+                const t = btn.getAttribute('data-tag');
+                if (selectedTags.has(t)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        function applyFilters() {
+            const search = document.getElementById('searchInput').value.trim().toLowerCase();
+
+            const filtered = PAPERS_DATA.filter(p => {
+                // Search filter
+                const matchesSearch = !search || 
+                    p.author.toLowerCase().includes(search) ||
+                    p.title.toLowerCase().includes(search) ||
+                    p.journal.toLowerCase().includes(search) ||
+                    p.role.toLowerCase().includes(search) ||
+                    p.year.toString().includes(search);
+
+                // Tag filter (must match all selected tags)
+                let matchesTags = true;
+                if (selectedTags.size > 0) {
+                    for (let tag of selectedTags) {
+                        if (!p.tags.includes(tag)) {
+                            matchesTags = false;
+                            break;
+                        }
+                    }
+                }
+
+                return matchesSearch && matchesTags;
+            });
+
+            renderCards(filtered);
+        }
+
+        function resetFilters() {
+            selectedTags.clear();
+            document.getElementById('searchInput').value = '';
+            updateTagPills();
+            renderCards(PAPERS_DATA);
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            applyFilters();
+        }
+
+        function openModal(id) {
+            const paper = PAPERS_DATA.find(p => p.id === id);
+            if (!paper) return;
+
+            currentModalPaper = paper;
+            document.getElementById('modalBadge').innerText = paper.id <= 10 ? `⭐ BÀI BÁO NỀN TẢNG #${paper.id}` : `BÀI BÁO CỐT LÕI #${paper.id}`;
+            document.getElementById('modalTitle').innerText = paper.title;
+            document.getElementById('modalAuthorYear').innerText = `${paper.author} (${paper.year}) • ${paper.journal} (${paper.quartile})`;
+            document.getElementById('modalAPA').innerText = paper.apa;
+            document.getElementById('modalTheory').innerText = paper.theory || 'S-O-R Framework';
+            document.getElementById('modalSample').innerText = paper.sample || 'Khảo sát thực nghiệm e-commerce';
+            document.getElementById('modalMetrics').innerText = paper.metrics || '';
+            document.getElementById('modalGap').innerText = paper.gap || 'Cung cấp luận cứ thực nghiệm giá trị cao cho luận án.';
+            document.getElementById('modalDOI').innerText = `DOI: ${paper.doi}`;
+            document.getElementById('modalDOILink').href = `https://doi.org/${paper.doi}`;
+
+            const scaleList = document.getElementById('modalScaleList');
+            if (paper.scale && paper.scale.length > 0) {
+                scaleList.innerHTML = paper.scale.map(item => `
+                    <div class="bg-slate-900 p-2.5 rounded-lg border border-slate-800">
+                        <span class="text-indigo-400 font-bold font-mono text-[11px] block">${item.code}:</span>
+                        <div class="text-slate-200 mt-0.5 italic">"${item.en}"</div>
+                        <div class="text-slate-400 mt-1 text-[11px]">↳ ${item.vi}</div>
+                    </div>
+                `).join('');
+                document.getElementById('modalScaleContainer').classList.remove('hidden');
+            } else {
+                document.getElementById('modalScaleContainer').classList.add('hidden');
+            }
+
+            document.getElementById('detailModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('detailModal').classList.add('hidden');
+            currentModalPaper = null;
+        }
+
+        function copyAPA(id) {
+            const paper = PAPERS_DATA.find(p => p.id === parseInt(id));
+            if (!paper) return;
+            navigator.clipboard.writeText(paper.apa).then(() => {
+                showToast(`Đã sao chép trích dẫn APA của ${paper.author.split(',')[0]} (${paper.year})`);
+            });
+        }
+
+        function copyModalAPA() {
+            if (!currentModalPaper) return;
+            navigator.clipboard.writeText(currentModalPaper.apa).then(() => {
+                showToast(`Đã sao chép trích dẫn APA!`);
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 2500);
+        }
+
+        // Initial render
+        renderCards(PAPERS_DATA);
+
+        // Close modal on Escape
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>
