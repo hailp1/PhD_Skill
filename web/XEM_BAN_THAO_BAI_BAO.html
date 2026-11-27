@@ -323,6 +323,230 @@
             color: var(--text-heading);
         }
 
+        /* Image and Visual Components */
+        .journal-sheet img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-ui);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin: 1.5rem 0 0.5rem 0;
+            display: block;
+        }
+        .figure-caption {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        /* PRISMA 2020 Flow Chart Styling */
+        .prisma-flow-diagram {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+        .prisma-header {
+            text-align: center;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.75rem;
+        }
+        .prisma-header h4 {
+            color: #0f172a;
+            font-size: 1.15rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .prisma-header p {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        .prisma-stage {
+            display: flex;
+            align-items: stretch;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .prisma-stage-label {
+            width: 130px;
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: #334155;
+            padding: 0.5rem;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+        .prisma-stage-content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .prisma-box {
+            background: #f8fafc;
+            border: 1.5px solid #94a3b8;
+            border-radius: 8px;
+            padding: 0.85rem 1rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #1e293b;
+        }
+        .prisma-box.main-stream {
+            background: #f0fdf4;
+            border-color: #22c55e;
+            border-width: 2px;
+        }
+        .prisma-box.exclude-stream {
+            background: #fef2f2;
+            border-color: #ef4444;
+            font-size: 0.8rem;
+        }
+        .prisma-box b { color: #0f172a; }
+        .prisma-box ul {
+            margin: 0.4rem 0 0 1.1rem;
+            padding: 0;
+            color: #475569;
+        }
+        .prisma-box li { margin-bottom: 0.2rem; }
+        .prisma-arrow-down {
+            text-align: center;
+            color: #0284c7;
+            font-size: 1.25rem;
+            margin: -0.5rem 0 0.5rem 0;
+        }
+
+        /* VOSviewer Visual Card */
+        .vos-cluster-card {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+        .vos-cluster-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+        .vos-cluster-header h4 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .vos-link-btn {
+            background: #0284c7;
+            color: #ffffff;
+            padding: 0.4rem 0.85rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: all 0.15s;
+        }
+        .vos-link-btn:hover { background: #0369a1; }
+        .cluster-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .cluster-item {
+            border-radius: 8px;
+            padding: 1rem;
+            border: 1.5px solid;
+            font-size: 0.85rem;
+        }
+        .cluster-item.red {
+            background: #fff1f2;
+            border-color: #f43f5e;
+            color: #9f1239;
+        }
+        .cluster-item.green {
+            background: #f0fdf4;
+            border-color: #10b981;
+            color: #065f46;
+        }
+        .cluster-item.blue {
+            background: #eff6ff;
+            border-color: #3b82f6;
+            color: #1e40af;
+        }
+        .cluster-item h5 {
+            font-size: 0.9rem;
+            font-weight: 800;
+            margin-bottom: 0.4rem;
+        }
+
+        /* S-O-R Conceptual Model Diagram */
+        .sor-diagram-box {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #ffffff;
+            border: 2px solid #0284c7;
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 16px rgba(2, 132, 199, 0.08);
+        }
+        .sor-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .sor-col {
+            flex: 1;
+            background: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .sor-col.stimulus { border-color: #f43f5e; background: #fff1f2; }
+        .sor-col.organism { border-color: #10b981; background: #f0fdf4; }
+        .sor-col.response { border-color: #3b82f6; background: #eff6ff; }
+        .sor-col-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .sor-arrow {
+            font-size: 1.5rem;
+            color: #0284c7;
+            font-weight: 800;
+        }
+
         .journal-sheet code {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.85rem;
@@ -485,6 +709,20 @@
             // Render Markdown sang HTML
             const bodyEl = document.getElementById('renderedArticleBody');
             bodyEl.innerHTML = marked.parse(doc.markdown);
+
+            // BẢO ĐẢM 100% CÁC BIỂU ĐỒ TRỰC QUAN (PRISMA, VOSVIEWER, S-O-R) HIỂN THỊ DẠNG HÌNH ĐỒ HỌA
+            // Nếu có parser nào bọc nhầm vào <pre><code>, tự động unwrap thành DOM HTML thật
+            bodyEl.querySelectorAll('pre code').forEach(codeBlock => {
+                const rawCode = codeBlock.textContent || codeBlock.innerText;
+                if (rawCode.includes('prisma-flow-diagram') || rawCode.includes('vos-cluster-card') || rawCode.includes('sor-diagram-box')) {
+                    const parentPre = codeBlock.closest('pre');
+                    if (parentPre) {
+                        const wrapper = document.createElement('div');
+                        wrapper.innerHTML = rawCode;
+                        parentPre.replaceWith(wrapper);
+                    }
+                }
+            });
 
             // Tự động sinh mục lục bên trái
             generateTableOfContents();

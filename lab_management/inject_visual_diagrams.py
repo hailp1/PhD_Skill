@@ -226,29 +226,31 @@ sor_html = """
 with open(MANUSCRIPT_PATH, 'r', encoding='utf-8') as f:
     text = f.read()
 
-# Replace PRISMA ASCII block
-prisma_pattern = r'```\s*┌─+┐\s*│\s*PRISMA 2020 FLOW DIAGRAM\s*│[\s\S]*?```'
+# Clean indentation so Markdown parsers (marked.js) do not treat HTML as indented code blocks
+def clean_html_block(html_str):
+    return '\n'.join([line.strip() for line in html_str.strip().split('\n')])
+
+prisma_clean = clean_html_block(prisma_html)
+vos_clean = clean_html_block(vos_html)
+sor_clean = clean_html_block(sor_html)
+
+# Replace PRISMA ASCII or previous block
+prisma_pattern = r'(```\s*┌─+┐\s*│\s*PRISMA 2020 FLOW DIAGRAM\s*│[\s\S]*?```|<div class="prisma-flow-diagram">[\s\S]*?</div>\s*</div>)'
 if re.search(prisma_pattern, text):
-    text = re.sub(prisma_pattern, prisma_html, text)
-    print("[OK] Replaced PRISMA ASCII block with rich visual HTML component!")
-else:
-    print("[!] Could not match PRISMA ASCII block.")
+    text = re.sub(prisma_pattern, prisma_clean, text)
+    print("[OK] Replaced PRISMA block with clean zero-indent HTML component!")
 
-# Replace TRI-CLUSTER ASCII block
-cluster_pattern = r'```\s*┌─+┐\s*│\s*TRI-CLUSTER BIBLIOMETRIC NETWORK\s*│[\s\S]*?```'
+# Replace TRI-CLUSTER ASCII or previous block
+cluster_pattern = r'(```\s*┌─+┐\s*│\s*TRI-CLUSTER BIBLIOMETRIC NETWORK\s*│[\s\S]*?```|<div class="vos-cluster-card">[\s\S]*?</div>\s*</div>)'
 if re.search(cluster_pattern, text):
-    text = re.sub(cluster_pattern, vos_html, text)
-    print("[OK] Replaced TRI-CLUSTER ASCII block with rich visual HTML component!")
-else:
-    print("[!] Could not match TRI-CLUSTER ASCII block.")
+    text = re.sub(cluster_pattern, vos_clean, text)
+    print("[OK] Replaced TRI-CLUSTER block with clean zero-indent HTML component!")
 
-# Replace CONCEPTUAL MODEL ASCII block
-sor_pattern = r'```\s*┌─+┐\s*│\s*INTEGRATIVE CONCEPTUAL MODEL\s*│[\s\S]*?```'
+# Replace CONCEPTUAL MODEL ASCII or previous block
+sor_pattern = r'(```\s*┌─+┐\s*│\s*INTEGRATIVE CONCEPTUAL MODEL\s*│[\s\S]*?```|<div class="sor-diagram-box">[\s\S]*?</div>\s*</div>)'
 if re.search(sor_pattern, text):
-    text = re.sub(sor_pattern, sor_html, text)
-    print("[OK] Replaced CONCEPTUAL MODEL ASCII block with rich visual HTML component!")
-else:
-    print("[!] Could not match CONCEPTUAL MODEL ASCII block.")
+    text = re.sub(sor_pattern, sor_clean, text)
+    print("[OK] Replaced CONCEPTUAL MODEL block with clean zero-indent HTML component!")
 
 with open(MANUSCRIPT_PATH, 'w', encoding='utf-8') as f:
     f.write(text)

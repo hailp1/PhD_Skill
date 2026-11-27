@@ -710,6 +710,20 @@
             const bodyEl = document.getElementById('renderedArticleBody');
             bodyEl.innerHTML = marked.parse(doc.markdown);
 
+            // BẢO ĐẢM 100% CÁC BIỂU ĐỒ TRỰC QUAN (PRISMA, VOSVIEWER, S-O-R) HIỂN THỊ DẠNG HÌNH ĐỒ HỌA
+            // Nếu có parser nào bọc nhầm vào <pre><code>, tự động unwrap thành DOM HTML thật
+            bodyEl.querySelectorAll('pre code').forEach(codeBlock => {
+                const rawCode = codeBlock.textContent || codeBlock.innerText;
+                if (rawCode.includes('prisma-flow-diagram') || rawCode.includes('vos-cluster-card') || rawCode.includes('sor-diagram-box')) {
+                    const parentPre = codeBlock.closest('pre');
+                    if (parentPre) {
+                        const wrapper = document.createElement('div');
+                        wrapper.innerHTML = rawCode;
+                        parentPre.replaceWith(wrapper);
+                    }
+                }
+            });
+
             // Tự động sinh mục lục bên trái
             generateTableOfContents();
 
