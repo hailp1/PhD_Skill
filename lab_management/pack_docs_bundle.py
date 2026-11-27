@@ -2,7 +2,7 @@ import json
 import os
 
 docs_to_pack = {
-    'paper1': ('lab_projects/PAPER_01_SLR_JRCS_MANUSCRIPT.md', 'Bản Thảo IMRAD: Paper 01 (JRCS Submission)', 'JRCS Q1 (IF: 11.0)', 'Bản Thảo 85%'),
+    'paper1': ('lab_projects/PAPER_01_SLR_JRCS_MANUSCRIPT.md', 'Bản Thảo IMRAD: Paper 01 (JRCS Submission)', 'JRCS Q1 (IF: 11.0)', 'Hoàn Thiện 100% (Submission Ready)'),
     'plan': ('lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md', 'Kế Hoạch Bài Báo Mới (IMRAD Blueprint)', 'H-AI Engine', 'Scopus Q1 Plan'),
     'survey': ('docs/survey_instrument.md', 'Paper 2: Bảng Hỏi Khảo Sát Thực Nghiệm', 'N = 450 (Likert 7)', '28 Items'),
     'proposal': ('docs/proposal_detailed.md', 'Đề Cương Nghiên Cứu Tiến Sĩ Chi Tiết', 'TDTU Ph.D.', 'Đề Cương Chuẩn'),
