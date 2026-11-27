@@ -672,7 +672,7 @@
         <div class="reader-controls">
             <button class="btn-ctrl" onclick="adjustFontSize(-1)"><i class="fa-solid fa-font"></i> -</button>
             <button class="btn-ctrl" onclick="adjustFontSize(1)"><i class="fa-solid fa-font"></i> +</button>
-            <button id="btnExportPdf" class="btn-ctrl" onclick="exportAcademicPDF()" style="color:#b91c1c; border-color:#fca5a5; font-weight:700;">
+            <button id="btnExportPdf" class="btn-ctrl" onclick="window.print()" style="color:#b91c1c; border-color:#fca5a5; font-weight:700;">
                 <i class="fa-solid fa-file-pdf"></i> Xuất PDF Bài Báo (A4)
             </button>
             <button class="btn-ctrl" onclick="window.print()"><i class="fa-solid fa-print"></i> In Nhanh</button>
@@ -796,12 +796,7 @@
 
         
         function exportAcademicPDF() {
-            const modal = document.getElementById('pdfExportModal');
-            if (modal) {
-                modal.style.display = 'flex';
-            } else {
-                triggerVectorPrint();
-            }
+            window.print();
         }
 
         function closePdfModal() {
