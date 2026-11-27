@@ -110,6 +110,36 @@ class AcademicQAGate:
                 self.red_flags.append(f"COMPLETENESS ERROR: 5-pillar research agenda promised, but only {len(pillars)} pillars articulated.")
                 self.score -= 10
 
+    def audit_references_and_rendering(self):
+        """Gate 5: Check Reference Depth (>=80), Zero Al-typos, Zero Em-dashes, Zero HTML Leaks."""
+        print("[CHECK 5] Auditing Reference Depth, Formatting & HTML Render Safety...")
+        # Check reference count
+        ref_section = re.search(r'## REFERENCES([\s\S]*)$', self.text)
+        if ref_section:
+            ref_lines = [l for l in ref_section.group(1).strip().split('\n') if l.strip().startswith('-')]
+            if len(ref_lines) < 80:
+                self.red_flags.append(f"REFERENCE DEPTH DEFICIT: Found {len(ref_lines)} references. Q1 Full SLR requires >= 80 verified references.")
+                self.score -= 15
+
+        # Check Al-Driven typo (case-sensitive)
+        if re.search(r'\bAl-Driven\b|\bAl\s+Recommender', self.text):
+            self.red_flags.append("TYPOGRAPHY ERROR: Case-sensitive 'Al-' (lowercase L) detected instead of 'AI-'.")
+            self.score -= 10
+
+        # Check em-dashes in body prose (exclude References section so verbatim published titles are preserved)
+        body_prose = re.split(r'^##\s+REFERENCES\b', self.text, flags=re.MULTILINE)[0]
+        em_dashes = len(re.findall(r'—', body_prose))
+        if em_dashes > 0:
+            self.red_flags.append(f"AI STYLE MARKER: Detected {em_dashes} em-dashes ('—') in manuscript body. Replace with scholarly commas/parentheses.")
+            self.score -= 10
+
+        # Check blank lines inside academic-figure-container (causes marked.js raw HTML leak)
+        fig_blocks = re.findall(r'<div class="academic-figure-container"[\s\S]*?<\/div>\s*<\/div>', self.text)
+        for idx, blk in enumerate(fig_blocks, 1):
+            if '\n\n' in blk:
+                self.red_flags.append(f"RENDERING LEAK: Figure/Table block #{idx} contains blank lines that break marked.js HTML parsing.")
+                self.score -= 15
+
     def run_full_audit(self):
         print("=" * 80)
         print("🔬 H-AI ResearchLAB | CORE ACADEMIC QUALITY AUDIT")
@@ -118,6 +148,7 @@ class AcademicQAGate:
         self.audit_vosviewer_methodology()
         self.audit_hypotheses_vs_propositions()
         self.audit_citation_hallucinations_and_typos()
+        self.audit_references_and_rendering()
 
         self.score = max(0, self.score)
         print("\n" + "=" * 80)

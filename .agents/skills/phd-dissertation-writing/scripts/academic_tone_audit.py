@@ -37,6 +37,12 @@ EN_AI_CLICHES = [
     r"\ba\s+plethora\s+of\b",
     r"\bfoster(ing)?\s+a\s+sense\s+of\b",
     r"\bnavigat(e|ing)\s+the\s+complexities\b",
+    r"\bexponential(ly)?\b",
+    r"\bdramatic(ally)?\b",
+    r"\bfundamentally\b",
+    r"\bpivotal\b",
+    r"\bindispensable\b",
+    r"\bremarkably\b",
 ]
 
 # 2. Vietnamese AI Clichés & Sáo Rỗng Báo Chí / Dịch Máy Gượng Gạo
@@ -147,13 +153,19 @@ def analyze_enumeration_patterns(lines: list) -> list:
 
 
 def audit_academic_text(text: str) -> dict:
-    lines = text.split("\n")
+    # Strip References section, embedded SVG blocks, HTML tags, and base64 strings before prose auditing
+    body_only = re.split(r'^##\s+REFERENCES\b', text, flags=re.MULTILINE)[0]
+    clean_text = re.sub(r'<svg[\s\S]*?</svg>', '', body_only)
+    clean_text = re.sub(r'data:image/[^"]+', '', clean_text)
+    clean_text = re.sub(r'<[^>]+>', ' ', clean_text)
+
+    lines = clean_text.split("\n")
     issues = []
     
-    em_dash_count = len(re.findall(r"—", text))
+    em_dash_count = len(re.findall(r"—", clean_text))
     
     # Analyze citation balance
-    citation_stats = analyze_citations(text)
+    citation_stats = analyze_citations(clean_text)
     if citation_stats["total_citations"] >= 5 and citation_stats["narrative_ratio"] < 25.0:
         issues.append({
             "line": 1,
@@ -168,7 +180,7 @@ def audit_academic_text(text: str) -> dict:
     issues.extend(enum_issues)
     
     # Sentence length statistics
-    sentence_delimiters = re.split(r"[.!?]\s+", text)
+    sentence_delimiters = re.split(r"[.!?]\s+", clean_text)
     word_counts = [len(s.split()) for s in sentence_delimiters if len(s.split()) > 3]
     std_dev_sentence = statistics.stdev(word_counts) if len(word_counts) > 2 else 0
     mean_sentence = statistics.mean(word_counts) if len(word_counts) > 0 else 0
@@ -254,6 +266,7 @@ def audit_academic_text(text: str) -> dict:
 def main():
     parser = argparse.ArgumentParser(description="Academic Tone & Anti-AI Audit for Dissertations v2.0")
     parser.add_argument("--file", type=str, required=True, help="Path to text or markdown file")
+    parser.add_argument("--strict", action="store_true", help="Exit with code 1 if score < 80 or em-dashes > 0")
     args = parser.parse_args()
 
     if not os.path.exists(args.file):
@@ -290,6 +303,10 @@ def main():
             print(f"    Context: {issue['context'][:100]}")
             print(f"    Fix: {issue['suggestion']}")
             print("-" * 55)
+
+    if args.strict and (result["naturalness_score"] < 80 or result["em_dash_count"] > 0):
+        print(f"\n[GATE FAILED] Academic Naturalness Score ({result['naturalness_score']}/100) < 80 or Em-dashes ({result['em_dash_count']}) > 0.")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

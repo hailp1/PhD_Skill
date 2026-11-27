@@ -7,21 +7,30 @@ import json
 import os
 import sys
 
-# Add current directory to path to import academic_qa_gate
+# Add current directory and tone audit script directory to path
 sys.path.append(os.path.dirname(__file__))
-from academic_qa_gate import AcademicQAGate
-
 WORKSPACE = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(os.path.join(WORKSPACE, ".agents", "skills", "phd-dissertation-writing", "scripts"))
+
+from academic_qa_gate import AcademicQAGate
+from academic_tone_audit import audit_academic_text
+
 MANUSCRIPT_FILE = os.path.join(WORKSPACE, "lab_projects", "PAPER_01_SLR_JRCS_MANUSCRIPT.md")
 
-# Run Academic QA Gate to dynamically determine status
+# Run BOTH Academic QA Gate and Academic Tone Audit to dynamically determine status
 gate = AcademicQAGate(MANUSCRIPT_FILE)
 gate.run_full_audit()
 
-if len(gate.red_flags) == 0 and gate.score >= 90:
-    paper1_status = f"Hoàn Thiện 100% (Đạt Chuẩn Q1 - {gate.score}/100)"
+with open(MANUSCRIPT_FILE, "r", encoding="utf-8", errors="ignore") as f:
+    tone_res = audit_academic_text(f.read())
+
+tone_score = tone_res["naturalness_score"]
+print(f"\n[TONE GATE] Academic Naturalness Score: {tone_score}/100 (Em-dashes: {tone_res['em_dash_count']})")
+
+if len(gate.red_flags) == 0 and gate.score >= 90 and tone_score >= 80:
+    paper1_status = f"Hoàn Thiện 100% (QA: {gate.score}/100 | Tone: {tone_score}/100)"
 else:
-    paper1_status = f"Cần Chỉnh Sửa (QA Score: {gate.score}/100 | {len(gate.red_flags)} Red Flags)"
+    paper1_status = f"Cần Chỉnh Sửa (QA: {gate.score}/100 | Tone: {tone_score}/100 | Flags: {len(gate.red_flags)})"
 
 print(f"\n[PACKAGER] Dynamic Status for Paper 1: {paper1_status}")
 
