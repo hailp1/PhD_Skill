@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <!-- Marked.js cho Markdown sang HTML -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Nhúng trực tiếp toàn bộ dữ liệu tài liệu để nạp tức thì 0ms, không phụ thuộc fetch/CORS -->
+    <script src="lab_projects/DOCS_INLINE.js"></script>
     <style>
         :root {
             --bg-site: #f8fafc;
@@ -409,20 +411,24 @@
             document.getElementById('articlePaper').style.fontSize = currentFontSize + 'rem';
         }
 
-        // Tự động tải gói dữ liệu JSON đã đóng gói sẵn
-        async function initReader() {
-            try {
-                const resp = await fetch('lab_projects/DOCUMENTS_BUNDLE.json');
-                if (resp.ok) {
-                    docsBundle = await resp.json();
-                    renderDocList();
-                    // Mở bài đầu tiên (Paper 1)
-                    selectDocument('paper1');
-                } else {
-                    document.getElementById('renderedArticleBody').innerHTML = `<p style="color:red;">Không thể đọc gói dữ liệu documents bundle.</p>`;
-                }
-            } catch (err) {
-                console.error("Lỗi nạp bundle:", err);
+        // Nạp tức thì từ bộ dữ liệu nhúng sẵn (0ms độ trễ)
+        function initReader() {
+            if (typeof INLINE_DOCS_BUNDLE !== 'undefined') {
+                docsBundle = INLINE_DOCS_BUNDLE;
+                renderDocList();
+                selectDocument('paper1');
+            } else {
+                fetch('lab_projects/DOCUMENTS_BUNDLE.json')
+                    .then(r => r.json())
+                    .then(data => {
+                        docsBundle = data;
+                        renderDocList();
+                        selectDocument('paper1');
+                    })
+                    .catch(err => {
+                        console.error("Lỗi nạp bundle:", err);
+                        document.getElementById('renderedArticleBody').innerHTML = `<p style="color:red;">Lỗi tải dữ liệu.</p>`;
+                    });
             }
         }
 
@@ -492,26 +498,32 @@
             const tocNav = document.getElementById('dynamicToc');
             const headings = bodyEl.querySelectorAll('h1, h2, h3');
             
-            tocNav.innerHTML = '';
             if (headings.length === 0) {
-                tocNav.innerHTML = '<span style="font-size:0.8rem; color:var(--text-muted);">Không có tiêu đề phân cấp.</span>';
+                tocNav.innerHTML = '<span style="font-size:0.8rem; color:var(--text-muted);">Tài liệu ngắn không có đề mục.</span>';
                 return;
             }
 
+            const fragment = document.createDocumentFragment();
             headings.forEach((h, idx) => {
-                const anchorId = 'heading-anchor-' + idx;
+                const anchorId = 'sec_anchor_' + idx;
                 h.id = anchorId;
                 
                 const link = document.createElement('a');
                 link.href = '#' + anchorId;
                 link.className = h.tagName.toLowerCase() === 'h3' ? 'toc-link sub' : 'toc-link';
-                link.innerText = h.innerText.replace(/^#+\s*/, '');
+                // Lấy tiêu đề gọn gàng
+                const rawText = h.innerText.replace(/^#+\s*/, '').trim();
+                link.innerText = rawText.length > 35 ? rawText.substring(0, 35) + '...' : rawText;
+                link.title = rawText;
                 link.onclick = (e) => {
                     e.preventDefault();
                     document.getElementById(anchorId).scrollIntoView({ behavior: 'smooth' });
                 };
-                tocNav.appendChild(link);
+                fragment.appendChild(link);
             });
+
+            tocNav.innerHTML = '';
+            tocNav.appendChild(fragment);
         }
 
         window.addEventListener('DOMContentLoaded', initReader);
