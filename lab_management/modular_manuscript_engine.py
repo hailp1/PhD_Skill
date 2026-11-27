@@ -55,10 +55,6 @@ for i, h in enumerate(HIGHLIGHTS, 1):
 
 MODULE_1_TEXT = """# AI-Driven Personalized Recommendation Systems and Online Consumer Impulse Buying Behavior: A Systematic Literature Review and Bibliometric Network Analysis
 
-**Target Journal**: *Journal of Retailing and Consumer Services* (Elsevier, Scopus Q1, Impact Factor: 11.0, CiteScore: 19.5, ABS/AJG 2)  
-**Article Type**: Review Article (Full Systematic Literature Review, Science Mapping & Conceptual Propositions)  
-**Submission Protocol**: Blinded Manuscript for Double-Blind Peer Review (Author details separated in Title Page)
-
 ---
 
 ## HIGHLIGHTS
