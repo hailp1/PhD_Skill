@@ -86,7 +86,7 @@ def main():
         if os.path.exists(full_path):
             with open(full_path, "r", encoding="utf-8") as f:
                 content = f.read()
-            bundle[key] = {"title": title, "tag": tag, "status": status, "content": content}
+            bundle[key] = {"title": title, "tag": tag, "status": status, "path": rel_path, "markdown": content, "content": content}
             print(f"Packed {key}: {len(content):,} chars")
         else:
             print(f"WARNING: Missing {full_path}")

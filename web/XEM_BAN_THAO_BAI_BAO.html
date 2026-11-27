@@ -895,12 +895,12 @@
             // Header metadata
             document.getElementById('headerDocName').innerText = doc.title;
             document.getElementById('journalMetaBrand').innerHTML = `<i class="fa-solid fa-feather-pointed"></i> ${doc.tag}`;
-            document.getElementById('journalMetaSub').innerText = `Tệp nguồn: ${doc.path} | Cập nhật tự động`;
+            document.getElementById('journalMetaSub').innerText = `Tệp nguồn: ${doc.path || doc.tag || ''} | Cập nhật tự động`;
             document.getElementById('journalMetaStatus').innerHTML = `Trạng thái: <b>${doc.status}</b>`;
 
             // Render Markdown sang HTML
             const bodyEl = document.getElementById('renderedArticleBody');
-            bodyEl.innerHTML = marked.parse(doc.markdown);
+            bodyEl.innerHTML = marked.parse(doc.markdown || doc.content || '');
 
             // BẢO ĐẢM 100% CÁC BIỂU ĐỒ TRỰC QUAN (PRISMA, VOSVIEWER, S-O-R) HIỂN THỊ DẠNG HÌNH ĐỒ HỌA
             // Nếu có parser nào bọc nhầm vào <pre><code>, tự động unwrap thành DOM HTML thật
