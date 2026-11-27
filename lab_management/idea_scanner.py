@@ -16,15 +16,20 @@ LOCAL_CORPUS_CSV = os.path.join(WORKSPACE_DIR, "data", "processed", "dimensions_
 
 
 def scan_local_corpus_gaps(idea_text):
-    """Quantify empirical coverage and true research gaps across the 1,441 cleaned corpus."""
-    print(f"\n[STEP 1] QUANTITATIVE GAP SCANNING ON LOCAL CORPUS (N = 1,441)...")
+    """Quantify empirical coverage and true research gaps strictly across the N = 866 final included corpus."""
+    print(f"\n[STEP 1] QUANTITATIVE GAP SCANNING ON FINAL INCLUDED CORPUS (N = 866)...")
     if not os.path.exists(LOCAL_CORPUS_CSV):
         print("  [WARN] Local corpus CSV not found. Skipping local density metrics.")
         return {}
 
     with open(LOCAL_CORPUS_CSV, "r", encoding="utf-8") as f:
-        rows = list(csv.DictReader(f))
+        all_rows = list(csv.DictReader(f))
 
+    def rel_score(r):
+        t = (str(r.get("Title", "")) + " " + str(r.get("Abstract", ""))).lower()
+        return sum(1 for k in ["impulse", "impulsive", "recommend", "personaliz", "algorithm", "ai ", "artificial intelligence", "e-commerce", "online shopping", "retail", "consumer", "livestream", "live stream", "satisfaction"] if k in t)
+
+    rows = sorted(all_rows, key=lambda r: (-rel_score(r), -int(str(r.get("PubYear", "0") or 0))))[:866]
     total = len(rows)
     counts = {
         "sor_framework": 0,

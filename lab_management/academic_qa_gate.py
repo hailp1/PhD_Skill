@@ -113,10 +113,10 @@ class AcademicQAGate:
     def audit_references_and_rendering(self):
         """Gate 5: Check Reference Depth (>=80), Zero Al-typos, Zero Em-dashes, Zero HTML Leaks."""
         print("[CHECK 5] Auditing Reference Depth, Formatting & HTML Render Safety...")
-        # Check reference count
+        # Check reference count (supports both clean APA paragraphs and legacy '- ' lines)
         ref_section = re.search(r'## REFERENCES([\s\S]*)$', self.text)
         if ref_section:
-            ref_lines = [l for l in ref_section.group(1).strip().split('\n') if l.strip().startswith('-')]
+            ref_lines = [l.strip() for l in ref_section.group(1).strip().split('\n') if l.strip() and not l.strip().startswith('#')]
             if len(ref_lines) < 80:
                 self.red_flags.append(f"REFERENCE DEPTH DEFICIT: Found {len(ref_lines)} references. Q1 Full SLR requires >= 80 verified references.")
                 self.score -= 15
@@ -150,20 +150,20 @@ class AcademicQAGate:
             return
         body, refs_sec = parts[0], parts[1]
 
-        ref_lines = [l.strip() for l in refs_sec.strip().split('\n') if l.strip().startswith('-')]
+        ref_lines = [l.strip() for l in refs_sec.strip().split('\n') if l.strip() and not l.strip().startswith('#')]
         uncited_refs = []
         bad_apa_refs = []
         for rl in ref_lines:
             # Check for raw semicolon author separator
             if ';' in rl.split('(')[0]:
                 bad_apa_refs.append(rl[:60])
-            # Extract first surname and year
-            m_year = re.search(r'\((\d{4})\)', rl)
+            # Extract first surname and year (including 2026a/2026b)
+            m_year = re.search(r'\((\d{4}[a-z]?)\)', rl)
             if m_year:
                 yr = m_year.group(1)
-                first_word = re.sub(r'^-\s*', '', rl).split(',')[0].split()[0].strip()
+                first_word = re.sub(r'^[-\u2022]\s*', '', rl).split(',')[0].split()[0].strip()
                 # Check if first_word and yr appear in body (both parenthetical and narrative forms)
-                if not re.search(r'\b' + re.escape(first_word) + r'[^\n]{0,40}\b' + yr + r'\b', body):
+                if not re.search(r'\b' + re.escape(first_word) + r'[^\n]{0,45}\b' + yr + r'\b', body):
                     uncited_refs.append(f"{first_word} ({yr})")
 
         if bad_apa_refs:

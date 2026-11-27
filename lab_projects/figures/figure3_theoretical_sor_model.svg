@@ -19,8 +19,8 @@
   <text x="490" y="37" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">FIGURE 3. DYNAMIC &amp; MULTIPLICATIVE DUAL-PATH S-O-R FRAMEWORK (GEN 1.0 TO GEN 2.0 AI)</text>
 
   <!-- TOP HIGHWAY: NEGATIVE RECURSIVE FEEDBACK LOOP (P9) -->
-  <rect x="520" y="64" width="340" height="32" rx="6" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5" filter="url(#mshadow)"/>
-  <text x="690" y="84" text-anchor="middle" font-size="10" font-weight="800" fill="#6d28d9">NEGATIVE RECURSIVE FEEDBACK LOOP (P9): Regret Erodes ESAT</text>
+  <rect x="485" y="64" width="405" height="32" rx="6" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5" filter="url(#mshadow)"/>
+  <text x="687.5" y="84" text-anchor="middle" font-size="9.5" font-weight="800" fill="#6d28d9">NEGATIVE RECURSIVE LOOP (P9): Regret Erodes ESAT &amp; Shifts P1/P8 Threshold</text>
 
   <!-- S-O-R COLUMN CONTAINERS (y=110 to 500) -->
   <!-- 1. STIMULUS CONTAINER -->
@@ -135,7 +135,8 @@
   <rect x="858" y="291" width="46" height="16" rx="4" fill="#fef3c7"/>
   <text x="881" y="303" text-anchor="middle" font-size="8.5" font-weight="800" fill="#b45309">P7 (+)</text>
 
-  <!-- Negative Recursive Feedback Loop (P9) routed cleanly via TOP HIGHWAY above all containers -->
-  <path d="M 930 384 L 966 384 L 966 80 L 860 80" fill="none" stroke="#7c3aed" stroke-width="2.2" stroke-dasharray="6,4"/>
-  <path d="M 520 80 L 449 80 L 449 165" fill="none" stroke="#7c3aed" stroke-width="2.2" stroke-dasharray="6,4" marker-end="url(#marr-purple)"/>
+  <!-- Negative Recursive Feedback Loop (P9) routed cleanly via TOP HIGHWAY to BOTH ESAT and PP (Inverted-U Threshold) -->
+  <path d="M 930 384 L 966 384 L 966 80 L 890 80" fill="none" stroke="#7c3aed" stroke-width="2.2" stroke-dasharray="6,4"/>
+  <path d="M 485 80 L 449 80 L 449 165" fill="none" stroke="#7c3aed" stroke-width="2.2" stroke-dasharray="6,4" marker-end="url(#marr-purple)"/>
+  <path d="M 449 80 L 135 80 L 135 163" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#marr-purple)"/>
 </svg>

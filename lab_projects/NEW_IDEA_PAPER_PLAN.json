@@ -3,32 +3,32 @@
   "anti_sor_fatigue_protocol": "ACTIVE (Dynamic, Non-Linear, Multiplicative & Recursive Modeling)",
   "quantitative_corpus_gaps": {
     "sor_framework": {
-      "count": 138,
-      "pct": 9.58
+      "count": 104,
+      "pct": 12.01
     },
     "genai_conversational": {
-      "count": 97,
-      "pct": 6.73
+      "count": 75,
+      "pct": 8.66
     },
     "ego_depletion": {
       "count": 6,
-      "pct": 0.42
+      "pct": 0.69
     },
     "surveillance_reactance": {
-      "count": 15,
-      "pct": 1.04
+      "count": 11,
+      "pct": 1.27
     },
     "post_purchase_regret": {
-      "count": 36,
-      "pct": 2.5
+      "count": 31,
+      "pct": 3.58
     },
     "inverted_u_nonlinear": {
-      "count": 19,
-      "pct": 1.32
+      "count": 13,
+      "pct": 1.5
     },
     "multiplicative_interaction": {
-      "count": 25,
-      "pct": 1.73
+      "count": 19,
+      "pct": 2.19
     }
   },
   "recommended_theoretical_elevations": [

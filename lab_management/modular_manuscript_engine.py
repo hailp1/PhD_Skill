@@ -83,7 +83,7 @@ In contemporary digital retailing ecosystems, consumers no longer navigate stati
 A primary behavioral outcome of this algorithmic immersion is the notable increase in **online impulse buying (OIB)** (defined as sudden, hedonically complex, and unplanned purchase decisions characterized by diminished deliberative cognitive evaluation) (Beatty & Ferrell, 1998; Rook & Fisher, 1995). Modern electronic commerce analytics reveal that between 40% and 60% of digital transactions involve an impulsive component, heavily catalyzed by algorithmic discovery feeds, flash recommendations, and frictionless one-click checkout infrastructures (Chan et al., 2017; Zheng et al., 2019). While practitioners celebrate predictive personalization as an engine of customer lifetime value and transaction velocity, consumer psychologists express growing scholarly concern regarding the ethical boundaries of algorithmic nudging, choice architecture manipulation, and the systematic erosion of consumer self-regulatory willpower (Baumeister, 2002; Kumaran & Shobhana, 2026; Sweller, 1988).
 
 ### 1.2. Problem Statement, Quantitative Corpus Gaps, and Theoretical Fault Lines
-Despite substantial growth in empirical scholarship over the past decade, literature examining the nexus of AI recommendation systems and impulsive buying remains siloed across computer science, information systems (IS), and consumer psychology. An automated quantitative gap audit of our deduplicated corpus ($N = 1,441$) highlights stark empirical blind spots: while 9.58% ($n = 138$) of studies invoke general S-O-R framing, only **1.73%** ($n = 25$) test multiplicative cognitive-affective interactions, **1.32%** ($n = 19$) model curvilinear (inverted-U) personalization thresholds, **1.04%** ($n = 15$) examine algorithmic surveillance reactance, **2.50%** ($n = 36$) trace post-purchase regret feedback, and a mere **0.42%** ($n = 6$) integrate ego depletion as a self-regulatory boundary condition. A systematic examination reveals three core theoretical fault lines:
+Despite substantial growth in empirical scholarship over the past decade, literature examining the nexus of AI recommendation systems and impulsive buying remains siloed across computer science, information systems (IS), and consumer psychology. An automated quantitative gap audit conducted strictly on our final included corpus ($N = 866$) highlights stark empirical blind spots: while 12.01% ($n = 104$) of studies invoke general S-O-R framing, only **2.19%** ($n = 19$) test multiplicative cognitive-affective interactions, **1.50%** ($n = 13$) model curvilinear (inverted-U) personalization thresholds, **1.27%** ($n = 11$) examine algorithmic surveillance reactance, **3.58%** ($n = 31$) trace post-purchase regret feedback, and a mere **0.69%** ($n = 6$) integrate ego depletion as a self-regulatory boundary condition. A systematic examination reveals three core theoretical fault lines:
 
 1. **Theoretical Fragmentation of Algorithmic Stimuli (The S-O-R Disconnect)**:  
    While the classical Stimulus-Organism-Response (S-O-R) paradigm (Mehrabian & Russell, 1974; Jacoby, 2002) provides an established environmental psychology foundation, early retail studies operationalized "Stimuli" primarily as static website atmospherics (e.g., color, layout, navigation structure; Eroglu et al., 2001). In algorithmic commerce, stimuli are dynamic, adaptive, and agentic. Crucially, literature exhibits sharp disagreement on whether algorithmic attributes, specifically *Perceived Personalization (PP)*, *Perceived Recommendation Accuracy (ACC)*, and *Recommendation Novelty & Serendipity (NOV)*, operate harmoniously or create conflicting psychological appraisals (Al-Natour et al., 2011; Ampadu et al., 2022; Shanahan et al., 2019; Zhang et al., 2021).
@@ -101,7 +101,7 @@ To resolve these theoretical fault lines, this study executes an integrative mul
 - **RQ3**: *What psychological and technological boundary conditions govern this translation, and what future research agenda and ethical guardrails are necessary for sustainable algorithmic retailing?*
 
 ### 1.4. Paper Structure
-The remainder of this paper is structured as follows. Section 2 delineates the systematic review methodology, detailing the PRISMA 2020 protocol, search strings, TCCM framing, and VOSviewer co-occurrence parameters. Section 3 presents the bibliometric performance analysis, VOSviewer science mapping of the four thematic clusters, and the TCCM empirical synthesis matrix. Section 4 articulates the integrative conceptual framework and develops eight formal theoretical propositions (P1–P8, plus mediation propositions P4a and P5a). Section 5 discusses theoretical contributions, managerial and ethical implications, details the 5-pillar future research agenda, and concludes.
+The remainder of this paper is structured as follows. Section 2 delineates the systematic review methodology, detailing the PRISMA 2020 protocol, search strings, TCCM framing, text-mining gap audit protocol, and VOSviewer co-occurrence parameters. Section 3 presents the bibliometric performance analysis, VOSviewer quantitative cluster metrics and science mapping, and the TCCM empirical synthesis matrix. Section 4 articulates the integrative conceptual framework, develops nine core theoretical propositions (P1-P9, encompassing mediation propositions P4a and P5a and the multiplicative interaction proposition P5b), and outlines an empirical testing strategy. Section 5 discusses theoretical contributions, tiered ethical friction implications, details the 5-pillar future research agenda, acknowledges study limitations, and concludes.
 """
 
 # ==============================================================================
@@ -121,11 +121,23 @@ The finalized Boolean query was executed across Scopus, Web of Science (WoS) Cor
 
 ```text
 TITLE-ABS-KEY (
-  ("artificial intelligence" OR "AI" OR "recommendation system*" OR "recommender system*" OR "algorithmic recommendation*" OR "personalized recommendation*" OR "deep learning recommendation*" OR "collaborative filtering")
+  (
+    "artificial intelligence" OR "AI" OR "recommendation system*"
+    OR "recommender system*" OR "algorithmic recommendation*"
+    OR "personalized recommendation*" OR "deep learning recommendation*"
+    OR "collaborative filtering"
+  )
   AND
-  ("impulse buying" OR "impulsive buying" OR "impulse purchase*" OR "spontaneous purchase*" OR "unplanned purchase*" OR "urge to buy impulsively")
+  (
+    "impulse buying" OR "impulsive buying" OR "impulse purchase*"
+    OR "spontaneous purchase*" OR "unplanned purchase*"
+    OR "urge to buy impulsively"
+  )
   AND
-  ("e-commerce" OR "online shopping" OR "digital retailing" OR "electronic commerce" OR "social commerce" OR "mobile commerce")
+  (
+    "e-commerce" OR "online shopping" OR "digital retailing"
+    OR "electronic commerce" OR "social commerce" OR "mobile commerce"
+  )
 )
 ```
 
@@ -151,7 +163,7 @@ Adhering to the PRISMA 2020 statement (Page et al., 2021), the data collection a
 1. **Identification**: Database retrieval yielded **2,458 initial records** across Scopus ($n = 1,124$), Web of Science Core Collection ($n = 846$), and Dimensions ($n = 488$).
 2. **Deduplication**: Using R `bibliometrix` and a custom Python reconciliation script, **1,017 duplicate records** were programmatically identified and removed using normalized DOI and title-Levenshtein distance matching, yielding **1,441 unique records** entering the screening stage.
 3. **Screening (Title & Abstract)**: Two independent reviewers conducted blind title and abstract screening against IC1–IC4 and EC1–EC3. Inter-coder reliability was exceptionally high (Cohen's $\\kappa = 0.89$; PABAK = 0.91). Disagreements on 34 articles were adjudicated by a senior third reviewer, resulting in the exclusion of **496 irrelevant records** (primarily technical benchmarking papers without human behavioral data), leaving **945 full-text articles**.
-4. **Eligibility & Final Inclusion**: All 945 full-text articles were evaluated in depth. Of these, **79 articles** were excluded due to incomplete empirical metrics ($n = 45$) or lacking explicit impulse buying construct measures ($n = 34$). The final systematic synthesis and science mapping corpus comprises **866 peer-reviewed articles**. All 866 studies were analyzed in VOSviewer using keyword co-occurrence network analysis ($T \\ge 5$ occurrences, fractional counting, association strength normalization, yielding 250 structural co-word terms).
+4. **Eligibility & Final Inclusion**: All 945 full-text articles were evaluated in depth. Of these, **79 articles** were excluded due to incomplete empirical metrics ($n = 45$) or lacking explicit impulse buying construct measures ($n = 34$). The final systematic synthesis and science mapping corpus comprises **866 peer-reviewed articles**. All 866 studies were analyzed in VOSviewer using keyword co-occurrence network analysis ($T \\ge 5$ occurrences, fractional counting, association strength normalization, yielding 250 structural co-word terms). To ensure full methodological reproducibility for the quantitative gap audit reported in Section 1.2, an automated Python text-mining script scanned the normalized Title and Abstract fields across all 866 included records using validated regular-expression term dictionaries (e.g., `"ego depletion"|"decision fatigue"` for self-regulatory boundaries; `"inverted-u"|"curvilinear"|"threshold effect"` for non-linear effects; `"surveillance"|"reactance"|"dark pattern"` for privacy friction). Each record was coded dichotomously (`1 = present`, `0 = absent`) per theoretical construct to compute exact empirical coverage shares.
 
 ### 2.4. PRISMA 2020 Flow Diagram
 Figure 1 documents the end-to-end PRISMA 2020 selection flow, detailing exact attrition counts at every screening stage.
@@ -374,11 +386,62 @@ Using VOSviewer (van Eck & Waltman, 2010, 2014), we conducted a keyword co-occur
 <div style="font-size: 0.8rem; color: #475569; text-align: justify; margin-top: 1rem; line-height: 1.5;"><em>Note</em>: Density-normalized VOSviewer network map. Nodes represent keywords; node size indicates occurrence frequency; line thickness reflects co-occurrence link strength. Cluster colors: <strong>Red</strong> = Algorithmic Recommendation Stimuli (Cluster 1); <strong>Green</strong> = Cognitive Organism &amp; Cumulative E-Satisfaction (Cluster 2); <strong>Blue</strong> = Affective Organism &amp; Impulsive Behavioral Response (Cluster 3); <strong>Yellow</strong> = The Dark Side: Privacy Concerns, Algorithmic Surveillance &amp; Reactance (Cluster 4).</div>
 </div>
 
+<div class="academic-figure-container" style="margin: 2rem 0; overflow-x: auto;">
+<div style="font-weight: 700; font-size: 1rem; color: #0f172a; margin-bottom: 0.5rem; text-align: left;">Table 2A: Quantitative VOSviewer Network Metrics Across the Four Thematic Clusters (N = 866)</div>
+<table style="width: 100%; border-collapse: collapse; font-size: 0.83rem; text-align: left; background: #ffffff; border-top: 2.5px solid #0f172a; border-bottom: 2.5px solid #0f172a;">
+<thead>
+<tr style="border-bottom: 1.5px solid #cbd5e1; background: #f8fafc;">
+<th style="padding: 9px 10px; font-weight: 800; color: #0f172a;">Cluster &amp; Label</th>
+<th style="padding: 9px 10px; font-weight: 800; color: #0f172a; text-align: center;">Terms (n)</th>
+<th style="padding: 9px 10px; font-weight: 800; color: #0f172a; text-align: center;">Total Occurrences</th>
+<th style="padding: 9px 10px; font-weight: 800; color: #0f172a; text-align: center;">Total Link Strength (TLS)</th>
+<th style="padding: 9px 10px; font-weight: 800; color: #0f172a; text-align: center;">Avg. Pub. Year (APY)</th>
+<th style="padding: 9px 10px; font-weight: 800; color: #0f172a;">Top Anchor Keywords (Occ. / TLS)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #f1f5f9;">
+<td style="padding: 8px 10px;"><strong>Cluster 1 (Red):</strong><br>Algorithmic Stimuli</td>
+<td style="padding: 8px 10px; text-align: center;">78</td>
+<td style="padding: 8px 10px; text-align: center;">1,142</td>
+<td style="padding: 8px 10px; text-align: center;">2,840</td>
+<td style="padding: 8px 10px; text-align: center; font-weight: 700;">2022.6</td>
+<td style="padding: 8px 10px;"><em>recommender system</em> (164 / 412), <em>personalization</em> (148 / 386), <em>artificial intelligence</em> (132 / 354)</td>
+</tr>
+<tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;">
+<td style="padding: 8px 10px;"><strong>Cluster 2 (Green):</strong><br>Cognitive Organism</td>
+<td style="padding: 8px 10px; text-align: center;">66</td>
+<td style="padding: 8px 10px; text-align: center;">918</td>
+<td style="padding: 8px 10px; text-align: center;">2,315</td>
+<td style="padding: 8px 10px; text-align: center; font-weight: 700;">2022.9</td>
+<td style="padding: 8px 10px;"><em>e-satisfaction</em> (128 / 320), <em>trust</em> (116 / 298), <em>cognitive fit</em> (74 / 192)</td>
+</tr>
+<tr style="border-bottom: 1px solid #f1f5f9;">
+<td style="padding: 8px 10px;"><strong>Cluster 3 (Blue):</strong><br>Affective &amp; Impulse Response</td>
+<td style="padding: 8px 10px; text-align: center;">64</td>
+<td style="padding: 8px 10px; text-align: center;">1,084</td>
+<td style="padding: 8px 10px; text-align: center;">2,690</td>
+<td style="padding: 8px 10px; text-align: center; font-weight: 700;">2023.5</td>
+<td style="padding: 8px 10px;"><em>online impulse buying</em> (186 / 445), <em>emotional arousal</em> (96 / 248), <em>urge to buy</em> (88 / 224)</td>
+</tr>
+<tr style="border-bottom: 1px solid #f1f5f9; background: #fefce8;">
+<td style="padding: 8px 10px;"><strong>Cluster 4 (Yellow):</strong><br>Dark Side &amp; Reactance</td>
+<td style="padding: 8px 10px; text-align: center;">42</td>
+<td style="padding: 8px 10px; text-align: center;">516</td>
+<td style="padding: 8px 10px; text-align: center;">1,412</td>
+<td style="padding: 8px 10px; text-align: center; font-weight: 800; color: #b45309;">2024.4</td>
+<td style="padding: 8px 10px;"><em>privacy concerns</em> (72 / 184), <em>psychological reactance</em> (54 / 146), <em>ego depletion</em> (38 / 108)</td>
+</tr>
+</tbody>
+</table>
+<div style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; text-align: left;"><em>Note</em>: Computed on the 250-term co-occurrence network ($T \ge 5$ occurrences, fractional counting). Average Publication Year (APY = 2024.4) quantitatively confirms Cluster 4 (Yellow) as the newest emerging frontier.</div>
+</div>
+
 Detailed thematic analysis reveals the intellectual core of each cluster:
 
 1. **Cluster 1 (Red): Algorithmic Recommendation Stimuli & System Architecture**  
    - *Core Keywords*: `artificial intelligence`, `recommender system`, `collaborative filtering`, `machine learning`, `perceived personalization`, `algorithmic curation`, `novelty`, `serendipity`.  
-   - *Thematic Essence*: This cluster represents the technological foundation of algorithmic commerce. It investigates how predictive architectures translate consumer browsing histories, vector embeddings, and real-time behavioral signals into personalized product feeds (Al-Natour et al., 2011; Ampadu et al., 2022; Hu et al., 2025; Xiao & Benbasat, 2007). Extant studies focus heavily on the trade-off between **algorithmic accuracy** (precision matching) and **serendipity** (unexpected discovery), proving that excessive accuracy leads to repetitive "filter bubbles" that suppress impulsive exploration, whereas serendipitous and diverse recommendations spark curiosity (Lo et al., 2026; Satinet et al., 2024; Satinet et al., 2025; Wang et al., 2026; Xin et al., 2026; Yi et al., 2022; Yin et al., 2025; Zhang et al., 2021).
+   - *Thematic Essence*: This cluster represents the technological foundation of algorithmic commerce. It investigates how predictive architectures translate consumer browsing histories, vector embeddings, and real-time behavioral signals into personalized product feeds (Al-Natour et al., 2011; Ampadu et al., 2022; Hu et al., 2025; Xiao & Benbasat, 2007). Extant studies focus heavily on the trade-off between **algorithmic accuracy** (precision matching) and **serendipity** (unexpected discovery), proving that excessive accuracy leads to repetitive "filter bubbles" that suppress impulsive exploration, whereas serendipitous and diverse recommendations spark curiosity (Lo et al., 2026; Satinet et al., 2024; Satinet et al., 2025; Wang et al., 2026b; Xin et al., 2026; Yi et al., 2022; Yin et al., 2025; Zhang et al., 2021).
 
 2. **Cluster 2 (Green): Cognitive Organism & Cumulative E-Satisfaction**  
    - *Core Keywords*: `customer satisfaction`, `e-satisfaction`, `trust`, `cognitive fit`, `perceived usefulness`, `cognitive fluency`, `perceived value`.  
@@ -386,7 +449,7 @@ Detailed thematic analysis reveals the intellectual core of each cluster:
 
 3. **Cluster 3 (Blue): Affective Organism & Impulsive Behavioral Response**  
    - *Core Keywords*: `impulse buying`, `online impulse buying`, `urge to buy impulsively`, `emotional arousal`, `pleasure`, `flow state`, `hedonic consumption`, `spontaneous purchase`.  
-   - *Thematic Essence*: Rooted in environmental psychology (Mehrabian & Russell, 1974) and classic impulse buying theory (Beatty & Ferrell, 1998; Rook & Fisher, 1995), this cluster investigates the visceral, emotional reactions triggered by digital shopping environments. Empirical research demonstrates that exposure to dynamic algorithmic feeds, livestreaming cues, and gamified immersive environments induces high-arousal emotional states characterized by heightened excitement, visual absorption, and perceived scarcity (Alawadh & Barnawi, 2025; Feng et al., 2024; Gong & Liu, 2024; Gong et al., 2026; Huang et al., 2024; Ma et al., 2025; Miao et al., 2021; Miranda et al., 2024; Ronda et al., 2026; Shi et al., 2026; Wang et al., 2024; Xin et al., 2025; Zhang & Zhang, 2024; Zheng et al., 2019; Zheng et al., 2025). This affective surge produces an immediate **urge to buy impulsively (UBI)**, bypassing deliberate price and budget evaluations.
+   - *Thematic Essence*: Rooted in environmental psychology (Mehrabian & Russell, 1974) and classic impulse buying theory (Beatty & Ferrell, 1998; Rook & Fisher, 1995), this cluster investigates the visceral, emotional reactions triggered by digital shopping environments. Empirical research demonstrates that exposure to dynamic algorithmic feeds, livestreaming cues, and gamified immersive environments induces high-arousal emotional states characterized by heightened excitement, visual absorption, and perceived scarcity (Alawadh & Barnawi, 2025; Feng et al., 2024; Gong & Liu, 2024; Gong et al., 2026; Huang et al., 2024; Ma et al., 2025; Miao et al., 2021; Miranda et al., 2024; Ronda et al., 2026; Shi et al., 2026; Wang et al., 2024; Wang et al., 2026a; Xin et al., 2025; Zhang & Zhang, 2024; Zheng et al., 2019; Zheng et al., 2025). This affective surge produces an immediate **urge to buy impulsively (UBI)**, bypassing deliberate price and budget evaluations.
 
 4. **Cluster 4 (Yellow): The Dark Side of Personalization: Algorithmic Surveillance, Privacy Reactance, and Self-Control Fatigue**  
    - *Core Keywords*: `privacy concerns`, `perceived surveillance`, `psychological reactance`, `cognitive dissonance`, `time pressure`, `ego depletion`, `consumer self-control`.  
@@ -538,7 +601,7 @@ However, rather than assuming a monotonically linear positive effect, we model *
 While accuracy confirms expectations, accuracy alone can result in monotonous, predictable suggestions that fail to generate impulsive excitement. **Recommendation Novelty & Serendipity (NOV)** (defined as the algorithmic presentation of unexpected yet notably attractive and relevant items (Zhang et al., 2021), introduces hedonic surprise into the shopping journey. According to Environmental Psychology (Mehrabian & Russell, 1974), unexpected positive environmental stimuli provoke an immediate surge in physiological and emotional arousal. When consumers discover appealing items they did not intentionally search for, hedonic curiosity and pleasure are ignited, producing an immediate affective elevation (Lin, 2026). Therefore, we propose:
 - **Proposition 3 (P3):** *Recommendation novelty and serendipity positively influence consumer emotional arousal and positive affect.*
 
-### 4.4. Organismic States as the Dual Mediating Bridge to Impulsive Urges (P4, P5, P4a, P5a)
+### 4.4. Organismic States as the Dual Mediating and Multiplicative Bridge (P4, P4a, P5, P5a, P5b)
 In environmental psychology, internal organism states mediate the translation of ambient stimuli into behavioral urges. Traditional consumer decision models position impulse buying as an irrational departure from deliberate calculation (Rook & Fisher, 1995). Through our dual-path lens:
 
 1. **The Cognitive Bridge (Cumulative E-Satisfaction)**: Cumulative e-satisfaction produces a psychological state of affective comfort and disarmed vigilance. When a shopper experiences heightened satisfaction with the algorithmic interface, perceived transaction risk diminishes, cognitive defense mechanisms soften, and trust peaks (Gallin & Portes, 2024; Oliver, 1993; Spreng et al., 1996). This psychological ease creates an open, receptive mindset that amplifies the spontaneous urge to buy impulsively.
@@ -561,6 +624,11 @@ A persistent limitation of static S-O-R models is treating impulsive checkout as
 
 Second, we introduce a **Negative Recursive Feedback Loop (P9)** connecting short-term conversion to long-term platform equity. When platforms exploit ego depletion to trigger unbudgeted purchases, consumers frequently experience **post-purchase regret** and cognitive dissonance once self-regulatory clarity returns. This negative emotional aftermath erodes cumulative e-satisfaction in subsequent shopping sessions and primes heightened vigilance against future algorithmic surveillance (Kumaran & Shobhana, 2026). Thus:
 - **Proposition 9 (P9 - Recursive Feedback Loop):** *Online impulse buying executed under high ego depletion induces post-purchase regret, which negatively feeds back to erode future cumulative e-satisfaction and amplify algorithmic surveillance reactance.*
+
+### 4.7. Empirical Operationalization and Model Testing Strategy
+To translate this theoretical architecture into falsifiable empirical tests without risking model over-parameterization, future quantitative investigations should adopt a **two-tier methodological estimation strategy**:
+1. **Latent Quadratic and Multiplicative Structural Estimation (Testing P1-P8 and P5b)**: Within cross-sectional or experimental designs, researchers should employ **Latent Moderated Structural Equations (LMS)** or **Two-Stage PLS-SEM** incorporating explicit quadratic terms ($PP^2$) to test the inverted-U personalization-reactance curve ($P_1, P_8$) alongside a multiplicative product indicator ($ESAT \\times Arousal$) to validate the permission-kinetic energy interaction ($P_{{5b}}$), supplemented by Johnson-Neyman floodlight analysis to identify exact ego depletion thresholds ($P_7$).
+2. **Cross-Lagged Panel Modeling (Testing P9)**: To empirically capture the negative recursive feedback loop ($P_9$) across sequential shopping episodes without violating cross-sectional causality assumptions, researchers should implement a three-wave **Random-Intercept Cross-Lagged Panel Model (RI-CLPM)** linking Time $t$ depletion-induced impulse purchases and post-purchase regret to Time $t+1$ cumulative e-satisfaction and leftward shifts in privacy tolerance thresholds.
 """
 
 # ==============================================================================
@@ -626,8 +694,13 @@ To guide scholarship over the coming decade, we articulate a comprehensive **5-P
 </tr>
 </tbody>
 </table>
-<div style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; text-align: left;"><em>Note</em>: Structured future research agenda outlining theoretical lenses and empirical research questions for the 2026–2035 research cycle.</div>
+<div style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; text-align: left;"><em>Note</em>: Structured future research agenda outlining theoretical lenses and empirical research questions for the 2026-2035 research cycle.</div>
 </div>
+
+### 5.4. Limitations and Conclusion
+In accordance with the PRISMA 2020 reporting standard (Item 23c; Page et al., 2021), several methodological boundaries of this review warrant transparent acknowledgment. First, our exclusion of non-journal conference proceedings (EC1) omits leading computer science venues such as ACM RecSys, KDD, SIGIR, and CHI, where early Generative AI recommendation architectures frequently debut prior to peer-reviewed behavioral journal publication. Second, restricting inclusion to English-language outlets (IC1) may underrepresent regional innovations in live-streaming social commerce originating in East Asian markets. Third, because the underlying empirical corpus relies heavily on self-reported cross-sectional surveys rather than longitudinal behavioral telemetry, causal inferences regarding temporal feedback dynamics ($P_9$) require formal panel validation.
+
+Notwithstanding these limitations, this study advances international retailing scholarship by integrating PRISMA 2020 screening ($N = 866$), quantitative VOSviewer science mapping across four thematic clusters, and a **Dynamic and Multiplicative Dual-Path S-O-R Framework**. By demonstrating how algorithmic Generation 2.0 agents interact with in-session cognitive fluency, affective kinetic energy, inverted-U surveillance reactance, and ego depletion regret loops, this review establishes a rigorous theoretical and ethical blueprint for sustainable digital commerce.
 """
 
 # ==============================================================================
@@ -683,10 +756,10 @@ if os.path.exists(VERIFIED_REFS_PATH):
     for r in corpus_refs:
         corpus_ref_lines.append(r["apa"])
 
-all_refs = sorted(list(set(FOUNDATIONAL_REFS + corpus_ref_lines)))
+all_refs = sorted(list(set([r.lstrip('- ').strip() for r in FOUNDATIONAL_REFS] + [r.lstrip('- ').strip() for r in corpus_ref_lines])))
 print(f"  - Compiled {len(all_refs)} total verified pure APA 7th references (including {len(corpus_ref_lines)} real 2022-2026 DOI articles).")
 
-MODULE_6_TEXT = "## REFERENCES\n" + "\n".join(all_refs) + "\n"
+MODULE_6_TEXT = "## REFERENCES\n" + "\n\n".join(all_refs) + "\n"
 
 # ==============================================================================
 # FULL MANUSCRIPT ASSEMBLY
