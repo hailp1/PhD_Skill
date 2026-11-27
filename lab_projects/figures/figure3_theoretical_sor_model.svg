@@ -113,7 +113,8 @@
   <text x="320" y="498" text-anchor="middle" font-size="11" font-weight="800" fill="#be123c">SUPPRESSOR BOUNDARY (P8)</text>
   <text x="320" y="520" text-anchor="middle" font-size="12" font-weight="800" fill="#9f1239">Algorithmic Surveillance Reactance</text>
   <!-- Arrow from P8 to S->O paths -->
-  <line x1="280" y1="475" x2="280" y2="250" stroke="#e11d48" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#marr-rose)"/>
+  <line x1="284" y1="475" x2="284" y2="265" stroke="#e11d48" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#marr-rose)"/>
+  <rect x="262" y="150" width="44" height="225" rx="6" fill="none" stroke="#e11d48" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6"/>
   <rect x="290" y="380" width="48" height="18" rx="4" fill="#fee2e2"/>
   <text x="314" y="393" text-anchor="middle" font-size="9" font-weight="800" fill="#be123c">P8 (-)</text>
 
