@@ -1,0 +1,57 @@
+{
+  "idea_input": "AI recommendation e-satisfaction impulse buying",
+  "proposed_title_en": "Investigating Ai Recommendation E-Satisfaction Impulse Buying: A Cognitive-Affective Perspective",
+  "theoretical_framework": "Stimulus-Organism-Response (S-O-R) & Cognitive Fit Theory",
+  "recommended_method": "Quantitative Survey (N >= 400) + PLS-SEM Bootstrapping",
+  "target_journals": [
+    "Journal of Retailing and Consumer Services (Q1)",
+    "Computers in Human Behavior (Q1)"
+  ],
+  "retrieved_evidence": [
+    {
+      "rank": 1,
+      "title": "Setting the future of digital and social media marketing research: Perspectives and research propositions",
+      "year": 2020,
+      "citations": 5901,
+      "journal": "International Journal of Information Management",
+      "doi": "https://doi.org/10.1016/j.ijinfomgt.2020.102168",
+      "open_access_pdf": "https://www.sciencedirect.com/science/article/pii/S0268401220308082/pdf"
+    },
+    {
+      "rank": 2,
+      "title": "Understanding anthropomorphism in service provision: a meta-analysis of physical robots, chatbots, and other AI",
+      "year": 2021,
+      "citations": 1551,
+      "journal": "Journal of the Academy of Marketing Science",
+      "doi": "https://doi.org/10.1007/s11747-020-00762-y",
+      "open_access_pdf": "https://link.springer.com/content/pdf/10.1007/s11747-020-00762-y.pdf"
+    },
+    {
+      "rank": 3,
+      "title": "Personal determinants of organic food consumption: a review",
+      "year": 2009,
+      "citations": 1466,
+      "journal": "British Food Journal",
+      "doi": "https://doi.org/10.1108/00070700910992961",
+      "open_access_pdf": "https://biblio.ugent.be/publication/682843/file/6819387.pdf"
+    },
+    {
+      "rank": 4,
+      "title": "What is XR? Towards a Framework for Augmented and Virtual Reality",
+      "year": 2022,
+      "citations": 1291,
+      "journal": "Computers in Human Behavior",
+      "doi": "https://doi.org/10.1016/j.chb.2022.107289",
+      "open_access_pdf": "https://www.sciencedirect.com/science/article/pii/S074756322200111X/pdf"
+    },
+    {
+      "rank": 5,
+      "title": "Metaverse marketing: How the metaverse will shape the future of consumer research and practice",
+      "year": 2022,
+      "citations": 1203,
+      "journal": "Psychology and Marketing",
+      "doi": "https://doi.org/10.1002/mar.21767",
+      "open_access_pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mar.21767"
+    }
+  ]
+}

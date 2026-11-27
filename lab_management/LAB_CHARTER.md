@@ -1,10 +1,10 @@
-# BAM-AI RESEARCH LAB CHARTER & OPERATIONAL PROTOCOL
-*(Điều Lệ Hoạt Động & Quy Chuẩn Xuất Bản Quốc Tế Của Phòng Thí Nghiệm BAM-AI)*
+# H-AI ResearchLAB CHARTER & OPERATIONAL PROTOCOL
+*(Điều Lệ Hoạt Động & Quy Chuẩn Xuất Bản Quốc Tế Của Phòng Thí Nghiệm H-AI)*
 
 ---
 
 ## 1. TÔN CHỈ VÀ ĐỊNH VỊ HỌC THUẬT
-**BAM-AI Research Lab (Business Administration & Marketing AI Research Laboratory)** là mô hình phòng thí nghiệm nghiên cứu khoa học tiên phong, kết hợp giữa năng lực tư duy chiến lược của **Nghiên cứu sinh Tiến sĩ (Lab Director)** và sức mạnh xử lý chuyên sâu của **Đội ngũ 6 AI Agents Học thuật**.
+**H-AI ResearchLAB (Business Administration & Marketing AI Research Laboratory)** là mô hình phòng thí nghiệm nghiên cứu khoa học tiên phong, kết hợp giữa năng lực tư duy chiến lược của **Nghiên cứu sinh Tiến sĩ (Lab Director)** và sức mạnh xử lý chuyên sâu của **Đội ngũ 6 AI Agents Học thuật**.
 
 ### Mục tiêu Chiến lược
 1. **Nghiên cứu Luận án Tiến sĩ**: Đạt chuẩn xuất sắc, bảo vệ thành công tại Hội đồng Quốc gia/Quốc tế.
@@ -46,7 +46,7 @@
 ## 3. DANH MỤC 4 BÀI BÁO CHIẾN LƯỢC TRONG HỆ THỐNG PIPELINE CỦA LAB
 
 ```
-[BAM-AI LAB PIPELINE]
+[H-AI LAB PIPELINE]
 ├── Paper 1: Systematic Literature Review & Bibliometric Mapping (VOSviewer + PRISMA 2020)
 │   └── Mục tiêu: Journal of Retailing and Consumer Services (Scopus Q1)
 ├── Paper 2: Serial Mediation PLS-SEM Model of Personalized Recommendation Agents

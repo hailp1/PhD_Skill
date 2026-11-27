@@ -1,0 +1,36 @@
+{
+  "topic": "Vai trò của sự hài lòng trực tuyến kết nối đề xuất AI với mua sắm bốc đồng",
+  "framework": "Stanford STORM Multi-Perspective Questioning",
+  "dialogues": [
+    {
+      "perspective": "Trường Phái Hành Vi Người Tiêu Dùng & Cảm Xúc (Consumer Psychology)",
+      "scholars": [
+        "Oliver (1980)",
+        "Beatty & Ferrell (1998)",
+        "Rook & Fisher (1995)"
+      ],
+      "critical_question": "Liệu đề xuất AI có thật sự thỏa mãn nhu cầu tâm lý của khách hàng hay chỉ kích hoạt sự ham muốn phù phiếm nhất thời?",
+      "insight": "Đối với chủ đề 'Vai trò của sự hài lòng trực tuyến kết nối đề xuất AI với mua sắm bốc đồng', trường phái này yêu cầu phải chứng minh rõ cơ chế trung gian thông qua lăng kính Tập trung vào cảm xúc bốc đồng, khoái cảm mua sắm (hedonic value), sự thỏa mãn tức thời và sự thôi thúc hành vi (Urge to buy)."
+    },
+    {
+      "perspective": "Trường Phái Hệ Thống Thông Tin & Thuật Toán AI (Information Systems & HCI)",
+      "scholars": [
+        "Xiao & Benbasat (2018)",
+        "Al-Natour et al. (2011)",
+        "Vessey (1991)"
+      ],
+      "critical_question": "Cơ chế kỹ thuật nào của thuật toán phân giải được nghịch lý cá nhân hóa: vừa chính xác để tiết kiệm thời gian, vừa mới lạ để tạo bất ngờ mà không gây cảm giác bị giám sát?",
+      "insight": "Đối với chủ đề 'Vai trò của sự hài lòng trực tuyến kết nối đề xuất AI với mua sắm bốc đồng', trường phái này yêu cầu phải chứng minh rõ cơ chế trung gian thông qua lăng kính Tập trung vào chất lượng thuật toán, độ chính xác cảm nhận, tính mới lạ, sự phù hợp nhận thức (Cognitive Fit) và niềm tin vào AI."
+    },
+    {
+      "perspective": "Trường Phái Tâm Lý Tự Kiểm Soát & Thần Kinh Học (Self-Regulation & Ego Depletion)",
+      "scholars": [
+        "Baumeister et al. (2007)",
+        "Tangney et al. (2004)",
+        "Kahneman (2011)"
+      ],
+      "critical_question": "Khi nào khách hàng sẽ kìm nén được thôi thúc mua sắm do AI kích hoạt, và khi nào năng lực tự kiểm soát bị sụp đổ hoàn toàn?",
+      "insight": "Đối với chủ đề 'Vai trò của sự hài lòng trực tuyến kết nối đề xuất AI với mua sắm bốc đồng', trường phái này yêu cầu phải chứng minh rõ cơ chế trung gian thông qua lăng kính Tập trung vào sự hao mòn năng lượng ý chí (Ego depletion), xung đột giữa Hệ thống 1 (trực giác nhanh) và Hệ thống 2 (lý trí chậm)."
+    }
+  ]
+}

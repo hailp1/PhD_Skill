@@ -1,73 +1,66 @@
 {
-  "lab_name": "BAM-AI Research Lab",
-  "pipeline_version": "2.0.0",
+  "lab_name": "H-AI ResearchLAB",
+  "pipeline_version": "2.1.0",
   "last_updated": "2026-11-27",
+  "dissertation_master_title": {
+    "title_vn": "Tác động của hệ thống đề xuất cá nhân hóa dựa trên AI đến hành vi mua bốc đồng của người tiêu dùng trực tuyến: Vai trò trung gian của sự hài lòng trực tuyến",
+    "title_en": "The Impact of AI-Driven Personalized Recommendation Systems on Online Consumer Impulse Buying Behavior: The Mediating Role of E-Satisfaction",
+    "phd_candidate": "Nghiên cứu sinh Tiến sĩ (Lab Director)",
+    "discipline": "Marketing & Quản trị Kinh doanh (Business Administration)"
+  },
+  "publication_strategy": "Cumulative Dissertation Model (Luận án Tiến sĩ Kết hợp Bài báo Quốc tế Scopus Q1/WoS)",
   "projects": [
     {
       "id": "PAPER-01",
       "code": "SLR-BIBLIO",
-      "title_vn": "Nghiên cứu Tổng quan Y văn Hệ thống và Bản đồ Thư mục về Hành vi Mua sắm Ngẫu hứng Trực tuyến dưới Tác động của Đề xuất Cá nhân hóa",
-      "title_en": "Personalized Recommendation Agents and Online Impulse Buying: A Systematic Literature Review and Bibliometric Coupling Analysis",
+      "dissertation_chapter": "Chương 2: Tổng quan Y văn & Cơ sở Lý thuyết (Literature Review)",
+      "title_vn": "Hệ thống đề xuất cá nhân hóa dựa trên AI và hành vi mua bốc đồng trực tuyến: Tổng quan y văn hệ thống (PRISMA 2020) và phân tích bản đồ thư mục về các cơ chế nhận thức - cảm xúc",
+      "title_en": "AI-Driven Personalized Recommendation Systems and Online Impulse Buying: A PRISMA 2020 Systematic Review and Bibliometric Coupling Analysis of Cognitive-Affective Mechanisms",
       "lead_agents": ["agent-02-slr", "agent-01-crs", "agent-05-lpa"],
       "target_journal": "Journal of Retailing and Consumer Services (JRCS)",
       "journal_metrics": "Scopus Q1, CiteScore 19.5, IF 11.0",
-      "status": "in_progress",
+      "status": "ready_for_drafting",
       "progress_percent": 85,
-      "current_stage": "Manuscript Drafting & PRISMA 2020 Finalization",
-      "artifacts": [
-        "docs/prisma_2020_protocol.md",
-        "data/processed/dimensions_clean_included.csv",
-        "TRUNG_TAM_VOSVIEWER.html",
-        "docs/knowledge_base/RESEARCH_IDEA_INCUBATOR.md"
-      ]
+      "strategic_value": "Thiết lập nền móng y văn vững chắc, bảo vệ cơ sở chọn biến E-Satisfaction làm trung gian trung tâm trong luận án."
     },
     {
       "id": "PAPER-02",
       "code": "SERIAL-MED",
-      "title_vn": "Mô hình Trung gian Chuỗi (Serial Mediation) từ Đề xuất Cá nhân hóa đến Mua sắm Ngẫu hứng qua Độ chính xác Cảm nhận, Sự mới lạ và Hài lòng Khám phá",
-      "title_en": "Decoding the Cognitive-Affective Mechanism: A Serial Mediation Analysis Linking Recommendation Attributes to Online Impulse Buying",
+      "dissertation_chapter": "Chương 3 & 4: Mô hình Đo lường, Khung Khái niệm & Kiểm định Trung gian Cốt lõi",
+      "title_vn": "Tác động của các thuộc tính đề xuất AI đến hành vi mua bốc đồng của người tiêu dùng trực tuyến: Vai trò trung gian chuỗi của độ chính xác cảm nhận, sự mới lạ và sự hài lòng trực tuyến (E-Satisfaction)",
+      "title_en": "Decoding the AI Recommendation-Impulse Buying Link: A Serial Mediation Model of Perceived Accuracy, Novelty, and E-Satisfaction",
       "lead_agents": ["agent-01-crs", "agent-03-msa", "agent-04-eds", "agent-05-lpa"],
       "target_journal": "Computers in Human Behavior / Electronic Commerce Research and Applications",
       "journal_metrics": "Scopus Q1, ABS 3*, IF 9.0",
       "status": "in_progress",
-      "progress_percent": 65,
-      "current_stage": "Survey Instrument & Scale Validation Protocol",
-      "artifacts": [
-        "docs/knowledge_base/VARIABLE_OPERATIONALIZATION_DICTIONARY.md",
-        "docs/knowledge_base/HYPOTHESIS_DEFENSE_COMPENDIUM.md",
-        "docs/knowledge_base/THEORETICAL_FRAMEWORKS.md"
-      ]
+      "progress_percent": 70,
+      "strategic_value": "Chứng minh thực nghiệm toàn bộ cơ chế trung gian chính của Đề tài Luận án bằng mô hình PLS-SEM Bootstrapping 10.000 mẫu."
     },
     {
       "id": "PAPER-03",
       "code": "MOD-DEPLETION",
-      "title_vn": "Vai trò Điều tiết của Tự kiểm soát và Hao mòn Bản ngã trong Mối quan hệ giữa Ý định Mua Bột phát và Hành vi Mua sắm Thực tế",
-      "title_en": "When Self-Control Fails: The Moderating Role of Ego Depletion and Trait Self-Control on the Intention-Behavior Gap in E-commerce",
+      "dissertation_chapter": "Chương 4: Mở rộng Điều kiện Biên - Thuyết Hao mòn Bản ngã & Tự kiểm soát (Boundary Conditions)",
+      "title_vn": "Khi nào sự hài lòng trực tuyến kích hoạt hành vi mua bốc đồng? Vai trò điều tiết của năng lực tự kiểm soát và hao mòn bản ngã (Ego Depletion)",
+      "title_en": "When Does E-Satisfaction Trigger Impulsive Action? The Moderating Roles of Trait Self-Control and Ego Depletion in AI-Assisted Shopping",
       "lead_agents": ["agent-01-crs", "agent-04-eds", "agent-05-lpa", "agent-06-mjr"],
       "target_journal": "Journal of Business Research (JBR)",
       "journal_metrics": "Scopus Q1, ABS 3*, IF 10.5",
       "status": "planned",
-      "progress_percent": 40,
-      "current_stage": "Theoretical Synthesis & Boundary Conditions Modeling",
-      "artifacts": [
-        "docs/knowledge_base/THEORETICAL_FRAMEWORKS.md",
-        "docs/knowledge_base/HYPOTHESIS_DEFENSE_COMPENDIUM.md"
-      ]
+      "progress_percent": 45,
+      "strategic_value": "Nâng tầm đóng góp lý thuyết cho Luận án: giải thích khoảng cách giữa ý định mua bốc đồng và hành vi mua thực tế."
     },
     {
       "id": "PAPER-04",
       "code": "FSQCA-NCA",
-      "title_vn": "Phân tích Cấu hình Phi đối xứng và Điều kiện Cần (fsQCA & NCA) Kích hoạt Hành vi Mua sắm Ngẫu hứng Đa kênh",
-      "title_en": "Combinatorial Configurations Leading to Online Impulse Buying: A Multi-Method Approach Combining PLS-SEM, fsQCA, and Necessary Condition Analysis",
+      "dissertation_chapter": "Chương 4 & 5: Đột phá Phương pháp Luận - Cấu hình Phức hợp Phi tuyến (Methodological Innovation)",
+      "title_vn": "Giải mã công thức cấu hình dẫn đến hành vi mua bốc đồng trực tuyến dưới tác động của AI: Tiếp cận đa phương pháp kết hợp PLS-SEM, fsQCA và Phân tích điều kiện cần (NCA)",
+      "title_en": "Configural Recipes of AI Personalization and E-Satisfaction Driving Online Impulse Buying: A Hybrid PLS-SEM, fsQCA, and Necessary Condition Analysis",
       "lead_agents": ["agent-03-msa", "agent-04-eds", "agent-06-mjr"],
       "target_journal": "Information & Management (I&M)",
       "journal_metrics": "Scopus Q1, ABS 3*, IF 8.2",
       "status": "planned",
-      "progress_percent": 25,
-      "current_stage": "Methodological Design & Data Requirements Architecture",
-      "artifacts": [
-        "docs/knowledge_base/RESEARCH_IDEA_INCUBATOR.md"
-      ]
+      "progress_percent": 30,
+      "strategic_value": "Vũ khí phương pháp luận hiện đại giúp Luận án gây ấn tượng tuyệt đối trước Hội đồng chấm luận án tiến sĩ."
     }
   ]
 }
