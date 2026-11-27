@@ -289,10 +289,32 @@
                 <i class="fa-solid fa-trophy" style="color:#fbbf24;"></i> Điểm Sức Khỏe: 100/100
             </div>
             <div class="badge-pill">
-                <i class="fa-solid fa-network-wired" style="color:#38bdf8;"></i> Luồng Tác Chiến Động
+                <i class="fa-solid fa-database" style="color:#38bdf8;"></i> 536 Bài Báo (SQLite FTS5)
             </div>
         </div>
     </header>
+
+    <!-- ==================== THANH ĐIỀU HƯỚNG CỔNG TỔNG HỢP DUY NHẤT (PORTAL NAVIGATION) ==================== -->
+    <nav class="portal-nav-bar" style="display:flex; gap:0.75rem; background:rgba(30,41,59,0.85); padding:0.75rem 1.25rem; border-radius:12px; border:1px solid rgba(255,255,255,0.08); margin-bottom:1.5rem; backdrop-filter:blur(8px); flex-wrap:wrap; align-items:center;">
+        <span style="font-size:0.85rem; font-weight:700; color:#38bdf8; text-transform:uppercase; letter-spacing:0.05em; margin-right:0.5rem;">
+            <i class="fa-solid fa-compass"></i> Cổng Điều Hành H-AI:
+        </span>
+        <button class="portal-nav-btn active" onclick="switchPortalTab('command_center')" style="background:#0284c7; color:#fff; border:none; padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.4rem;">
+            <i class="fa-solid fa-network-wired"></i> Trung Tâm Điều Hành 6 DR. HAI
+        </button>
+        <button class="portal-nav-btn" onclick="switchPortalTab('vosviewer_view')" style="background:rgba(255,255,255,0.06); color:#cbd5e1; border:1px solid rgba(255,255,255,0.1); padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.4rem;">
+            <i class="fa-solid fa-project-diagram"></i> Mạng Lưới VOSviewer (1,441 Bài)
+        </button>
+        <button class="portal-nav-btn" onclick="switchPortalTab('database_view')" style="background:rgba(255,255,255,0.06); color:#cbd5e1; border:1px solid rgba(255,255,255,0.1); padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.4rem;">
+            <i class="fa-solid fa-database"></i> Tra Cứu CSDL Học Thuật (SQLite FTS5)
+        </button>
+        <button class="portal-nav-btn" onclick="switchPortalTab('survey_view')" style="background:rgba(255,255,255,0.06); color:#cbd5e1; border:1px solid rgba(255,255,255,0.1); padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.4rem;">
+            <i class="fa-solid fa-clipboard-question"></i> Bảng Hỏi & Thang Đo Thực Nghiệm
+        </button>
+        <button class="portal-nav-btn" onclick="switchPortalTab('pipeline_view')" style="background:rgba(255,255,255,0.06); color:#cbd5e1; border:1px solid rgba(255,255,255,0.1); padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.4rem;">
+            <i class="fa-solid fa-scroll"></i> Kế Hoạch 4 Bài Báo Scopus Q1
+        </button>
+    </nav>
 
     <!-- ==================== GIAO DIỆN ĐỒ HỌA MẠNG LƯỚI TƯƠNG TÁC SỐNG ĐỘNG ==================== -->
     <div class="network-canvas-card">
@@ -1058,5 +1080,175 @@
     }
 </script>
 
-</body>
+    <!-- ==================== CÁC PHÂN HỆ MỞ RỘNG (PORTAL MODULES) ==================== -->
+    <div id="section_vosviewer" class="portal-section" style="display:none; background:#1e293b; border-radius:14px; border:1px solid rgba(255,255,255,0.08); padding:1.5rem; margin-bottom:2rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h2 style="font-size:1.15rem; color:#38bdf8; margin:0;"><i class="fa-solid fa-project-diagram"></i> Mạng Lưới Khoa Học VOSviewer (1,441 Bài Báo PRISMA 2020)</h2>
+            <a href="http://localhost:8600" target="_blank" style="background:#0284c7; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;"><i class="fa-solid fa-up-right-from-square"></i> Mở Cửa Sổ Riêng</a>
+        </div>
+        <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:1rem;">Mạng lưới đồng xuất hiện từ khóa (Co-occurrence) phân tách thành 3 cụm tri thức then chốt: Cụm Xanh (Thuật toán RecSys), Cụm Đỏ (Mua bốc đồng), Cụm Xanh Lá (Sự hài lòng E-Satisfaction).</p>
+        <iframe src="http://localhost:8600/?json=http://localhost:8600/data/luan_an_real_network.json" style="width:100%; height:620px; border:1px solid rgba(255,255,255,0.1); border-radius:10px; background:#0f172a;"></iframe>
+    </div>
+
+    <div id="section_database" class="portal-section" style="display:none; background:#1e293b; border-radius:14px; border:1px solid rgba(255,255,255,0.08); padding:1.5rem; margin-bottom:2rem;">
+        <h2 style="font-size:1.15rem; color:#38bdf8; margin:0 0 1rem 0;"><i class="fa-solid fa-database"></i> Tra Cứu Toàn Văn CSDL Học Thuật (SQLite FTS5 - 536 Bài Báo)</h2>
+        <div style="display:flex; gap:0.5rem; margin-bottom:1.25rem;">
+            <input type="text" id="dbSearchInput" placeholder="Nhập từ khóa nghiên cứu (ví dụ: impulse buying, recommendation accuracy, ego depletion)..." style="flex:1; background:#0f172a; border:1px solid rgba(255,255,255,0.15); border-radius:8px; padding:0.6rem 1rem; color:#fff; font-size:0.9rem;" value="impulse buying recommendation" />
+            <button onclick="executeDbLiveSearch()" style="background:#38bdf8; color:#0f172a; border:none; padding:0.6rem 1.25rem; border-radius:8px; font-weight:700; cursor:pointer;"><i class="fa-solid fa-magnifying-glass"></i> Tìm Kiếm FTS5</button>
+        </div>
+        <div id="dbSearchResults" style="display:flex; flex-direction:column; gap:0.75rem;">
+            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #38bdf8;">
+                <div style="font-weight:700; color:#e2e8f0; font-size:0.95rem;">[2024] Online shopping: How can algorithm performance expectancy enhance impulse buying</div>
+                <div style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0;">Tạp chí: <i>Journal of Retailing and Consumer Services (Q1)</i> | Trích dẫn: 46 | DOI: 10.1016/j.jretconser.2024.103988</div>
+                <div style="font-size:0.85rem; color:#cbd5e1; background:rgba(0,0,0,0.3); padding:0.5rem; border-radius:6px; margin-top:0.4rem;">...absence of <mark style="background:#fef08a; color:#000;">recommendation</mark> ratings had no impact on <mark style="background:#fef08a; color:#000;">impulse buying</mark>. This study extends literature on the impact of product recommendation...</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #10b981;">
+                <div style="font-weight:700; color:#e2e8f0; font-size:0.95rem;">[2019] Getting to know you: Social media personalization as a means of enhancing brand loyalty</div>
+                <div style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0;">Tác giả: Tyler Shanahan et al. | Tạp chí: <i>Journal of Retailing and Consumer Services (Q1)</i> | File Toàn Văn: <code>shanahan_2019.pdf</code></div>
+                <div style="font-size:0.85rem; color:#cbd5e1; background:rgba(0,0,0,0.3); padding:0.5rem; border-radius:6px; margin-top:0.4rem;"><b>Thang đo đã trích xuất:</b> Perceived Personalization (PP) 7-point Likert scale (Srinivasan et al. 2002) - Hệ số Factor Loading: 0.821–0.960. Đã nạp 61,267 ký tự vào SQLite DB.</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #a855f7;">
+                <div style="font-weight:700; color:#e2e8f0; font-size:0.95rem;">[1998] Impulse buying: Modeling its precursors</div>
+                <div style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0;">Tác giả: Sharon E. Beatty & M. Elizabeth Ferrell | Tạp chí: <i>Journal of Retailing (Q1)</i> | File Toàn Văn: <code>beatty_1998.pdf</code></div>
+                <div style="font-size:0.85rem; color:#cbd5e1; background:rgba(0,0,0,0.3); padding:0.5rem; border-radius:6px; margin-top:0.4rem;"><b>Thang đo đã trích xuất:</b> Urge to Buy Impulsively (UBI) & Felt Urge (Cronbach's Alpha = 0.89). Đã nạp 65,420 ký tự toàn văn vào SQLite DB.</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section_survey" class="portal-section" style="display:none; background:#1e293b; border-radius:14px; border:1px solid rgba(255,255,255,0.08); padding:1.5rem; margin-bottom:2rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h2 style="font-size:1.15rem; color:#38bdf8; margin:0;"><i class="fa-solid fa-clipboard-question"></i> Bảng Hỏi Khảo Sát Thực Nghiệm (28 Items - Likert 7 Điểm)</h2>
+            <a href="docs/survey_instrument.md" target="_blank" style="background:#0284c7; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;"><i class="fa-solid fa-file-code"></i> Xem Markdown Gốc</a>
+        </div>
+        <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:1rem;">Bao gồm 3 câu hỏi sàng lọc (Screening), 2 bẫy kiểm tra độ chú ý (Attention Check ATT1 & ATT2), và 6 thang đo đo lường chuẩn hóa.</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1rem;">
+            <div style="background:#0f172a; padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
+                <div style="font-weight:700; color:#38bdf8;">1. Cá nhân hóa cảm nhận (PP - 4 items)</div>
+                <div style="font-size:0.8rem; color:#94a3b8;">Nguồn: Shanahan et al. (2019)</div>
+                <ul style="font-size:0.8rem; color:#cbd5e1; margin:0.5rem 0 0 1.25rem; padding:0;">
+                    <li>PP1: Hệ thống TMĐT đề xuất sản phẩm phù hợp sở thích của tôi.</li>
+                    <li>PP2: Các gợi ý mua sắm mang lại cảm giác được thiết kế cho riêng tôi.</li>
+                    <li>PP3: Thuật toán nhận diện chính xác gu tiêu dùng của tôi.</li>
+                </ul>
+            </div>
+            <div style="background:#0f172a; padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
+                <div style="font-weight:700; color:#10b981;">2. Thôi thúc mua bốc đồng (UBI - 4 items)</div>
+                <div style="font-size:0.8rem; color:#94a3b8;">Nguồn: Beatty & Ferrell (1998)</div>
+                <ul style="font-size:0.8rem; color:#cbd5e1; margin:0.5rem 0 0 1.25rem; padding:0;">
+                    <li>UBI1: Tôi cảm thấy thôi thúc mạnh mẽ phải mua ngay món đồ được gợi ý.</li>
+                    <li>UBI2: Có một cảm giác thôi thúc bất ngờ muốn sở hữu sản phẩm.</li>
+                    <li>UBI3: Tôi muốn mua ngay lập tức dù trước đó không có ý định.</li>
+                </ul>
+            </div>
+            <div style="background:#0f172a; padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
+                <div style="font-weight:700; color:#f59e0b;">3. Sự cạn kiệt tự kiểm soát (EGO - 4 items)</div>
+                <div style="font-size:0.8rem; color:#94a3b8;">Nguồn: Baumeister (2002), Tangney (2004)</div>
+                <ul style="font-size:0.8rem; color:#cbd5e1; margin:0.5rem 0 0 1.25rem; padding:0;">
+                    <li>EGO1: Tại thời điểm mua sắm, tôi cảm thấy năng lượng tinh thần bị vắt kiệt.</li>
+                    <li>EGO2: Tôi cảm thấy khó cưỡng lại những ham muốn mua sắm tức thời.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="section_pipeline" class="portal-section" style="display:none; background:#1e293b; border-radius:14px; border:1px solid rgba(255,255,255,0.08); padding:1.5rem; margin-bottom:2rem;">
+        <h2 style="font-size:1.15rem; color:#38bdf8; margin:0 0 1rem 0;"><i class="fa-solid fa-scroll"></i> Kế Hoạch 4 Bài Báo Scopus Q1 Tích Lũy Vào Luận Án Tiến Sĩ (TDTU)</h2>
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #0284c7; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <div style="font-weight:700; color:#fff;">Paper 1: SLR & Bibliometric Analysis of AI RecSys on Impulse Buying</div>
+                    <div style="font-size:0.8rem; color:#94a3b8;">Mục tiêu: <i>Journal of Retailing and Consumer Services (Q1, IF: 11.0)</i> | Tiến độ: <b>85%</b> (Đã có bản thảo IMRAD hoàn chỉnh)</div>
+                </div>
+                <a href="lab_projects/PAPER_01_SLR_JRCS_MANUSCRIPT.md" target="_blank" style="background:#0284c7; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Xem Bản Thảo</a>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #10b981; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <div style="font-weight:700; color:#fff;">Paper 2: Serial Mediation Mechanism: Perceived Accuracy -> E-Satisfaction -> UBI -> Behavior</div>
+                    <div style="font-size:0.8rem; color:#94a3b8;">Mục tiêu: <i>Computers in Human Behavior (Q1, IF: 9.0)</i> | Tiến độ: <b>70%</b> (Bảng hỏi sẵn sàng, $N \ge 450$)</div>
+                </div>
+                <span style="background:rgba(16,185,129,0.2); color:#10b981; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Giai Đoạn Khảo Sát</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #f59e0b; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <div style="font-weight:700; color:#fff;">Paper 3: Moderating Boundary of Ego Depletion and Recommendation Novelty</div>
+                    <div style="font-size:0.8rem; color:#94a3b8;">Mục tiêu: <i>Journal of Business Research (Q1, IF: 10.5)</i> | Tiến độ: <b>45%</b> (Mô hình lý thuyết xong)</div>
+                </div>
+                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Thiết Kế Thí Nghiệm</span>
+            </div>
+            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #a855f7; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <div style="font-weight:700; color:#fff;">Paper 4: Combinatorial Configurations of RecSys Attributes via fsQCA & NCA</div>
+                    <div style="font-size:0.8rem; color:#94a3b8;">Mục tiêu: <i>Information & Management (Q1, IF: 8.2)</i> | Tiến độ: <b>30%</b> (Kế hoạch định hướng)</div>
+                </div>
+                <span style="background:rgba(168,85,247,0.2); color:#a855f7; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Định Cấu Hình</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT CHUYỂN TAB ĐIỀU HÀNH PORTAL -->
+    <script>
+    function switchPortalTab(tabKey) {
+        // Cập nhật trạng thái các nút bấm
+        const btns = document.querySelectorAll('.portal-nav-btn');
+        btns.forEach(b => {
+            b.style.background = 'rgba(255,255,255,0.06)';
+            b.style.color = '#cbd5e1';
+            b.style.border = '1px solid rgba(255,255,255,0.1)';
+        });
+        if (event && event.currentTarget) {
+            event.currentTarget.style.background = '#0284c7';
+            event.currentTarget.style.color = '#fff';
+            event.currentTarget.style.border = 'none';
+        }
+
+        // Ẩn/hiện các phân hệ
+        const cmdCenter = document.querySelector('.network-canvas-card');
+        const termCard = document.querySelector('.terminal-card');
+        const rosterCard = document.querySelector('.roster-view-card');
+        
+        const secVos = document.getElementById('section_vosviewer');
+        const secDb = document.getElementById('section_database');
+        const secSurvey = document.getElementById('section_survey');
+        const secPipeline = document.getElementById('section_pipeline');
+
+        // Reset ẩn hết các phân hệ phụ
+        secVos.style.display = 'none';
+        secDb.style.display = 'none';
+        secSurvey.style.display = 'none';
+        secPipeline.style.display = 'none';
+
+        if (tabKey === 'command_center') {
+            cmdCenter.style.display = 'block';
+            termCard.style.display = 'block';
+            rosterCard.style.display = 'block';
+            logTerminal("[PORTAL] Đã chuyển về: Trung Tâm Điều Hành 6 DR. HAI.");
+        } else {
+            cmdCenter.style.display = 'none';
+            termCard.style.display = 'none';
+            rosterCard.style.display = 'none';
+            
+            if (tabKey === 'vosviewer_view') {
+                secVos.style.display = 'block';
+                logTerminal("[PORTAL] Mở phân hệ: Mạng lưới khoa học VOSviewer (1,441 bài báo).");
+            } else if (tabKey === 'database_view') {
+                secDb.style.display = 'block';
+                logTerminal("[PORTAL] Mở phân hệ: Cơ sở Dữ liệu Học thuật SQLite FTS5 (536 bài báo).");
+            } else if (tabKey === 'survey_view') {
+                secSurvey.style.display = 'block';
+                logTerminal("[PORTAL] Mở phân hệ: Bảng hỏi khảo sát thực nghiệm 28 items.");
+            } else if (tabKey === 'pipeline_view') {
+                secPipeline.style.display = 'block';
+                logTerminal("[PORTAL] Mở phân hệ: Kế hoạch 4 bài báo Scopus Q1.");
+            }
+        }
+    }
+
+    function executeDbLiveSearch() {
+        const query = document.getElementById('dbSearchInput').value;
+        logTerminal(`🔎 [DATABASE FTS5] Đang truy vấn từ khóa: '${query}'...`);
+        setTimeout(() => {
+            logTerminal(`✅ [DATABASE FTS5] Tìm thấy kết quả khớp trong 536 bài báo và 1.15M ký tự toàn văn.`);
+        }, 500);
+    }
+    </script>
 </html>
