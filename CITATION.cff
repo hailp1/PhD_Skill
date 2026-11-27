@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this research codebase, dataset, or preregistration protocol, please cite it as below."
+title: "AI-Driven Personalized Recommendation Systems and Online Consumer Impulse Buying Behavior: A Systematic Literature Review and Bibliometric Network Analysis"
+authors:
+  - family-names: "Le"
+    given-names: "Phuc Hai"
+    affiliation: "Ton Duc Thang University (TDTU)"
+    orcid: "https://orcid.org/0009-0000-0000-0000"
+doi: "10.17605/OSF.IO/W2APX"
+url: "https://osf.io/w2apx/"
+repository-code: "https://github.com/hailp1/PhD_Skill"
+date-released: 2026-11-27
+type: data
+keywords:
+  - "artificial intelligence"
+  - "recommendation systems"
+  - "impulse buying"
+  - "e-satisfaction"
+  - "S-O-R framework"
+  - "ego depletion"
+  - "systematic literature review"
+  - "PRISMA 2020"
+  - "VOSviewer"
+license: CC-BY-4.0

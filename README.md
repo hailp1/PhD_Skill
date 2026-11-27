@@ -1,91 +1,150 @@
-# PH.D. DISSERTATION RESEARCH REPOSITORY
-*(Kho Lưu Trữ Nghiên Cứu Luận Án Tiến Sĩ: Chuyên Ngành Marketing & Quản Trị Kinh Doanh)*
+# AI-Driven Personalized Recommendation Systems and Online Consumer Impulse Buying Behavior
+*(Tác động của Hệ thống Đề xuất Cá nhân hóa Dựa trên AI đến Hành vi Mua Bốc đồng của Người Tiêu dùng Trực tuyến)*
 
-**Đề tài**: Tác động của hệ thống đề xuất cá nhân hóa dựa trên AI đến hành vi mua bốc đồng của người tiêu dùng trực tuyến: Vai trò trung gian của sự hài lòng trực tuyến  
-**NCS**: Lê Phúc Hải | **Cơ sở đào tạo**: Trường Đại học Tôn Đức Thắng (TDTU)  
-**Tiêu chuẩn hướng tới**: Scopus Q1 (ABS/AJG 3-4*), PRISMA 2020 Statement, và Trắc lượng thư mục VOSviewer  
+<p align="center">
+  <a href="https://osf.io/w2apx/"><img src="https://img.shields.io/badge/OSF%20Preregistration-10.17605%2FOSF.IO%2FW2APX-blue?style=for-the-badge&logo=osf" alt="OSF Preregistration"></a>
+  <a href="https://www.sciencedirect.com/journal/journal-of-retailing-and-consumer-services"><img src="https://img.shields.io/badge/Target%20Journal-JRCS%20(Elsevier%20Q1%20--%20IF%2011.0)-darkgreen?style=for-the-badge" alt="Target Journal"></a>
+  <a href="http://prisma-statement.org/"><img src="https://img.shields.io/badge/Protocol-PRISMA%202020%20Statement-emerald?style=for-the-badge" alt="PRISMA 2020"></a>
+  <a href="https://www.vosviewer.com/"><img src="https://img.shields.io/badge/Bibliometrics-VOSviewer%20v1.6.20-red?style=for-the-badge" alt="VOSviewer"></a>
+  <a href="https://github.com/hailp1/PhD_Skill/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC--BY%204.0-lightgrey?style=for-the-badge" alt="License"></a>
+  <a href="https://hailp1.github.io/PhD_Skill/"><img src="https://img.shields.io/badge/Live%20Dashboard-GitHub%20Pages-purple?style=for-the-badge" alt="Live Demo"></a>
+</p>
 
 ---
 
-## 🏛️ CẤU TRÚC THƯ MỤC CHUẨN QUỐC TẾ (REPOSITORY ARCHITECTURE)
+## 📖 OVERVIEW & EXECUTIVE SUMMARY
 
-Kho lưu trữ được tổ chức theo tiêu chuẩn mở OSF (Open Science Framework) và cấu trúc quản lý luận án tiến sĩ quốc tế:
+This repository hosts the complete, reproducible computational research ecosystem, empirical datasets, and interactive visualization platforms for the Ph.D. dissertation:
+
+* **Dissertation Title**: *AI-Driven Personalized Recommendation Systems and Online Consumer Impulse Buying Behavior: The Mediating Role of Cumulative E-Satisfaction and the Boundary Condition of Ego Depletion*
+* **Researcher**: **Le Phuc Hai (Lê Phúc Hải)** | Ph.D. Candidate in Marketing & Business Administration
+* **Institution**: **Ton Duc Thang University (TDTU)**, Ho Chi Minh City, Vietnam
+* **OSF Study Protocol**: Registered under code **`w2apx`** ([https://osf.io/w2apx/](https://osf.io/w2apx/))
+* **Target Venue for Paper 1**: *Journal of Retailing and Consumer Services* (Elsevier, CiteScore: 19.3, Impact Factor: 11.0, ABS 3*, Scopus Q1)
+
+---
+
+## 🔬 THREE PILLARS OF EMPIRICAL RIGOR
+
+```
+┌───────────────────────────────────────┐
+│     Stage 1: Systematic Review        │  ---> N = 2,500 initial records (Scopus/WoS/Dimensions)
+│        (PRISMA 2020 Protocol)         │  ---> N = 1,441 core studies included post-screening
+└──────────────────┬────────────────────┘
+                   │
+                   ▼
+┌───────────────────────────────────────┐
+│     Stage 2: Bibliometric Network     │  ---> Fractional counting, Modularity-based clustering
+│      (VOSviewer Software v1.6.20)     │  ---> 4 Thematic Clusters, 28 key nodes, 250 links
+└──────────────────┬────────────────────┘
+                   │
+                   ▼
+┌───────────────────────────────────────┐
+│    Stage 3: Conceptual S-O-R Model    │  ---> Stimulus (PP, ACC, NOV) -> Organism (ES) -> Response (UBI -> IB)
+│    (Baumeister Ego Depletion Theory)  │  ---> 6 Hypotheses (H1-H6) with moderation & serial mediation
+└───────────────────────────────────────┘
+```
+
+---
+
+## 📊 CORE SCIENTIFIC ARTIFACTS & FIGURES
+
+### 1. PRISMA 2020 Flow Diagram (Screening Trajectory)
+*Identifies the systematic selection funnel from 2,500 raw bibliographic citations down to 1,441 high-impact peer-reviewed studies.*
+* **Vector Asset**: [lab_projects/figures/figure1_prisma_flow_diagram.svg](lab_projects/figures/figure1_prisma_flow_diagram.svg)
+
+### 2. Empirical VOSviewer Co-Occurrence Network Map
+*Direct WebGL capture from VOSviewer Online displaying 4 clusters, 28 high-frequency constructs, and 250 co-occurrence link paths.*
+* **High-Res Asset**: [lab_projects/figures/figure2_vosviewer_real_network.png](lab_projects/figures/figure2_vosviewer_real_network.png)
+* **Interactive Live Web App**: [Click to open VOSviewer directly on Port 8600](http://localhost:8600/?json=data/luan_an_real_network.json)
+
+### 3. Integrative Conceptual Framework (S-O-R & Ego Depletion)
+*Synthesizes algorithmic cues into internal cognitive-affective evaluations and behavioral checkout enactment.*
+* **Vector Asset**: [lab_projects/figures/figure3_theoretical_sor_model.svg](lab_projects/figures/figure3_theoretical_sor_model.svg)
+
+---
+
+## 🏛️ REPOSITORY ARCHITECTURE
 
 ```text
 khoahoc/
-├── docs/                                # Hồ sơ học thuật và tài liệu đề cương (Documentation)
-│   ├── proposal_detailed.md             # Đề cương chi tiết (Mô hình trung gian chuỗi có điều tiết)
-│   ├── literature_matrix.md             # Ma trận tổng quan 8 bài Scopus Q1 xác thực mã DOI Crossref
-│   ├── prisma_2020_protocol.md          # Giao thức tổng quan y văn hệ thống chuẩn PRISMA 2020
-│   ├── guidelines_dissertation.md       # Cẩm nang hướng dẫn thực thi và chiến lược 02 bài báo quốc tế
-│   ├── notes_advisor_consultation.md    # Biên bản tổng hợp ý kiến góp ý của GVHD
-│   ├── notes_ferrentino_2018.md         # Ghi chú phân tích bài báo nền tảng Ferrentino (2018)
-│   └── progress_tracker.xlsx            # Bảng theo dõi tiến độ tổng thể luận án & bài báo
+├── .github/workflows/                 # CI/CD: Automated deployment to GitHub Pages
+│   └── deploy-pages.yml               # Deploys web/ dashboard on every git push
 │
-├── data/                                # Quản lý dữ liệu thực nghiệm (Research Data)
-│   ├── raw/                             # Dữ liệu xuất thô từ cơ sở dữ liệu quốc tế
-│   │   └── dimensions_raw_export.csv    # 2,500 bài báo thô xuất từ Dimensions
-│   ├── processed/                       # Dữ liệu sạch sau sàng lọc PRISMA 2020
-│   │   ├── dimensions_clean_included.csv# 1,441 bài báo Scopus Q1/Q2 cốt lõi (100% có DOI)
-│   │   └── prisma_2020_slide_report.md  # Thống kê chi tiết & kịch bản nói 2 phút cho Slide
-│   ├── vosviewer/                       # Tệp tọa độ và ma trận liên kết nạp vào VOSviewer
-│   │   ├── keywords_map.txt             # Tọa độ 2D, tần suất xuất hiện và phân cụm từ khóa
-│   │   └── keywords_network.txt         # 309 cặp liên kết đồng xuất hiện thực chứng
-│   └── references/                      # Kho lưu trữ tệp PDF bài báo gốc
-│       └── ferrentino_2018.pdf          # Tệp toàn văn bài báo Ferrentino et al. (2018)
+├── .agents/skills/                    # Ph.D. Internal AI Research Advisory Skills Suite
+│   ├── phd-research-proposal/         # Gap identification, RQs, theoretical frameworks
+│   ├── phd-literature-review/         # PRISMA 2020, citation verification, matrix synthesis
+│   ├── phd-methodology-design/        # Back-translation, construct operationalization, scales
+│   ├── phd-data-analysis/             # PLS-SEM/CB-SEM, Common Method Bias (CMB) control
+│   └── phd-dissertation-writing/      # 5-chapter dissertation drafting & anti-AI tone audit
 │
-├── web/                                 # Giao diện trực quan hóa và Dashboard điều khiển (Web UI)
-│   ├── index.html                       # 🌟 DASHBOARD TRUNG TÂM THỐNG NHẤT (SPA 4 Tabs)
-│   ├── prisma_flowchart.html            # Sơ đồ dòng chảy PRISMA 2020 tương tác (có nút in PDF)
-│   ├── conceptual_model.html            # Mô hình khái niệm tương tác SVG (Chế độ Màu & Đơn sắc APA 7th)
-│   └── interactive_science_map.html     # Bản đồ mạng lưới tương tác 3 chế độ (Network/Overlay/Density)
+├── data/                              # Research Data Management (FAIR Principles)
+│   ├── raw/                           # Raw bibliographic datasets (Dimensions, Scopus, WoS)
+│   ├── processed/                     # Clean corpus (N = 1,441 core studies, 100% DOI-verified)
+│   └── vosviewer/                     # Coordinate maps and network files for VOSviewer
+│       └── luan_an_real_network.json  # 28 nodes, 250 links, 4 clusters
 │
-├── .agents/skills/                      # Hệ sinh thái kỹ năng AI nội bộ (AI Advisory Suite)
-│   ├── phd-research-proposal/           # Kỹ năng xây dựng đề cương & giả thuyết nghiên cứu
-│   ├── phd-literature-review/           # Kỹ năng PRISMA 2020, VOSviewer & Thẩm định trích dẫn Crossref
-│   ├── phd-methodology-design/          # Kỹ năng thiết kế phương pháp, cỡ mẫu & thang đo dịch ngược
-│   ├── phd-data-analysis/               # Kỹ năng phân tích PLS-SEM, CB-SEM & Kiểm soát CMB
-│   └── phd-dissertation-writing/        # Kỹ năng viết 5 chương, thảo luận kết quả & tone audit v2.0
+├── lab_projects/                      # Manuscript Drafting & Production Assets
+│   ├── figures/                       # Vector SVGs & 300 DPI publication graphics
+│   ├── PAPER_01_SLR_JRCS_MANUSCRIPT.md# 100% Academic English submission manuscript
+│   └── MASTER_LITERATURE_LIBRARY.bib  # Master BibTeX reference bibliography
 │
-├── start_vosviewer_desktop.bat          # Kích hoạt 1-chạm VOSviewer Desktop (Đã nhúng Java 21)
-├── start_vosviewer_online.bat           # Kích hoạt 1-chạm VOSviewer Online (Port 8600)
-├── .gitignore                           # Danh mục loại trừ tệp tạm và dữ liệu lớn
-├── GEMINI.md                            # Bộ quy chuẩn cố vấn học thuật độc quyền
-├── LICENSE                              # Bản quyền mã nguồn mở MIT
-└── README.md                            # Hướng dẫn tổng quan kho lưu trữ
+├── lab_management/                    # Computational Automation & Verification Pipeline
+│   ├── capture_vosviewer_screenshot.py# Automated Headless Chrome WebGL snapshot engine
+│   ├── generate_academic_figures.py   # Publication-grade vector figure generator
+│   └── update_pdf_engine.py           # A4 PDF layout engine with anti-slicing rules
+│
+├── web/                               # Interactive HTML5/SPA Science Dashboard (GitHub Pages)
+│   ├── index.html                     # Unified research command dashboard
+│   ├── interactive_science_map.html   # Canvas VOSviewer with 300 DPI & SVG export
+│   └── XEM_BAN_THAO_BAI_BAO.html      # High-fidelity Elsevier A4 manuscript reader
+│
+├── CITATION.cff                       # Citation metadata for automatic GitHub citing
+├── GEMINI.md                          # Doctoral dissertation advisory system rules
+├── start_vosviewer_online.bat         # 1-click launcher for VOSviewer Online (Port 8600)
+└── README.md                          # Master repository documentation
 ```
 
 ---
 
-## 🚀 HƯỚNG DẪN KHỞI ĐỘNG VÀ TRẢI NGHIỆM HỆ THỐNG
+## 🚀 HOW TO REPRODUCE THIS RESEARCH
 
-### 1. Trải nghiệm Dashboard Nghiên Cứu Thống Nhất (Tất cả trong một)
-Bạn chỉ cần mở tệp:  
-👉 **[web/index.html](web/index.html)** trên trình duyệt.  
-Hệ thống cho phép bạn chuyển đổi mượt mà giữa 4 Tab chính:
-* **Tab 1: Lưu Đồ PRISMA 2020** (2,500 thô $\to$ 1,441 bài sạch, kèm nút xuất PDF cho Slide).
-* **Tab 2: VOSviewer Online** (Khung hiển thị web chính thức của Leiden University nạp sẵn dữ liệu).
-* **Tab 3: Mô Hình Khái Niệm** (Kiến trúc trung gian chuỗi có điều tiết chuẩn Scopus Q1).
-* **Tab 4: Báo Cáo Slide** (Kịch bản thuyết trình 2 phút trước Hội đồng & Top 8 tạp chí Q1).
-
-### 2. Khởi động VOSviewer Desktop (Đã tích hợp sẵn Java 21 không lỗi)
-Nhấp đúp chuột vào tệp:  
-👉 **[start_vosviewer_desktop.bat](start_vosviewer_desktop.bat)**  
-Ứng dụng sẽ tự động khởi động và nạp sẵn toàn bộ bản đồ 1,441 bài báo với 3 chế độ xem (kể cả *Density Heatmap*).
-
-### 3. Khởi động VOSviewer Online Local (Port 8600)
-Nhấp đúp chuột vào tệp:  
-👉 **[start_vosviewer_online.bat](start_vosviewer_online.bat)**  
-Máy chủ nội bộ sẽ bật và mở trình duyệt tại `http://localhost:8600/?json=data/luan_an_real_network.json`.
-
----
-
-## 📊 TỰ ĐỘNG HÓA QUY TRÌNH KHI CÓ DỮ LIỆU MỚI
-
-Khi bạn tải thêm bất kỳ tệp dữ liệu thô nào từ Dimensions / Scopus bỏ vào thư mục `data/raw/`, chỉ cần chạy 01 lệnh terminal:
-
+### Step 1: Clone the Repository
 ```bash
-python .agents/skills/phd-literature-review/scripts/pipeline_prisma_vosviewer.py
+git clone https://github.com/hailp1/PhD_Skill.git
+cd PhD_Skill
 ```
 
-Toàn bộ quá trình lọc 4 tầng PRISMA 2020, làm sạch dữ liệu, tính toán ma trận tương quan và cập nhật bản đồ VOSviewer sẽ được tự động hoàn tất trong vòng 10 giây!
+### Step 2: Launch the Interactive Science Dashboard
+* Double-click `start_vosviewer_online.bat` to launch local VOSviewer Online (Port 8600).
+* Open `XEM_BAN_THAO_BAI_BAO.html` in your browser to inspect the full-text manuscript, vector flowcharts, and 1-click A4 PDF export.
+
+### Step 3: Verify Scholarly Citations (Anti-Hallucination Gate)
+Run the automated Crossref API verification tool to validate DOI integrity across all cited publications:
+```bash
+python .agents/skills/phd-literature-review/scripts/citation_verifier.py
+```
+
+---
+
+## 📜 CITATION & ATTRIBUTION
+
+If you utilize this protocol, empirical network map, or conceptual framework in your research, please cite:
+
+```bibtex
+@misc{le2026aidriven,
+  author       = {Le, Phuc Hai},
+  title        = {AI-Driven Personalized Recommendation Systems and Online Consumer Impulse Buying Behavior: A Systematic Literature Review and Bibliometric Network Analysis},
+  year         = {2026},
+  publisher    = {Open Science Framework (OSF)},
+  doi          = {10.17605/OSF.IO/W2APX},
+  url          = {https://osf.io/w2apx/},
+  note         = {Ph.D. Dissertation Research, Ton Duc Thang University (TDTU)}
+}
+```
+
+---
+
+## ⚖️ LICENSE
+* **Academic Manuscript, Figures & Datasets**: Licensed under [Creative Commons Attribution 4.0 International (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+* **Software Scripts & Pipeline Automation**: Licensed under the [MIT License](LICENSE).
