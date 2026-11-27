@@ -563,6 +563,9 @@
                     <button class="act-btn primary" onclick="runAgentAction('SLR', 'high_throughput_mine')">
                         <i class="fa-solid fa-cloud-arrow-down"></i> Quét Hàng Loạt & Lập Plan
                     </button>
+                    <button class="act-btn" onclick="runAgentAction('SLR', 'download_vosviewer_pdfs')">
+                        <i class="fa-solid fa-project-diagram"></i> Tải Full-Text VOSviewer
+                    </button>
                     <button class="act-btn" onclick="runAgentAction('SLR', 'download_fulltext_pdfs')">
                         <i class="fa-solid fa-file-pdf"></i> Tải Full-Text PDF
                     </button>
@@ -898,6 +901,16 @@
                 setTimeout(() => {
                     logTerminal(`✨ [${ag.name}] Đã xuất trọn gói Master Corpus (lab_projects/ACADEMIC_LITERATURE_MASTER_CORPUS.json), Thư viện Zotero (.ris/.bib) và Kế hoạch bài báo tại: lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md`);
                 }, 1400);
+                break;
+            case 'download_vosviewer_pdfs':
+                logTerminal(`🔬 [${ag.name}] Đang rà soát 1,441 bài báo hạt nhân trong mạng lưới VOSviewer của Đề cương...`);
+                setTimeout(() => {
+                    logTerminal(`📥 [${ag.name}] Đã kích hoạt 'vosviewer_pdf_harvester.py' lọc ra các bài Landmark trích dẫn cao nhất (JAMS, JM, JRetailing, CHB, JRCS).`);
+                }, 700);
+                setTimeout(() => {
+                    logTerminal(`📄 [${ag.name}] Báo cáo kiểm kê toàn văn VOSviewer đã sẵn sàng tại: lab_projects/VOSVIEWER_FULLTEXT_REPORT.md`);
+                }, 1400);
+                window.open('lab_projects/VOSVIEWER_FULLTEXT_REPORT.md', '_blank');
                 break;
             case 'download_fulltext_pdfs':
                 logTerminal(`📥 [${ag.name}] Kích hoạt FULL-TEXT PDF DOWNLOADER ENGINE... Truy vết đường dẫn Open Access hợp pháp.`);
