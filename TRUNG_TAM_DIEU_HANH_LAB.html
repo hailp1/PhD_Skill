@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAM-AI Research Lab | Trung Tâm Điều Hành Nghiên Cứu Tiến Sĩ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-base: #090d16;
+            --bg-surface: #0f172a;
+            --bg-surface-elevated: #1e293b;
+            --bg-glass: rgba(15, 23, 42, 0.75);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-bright: rgba(56, 189, 248, 0.3);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-cyan: #06b6d4;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-rose: #f43f5e;
+            --gradient-primary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+            --shadow-glow: 0 0 35px rgba(56, 189, 248, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .container { max-width: 1440px; margin: 0 auto; padding: 2rem; }
+
+        /* HEADER */
+        .lab-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 2.5rem;
+        }
+        .lab-brand { display: flex; align-items: center; gap: 1.25rem; }
+        .lab-logo-box {
+            width: 56px; height: 56px; border-radius: 16px;
+            background: var(--gradient-primary);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem; color: #fff; box-shadow: var(--shadow-glow);
+        }
+        .lab-title h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.65rem; font-weight: 700;
+            background: linear-gradient(to right, #f8fafc, #94a3b8);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .lab-title p { font-size: 0.88rem; color: var(--accent-cyan); font-weight: 500; }
+
+        .lab-stats-badges { display: flex; gap: 1rem; align-items: center; }
+        .badge-pill {
+            padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600;
+            background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-subtle);
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .badge-pill i { color: var(--accent-cyan); }
+        .badge-pill.status-live { border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1); color: #34d399; }
+        .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 10px #10b981; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
+
+        /* GRID LAYOUT */
+        .section-heading {
+            font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 700;
+            margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem;
+        }
+        .section-heading i { color: var(--accent-blue); }
+
+        /* AGENTS ROSTER */
+        .agents-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.25rem; margin-bottom: 3rem;
+        }
+        .agent-card {
+            background: var(--bg-surface); border: 1px solid var(--border-subtle);
+            border-radius: 16px; padding: 1.5rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .agent-card:hover {
+            transform: translateY(-4px); border-color: var(--border-bright);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+        .agent-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+            background: var(--gradient-primary); opacity: 0; transition: opacity 0.3s;
+        }
+        .agent-card:hover::before { opacity: 1; }
+        .agent-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem; }
+        .agent-identity { display: flex; align-items: center; gap: 0.85rem; }
+        .agent-avatar {
+            width: 44px; height: 44px; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem; font-weight: 700; color: #fff;
+        }
+        .agent-code-title h3 { font-size: 1rem; font-weight: 700; color: #f8fafc; }
+        .agent-code-title span { font-size: 0.75rem; color: var(--accent-cyan); font-weight: 600; text-transform: uppercase; }
+        .agent-status-tag {
+            font-size: 0.72rem; padding: 0.25rem 0.6rem; border-radius: 6px;
+            background: rgba(16, 185, 129, 0.15); color: #34d399; font-weight: 600;
+        }
+        .agent-role-desc { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; min-height: 48px; }
+        .agent-skills-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+        .skill-chip {
+            font-size: 0.72rem; font-family: 'JetBrains Mono', monospace;
+            padding: 0.2rem 0.5rem; border-radius: 4px;
+            background: var(--bg-surface-elevated); color: #cbd5e1;
+        }
+        .agent-btn {
+            width: 100%; padding: 0.6rem; border-radius: 8px; border: 1px solid var(--border-subtle);
+            background: rgba(255, 255, 255, 0.03); color: var(--text-primary);
+            font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+        }
+        .agent-btn:hover { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
+
+        /* PROJECTS PIPELINE */
+        .pipeline-section { margin-bottom: 3rem; }
+        .projects-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: var(--bg-surface); border: 1px solid var(--border-subtle);
+            border-radius: 18px; padding: 1.75rem; position: relative;
+        }
+        .project-meta-top {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 1rem;
+        }
+        .project-code-badge {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+            padding: 0.35rem 0.85rem; border-radius: 8px; font-size: 0.8rem;
+            background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .project-target-journal {
+            font-size: 0.8rem; color: var(--accent-amber); font-weight: 600;
+            display: flex; align-items: center; gap: 0.4rem;
+        }
+        .project-title-vn {
+            font-size: 1.05rem; font-weight: 700; color: #f8fafc; line-height: 1.5;
+            margin-bottom: 0.4rem;
+        }
+        .project-title-en {
+            font-size: 0.85rem; color: var(--text-secondary); font-style: italic;
+            margin-bottom: 1.25rem;
+        }
+        .progress-bar-container { margin-bottom: 1.25rem; }
+        .progress-labels { display: flex; justify-content: space-between; font-size: 0.78rem; margin-bottom: 0.4rem; }
+        .progress-labels span:first-child { color: var(--text-muted); font-weight: 500; }
+        .progress-labels span:last-child { color: var(--accent-cyan); font-weight: 700; }
+        .progress-track { width: 100%; height: 8px; background: var(--bg-surface-elevated); border-radius: 9999px; overflow: hidden; }
+        .progress-fill { height: 100%; background: var(--gradient-primary); border-radius: 9999px; }
+
+        .project-footer {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 1rem; border-top: 1px solid var(--border-subtle);
+            font-size: 0.8rem;
+        }
+        .assigned-agents-avatars { display: flex; align-items: center; gap: 0.35rem; }
+        .mini-agent-badge {
+            font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.45rem;
+            border-radius: 4px; background: var(--bg-surface-elevated); color: #94a3b8;
+        }
+        .project-stage-tag { color: #34d399; font-weight: 600; }
+
+        /* QUICK CONSOLE */
+        .quick-actions-bar {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid var(--border-subtle); border-radius: 18px; padding: 1.5rem;
+            display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;
+        }
+        .console-title { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-size: 0.95rem; }
+        .console-title i { color: var(--accent-cyan); }
+        .console-buttons-group { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .console-btn {
+            padding: 0.55rem 1rem; border-radius: 8px; font-size: 0.82rem; font-weight: 600;
+            border: 1px solid var(--border-subtle); background: var(--bg-surface);
+            color: var(--text-primary); cursor: pointer; display: flex; align-items: center; gap: 0.5rem;
+            transition: all 0.2s;
+        }
+        .console-btn:hover { background: var(--bg-surface-elevated); border-color: var(--accent-blue); transform: translateY(-2px); }
+        .console-btn.btn-primary { background: var(--gradient-primary); border: none; color: #fff; }
+
+        /* MODAL */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
+            display: none; align-items: center; justify-content: center; z-index: 9999;
+        }
+        .modal-content {
+            background: var(--bg-surface); border: 1px solid var(--border-bright);
+            border-radius: 20px; width: 90%; max-width: 720px; max-height: 85vh;
+            overflow-y: auto; padding: 2rem; position: relative;
+        }
+        .modal-close-btn {
+            position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none;
+            color: var(--text-muted); font-size: 1.25rem; cursor: pointer;
+        }
+        .modal-close-btn:hover { color: #fff; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- MASTER HEADER -->
+    <header class="lab-header">
+        <div class="lab-brand">
+            <div class="lab-logo-box">
+                <i class="fa-solid fa-flask-vial"></i>
+            </div>
+            <div class="lab-title">
+                <h1>BAM-AI RESEARCH LAB</h1>
+                <p>Phòng Thí Nghiệm Quản Trị Kinh Doanh & Marketing Tích Hợp Đa Tác Tử AI</p>
+            </div>
+        </div>
+        <div class="lab-stats-badges">
+            <div class="badge-pill status-live">
+                <div class="pulse-dot"></div> 6 Agents Hoạt Động
+            </div>
+            <div class="badge-pill">
+                <i class="fa-solid fa-graduation-cap"></i> 4 Bài Báo Q1
+            </div>
+            <div class="badge-pill">
+                <i class="fa-solid fa-shield-halved"></i> Zero Fake Citations
+            </div>
+        </div>
+    </header>
+
+    <!-- QUICK CONSOLE -->
+    <div class="quick-actions-bar" style="margin-bottom: 2.5rem;">
+        <div class="console-title">
+            <i class="fa-solid fa-terminal"></i>
+            <span>Trung Tâm Điều Phối Tiến Trình Học Thuật</span>
+        </div>
+        <div class="console-buttons-group">
+            <button class="console-btn btn-primary" onclick="window.location.href='index.html'">
+                <i class="fa-solid fa-house"></i> Về Dashboard Chính
+            </button>
+            <button class="console-btn" onclick="window.open('TRUNG_TAM_VOSVIEWER.html', '_blank')">
+                <i class="fa-solid fa-circle-nodes"></i> Mở VOSviewer Online
+            </button>
+            <button class="console-btn" onclick="window.open('THU_VIEN_TRI_THUC.html', '_blank')">
+                <i class="fa-solid fa-book-bookmark"></i> Thư Viện Tri Thức (50 Bài)
+            </button>
+            <button class="console-btn" onclick="alert('Đã kích hoạt Agent 6: Mock Journal Review Panel để kiểm định toàn bộ bản thảo hiện tại!')">
+                <i class="fa-solid fa-gavel"></i> Kích Hoạt Phản Biện 5 Ghế
+            </button>
+        </div>
+    </div>
+
+    <!-- 6 AI AGENTS ROSTER -->
+    <div class="section-heading">
+        <i class="fa-solid fa-robot"></i>
+        <span>Đội Ngũ 6 AI Agents Chuyên Biệt (Academic Agent Roster)</span>
+    </div>
+
+    <div class="agents-grid">
+        <!-- Agent 1 -->
+        <div class="agent-card">
+            <div>
+                <div class="agent-header">
+                    <div class="agent-identity">
+                        <div class="agent-avatar" style="background: linear-gradient(135deg, #06b6d4, #0284c7);">
+                            <i class="fa-solid fa-chess-knight"></i>
+                        </div>
+                        <div class="agent-code-title">
+                            <h3>Chief Research Strategist</h3>
+                            <span>Mã: CRS (Agent 01)</span>
+                        </div>
+                    </div>
+                    <span class="agent-status-tag"><i class="fa-solid fa-check"></i> Active</span>
+                </div>
+                <p class="agent-role-desc">Viện trưởng Chiến lược Nghiên cứu: Phân tích khoảng trống tri thức (Gaps), chọn lý thuyết nền (S-O-R, Ego Depletion) và kiến tạo hệ thống giả thuyết H1-Hn.</p>
+                <div class="agent-skills-chips">
+                    <span class="skill-chip">phd-research-proposal</span>
+                    <span class="skill-chip">deep-research</span>
+                    <span class="skill-chip">Hypotheses Formulation</span>
+                </div>
+            </div>
+            <button class="agent-btn" onclick="openAgentModal('CRS')">
+                <i class="fa-regular fa-file-lines"></i> Xem Hồ Sơ Nhiệm Vụ
+            </button>
+        </div>
+
+        <!-- Agent 2 -->
+        <div class="agent-card">
+            <div>
+                <div class="agent-header">
+                    <div class="agent-identity">
+                        <div class="agent-avatar" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <div class="agent-code-title">
+                            <h3>Systematic Literature Reviewer</h3>
+                            <span>Mã: SLR (Agent 02)</span>
+                        </div>
+                    </div>
+                    <span class="agent-status-tag"><i class="fa-solid fa-check"></i> Active</span>
+                </div>
+                <p class="agent-role-desc">Chuyên gia Tổng quan Y văn: Thực thi PRISMA 2020, lập ma trận tổng hợp đa chiều, và gác cổng liêm chính trích dẫn (Zero Fake Citations) qua Crossref API.</p>
+                <div class="agent-skills-chips">
+                    <span class="skill-chip">phd-literature-review</span>
+                    <span class="skill-chip">PRISMA 2020</span>
+                    <span class="skill-chip">citation_verifier</span>
+                </div>
+            </div>
+            <button class="agent-btn" onclick="openAgentModal('SLR')">
+                <i class="fa-regular fa-file-lines"></i> Xem Hồ Sơ Nhiệm Vụ
+            </button>
+        </div>
+
+        <!-- Agent 3 -->
+        <div class="agent-card">
+            <div>
+                <div class="agent-header">
+                    <div class="agent-identity">
+                        <div class="agent-avatar" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                        </div>
+                        <div class="agent-code-title">
+                            <h3>Methodologist & Scale Architect</h3>
+                            <span>Mã: MSA (Agent 03)</span>
+                        </div>
+                    </div>
+                    <span class="agent-status-tag"><i class="fa-solid fa-check"></i> Active</span>
+                </div>
+                <p class="agent-role-desc">Kiến trúc sư Phương pháp: Dịch ngược Brislin thang đo song ngữ (28 items), tính cỡ mẫu G*Power, thiết kế bảng hỏi và lập quy trình thẩm định CVI chuyên gia.</p>
+                <div class="agent-skills-chips">
+                    <span class="skill-chip">phd-methodology-design</span>
+                    <span class="skill-chip">Brislin Back-translation</span>
+                    <span class="skill-chip">G*Power 3.1</span>
+                </div>
+            </div>
+            <button class="agent-btn" onclick="openAgentModal('MSA')">
+                <i class="fa-regular fa-file-lines"></i> Xem Hồ Sơ Nhiệm Vụ
+            </button>
+        </div>
+
+        <!-- Agent 4 -->
+        <div class="agent-card">
+            <div>
+                <div class="agent-header">
+                    <div class="agent-identity">
+                        <div class="agent-avatar" style="background: linear-gradient(135deg, #10b981, #047857);">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="agent-code-title">
+                            <h3>Empirical Data Scientist</h3>
+                            <span>Mã: EDS (Agent 04)</span>
+                        </div>
+                    </div>
+                    <span class="agent-status-tag"><i class="fa-solid fa-check"></i> Active</span>
+                </div>
+                <p class="agent-role-desc">Nhà Khoa học Dữ liệu Thực nghiệm: Làm sạch dữ liệu, kiểm soát CMB (Harman & Full Collinearity), đánh giá mô hình đo lường và cấu trúc PLS-SEM (Bootstrapping 10.000 mẫu).</p>
+                <div class="agent-skills-chips">
+                    <span class="skill-chip">phd-data-analysis</span>
+                    <span class="skill-chip">PLS-SEM (Hair 2022)</span>
+                    <span class="skill-chip">Serial Mediation</span>
+                </div>
+            </div>
+            <button class="agent-btn" onclick="openAgentModal('EDS')">
+                <i class="fa-regular fa-file-lines"></i> Xem Hồ Sơ Nhiệm Vụ
+            </button>
+        </div>
+
+        <!-- Agent 5 -->
+        <div class="agent-card">
+            <div>
+                <div class="agent-header">
+                    <div class="agent-identity">
+                        <div class="agent-avatar" style="background: linear-gradient(135deg, #f59e0b, #b45309);">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <div class="agent-code-title">
+                            <h3>Lead Academic Paper Author</h3>
+                            <span>Mã: LPA (Agent 05)</span>
+                        </div>
+                    </div>
+                    <span class="agent-status-tag"><i class="fa-solid fa-check"></i> Active</span>
+                </div>
+                <p class="agent-role-desc">Chuyên viên Soạn thảo Bản thảo Scopus Q1: Viết bài báo chuẩn IMRAD, thực thi 6 bước tu từ học thuật, triệt tiêu hoàn toàn mùi AI và tối ưu văn phong học thuật khiêm tốn (Hedging).</p>
+                <div class="agent-skills-chips">
+                    <span class="skill-chip">phd-dissertation-writing</span>
+                    <span class="skill-chip">academic-paper</span>
+                    <span class="skill-chip">Zero-AI-Aura</span>
+                </div>
+            </div>
+            <button class="agent-btn" onclick="openAgentModal('LPA')">
+                <i class="fa-regular fa-file-lines"></i> Xem Hồ Sơ Nhiệm Vụ
+            </button>
+        </div>
+
+        <!-- Agent 6 -->
+        <div class="agent-card">
+            <div>
+                <div class="agent-header">
+                    <div class="agent-identity">
+                        <div class="agent-avatar" style="background: linear-gradient(135deg, #f43f5e, #be123c);">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <div class="agent-code-title">
+                            <h3>Mock Journal Review Panel</h3>
+                            <span>Mã: MJR (Agent 06)</span>
+                        </div>
+                    </div>
+                    <span class="agent-status-tag"><i class="fa-solid fa-check"></i> Active</span>
+                </div>
+                <p class="agent-role-desc">Hội đồng Phản biện Mô phỏng 5 Ghế: Đóng vai Tổng biên tập + 3 Reviewers + Devil's Advocate phản biện khắc nghiệt trước khi nộp bài và hướng dẫn viết thư Rebuttal.</p>
+                <div class="agent-skills-chips">
+                    <span class="skill-chip">academic-paper-reviewer</span>
+                    <span class="skill-chip">Devil's Advocate</span>
+                    <span class="skill-chip">Rebuttal Audit</span>
+                </div>
+            </div>
+            <button class="agent-btn" onclick="openAgentModal('MJR')">
+                <i class="fa-regular fa-file-lines"></i> Xem Hồ Sơ Nhiệm Vụ
+            </button>
+        </div>
+    </div>
+
+    <!-- PIPELINE OF 4 PAPERS -->
+    <div class="pipeline-section">
+        <div class="section-heading">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span>Tiến Trình Xuất Bản 4 Bài Báo Scopus Q1 (Publication Pipeline)</span>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Paper 1 -->
+            <div class="project-card">
+                <div class="project-meta-top">
+                    <span class="project-code-badge">PAPER-01: SLR-BIBLIO</span>
+                    <span class="project-target-journal"><i class="fa-solid fa-star"></i> JRCS (Q1, IF: 11.0)</span>
+                </div>
+                <div class="project-title-vn">Nghiên cứu Tổng quan Y văn Hệ thống và Bản đồ Thư mục về Mua sắm Ngẫu hứng Trực tuyến dưới Tác động của Đề xuất Cá nhân hóa</div>
+                <div class="project-title-en">Personalized Recommendation Agents and Online Impulse Buying: A Systematic Literature Review and Bibliometric Coupling Analysis</div>
+                <div class="progress-bar-container">
+                    <div class="progress-labels">
+                        <span>Giai đoạn: Hoàn thiện bản thảo & PRISMA 2020</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <div class="assigned-agents-avatars">
+                        <span class="mini-agent-badge">SLR</span>
+                        <span class="mini-agent-badge">CRS</span>
+                        <span class="mini-agent-badge">LPA</span>
+                    </div>
+                    <span class="project-stage-tag"><i class="fa-solid fa-spinner fa-spin"></i> Sắp nghiệm thu</span>
+                </div>
+            </div>
+
+            <!-- Paper 2 -->
+            <div class="project-card">
+                <div class="project-meta-top">
+                    <span class="project-code-badge">PAPER-02: SERIAL-MED</span>
+                    <span class="project-target-journal"><i class="fa-solid fa-star"></i> CHB / ECRA (Q1, IF: 9.0)</span>
+                </div>
+                <div class="project-title-vn">Mô hình Trung gian Chuỗi từ Đề xuất Cá nhân hóa đến Mua sắm Ngẫu hứng qua Độ chính xác Cảm nhận, Sự mới lạ và Hài lòng Khám phá</div>
+                <div class="project-title-en">Decoding the Cognitive-Affective Mechanism: A Serial Mediation Analysis Linking Recommendation Attributes to Online Impulse Buying</div>
+                <div class="progress-bar-container">
+                    <div class="progress-labels">
+                        <span>Giai đoạn: Thiết kế bảng hỏi & Thẩm định CVI</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <div class="assigned-agents-avatars">
+                        <span class="mini-agent-badge">CRS</span>
+                        <span class="mini-agent-badge">MSA</span>
+                        <span class="mini-agent-badge">EDS</span>
+                        <span class="mini-agent-badge">LPA</span>
+                    </div>
+                    <span class="project-stage-tag"><i class="fa-solid fa-spinner fa-spin"></i> Đang triển khai</span>
+                </div>
+            </div>
+
+            <!-- Paper 3 -->
+            <div class="project-card">
+                <div class="project-meta-top">
+                    <span class="project-code-badge">PAPER-03: MOD-DEPLETION</span>
+                    <span class="project-target-journal"><i class="fa-solid fa-star"></i> JBR (Q1, ABS 3*, IF: 10.5)</span>
+                </div>
+                <div class="project-title-vn">Vai trò Điều tiết của Tự kiểm soát và Hao mòn Bản ngã trong Mối quan hệ giữa Ý định Mua Bột phát và Hành vi Mua sắm Thực tế</div>
+                <div class="project-title-en">When Self-Control Fails: The Moderating Role of Ego Depletion and Trait Self-Control on the Intention-Behavior Gap in E-commerce</div>
+                <div class="progress-bar-container">
+                    <div class="progress-labels">
+                        <span>Giai đoạn: Khung lý thuyết & Điều kiện biên</span>
+                        <span>40%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <div class="assigned-agents-avatars">
+                        <span class="mini-agent-badge">CRS</span>
+                        <span class="mini-agent-badge">EDS</span>
+                        <span class="mini-agent-badge">LPA</span>
+                        <span class="mini-agent-badge">MJR</span>
+                    </div>
+                    <span class="project-stage-tag" style="color: #60a5fa;"><i class="fa-regular fa-clock"></i> Khởi thảo</span>
+                </div>
+            </div>
+
+            <!-- Paper 4 -->
+            <div class="project-card">
+                <div class="project-meta-top">
+                    <span class="project-code-badge">PAPER-04: FSQCA-NCA</span>
+                    <span class="project-target-journal"><i class="fa-solid fa-star"></i> I&M (Q1, ABS 3*, IF: 8.2)</span>
+                </div>
+                <div class="project-title-vn">Phân tích Cấu hình Phi đối xứng và Điều kiện Cần (fsQCA & NCA) Kích hoạt Hành vi Mua sắm Ngẫu hứng Đa kênh</div>
+                <div class="project-title-en">Combinatorial Configurations Leading to Online Impulse Buying: A Multi-Method Approach Combining PLS-SEM, fsQCA, and NCA</div>
+                <div class="progress-bar-container">
+                    <div class="progress-labels">
+                        <span>Giai đoạn: Thiết kế phương pháp luận phức hợp</span>
+                        <span>25%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 25%;"></div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <div class="assigned-agents-avatars">
+                        <span class="mini-agent-badge">MSA</span>
+                        <span class="mini-agent-badge">EDS</span>
+                        <span class="mini-agent-badge">MJR</span>
+                    </div>
+                    <span class="project-stage-tag" style="color: #94a3b8;"><i class="fa-regular fa-calendar"></i> Chuẩn bị</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL FOR AGENT DETAILS -->
+<div class="modal-overlay" id="agentModal">
+    <div class="modal-content">
+        <button class="modal-close-btn" onclick="closeAgentModal()"><i class="fa-solid fa-xmark"></i></button>
+        <div id="modalBody">
+            <!-- Dynamic Content -->
+        </div>
+    </div>
+</div>
+
+<script>
+    const agentData = {
+        'CRS': {
+            name: 'Chief Research Strategist',
+            code: 'CRS (Agent 01)',
+            title: 'Viện trưởng Chiến lược Nghiên cứu & Định vị Khoảng trống Tri thức',
+            skills: ['phd-research-proposal', 'deep-research', 'Theory Triangulation'],
+            desc: 'Chịu trách nhiệm kiến tạo ý tưởng nghiên cứu đột phá, xác lập 3 tầng khoảng trống nghiên cứu (Theoretical, Contextual, Empirical Gaps), lựa chọn các hệ thống lý thuyết nền tảng (S-O-R, Ego Depletion, Dual-Process) và phác thảo mô hình khái niệm cùng hệ thống giả thuyết H1-Hn.'
+        },
+        'SLR': {
+            name: 'Systematic Literature Reviewer & Synthesizer',
+            code: 'SLR (Agent 02)',
+            title: 'Chuyên gia Tổng quan Y văn Hệ thống & Thẩm định Liêm chính',
+            skills: ['phd-literature-review', 'PRISMA 2020', 'citation_verifier.py', 'sr-screener'],
+            desc: 'Thực thi quy trình PRISMA 2020 minh bạch, kiểm soát 100% trích dẫn thật qua Crossref/Scopus, xây dựng ma trận tổng hợp đa chiều, và viết bản thảo bài báo Tổng quan Y văn gửi các tạp chí Scopus Q1.'
+        },
+        'MSA': {
+            name: 'Methodologist & Scale Architect',
+            code: 'MSA (Agent 03)',
+            title: 'Chuyên gia Thiết kế Phương pháp & Thang đo Đo lường',
+            skills: ['phd-methodology-design', 'Brislin Back-translation', 'G*Power 3.1', 'CVI Validation'],
+            desc: 'Chịu trách nhiệm quy trình dịch ngược Brislin thang đo song ngữ (28 items), tính cỡ mẫu G*Power, thiết kế bảng hỏi khảo sát kèm câu hỏi kiểm tra chú ý, và kiểm soát sai lệch phương pháp chung (CMB) theo Podsakoff et al. (2003, 2012).'
+        },
+        'EDS': {
+            name: 'Empirical Data Scientist',
+            code: 'EDS (Agent 04)',
+            title: 'Chuyên gia Phân tích Số liệu & Mô hình Cấu trúc PLS-SEM',
+            skills: ['phd-data-analysis', 'Kline Normality', 'Harman & Full Collinearity VIF', 'PLS-SEM Bootstrapping'],
+            desc: 'Làm sạch số liệu, kiểm định phân phối chuẩn Kline (2016), thẩm định mô hình đo lường (CR, AVE, HTMT < 0.85/0.90), và kiểm định mô hình cấu trúc PLS-SEM với Bootstrapping 10.000 mẫu theo chuẩn Hair et al. (2019, 2022).'
+        },
+        'LPA': {
+            name: 'Lead Academic Paper Author',
+            code: 'LPA (Agent 05)',
+            title: 'Chuyên viên Soạn thảo Bản thảo Scopus Q1 & Chuẩn hóa Văn phong',
+            skills: ['phd-dissertation-writing', 'academic-paper', '6 Rhetorical Moves', 'Academic Hedging'],
+            desc: 'Chấp bút bản thảo chuẩn IMRAD, áp dụng 6 bước tu từ học thuật, triệt tiêu hoàn toàn mùi AI, kiểm soát tính tự nhiên học thuật (Academic Hedging) và đảm bảo tỷ lệ trích dẫn tự sự >= 30%.'
+        },
+        'MJR': {
+            name: 'Mock Journal Review Panel',
+            code: 'MJR (Agent 06)',
+            title: 'Hội đồng Phản biện Tạp chí Độc lập (5 Ghế Mô phỏng)',
+            skills: ['academic-paper-reviewer', '5-Seat Review Panel', 'Devil\'s Advocate', 'Rebuttal Audit'],
+            desc: 'Mô phỏng hội đồng bình duyệt 5 ghế (Editor-in-Chief + 3 Reviewers + Devil\'s Advocate) để bắt bẻ, phản biện khắc nghiệt trước khi gửi bài ra ngoài, và hướng dẫn soạn thảo Thư Giải trình Tiếp thu (Rebuttal Letter) đạt chuẩn.'
+        }
+    };
+
+    function openAgentModal(code) {
+        const ag = agentData[code];
+        if (!ag) return;
+        document.getElementById('modalBody').innerHTML = `
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+                <div style="width:50px; height:50px; border-radius:12px; background:var(--gradient-primary); display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.5rem;">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+                <div>
+                    <h2 style="font-size:1.3rem; color:#fff;">${ag.name}</h2>
+                    <span style="color:var(--accent-cyan); font-weight:600; font-size:0.85rem;">${ag.code} | ${ag.title}</span>
+                </div>
+            </div>
+            <div style="margin-bottom:1.5rem; line-height:1.7; color:#cbd5e1; font-size:0.95rem;">
+                <strong>Sứ Mệnh Học Thuật:</strong><br>${ag.desc}
+            </div>
+            <div style="margin-bottom:1.5rem;">
+                <strong>Kỹ Năng & Công Cụ Tích Hợp:</strong>
+                <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.5rem;">
+                    ${ag.skills.map(s => `<span class="skill-chip" style="font-size:0.8rem; padding:0.3rem 0.7rem;">${s}</span>`).join('')}
+                </div>
+            </div>
+            <div style="border-top:1px solid var(--border-subtle); padding-top:1.25rem; display:flex; justify-content:flex-end; gap:0.75rem;">
+                <button class="console-btn" onclick="closeAgentModal()">Đóng</button>
+                <button class="console-btn btn-primary" onclick="alert('Đã giao nhiệm vụ mới cho ${ag.name}!'); closeAgentModal();">
+                    <i class="fa-solid fa-play"></i> Giao Nhiệm Vụ Nghiên Cứu
+                </button>
+            </div>
+        `;
+        document.getElementById('agentModal').style.display = 'flex';
+    }
+
+    function closeAgentModal() {
+        document.getElementById('agentModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('agentModal');
+        if (event.target == modal) {
+            closeAgentModal();
+        }
+    }
+</script>
+
+</body>
+</html>

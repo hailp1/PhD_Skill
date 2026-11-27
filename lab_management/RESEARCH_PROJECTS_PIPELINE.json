@@ -1,0 +1,73 @@
+{
+  "lab_name": "BAM-AI Research Lab",
+  "pipeline_version": "2.0.0",
+  "last_updated": "2026-11-27",
+  "projects": [
+    {
+      "id": "PAPER-01",
+      "code": "SLR-BIBLIO",
+      "title_vn": "Nghiên cứu Tổng quan Y văn Hệ thống và Bản đồ Thư mục về Hành vi Mua sắm Ngẫu hứng Trực tuyến dưới Tác động của Đề xuất Cá nhân hóa",
+      "title_en": "Personalized Recommendation Agents and Online Impulse Buying: A Systematic Literature Review and Bibliometric Coupling Analysis",
+      "lead_agents": ["agent-02-slr", "agent-01-crs", "agent-05-lpa"],
+      "target_journal": "Journal of Retailing and Consumer Services (JRCS)",
+      "journal_metrics": "Scopus Q1, CiteScore 19.5, IF 11.0",
+      "status": "in_progress",
+      "progress_percent": 85,
+      "current_stage": "Manuscript Drafting & PRISMA 2020 Finalization",
+      "artifacts": [
+        "docs/prisma_2020_protocol.md",
+        "data/processed/dimensions_clean_included.csv",
+        "TRUNG_TAM_VOSVIEWER.html",
+        "docs/knowledge_base/RESEARCH_IDEA_INCUBATOR.md"
+      ]
+    },
+    {
+      "id": "PAPER-02",
+      "code": "SERIAL-MED",
+      "title_vn": "Mô hình Trung gian Chuỗi (Serial Mediation) từ Đề xuất Cá nhân hóa đến Mua sắm Ngẫu hứng qua Độ chính xác Cảm nhận, Sự mới lạ và Hài lòng Khám phá",
+      "title_en": "Decoding the Cognitive-Affective Mechanism: A Serial Mediation Analysis Linking Recommendation Attributes to Online Impulse Buying",
+      "lead_agents": ["agent-01-crs", "agent-03-msa", "agent-04-eds", "agent-05-lpa"],
+      "target_journal": "Computers in Human Behavior / Electronic Commerce Research and Applications",
+      "journal_metrics": "Scopus Q1, ABS 3*, IF 9.0",
+      "status": "in_progress",
+      "progress_percent": 65,
+      "current_stage": "Survey Instrument & Scale Validation Protocol",
+      "artifacts": [
+        "docs/knowledge_base/VARIABLE_OPERATIONALIZATION_DICTIONARY.md",
+        "docs/knowledge_base/HYPOTHESIS_DEFENSE_COMPENDIUM.md",
+        "docs/knowledge_base/THEORETICAL_FRAMEWORKS.md"
+      ]
+    },
+    {
+      "id": "PAPER-03",
+      "code": "MOD-DEPLETION",
+      "title_vn": "Vai trò Điều tiết của Tự kiểm soát và Hao mòn Bản ngã trong Mối quan hệ giữa Ý định Mua Bột phát và Hành vi Mua sắm Thực tế",
+      "title_en": "When Self-Control Fails: The Moderating Role of Ego Depletion and Trait Self-Control on the Intention-Behavior Gap in E-commerce",
+      "lead_agents": ["agent-01-crs", "agent-04-eds", "agent-05-lpa", "agent-06-mjr"],
+      "target_journal": "Journal of Business Research (JBR)",
+      "journal_metrics": "Scopus Q1, ABS 3*, IF 10.5",
+      "status": "planned",
+      "progress_percent": 40,
+      "current_stage": "Theoretical Synthesis & Boundary Conditions Modeling",
+      "artifacts": [
+        "docs/knowledge_base/THEORETICAL_FRAMEWORKS.md",
+        "docs/knowledge_base/HYPOTHESIS_DEFENSE_COMPENDIUM.md"
+      ]
+    },
+    {
+      "id": "PAPER-04",
+      "code": "FSQCA-NCA",
+      "title_vn": "Phân tích Cấu hình Phi đối xứng và Điều kiện Cần (fsQCA & NCA) Kích hoạt Hành vi Mua sắm Ngẫu hứng Đa kênh",
+      "title_en": "Combinatorial Configurations Leading to Online Impulse Buying: A Multi-Method Approach Combining PLS-SEM, fsQCA, and Necessary Condition Analysis",
+      "lead_agents": ["agent-03-msa", "agent-04-eds", "agent-06-mjr"],
+      "target_journal": "Information & Management (I&M)",
+      "journal_metrics": "Scopus Q1, ABS 3*, IF 8.2",
+      "status": "planned",
+      "progress_percent": 25,
+      "current_stage": "Methodological Design & Data Requirements Architecture",
+      "artifacts": [
+        "docs/knowledge_base/RESEARCH_IDEA_INCUBATOR.md"
+      ]
+    }
+  ]
+}
