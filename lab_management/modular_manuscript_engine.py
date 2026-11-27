@@ -16,7 +16,7 @@ import re
 WORKSPACE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 STATS_JSON = os.path.join(WORKSPACE_DIR, "lab_management", "paper1_v2_stats.json")
 FIG_DIR = os.path.join(WORKSPACE_DIR, "lab_projects", "figures")
-OUT_MD = os.path.join(WORKSPACE_DIR, "lab_projects", "PAPER_01_SLR_JRCS_MANUSCRIPT.md")
+OUT_MD = os.path.join(WORKSPACE_DIR, "lab_projects", "PAPER_01B_SLR_ALGORITHMIC_PERSUASION_MANUSCRIPT.md")
 
 SEMINAL_REFS = [
     {

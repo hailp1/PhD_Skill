@@ -29,20 +29,29 @@ def audit_paper_status(fpath, ptype):
     return f"Cần Chỉnh Sửa (QA: {g.score}/100 | Tone: {t_score}/100 | Flags: {len(g.red_flags)})"
 
 MANUSCRIPT_FILE = os.path.join(WORKSPACE, "lab_projects", "PAPER_01_SLR_JRCS_MANUSCRIPT.md")
+PAPER1B_FILE = os.path.join(WORKSPACE, "lab_projects", "PAPER_01B_SLR_ALGORITHMIC_PERSUASION_MANUSCRIPT.md")
 PAPER2_FILE = os.path.join(WORKSPACE, "lab_projects", "PAPER_02_EMPIRICAL_CHB_MANUSCRIPT.md")
 
 paper1_status = audit_paper_status(MANUSCRIPT_FILE, "slr")
+paper1b_status = audit_paper_status(PAPER1B_FILE, "slr")
 paper2_status = audit_paper_status(PAPER2_FILE, "empirical")
 
-print(f"\n[PACKAGER] Dynamic Status for Paper 1: {paper1_status}")
-print(f"[PACKAGER] Dynamic Status for Paper 2: {paper2_status}")
+print(f"\n[PACKAGER] Dynamic Status for Paper 1A: {paper1_status}")
+print(f"[PACKAGER] Dynamic Status for Paper 1B: {paper1b_status}")
+print(f"[PACKAGER] Dynamic Status for Paper 2 : {paper2_status}")
 
 docs_to_pack = {
     'paper1': (
         'lab_projects/PAPER_01_SLR_JRCS_MANUSCRIPT.md',
-        'Paper 01: SLR & Bibliometrics (JRCS Q1)',
+        'Paper 01A: SLR & Bibliometrics (N=866, JRCS Q1)',
         'JRCS Q1 (IF: 11.0)',
         paper1_status
+    ),
+    'paper1b': (
+        'lab_projects/PAPER_01B_SLR_ALGORITHMIC_PERSUASION_MANUSCRIPT.md',
+        'Paper 01B: Algorithmic Persuasion & Privacy SLR (N=1,016)',
+        'Expanded SLR Q1',
+        paper1b_status
     ),
     'paper2': (
         'lab_projects/PAPER_02_EMPIRICAL_CHB_MANUSCRIPT.md',

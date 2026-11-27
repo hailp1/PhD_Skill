@@ -776,6 +776,8 @@
 
             const iconsMap = {
                 'paper1': 'fa-solid fa-file-invoice',
+                'paper1b': 'fa-solid fa-layer-group',
+                'paper2': 'fa-solid fa-flask-vial',
                 'plan': 'fa-solid fa-wand-magic-sparkles',
                 'survey': 'fa-solid fa-clipboard-question',
                 'proposal': 'fa-solid fa-graduation-cap',
@@ -784,6 +786,9 @@
                 'beatty': 'fa-solid fa-book-bookmark',
                 'verhagen': 'fa-solid fa-book-bookmark'
             };
+
+            const badgeEl = document.getElementById('docCountBadge');
+            if (badgeEl) badgeEl.textContent = Object.keys(docsBundle).length + ' Tệp';
 
             for (const key in docsBundle) {
                 const item = docsBundle[key];
