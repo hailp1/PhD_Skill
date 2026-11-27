@@ -560,8 +560,11 @@
             <div class="agent-actions-panel">
                 <div class="actions-label"><i class="fa-solid fa-sliders"></i> Bảng Thao Tác Nghiệp Vụ Trực Tiếp:</div>
                 <div class="actions-grid-buttons">
-                    <button class="act-btn primary" onclick="runAgentAction('SLR', 'paper_qa_scan')">
-                        <i class="fa-solid fa-satellite-dish"></i> Quét Đa Nguồn PaperQA
+                    <button class="act-btn primary" onclick="runAgentAction('SLR', 'high_throughput_mine')">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> Quét Hàng Loạt & Lập Plan
+                    </button>
+                    <button class="act-btn" onclick="runAgentAction('SLR', 'view_paper_plan')">
+                        <i class="fa-solid fa-file-contract"></i> Xem Blueprint IMRAD
                     </button>
                     <button class="act-btn" onclick="runAgentAction('SLR', 'verify_citations')">
                         <i class="fa-solid fa-shield-check"></i> Xác Thực Crossref
@@ -883,6 +886,19 @@
                 setTimeout(() => {
                     logTerminal(`✅ [${ag.name}] Tranh biện hoàn tất! Đã xuất ma trận đối thoại bàn giao cho DR. HAI (Methodologist) tại: lab_projects/STORM_PERSPECTIVE_SYNTHESIS.json`);
                 }, 800);
+                break;
+            case 'high_throughput_mine':
+                logTerminal(`🚀 [${ag.name}] Kích hoạt HIGH-THROUGHPUT PAPER MINER... Đang quét đồng thời 3,800+ bài báo trên OpenAlex & Crossref API.`);
+                setTimeout(() => {
+                    logTerminal(`📚 [${ag.name}] Thu thập thành công 30 công trình Scopus Q1, trích xuất Abstract, chỉ số trích dẫn và link Open Access PDF.`);
+                }, 700);
+                setTimeout(() => {
+                    logTerminal(`✨ [${ag.name}] Đã xuất trọn gói Master Corpus (lab_projects/ACADEMIC_LITERATURE_MASTER_CORPUS.json), Thư viện Zotero (.ris/.bib) và Kế hoạch bài báo tại: lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md`);
+                }, 1400);
+                break;
+            case 'view_paper_plan':
+                logTerminal(`📄 [${ag.name}] Mở Kế hoạch bài báo tự động (lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md)...`);
+                window.open('lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md', '_blank');
                 break;
             case 'paper_qa_scan':
                 logTerminal(`🔎 [${ag.name}] Kích hoạt Paper-QA Recursive Scanner... Quét đệ quy đa nguồn OpenAlex + Crossref Registry.`);

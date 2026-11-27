@@ -1,0 +1,819 @@
+{
+  "topic": "AI recommendation system online impulse buying e-satisfaction",
+  "scan_timestamp": "2026-11-27T16:47:36.760049",
+  "total_papers": 30,
+  "detected_theories": [
+    "Social Presence Theory"
+  ],
+  "research_gaps": [
+    "Thiếu nghiên cứu thực nghiệm đo lường đồng thời cả hai cơ chế nhận thức (Cognitive) và cảm xúc (Affective) trong bối cảnh hệ thống AI thế hệ mới.",
+    "Phần lớn nghiên cứu trước đây chỉ khảo sát ý định mua sắm (Purchase Intention) thay vì hành vi mua bốc đồng cụ thể (Impulse Buying Behavior) tại thời điểm tương tác trực tiếp.",
+    "Sự khan hiếm của các mô hình xem xét vai trò điều tiết của sự cạn kiệt khả năng tự kiểm soát (Ego Depletion) và sự can thiệp của thuật toán cá nhân hóa.",
+    "Cần kết hợp phân tích đối xứng (PLS-SEM) với phân tích bất đối xứng (fsQCA / NCA) để nhận diện các tổ hợp điều kiện dẫn đến hành vi mua bốc đồng."
+  ],
+  "papers": [
+    {
+      "id": "https://openalex.org/W3035686316",
+      "title": "Setting the future of digital and social media marketing research: Perspectives and research propositions",
+      "authors": [
+        "Yogesh Kumar Dwivedi",
+        "Elvira Ismagilova",
+        "D. Laurie Hughes",
+        "Jamie Carlson",
+        "Raffaele Filieri",
+        "Jenna Jacobson",
+        "Varsha Jain",
+        "Heikki Karjaluoto",
+        "Hajer Kéfi",
+        "Anjala Selena Krishen",
+        "Vikram Kumar",
+        "Mohammad M. Rahman",
+        "Ramakrishnan Raman",
+        "Philipp A. Rauschnabel",
+        "Jennifer Rowley",
+        "Jari Salo",
+        "Gina A. Tran",
+        "Yichuan Wang"
+      ],
+      "first_author": "Yogesh Kumar Dwivedi",
+      "year": 2020,
+      "citations": 5901,
+      "journal": "International Journal of Information Management",
+      "doi": "https://doi.org/10.1016/j.ijinfomgt.2020.102168",
+      "abstract": "The use of the internet and social media have changed consumer behavior and the ways in which companies conduct their business. Social and digital marketing offers significant opportunities to organizations through lower costs, improved brand awareness and increased sales. However, significant challenges exist from negative electronic word-of-mouth as well as intrusive and irritating online brand presence. This article brings together the collective insight from several leading experts on issues relating to digital and social media marketing. The experts’ perspectives offer a detailed narrative on key aspects of this important topic as well as perspectives on more specific issues including artificial intelligence, augmented reality marketing, digital content management, mobile marketing and advertising, B2B marketing, electronic word of mouth and ethical issues therein. This research offers a significant and timely contribution to both researchers and practitioners in the form of challenges and opportunities where we highlight the limitations within the current research, outline the research gaps and develop the questions and propositions that can help advance knowledge within the domain of digital and social marketing.",
+      "open_access_pdf": "https://www.sciencedirect.com/science/article/pii/S0268401220308082/pdf",
+      "keywords": [
+        "Social media",
+        "Social media marketing",
+        "Sociology",
+        "Digital media",
+        "Marketing research"
+      ],
+      "source": "OpenAlex",
+      "crossref_verified": true,
+      "publisher": "Elsevier BV"
+    },
+    {
+      "id": "https://openalex.org/W3119676664",
+      "title": "Understanding anthropomorphism in service provision: a meta-analysis of physical robots, chatbots, and other AI",
+      "authors": [
+        "Markus Blut",
+        "Cheng Wang",
+        "Nancy V. Wünderlich",
+        "Christian Brock"
+      ],
+      "first_author": "Markus Blut",
+      "year": 2021,
+      "citations": 1551,
+      "journal": "Journal of the Academy of Marketing Science",
+      "doi": "https://doi.org/10.1007/s11747-020-00762-y",
+      "abstract": "An increasing number of firms introduce service robots, such as physical robots and virtual chatbots, to provide services to customers. While some firms use robots that resemble human beings by looking and acting humanlike to increase customers’ use intention of this technology, others employ machinelike robots to avoid uncanny valley effects, assuming that very humanlike robots may induce feelings of eeriness. There is no consensus in the service literature regarding whether customers’ anthropomorphism of robots facilitates or constrains their use intention. The present meta-analysis synthesizes data from 11,053 individuals interacting with service robots reported in 108 independent samples. The study synthesizes previous research to clarify this issue and enhance understanding of the construct. We develop a comprehensive model to investigate relationships between anthropomorphism and its antecedents and consequences. Customer traits and predispositions (e.g., computer anxiety), sociodemographics (e.g., gender), and robot design features (e.g., physical, nonphysical) are identified as triggers of anthropomorphism. Robot characteristics (e.g., intelligence) and functional characteristics (e.g., usefulness) are identified as important mediators, although relational characteristics (e.g., rapport) receive less support as mediators. The findings clarify contextual circumstances in which anthropomorphism impacts customer intention to use a robot. The moderator analysis indicates that the impact depends on robot type (i.e., robot gender) and service type (i.e., possession-processing service, mental stimulus-processing service). Based on these findings, we develop a comprehensive agenda for future research on service robots in marketing.",
+      "open_access_pdf": "https://link.springer.com/content/pdf/10.1007/s11747-020-00762-y.pdf",
+      "keywords": [
+        "Uncanny valley",
+        "Robot",
+        "Moderation",
+        "Psychology",
+        "Service (business)"
+      ],
+      "source": "OpenAlex",
+      "crossref_verified": true,
+      "publisher": "Springer Science and Business Media LLC"
+    },
+    {
+      "id": "https://openalex.org/W4221105860",
+      "title": "What is XR? Towards a Framework for Augmented and Virtual Reality",
+      "authors": [
+        "Philipp A. Rauschnabel",
+        "Reto Felix",
+        "Chris Hinsch",
+        "Hamza Shahab",
+        "Florian Alt"
+      ],
+      "first_author": "Philipp A. Rauschnabel",
+      "year": 2022,
+      "citations": 1291,
+      "journal": "Computers in Human Behavior",
+      "doi": "https://doi.org/10.1016/j.chb.2022.107289",
+      "abstract": "Augmented Reality (AR), Virtual Reality (VR), Mixed Reality, and Extended Reality (often – misleadingly – abbreviated as XR) are commonly used terms to describe how technologies generate or modify reality. However, academics and professionals have been inconsistent in their use of these terms. This has led to conceptual confusion and unclear demarcations. Inspired by prior research and qualitative insights from XR professionals, we discuss the meaning and definitions of various terms and organize them in our proposed framework. As a result, we conclude that (1) XR should not be used to connote extended reality, but as a more open approach where the X implies the unknown variable: xReality; (2) AR and VR have fundamental differences and thus should be treated as different experiences; (3) AR experiences can be described on a continuum ranging from assisted reality to mixed reality (based on the level of local presence); and (4), VR experiences can be conceptualized on a telepresence-continuum ranging from atomistic to holistic VR.",
+      "open_access_pdf": "https://www.sciencedirect.com/science/article/pii/S074756322200111X/pdf",
+      "keywords": [
+        "Virtual reality",
+        "Augmented reality",
+        "Mixed reality",
+        "Meaning (existential)",
+        "Confusion"
+      ],
+      "source": "OpenAlex",
+      "crossref_verified": true,
+      "publisher": "Elsevier BV"
+    },
+    {
+      "id": "https://openalex.org/W4313310852",
+      "title": "Metaverse marketing: How the metaverse will shape the future of consumer research and practice",
+      "authors": [
+        "Yogesh Kumar Dwivedi",
+        "Laurie Hughes",
+        "Yichuan Wang",
+        "Ali Abdallah Alalwan",
+        "Sun Joo Ahn",
+        "Janarthanan Balakrishnan",
+        "Sergio Barta",
+        "Russell W. Belk",
+        "Dimitrios Buhalis",
+        "Vincent Dutot",
+        "Reto Felix",
+        "Raffaele Filieri",
+        "Carlos Flavián",
+        "Anders Gustafsson",
+        "Chris Hinsch",
+        "Svend Hollensen",
+        "Varsha Jain",
+        "Jooyoung Kim",
+        "Anjala Selena Krishen",
+        "Jared Offei Lartey",
+        "Neeraj Pandey",
+        "Samuel Ribeiro Navarrete",
+        "Ramakrishnan Raman",
+        "Philipp A. Rauschnabel",
+        "Amalesh Sharma",
+        "Μαριάννα Σιγάλα",
+        "Cleopatra A. Veloutsou",
+        "Jochen Wirtz"
+      ],
+      "first_author": "Yogesh Kumar Dwivedi",
+      "year": 2022,
+      "citations": 1203,
+      "journal": "Psychology and Marketing",
+      "doi": "https://doi.org/10.1002/mar.21767",
+      "abstract": "The initial hype and fanfare from the Meta Platforms view of how the metaverse could be brought to life has evolved into an ongoing discussion of not only the metaverse's impact on users and organizations but also the societal and cultural implications of widespread usage. The potential of consumer interaction with brands within the metaverse has engendered significant debate within the marketing‐focused discourse on the key challenges and transformative opportunities for marketers. Drawing on insights from expert contributors, this study examines the marketing implications of the hypothetical widespread adoption of the metaverse. We identify new research directions and propose a new framework offering valuable contributions for academia, practice, and policy makers. Our future research agenda culminates in a checklist for researchers which clarifies how the metaverse can be beneficial to digital marketing and advertising, branding, services, value creation, and consumer wellbeing.",
+      "open_access_pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mar.21767",
+      "keywords": [
+        "Metaverse",
+        "Transformative learning",
+        "Marketing",
+        "Sociology",
+        "Public relations"
+      ],
+      "source": "OpenAlex",
+      "crossref_verified": true,
+      "publisher": "Wiley"
+    },
+    {
+      "id": "https://openalex.org/W4221103032",
+      "title": "Meta‐analysis and traditional systematic literature reviews—What, why, when, where, and how?",
+      "authors": [
+        "Justin Paul",
+        "Mojtaba Moji Barari"
+      ],
+      "first_author": "Justin Paul",
+      "year": 2022,
+      "citations": 740,
+      "journal": "Psychology and Marketing",
+      "doi": "https://doi.org/10.1002/mar.21657",
+      "abstract": "Meta‐analysis is a research method for systematically combining and synthesizing findings from multiple quantitative studies in a research domain. Despite its importance, most literature evaluating meta‐analyses are based on data analysis and statistical discussions. This paper takes a holistic view, comparing meta‐analyses to traditional systematic literature reviews. We described steps of the meta‐analytic process including question definition, data collection, data analysis, and reporting results. For each step, we explain the primary purpose, the tasks required of the meta‐analyst, and recommendations for best practice. Finally, we discuss recent developments in meta‐analytic techniques, which increase its effectiveness in business research.",
+      "open_access_pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mar.21657",
+      "keywords": [
+        "Meta-analysis",
+        "Systematic review",
+        "Psychology",
+        "Process (computing)",
+        "Data science"
+      ],
+      "source": "OpenAlex",
+      "crossref_verified": true,
+      "publisher": "Wiley"
+    },
+    {
+      "id": "https://openalex.org/W4328051263",
+      "title": "Artificial intelligence empowered conversational agents: A systematic literature review and research agenda",
+      "authors": [
+        "Marcello M. Mariani",
+        "Novin Hashemi",
+        "Jochen Wirtz"
+      ],
+      "first_author": "Marcello M. Mariani",
+      "year": 2023,
+      "citations": 529,
+      "journal": "Journal of Business Research",
+      "doi": "https://doi.org/10.1016/j.jbusres.2023.113838",
+      "abstract": "Consumer research on conversational agents (CAs) has been growing. To illustrate and map out research in this field, we conducted a systematic literature review (SLR) of published work indexed in the Clarivate Web of Science and Elsevier Scopus databases. Four dominant topical areas were identified through bibliographic coupling. They are 1) consumers’ trust in CAs; 2) Natural Language Processing (NLP) in developing and designing CAs; 3) communication with CAs; 4) impact of CAs on value creation and the value of CAs for business. We leverage these findings to provide an updated synopsis of extant scientific work. Moreover, we draw a framework whereby we identify the: 1) drivers of and motivators for adoption and engagement with CAs; and 2) the outcomes of CA adoption for both users and organizations. Finally, we leverage the framework to develop an agenda for future research.",
+      "open_access_pdf": "https://doi.org/10.1016/j.jbusres.2023.113838",
+      "keywords": [
+        "Scopus",
+        "Leverage (statistics)",
+        "Extant taxon",
+        "Knowledge management",
+        "Systematic review"
+      ],
+      "source": "OpenAlex",
+      "crossref_verified": true,
+      "publisher": "Elsevier BV"
+    },
+    {
+      "id": "https://openalex.org/W4322774571",
+      "title": "Influence of Perceived Value on Consumers’ Continuous Purchase Intention in Live-Streaming E-Commerce—Mediated by Consumer Trust",
+      "authors": [
+        "Yanyan Wu",
+        "Hongqing Huang"
+      ],
+      "first_author": "Yanyan Wu",
+      "year": 2023,
+      "citations": 450,
+      "journal": "Sustainability",
+      "doi": "https://doi.org/10.3390/su15054432",
+      "abstract": "As an emerging e-commerce model that combines the convenience of traditional e-commerce with the real-time and interactive nature of live streaming, live-streaming (LS) e-commerce is loved and recognized by consumers. At the same time, LS e-commerce also faces many difficulties such as homogenization of marketing content and consumers’ low willingness to repeat purchase. Therefore, how to better stimulate consumers’ continuous purchase willingness in LS has become a hot topic of current research. Based on the stimulus–organism–response (SOR) model, this paper constructs a model of consumers’ purchase intention mediated by consumers’ trust in LS e-commerce, measuring consumers’ perceived value in LS e-commerce in three dimensions: utilitarian value, hedonic value and social value, and using consumers’ trust in the streamer and trust in the product as mediators to investigate the influence of perceived value on consumers’ continuous purchase intention. Data of Chinese users were collected by questionnaire survey to prove the assumptions of this paper. The results show that consumers’ perceived utilitarian value, hedonic value and social value significantly and positively influence their trust in the streamer; consumers’ perceived utilitarian value and social value significantly and positively influence their trust in product; trust in streamer significantly and positively influences their trust in the product; and consumer trust partially mediates the relationship between perceived value and consumers’ willingness to continue to purchase.",
+      "open_access_pdf": "https://www.mdpi.com/2071-1050/15/5/4432/pdf?version=1677737957",
+      "keywords": [
+        "Social commerce",
+        "Value (mathematics)",
+        "Business",
+        "Advertising",
+        "Product (mathematics)"
+      ],
+      "source": "OpenAlex",
+      "crossref_verified": true,
+      "publisher": "MDPI AG"
+    },
+    {
+      "id": "https://openalex.org/W3004940685",
+      "title": "Human-Centered Explainable AI: Towards a Reflective Sociotechnical Approach",
+      "authors": [
+        "Upol Ehsan",
+        "Mark Owen Riedl"
+      ],
+      "first_author": "Upol Ehsan",
+      "year": 2020,
+      "citations": 446,
+      "journal": "Lecture notes in computer science",
+      "doi": "https://doi.org/10.1007/978-3-030-60117-1_33",
+      "abstract": "",
+      "open_access_pdf": "https://arxiv.org/pdf/2002.01092",
+      "keywords": [
+        "Sociotechnical system",
+        "Situated",
+        "Computer science",
+        "Interpretability",
+        "Knowledge management"
+      ],
+      "source": "OpenAlex",
+      "crossref_verified": true,
+      "publisher": "Springer International Publishing"
+    },
+    {
+      "id": "https://openalex.org/W4206904520",
+      "title": "Does BLE technology contribute towards improving marketing strategies, customers’ satisfaction and loyalty? The role of open innovation",
+      "authors": [
+        "Haitham M. Alzoubi",
+        "Muhammad Turki Alshurideh",
+        "Barween Hikmat Al Kurdi",
+        "Iman A. Akour",
+        "Ramsha Azi"
+      ],
+      "first_author": "Haitham M. Alzoubi",
+      "year": 2022,
+      "citations": 402,
+      "journal": "International Journal of Data and Network Science",
+      "doi": "https://doi.org/10.5267/j.ijdns.2021.12.009",
+      "abstract": "The purpose of this study is to explore the marketing strategies for the introduction of Beacons technology applications (BLE) technology in businesses and how it can convert potential clients into satisfactory and loyal customers. Open innovation is the pathway to taking businesses to the next level with the help of and introduction to BLE technology contributions. Companies are flexible towards adopting new technologies to make sure that their marketing strategies are working positively. Global Village Dubai was the market that we targeted to study the customers’ needs and wants. This was done through 138 questionnaires distributed among 159 stores that met our research criteria. We used ANOVA through the SPSS program for analysis of the data. The results supported all our hypothesis of the study, which means there is a positive and strong relationship of adopting BLE technology on customers’ satisfaction which leads towards customers’ loyalty, making them stick to the brand for long term. The results of our research revealed that Beacons technology applications have positively influenced marketing strategies which in turn have impacted customer satisfaction and loyalty. The proximity marketing is the best strategy developed in lieu of open innovation. Future studies are welcomed for analyzing the same model in perspective of other markets for clearer advocacy of the hypothesis that proximity marketing is the marketing strategy that helps in customers’ happiness leading towards their loyalty.",
+      "open_access_pdf": "https://doi.org/10.5267/j.ijdns.2021.12.009",
+      "keywords": [
+        "Marketing",
+        "Business",
+        "Loyalty",
+        "Happiness",
+        "Psychology"
+      ],
+      "source": "OpenAlex",
+      "crossref_verified": true,
+      "publisher": "Growing Science"
+    },
+    {
+      "id": "https://openalex.org/W3124153019",
+      "title": "COVID-19 and hospitality 5.0: Redefining hospitality operations",
+      "authors": [
+        "Souji Gopalakrishna Pillai",
+        "Kavitha Haldorai",
+        "Won Seok Seo",
+        "Woo Gon Kim"
+      ],
+      "first_author": "Souji Gopalakrishna Pillai",
+      "year": 2021,
+      "citations": 398,
+      "journal": "International Journal of Hospitality Management",
+      "doi": "https://doi.org/10.1016/j.ijhm.2021.102869",
+      "abstract": "",
+      "open_access_pdf": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8586816/pdf/",
+      "keywords": [
+        "Hospitality",
+        "Hospitality industry",
+        "Context (archaeology)",
+        "Marketing",
+        "Business"
+      ],
+      "source": "OpenAlex",
+      "crossref_verified": true,
+      "publisher": "Elsevier BV"
+    },
+    {
+      "id": "https://openalex.org/W4294723949",
+      "title": "How Live Streaming Changes Shopping Decisions in E-commerce: A Study of Live Streaming Commerce",
+      "authors": [
+        "Ye Wang",
+        "Zhicong Lu",
+        "Peng Cao",
+        "Jingyi Chu",
+        "Haonan Wang",
+        "Roger P. Wattenhofer"
+      ],
+      "first_author": "Ye Wang",
+      "year": 2022,
+      "citations": 380,
+      "journal": "Computer Supported Cooperative Work (CSCW)",
+      "doi": "https://doi.org/10.1007/s10606-022-09439-2",
+      "abstract": "Live Streaming Commerce (LSC) is proliferating in China and gaining traction worldwide. LSC is an e-commerce service where sellers communicate with consumers through live streaming while consumers can place orders within the same system. Despite the significant involvement of consumers in LSC, it has not been systematically analyzed how consumers make shopping decisions when engaging with LSC. In this paper, we conduct a mixed-methods study, consisting of surveys (N 1 = 240) and follow-up interviews (N 2 = 16) with LSC consumers. We focus on two features of LSC, i.e., the communication between merchants and consumers through live streaming and the participation of streamers, and aim to understand how these changes influence consumers’ decision-making process in LSC. We find that LSC enables merchants to exchange information with consumers based on their needs and provide additional customer services. Because of the appropriate information about the products they acquire and the enjoyable shopping atmosphere, consumers are willing to purchase products in LSC. As the intermediaries between merchants and consumers, streamers utilize their independent identity from merchants to enhance consumers’ awareness of shopping and persuade their online shopping decisions. Moreover, we consider the opportunities and challenges of current LSC services and provide implications for LSC services and the research community regarding the development of LSC.",
+      "open_access_pdf": "https://link.springer.com/content/pdf/10.1007/s10606-022-09439-2.pdf",
+      "keywords": [
+        "Business",
+        "Intermediary",
+        "Advertising",
+        "Live streaming",
+        "Service (business)"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W3158253986",
+      "title": "Ten questions concerning age-friendly cities and communities and the built environment",
+      "authors": [
+        "Joost van Hoof",
+        "Hannah Ramsden Marston",
+        "Jan K. Kazak",
+        "Tine Buffel"
+      ],
+      "first_author": "Joost van Hoof",
+      "year": 2021,
+      "citations": 373,
+      "journal": "Building and Environment",
+      "doi": "https://doi.org/10.1016/j.buildenv.2021.107922",
+      "abstract": "The development of ‘age-friendly cities’ has become a major area of work in the field of ageing and the built environment. This movement is driven by the observation that cities are home to an ever-increasing ageing population. Over the past decade, a multitude of age-friendly initiatives have been developed with the aim of making physical and social environments more favourable for older people's well-being, health and ability to live in the community. This article explores ten key questions associated with the age-friendly cities and communities' movement, with a particular focus on the built environment. It provides an overview of the history of the age-friendly cities' movement and the underlying models, the aspects of the built environment that are relevant for age-friendly cities, the ways age-friendliness can be evaluated, and the interactions between age-friendly cities initiatives and other strategic agendas such as smart cities. The paper concludes by discussing future perspectives and possible directions for further development of the age-friendly movement.",
+      "open_access_pdf": "https://doi.org/10.1016/j.buildenv.2021.107922",
+      "keywords": [
+        "Environmentally friendly",
+        "Multitude",
+        "Work (physics)",
+        "Built environment",
+        "Population ageing"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W4361255950",
+      "title": "Multi-fault diagnosis of Industrial Rotating Machines using Data-driven approach : A review of two decades of research",
+      "authors": [
+        "Shreyas Gawde",
+        "Shruti Patil",
+        "Satish Kumar",
+        "Pooja Vinayak Kamat",
+        "Ketan V. Kotecha",
+        "Ajith Abraham"
+      ],
+      "first_author": "Shreyas Gawde",
+      "year": 2023,
+      "citations": 370,
+      "journal": "Engineering Applications of Artificial Intelligence",
+      "doi": "https://doi.org/10.1016/j.engappai.2023.106139",
+      "abstract": "",
+      "open_access_pdf": "https://arxiv.org/pdf/2206.14153",
+      "keywords": [
+        "Computer science",
+        "Fault (geology)",
+        "Data science",
+        "Artificial intelligence",
+        "Geology"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W3202917238",
+      "title": "Journey of customers in this digital era: Understanding the role of artificial intelligence technologies in user engagement and conversion",
+      "authors": [
+        "Surajit Bag",
+        "Gautam Srivastava",
+        "Mamoon Al Bashir",
+        "Sushma Kumari",
+        "Mihalis Giannakis",
+        "Abdul Hannan Chowdhury"
+      ],
+      "first_author": "Surajit Bag",
+      "year": 2021,
+      "citations": 358,
+      "journal": "Benchmarking An International Journal",
+      "doi": "https://doi.org/10.1108/bij-07-2021-0415",
+      "abstract": "Purpose The first research objective is to understand the role of digital [artificial intelligence (AI)] technologies on user engagement and conversion that has resulted in high online activities and increased online sales in current times in India. In addition, combined with changes such as social distancing and lockdown due to the COVID-19 pandemic, digital disruption has largely impacted the old ways of communication both at the individual and organizational levels, ultimately resulting in prominent social change. While interacting in the virtual world, this change is more noticeable. Therefore, the second research objective is to examine if a satisfying experience during online shopping leads to repurchase intention. Design/methodology/approach Using primary data collected from consumers in a developing economy (India), we tested the theoretical model to further extend the theoretical debate in consumer research. Findings This study empirically tests and further establishes that deploying AI technologies have a positive relationship with user engagement and conversion. Further, conversion leads to satisfying user experience. Finally, the relationship between satisfying user experience and repurchase intention is also found to be significant. Originality/value The uniqueness of this study is that it tests few key relationships related to user engagement during this uncertain period (COVID-19 pandemic) and examines the underlying mechanism which leads to increase in online sales.",
+      "open_access_pdf": "https://hull-repository.worktribe.com/file/3845552/1/Accepted%20manuscript",
+      "keywords": [
+        "Originality",
+        "Value (mathematics)",
+        "Coronavirus disease 2019 (COVID-19)",
+        "Social media",
+        "Business"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W4225540707",
+      "title": "The Impact of Artificial Intelligence on Firm Performance: An Application of the Resource-Based View to e-Commerce Firms",
+      "authors": [
+        "Donghua Chen",
+        "José Paulo Esperança",
+        "Shaofeng Wang"
+      ],
+      "first_author": "Donghua Chen",
+      "year": 2022,
+      "citations": 351,
+      "journal": "Frontiers in Psychology",
+      "doi": "https://doi.org/10.3389/fpsyg.2022.884830",
+      "abstract": "The application of artificial intelligence (AI) technology has evolved into an influential endeavor to improve firm performance, but little research considers the relationship among artificial intelligence capability (AIC), management (AIM), driven decision making (AIDDM), and firm performance. Based on the resource-based view (RBV) and existing findings, this paper constructs a higher-order model of AIC and suggests a research model of e-commerce firm AIC and firm performance. We collected 394 valid questionnaires and conducted data analysis using partial least squares structural equation modeling (PLS-SEM). As a second-order variable, AIC was formed by three first-order variables: basic, proclivity, and skills. AIC indirectly affects firm performance through creativity, AIM, and AI-driven decision making. Firm creativity, AIM, and AIDDM are essential variables between AIC and firm performance. Innovation culture (IC) positive moderates the relationship between firm creativity and AIDDM as well as the relationship between AIDDM and firm performance. Environmental dynamism (ED) positive mediates the connection between AIM and AIDDM. Among the control variables, firm age negatively affects firm performance, and employee size does not. This study helps enterprises leverage AI to improve firm performance, achieve a competitive advantage, and contribute to theory and management practice.",
+      "open_access_pdf": "https://www.frontiersin.org/articles/10.3389/fpsyg.2022.884830/pdf",
+      "keywords": [
+        "Dynamism",
+        "Creativity",
+        "Structural equation modeling",
+        "Leverage (statistics)",
+        "Knowledge management"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W3202276560",
+      "title": "Marketing research on Mobile apps: past, present and future",
+      "authors": [
+        "Lara Stocchi",
+        "Naser Pourazad",
+        "Nina Michaelidou",
+        "Arry Tanusondjaja",
+        "Paul Harrigan"
+      ],
+      "first_author": "Lara Stocchi",
+      "year": 2021,
+      "citations": 339,
+      "journal": "Journal of the Academy of Marketing Science",
+      "doi": "https://doi.org/10.1007/s11747-021-00815-w",
+      "abstract": "",
+      "open_access_pdf": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8575161/pdf/",
+      "keywords": [
+        "Competitive advantage",
+        "Mobile apps",
+        "Marketing",
+        "Business",
+        "Value (mathematics)"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W4409318329",
+      "title": "Agentic Large Language Models, a Survey",
+      "authors": [
+        "Aske Plaat",
+        "Max J. van Duijn",
+        "Bas van Stein",
+        "Mike Preuß",
+        "Peter van der Putten",
+        "Kees Joost Batenburg"
+      ],
+      "first_author": "Aske Plaat",
+      "year": 2025,
+      "citations": 337,
+      "journal": "Journal of Artificial Intelligence Research",
+      "doi": "https://doi.org/10.1613/jair.1.18675",
+      "abstract": "Background: There is great interest in agentic LLMs, large language models that act as agents. Objectives: We review the growing body of work in this area and provide a research agenda. Methods: Agentic LLMs are LLMs that (1) reason, (2) act, and (3) interact. We organize the literature according to these three categories. Results: The research in the first category focuses on reasoning, reflection, and retrieval, aiming to improve decision making; the second category focuses on action models, robots, and tools, aiming for agents that act as useful assistants; the third category focuses on multi-agent systems, aiming for collaborative task solving and simulating interaction to study emergent social behavior. We find that works mutually benefit from results in other categories: retrieval enables tool use, reflection improves multi-agent collaboration, and reasoning benefits all categories. Conclusions: We discuss applications of agentic LLMs and provide an agenda for further research. Important applications are in medical diagnosis, logistics and financial market analysis. Meanwhile, self-reflective agents playing roles and interacting with one another augment the process of scientific research itself. Further, agentic LLMs provide a solution for the problem of LLMs running out of training data: inference-time behavior generates new training states, such that LLMs can keep learning without needing ever larger datasets. We note that there is risk associated with LLM assistants taking action in the real world—safety, liability and security are open problems—while agentic LLMs are also likely to benefit society.",
+      "open_access_pdf": "https://doi.org/10.1613/jair.1.18675",
+      "keywords": [
+        "Linguistics",
+        "Psychology",
+        "Computer science",
+        "Philosophy"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W107923952",
+      "title": "Engineering Emotional Values in Product Design : Kansei Engineering in Development",
+      "authors": [
+        "Simon Schütte"
+      ],
+      "first_author": "Simon Schütte",
+      "year": 2005,
+      "citations": 332,
+      "journal": "DiVA (Linkoping University)",
+      "doi": "",
+      "abstract": "Feelings and impressions of a product are important for the decision of purchasing it or not. Designing attractive products therefore requires knowledge about the feelings and impressions the products evoke on the customer and the user. Integrating such affective values in product design requires the introduction of suitable methods into companies’ product design processes, methods which can capture and convert subjective and even unconscious feelings about a product into concrete design parameters. This is sometimes referred to as ‘Affective Engineering’. One methodology in this context is Kansei Engineering, which has been developed in Japan in order to design feelings into products. The aim of this thesis was twofold: Firstly, to improve understanding of the nature of products making emotional impact on the users and customers. Secondly, to identify and improve methods capable of grasping those affective values and translating them into concrete product design solutions. This thesis presents three empirical studies and two methodological papers, relating to warehouse trucks and laminate flooring. The first study was made on user impact of warehouse trucks in three different European countries. A second study dealt with affective values of rocker-switches in work vehicles, such as warehouse trucks. A third study on this truck type compared the old manoeuvring panel evaluated in the previous studies with a newly introduced manoeuvring panel in order to validate the impact of the design improvements made after the first study. Further, a conceptual model on Kansei Engineering methodology was proposed in a methods paper based on the experience from the studies performed in order to provide a structure for performing Kansei Engineering studies. The fifth paper had the purpose of validating and improving the proposed model using laminate flooring as research object. More structured ways of identifying design parameters and relevant product properties was given high priority in the improvement work of the methodology. A model for spanning the Space of Product Properties was presented and applied. This thesis also deals with other improvement areas in the methodology and proposed new developments, including the use of scales, experimental design and validation methods. In conclusion, Kansei Engineering is a concept and a methodology in strong development, a framework in which tools and methods are continuously developed, added and integrated.",
+      "open_access_pdf": "http://urn.kb.se/resolve?urn=urn:nbn:se:liu:diva-497",
+      "keywords": [
+        "Kansei engineering",
+        "Product design",
+        "New product development",
+        "Product (mathematics)",
+        "Engineering"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W3162137248",
+      "title": "AI Technology and Online Purchase Intention: Structural Equation Model Based on Perceived Value",
+      "authors": [
+        "Jiwang Yin",
+        "Xiaodong Qiu"
+      ],
+      "first_author": "Jiwang Yin",
+      "year": 2021,
+      "citations": 329,
+      "journal": "Sustainability",
+      "doi": "https://doi.org/10.3390/su13105671",
+      "abstract": "(1) Background: AI technology has been deeply applied to online shopping platforms to provide more accurate and personalized services for consumers. It is of great significance to study the different functional experiences of AI for consumers to improve the current application status of AI technology. (2) Method: Based on the “SOR” model, this study divides the AI technology experienced by the consumers of online shopping platforms into three dimensions: accuracy, insight, and interaction experience. The perceived value is taken as the mediating variable from the prospect of perceived utility value and perceived hedonic value. This article uses empirical research methods to analyze the effect of the three dimensions of online shopping AI experience to research the internal influence mechanism of consumers’ purchase intention. (3) Results: 1. The accuracy, insight, and interaction experience of AI marketing technology each have a significant positive impact on consumers’ perceived utility value and hedonic value; 2. Both the perceived utility value and perceived hedonic value obtained by an AI technology experience can promote the formation of consumers’ purchase intention; 3. The perceived hedonic value was better than perceived utility value at promoting the consumers’ purchase intention.",
+      "open_access_pdf": "https://www.mdpi.com/2071-1050/13/10/5671/pdf?version=1621352438",
+      "keywords": [
+        "Value (mathematics)",
+        "Structural equation modeling",
+        "Marketing",
+        "Advertising",
+        "Psychology"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W4223446169",
+      "title": "Using blockchain to signal quality in the food supply chain: The impact on consumer purchase intentions and the moderating effect of brand familiarity",
+      "authors": [
+        "Horst Treiblmaier",
+        "Marion Garaus"
+      ],
+      "first_author": "Horst Treiblmaier",
+      "year": 2022,
+      "citations": 323,
+      "journal": "International Journal of Information Management",
+      "doi": "https://doi.org/10.1016/j.ijinfomgt.2022.102514",
+      "abstract": "Food safety is a public health issue of paramount importance. In this regard, blockchain has emerged as a promising technology that allows users to effectively and efficiently record the origin and flow of products and eliminate or reduce harmful food fraud. Consumers can benefit from this development by receiving up-to-date and verifiable information about the origins and delivery routes of their purchases. Drawing on signaling theory and the results of two experimental studies with 151 and 152 participants, respectively, we investigate how the use of blockchain to trace food products impacts consumers’ perception of product quality as a mediating variable and subsequently their purchase intention. Our framework further considers brand familiarity as a moderating variable. The findings from the two experiments show that blockchain labels as a signaling mechanism in food supply chains help to strengthen consumers’ perceived quality of food products, which, in turn, increases their purchase intention. This effect is more pronounced for less familiar brands, which is valuable information for managers who want to build a brand’s reputation. From an academic perspective, we highlight the applicability of signaling theory to identify blockchain-based traceability systems as important drivers of perceived product quality and consequently purchase intention.",
+      "open_access_pdf": "https://www.sciencedirect.com/science/article/pii/S0268401222000482/pdf",
+      "keywords": [
+        "Reputation",
+        "Blockchain",
+        "Quality (philosophy)",
+        "Traceability",
+        "Product (mathematics)"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W4410039637",
+      "title": "Sustainable Consumption and Branding for Gen Z: How Brand Dimensions Influence Consumer Behavior and Adoption of Newly Launched Technological Products",
+      "authors": [
+        "Dimitrios Theocharis",
+        "Georgios Tsekouropoulos"
+      ],
+      "first_author": "Dimitrios Theocharis",
+      "year": 2025,
+      "citations": 316,
+      "journal": "Sustainability",
+      "doi": "https://doi.org/10.3390/su17094124",
+      "abstract": "Generation Z is emerging as a powerful force in shaping global consumer behavior, particularly in the market of digital and technological products. This study examines how specific branding dimensions, such as online brand experience, engagement, image, trust, loyalty, awareness, behavioral intention, and brand knowledge, influence Gen Z’s purchase intention, emphasizing sustainable consumption. Sustainable consumption, in this context, refers to the preference for tech products that minimize the environmental impact through eco-friendly design, energy efficiency, and responsible sourcing. Using a quantitative approach, this cross-sectional research explores the effects of online brand experience, engagement, image, trust, loyalty, awareness, behavioral intention, and knowledge on purchasing newly launched technological products that align with sustainability. Data were collected from a Gen Z sample using a combination of convenience and systematic sampling, and multiple regression analysis identified the most significant predictors of purchase intention. The results indicate that online brand experience, brand image, brand trust, and brand loyalty play the most crucial roles, having a greater effects on Gen Z’s purchase intention, while brand awareness and knowledge also contribute. However, brand engagement and behavioral intention have weaker effects. These findings suggest that brands targeting Gen Z should prioritize building a strong, trustworthy, and engaging online presence while highlighting their sustainability efforts, and when Gen Z consumers have favorable digital interactions with a brand, perceive its image positively, trust it, and feel loyal to it, they are more likely to consider purchasing its sustainable offerings. This study enhances the understanding of Gen Z’s consumer behavior and offers insights for businesses seeking to foster sustainable consumption by highlighting the importance of developing marketing strategies that strengthen online brand experience, cultivate trust and loyalty, and clearly communicate sustainability values, such as through engaging digital content, transparent messaging, and eco-conscious branding, to effectively foster sustainable consumption among this environmentally conscious and digitally driven generation.",
+      "open_access_pdf": "https://www.mdpi.com/2071-1050/17/9/4124/pdf?version=1746177144",
+      "keywords": [
+        "Launched",
+        "Consumption (sociology)",
+        "Sustainable consumption",
+        "Business",
+        "Marketing"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W3022655461",
+      "title": "Emotional experience on behavioral intention for halal tourism",
+      "authors": [
+        "Ririn Tri Ratnasari",
+        "Sri Gunawan",
+        "Imron Mawardi",
+        "Kusuma Chandra Kirana"
+      ],
+      "first_author": "Ririn Tri Ratnasari",
+      "year": 2020,
+      "citations": 313,
+      "journal": "Journal of Islamic marketing",
+      "doi": "https://doi.org/10.1108/jima-12-2019-0256",
+      "abstract": "Purpose The purpose of this paper is to examine halal certification for halal culinary, destination brand and emotional experiences on customer satisfaction and behavioral intention. Design/methodology/approach This study uses a quantitative survey approach to 400 respondents consisting of Muslim foreign and domestic tourists who had visited Lombok in the past three years. The sampling technique is by purposive sampling. The analysis technique used in this study is structural equation modeling-partial least square (SEM-PLS). Findings The findings showed that halal certification has no effect on customer satisfaction but on influenced behavioral intention, destination brand of Lombok had no effect on customer satisfaction; customer satisfaction influenced behavioral intention and emotional experiences affected customer satisfaction and behavioral intention. Research limitations/implications This study collects data from respondents both domestic and foreign tourists simultaneously. However, the data acquisition of respondents and foreign tourists is not balanced. Thus, this study analyzes tourists in general, not distinguished between foreign and domestic tourists. Practical implications The government and tourism organizers in Lombok need to provide socialization for domestic and foreign tourists on the need to choose halal-certified food and drinks to ensure halal and hygiene. In addition, so that the destination image of Lombok can provide a beautiful experience that becomes a moment of the truth, then the local government should improve its service strategy holistically. Social implications Destination image needs to be improved. This requires holistic tourism quality services so that the social community knows that Indonesia has a halal tourism destination that exists as tourists come from the airport to the hotel and enjoy food in restaurants and tourist attractions that are Muslim friendly. Originality/value This paper contributes to filling the void in the literature related to tourism management that is linked to tourism in the aftermath of natural disasters, where empirical studies on halal tourism are on the rise. Therefore, respondents in the study were specific, that is, those who had traveled. To the best of the authors’ knowledge, this study is the first of a kind that includes behavioral intention in tourist destinations after natural disasters in the Indonesian context.",
+      "open_access_pdf": "https://repository.unair.ac.id/113590/3/Ririn%20TR_Karil101_Emotional%20experience.pdf",
+      "keywords": [
+        "Tourism",
+        "Marketing",
+        "Business",
+        "Nonprobability sampling",
+        "Certification"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W3087889130",
+      "title": "Technology-enabled personalization in retail stores: Understanding drivers and barriers",
+      "authors": [
+        "Anne-Sophie Riegger",
+        "Jan F. Klein",
+        "Katrin Merfeld",
+        "Sven Henkel"
+      ],
+      "first_author": "Anne-Sophie Riegger",
+      "year": 2020,
+      "citations": 290,
+      "journal": "Journal of Business Research",
+      "doi": "https://doi.org/10.1016/j.jbusres.2020.09.039",
+      "abstract": "Smart technologies grant brick-and-mortar retailers novel opportunities to introduce the amenities of online retailing, such as data-driven personalization, into physical interactions. Research on consumer reactions to the novel phenomenon of technology-enabled personalization (TEP) in retail stores is scarce though, so the current article proposes a conceptualization that demarcates TEP from broader notions of personalization. Qualitative data from 25 in-depth consumer interviews reveal five drivers (utilitarian, hedonic, control, interaction, integration) of and four barriers (exploitation, interaction misfit, privacy, and lack of confidence) to consumers’ acceptance of TEP. The juxtaposition of these drivers and barriers, in combination with insights from prior literature, reveals five success paradoxes for TEP (exploration–limitation, staff presence–absence, humanization–dehumanization, personalization–privacy, personal–retailer devices). The findings provide several theoretical and managerial implications, as well as avenues for further research.",
+      "open_access_pdf": "https://www.sciencedirect.com/science/article/pii/S0148296320306214/pdf",
+      "keywords": [
+        "Personalization",
+        "Conceptualization",
+        "Sociality",
+        "Business",
+        "Internet privacy"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W3120639414",
+      "title": "Exploring the role of personality, trust, and privacy in customer experience performance during voice shopping: Evidence from SEM and fuzzy set qualitative comparative analysis",
+      "authors": [
+        "Ransome Epie Bawack",
+        "Samuel Fosso Wamba",
+        "Kévin Carillo"
+      ],
+      "first_author": "Ransome Epie Bawack",
+      "year": 2021,
+      "citations": 287,
+      "journal": "International Journal of Information Management",
+      "doi": "https://doi.org/10.1016/j.ijinfomgt.2021.102309",
+      "abstract": "",
+      "open_access_pdf": "https://www.sciencedirect.com/science/article/am/pii/S0268401221000025",
+      "keywords": [
+        "Conscientiousness",
+        "Qualitative comparative analysis",
+        "Agreeableness",
+        "Personality",
+        "Psychology"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W3125273512",
+      "title": "How the Design of YouTube Influences User Sense of Agency",
+      "authors": [
+        "Kai Lukoff",
+        "Ulrik Lyngs",
+        "Himanshu Zade",
+        "J. Vera Liao",
+        "James J. Choi",
+        "Kaiyue Fan",
+        "Sean A. Munson",
+        "Alexis Hiniker"
+      ],
+      "first_author": "Kai Lukoff",
+      "year": 2021,
+      "citations": 271,
+      "journal": "CHI Conference on Human Factors in Computing Systems",
+      "doi": "https://doi.org/10.1145/3411764.3445467",
+      "abstract": "In the attention economy, video apps employ design mechanisms like autoplay that exploit psychological vulnerabilities to maximize watch time. Consequently, many people feel a lack of agency over their app use, which is linked to negative life effects such as loss of sleep. Prior design research has innovated external mechanisms that police multiple apps, such as lockout timers. In this work, we shift the focus to how the internal mechanisms of an app can support user agency, taking the popular YouTube mobile app as a test case. From a survey of 120 U.S. users, we find that autoplay and recommendations primarily undermine sense of agency, while playlists and search support it. From 13 co-design sessions, we find that when users have a specific intention for how they want to use YouTube they prefer interfaces that support greater agency. We discuss implications for how designers can help users reclaim a sense of agency over their media use.",
+      "open_access_pdf": "https://ora.ox.ac.uk/objects/uuid:31bc88e5-f9ff-437f-a22b-533ea2d0f897/files/rsj139327z",
+      "keywords": [
+        "Agency (philosophy)",
+        "Exploit",
+        "Sense of agency",
+        "Internet privacy",
+        "Computer science"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W4210401140",
+      "title": "Investigating the impact of AI-powered technologies on Instagrammers’ purchase decisions in digitalization era–A study of the fashion and apparel industry",
+      "authors": [
+        "Sook Fern Yeo",
+        "Cheng Ling Tan",
+        "Ajay Kumar",
+        "Kim Hua Tan",
+        "Jee Kit Wong"
+      ],
+      "first_author": "Sook Fern Yeo",
+      "year": 2022,
+      "citations": 270,
+      "journal": "Technological Forecasting and Social Change",
+      "doi": "https://doi.org/10.1016/j.techfore.2022.121551",
+      "abstract": "Over the last couple of decades, technological advancements have accelerated exponentially, especially in the realm of online social networking networks. The artificial intelligence (AI)-powered digital technologies applications continue to emerge to enhance and improve novel ways of communication on social media platforms, particularly Instagram. Indeed, this has caused a change in the behavioral and social customer journey, where customers need to embrace a digital experience adoption. The AI applications primarily aim to study the shoppers browsing trend to draw new clients and expand businesses. Even the fashion industry has tapped into Instagram's business benefits in this fast-paced and competitive industry. With this quick and compelling way to capture shoppers’ attention towards fashion products, the purchase decision may differ between e-shoppers and conventional shoppers. AI seems to be extremely promising and has the potential to be a game changer for Instagram users, advertisers, and influencers. This study applies the Engel-Kollat-Blackwell (EKB) theory to investigate the effects of AI-based digital technology experiences on Instagrammers’ fashion apparel purchase decisions - perceived eWOM, perceived emotional value, perceived quality, perceived risk and perceived price. Based on data collected from Instagram users, the framework of this study was evaluated using structural equation modelling (SEM). Semi-structured in-depth interviews were also conducted as part of the research to get a more in-depth understanding of the profiles and behaviors of Instagram users. Our findings from both methodologies confirm that perceived emotional value, perceived quality, and perceived eWOM revealed a statistically significant and positive influence on Instagrammers’ purchase decisions for fashion apparel. Meanwhile, the importance performance matrix analysis (IPMA) identified perceived emotional value as the most important factor for Instagrammers, but the highest performance was perceived quality. This research has important implications for Malaysian online retailers and shoppers to adapt to the fast-changing digital transformation. Assuredly, this study makes a noteworthy contribution to attitudinal research on social media commerce within the fashion industry.",
+      "open_access_pdf": "https://www.sciencedirect.com/science/article/am/pii/S004016252200083X",
+      "keywords": [
+        "Social media",
+        "Influencer marketing",
+        "Clothing",
+        "Quality (philosophy)",
+        "Value (mathematics)"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W3155924591",
+      "title": "Changes in Consumption Patterns and Tourist Promotion after the COVID-19 Pandemic",
+      "authors": [
+        "Diego Rodríguez-Toubes Muñiz",
+        "Noelia Araújo Vila",
+        "José António Fraiz Brea"
+      ],
+      "first_author": "Diego Rodríguez-Toubes Muñiz",
+      "year": 2021,
+      "citations": 265,
+      "journal": "Journal of theoretical and applied electronic commerce research",
+      "doi": "https://doi.org/10.3390/jtaer16050075",
+      "abstract": "The COVID-19 pandemic has entailed an unprecedented health crisis with significant economic impacts in many sectors worldwide. The tourism sector has been one of the most affected, with significant impacts on the number of cancelled reservations, a decrease in international travel and changes in consumption behaviour. This study aims to analyse the main changes in promotion and marketing in the tourism sector in Spain after the pandemic. To this end, a qualitative analysis was carried out via questionnaire-based interviews with 65 experts in the areas of marketing, consumer behaviour and tourism. The main findings show that online information sources gained weight over consulting friends and relatives, and a great advance in digitization is expected, where physical travel agencies will be displaced by online platforms, except for specialized and advisory services. Additionally, technologies such as virtual reality (VR) or artificial intelligence (AI) may play an increasingly important role in the medium term.",
+      "open_access_pdf": "https://www.mdpi.com/0718-1876/16/5/75/pdf?version=1618489696",
+      "keywords": [
+        "Tourism",
+        "Digitization",
+        "Promotion (chess)",
+        "Pandemic",
+        "Consumption (sociology)"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W3090231941",
+      "title": "The impact of greenwash practices over green purchase intention: The mediating effects of green confusion, Green perceived risk, and green trust",
+      "authors": [
+        "Saeed M. Z. A. Tarabieh"
+      ],
+      "first_author": "Saeed M. Z. A. Tarabieh",
+      "year": 2021,
+      "citations": 265,
+      "journal": "Management Science Letters",
+      "doi": "https://doi.org/10.5267/j.msl.2020.9.022",
+      "abstract": "The study discusses the influence of greenwash on green purchase intention and explores the mediation roles of green confusion, green perceived risk and green trust.The research object of this study focuses in Jordanian food and beverage corporations.This research utilizes structural equation modeling to undertake an empirical study.The results indicate that greenwash positively effects green confusion and green perceived risk.Besides, this study demonstrates that green confusion and green perceived risk mediate the negative relationship between greenwash and green purchase intention.It means that greenwash does not only have a directly negative effect on green purchase intention, but also have an indirectly negative effect on it via green confusion and green perceived risk.Finally, green trust does not influence green purchase intention and does not mediate the greenwash and green purchase intention relationship.Thus, this study suggests that companies should decrease their greenwash behaviors and should not only claim their \"greenness\" but also show the proof of their green products.These policies would reduce customer confusion and risk.It will raise the likelihood of green practices and claims by businesses, and contribute to improved green food and beverage purchasing intention.",
+      "open_access_pdf": "https://doi.org/10.5267/j.msl.2020.9.022",
+      "keywords": [
+        "Confusion",
+        "Mediation",
+        "Purchasing",
+        "Business",
+        "Risk perception"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W4385210972",
+      "title": "Brands are calling your AVATAR in Metaverse–A study to explore XR ‐based gamification marketing activities & consumer‐based brand equity in virtual world",
+      "authors": [
+        "Vikas Arya",
+        "Rachita Sambyal",
+        "Anshuman Sharma",
+        "Yogesh Kumar Dwivedi"
+      ],
+      "first_author": "Vikas Arya",
+      "year": 2023,
+      "citations": 262,
+      "journal": "Journal of Consumer Behaviour",
+      "doi": "https://doi.org/10.1002/cb.2214",
+      "abstract": "Brands are moving towards the Metaverse (3D immersive virtual spaces), where the growth of intangible products and nonfungible tokens (NFTs) are evolving into a new type of hybrid experience for the users. This paper aims to establish the role of a “gamification of marketing activities” and its influence on consumer‐based brand equity for intangible products (NFTs) in the Metaverse and examine the mediating role of consumers' brand engagement and brand love. To evaluate the conceptual model based on the cross‐cultural data from two emerging countries in Asia and Africa, the study followed a two‐stage, hybrid mechanism using PLS‐SEM and neural network modeling. This study provides insights into the Metaverse–a new taxonomy of technology, in the context of embodiment, presence of AVATAR, and interactivity in the virtual world, supported by the social exchange theory. This study also suggests practitioners focus on brand authenticity while projecting their brand in the Metaverse.",
+      "open_access_pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cb.2214",
+      "keywords": [
+        "Avatar",
+        "Metaverse",
+        "Interactivity",
+        "Brand equity",
+        "Context (archaeology)"
+      ],
+      "source": "OpenAlex"
+    },
+    {
+      "id": "https://openalex.org/W4321370273",
+      "title": "A taxonomy of technology design features that promote potentially addictive online behaviours",
+      "authors": [
+        "Maèva Flayelle",
+        "Damien Brevers",
+        "Daniel Luke King",
+        "Pierre Maurage",
+        "José C. Perales",
+        "Joël Billieux"
+      ],
+      "first_author": "Maèva Flayelle",
+      "year": 2023,
+      "citations": 262,
+      "journal": "Nature Reviews Psychology",
+      "doi": "https://doi.org/10.1038/s44159-023-00153-4",
+      "abstract": "",
+      "open_access_pdf": "https://iris.unil.ch/bitstreams/73dd0379-b787-44af-9005-9891fe109052/download",
+      "keywords": [
+        "Taxonomy (biology)",
+        "Addiction",
+        "Psychology",
+        "Computer science",
+        "Data science"
+      ],
+      "source": "OpenAlex"
+    }
+  ]
+}
