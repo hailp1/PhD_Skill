@@ -1,0 +1,59 @@
+{
+  "p1": 34,
+  "p2": 102,
+  "p3": 730,
+  "top_journals": [
+    [
+      "Journal of Theoretical and Applied Electronic Commerce Research",
+      40
+    ],
+    [
+      "Journal of Retailing and Consumer Services",
+      40
+    ],
+    [
+      "Asia Pacific Journal of Marketing and Logistics",
+      23
+    ],
+    [
+      "International Journal of Retail & Distribution Management",
+      18
+    ],
+    [
+      "Frontiers in Psychology",
+      16
+    ],
+    [
+      "Sustainability",
+      15
+    ],
+    [
+      "International Journal of Human-Computer Interaction",
+      14
+    ],
+    [
+      "Journal of Business Research",
+      11
+    ],
+    [
+      "Cogent Business & Management",
+      10
+    ],
+    [
+      "International Journal of Consumer Studies",
+      10
+    ]
+  ],
+  "found_10": {
+    "ampadu": "Ampadu, S., Jiang, Y., Debrah, E., Antwi, C. O., Amankwa, E., Gyamfi, S. A., & Amoako, R. (2022). Online personalized recommended product quality and e-impulse buying: A conditional mediation analysis. *Journal of Retailing and Consumer Services*, 64, 102789. https://doi.org/10.1016/j.jretconser.2021.102789",
+    "zhu, yanliang": "Zhu, Y., Shi, H., Bin Azam Hashmi, H., & Wu, Q. (2023). Bridging artificial intelligence-based services and online impulse buying in E-retailing context. *Electronic Commerce Research and Applications*, 62, 101333. https://doi.org/10.1016/j.elerap.2023.101333",
+    "gallin": "Gallin, S., & Portes, A. (2024). Online shopping: How can algorithm performance expectancy enhance impulse buying?. *Journal of Retailing and Consumer Services*, 81, 103988. https://doi.org/10.1016/j.jretconser.2024.103988",
+    "shamim": "Shamim, K., & Misra, S. C. (2025). Leveraging AI to drive online impulse buying: a SOBC perspective. *International Journal of Retail & Distribution Management*, 53, 1040-1056. https://doi.org/10.1108/ijrdm-07-2024-0334",
+    "kumaran": "Sivakumaran, B., Deshpande, B., Pradhan, D., & Lyngdoh, T. (2025). Reducing impulse buying: a review and research agenda. *Journal of Consumer Marketing*, 42, 838-860. https://doi.org/10.1108/jcm-03-2024-6721",
+    "lau, mei": "Lau, M. M., Hui, R. T., Ng, P. M. L., & Mak, M. S. Y. (2026). Triggered to buy? The role of negative emotions and user awareness of others in driving impulse purchases in AI live streaming. *Online Information Review*, 1-16. https://doi.org/10.1108/oir-07-2025-0490",
+    "miranda, sandra": "Miranda, S., Borges‐Tiago, M. T., Tiago, F., & Tu, X. (2024). To buy or not to buy? The impulse buying dilemma in livestream shopping. *Psychology and Marketing*, 41, 989-1005. https://doi.org/10.1002/mar.21967",
+    "li, xiyang": "Li, X., Zhou, T., Hu, C., & Liu, H. (2025). Availability Bias in AI Recommenders: Impacts on Impulse Buying. *Journal of Computer Information Systems*, ahead-of-print, 1-13. https://doi.org/10.1080/08874417.2025.2547173",
+    "tobon": "Tobon, S., & Abril, C. (2024). Game on: curbing impulse buying and returns in apparel e-tailers. *Review of Managerial Science*, 19, 1783-1817. https://doi.org/10.1007/s11846-024-00808-3",
+    "huang, jingqi": "Huang, J., & Ahmad, W. (2026). Mechanism of AI chatbot anthropomorphism on consumer impulse buying in live streaming scenarios based on SOR framework. *PLOS ONE*, 21, e0357787. https://doi.org/10.1371/journal.pone.0357787"
+  }
+}

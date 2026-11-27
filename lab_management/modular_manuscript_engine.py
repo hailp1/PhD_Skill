@@ -14,7 +14,7 @@ MANUSCRIPT_PATH = os.path.join(WORKSPACE, "lab_projects", "PAPER_01_SLR_JRCS_MAN
 FIG1_SVG_PATH = os.path.join(WORKSPACE, "lab_projects", "figures", "figure1_prisma_flow_diagram.svg")
 FIG2_PNG_PATH = os.path.join(WORKSPACE, "lab_projects", "figures", "figure2_vosviewer_real_network_cropped.png")
 FIG3_SVG_PATH = os.path.join(WORKSPACE, "lab_projects", "figures", "figure3_theoretical_sor_model.svg")
-VERIFIED_REFS_PATH = os.path.join(WORKSPACE, "lab_management", "verified_corpus_refs.json")
+VERIFIED_REFS_PATH = os.path.join(WORKSPACE, "lab_management", "clean_apa_corpus_refs.json")
 
 def get_base64_image(path):
     import base64
@@ -80,7 +80,7 @@ Bibliometric mapping uncovers four distinct intellectual clusters: (1) Algorithm
 ## 1. INTRODUCTION
 
 ### 1.1. Background and The Algorithmic Retailing Paradigm Shift
-In contemporary digital retailing ecosystems, consumers no longer navigate static, hierarchical category trees (Shanahan et al., 2019; Xiao & Benbasat, 2018). Instead, they are continuously enveloped within dynamic, hyper-personalized information streams driven by deep neural collaborative filtering, transformer-based sequential recommenders, and real-time behavioral telemetry (Al-Natour et al., 2011; Zhang et al., 2021). The foundational architecture of consumer discovery has shifted decisively from deliberative, keyword-driven item retrieval (*search-based shopping*) to serendipitous, algorithmically triggered consumption (*discovery-based shopping*) (Sundar & Kim, 2019; Wang et al., 2022). With the rapid proliferation of Large Language Model (LLM)-powered conversational shopping agents and Generative AI interfaces between 2023 and 2026 (Dwivedi et al., 2022; Guha et al., 2022; Pang et al., 2026; Do Xuan Nguyen et al., 2026), the retailing environment actively anticipates, shapes, and amplifies latent consumer desires in real time.
+In contemporary digital retailing ecosystems, consumers no longer navigate static, hierarchical category trees (Shanahan et al., 2019; Xiao & Benbasat, 2018). Instead, they are continuously enveloped within dynamic, hyper-personalized information streams driven by deep neural collaborative filtering, transformer-based sequential recommenders, and real-time behavioral telemetry (Al-Natour et al., 2011; Zhang et al., 2021). The foundational architecture of consumer discovery has shifted decisively from deliberative, keyword-driven item retrieval (*search-based shopping*) to serendipitous, algorithmically triggered consumption (*discovery-based shopping*) (Sundar & Kim, 2019; Wang et al., 2022). With the rapid proliferation of Large Language Model (LLM)-powered conversational shopping agents and Generative AI interfaces between 2023 and 2026 (Dwivedi et al., 2022; Guha et al., 2022; Pang et al., 2026; Do Xuan Nguyen & Nguyen, 2026), the retailing environment actively anticipates, shapes, and amplifies latent consumer desires in real time.
 
 A primary behavioral outcome of this algorithmic immersion is the notable increase in **online impulse buying (OIB)** (defined as sudden, hedonically complex, and unplanned purchase decisions characterized by diminished deliberative cognitive evaluation) (Beatty & Ferrell, 1998; Rook & Fisher, 1995). Modern electronic commerce analytics reveal that between 40% and 60% of digital transactions involve an impulsive component, heavily catalyzed by algorithmic discovery feeds, flash recommendations, and frictionless one-click checkout infrastructures (Chan et al., 2017; Zheng et al., 2019). While practitioners celebrate predictive personalization as an engine of customer lifetime value and transaction velocity, consumer psychologists express growing scholarly concern regarding the ethical boundaries of algorithmic nudging, choice architecture manipulation, and the systematic erosion of consumer self-regulatory willpower (Baumeister, 2002; Kumaran & Shobhana, 2026; Sweller, 1988).
 
@@ -139,7 +139,7 @@ The screening protocol was framed around the **TCCM Framework (Theory, Context, 
 - **Methodology (M)**: Rigorous empirical investigations (laboratory experiments, field surveys, neuro-marketing, structural equation modeling, fsQCA) alongside foundational conceptual and systematic review benchmarks that establish core construct taxonomies.
 
 We established four explicit Inclusion Criteria (IC) and four Exclusion Criteria (EC):
-- **IC1**: Published in English in peer-reviewed scholarly journals between January 2018 and March 2026.
+- **IC1**: Published in English in peer-reviewed scholarly journals between January 2018 and November 2026.
 - **IC2**: Empirical investigation or foundational conceptual/review benchmark explicitly analyzing AI/algorithmic recommendation features and consumer impulse buying dynamics.
 - **IC3**: Clear reporting of sample size, analytical technique, and theoretical grounding.
 - **IC4**: Indexed in Scopus, Web of Science Core Collection, or Dimensions.
@@ -177,70 +177,90 @@ MODULE_3_TEXT = f"""
 ## 3. BIBLIOMETRIC AND THEMATIC RESULTS
 
 ### 3.1. Performance Analysis: Publication Trajectories and Leading Outlets
-Bibliometric performance analysis of the 1,441 deduplicated corpus records (yielding our 866 focal studies after full-text eligibility screening) reveals an rapid growth trajectory across three distinct phases (2018–2026):
-- **Foundational Phase (2018–2020)**: Characterized by exploratory output totaling 77 unique records (16 in 2018; 27 in 2019; 34 in 2020; averaging 25.7 publications annually), focusing predominantly on collaborative filtering accuracy and early personalization cues (Shanahan et al., 2019; Xiao & Benbasat, 2018; Zheng et al., 2019).
-- **Expansion Phase (2021–2023)**: Rapid acceleration totaling 266 unique records (66 in 2021; 94 in 2022; 106 in 2023; averaging 88.7 publications annually), catalyzed by the integration of deep neural networks, mobile social commerce, and pandemic-induced digital retail migration (Ampadu et al., 2022; Zhang et al., 2021; Zhu et al., 2023).
-- **Maturation and Generative Phase (2024–2026)**: High-velocity scholarly output totaling 1,098 unique records (255 in 2024; 391 in 2025; 442 in 2026, plus 10 early-access records; averaging 366.0 publications annually), driven by Generative AI, conversational recommender agents, livestreaming curation, and algorithmic dark patterns (Gallin & Portes, 2024; Lin, 2026; Pang et al., 2026; Shamim & Misra, 2025).
+Bibliometric performance analysis conducted strictly on our **866 final included studies** (2018–2026) reveals a rapid growth trajectory across three distinct developmental phases:
+- **Foundational Phase (2018–2020)**: Characterized by exploratory output totaling **34 studies** (3.9%; averaging 11.3 publications annually), focusing predominantly on collaborative filtering accuracy and early personalization cues (Shanahan et al., 2019; Xiao & Benbasat, 2018; Zheng et al., 2019).
+- **Expansion Phase (2021–2023)**: Rapid acceleration totaling **102 studies** (11.8%; averaging 34.0 publications annually), catalyzed by the integration of deep neural networks, mobile social commerce, and pandemic-induced digital retail migration (Ampadu et al., 2022; Hallikainen et al., 2022; Redine et al., 2022; Zhang et al., 2021; Zhu et al., 2023).
+- **Maturation and Generative Phase (2024–2026)**: High-velocity scholarly output totaling **730 studies** (84.3%; averaging 243.3 publications annually through November 2026), driven by Generative AI, conversational recommender agents, livestreaming curation, and algorithmic dark patterns (Gallin & Portes, 2024; Lin, 2026; Pang et al., 2026; Shamim & Misra, 2025).
 
-Table 1A summarizes the quantitative publication trajectory and Top 10 core journals across the dataset, confirming *Journal of Retailing and Consumer Services* ($n = 64$), *Journal of Theoretical and Applied Electronic Commerce Research* ($n = 48$), and *Sustainability* ($n = 37$) as the premier dissemination outlets.
+Table 1A presents the quantitative publication trajectory across the 866 included studies, while Table 1B ranks the Top 10 core dissemination outlets within the final corpus, confirming *Journal of Theoretical and Applied Electronic Commerce Research* ($n = 40$) and *Journal of Retailing and Consumer Services* ($n = 40$) as the leading academic venues.
 
 <div class="academic-figure-container" style="margin: 2rem 0; overflow-x: auto;">
-<div style="font-weight: 700; font-size: 1rem; color: #0f172a; margin-bottom: 0.5rem; text-align: left;">Table 1A: Annual Publication Trajectory and Top 10 Core Retailing &amp; IS Outlets (2018–2026)</div>
-<table style="width: 100%; border-collapse: collapse; font-size: 0.83rem; text-align: left; background: #ffffff; border-top: 2.5px solid #0f172a; border-bottom: 2.5px solid #0f172a;">
+<div style="font-weight: 700; font-size: 1rem; color: #0f172a; margin-bottom: 0.5rem; text-align: left;">Table 1A: Annual Publication Trajectory of the Final Included Corpus (N = 866, 2018–2026)</div>
+<table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; background: #ffffff; border-top: 2.5px solid #0f172a; border-bottom: 2.5px solid #0f172a;">
 <thead>
 <tr style="border-bottom: 1.5px solid #cbd5e1; background: #f8fafc;">
 <th style="padding: 9px 12px; font-weight: 800; color: #0f172a;">Developmental Phase</th>
-<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; text-align: center;">Deduplicated Records</th>
-<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; text-align: center;">Annual Avg.</th>
-<th style="padding: 9px 12px; font-weight: 800; color: #0f172a;">Rank &amp; Leading Academic Journal Outlet</th>
-<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; text-align: center;">Article Count</th>
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; text-align: center;">Included Articles (n)</th>
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; text-align: center;">Corpus Share (%)</th>
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; text-align: center;">Annual Average</th>
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a;">Dominant Technological &amp; Theoretical Focus</th>
 </tr>
 </thead>
 <tbody>
 <tr style="border-bottom: 1px solid #f1f5f9;">
 <td style="padding: 8px 12px;"><strong>Phase 1: Foundational (2018–2020)</strong></td>
-<td style="padding: 8px 12px; text-align: center;">77 (5.3%)</td>
-<td style="padding: 8px 12px; text-align: center;">25.7</td>
-<td style="padding: 8px 12px;">#1 <em>Journal of Retailing and Consumer Services</em></td>
-<td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">64</td>
+<td style="padding: 8px 12px; text-align: center;">34</td>
+<td style="padding: 8px 12px; text-align: center;">3.9%</td>
+<td style="padding: 8px 12px; text-align: center;">11.3</td>
+<td style="padding: 8px 12px;">Collaborative filtering accuracy, early personalization cues, static S-O-R</td>
 </tr>
 <tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;">
 <td style="padding: 8px 12px;"><strong>Phase 2: Expansion (2021–2023)</strong></td>
-<td style="padding: 8px 12px; text-align: center;">266 (18.5%)</td>
-<td style="padding: 8px 12px; text-align: center;">88.7</td>
-<td style="padding: 8px 12px;">#2 <em>J. Theoretical &amp; Applied Electronic Commerce Research</em></td>
-<td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">48</td>
+<td style="padding: 8px 12px; text-align: center;">102</td>
+<td style="padding: 8px 12px; text-align: center;">11.8%</td>
+<td style="padding: 8px 12px; text-align: center;">34.0</td>
+<td style="padding: 8px 12px;">Deep neural recommenders, serendipity, mobile social commerce</td>
 </tr>
 <tr style="border-bottom: 1px solid #f1f5f9;">
 <td style="padding: 8px 12px;"><strong>Phase 3: Generative AI (2024–2026)</strong></td>
-<td style="padding: 8px 12px; text-align: center;">1,098 (76.2%)</td>
-<td style="padding: 8px 12px; text-align: center;">366.0</td>
-<td style="padding: 8px 12px;">#3 <em>Sustainability</em> / #4 <em>Asia Pacific J. Marketing &amp; Logistics</em></td>
-<td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">37 / 29</td>
+<td style="padding: 8px 12px; text-align: center;">730</td>
+<td style="padding: 8px 12px; text-align: center;">84.3%</td>
+<td style="padding: 8px 12px; text-align: center;">243.3</td>
+<td style="padding: 8px 12px;">LLM conversational agents, livestreaming curation, dark patterns</td>
 </tr>
-<tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;">
-<td style="padding: 8px 12px;"><strong>Total Deduplicated Screening Pool</strong></td>
-<td style="padding: 8px 12px; text-align: center; font-weight: 800;">1,441 (100%)</td>
-<td style="padding: 8px 12px; text-align: center;">160.1</td>
-<td style="padding: 8px 12px;">#5 <em>Frontiers in Psychology</em> / #6 <em>IJRDM</em></td>
-<td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">24 / 21</td>
-</tr>
-<tr style="border-bottom: 1px solid #f1f5f9;">
-<td style="padding: 8px 12px;"><strong>Final Focal Synthesis Corpus</strong></td>
-<td style="padding: 8px 12px; text-align: center; font-weight: 800; color: #16a34a;">866 (Included)</td>
-<td style="padding: 8px 12px; text-align: center;">96.2</td>
-<td style="padding: 8px 12px;">#7 <em>Int. J. Consumer Studies</em> / #8 <em>IJHCI</em> / #9 <em>Cogent B&amp;M</em> / #10 <em>JBR</em></td>
-<td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">20 / 17 / 17 / 15</td>
+<tr style="border-bottom: 1px solid #f1f5f9; background: #f8fafc;">
+<td style="padding: 8px 12px;"><strong>Total Final Synthesis Corpus</strong></td>
+<td style="padding: 8px 12px; text-align: center; font-weight: 800; color: #16a34a;">866</td>
+<td style="padding: 8px 12px; text-align: center; font-weight: 800;">100.0%</td>
+<td style="padding: 8px 12px; text-align: center; font-weight: 800;">96.2</td>
+<td style="padding: 8px 12px;">Integrated Dual-Path S-O-R and Self-Regulation Boundaries</td>
 </tr>
 </tbody>
 </table>
-<div style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; text-align: left;"><em>Note</em>: Counts derived directly from the deduplicated corpus ($N=1,441$) across 2018–2026 prior to full-text eligibility attrition ($n=575$ excluded across screening and eligibility stages, yielding $N=866$ focal articles).</div>
+<div style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; text-align: left;"><em>Note</em>: Publication counts computed strictly on the final eligible corpus ($N = 866$) retrieved through November 2026.</div>
 </div>
 
-Table 1B identifies the top 10 most influential scholarly articles within our 866-article focal corpus, ranked by total global citations, normalized impact, and study classification.
+<div class="academic-figure-container" style="margin: 2rem 0; overflow-x: auto;">
+<div style="font-weight: 700; font-size: 1rem; color: #0f172a; margin-bottom: 0.5rem; text-align: left;">Table 1B: Top 10 Core Academic Journal Outlets in the Final Synthesis Corpus (N = 866)</div>
+<table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; background: #ffffff; border-top: 2.5px solid #0f172a; border-bottom: 2.5px solid #0f172a;">
+<thead>
+<tr style="border-bottom: 1.5px solid #cbd5e1; background: #f8fafc;">
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; width: 10%;">Rank</th>
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; width: 55%;">Academic Journal Outlet</th>
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; text-align: center; width: 18%;">Articles (n)</th>
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; text-align: center; width: 17%;">Corpus Share (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px 12px; font-weight: 700;">#1</td><td style="padding: 8px 12px;"><em>Journal of Theoretical and Applied Electronic Commerce Research</em></td><td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">40</td><td style="padding: 8px 12px; text-align: center;">4.6%</td></tr>
+<tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;"><td style="padding: 8px 12px; font-weight: 700;">#2</td><td style="padding: 8px 12px;"><em>Journal of Retailing and Consumer Services</em></td><td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">40</td><td style="padding: 8px 12px; text-align: center;">4.6%</td></tr>
+<tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px 12px; font-weight: 700;">#3</td><td style="padding: 8px 12px;"><em>Asia Pacific Journal of Marketing and Logistics</em></td><td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">23</td><td style="padding: 8px 12px; text-align: center;">2.7%</td></tr>
+<tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;"><td style="padding: 8px 12px; font-weight: 700;">#4</td><td style="padding: 8px 12px;"><em>International Journal of Retail &amp; Distribution Management</em></td><td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">18</td><td style="padding: 8px 12px; text-align: center;">2.1%</td></tr>
+<tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px 12px; font-weight: 700;">#5</td><td style="padding: 8px 12px;"><em>Frontiers in Psychology</em></td><td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">16</td><td style="padding: 8px 12px; text-align: center;">1.8%</td></tr>
+<tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;"><td style="padding: 8px 12px; font-weight: 700;">#6</td><td style="padding: 8px 12px;"><em>Sustainability</em></td><td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">15</td><td style="padding: 8px 12px; text-align: center;">1.7%</td></tr>
+<tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px 12px; font-weight: 700;">#7</td><td style="padding: 8px 12px;"><em>International Journal of Human-Computer Interaction</em></td><td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">14</td><td style="padding: 8px 12px; text-align: center;">1.6%</td></tr>
+<tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;"><td style="padding: 8px 12px; font-weight: 700;">#8</td><td style="padding: 8px 12px;"><em>Journal of Business Research</em></td><td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">11</td><td style="padding: 8px 12px; text-align: center;">1.3%</td></tr>
+<tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 8px 12px; font-weight: 700;">#9</td><td style="padding: 8px 12px;"><em>Cogent Business &amp; Management</em></td><td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">10</td><td style="padding: 8px 12px; text-align: center;">1.2%</td></tr>
+<tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;"><td style="padding: 8px 12px; font-weight: 700;">#10</td><td style="padding: 8px 12px;"><em>International Journal of Consumer Studies</em></td><td style="padding: 8px 12px; text-align: center; font-weight: 700; color: #0284c7;">10</td><td style="padding: 8px 12px; text-align: center;">1.2%</td></tr>
+</tbody>
+</table>
+<div style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; text-align: left;"><em>Note</em>: Counts reflect outlet frequencies within the final included corpus ($N = 866$).</div>
+</div>
+
+Table 1C identifies the top 10 most influential scholarly articles within our 866-article focal corpus, ranked by total global citations, normalized impact, and study classification.
 
 <div class="academic-figure-container" style="margin: 2rem 0; overflow-x: auto;">
-<div style="font-weight: 700; font-size: 1rem; color: #0f172a; margin-bottom: 0.5rem; text-align: left;">Table 1B: Top 10 Most Influential Articles in AI Recommender Systems and Consumer Impulse Buying</div>
+<div style="font-weight: 700; font-size: 1rem; color: #0f172a; margin-bottom: 0.5rem; text-align: left;">Table 1C: Top 10 Most Influential Articles in AI Recommender Systems and Consumer Impulse Buying</div>
 <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; background: #ffffff; border-top: 2.5px solid #0f172a; border-bottom: 2.5px solid #0f172a;">
 <thead>
 <tr style="border-bottom: 1.5px solid #cbd5e1; background: #f8fafc;">
@@ -352,19 +372,19 @@ Detailed thematic analysis reveals the intellectual core of each cluster:
 
 1. **Cluster 1 (Red): Algorithmic Recommendation Stimuli & System Architecture**  
    - *Core Keywords*: `artificial intelligence`, `recommender system`, `collaborative filtering`, `machine learning`, `perceived personalization`, `algorithmic curation`, `novelty`, `serendipity`.  
-   - *Thematic Essence*: This cluster represents the technological foundation of algorithmic commerce. It investigates how predictive architectures translate consumer browsing histories, vector embeddings, and real-time behavioral signals into personalized product feeds (Al-Natour et al., 2011; Ampadu et al., 2022; Xiao & Benbasat, 2007). Extant studies focus heavily on the trade-off between **algorithmic accuracy** (precision matching) and **serendipity** (unexpected discovery), proving that excessive accuracy leads to repetitive "filter bubbles" that suppress impulsive exploration, whereas serendipitous recommendations spark curiosity (Zhang et al., 2021).
+   - *Thematic Essence*: This cluster represents the technological foundation of algorithmic commerce. It investigates how predictive architectures translate consumer browsing histories, vector embeddings, and real-time behavioral signals into personalized product feeds (Al-Natour et al., 2011; Ampadu et al., 2022; Hu et al., 2025; Xiao & Benbasat, 2007). Extant studies focus heavily on the trade-off between **algorithmic accuracy** (precision matching) and **serendipity** (unexpected discovery), proving that excessive accuracy leads to repetitive "filter bubbles" that suppress impulsive exploration, whereas serendipitous and diverse recommendations spark curiosity (Lo et al., 2026; Satinet et al., 2024; Satinet et al., 2025; Wang et al., 2026; Xin et al., 2026; Yi et al., 2022; Yin et al., 2025; Zhang et al., 2021).
 
 2. **Cluster 2 (Green): Cognitive Organism & Cumulative E-Satisfaction**  
    - *Core Keywords*: `customer satisfaction`, `e-satisfaction`, `trust`, `cognitive fit`, `perceived usefulness`, `cognitive fluency`, `perceived value`.  
-   - *Thematic Essence*: Grounded in Cognitive Fit Theory (Vessey, 1991) and Oliver's (1980, 1993) Expectancy-Disconfirmation Model, this cluster examines the cognitive evaluations formed by consumers during algorithmic interactions. When recommendation agents present items that match the user's mental schema with minimal search friction, consumers experience heightened **cognitive fluency** and operational ease (Gallin & Portes, 2024; Shanahan et al., 2019). This appraisal generates **cumulative e-satisfaction (ESAT)**, establishing institutional trust and lowering perceived transactional risk (Spreng et al., 1996).
+   - *Thematic Essence*: Grounded in Cognitive Fit Theory (Vessey, 1991) and Oliver's (1980, 1993) Expectancy-Disconfirmation Model, this cluster examines the cognitive evaluations formed by consumers during algorithmic interactions. When recommendation agents present items that match the user's mental schema with minimal search friction, consumers experience heightened **cognitive fluency** and operational ease (Florea et al., 2025; Gallin & Portes, 2024; Ngo et al., 2025; Shanahan et al., 2019). This appraisal generates **cumulative e-satisfaction (ESAT)**, establishing institutional trust and lowering perceived transactional risk across omnichannel and sustainability-oriented retail interfaces (Nigam et al., 2022; Sharma & Garg, 2025; Spreng et al., 1996; Yin et al., 2022).
 
 3. **Cluster 3 (Blue): Affective Organism & Impulsive Behavioral Response**  
    - *Core Keywords*: `impulse buying`, `online impulse buying`, `urge to buy impulsively`, `emotional arousal`, `pleasure`, `flow state`, `hedonic consumption`, `spontaneous purchase`.  
-   - *Thematic Essence*: Rooted in environmental psychology (Mehrabian & Russell, 1974) and classic impulse buying theory (Beatty & Ferrell, 1998; Rook & Fisher, 1995), this cluster investigates the visceral, emotional reactions triggered by digital shopping environments. Empirical research demonstrates that exposure to dynamic algorithmic feeds induces high-arousal emotional states, characterized by heightened excitement, visual absorption, and perceived scarcity (Miao et al., 2021; Miranda et al., 2024; Zheng et al., 2019). This affective surge produces an immediate **urge to buy impulsively (UBI)**, bypassing deliberate price and budget evaluations.
+   - *Thematic Essence*: Rooted in environmental psychology (Mehrabian & Russell, 1974) and classic impulse buying theory (Beatty & Ferrell, 1998; Rook & Fisher, 1995), this cluster investigates the visceral, emotional reactions triggered by digital shopping environments. Empirical research demonstrates that exposure to dynamic algorithmic feeds, livestreaming cues, and gamified immersive environments induces high-arousal emotional states characterized by heightened excitement, visual absorption, and perceived scarcity (Alawadh & Barnawi, 2025; Feng et al., 2024; Gong & Liu, 2024; Gong et al., 2026; Huang et al., 2024; Ma et al., 2025; Miao et al., 2021; Miranda et al., 2024; Ronda et al., 2026; Shi et al., 2026; Wang et al., 2024; Xin et al., 2025; Zhang & Zhang, 2024; Zheng et al., 2019; Zheng et al., 2025). This affective surge produces an immediate **urge to buy impulsively (UBI)**, bypassing deliberate price and budget evaluations.
 
 4. **Cluster 4 (Yellow): The Dark Side of Personalization: Algorithmic Surveillance, Privacy Reactance, and Self-Control Fatigue**  
    - *Core Keywords*: `privacy concerns`, `perceived surveillance`, `psychological reactance`, `cognitive dissonance`, `time pressure`, `ego depletion`, `consumer self-control`.  
-   - *Thematic Essence*: Crucially, our bibliometric mapping reveals a fourth, highly significant thematic cluster that has been overlooked by traditional reviews. This cluster examines the **dark side of algorithmic hyper-personalization**. When recommendations become excessively invasive, consumers experience the "creepiness factor" or perceived algorithmic surveillance, triggering Brehm's (1966) **psychological reactance** and skepticism (Komiak & Benbasat, 2006; Kumaran & Shobhana, 2026; Lau et al., 2026; Xiao & Benbasat, 2018). Furthermore, this cluster integrates Baumeister's (2002) Strength Model of Self-Control, showing that prolonged exposure to high-frequency algorithmic nudges induces decision fatigue and **ego depletion**, temporarily disabling consumer self-regulatory defenses (Akram et al., 2020; Kulal et al., 2026).
+   - *Thematic Essence*: Crucially, our bibliometric mapping reveals a fourth, highly significant thematic cluster that has been overlooked by traditional reviews. This cluster examines the **dark side of algorithmic hyper-personalization**. When recommendations become excessively invasive, consumers experience the "creepiness factor" or perceived algorithmic surveillance, triggering Brehm's (1966) **psychological reactance** and skepticism (Komiak & Benbasat, 2006; Kumaran & Shobhana, 2026; Lau et al., 2026; Xiao & Benbasat, 2018). Furthermore, this cluster integrates Baumeister's (2002) Strength Model of Self-Control, showing that prolonged exposure to high-frequency algorithmic nudges induces decision fatigue and **ego depletion**, temporarily disabling consumer self-regulatory defenses (Akram et al., 2020; Kulal et al., 2026; Zhang et al., 2026).
 
 ### 3.3. TCCM Synthesis Matrix of Landmark Empirical Studies (2020–2026)
 To synthesize empirical findings across the 866 focal studies, Table 2 structures verified empirical investigations published in leading journals between 2020 and 2026 according to the TCCM framework.
@@ -425,7 +445,7 @@ To synthesize empirical findings across the 866 focal studies, Table 2 structure
 <td style="padding: 9px 10px;">Empirical survey &amp; PLS-SEM. Validates how AI mechanisms sequentially alter internal organismic states to trigger impulse buying.</td>
 </tr>
 <tr style="border-bottom: 1px solid #f1f5f9;">
-<td style="padding: 9px 10px;"><strong>Do Xuan Nguyen et al. (2026)</strong><br><em>J. Retailing &amp; Consumer Serv.</em></td>
+<td style="padding: 9px 10px;"><strong>Do Xuan Nguyen & Nguyen (2026)</strong><br><em>J. Retailing &amp; Consumer Serv.</em></td>
 <td style="padding: 9px 10px;">Emotional &amp; Cognitive Resonance</td>
 <td style="padding: 9px 10px;">AI-driven e-commerce platforms (DOI: 10.1016/j.jretconser.2025.104646)</td>
 <td style="padding: 9px 10px;"><strong>S:</strong> AI-driven personalized curation<br><strong>O:</strong> Emotional &amp; cognitive resonance<br><strong>R:</strong> Impulsive buying conversion</td>
@@ -485,7 +505,7 @@ In environmental psychology, internal organism states mediate the translation of
 1. **The Cognitive Bridge (Cumulative E-Satisfaction)**: Cumulative e-satisfaction produces a psychological state of affective comfort and disarmed vigilance. When a shopper experiences heightened satisfaction with the algorithmic interface, perceived transaction risk diminishes, cognitive defense mechanisms soften, and trust peaks (Gallin & Portes, 2024; Oliver, 1993; Spreng et al., 1996). This psychological ease creates an open, receptive mindset that amplifies the spontaneous urge to buy impulsively.
 2. **The Affective Bridge (Emotional Arousal)**: Simultaneously, heightened emotional arousal directly stimulates visceral desire. Consumers experiencing hedonic excitement and flow states focus intensely on immediate gratification, diminishing attention to future budgetary constraints (Beatty & Ferrell, 1998; Verhagen & van Dolen, 2011).
 
-Thus, cumulative e-satisfaction and emotional arousal operate as complementary dual pathways: e-satisfaction disarms analytical skepticism, while emotional arousal supplies the motivational fuel (Do Xuan Nguyen et al., 2026). Therefore, we formally state both the direct and mediating propositions:
+Thus, cumulative e-satisfaction and emotional arousal operate as complementary dual pathways: e-satisfaction disarms analytical skepticism, while emotional arousal supplies the motivational fuel (Do Xuan Nguyen & Nguyen, 2026). Therefore, we formally state both the direct and mediating propositions:
 - **Proposition 4 (P4):** *Cumulative e-satisfaction positively influences the urge to buy impulsively by lowering perceived cognitive risk.*
 - **Proposition 4a (P4a - Cognitive Mediation):** *Cumulative e-satisfaction mediates the positive relationship between cognitive algorithmic stimuli (perceived personalization and recommendation accuracy) and the urge to buy impulsively.*
 - **Proposition 5 (P5):** *Emotional arousal positively influences the urge to buy impulsively by amplifying visceral hedonic desire.*
@@ -622,19 +642,16 @@ FOUNDATIONAL_REFS = [
     "- Zheng, X., Men, J., Yang, F., & Gong, X. (2019). Understanding impulse buying in mobile commerce: An investigation into the role of social support and credibility. *International Journal of Information Management*, 48, 233–243."
 ]
 
-# Load 65 real corpus references with DOIs
+# Load 43 pure APA 7th corpus references with DOIs
 corpus_ref_lines = []
 if os.path.exists(VERIFIED_REFS_PATH):
     with open(VERIFIED_REFS_PATH, "r", encoding="utf-8") as f:
         corpus_refs = json.load(f)
     for r in corpus_refs:
-        vol_str = f", {r['vol']}" if r['vol'] else ""
-        page_str = f", {r['pages']}" if r['pages'] else ""
-        line = f"- {r['authors']} ({r['year']}). {r['title']}. *{r['journal']}*{vol_str}{page_str}. https://doi.org/{r['doi']}"
-        corpus_ref_lines.append(line)
+        corpus_ref_lines.append(r["apa"])
 
 all_refs = sorted(list(set(FOUNDATIONAL_REFS + corpus_ref_lines)))
-print(f"  - Compiled {len(all_refs)} total verified references (including {len(corpus_ref_lines)} real 2018-2026 DOI articles).")
+print(f"  - Compiled {len(all_refs)} total verified pure APA 7th references (including {len(corpus_ref_lines)} real 2022-2026 DOI articles).")
 
 MODULE_6_TEXT = "## REFERENCES\n" + "\n".join(all_refs) + "\n"
 

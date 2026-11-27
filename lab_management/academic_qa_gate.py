@@ -140,6 +140,39 @@ class AcademicQAGate:
                 self.red_flags.append(f"RENDERING LEAK: Figure/Table block #{idx} contains blank lines that break marked.js HTML parsing.")
                 self.score -= 15
 
+    def audit_two_way_citations(self):
+        """Gate 6: Strict 1-to-1 Two-Way Citation Parity & Pure APA 7th Format."""
+        print("[CHECK 6] Auditing Two-Way Citation Parity & APA 7th Format...")
+        parts = re.split(r'^##\s+REFERENCES\b', self.text, flags=re.MULTILINE)
+        if len(parts) < 2:
+            self.red_flags.append("MISSING REFERENCES SECTION.")
+            self.score -= 20
+            return
+        body, refs_sec = parts[0], parts[1]
+
+        ref_lines = [l.strip() for l in refs_sec.strip().split('\n') if l.strip().startswith('-')]
+        uncited_refs = []
+        bad_apa_refs = []
+        for rl in ref_lines:
+            # Check for raw semicolon author separator
+            if ';' in rl.split('(')[0]:
+                bad_apa_refs.append(rl[:60])
+            # Extract first surname and year
+            m_year = re.search(r'\((\d{4})\)', rl)
+            if m_year:
+                yr = m_year.group(1)
+                first_word = re.sub(r'^-\s*', '', rl).split(',')[0].split()[0].strip()
+                # Check if first_word and yr appear in body (both parenthetical and narrative forms)
+                if not re.search(r'\b' + re.escape(first_word) + r'[^\n]{0,40}\b' + yr + r'\b', body):
+                    uncited_refs.append(f"{first_word} ({yr})")
+
+        if bad_apa_refs:
+            self.red_flags.append(f"APA FORMAT ERROR: Found {len(bad_apa_refs)} references using semicolons ';' instead of APA 7th commas & '&' (e.g. {bad_apa_refs[0]}).")
+            self.score -= 15
+        if uncited_refs:
+            self.red_flags.append(f"REFERENCE PADDING ERROR: Found {len(uncited_refs)} uncited references in References list (e.g. {uncited_refs[:5]}).")
+            self.score -= 20
+
     def run_full_audit(self):
         print("=" * 80)
         print("🔬 H-AI ResearchLAB | CORE ACADEMIC QUALITY AUDIT")
@@ -149,6 +182,7 @@ class AcademicQAGate:
         self.audit_hypotheses_vs_propositions()
         self.audit_citation_hallucinations_and_typos()
         self.audit_references_and_rendering()
+        self.audit_two_way_citations()
 
         self.score = max(0, self.score)
         print("\n" + "=" * 80)
