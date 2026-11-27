@@ -1,0 +1,1269 @@
+{
+  "prisma": {
+    "identified_dimensions": 1441,
+    "identified_openalex": 678,
+    "total_identified": 2119,
+    "duplicates_removed": 92,
+    "unique_screened": 2027,
+    "excluded_non_journal": 65,
+    "excluded_off_topic": 922,
+    "excluded_meta_window": 24,
+    "total_excluded": 1011,
+    "final_included": 1016
+  },
+  "annual_trend": [
+    {
+      "year": 2018,
+      "count": 5,
+      "pct": 0.49,
+      "cum_pct": 0.49
+    },
+    {
+      "year": 2019,
+      "count": 13,
+      "pct": 1.28,
+      "cum_pct": 1.77
+    },
+    {
+      "year": 2020,
+      "count": 19,
+      "pct": 1.87,
+      "cum_pct": 3.64
+    },
+    {
+      "year": 2021,
+      "count": 24,
+      "pct": 2.36,
+      "cum_pct": 6.0
+    },
+    {
+      "year": 2022,
+      "count": 57,
+      "pct": 5.61,
+      "cum_pct": 11.61
+    },
+    {
+      "year": 2023,
+      "count": 66,
+      "pct": 6.5,
+      "cum_pct": 18.11
+    },
+    {
+      "year": 2024,
+      "count": 148,
+      "pct": 14.57,
+      "cum_pct": 32.68
+    },
+    {
+      "year": 2025,
+      "count": 292,
+      "pct": 28.74,
+      "cum_pct": 61.42
+    },
+    {
+      "year": 2026,
+      "count": 392,
+      "pct": 38.58,
+      "cum_pct": 100.0
+    }
+  ],
+  "top_journals": [
+    {
+      "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
+      "count": 47,
+      "pct": 4.63,
+      "total_citations": 822
+    },
+    {
+      "journal": "Journal of Retailing and Consumer Services",
+      "count": 31,
+      "pct": 3.05,
+      "total_citations": 1836
+    },
+    {
+      "journal": "Frontiers in Psychology",
+      "count": 20,
+      "pct": 1.97,
+      "total_citations": 893
+    },
+    {
+      "journal": "Sustainability",
+      "count": 17,
+      "pct": 1.67,
+      "total_citations": 963
+    },
+    {
+      "journal": "Asia Pacific Journal of Marketing and Logistics",
+      "count": 17,
+      "pct": 1.67,
+      "total_citations": 183
+    },
+    {
+      "journal": "Psychology and Marketing",
+      "count": 12,
+      "pct": 1.18,
+      "total_citations": 1014
+    },
+    {
+      "journal": "Journal of Consumer Behaviour",
+      "count": 12,
+      "pct": 1.18,
+      "total_citations": 249
+    },
+    {
+      "journal": "Behavioral Sciences",
+      "count": 11,
+      "pct": 1.08,
+      "total_citations": 278
+    },
+    {
+      "journal": "International Journal of Retail & Distribution Management",
+      "count": 11,
+      "pct": 1.08,
+      "total_citations": 231
+    },
+    {
+      "journal": "Journal of Business Research",
+      "count": 11,
+      "pct": 1.08,
+      "total_citations": 1245
+    }
+  ],
+  "top_cited": [
+    {
+      "in_text": "Blut et al. (2021)",
+      "paren": "(Blut et al., 2021)",
+      "year": "2021",
+      "first_surname": "Blut",
+      "ref_line": "Blut, M., Wang, C., Wünderlich, N. V., & Brock, C. (2021). Understanding anthropomorphism in service provision: a meta-analysis of physical robots, chatbots, and other AI. *Journal of the Academy of Marketing Science*, *49*(4), 632-658. https://doi.org/10.1007/s11747-020-00762-y",
+      "doi": "10.1007/s11747-020-00762-y",
+      "citations": 1283,
+      "journal": "Journal of the Academy of Marketing Science",
+      "title": "Understanding anthropomorphism in service provision: a meta-analysis of physical robots, chatbots, and other AI"
+    },
+    {
+      "in_text": "Ooi et al. (2023)",
+      "paren": "(Ooi et al., 2023)",
+      "year": "2023",
+      "first_surname": "Ooi",
+      "ref_line": "Ooi, K., Tan, G. W., Al‐Emran, M., Al-Sharafi, M. A., Căpățînă, A., Chakraborty, A., ... Dwivedi, Y. K. (2023). The Potential of Generative Artificial Intelligence Across Disciplines: Perspectives and Future Directions. *Journal of Computer Information Systems*, *65*(1), 76-107. https://doi.org/10.1080/08874417.2023.2261010",
+      "doi": "10.1080/08874417.2023.2261010",
+      "citations": 1128,
+      "journal": "Journal of Computer Information Systems",
+      "title": "The Potential of Generative Artificial Intelligence Across Disciplines: Perspectives and Future Directions"
+    },
+    {
+      "in_text": "Ashfaq et al. (2020)",
+      "paren": "(Ashfaq et al., 2020)",
+      "year": "2020",
+      "first_surname": "Ashfaq",
+      "ref_line": "Ashfaq, M., Yun, J., Yu, S., & Loureiro, S. M. C. (2020). I, Chatbot: Modeling the determinants of users’ satisfaction and continuance intention of AI-powered service agents. *Telematics and Informatics*, *54*, 101473. https://doi.org/10.1016/j.tele.2020.101473",
+      "doi": "10.1016/j.tele.2020.101473",
+      "citations": 1087,
+      "journal": "Telematics and Informatics",
+      "title": "I, Chatbot: Modeling the determinants of users’ satisfaction and continuance intention of AI-powered service agents"
+    },
+    {
+      "in_text": "Lo et al. (2022)",
+      "paren": "(Lo et al., 2022)",
+      "year": "2022",
+      "first_surname": "Lo",
+      "ref_line": "Lo, P., Dwivedi, Y. K., Tan, G. W., Ooi, K., Aw, E. C., & Metri, B. A. (2022). Why do consumers buy impulsively during live streaming? A deep learning-based dual-stage SEM-ANN analysis. *Journal of Business Research*, *147*, 325-337. https://doi.org/10.1016/j.jbusres.2022.04.013",
+      "doi": "10.1016/j.jbusres.2022.04.013",
+      "citations": 577,
+      "journal": "Journal of Business Research",
+      "title": "Why do consumers buy impulsively during live streaming? A deep learning-based dual-stage SEM-ANN analysis"
+    },
+    {
+      "in_text": "Grewal et al. (2024)",
+      "paren": "(Grewal et al., 2024)",
+      "year": "2024",
+      "first_surname": "Grewal",
+      "ref_line": "Grewal, D., Satornino, C. B., Davenport, T. H., & Guha, A. (2024). How generative AI Is shaping the future of marketing. *Journal of the Academy of Marketing Science*, *53*(3), 702-722. https://doi.org/10.1007/s11747-024-01064-3",
+      "doi": "10.1007/s11747-024-01064-3",
+      "citations": 560,
+      "journal": "Journal of the Academy of Marketing Science",
+      "title": "How generative AI Is shaping the future of marketing"
+    },
+    {
+      "in_text": "Huang and Rust (2022)",
+      "paren": "(Huang & Rust, 2022)",
+      "year": "2022",
+      "first_surname": "Huang",
+      "ref_line": "Huang, M., & Rust, R. T. (2022). A Framework for Collaborative Artificial Intelligence in Marketing. *Journal of Retailing*, *98*(2), 209-223. https://doi.org/10.1016/j.jretai.2021.03.001",
+      "doi": "10.1016/j.jretai.2021.03.001",
+      "citations": 500,
+      "journal": "Journal of Retailing",
+      "title": "A Framework for Collaborative Artificial Intelligence in Marketing"
+    },
+    {
+      "in_text": "Zhang et al. (2022)",
+      "paren": "(Zhang et al., 2022)",
+      "year": "2022",
+      "first_surname": "Zhang",
+      "ref_line": "Zhang, M., Liu, Y., Wang, Y., & Zhao, L. (2022). How to retain customers: Understanding the role of trust in live streaming commerce with a socio-technical perspective. *Computers in Human Behavior*, *127*, 107052. https://doi.org/10.1016/j.chb.2021.107052",
+      "doi": "10.1016/j.chb.2021.107052",
+      "citations": 492,
+      "journal": "Computers in Human Behavior",
+      "title": "How to retain customers: Understanding the role of trust in live streaming commerce with a socio-technical perspective"
+    },
+    {
+      "in_text": "Pillai et al. (2020)",
+      "paren": "(Pillai et al., 2020)",
+      "year": "2020",
+      "first_surname": "Pillai",
+      "ref_line": "Pillai, R., Sivathanu, B., & Dwivedi, Y. K. (2020). Shopping intention at AI-powered automated retail stores (AIPARS). *Journal of Retailing and Consumer Services*, *57*, 102207. https://doi.org/10.1016/j.jretconser.2020.102207",
+      "doi": "10.1016/j.jretconser.2020.102207",
+      "citations": 452,
+      "journal": "Journal of Retailing and Consumer Services",
+      "title": "Shopping intention at AI-powered automated retail stores (AIPARS)"
+    },
+    {
+      "in_text": "Xue et al. (2020)",
+      "paren": "(Xue et al., 2020)",
+      "year": "2020",
+      "first_surname": "Xue",
+      "ref_line": "Xue, J., Liang, X., Xie, T., & Wang, H. (2020). See now, act now: How to interact with customers to enhance social commerce engagement?. *Information & Management*, *57*(6), 103324. https://doi.org/10.1016/j.im.2020.103324",
+      "doi": "10.1016/j.im.2020.103324",
+      "citations": 438,
+      "journal": "Information & Management",
+      "title": "See now, act now: How to interact with customers to enhance social commerce engagement?"
+    },
+    {
+      "in_text": "Cheng et al. (2021)",
+      "paren": "(Cheng et al., 2021)",
+      "year": "2021",
+      "first_surname": "Cheng",
+      "ref_line": "Cheng, X., Bao, Y., Zarifis, A., Gong, W., & Mou, J. (2021). Exploring consumers' response to text-based chatbots in e-commerce: the moderating role of task complexity and chatbot disclosure. *Internet Research*, *32*(2), 496-517. https://doi.org/10.1108/intr-08-2020-0460",
+      "doi": "10.1108/intr-08-2020-0460",
+      "citations": 425,
+      "journal": "Internet Research",
+      "title": "Exploring consumers' response to text-based chatbots in e-commerce: the moderating role of task complexity and chatbot disclosure"
+    },
+    {
+      "in_text": "Lv et al. (2021)",
+      "paren": "(Lv et al., 2021)",
+      "year": "2021",
+      "first_surname": "Lv",
+      "ref_line": "Lv, X., Liu, Y., Luo, J., Liu, Y., & Li, C. (2021). Does a cute artificial intelligence assistant soften the blow? The impact of cuteness on customer tolerance of assistant service failure. *Annals of Tourism Research*, *87*, 103114. https://doi.org/10.1016/j.annals.2020.103114",
+      "doi": "10.1016/j.annals.2020.103114",
+      "citations": 387,
+      "journal": "Annals of Tourism Research",
+      "title": "Does a cute artificial intelligence assistant soften the blow? The impact of cuteness on customer tolerance of assistant service failure"
+    },
+    {
+      "in_text": "Chen et al. (2022)",
+      "paren": "(Chen et al., 2022)",
+      "year": "2022",
+      "first_surname": "Chen",
+      "ref_line": "Chen, D., Esperança, J. P., & Wang, S. (2022). The Impact of Artificial Intelligence on Firm Performance: An Application of the Resource-Based View to e-Commerce Firms. *Frontiers in Psychology*, *13*, 884830-884830. https://doi.org/10.3389/fpsyg.2022.884830",
+      "doi": "10.3389/fpsyg.2022.884830",
+      "citations": 352,
+      "journal": "Frontiers in Psychology",
+      "title": "The Impact of Artificial Intelligence on Firm Performance: An Application of the Resource-Based View to e-Commerce Firms"
+    },
+    {
+      "in_text": "Seele et al. (2019)",
+      "paren": "(Seele et al., 2019)",
+      "year": "2019",
+      "first_surname": "Seele",
+      "ref_line": "Seele, P., Dierksmeier, C., Hofstetter, R., & Schultz, M. D. (2019). Mapping the Ethicality of Algorithmic Pricing: A Review of Dynamic and Personalized Pricing. *Journal of Business Ethics*, *170*(4), 697-719. https://doi.org/10.1007/s10551-019-04371-w",
+      "doi": "10.1007/s10551-019-04371-w",
+      "citations": 296,
+      "journal": "Journal of Business Ethics",
+      "title": "Mapping the Ethicality of Algorithmic Pricing: A Review of Dynamic and Personalized Pricing"
+    },
+    {
+      "in_text": "Riegger et al. (2020)",
+      "paren": "(Riegger et al., 2020)",
+      "year": "2020",
+      "first_surname": "Riegger",
+      "ref_line": "Riegger, A., Klein, J. F., Merfeld, K., & Henkel, S. (2020). Technology-enabled personalization in retail stores: Understanding drivers and barriers. *Journal of Business Research*, *123*, 140-155. https://doi.org/10.1016/j.jbusres.2020.09.039",
+      "doi": "10.1016/j.jbusres.2020.09.039",
+      "citations": 290,
+      "journal": "Journal of Business Research",
+      "title": "Technology-enabled personalization in retail stores: Understanding drivers and barriers"
+    },
+    {
+      "in_text": "Ma (2021)",
+      "paren": "(Ma, 2021)",
+      "year": "2021",
+      "first_surname": "Ma",
+      "ref_line": "Ma, Y. (2021). To shop or not: Understanding Chinese consumers’ live-stream shopping intentions from the perspectives of uses and gratifications, perceived network size, perceptions of digital celebrities, and shopping orientations. *Telematics and Informatics*, *59*, 101562. https://doi.org/10.1016/j.tele.2021.101562",
+      "doi": "10.1016/j.tele.2021.101562",
+      "citations": 259,
+      "journal": "Telematics and Informatics",
+      "title": "To shop or not: Understanding Chinese consumers’ live-stream shopping intentions from the perspectives of uses and gratifications, perceived network size, perceptions of digital celebrities, and shopping orientations"
+    }
+  ],
+  "recent_pool": [
+    {
+      "in_text": "Grewal et al. (2024)",
+      "paren": "(Grewal et al., 2024)",
+      "year": "2024",
+      "first_surname": "Grewal",
+      "ref_line": "Grewal, D., Satornino, C. B., Davenport, T. H., & Guha, A. (2024). How generative AI Is shaping the future of marketing. *Journal of the Academy of Marketing Science*, *53*(3), 702-722. https://doi.org/10.1007/s11747-024-01064-3",
+      "doi": "10.1007/s11747-024-01064-3",
+      "citations": 560,
+      "journal": "Journal of the Academy of Marketing Science",
+      "title": "How generative AI Is shaping the future of marketing"
+    },
+    {
+      "in_text": "Potwora et al. (2024)",
+      "paren": "(Potwora et al., 2024)",
+      "year": "2024",
+      "first_surname": "Potwora",
+      "ref_line": "Potwora, M., Vdovichena, O., Semchuk, D., Lipych, L., & Saienko, V. (2024). The use of artificial intelligence in marketing strategies: Automation, personalization and forecasting. *Journal of Management World*, *2024*(2), 41-49. https://doi.org/10.53935/jomw.v2024i2.275",
+      "doi": "10.53935/jomw.v2024i2.275",
+      "citations": 197,
+      "journal": "Journal of Management World",
+      "title": "The use of artificial intelligence in marketing strategies: Automation, personalization and forecasting"
+    },
+    {
+      "in_text": "Hollebeek et al. (2024)",
+      "paren": "(Hollebeek et al., 2024)",
+      "year": "2024",
+      "first_surname": "Hollebeek",
+      "ref_line": "Hollebeek, L. D., Menidjel, C., Sarstedt, M., Jansson, J., & Urbonavicius, S. (2024). Engaging consumers through artificially intelligent technologies: Systematic review, conceptual model, and further research. *Psychology and Marketing*, *41*(4), 880-898. https://doi.org/10.1002/mar.21957",
+      "doi": "10.1002/mar.21957",
+      "citations": 195,
+      "journal": "Psychology and Marketing",
+      "title": "Engaging consumers through artificially intelligent technologies: Systematic review, conceptual model, and further research"
+    },
+    {
+      "in_text": "Ajiga et al. (2024)",
+      "paren": "(Ajiga et al., 2024)",
+      "year": "2024",
+      "first_surname": "Ajiga",
+      "ref_line": "Ajiga, D. I., Ndubuisi, N. L., Asuzu, O. F., Owolabi, O. R., Tula, S. T., & Adeleye, R. A. (2024). AI-DRIVEN PREDICTIVE ANALYTICS IN RETAIL: A REVIEW OF EMERGING TRENDS AND CUSTOMER ENGAGEMENT STRATEGIES. *International Journal of Management & Entrepreneurship Research*, *6*(2), 307-321. https://doi.org/10.51594/ijmer.v6i2.772",
+      "doi": "10.51594/ijmer.v6i2.772",
+      "citations": 165,
+      "journal": "International Journal of Management & Entrepreneurship Research",
+      "title": "AI-DRIVEN PREDICTIVE ANALYTICS IN RETAIL: A REVIEW OF EMERGING TRENDS AND CUSTOMER ENGAGEMENT STRATEGIES"
+    },
+    {
+      "in_text": "Huang et al. (2024)",
+      "paren": "(Huang et al., 2024)",
+      "year": "2024",
+      "first_surname": "Huang",
+      "ref_line": "Huang, A., Ozturk, A. B., Zhang, T., de la Mora Velasco, E., & Haney, A. (2024). Unpacking AI for hospitality and tourism services: Exploring the role of perceived enjoyment on future use intentions. *International Journal of Hospitality Management*, *119*, 103693. https://doi.org/10.1016/j.ijhm.2024.103693",
+      "doi": "10.1016/j.ijhm.2024.103693",
+      "citations": 163,
+      "journal": "International Journal of Hospitality Management",
+      "title": "Unpacking AI for hospitality and tourism services: Exploring the role of perceived enjoyment on future use intentions"
+    },
+    {
+      "in_text": "Bunea et al. (2024)",
+      "paren": "(Bunea et al., 2024)",
+      "year": "2024",
+      "first_surname": "Bunea",
+      "ref_line": "Bunea, O., Corboș, R., Mișu, S. I., Triculescu, M., & Trifu, A. (2024). The Next-Generation Shopper: A Study of Generation-Z Perceptions of AI in Online Shopping. *Journal of theoretical and applied electronic commerce research*, *19*(4), 2605-2629. https://doi.org/10.3390/jtaer19040125",
+      "doi": "10.3390/jtaer19040125",
+      "citations": 138,
+      "journal": "Journal of theoretical and applied electronic commerce research",
+      "title": "The Next-Generation Shopper: A Study of Generation-Z Perceptions of AI in Online Shopping"
+    },
+    {
+      "in_text": "Yin et al. (2025)",
+      "paren": "(Yin et al., 2025)",
+      "year": "2025",
+      "first_surname": "Yin",
+      "ref_line": "Yin, J., Qiu, X., & Wang, Y. (2025). The Impact of AI-Personalized Recommendations on Clicking Intentions: Evidence from Chinese E-Commerce. *Journal of Theoretical and Applied Electronic Commerce Research*, *20*(1), 21. https://doi.org/10.3390/jtaer20010021",
+      "doi": "10.3390/jtaer20010021",
+      "citations": 128,
+      "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
+      "title": "The Impact of AI-Personalized Recommendations on Clicking Intentions: Evidence from Chinese E-Commerce"
+    },
+    {
+      "in_text": "Cloarec et al. (2024)",
+      "paren": "(Cloarec et al., 2024)",
+      "year": "2024",
+      "first_surname": "Cloarec",
+      "ref_line": "Cloarec, J., Meyer‐Waarden, L., & Munzel, A. (2024). Transformative privacy calculus: Conceptualizing the personalization‐privacy paradox on social media. *Psychology and Marketing*, *41*(7), 1574-1596. https://doi.org/10.1002/mar.21998",
+      "doi": "10.1002/mar.21998",
+      "citations": 123,
+      "journal": "Psychology and Marketing",
+      "title": "Transformative privacy calculus: Conceptualizing the personalization‐privacy paradox on social media"
+    },
+    {
+      "in_text": "Hassan et al. (2025)",
+      "paren": "(Hassan et al., 2025)",
+      "year": "2025",
+      "first_surname": "Hassan",
+      "ref_line": "Hassan, N., Abdelraouf, M., & El-Shihy, D. (2025). The moderating role of personalized recommendations in the trust–satisfaction–loyalty relationship: an empirical study of AI-driven e-commerce. *Future Business Journal*, *11*(1), 66. https://doi.org/10.1186/s43093-025-00476-z",
+      "doi": "10.1186/s43093-025-00476-z",
+      "citations": 120,
+      "journal": "Future Business Journal",
+      "title": "The moderating role of personalized recommendations in the trust–satisfaction–loyalty relationship: an empirical study of AI-driven e-commerce"
+    },
+    {
+      "in_text": "Lopes et al. (2024)",
+      "paren": "(Lopes et al., 2024)",
+      "year": "2024",
+      "first_surname": "Lopes",
+      "ref_line": "Lopes, J. M., Silva, L., & Massano‐Cardoso, I. (2024). AI Meets the Shopper: Psychosocial Factors in Ease of Use and Their Effect on E-Commerce Purchase Intention. *Behavioral Sciences*, *14*(7), 616-616. https://doi.org/10.3390/bs14070616",
+      "doi": "10.3390/bs14070616",
+      "citations": 120,
+      "journal": "Behavioral Sciences",
+      "title": "AI Meets the Shopper: Psychosocial Factors in Ease of Use and Their Effect on E-Commerce Purchase Intention"
+    },
+    {
+      "in_text": "Luo et al. (2024)",
+      "paren": "(Luo et al., 2024)",
+      "year": "2024",
+      "first_surname": "Luo",
+      "ref_line": "Luo, X., Cheah, J., Lim, X., Ramayah, T., & Dwivedi, Y. K. (2024). Inducing shoppers’ impulsive buying tendency in live-streaming: integrating signaling theory with social exchange theory. *Internet Research*, *35*(1), 318-348. https://doi.org/10.1108/intr-04-2023-0260",
+      "doi": "10.1108/intr-04-2023-0260",
+      "citations": 94,
+      "journal": "Internet Research",
+      "title": "Inducing shoppers’ impulsive buying tendency in live-streaming: integrating signaling theory with social exchange theory"
+    },
+    {
+      "in_text": "Huang et al. (2024)",
+      "paren": "(Huang et al., 2024)",
+      "year": "2024",
+      "first_surname": "Huang",
+      "ref_line": "Huang, Q., Dastane, O., Cham, T., & Cheah, J. (2024). Is ‘she’ more impulsive (to pleasure) than ‘him’ during livestream e-commerce shopping?. *Journal of Retailing and Consumer Services*, *78*, 103707. https://doi.org/10.1016/j.jretconser.2024.103707",
+      "doi": "10.1016/j.jretconser.2024.103707",
+      "citations": 91,
+      "journal": "Journal of Retailing and Consumer Services",
+      "title": "Is ‘she’ more impulsive (to pleasure) than ‘him’ during livestream e-commerce shopping?"
+    },
+    {
+      "in_text": "Karami et al. (2025)",
+      "paren": "(Karami et al., 2025)",
+      "year": "2025",
+      "first_surname": "Karami",
+      "ref_line": "Karami, A., Shemshaki, M., & Ghazanfar, M. A. (2025). Exploring the Ethical Implications of AI-Powered Personalization in Digital Marketing. *Data Intelligence*, *7*(4), 1035-1084. https://doi.org/10.3724/2096-7004.di.2024.0055",
+      "doi": "10.3724/2096-7004.di.2024.0055",
+      "citations": 91,
+      "journal": "Data Intelligence",
+      "title": "Exploring the Ethical Implications of AI-Powered Personalization in Digital Marketing"
+    },
+    {
+      "in_text": "Feng et al. (2024)",
+      "paren": "(Feng et al., 2024)",
+      "year": "2024",
+      "first_surname": "Feng",
+      "ref_line": "Feng, Z., Al Mamun, A., Masukujjaman, M., Wu, M., & Yang, Q. (2024). Impulse buying behavior during livestreaming: Moderating effects of scarcity persuasion and price perception. *Heliyon*, *10*(7), e28347. https://doi.org/10.1016/j.heliyon.2024.e28347",
+      "doi": "10.1016/j.heliyon.2024.e28347",
+      "citations": 88,
+      "journal": "Heliyon",
+      "title": "Impulse buying behavior during livestreaming: Moderating effects of scarcity persuasion and price perception"
+    },
+    {
+      "in_text": "An and Ngo (2025)",
+      "paren": "(An & Ngo, 2025)",
+      "year": "2025",
+      "first_surname": "An",
+      "ref_line": "An, G. K., & Ngo, T. T. A. (2025). AI-powered personalized advertising and purchase intention in Vietnam’s digital landscape: The role of trust, relevance, and usefulness. *Journal of Open Innovation: Technology, Market, and Complexity*, *11*(3), 100580. https://doi.org/10.1016/j.joitmc.2025.100580",
+      "doi": "10.1016/j.joitmc.2025.100580",
+      "citations": 87,
+      "journal": "Journal of Open Innovation: Technology, Market, and Complexity",
+      "title": "AI-powered personalized advertising and purchase intention in Vietnam’s digital landscape: The role of trust, relevance, and usefulness"
+    },
+    {
+      "in_text": "Husairi and Rossi (2024)",
+      "paren": "(Husairi & Rossi, 2024)",
+      "year": "2024",
+      "first_surname": "Husairi",
+      "ref_line": "Husairi, M. A., & Rossi, P. (2024). Delegation of purchasing tasks to AI: The role of perceived choice and decision autonomy. *Decision Support Systems*, *179*, 114166. https://doi.org/10.1016/j.dss.2023.114166",
+      "doi": "10.1016/j.dss.2023.114166",
+      "citations": 85,
+      "journal": "Decision Support Systems",
+      "title": "Delegation of purchasing tasks to AI: The role of perceived choice and decision autonomy"
+    },
+    {
+      "in_text": "Dai and Liu (2024)",
+      "paren": "(Dai & Liu, 2024)",
+      "year": "2024",
+      "first_surname": "Dai",
+      "ref_line": "Dai, X., & Liu, Q. (2024). Impact of artificial intelligence on consumer buying behaviors: Study about the online retail purchase. *Journal of Infrastructure Policy and Development*, *8*(9), 7700-7700. https://doi.org/10.24294/jipd.v8i9.7700",
+      "doi": "10.24294/jipd.v8i9.7700",
+      "citations": 85,
+      "journal": "Journal of Infrastructure Policy and Development",
+      "title": "Impact of artificial intelligence on consumer buying behaviors: Study about the online retail purchase"
+    },
+    {
+      "in_text": "Yeo et al. (2025)",
+      "paren": "(Yeo et al., 2025)",
+      "year": "2025",
+      "first_surname": "Yeo",
+      "ref_line": "Yeo, T. E. D., Chu, T. H., & Li, Q. (2025). How Persuasive Is Personalized Advertising? A Meta-Analytic Review of Experimental Evidence of the Effects of Personalization on Ad Effectiveness. *Journal of Advertising Research*, *65*(4), 616-631. https://doi.org/10.1080/00218499.2025.2467763",
+      "doi": "10.1080/00218499.2025.2467763",
+      "citations": 78,
+      "journal": "Journal of Advertising Research",
+      "title": "How Persuasive Is Personalized Advertising? A Meta-Analytic Review of Experimental Evidence of the Effects of Personalization on Ad Effectiveness"
+    },
+    {
+      "in_text": "Chen et al. (2024)",
+      "paren": "(Chen et al., 2024)",
+      "year": "2024",
+      "first_surname": "Chen",
+      "ref_line": "Chen, Y., Qin, Z., Yan, Y., & Huang, Y. (2024). The Power of Influencers: How Does Influencer Marketing Shape Consumers’ Purchase Intentions?. *Sustainability*, *16*(13), 5471. https://doi.org/10.3390/su16135471",
+      "doi": "10.3390/su16135471",
+      "citations": 77,
+      "journal": "Sustainability",
+      "title": "The Power of Influencers: How Does Influencer Marketing Shape Consumers’ Purchase Intentions?"
+    },
+    {
+      "in_text": "Sun and Tang (2024)",
+      "paren": "(Sun & Tang, 2024)",
+      "year": "2024",
+      "first_surname": "Sun",
+      "ref_line": "Sun, L., & Tang, Y. (2024). Avatar effect of AI ‐enabled virtual streamers on consumer purchase intention in e‐commerce livestreaming. *Journal of Consumer Behaviour*, *23*(6), 2999-3010. https://doi.org/10.1002/cb.2389",
+      "doi": "10.1002/cb.2389",
+      "citations": 77,
+      "journal": "Journal of Consumer Behaviour",
+      "title": "Avatar effect of AI ‐enabled virtual streamers on consumer purchase intention in e‐commerce livestreaming"
+    },
+    {
+      "in_text": "Sharma and Fatima (2024)",
+      "paren": "(Sharma & Fatima, 2024)",
+      "year": "2024",
+      "first_surname": "Sharma",
+      "ref_line": "Sharma, N., & Fatima, J. (2024). Influence of perceived value on omnichannel usage: Mediating and moderating roles of the omnichannel shopping habit. *Journal of Retailing and Consumer Services*, *77*, 103627. https://doi.org/10.1016/j.jretconser.2023.103627",
+      "doi": "10.1016/j.jretconser.2023.103627",
+      "citations": 75,
+      "journal": "Journal of Retailing and Consumer Services",
+      "title": "Influence of perceived value on omnichannel usage: Mediating and moderating roles of the omnichannel shopping habit"
+    },
+    {
+      "in_text": "Ahmed and Aziz (2024)",
+      "paren": "(Ahmed & Aziz, 2024)",
+      "year": "2024",
+      "first_surname": "Ahmed",
+      "ref_line": "Ahmed, S., & Aziz, N. A. (2024). Impact of AI on Customer Experience in Video Streaming Services: A Focus on Personalization and Trust. *International Journal of Human-Computer Interaction*, *41*(12), 7726-7745. https://doi.org/10.1080/10447318.2024.2400395",
+      "doi": "10.1080/10447318.2024.2400395",
+      "citations": 74,
+      "journal": "International Journal of Human-Computer Interaction",
+      "title": "Impact of AI on Customer Experience in Video Streaming Services: A Focus on Personalization and Trust"
+    },
+    {
+      "in_text": "Zhang and Xiong (2024)",
+      "paren": "(Zhang & Xiong, 2024)",
+      "year": "2024",
+      "first_surname": "Zhang",
+      "ref_line": "Zhang, Q., & Xiong, Y. (2024). Harnessing AI potential in E-Commerce: improving user engagement and sales through deep learning-based product recommendations. *Current Psychology*, *43*(38), 30379-30401. https://doi.org/10.1007/s12144-024-06649-3",
+      "doi": "10.1007/s12144-024-06649-3",
+      "citations": 73,
+      "journal": "Current Psychology",
+      "title": "Harnessing AI potential in E-Commerce: improving user engagement and sales through deep learning-based product recommendations"
+    },
+    {
+      "in_text": "Chang et al. (2025)",
+      "paren": "(Chang et al., 2025)",
+      "year": "2025",
+      "first_surname": "Chang",
+      "ref_line": "Chang, Y., Wang, H., & Guo, Z. (2025). Artificial intelligence in live streaming: How can virtual streamers bring more sales?. *Journal of Retailing and Consumer Services*, *84*, 104247. https://doi.org/10.1016/j.jretconser.2025.104247",
+      "doi": "10.1016/j.jretconser.2025.104247",
+      "citations": 70,
+      "journal": "Journal of Retailing and Consumer Services",
+      "title": "Artificial intelligence in live streaming: How can virtual streamers bring more sales?"
+    },
+    {
+      "in_text": "Foroughi et al. (2025)",
+      "paren": "(Foroughi et al., 2025)",
+      "year": "2025",
+      "first_surname": "Foroughi",
+      "ref_line": "Foroughi, B., Naghmeh‐Abbaspour, B., Wen, J., Ghobakhloo, M., Al‐Emran, M., & Al-Sharafi, M. A. (2025). Determinants of Generative AI in Promoting Green Purchasing Behavior: A Hybrid Partial Least Squares–Artificial Neural Network Approach. *Business Strategy and the Environment*, *34*(4), 4072-4094. https://doi.org/10.1002/bse.4186",
+      "doi": "10.1002/bse.4186",
+      "citations": 65,
+      "journal": "Business Strategy and the Environment",
+      "title": "Determinants of Generative AI in Promoting Green Purchasing Behavior: A Hybrid Partial Least Squares–Artificial Neural Network Approach"
+    },
+    {
+      "in_text": "Zhao et al. (2025)",
+      "paren": "(Zhao et al., 2025)",
+      "year": "2025",
+      "first_surname": "Zhao",
+      "ref_line": "Zhao, X., You, W., Zheng, Z., Shi, S., Lu, Y., & Sun, L. (2025). How Do Consumers Trust and Accept AI Agents? An Extended Theoretical Framework and Empirical Evidence. *Behavioral Sciences*, *15*(3), 337-337. https://doi.org/10.3390/bs15030337",
+      "doi": "10.3390/bs15030337",
+      "citations": 65,
+      "journal": "Behavioral Sciences",
+      "title": "How Do Consumers Trust and Accept AI Agents? An Extended Theoretical Framework and Empirical Evidence"
+    },
+    {
+      "in_text": "Haque et al. (2024)",
+      "paren": "(Haque et al., 2024)",
+      "year": "2024",
+      "first_surname": "Haque",
+      "ref_line": "Haque, A., Akther, N., Khan, I., Agarwal, K., & Uddin, N. (2024). Artificial Intelligence in Retail Marketing: Research Agenda Based on Bibliometric Reflection and Content Analysis (2000–2023). *Informatics*, *11*(4), 74. https://doi.org/10.3390/informatics11040074",
+      "doi": "10.3390/informatics11040074",
+      "citations": 63,
+      "journal": "Informatics",
+      "title": "Artificial Intelligence in Retail Marketing: Research Agenda Based on Bibliometric Reflection and Content Analysis (2000–2023)"
+    },
+    {
+      "in_text": "Pantano et al. (2024)",
+      "paren": "(Pantano et al., 2024)",
+      "year": "2024",
+      "first_surname": "Pantano",
+      "ref_line": "Pantano, E., Serravalle, F., & Priporas, C. (2024). The form of AI-driven luxury: how generative AI (GAI) and Large Language Models (LLMs) are transforming the creative process. *Journal of Marketing Management*, *40*(17-18), 1771-1790. https://doi.org/10.1080/0267257x.2024.2436096",
+      "doi": "10.1080/0267257x.2024.2436096",
+      "citations": 58,
+      "journal": "Journal of Marketing Management",
+      "title": "The form of AI-driven luxury: how generative AI (GAI) and Large Language Models (LLMs) are transforming the creative process"
+    },
+    {
+      "in_text": "Ngo et al. (2025)",
+      "paren": "(Ngo et al., 2025)",
+      "year": "2025",
+      "first_surname": "Ngo",
+      "ref_line": "Ngo, T. T. A., Nguyen, H. L. T., Mai, H. T. A., & Nguyen, H. P. (2025). Key determinants of online impulse buying behavior: A study from TikTok Shop users in Vietnam. *Acta Psychologica*, *260*, 105593-105593. https://doi.org/10.1016/j.actpsy.2025.105593",
+      "doi": "10.1016/j.actpsy.2025.105593",
+      "citations": 57,
+      "journal": "Acta Psychologica",
+      "title": "Key determinants of online impulse buying behavior: A study from TikTok Shop users in Vietnam"
+    },
+    {
+      "in_text": "Peng et al. (2024)",
+      "paren": "(Peng et al., 2024)",
+      "year": "2024",
+      "first_surname": "Peng",
+      "ref_line": "Peng, Y., Wang, Y., Li, J., & Yang, Q. (2024). Impact of AI-Oriented Live-Streaming E-Commerce Service Failures on Consumer Disengagement—Empirical Evidence from China. *Journal of Theoretical and Applied Electronic Commerce Research*, *19*(2), 1580-1598. https://doi.org/10.3390/jtaer19020077",
+      "doi": "10.3390/jtaer19020077",
+      "citations": 55,
+      "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
+      "title": "Impact of AI-Oriented Live-Streaming E-Commerce Service Failures on Consumer Disengagement—Empirical Evidence from China"
+    },
+    {
+      "in_text": "Wang et al. (2025)",
+      "paren": "(Wang et al., 2025)",
+      "year": "2025",
+      "first_surname": "Wang",
+      "ref_line": "Wang, Y., Sauka, K., & Situmeang, F. B. I. (2025). Anthropomorphism and transparency interplay on consumer behaviour in generative AI-driven marketing communication. *Journal of Consumer Marketing*, *42*(4), 512-536. https://doi.org/10.1108/jcm-04-2024-6806",
+      "doi": "10.1108/jcm-04-2024-6806",
+      "citations": 55,
+      "journal": "Journal of Consumer Marketing",
+      "title": "Anthropomorphism and transparency interplay on consumer behaviour in generative AI-driven marketing communication"
+    },
+    {
+      "in_text": "Gao and Liang (2025)",
+      "paren": "(Gao & Liang, 2025)",
+      "year": "2025",
+      "first_surname": "Gao",
+      "ref_line": "Gao, Y., & Liang, J. (2025). The Impact of AI-Powered Try-On Technology on Online Consumers’ Impulsive Buying Intention: The Moderating Role of Brand Trust. *Sustainability*, *17*(7), 2789. https://doi.org/10.3390/su17072789",
+      "doi": "10.3390/su17072789",
+      "citations": 54,
+      "journal": "Sustainability",
+      "title": "The Impact of AI-Powered Try-On Technology on Online Consumers’ Impulsive Buying Intention: The Moderating Role of Brand Trust"
+    },
+    {
+      "in_text": "Gooljar et al. (2024)",
+      "paren": "(Gooljar et al., 2024)",
+      "year": "2024",
+      "first_surname": "Gooljar",
+      "ref_line": "Gooljar, V., Issa, T., Hardin-Ramanan, S., & Abu-Salih, B. (2024). Sentiment-based predictive models for online purchases in the era of marketing 5.0: a systematic review. *Journal of Big Data*, *11*(1), 107. https://doi.org/10.1186/s40537-024-00947-0",
+      "doi": "10.1186/s40537-024-00947-0",
+      "citations": 54,
+      "journal": "Journal of Big Data",
+      "title": "Sentiment-based predictive models for online purchases in the era of marketing 5.0: a systematic review"
+    },
+    {
+      "in_text": "Nguyen et al. (2024)",
+      "paren": "(Nguyen et al., 2024)",
+      "year": "2024",
+      "first_surname": "Nguyen",
+      "ref_line": "Nguyen, L., Dang, T., & Duc, D. T. V. (2024). The Dark Sides of AI Advertising: The Integration of Cognitive Appraisal Theory and Information Quality Theory. *Social Science Computer Review*, *43*(2), 397-424. https://doi.org/10.1177/08944393241258760",
+      "doi": "10.1177/08944393241258760",
+      "citations": 54,
+      "journal": "Social Science Computer Review",
+      "title": "The Dark Sides of AI Advertising: The Integration of Cognitive Appraisal Theory and Information Quality Theory"
+    },
+    {
+      "in_text": "Stecuła et al. (2024)",
+      "paren": "(Stecuła et al., 2024)",
+      "year": "2024",
+      "first_surname": "Stecuła",
+      "ref_line": "Stecuła, K., Wolniak, R., & Aydın, B. (2024). Technology Development in Online Grocery Shopping—From Shopping Services to Virtual Reality, Metaverse, and Smart Devices: A Review. *Foods*, *13*(23), 3959. https://doi.org/10.3390/foods13233959",
+      "doi": "10.3390/foods13233959",
+      "citations": 53,
+      "journal": "Foods",
+      "title": "Technology Development in Online Grocery Shopping—From Shopping Services to Virtual Reality, Metaverse, and Smart Devices: A Review"
+    },
+    {
+      "in_text": "Behera et al. (2024)",
+      "paren": "(Behera et al., 2024)",
+      "year": "2024",
+      "first_surname": "Behera",
+      "ref_line": "Behera, R. K., Bala, P. K., Rana, N. P., Algharabat, R. S., & Kumar, K. (2024). Transforming customer engagement with artificial intelligence E-marketing: an E-retailer perspective in the era of retail 4.0. *Marketing Intelligence & Planning*, *42*(7), 1141-1168. https://doi.org/10.1108/mip-04-2023-0145",
+      "doi": "10.1108/mip-04-2023-0145",
+      "citations": 51,
+      "journal": "Marketing Intelligence & Planning",
+      "title": "Transforming customer engagement with artificial intelligence E-marketing: an E-retailer perspective in the era of retail 4.0"
+    },
+    {
+      "in_text": "Ding et al. (2024)",
+      "paren": "(Ding et al., 2024)",
+      "year": "2024",
+      "first_surname": "Ding",
+      "ref_line": "Ding, L., Antonucci, G., & Venditti, M. (2024). Unveiling user responses to AI-powered personalised recommendations: a qualitative study of consumer engagement dynamics on Douyin. *Qualitative Market Research An International Journal*, *28*(2), 234-255. https://doi.org/10.1108/qmr-11-2023-0151",
+      "doi": "10.1108/qmr-11-2023-0151",
+      "citations": 50,
+      "journal": "Qualitative Market Research An International Journal",
+      "title": "Unveiling user responses to AI-powered personalised recommendations: a qualitative study of consumer engagement dynamics on Douyin"
+    },
+    {
+      "in_text": "Miranda et al. (2024)",
+      "paren": "(Miranda et al., 2024)",
+      "year": "2024",
+      "first_surname": "Miranda",
+      "ref_line": "Miranda, S., Borges‐Tiago, M. T., Tiago, F., & Tu, X. (2024). To buy or not to buy? The impulse buying dilemma in livestream shopping. *Psychology and Marketing*, *41*(5), 989-1005. https://doi.org/10.1002/mar.21967",
+      "doi": "10.1002/mar.21967",
+      "citations": 48,
+      "journal": "Psychology and Marketing",
+      "title": "To buy or not to buy? The impulse buying dilemma in livestream shopping"
+    },
+    {
+      "in_text": "Odeyemi et al. (2024)",
+      "paren": "(Odeyemi et al., 2024)",
+      "year": "2024",
+      "first_surname": "Odeyemi",
+      "ref_line": "Odeyemi, O., Elufioye, O. A., Mhlongo, N. Z., Daraojimba, A. I., Olatoye, F. O., & Awonuga, K. F. (2024). AI in E-commerce: Reviewing developments in the USA and their global influence. *International Journal of Science and Research Archive*, *11*(1), 1460-1468. https://doi.org/10.30574/ijsra.2024.11.1.0232",
+      "doi": "10.30574/ijsra.2024.11.1.0232",
+      "citations": 48,
+      "journal": "International Journal of Science and Research Archive",
+      "title": "AI in E-commerce: Reviewing developments in the USA and their global influence"
+    },
+    {
+      "in_text": "Strzelecki et al. (2024)",
+      "paren": "(Strzelecki et al., 2024)",
+      "year": "2024",
+      "first_surname": "Strzelecki",
+      "ref_line": "Strzelecki, A., Jaciow, M., & Wolny, R. (2024). Curiosity in Consumer Behavior: A Systematic Literature Review and Research Agenda. *International Journal of Consumer Studies*, *48*(6). https://doi.org/10.1111/ijcs.70001",
+      "doi": "10.1111/ijcs.70001",
+      "citations": 47,
+      "journal": "International Journal of Consumer Studies",
+      "title": "Curiosity in Consumer Behavior: A Systematic Literature Review and Research Agenda"
+    },
+    {
+      "in_text": "Faraz and Anjum (2025)",
+      "paren": "(Faraz & Anjum, 2025)",
+      "year": "2025",
+      "first_surname": "Faraz",
+      "ref_line": "Faraz, N., & Anjum, A. (2025). Spendception: The Psychological Impact of Digital Payments on Consumer Purchase Behavior and Impulse Buying. *Behavioral Sciences*, *15*(3), 387. https://doi.org/10.3390/bs15030387",
+      "doi": "10.3390/bs15030387",
+      "citations": 46,
+      "journal": "Behavioral Sciences",
+      "title": "Spendception: The Psychological Impact of Digital Payments on Consumer Purchase Behavior and Impulse Buying"
+    },
+    {
+      "in_text": "Gallin and Portes (2024)",
+      "paren": "(Gallin & Portes, 2024)",
+      "year": "2024",
+      "first_surname": "Gallin",
+      "ref_line": "Gallin, S., & Portes, A. (2024). Online shopping: How can algorithm performance expectancy enhance impulse buying?. *Journal of Retailing and Consumer Services*, *81*, 103988. https://doi.org/10.1016/j.jretconser.2024.103988",
+      "doi": "10.1016/j.jretconser.2024.103988",
+      "citations": 46,
+      "journal": "Journal of Retailing and Consumer Services",
+      "title": "Online shopping: How can algorithm performance expectancy enhance impulse buying?"
+    },
+    {
+      "in_text": "Lei et al. (2024)",
+      "paren": "(Lei et al., 2024)",
+      "year": "2024",
+      "first_surname": "Lei",
+      "ref_line": "Lei, S. S. I., Wang, D., Fong, L. H. N., & Ye, S. (2024). Recipe for perceived personalization in hotels. *Tourism Management*, *100*, 104818. https://doi.org/10.1016/j.tourman.2023.104818",
+      "doi": "10.1016/j.tourman.2023.104818",
+      "citations": 46,
+      "journal": "Tourism Management",
+      "title": "Recipe for perceived personalization in hotels"
+    },
+    {
+      "in_text": "Lopes et al. (2024)",
+      "paren": "(Lopes et al., 2024)",
+      "year": "2024",
+      "first_surname": "Lopes",
+      "ref_line": "Lopes, J. M., Gomes, S., Nogueira, E., & Trancoso, T. (2024). AI’s invisible touch: how effortless browsing shapes customer perception, experience and engagement in online retail. *Cogent Business & Management*, *12*(1), 2440628. https://doi.org/10.1080/23311975.2024.2440628",
+      "doi": "10.1080/23311975.2024.2440628",
+      "citations": 46,
+      "journal": "Cogent Business & Management",
+      "title": "AI’s invisible touch: how effortless browsing shapes customer perception, experience and engagement in online retail"
+    },
+    {
+      "in_text": "Iranmanesh et al. (2024)",
+      "paren": "(Iranmanesh et al., 2024)",
+      "year": "2024",
+      "first_surname": "Iranmanesh",
+      "ref_line": "Iranmanesh, M., Senali, M. G., Foroughi, B., Ghobakhloo, M., Asadi, S., & Tirkolaee, E. B. (2024). Effect of augmented reality applications on attitude and behaviours of customers: cognitive and affective perspectives. *Asia-Pacific Journal of Business Administration*, *16*(5), 1067-1092. https://doi.org/10.1108/apjba-07-2023-0292",
+      "doi": "10.1108/apjba-07-2023-0292",
+      "citations": 45,
+      "journal": "Asia-Pacific Journal of Business Administration",
+      "title": "Effect of augmented reality applications on attitude and behaviours of customers: cognitive and affective perspectives"
+    },
+    {
+      "in_text": "Riandhi et al. (2025)",
+      "paren": "(Riandhi et al., 2025)",
+      "year": "2025",
+      "first_surname": "Riandhi",
+      "ref_line": "Riandhi, A. N., Arviansyah, M. R., & Sondari, M. C. (2025). AI and consumer behavior: Trends, technologies, and future directions from a scopus-based systematic review. *Cogent Business & Management*, *12*(1), 2544984. https://doi.org/10.1080/23311975.2025.2544984",
+      "doi": "10.1080/23311975.2025.2544984",
+      "citations": 43,
+      "journal": "Cogent Business & Management",
+      "title": "AI and consumer behavior: Trends, technologies, and future directions from a scopus-based systematic review"
+    },
+    {
+      "in_text": "Pizzi et al. (2025)",
+      "paren": "(Pizzi et al., 2025)",
+      "year": "2025",
+      "first_surname": "Pizzi",
+      "ref_line": "Pizzi, G., Matta, S., Caboni, F., & Stewart, D. W. (2025). Immersive and Generative Technology: New Tools for Marketing, New Tools for Consumer Response. *Psychology and Marketing*, *42*(12), 3236-3250. https://doi.org/10.1002/mar.70036",
+      "doi": "10.1002/mar.70036",
+      "citations": 43,
+      "journal": "Psychology and Marketing",
+      "title": "Immersive and Generative Technology: New Tools for Marketing, New Tools for Consumer Response"
+    },
+    {
+      "in_text": "Xiao et al. (2024)",
+      "paren": "(Xiao et al., 2024)",
+      "year": "2024",
+      "first_surname": "Xiao",
+      "ref_line": "Xiao, R., Yazan, M., & Situmeang, F. (2024). Rethinking Conversation Styles of Chatbots from the Customer Perspective: Relationships between Conversation Styles of Chatbots, Chatbot Acceptance, and Perceived Tie Strength and Perceived Risk. *International Journal of Human-Computer Interaction*, *41*(2), 1343-1363. https://doi.org/10.1080/10447318.2024.2314348",
+      "doi": "10.1080/10447318.2024.2314348",
+      "citations": 43,
+      "journal": "International Journal of Human-Computer Interaction",
+      "title": "Rethinking Conversation Styles of Chatbots from the Customer Perspective: Relationships between Conversation Styles of Chatbots, Chatbot Acceptance, and Perceived Tie Strength and Perceived Risk"
+    },
+    {
+      "in_text": "Mehmood et al. (2024)",
+      "paren": "(Mehmood et al., 2024)",
+      "year": "2024",
+      "first_surname": "Mehmood",
+      "ref_line": "Mehmood, K., Verleye, K., De Keyser, A., & Lariviere, B. (2024). The transformative potential of AI-enabled personalization across cultures. *Journal of Services Marketing*, *38*(6), 711-730. https://doi.org/10.1108/jsm-08-2023-0286",
+      "doi": "10.1108/jsm-08-2023-0286",
+      "citations": 42,
+      "journal": "Journal of Services Marketing",
+      "title": "The transformative potential of AI-enabled personalization across cultures"
+    },
+    {
+      "in_text": "Shahzad et al. (2025)",
+      "paren": "(Shahzad et al., 2025)",
+      "year": "2025",
+      "first_surname": "Shahzad",
+      "ref_line": "Shahzad, K., Khan, A. N., Ahmad, B., Hayat, K., & Chang, S. (2025). Balancing trust and distrust in generative AI chatbot adoption: a case study from China. *Service Industries Journal*, *46*(3-4), 308-331. https://doi.org/10.1080/02642069.2025.2487819",
+      "doi": "10.1080/02642069.2025.2487819",
+      "citations": 42,
+      "journal": "Service Industries Journal",
+      "title": "Balancing trust and distrust in generative AI chatbot adoption: a case study from China"
+    },
+    {
+      "in_text": "Li et al. (2024)",
+      "paren": "(Li et al., 2024)",
+      "year": "2024",
+      "first_surname": "Li",
+      "ref_line": "Li, Y., Deng, X., Hu, X., & Liu, J. (2024). The Effects of E-Commerce Recommendation System Transparency on Consumer Trust: Exploring Parallel Multiple Mediators and a Moderator. *Journal of Theoretical and Applied Electronic Commerce Research*, *19*(4), 2630-2649. https://doi.org/10.3390/jtaer19040126",
+      "doi": "10.3390/jtaer19040126",
+      "citations": 41,
+      "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
+      "title": "The Effects of E-Commerce Recommendation System Transparency on Consumer Trust: Exploring Parallel Multiple Mediators and a Moderator"
+    },
+    {
+      "in_text": "Shi et al. (2025)",
+      "paren": "(Shi et al., 2025)",
+      "year": "2025",
+      "first_surname": "Shi",
+      "ref_line": "Shi, W., Li, L., Zhang, Z., Li, M., & Li, J. (2025). Research on driving factors of consumer purchase intention of artificial intelligence creative products based on user behavior. *Scientific Reports*, *15*(1), 17400. https://doi.org/10.1038/s41598-025-01258-x",
+      "doi": "10.1038/s41598-025-01258-x",
+      "citations": 40,
+      "journal": "Scientific Reports",
+      "title": "Research on driving factors of consumer purchase intention of artificial intelligence creative products based on user behavior"
+    },
+    {
+      "in_text": "Yuan et al. (2025)",
+      "paren": "(Yuan et al., 2025)",
+      "year": "2025",
+      "first_surname": "Yuan",
+      "ref_line": "Yuan, H., Lü, K., & Fang, W. (2025). Machines vs. humans: The evolving role of artificial intelligence in livestreaming e-commerce. *Journal of Business Research*, *188*, 115077. https://doi.org/10.1016/j.jbusres.2024.115077",
+      "doi": "10.1016/j.jbusres.2024.115077",
+      "citations": 40,
+      "journal": "Journal of Business Research",
+      "title": "Machines vs. humans: The evolving role of artificial intelligence in livestreaming e-commerce"
+    },
+    {
+      "in_text": "Chakraborty et al. (2025)",
+      "paren": "(Chakraborty et al., 2025)",
+      "year": "2025",
+      "first_surname": "Chakraborty",
+      "ref_line": "Chakraborty, D., Troise, C., & Bresciani, S. (2025). Exploring consumer intentions to continue: Integrating task technology fit and social technology fit in generative AI based shopping platforms. *Technovation*, *142*, 103189. https://doi.org/10.1016/j.technovation.2025.103189",
+      "doi": "10.1016/j.technovation.2025.103189",
+      "citations": 40,
+      "journal": "Technovation",
+      "title": "Exploring consumer intentions to continue: Integrating task technology fit and social technology fit in generative AI based shopping platforms"
+    },
+    {
+      "in_text": "Pillai et al. (2025)",
+      "paren": "(Pillai et al., 2025)",
+      "year": "2025",
+      "first_surname": "Pillai",
+      "ref_line": "Pillai, R., Sivathanu, B., & Rana, N. P. (2025). Unveiling virtual interactive marketplaces: Shopping motivations in the Metaverse through the lens of uses and gratifications theory. *Journal of Business Research*, *190*, 115219. https://doi.org/10.1016/j.jbusres.2025.115219",
+      "doi": "10.1016/j.jbusres.2025.115219",
+      "citations": 40,
+      "journal": "Journal of Business Research",
+      "title": "Unveiling virtual interactive marketplaces: Shopping motivations in the Metaverse through the lens of uses and gratifications theory"
+    },
+    {
+      "in_text": "Alasa et al. (2025)",
+      "paren": "(Alasa et al., 2025)",
+      "year": "2025",
+      "first_surname": "Alasa",
+      "ref_line": "Alasa, D. K., Hossain, D., Jiyane, G., Sarwer, M. H., & Saha, T. R. (2025). AI-Driven Personalization in E-Commerce: The Case of Amazon and Shopify’s Impact on Consumer Behavior. *Voice of the Publisher*, *11*(01), 104-116. https://doi.org/10.4236/vp.2025.111009",
+      "doi": "10.4236/vp.2025.111009",
+      "citations": 40,
+      "journal": "Voice of the Publisher",
+      "title": "AI-Driven Personalization in E-Commerce: The Case of Amazon and Shopify’s Impact on Consumer Behavior"
+    },
+    {
+      "in_text": "Krishnamurthy et al. (2024)",
+      "paren": "(Krishnamurthy et al., 2024)",
+      "year": "2024",
+      "first_surname": "Krishnamurthy",
+      "ref_line": "Krishnamurthy, S., Tirupati, K. K., Ganipaneni, S., Shrivastav, E. A., Vashishtha, S., & Jain, S. K. (2024). Leveraging AI and Machine Learning to Optimize Retail Operations and Enhance. *Darpan International Research Analysis*, *12*(3), 1037-1069. https://doi.org/10.36676/dira.v12.i3.140",
+      "doi": "10.36676/dira.v12.i3.140",
+      "citations": 40,
+      "journal": "Darpan International Research Analysis",
+      "title": "Leveraging AI and Machine Learning to Optimize Retail Operations and Enhance"
+    },
+    {
+      "in_text": "Wen and Li (2025)",
+      "paren": "(Wen & Li, 2025)",
+      "year": "2025",
+      "first_surname": "Wen",
+      "ref_line": "Wen, J., & Li, X. (2025). AI Digital Human Responsiveness and Consumer Purchase Intention: The Mediating Role of Trust. *Journal of Theoretical and Applied Electronic Commerce Research*, *20*(3), 246. https://doi.org/10.3390/jtaer20030246",
+      "doi": "10.3390/jtaer20030246",
+      "citations": 39,
+      "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
+      "title": "AI Digital Human Responsiveness and Consumer Purchase Intention: The Mediating Role of Trust"
+    },
+    {
+      "in_text": "Sharma and Sharma (2024)",
+      "paren": "(Sharma & Sharma, 2024)",
+      "year": "2024",
+      "first_surname": "Sharma",
+      "ref_line": "Sharma, A. K., & Sharma, R. (2024). Assessing the influence of artificial intelligence on sustainable consumption behavior and lifestyle choices. *Young Consumers*, *26*(5), 702-727. https://doi.org/10.1108/yc-09-2024-2214",
+      "doi": "10.1108/yc-09-2024-2214",
+      "citations": 37,
+      "journal": "Young Consumers",
+      "title": "Assessing the influence of artificial intelligence on sustainable consumption behavior and lifestyle choices"
+    },
+    {
+      "in_text": "Gong et al. (2024)",
+      "paren": "(Gong et al., 2024)",
+      "year": "2024",
+      "first_surname": "Gong",
+      "ref_line": "Gong, X. Y., Yee, C. L., Lee, S. Y., Cao, E. Y., & Saif, A. N. M. (2024). Knowledge mapping of impulsive buying behavior research: a visual analysis using CiteSpace. *Humanities and Social Sciences Communications*, *11*(1), 967. https://doi.org/10.1057/s41599-024-03473-9",
+      "doi": "10.1057/s41599-024-03473-9",
+      "citations": 37,
+      "journal": "Humanities and Social Sciences Communications",
+      "title": "Knowledge mapping of impulsive buying behavior research: a visual analysis using CiteSpace"
+    },
+    {
+      "in_text": "Dimitrieska (2024)",
+      "paren": "(Dimitrieska, 2024)",
+      "year": "2024",
+      "first_surname": "Dimitrieska",
+      "ref_line": "Dimitrieska, S. (2024). Generative Artificial Intelligence and Advertising. *Trends in Economics, Finance and Management Journal*, *6*(1), 23-34. https://doi.org/10.69648/eyzi2281",
+      "doi": "10.69648/eyzi2281",
+      "citations": 36,
+      "journal": "Trends in Economics, Finance and Management Journal",
+      "title": "Generative Artificial Intelligence and Advertising"
+    },
+    {
+      "in_text": "Teangsompong and Sawangproh (2024)",
+      "paren": "(Teangsompong & Sawangproh, 2024)",
+      "year": "2024",
+      "first_surname": "Teangsompong",
+      "ref_line": "Teangsompong, T., & Sawangproh, W. (2024). Understanding online purchase intention of plant-based foods: Exploring causal factors and moderating role of self-efficacy within the SOR theory. *Heliyon*, *10*(10), e30785. https://doi.org/10.1016/j.heliyon.2024.e30785",
+      "doi": "10.1016/j.heliyon.2024.e30785",
+      "citations": 35,
+      "journal": "Heliyon",
+      "title": "Understanding online purchase intention of plant-based foods: Exploring causal factors and moderating role of self-efficacy within the SOR theory"
+    },
+    {
+      "in_text": "Jayapal (2025)",
+      "paren": "(Jayapal, 2025)",
+      "year": "2025",
+      "first_surname": "Jayapal",
+      "ref_line": "Jayapal, J. (2025). Unveiling the Impact of AI-Driven Personalization on Customer Loyalty in Online Shopping: The Moderating Effects of Privacy Concerns. *Journal of Promotion Management*, *31*(5), 865-894. https://doi.org/10.1080/10496491.2025.2525099",
+      "doi": "10.1080/10496491.2025.2525099",
+      "citations": 35,
+      "journal": "Journal of Promotion Management",
+      "title": "Unveiling the Impact of AI-Driven Personalization on Customer Loyalty in Online Shopping: The Moderating Effects of Privacy Concerns"
+    },
+    {
+      "in_text": "Hendrayati et al. (2024)",
+      "paren": "(Hendrayati et al., 2024)",
+      "year": "2024",
+      "first_surname": "Hendrayati",
+      "ref_line": "Hendrayati, H., Achyarsyah, M., Marimon, F., Hartono, U., & Putit, L. (2024). The Impact of Artificial Intelligence on Digital Marketing: Leveraging Potential in a Competitive Business Landscape. *Emerging Science Journal*, *8*(6), 2343-2359. https://doi.org/10.28991/esj-2024-08-06-012",
+      "doi": "10.28991/esj-2024-08-06-012",
+      "citations": 35,
+      "journal": "Emerging Science Journal",
+      "title": "The Impact of Artificial Intelligence on Digital Marketing: Leveraging Potential in a Competitive Business Landscape"
+    },
+    {
+      "in_text": "Aydin (2026)",
+      "paren": "(Aydin, 2026)",
+      "year": "2026",
+      "first_surname": "Aydin",
+      "ref_line": "Aydin, S. (2026). Brand Trust in AI-Driven E-Commerce Personalization: The Well-Being–Privacy Trade-Off. *Sustainability*, *18*(2), 1073-1073. https://doi.org/10.3390/su18021073",
+      "doi": "10.3390/su18021073",
+      "citations": 35,
+      "journal": "Sustainability",
+      "title": "Brand Trust in AI-Driven E-Commerce Personalization: The Well-Being–Privacy Trade-Off"
+    },
+    {
+      "in_text": "Peltier et al. (2024)",
+      "paren": "(Peltier et al., 2024)",
+      "year": "2024",
+      "first_surname": "Peltier",
+      "ref_line": "Peltier, J. W., Dahl, A. J., Drury, L., & Khan, T. (2024). Cutting-edge research in social media and interactive marketing: a review and research agenda. *Journal of Research in Interactive Marketing*, *18*(5), 900-944. https://doi.org/10.1108/jrim-02-2024-0074",
+      "doi": "10.1108/jrim-02-2024-0074",
+      "citations": 34,
+      "journal": "Journal of Research in Interactive Marketing",
+      "title": "Cutting-edge research in social media and interactive marketing: a review and research agenda"
+    },
+    {
+      "in_text": "Hennighausen et al. (2025)",
+      "paren": "(Hennighausen et al., 2025)",
+      "year": "2025",
+      "first_surname": "Hennighausen",
+      "ref_line": "Hennighausen, C., Navarro‐Schär, V. G. Y., & Eller, E. (2025). AI ‐Mediated Communication in E‐Commerce: Implications for Customer Trust. *International Journal of Consumer Studies*, *49*(5), e70111. https://doi.org/10.1111/ijcs.70111",
+      "doi": "10.1111/ijcs.70111",
+      "citations": 34,
+      "journal": "International Journal of Consumer Studies",
+      "title": "AI ‐Mediated Communication in E‐Commerce: Implications for Customer Trust"
+    },
+    {
+      "in_text": "Adyantari et al. (2025)",
+      "paren": "(Adyantari et al., 2025)",
+      "year": "2025",
+      "first_surname": "Adyantari",
+      "ref_line": "Adyantari, A., Nugraha, A. P., & Dharomesz, V. Y. (2025). Impulsive Buying Behavior in Live Streaming Shopping Mechanism: Do Fear of Missing Out Matter?. *Review of Management and Entrepreneurship*, *9*(1), 32-49. https://doi.org/10.37715/rme.v9i1.5125",
+      "doi": "10.37715/rme.v9i1.5125",
+      "citations": 34,
+      "journal": "Review of Management and Entrepreneurship",
+      "title": "Impulsive Buying Behavior in Live Streaming Shopping Mechanism: Do Fear of Missing Out Matter?"
+    },
+    {
+      "in_text": "Amin (2025)",
+      "paren": "(Amin, 2025)",
+      "year": "2025",
+      "first_surname": "Amin",
+      "ref_line": "Amin, A. (2025). Artificial intelligence in social media: a catalyst for impulse buying behavior?. *Young Consumers*, *26*(5), 765-785. https://doi.org/10.1108/yc-10-2024-2297",
+      "doi": "10.1108/yc-10-2024-2297",
+      "citations": 33,
+      "journal": "Young Consumers",
+      "title": "Artificial intelligence in social media: a catalyst for impulse buying behavior?"
+    },
+    {
+      "in_text": "Yang et al. (2024)",
+      "paren": "(Yang et al., 2024)",
+      "year": "2024",
+      "first_surname": "Yang",
+      "ref_line": "Yang, S., Xie, W., Chen, Y., Li, Y., Jiang, H., & zhou, W. (2024). Warmth or competence? Understanding voice shopping intentions from Human-AI interaction perspective. *Electronic Commerce Research*, *25*(6), 4625-4654. https://doi.org/10.1007/s10660-024-09859-w",
+      "doi": "10.1007/s10660-024-09859-w",
+      "citations": 33,
+      "journal": "Electronic Commerce Research",
+      "title": "Warmth or competence? Understanding voice shopping intentions from Human-AI interaction perspective"
+    },
+    {
+      "in_text": "Nguyen et al. (2025)",
+      "paren": "(Nguyen et al., 2025)",
+      "year": "2025",
+      "first_surname": "Nguyen",
+      "ref_line": "Nguyen, M. T., Thach, K. T. D., Nguyen, C. N. L., Nguyen, A. C., & Doan, H. K. (2025). The Influence of AI Chatbots on Green Satisfaction and Loyalty: Evidence from Sustainability-Driven Consumer Behavior. *Journal of Global Marketing*, *39*(1), 103-132. https://doi.org/10.1080/08911762.2025.2503495",
+      "doi": "10.1080/08911762.2025.2503495",
+      "citations": 32,
+      "journal": "Journal of Global Marketing",
+      "title": "The Influence of AI Chatbots on Green Satisfaction and Loyalty: Evidence from Sustainability-Driven Consumer Behavior"
+    },
+    {
+      "in_text": "Pham et al. (2024)",
+      "paren": "(Pham et al., 2024)",
+      "year": "2024",
+      "first_surname": "Pham",
+      "ref_line": "Pham, A. D., Nguyen, H. N., Le, T. T., Nguyen, H. K., Khuat, H. T., Phan, H. T., ... Vu, H. T. (2024). Young consumers’ impulse buying tendency on social media: an empirical analysis in Vietnam in light of the LST theoretical perspective. *Young Consumers*, *27*(2), 185-206. https://doi.org/10.1108/yc-07-2023-1785",
+      "doi": "10.1108/yc-07-2023-1785",
+      "citations": 31,
+      "journal": "Young Consumers",
+      "title": "Young consumers’ impulse buying tendency on social media: an empirical analysis in Vietnam in light of the LST theoretical perspective"
+    },
+    {
+      "in_text": "Jiao et al. (2024)",
+      "paren": "(Jiao et al., 2024)",
+      "year": "2024",
+      "first_surname": "Jiao",
+      "ref_line": "Jiao, S., Wang, X., Ma, C., & Deng, Y. (2024). How does sports e-commerce influence consumer behavior through short video live broadcast platforms? Attachment theory perspective. *Asia Pacific Journal of Marketing and Logistics*, *36*(7), 1557-1575. https://doi.org/10.1108/apjml-08-2023-0777",
+      "doi": "10.1108/apjml-08-2023-0777",
+      "citations": 31,
+      "journal": "Asia Pacific Journal of Marketing and Logistics",
+      "title": "How does sports e-commerce influence consumer behavior through short video live broadcast platforms? Attachment theory perspective"
+    },
+    {
+      "in_text": "Kolar et al. (2024)",
+      "paren": "(Kolar et al., 2024)",
+      "year": "2024",
+      "first_surname": "Kolar",
+      "ref_line": "Kolar, N., Milfelner, B., & Pisnik, A. (2024). Factors for Customers’ AI Use Readiness in Physical Retail Stores: The Interplay of Consumer Attitudes and Gender Differences. *Information*, *15*(6), 346. https://doi.org/10.3390/info15060346",
+      "doi": "10.3390/info15060346",
+      "citations": 31,
+      "journal": "Information",
+      "title": "Factors for Customers’ AI Use Readiness in Physical Retail Stores: The Interplay of Consumer Attitudes and Gender Differences"
+    },
+    {
+      "in_text": "Wasiq et al. (2024)",
+      "paren": "(Wasiq et al., 2024)",
+      "year": "2024",
+      "first_surname": "Wasiq",
+      "ref_line": "Wasiq, M., Bashar, A., Khan, I., & Nyagadza, B. (2024). Unveiling customer engagement dynamics in the metaverse: A retrospective bibliometric and topic modelling investigation. *Computers in Human Behavior Reports*, *16*, 100483. https://doi.org/10.1016/j.chbr.2024.100483",
+      "doi": "10.1016/j.chbr.2024.100483",
+      "citations": 30,
+      "journal": "Computers in Human Behavior Reports",
+      "title": "Unveiling customer engagement dynamics in the metaverse: A retrospective bibliometric and topic modelling investigation"
+    },
+    {
+      "in_text": "BECAN and Çeber (2025)",
+      "paren": "(BECAN & Çeber, 2025)",
+      "year": "2025",
+      "first_surname": "BECAN",
+      "ref_line": "BECAN, C., & Çeber, B. (2025). How technology readiness influences behavioral and purchasing intention: serial multiple mediating role of attitude toward AI and AI-driven consumer chatbot experience. *Digital Transformation and Society*, *5*(1), 78-104. https://doi.org/10.1108/dts-04-2025-0082",
+      "doi": "10.1108/dts-04-2025-0082",
+      "citations": 30,
+      "journal": "Digital Transformation and Society",
+      "title": "How technology readiness influences behavioral and purchasing intention: serial multiple mediating role of attitude toward AI and AI-driven consumer chatbot experience"
+    },
+    {
+      "in_text": "Fedorko et al. (2025)",
+      "paren": "(Fedorko et al., 2025)",
+      "year": "2025",
+      "first_surname": "Fedorko",
+      "ref_line": "Fedorko, R., Kráľ, Š., & Kráľová, L. (2025). Role of Artificial Intelligence and Machine Learning in E-commerce: a Literature Review. *ADCAIJ ADVANCES IN DISTRIBUTED COMPUTING AND ARTIFICIAL INTELLIGENCE JOURNAL*, *14*, e31736-e31736. https://doi.org/10.14201/adcaij.31736",
+      "doi": "10.14201/adcaij.31736",
+      "citations": 30,
+      "journal": "ADCAIJ ADVANCES IN DISTRIBUTED COMPUTING AND ARTIFICIAL INTELLIGENCE JOURNAL",
+      "title": "Role of Artificial Intelligence and Machine Learning in E-commerce: a Literature Review"
+    },
+    {
+      "in_text": "Feng et al. (2024)",
+      "paren": "(Feng et al., 2024)",
+      "year": "2024",
+      "first_surname": "Feng",
+      "ref_line": "Feng, L., Yuan, H., Ye, Q., Qian, Y., & Ge, X. (2024). Exploring the impacts of a recommendation system on an e-platform based on consumers’ online behavioral data. *Information & Management*, *61*(2), 103905. https://doi.org/10.1016/j.im.2023.103905",
+      "doi": "10.1016/j.im.2023.103905",
+      "citations": 29,
+      "journal": "Information & Management",
+      "title": "Exploring the impacts of a recommendation system on an e-platform based on consumers’ online behavioral data"
+    },
+    {
+      "in_text": "Li and Kang (2025)",
+      "paren": "(Li & Kang, 2025)",
+      "year": "2025",
+      "first_surname": "Li",
+      "ref_line": "Li, J., & Kang, J. (2025). Less stress, fewer delays: The role of sophisticated AI in mitigating decision fatigue and purchase postponement in luxury retail. *Journal of Retailing and Consumer Services*, *85*, 104268. https://doi.org/10.1016/j.jretconser.2025.104268",
+      "doi": "10.1016/j.jretconser.2025.104268",
+      "citations": 29,
+      "journal": "Journal of Retailing and Consumer Services",
+      "title": "Less stress, fewer delays: The role of sophisticated AI in mitigating decision fatigue and purchase postponement in luxury retail"
+    },
+    {
+      "in_text": "Xia and Shannon (2025)",
+      "paren": "(Xia & Shannon, 2025)",
+      "year": "2025",
+      "first_surname": "Xia",
+      "ref_line": "Xia, Z., & Shannon, R. (2025). Navigating the Digital Frontier: Exploring the Dynamics of Customer–Brand Relationships Through AI Chatbots. *Sustainability*, *17*(5), 2173. https://doi.org/10.3390/su17052173",
+      "doi": "10.3390/su17052173",
+      "citations": 28,
+      "journal": "Sustainability",
+      "title": "Navigating the Digital Frontier: Exploring the Dynamics of Customer–Brand Relationships Through AI Chatbots"
+    }
+  ],
+  "gap_audit": {
+    "sor_framework": {
+      "count": 122,
+      "pct": 12.01
+    },
+    "inverted_u_nonlinear": {
+      "count": 22,
+      "pct": 2.17
+    },
+    "surveillance_reactance": {
+      "count": 46,
+      "pct": 4.53
+    },
+    "ego_depletion": {
+      "count": 8,
+      "pct": 0.79
+    },
+    "multiplicative_interaction": {
+      "count": 10,
+      "pct": 0.98
+    },
+    "generative_ai_agents": {
+      "count": 102,
+      "pct": 10.04
+    },
+    "longitudinal_panel": {
+      "count": 30,
+      "pct": 2.95
+    }
+  },
+  "vos_clusters": {
+    "1": {
+      "cluster_id": 1,
+      "node_count": 9,
+      "total_occurrences": 1033,
+      "mean_tls": 537.6,
+      "mean_apy": 2025.03,
+      "top_keywords": [
+        "pls-sem",
+        "online impulse buying",
+        "livestreaming commerce",
+        "hedonic motivation",
+        "s-o-r framework"
+      ]
+    },
+    "2": {
+      "cluster_id": 2,
+      "node_count": 5,
+      "total_occurrences": 674,
+      "mean_tls": 694.0,
+      "mean_apy": 2025.11,
+      "top_keywords": [
+        "perceived personalization",
+        "privacy concern",
+        "algorithmic transparency",
+        "perceived intrusiveness",
+        "ai skepticism"
+      ]
+    },
+    "3": {
+      "cluster_id": 3,
+      "node_count": 3,
+      "total_occurrences": 684,
+      "mean_tls": 982.3,
+      "mean_apy": 2024.89,
+      "top_keywords": [
+        "artificial intelligence",
+        "chatbots",
+        "generative ai"
+      ]
+    },
+    "4": {
+      "cluster_id": 4,
+      "node_count": 12,
+      "total_occurrences": 2076,
+      "mean_tls": 804.4,
+      "mean_apy": 2024.7,
+      "top_keywords": [
+        "e-commerce",
+        "trust",
+        "consumer engagement",
+        "purchase intention",
+        "social commerce"
+      ]
+    }
+  },
+  "vos_node_count": 29,
+  "vos_link_count": 340
+}

@@ -17,7 +17,7 @@ import requests
 from collections import Counter
 
 WORKSPACE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-LOCAL_CORPUS_CSV = os.path.join(WORKSPACE_DIR, "data", "processed", "dimensions_clean_included.csv")
+LOCAL_CORPUS_CSV = os.path.join(WORKSPACE_DIR, "data", "processed", "expanded_corpus_v2.csv")
 
 # Gap-to-Snowball Keyword Expansion Dictionary
 GAP_EXPANSION_MAP = {
@@ -49,8 +49,8 @@ GAP_EXPANSION_MAP = {
 
 
 def scan_local_corpus_gaps(idea_text):
-    """Quantify empirical coverage and true research gaps strictly across the N = 866 final included corpus."""
-    print(f"\n[STEP 1] QUANTITATIVE GAP SCANNING ON FINAL INCLUDED CORPUS (N = 866)...")
+    """Quantify empirical coverage and true research gaps strictly across the final included corpus (expanded_corpus_v2.csv)."""
+    print(f"\n[STEP 1] QUANTITATIVE GAP SCANNING ON EXPANDED INCLUDED CORPUS...")
     if not os.path.exists(LOCAL_CORPUS_CSV):
         print("  [WARN] Local corpus CSV not found. Skipping local density metrics.")
         return {}, set(), set()
@@ -65,7 +65,7 @@ def scan_local_corpus_gaps(idea_text):
         t = (str(r.get("Title", "")) + " " + str(r.get("Abstract", ""))).lower()
         return sum(1 for k in ["impulse", "impulsive", "recommend", "personaliz", "algorithm", "ai ", "artificial intelligence", "e-commerce", "online shopping", "retail", "consumer", "livestream", "live stream", "satisfaction"] if k in t)
 
-    rows = sorted(all_rows, key=lambda r: (-rel_score(r), -int(str(r.get("PubYear", "0") or 0))))[:866]
+    rows = all_rows
     total = len(rows)
 
     counts = {

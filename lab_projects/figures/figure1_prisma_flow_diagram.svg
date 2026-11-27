@@ -1,106 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 780" width="100%" height="auto" style="font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif; background:#ffffff;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 540" width="100%" height="auto" style="font-family: 'Segoe UI', Arial, sans-serif; background:#ffffff;">
   <defs>
-    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#0284c7" />
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b"/>
     </marker>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06"/>
-    </filter>
   </defs>
-
-  <!-- Title Header -->
-  <rect x="20" y="15" width="880" height="48" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-  <text x="460" y="44" text-anchor="middle" font-size="15" font-weight="800" fill="#0f172a">FIGURE 1. PRISMA 2020 FLOW DIAGRAM (IDENTIFICATION TO FINAL SYNTHESIS)</text>
-
-  <!-- STAGE 1: IDENTIFICATION -->
-  <!-- Phase Badge -->
-  <rect x="20" y="80" width="140" height="110" rx="8" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
-  <text x="90" y="130" text-anchor="middle" font-size="12" font-weight="800" fill="#0369a1">IDENTIFICATION</text>
-  <text x="90" y="148" text-anchor="middle" font-size="10" fill="#0284c7">Database Retrieval</text>
-
-  <!-- Main Box Left -->
-  <rect x="180" y="80" width="360" height="110" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="195" y="105" font-size="12" font-weight="700" fill="#0f172a">Records identified from electronic databases (2018–2026):</text>
-  <text x="195" y="125" font-size="11" fill="#334155">• Scopus (n = 1,124)</text>
-  <text x="195" y="143" font-size="11" fill="#334155">• Web of Science Core Collection (n = 846)</text>
-  <text x="195" y="161" font-size="11" fill="#334155">• Dimensions Scholarly Platform (n = 488)</text>
-  <text x="195" y="180" font-size="11.5" font-weight="800" fill="#0284c7">Total Initial Records Retrieved: N = 2,458</text>
-
-  <!-- Excluded Box Right -->
-  <rect x="580" y="80" width="320" height="110" rx="8" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="595" y="105" font-size="12" font-weight="700" fill="#9f1239">Duplicate records removed:</text>
-  <text x="595" y="128" font-size="11" fill="#be123c">• Automated deduplication via DOI: n = 812</text>
-  <text x="595" y="148" font-size="11" fill="#be123c">• Title/author Levenshtein matching: n = 205</text>
-  <text x="595" y="172" font-size="11.5" font-weight="800" fill="#e11d48">Total Duplicates Removed: n = 1,017</text>
-
-  <!-- Arrow Right to Excluded -->
-  <line x1="540" y1="135" x2="575" y2="135" stroke="#f43f5e" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- Arrow Down to Screening -->
-  <line x1="360" y1="190" x2="360" y2="235" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arr)"/>
-
-  <!-- STAGE 2: SCREENING -->
-  <rect x="20" y="240" width="140" height="145" rx="8" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
-  <text x="90" y="310" text-anchor="middle" font-size="12" font-weight="800" fill="#0369a1">SCREENING</text>
-  <text x="90" y="328" text-anchor="middle" font-size="10" fill="#0284c7">Title &amp; Abstract</text>
-
-  <!-- Main Box Left -->
-  <rect x="180" y="240" width="360" height="145" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="195" y="265" font-size="12" font-weight="700" fill="#0f172a">Unique records entering title/abstract screening:</text>
-  <text x="195" y="285" font-size="13" font-weight="800" fill="#0284c7">N = 1,441 unique articles</text>
-  <text x="195" y="312" font-size="11" fill="#475569">• Independent double-blind screening against</text>
-  <text x="195" y="330" font-size="11" fill="#475569">  pre-defined eligibility criteria (IC1–IC4)</text>
-  <text x="195" y="352" font-size="11" fill="#0369a1">  (Inter-coder reliability: Cohen's κ = 0.89)</text>
-
-  <!-- Excluded Box Right -->
-  <rect x="580" y="240" width="320" height="145" rx="8" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="595" y="265" font-size="12" font-weight="700" fill="#9f1239">Records excluded after title/abstract review:</text>
-  <text x="595" y="288" font-size="11" fill="#be123c">• Non-empirical/mathematical RecSys: n = 284</text>
-  <text x="595" y="308" font-size="11" fill="#be123c">• Non-retail / non-e-commerce context: n = 142</text>
-  <text x="595" y="328" font-size="11" fill="#be123c">• Editorials, commentaries, books: n = 70</text>
-  <text x="595" y="355" font-size="11.5" font-weight="800" fill="#e11d48">Total Title/Abstract Excluded: n = 496</text>
-
-  <!-- Arrow Right to Excluded -->
-  <line x1="540" y1="312" x2="575" y2="312" stroke="#f43f5e" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- Arrow Down to Eligibility -->
-  <line x1="360" y1="385" x2="360" y2="430" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arr)"/>
-
-  <!-- STAGE 3: ELIGIBILITY -->
-  <rect x="20" y="435" width="140" height="150" rx="8" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
-  <text x="90" y="505" text-anchor="middle" font-size="12" font-weight="800" fill="#0369a1">ELIGIBILITY</text>
-  <text x="90" y="523" text-anchor="middle" font-size="10" fill="#0284c7">Full-Text Assessment</text>
-
-  <!-- Main Box Left -->
-  <rect x="180" y="435" width="360" height="150" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="195" y="460" font-size="12" font-weight="700" fill="#0f172a">Full-text articles assessed for eligibility:</text>
-  <text x="195" y="480" font-size="13" font-weight="800" fill="#0284c7">N = 945 full-text articles</text>
-  <text x="195" y="507" font-size="11" fill="#475569">• Full-text read by two reviewers</text>
-  <text x="195" y="525" font-size="11" fill="#475569">• Assessment of empirical rigor &amp; construct validity</text>
-  <text x="195" y="547" font-size="11" fill="#0369a1">  (Third reviewer resolution of 18 marginal papers)</text>
-
-  <!-- Excluded Box Right -->
-  <rect x="580" y="435" width="320" height="150" rx="8" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="595" y="460" font-size="12" font-weight="700" fill="#9f1239">Full-text articles excluded with reasons:</text>
-  <text x="595" y="483" font-size="11" fill="#be123c">• Incomplete empirical metrics / scales: n = 45</text>
-  <text x="595" y="503" font-size="11" fill="#be123c">• No impulse buying construct measured: n = 34</text>
-  <text x="595" y="535" font-size="11.5" font-weight="800" fill="#e11d48">Total Full-Text Excluded: n = 79</text>
-
-  <!-- Arrow Right to Excluded -->
-  <line x1="540" y1="510" x2="575" y2="510" stroke="#f43f5e" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- Arrow Down to Included -->
-  <line x1="360" y1="585" x2="360" y2="625" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr)"/>
-
-  <!-- STAGE 4: INCLUDED -->
-  <rect x="20" y="630" width="140" height="120" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
-  <text x="90" y="685" text-anchor="middle" font-size="12" font-weight="800" fill="#15803d">INCLUDED</text>
-  <text x="90" y="703" text-anchor="middle" font-size="10" fill="#16a34a">Final Synthesis Corpus</text>
-
-  <!-- Main Box Bottom (Full Width) -->
-  <rect x="180" y="630" width="720" height="120" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
-  <text x="205" y="660" font-size="13" font-weight="800" fill="#166534">FINAL SYSTEMATIC REVIEW &amp; SCIENCE MAPPING CORPUS: N = 866 ARTICLES</text>
-  <text x="205" y="685" font-size="11.5" fill="#14532d">• Peer-reviewed empirical studies &amp; foundational benchmarks (2018–2026)</text>
-  <text x="205" y="705" font-size="11.5" fill="#14532d">• Synthesized via TCCM Framework and VOSviewer Bibliometric Mapping</text>
-  <text x="205" y="728" font-size="11.5" font-weight="700" fill="#0284c7">• Four Thematic Clusters: Algorithmic Stimuli, E-Satisfaction, Impulse Response, and Dark Side</text>
+  <rect x="18" y="15" width="844" height="105" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="32" y="38" font-size="12" font-weight="bold" fill="#0f172a">PHASE 1: IDENTIFICATION (MULTI-DATABASE HARVESTING, 2018-2026)</text>
+  <rect x="35" y="48" width="235" height="58" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="152" y="71" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0c4a6e">Dimensions Core Corpus</text>
+  <text x="152" y="90" text-anchor="middle" font-size="11" fill="#0369a1">(n = 1,441 records)</text>
+  <rect x="295" y="48" width="235" height="58" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="412" y="71" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0c4a6e">OpenAlex Expansion Crawl</text>
+  <text x="412" y="90" text-anchor="middle" font-size="11" fill="#0369a1">(n = 678 records)</text>
+  <rect x="570" y="48" width="275" height="58" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="707" y="71" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#78350f">Duplicates Removed (DOI &amp; Title)</text>
+  <text x="707" y="90" text-anchor="middle" font-size="11" fill="#92400e">(n = 92 records)</text>
+  <line x1="280" y1="120" x2="280" y2="155" stroke="#1e293b" stroke-width="1.6" marker-end="url(#arr)"/>
+  <rect x="18" y="158" width="844" height="125" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="32" y="180" font-size="12" font-weight="bold" fill="#0f172a">PHASE 2: SCREENING &amp; DETERMINISTIC ELIGIBILITY FILTERING</text>
+  <rect x="35" y="194" width="380" height="72" rx="4" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.5"/>
+  <text x="225" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#4c1d95">Unique Records Screened (Title &amp; Abstract)</text>
+  <text x="225" y="238" text-anchor="middle" font-size="11.5" fill="#5b21b6">(n = 2,027 from 2,119 gross records)</text>
+  <line x1="415" y1="230" x2="465" y2="230" stroke="#1e293b" stroke-width="1.6" marker-end="url(#arr)"/>
+  <rect x="468" y="190" width="377" height="80" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="656" y="210" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#7f1d1d">Records Excluded (n = 1,011)</text>
+  <text x="656" y="228" text-anchor="middle" font-size="10.5" fill="#991b1b">Non-journal / Proceedings (EC1): n = 65</text>
+  <text x="656" y="244" text-anchor="middle" font-size="10.5" fill="#991b1b">Off-topic / Non-retail-AI (EC2): n = 922</text>
+  <text x="656" y="260" text-anchor="middle" font-size="10.5" fill="#991b1b">Missing Abstract or Outside 2018-2026 (EC3): n = 24</text>
+  <line x1="225" y1="283" x2="225" y2="318" stroke="#1e293b" stroke-width="1.6" marker-end="url(#arr)"/>
+  <rect x="18" y="320" width="844" height="95" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="32" y="343" font-size="12" font-weight="bold" fill="#14532d">PHASE 3: FINAL INCLUDED CORPUS &amp; QUANTITATIVE SYNTHESIS</text>
+  <rect x="35" y="355" width="810" height="48" rx="4" fill="#dcfce7" stroke="#15803d" stroke-width="1.6"/>
+  <text x="440" y="376" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#14532d">Final Included Peer-Reviewed Empirical &amp; Conceptual Corpus: N = 1,016 Articles</text>
+  <text x="440" y="394" text-anchor="middle" font-size="11" fill="#166534">Audited for VOSviewer Co-occurrence Mapping, TCCM Synthesis, and Algorithmic Gap Quantification</text>
+  <rect x="18" y="430" width="844" height="92" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="32" y="452" font-size="11.5" font-weight="bold" fill="#1e293b">PHASE 4: REPRODUCIBLE TEXT-MINING GAP AUDIT PROTOCOL (N = 1,016)</text>
+  <text x="32" y="472" font-size="10.5" fill="#334155">1. Corpus Normalization: Lowercased concatenation of Title + Abstract across all 1,016 included records.</text>
+  <text x="32" y="490" font-size="10.5" fill="#334155">2. Deterministic Keyword-Family Matching: Exact regex/phrase detection for S-O-R, Inverted-U, Surveillance, Ego Depletion, GenAI.</text>
+  <text x="32" y="508" font-size="10.5" fill="#334155">3. Output: Reproducible prevalence rates establishing empirical gaps and grounding Propositions P1-P9.</text>
 </svg>

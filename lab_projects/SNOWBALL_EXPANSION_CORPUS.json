@@ -2,7 +2,7 @@
   "expanded_queries": [
     {
       "gap": "ego_depletion",
-      "coverage_pct": 0.69,
+      "coverage_pct": 0.98,
       "expanded_query": "(\"ego depletion\" OR \"self-regulatory depletion\" OR \"decision fatigue\") AND (\"impulse buying\" OR \"impulsive purchase\")",
       "seed_keywords": [
         "ego depletion",
@@ -13,7 +13,7 @@
     },
     {
       "gap": "surveillance_reactance",
-      "coverage_pct": 1.27,
+      "coverage_pct": 2.26,
       "expanded_query": "(\"algorithmic surveillance\" OR \"psychological reactance\" OR \"dark patterns\") AND (\"personalization\" OR \"recommender\")",
       "seed_keywords": [
         "algorithmic surveillance",
@@ -24,7 +24,7 @@
     },
     {
       "gap": "post_purchase_regret",
-      "coverage_pct": 3.58,
+      "coverage_pct": 2.17,
       "expanded_query": "(\"post-purchase regret\" OR \"cognitive dissonance\") AND (\"impulse buying\" OR \"e-commerce\") AND (\"satisfaction\" OR \"return\")",
       "seed_keywords": [
         "post-purchase regret",
@@ -35,7 +35,7 @@
     },
     {
       "gap": "inverted_u_nonlinear",
-      "coverage_pct": 1.5,
+      "coverage_pct": 2.17,
       "expanded_query": "(\"inverted-U\" OR \"curvilinear\" OR \"threshold effect\") AND (\"personalization\" OR \"recommendation\") AND \"privacy\"",
       "seed_keywords": [
         "inverted-U effect",
@@ -45,7 +45,7 @@
     },
     {
       "gap": "multiplicative_interaction",
-      "coverage_pct": 2.19,
+      "coverage_pct": 1.87,
       "expanded_query": "(\"interaction effect\" OR \"moderated mediation\") AND (\"e-satisfaction\" OR \"cognitive\") AND (\"arousal\" OR \"impulse buying\")",
       "seed_keywords": [
         "cognitive-affective interaction",
