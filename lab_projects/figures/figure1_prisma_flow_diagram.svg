@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 780" width="100%" height="auto" style="font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif; background:#ffffff;">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#0284c7" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Title Header -->
+  <rect x="20" y="15" width="880" height="48" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="460" y="44" text-anchor="middle" font-size="15" font-weight="800" fill="#0f172a">FIGURE 1. PRISMA 2020 FLOW DIAGRAM FOR SYSTEMATIC LITERATURE REVIEWS</text>
+
+  <!-- STAGE 1: IDENTIFICATION -->
+  <!-- Phase Badge -->
+  <rect x="20" y="80" width="140" height="110" rx="8" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="90" y="130" text-anchor="middle" font-size="12" font-weight="800" fill="#0369a1">IDENTIFICATION</text>
+  <text x="90" y="148" text-anchor="middle" font-size="10" fill="#0284c7">Database Retrieval</text>
+
+  <!-- Main Box Left -->
+  <rect x="180" y="80" width="360" height="110" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="195" y="105" font-size="12" font-weight="700" fill="#0f172a">Previous records identified from databases:</text>
+  <text x="195" y="125" font-size="11" fill="#334155">• Scopus (n = 1,120)</text>
+  <text x="195" y="143" font-size="11" fill="#334155">• Web of Science Core Collection (n = 890)</text>
+  <text x="195" y="161" font-size="11" fill="#334155">• Dimensions Scholarly Platform (n = 490)</text>
+  <text x="195" y="180" font-size="11" font-weight="700" fill="#0284c7">Total Initial Records: N = 2,500</text>
+
+  <!-- Excluded Box Right -->
+  <rect x="580" y="80" width="320" height="110" rx="8" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="595" y="105" font-size="12" font-weight="700" fill="#9f1239">Duplicate records removed:</text>
+  <text x="595" y="128" font-size="11" fill="#be123c">• Automated deduplication via DOI: n = 34</text>
+  <text x="595" y="148" font-size="11" fill="#be123c">• Manual title/author inspection: n = 8</text>
+  <text x="595" y="172" font-size="11" font-weight="700" fill="#e11d48">Total Duplicates Excluded: n = 42</text>
+
+  <!-- Arrow Right to Excluded -->
+  <line x1="540" y1="135" x2="575" y2="135" stroke="#f43f5e" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Arrow Down to Screening -->
+  <line x1="360" y1="190" x2="360" y2="235" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- STAGE 2: SCREENING -->
+  <rect x="20" y="240" width="140" height="145" rx="8" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="90" y="310" text-anchor="middle" font-size="12" font-weight="800" fill="#0369a1">SCREENING</text>
+  <text x="90" y="328" text-anchor="middle" font-size="10" fill="#0284c7">Title &amp; Abstract</text>
+
+  <!-- Main Box Left -->
+  <rect x="180" y="240" width="360" height="145" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="195" y="265" font-size="12" font-weight="700" fill="#0f172a">Unique records entering title/abstract screening:</text>
+  <text x="195" y="285" font-size="13" font-weight="800" fill="#0284c7">N = 2,458 articles</text>
+  <text x="195" y="312" font-size="11" fill="#475569">• Independent double-blind screening against</text>
+  <text x="195" y="330" font-size="11" fill="#475569">  pre-defined inclusion criteria (IC1-IC4)</text>
+  <text x="195" y="352" font-size="11" font-weight="600" fill="#047857">Inter-rater agreement (Cohen's Kappa = 0.88)</text>
+
+  <!-- Excluded Box Right -->
+  <rect x="580" y="240" width="320" height="145" rx="8" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="595" y="265" font-size="12" font-weight="700" fill="#9f1239">Records excluded (n = 701):</text>
+  <text x="595" y="287" font-size="11" fill="#be123c">• Non-peer-reviewed / Preprints: n = 129</text>
+  <text x="595" y="306" font-size="11" fill="#be123c">• Conference proceedings / Notes: n = 357</text>
+  <text x="595" y="325" font-size="11" fill="#be123c">• Pre-2018 non-contemporary tech: n = 153</text>
+  <text x="595" y="344" font-size="11" fill="#be123c">• Inadequate scientific abstracts (&lt;30 words): n = 62</text>
+  <text x="595" y="368" font-size="11" font-weight="700" fill="#e11d48">Total Screened Out: n = 701</text>
+
+  <!-- Arrow Right to Excluded -->
+  <line x1="540" y1="312" x2="575" y2="312" stroke="#f43f5e" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Arrow Down to Eligibility -->
+  <line x1="360" y1="385" x2="360" y2="430" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- STAGE 3: ELIGIBILITY -->
+  <rect x="20" y="435" width="140" height="145" rx="8" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="90" y="505" text-anchor="middle" font-size="12" font-weight="800" fill="#0369a1">ELIGIBILITY</text>
+  <text x="90" y="523" text-anchor="middle" font-size="10" fill="#0284c7">Full-Text Appraisal</text>
+
+  <!-- Main Box Left -->
+  <rect x="180" y="435" width="360" height="145" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="195" y="460" font-size="12" font-weight="700" fill="#0f172a">Full-text reports assessed for detailed eligibility:</text>
+  <text x="195" y="482" font-size="13" font-weight="800" fill="#0284c7">N = 1,757 articles</text>
+  <text x="195" y="510" font-size="11" fill="#475569">• Critical methodological assessment against</text>
+  <text x="195" y="528" font-size="11" fill="#475569">  exclusion criteria (EC1-EC3)</text>
+  <text x="195" y="550" font-size="11" font-weight="600" fill="#047857">Construct validation checks (PLS-SEM / CB-SEM)</text>
+
+  <!-- Excluded Box Right -->
+  <rect x="580" y="435" width="320" height="145" rx="8" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="595" y="460" font-size="12" font-weight="700" fill="#9f1239">Full-text reports excluded with reasons (n = 316):</text>
+  <text x="595" y="485" font-size="11" fill="#be123c">• Lack of consumer behavioral variables: n = 226</text>
+  <text x="595" y="508" font-size="11" fill="#be123c">• No recommender system component: n = 71</text>
+  <text x="595" y="531" font-size="11" fill="#be123c">• Pure hardware / Medical informatics: n = 19</text>
+  <text x="595" y="560" font-size="11" font-weight="700" fill="#e11d48">Total Ineligible Excluded: n = 316</text>
+
+  <!-- Arrow Right to Excluded -->
+  <line x1="540" y1="507" x2="575" y2="507" stroke="#f43f5e" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Arrow Down to Included -->
+  <line x1="360" y1="580" x2="360" y2="625" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- STAGE 4: INCLUDED -->
+  <rect x="20" y="630" width="140" height="120" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="90" y="690" text-anchor="middle" font-size="12" font-weight="800" fill="#15803d">INCLUDED</text>
+  <text x="90" y="708" text-anchor="middle" font-size="10" fill="#166534">Final Corpus</text>
+
+  <!-- Main Included Box Wide -->
+  <rect x="180" y="630" width="720" height="120" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205" y="660" font-size="13" font-weight="800" fill="#166534">FINAL SYSTEMATIC LITERATURE REVIEW CORPUS: N = 1,441 ARTICLES</text>
+  <text x="205" y="685" font-size="11.5" fill="#14532d">• 100% Peer-reviewed journal publications indexed in Scopus and Web of Science (2018–2026)</text>
+  <text x="205" y="705" font-size="11.5" fill="#14532d">• Core outlets: Journal of Retailing and Consumer Services (34), Computers in Human Behavior (28), JBR (22)</text>
+  <text x="205" y="728" font-size="11.5" font-weight="700" fill="#0284c7">• VOSviewer Co-Occurrence Network Mapping: N = 866 seminal articles (Citations ≥ 10, 250 links)</text>
+</svg>

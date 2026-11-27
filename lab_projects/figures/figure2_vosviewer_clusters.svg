@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="100%" height="auto" style="font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif; background:#ffffff;">
+  <defs>
+    <filter id="cshadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Title Header -->
+  <rect x="20" y="15" width="880" height="48" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="460" y="44" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">FIGURE 2. TRI-CLUSTER BIBLIOMETRIC CO-OCCURRENCE NETWORK MAP (VOSVIEWER ANALYSIS)</text>
+
+  <!-- Network Vector Canvas -->
+  <rect x="20" y="75" width="880" height="235" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Background Interconnecting Links -->
+  <line x1="200" y1="180" x2="460" y2="180" stroke="#94a3b8" stroke-width="3.5" stroke-dasharray="6,4" />
+  <line x1="460" y1="180" x2="720" y2="180" stroke="#94a3b8" stroke-width="3.5" stroke-dasharray="6,4" />
+  <path d="M 200 150 Q 460 70 720 150" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,4" />
+
+  <!-- Flow Direction Arrows & Labels -->
+  <rect x="285" y="158" width="90" height="20" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="330" y="172" text-anchor="middle" font-size="9" font-weight="700" fill="#0284c7">COGNITIVE FIT</text>
+
+  <rect x="545" y="158" width="90" height="20" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="590" y="172" text-anchor="middle" font-size="9" font-weight="700" fill="#0284c7">AFFECTIVE URGE</text>
+
+  <rect x="390" y="90" width="140" height="20" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="460" y="104" text-anchor="middle" font-size="9" fill="#64748b">DIRECT ALGORITHMIC IMPACT</text>
+
+  <!-- CLUSTER 1: STIMULUS (RED NODE) -->
+  <circle cx="200" cy="180" r="62" fill="#fff1f2" stroke="#f43f5e" stroke-width="3.5" filter="url(#cshadow)"/>
+  <text x="200" y="162" text-anchor="middle" font-size="13" font-weight="800" fill="#9f1239">CLUSTER 1</text>
+  <text x="200" y="178" text-anchor="middle" font-size="11" font-weight="700" fill="#e11d48">STIMULUS (S)</text>
+  <text x="200" y="196" text-anchor="middle" font-size="10" fill="#881337">AI Algorithms</text>
+  <text x="200" y="210" text-anchor="middle" font-size="9.5" font-weight="600" fill="#e11d48">n = 348 articles</text>
+
+  <!-- CLUSTER 2: ORGANISM (GREEN NODE) -->
+  <circle cx="460" cy="180" r="62" fill="#f0fdf4" stroke="#10b981" stroke-width="3.5" filter="url(#cshadow)"/>
+  <text x="460" y="162" text-anchor="middle" font-size="13" font-weight="800" fill="#065f46">CLUSTER 2</text>
+  <text x="460" y="178" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">ORGANISM (O)</text>
+  <text x="460" y="196" text-anchor="middle" font-size="10" fill="#064e3b">E-Satisfaction</text>
+  <text x="460" y="210" text-anchor="middle" font-size="9.5" font-weight="600" fill="#059669">n = 174 articles</text>
+
+  <!-- CLUSTER 3: RESPONSE (BLUE NODE) -->
+  <circle cx="720" cy="180" r="62" fill="#eff6ff" stroke="#3b82f6" stroke-width="3.5" filter="url(#cshadow)"/>
+  <text x="720" y="162" text-anchor="middle" font-size="13" font-weight="800" fill="#1e40af">CLUSTER 3</text>
+  <text x="720" y="178" text-anchor="middle" font-size="11" font-weight="700" fill="#2563eb">RESPONSE (R)</text>
+  <text x="720" y="196" text-anchor="middle" font-size="10" fill="#1e3a8a">Impulse Buying</text>
+  <text x="720" y="210" text-anchor="middle" font-size="9.5" font-weight="600" fill="#2563eb">n = 344 articles</text>
+
+  <!-- 3 Thematic Details Cards (Bottom Grid) -->
+  <!-- Card 1: Red -->
+  <rect x="20" y="325" width="280" height="135" rx="8" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5"/>
+  <text x="35" y="348" font-size="12" font-weight="800" fill="#9f1239">Cluster 1: Algorithmic Cues (S)</text>
+  <text x="35" y="370" font-size="10.5" font-weight="700" fill="#be123c">Key Constructs (348 articles):</text>
+  <text x="35" y="388" font-size="10" fill="#4c0519">• Perceived Personalization (PP)</text>
+  <text x="35" y="404" font-size="10" fill="#4c0519">• Algorithmic Accuracy (ACC)</text>
+  <text x="35" y="420" font-size="10" fill="#4c0519">• Recommendation Novelty (NOV)</text>
+  <text x="35" y="440" font-size="9.5" font-style="italic" fill="#881337">Theoretical anchor: Cognitive Fit Theory</text>
+
+  <!-- Card 2: Green -->
+  <rect x="320" y="325" width="280" height="135" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text x="335" y="348" font-size="12" font-weight="800" fill="#065f46">Cluster 2: Experiential Organism (O)</text>
+  <text x="335" y="370" font-size="10.5" font-weight="700" fill="#047857">Key Constructs (174 articles):</text>
+  <text x="335" y="388" font-size="10" fill="#022c22">• Cumulative E-Satisfaction (ES)</text>
+  <text x="335" y="404" font-size="10" fill="#022c22">• Algorithm Trust &amp; Cognitive Fluency</text>
+  <text x="335" y="420" font-size="10" fill="#022c22">• Flow State &amp; Affective Comfort</text>
+  <text x="335" y="440" font-size="9.5" font-style="italic" fill="#064e3b">Theoretical anchor: S-O-R Organism Bridge</text>
+
+  <!-- Card 3: Blue -->
+  <rect x="620" y="325" width="280" height="135" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="635" y="348" font-size="12" font-weight="800" fill="#1e40af">Cluster 3: Behavioral Response (R)</text>
+  <text x="635" y="370" font-size="10.5" font-weight="700" fill="#1d4ed8">Key Constructs (344 articles):</text>
+  <text x="635" y="388" font-size="10" fill="#172554">• Urge to Buy Impulsively (UBI)</text>
+  <text x="635" y="404" font-size="10" fill="#172554">• Online Impulse Buying (IB)</text>
+  <text x="635" y="420" font-size="10" fill="#172554">• Ego Depletion / Self-Control Failure</text>
+  <text x="635" y="440" font-size="9.5" font-style="italic" fill="#1e3a8a">Theoretical anchor: Strength Model</text>
+</svg>
