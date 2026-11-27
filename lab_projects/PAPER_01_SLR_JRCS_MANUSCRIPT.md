@@ -96,7 +96,7 @@ Eligibility criteria were established a priori based on the C-O-C-O-S (Context, 
 </div>
 
 ### 2.3. Bibliometric Mapping Protocol (VOSviewer Configuration)
-To analyze the intellectual structure without subjective researcher bias, the clean corpus of 1,441 studies was processed through **VOSviewer (version 1.6.21)**. A co-word occurrence analysis was deployed using fractional counting. A minimum occurrence threshold of $T = 5$ citations was enforced, resulting in 866 nodes interconnected by 250 structural co-word links. The association strength normalization method was utilized to compute coordinate clustering and network density.
+To analyze the intellectual structure without subjective researcher bias, the clean corpus of 1,441 studies was processed through **VOSviewer (version 1.6.21)**. A co-word occurrence analysis was deployed using fractional counting. A minimum occurrence threshold of *T* = 5 citations was enforced, resulting in 866 nodes interconnected by 250 structural co-word links. The association strength normalization method was utilized to compute coordinate clustering and network density.
 
 ---
 
@@ -144,13 +144,13 @@ VOSviewer bibliometric clustering reveals three distinct, interconnected themati
 
 
 #### Cluster 1 (Blue): Algorithmic Personalization Stimuli and Cognitive Fluency
-Comprising 310 articles, this cluster investigates how recommendation engines serve as environmental stimuli ($S$). Core keywords include: *recommendation system, machine learning, perceived personalization, algorithm accuracy, serendipity, cognitive fit*. Research in this cluster demonstrates that modern consumers evaluate recommendation agents not merely as technical filters, but as social actors possessing competence and intent (Al-Natour et al., 2011; Komiak & Benbasat, 2006). When recommendations align tightly with personal preferences, cognitive processing fluency increases dramatically, reducing the search costs associated with evaluating product catalogs (Shanahan et al., 2019).
+Comprising 310 articles, this cluster investigates how recommendation engines serve as environmental stimuli (S). Core keywords include: *recommendation system, machine learning, perceived personalization, algorithm accuracy, serendipity, cognitive fit*. Research in this cluster demonstrates that modern consumers evaluate recommendation agents not merely as technical filters, but as social actors possessing competence and intent (Al-Natour et al., 2011; Komiak & Benbasat, 2006). When recommendations align tightly with personal preferences, cognitive processing fluency increases dramatically, reducing the search costs associated with evaluating product catalogs (Shanahan et al., 2019).
 
 #### Cluster 2 (Red): Emotional Arousal, Impulsive Urges, and Behavioral Checkout
-Encompassing 382 articles, this cluster focuses on consumer response mechanisms ($R$). Prominent keywords include: *impulse buying, urge to buy impulsively, spontaneous purchase, emotional arousal, hedonic shopping value, self-regulation failure*. Studies in this cluster highlight that impulse buying is primarily driven by affective intensity rather than rational utility maximization (Beatty & Ferrell, 1998; Rook & Fisher, 1995). Scholars emphasize that while the *Urge to Buy Impulsively (UBI)* is a psychological state of sudden desire, actual *Online Impulse Buying (OIB)* requires the breakdown or bypassing of cognitive self-control (Baumeister, 2002; Badgaiyan & Verma, 2015).
+Encompassing 382 articles, this cluster focuses on consumer response mechanisms (R). Prominent keywords include: *impulse buying, urge to buy impulsively, spontaneous purchase, emotional arousal, hedonic shopping value, self-regulation failure*. Studies in this cluster highlight that impulse buying is primarily driven by affective intensity rather than rational utility maximization (Beatty & Ferrell, 1998; Rook & Fisher, 1995). Scholars emphasize that while the *Urge to Buy Impulsively (UBI)* is a psychological state of sudden desire, actual *Online Impulse Buying (OIB)* requires the breakdown or bypassing of cognitive self-control (Baumeister, 2002; Badgaiyan & Verma, 2015).
 
 #### Cluster 3 (Green): E-Trust, Cumulative E-Satisfaction, and Experiential Organism
-Containing 174 articles, this cluster acts as the theoretical connective tissue ($O$) binding algorithmic features to behavioral outcomes. Central keywords include: *e-satisfaction, customer satisfaction, trust, perceived risk, perceived usefulness, satisfaction disconfirmation*. This cluster demonstrates that transaction-specific satisfaction is insufficient to explain impulsive reactions. Rather, **cumulative e-satisfaction**, representing an aggregated psychological state of contentment derived from frictionless and continuous digital interactions, is vital. When algorithmic recommendations consistently deliver high accuracy and delightful novelty, consumers experience a state of affective comfort and platform trust that attenuates their perceived risk and analytical defense mechanisms (Xiao & Benbasat, 2007; Spreng et al., 1996; Verhagen & van Dolen, 2011).
+Containing 174 articles, this cluster acts as the theoretical connective tissue (O) binding algorithmic features to behavioral outcomes. Central keywords include: *e-satisfaction, customer satisfaction, trust, perceived risk, perceived usefulness, satisfaction disconfirmation*. This cluster demonstrates that transaction-specific satisfaction is insufficient to explain impulsive reactions. Rather, **cumulative e-satisfaction**, representing an aggregated psychological state of contentment derived from frictionless and continuous digital interactions, is vital. When algorithmic recommendations consistently deliver high accuracy and delightful novelty, consumers experience a state of affective comfort and platform trust that attenuates their perceived risk and analytical defense mechanisms (Xiao & Benbasat, 2007; Spreng et al., 1996; Verhagen & van Dolen, 2011).
 
 ---
 
@@ -168,30 +168,30 @@ Drawing upon the synthesis of our 1,441-article corpus and the structural fault 
 <p style="font-size:0.85rem; color:#64748b; font-style:italic; text-align:center; margin:0.85rem 0 0 0;">Figure 3. Proposed Stimulus-Organism-Response theoretical framework incorporating Cognitive Fit and Ego Depletion theories with formal hypotheses H1–H6.</p>
 </div>
 
-### 4.1. Algorithmic Stimuli and Cumulative E-Satisfaction ($H_1, H_2, H_4$)
+### 4.1. Algorithmic Stimuli and Cumulative E-Satisfaction (H1, H2, H4)
 Perceived personalization refers to the degree to which a consumer perceives that a digital platform tailors its offerings to their unique preferences and shopping history (Shanahan et al., 2019; Srinivasan et al., 2002). According to Cognitive Fit Theory, when an information system provides visual and contextual cues that match the consumer's internal mental schema, cognitive effort is minimized, in line with Vessey (1991). High perceived personalization creates feelings of psychological intimacy and perceived platform intelligence (Al-Natour et al., 2011). When users perceive that recommendations are accurately calibrated to their tastes, their shopping efficiency rises, generating positive cognitive appraisal and cumulative satisfaction, corroborating Xiao & Benbasat (2007).
 
 Simultaneously, algorithmic accuracy, the degree to which recommended items correctly reflect the user's specific functional requirements (Al-Natour et al., 2011), serves as a primary driver of expectancy confirmation. However, accuracy alone can result in redundant suggestions. Recommendation novelty and serendipity (the algorithmic presentation of unexpected yet attractive items; Zhang et al., 2021) introduce hedonic excitement into the browsing journey. When users encounter unexpected product discoveries, hedonic shopping value increases dramatically, culminating in enhanced cumulative e-satisfaction. Therefore, we propose:
-- **$H_1$**: *Perceived personalization positively influences cumulative e-satisfaction.*
-- **$H_2$**: *Perceived recommendation accuracy positively influences cumulative e-satisfaction.*
-- **$H_4$**: *Recommendation novelty positively influences cumulative e-satisfaction.*
+- **H1:** *Perceived personalization positively influences cumulative e-satisfaction.*
+- **H2:** *Perceived recommendation accuracy positively influences cumulative e-satisfaction.*
+- **H4:** *Recommendation novelty positively influences cumulative e-satisfaction.*
 
-### 4.2. E-Satisfaction as the Bridge to Impulsive Urges ($H_3$)
+### 4.2. E-Satisfaction as the Bridge to Impulsive Urges (H3)
 In environmental psychology, internal organism states mediate the translation of ambient stimuli into behavioral urges. Traditional consumer decision models position impulse buying as an irrational departure from deliberate calculation, as conceptualized by Rook & Fisher (1995). However, through the lens of S-O-R, impulse buying is driven by immediate emotional arousal and positive affect (Beatty & Ferrell, 1998; Verhagen & van Dolen, 2011). 
 
-Cumulative e-satisfaction produces a psychological state of affective comfort and disarmed vigilance. When a shopper experiences heightened satisfaction with the algorithmic interface, perceived transaction risk diminishes, and positive affect surges (Spreng et al., 1996; Oliver, 1993). This affective elevation disarms cognitive defense mechanisms, fostering a spontaneous openness to unbudgeted products and generating a powerful urge to buy impulsively ($UBI$). Thus, we propose:
-- **$H_3$**: *Cumulative e-satisfaction positively influences the urge to buy impulsively.*
-- **$H_{3a}$ (Mediation)**: *Cumulative e-satisfaction mediates the relationship between algorithmic stimuli (PP, ACC, NOV) and the urge to buy impulsively.*
+Cumulative e-satisfaction produces a psychological state of affective comfort and disarmed vigilance. When a shopper experiences heightened satisfaction with the algorithmic interface, perceived transaction risk diminishes, and positive affect surges (Spreng et al., 1996; Oliver, 1993). This affective elevation disarms cognitive defense mechanisms, fostering a spontaneous openness to unbudgeted products and generating a powerful urge to buy impulsively (UBI). Thus, we propose:
+- **H3:** *Cumulative e-satisfaction positively influences the urge to buy impulsively.*
+- **H3a (Mediation):** *Cumulative e-satisfaction mediates the relationship between algorithmic stimuli (PP, ACC, NOV) and the urge to buy impulsively.*
 
-### 4.3. The Urge-to-Behavior Transition ($H_5$)
+### 4.3. The Urge-to-Behavior Transition (H5)
 The urge to buy impulsively represents a state of acute emotional desire that precedes action (Beatty & Ferrell, 1998; Rook & Fisher, 1995). In digital retail environments characterized by frictionless checkout architectures (e.g., Apple Pay, 1-click ordering, biometric authentication), the temporal latency between experiencing an impulse and executing payment is reduced to seconds. Prior empirical literature consistently validates that felt impulsive urges represent the most proximate psychological determinant of actual impulse buying behavior (Badgaiyan & Verma, 2015; Zheng et al., 2019). We therefore hypothesize:
-- **$H_5$**: *The urge to buy impulsively positively influences online impulse buying behavior.*
+- **H5:** *The urge to buy impulsively positively influences online impulse buying behavior.*
 
-### 4.4. Ego Depletion as the Psychological Boundary Condition ($H_6$)
+### 4.4. Ego Depletion as the Psychological Boundary Condition (H6)
 A critical limitation of prior marketing literature is the assumption of a static, unvarying relationship between impulsive urges and checkout execution. According to Baumeister's (2002) Strength Model of Self-Control, human willpower operates as a finite physiological resource that depletes upon exertion (*Ego Depletion*; Baumeister et al., 2007; Tangney et al., 2004). 
 
-Consumers possessing intact self-control resources possess the executive capacity to suppress spontaneous urges through deliberative cognitive override (resisting the temptation by contemplating long-term budgetary constraints). However, when consumers experience ego depletion, induced by extended daily cognitive exertion, multiple sequential decision trade-offs, or evening digital fatigue, their self-regulatory capacity becomes severely compromised. In this depleted psychological state, the executive control mechanisms necessary to inhibit the impulsive urge fail, enabling the affective urge ($UBI$) to convert directly into transactional purchasing ($OIB$). Consequently, we establish ego depletion as a key positive moderator:
-- **$H_6$**: *Ego depletion positively moderates the relationship between the urge to buy impulsively and online impulse buying behavior, such that the relationship is significantly stronger when consumers experience high ego depletion.*
+Consumers possessing intact self-control resources possess the executive capacity to suppress spontaneous urges through deliberative cognitive override (resisting the temptation by contemplating long-term budgetary constraints). However, when consumers experience ego depletion, induced by extended daily cognitive exertion, multiple sequential decision trade-offs, or evening digital fatigue, their self-regulatory capacity becomes severely compromised. In this depleted psychological state, the executive control mechanisms necessary to inhibit the impulsive urge fail, enabling the affective urge (UBI) to convert directly into transactional purchasing (*OIB*). Consequently, we establish ego depletion as a key positive moderator:
+- **H6:** *Ego depletion positively moderates the relationship between the urge to buy impulsively and online impulse buying behavior, such that the relationship is significantly stronger when consumers experience high ego depletion.*
 
 ---
 
