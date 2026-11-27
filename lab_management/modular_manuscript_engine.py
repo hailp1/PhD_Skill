@@ -41,11 +41,11 @@ print("=========================================================================
 print("\n[MODULE 1] Drafting Frontmatter & Section 1: Introduction...")
 
 HIGHLIGHTS = [
-    "Synthesizes 866 empirical studies on AI recommenders and online impulse buying.",
-    "Identifies four thematic clusters via science mapping and TCCM framework.",
-    "Formulates dual-path S-O-R model linking cognitive fluency and affective urges.",
-    "Uncovers dark-side boundary conditions of algorithmic surveillance and reactance.",
-    "Details actionable 5-pillar research agenda with ethical algorithmic guardrails."
+    "Synthesizes 866 studies on AI recommenders and impulse buying (2018-2026).",
+    "Uncovers four clusters via VOSviewer, including algorithmic dark patterns.",
+    "Advances dynamic multiplicative S-O-R model (Permission x Kinetic Energy).",
+    "Models inverted-U surveillance reactance and GenAI 2.0 social agency.",
+    "Proposes recursive regret loop and tiered ethical friction for CLV."
 ]
 
 for i, h in enumerate(HIGHLIGHTS, 1):
@@ -60,18 +60,18 @@ MODULE_1_TEXT = """# AI-Driven Personalized Recommendation Systems and Online Co
 ---
 
 ## HIGHLIGHTS
-- Synthesizes 866 empirical studies on AI recommenders and online impulse buying.
-- Identifies four thematic clusters via science mapping and TCCM framework.
-- Formulates dual-path S-O-R model linking cognitive fluency and affective urges.
-- Uncovers dark-side boundary conditions of algorithmic surveillance and reactance.
-- Details actionable 5-pillar research agenda with ethical algorithmic guardrails.
+- Synthesizes 866 studies on AI recommenders and impulse buying (2018-2026).
+- Uncovers four clusters via VOSviewer, including algorithmic dark patterns.
+- Advances dynamic multiplicative S-O-R model (Permission x Kinetic Energy).
+- Models inverted-U surveillance reactance and GenAI 2.0 social agency.
+- Proposes recursive regret loop and tiered ethical friction for CLV.
 
 ---
 
 ## ABSTRACT
-The rapid deployment of artificial intelligence (AI)-powered personalized recommendation systems across digital retailing platforms has substantially altered consumer browsing dynamics. This transformation transitions electronic commerce from deliberate, keyword-driven search into serendipitous, algorithmically curated discovery. While marketing practitioners deploy predictive algorithms to stimulate instant transactional conversion, academic inquiry into the cognitive-affective mechanics governing AI-mediated impulsive consumption remains theoretically fragmented. To resolve these theoretical fault lines, this study executes a comprehensive systematic literature review adhering strictly to the PRISMA 2020 protocol, coupled with science mapping on 2,458 initial records retrieved across Web of Science, Scopus, and Dimensions (2018–2026). Following deduplication (1,441 unique records) and rigorous two-stage eligibility screening, 866 focal studies were synthesized using VOSviewer keyword co-occurrence mapping and structured through the Theory-Context-Characteristics-Methodology (TCCM) framework.
+The rapid deployment of artificial intelligence (AI)-powered personalized recommendation systems across digital retailing platforms has substantially altered consumer browsing dynamics. This transformation shifts electronic commerce from deliberate, keyword-driven search toward serendipitous, algorithmically curated discovery. While marketing practitioners deploy predictive and generative algorithms to stimulate instant conversion, academic inquiry into the cognitive-affective mechanics governing AI-mediated impulsive consumption remains theoretically fragmented. To address these fault lines, this study executes a systematic literature review adhering strictly to the PRISMA 2020 protocol, coupled with science mapping on 2,458 initial records retrieved across Web of Science, Scopus, and Dimensions (January 2018 to November 2026). Following deduplication (1,441 unique records) and two-stage eligibility screening, 866 focal studies were synthesized via VOSviewer keyword co-occurrence mapping and structured through the TCCM framework.
 
-Bibliometric mapping uncovers four distinct intellectual clusters: (1) Algorithmic Recommendation Stimuli and System Architecture (Cluster 1 - Red); (2) Cognitive Organism and Cumulative E-Satisfaction (Cluster 2 - Green); (3) Affective Organism and Impulsive Behavioral Response (Cluster 3 - Blue); and (4) The Dark Side of Personalization: Algorithmic Surveillance, Privacy Reactance, and Self-Control Fatigue (Cluster 4 - Yellow). Integrating these empirical findings through the Stimulus-Organism-Response (S-O-R) paradigm, Cognitive Fit Theory, and the Strength Model of Self-Control, we formulate an integrative dual-path conceptual framework. We demonstrate that algorithmic personalization, accuracy, and serendipity do not trigger unreflective buying directly; rather, they operate through a dual cognitive-affective mediation mechanism wherein cumulative e-satisfaction disarms cognitive skepticism while emotional arousal fuels the spontaneous urge to buy impulsively. Crucially, we identify self-regulatory resource depletion (ego depletion) and algorithmic surveillance reactance as central psychological boundary conditions (P1–P8, with mediation propositions P4a and P5a). We conclude by presenting a rigorous 5-pillar future research agenda with structured empirical research questions and concrete managerial guidelines for ethical algorithmic retailing.
+Bibliometric mapping reveals four distinct intellectual clusters: (1) Algorithmic Recommendation Stimuli (Cluster 1 - Red); (2) Cognitive Organism and E-Satisfaction (Cluster 2 - Green); (3) Affective Organism and Impulsive Behavioral Response (Cluster 3 - Blue); and (4) The Dark Side of Personalization: Algorithmic Surveillance, Privacy Reactance, and Self-Control Fatigue (Cluster 4 - Yellow). Advancing beyond static additive S-O-R models, we formulate a **Dynamic and Multiplicative Dual-Path S-O-R Framework** contrasting Generation 1.0 collaborative filtering with Generation 2.0 conversational Generative AI. We propose that in-session cognitive fluency and e-satisfaction act as a cognitive permission structure that interacts multiplicatively with emotional arousal (kinetic energy) to trigger impulsive urges (P1-P8, P4a, P5a, P5b). Crucially, we model surveillance reactance as an endogenous inverted-U consequence of excessive personalization and introduce a negative recursive feedback loop (P9) demonstrating how ego-depleted impulse purchases induce post-purchase regret that erodes long-term satisfaction. We conclude by proposing tiered "ethical friction" strategies and a 5-pillar research agenda shifting the field from static conversion optimization to dynamic algorithmic well-being.
 
 **Keywords**: Artificial Intelligence; Personalized Recommendation Systems; Online Impulse Buying; Dual-Path S-O-R Model; PRISMA 2020; VOSviewer Bibliometrics; Cognitive Fit Theory; Ego Depletion; Algorithmic Dark Patterns.
 
@@ -474,26 +474,59 @@ fig3_svg = get_clean_svg(FIG3_SVG_PATH)
 MODULE_4_TEXT = f"""
 ## 4. CONCEPTUAL FRAMEWORK AND THEORETICAL PROPOSITIONS
 
-### 4.1. The Dual-Path S-O-R Architecture
-Synthesizing our bibliometric findings and the TCCM empirical matrix, we formulate an integrative **Dual-Path S-O-R Conceptual Framework**, illustrated in Figure 3. Moving beyond static single-mediator models, our framework establishes that algorithmic stimuli operate through two parallel, mutually reinforcing organismic pathways:
-1. **The Cognitive Pathway (Fluency & Evaluation)**: Algorithmic attributes (*Perceived Personalization* and *Recommendation Accuracy*) minimize mental search costs, fostering cognitive fluency and **Cumulative E-Satisfaction**.
-2. **The Affective Pathway (Serendipity & Emotional Arousal)**: Unexpected and attractive item curation (*Recommendation Novelty & Serendipity*) induces hedonic curiosity and **Emotional Arousal**.
+### 4.1. From Generation 1.0 Filtering to Generation 2.0 Generative AI: Dynamic S-O-R Architecture
+Synthesizing our bibliometric findings and the TCCM empirical matrix, we formulate an integrative **Dynamic and Multiplicative Dual-Path S-O-R Framework**, illustrated in Figure 3. Crucially, to resolve the "AI-specificity disconnect" in prior retail literature, we explicitly distinguish between **Algorithmic Generation 1.0** (predictive collaborative filtering and static item feeds, 2011-2021) and **Algorithmic Generation 2.0** (Large Language Model conversational assistants, multimodal livestreaming cues, and real-time adaptive agents, 2023-2026). Whereas Generation 1.0 systems passively optimize item matching, Generation 2.0 systems inject **social agency**, **conversational anthropomorphism**, and **micro-latency persuasion** directly into the shopping journey (Huang & Ahmad, 2026; Ma et al., 2026; Pang et al., 2026). As summarized in Table 4, this shift substantially compresses deliberative cognitive latency and accelerates self-regulatory depletion.
 
-Together, these cognitive and affective organismic states break through deliberative resistance, mediating the translation of algorithmic stimuli into **Urge to Buy Impulsively (UBI)**, which culminates in **Online Impulse Buying Behavior (OIB)** under the psychological boundary conditions of **Ego Depletion** (enhancer) and **Algorithmic Surveillance Reactance** (suppressor).
-
-<div class="academic-figure-container" style="text-align:center; margin: 2rem 0; padding: 1.5rem; background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-<div style="font-weight: 700; font-size: 1.05rem; color: #0f172a; margin-bottom: 0.5rem;">Figure 3: Integrative Dual-Path S-O-R Conceptual Framework</div>
-<div style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem;">Illustrating dual-path organismic mediation (Cognitive Fluency &amp; Affective Arousal) and self-regulatory boundary conditions (P1–P8).</div>
-{fig3_svg}
-<div style="font-size: 0.8rem; color: #475569; text-align: justify; margin-top: 1rem; line-height: 1.5;"><em>Note</em>: Conceptual model mapping Stimuli (PP, ACC, NOV) to dual-path Organismic mediators (Cumulative E-Satisfaction &amp; Emotional Arousal), culminating in Behavioral Response (UBI &amp; OIB). Governed by Ego Depletion (P7) and Algorithmic Surveillance Reactance (P8) across the Stimulus-Organism bridge.</div>
+<div class="academic-figure-container" style="margin: 2rem 0; overflow-x: auto;">
+<div style="font-weight: 700; font-size: 1rem; color: #0f172a; margin-bottom: 0.5rem; text-align: left;">Table 4: Evolution from Algorithmic Generation 1.0 to Generation 2.0 in Impulse Buying</div>
+<table style="width: 100%; border-collapse: collapse; font-size: 0.83rem; text-align: left; background: #ffffff; border-top: 2.5px solid #0f172a; border-bottom: 2.5px solid #0f172a;">
+<thead>
+<tr style="border-bottom: 1.5px solid #cbd5e1; background: #f8fafc;">
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; width: 22%;">Analytical Dimension</th>
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; width: 39%;">Generation 1.0 (Collaborative Filtering, 2011-2021)</th>
+<th style="padding: 9px 12px; font-weight: 800; color: #0f172a; width: 39%;">Generation 2.0 (Generative &amp; Conversational AI, 2023-2026)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #f1f5f9;">
+<td style="padding: 8px 12px;"><strong>Primary Interaction Mode</strong></td>
+<td style="padding: 8px 12px;">Static visual carousels and passive behavioral filtering</td>
+<td style="padding: 8px 12px;">Dynamic dialogue, real-time contextual persuasion, multimodal cues</td>
+</tr>
+<tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;">
+<td style="padding: 8px 12px;"><strong>Perceived Agency &amp; Presence</strong></td>
+<td style="padding: 8px 12px;">Low; perceived as a passive sorting utility</td>
+<td style="padding: 8px 12px;">High; anthropomorphic social presence and parasocial intimacy</td>
+</tr>
+<tr style="border-bottom: 1px solid #f1f5f9;">
+<td style="padding: 8px 12px;"><strong>Cognitive Appraisal Mechanism</strong></td>
+<td style="padding: 8px 12px;">Cumulative cross-session e-satisfaction</td>
+<td style="padding: 8px 12px;">In-session cognitive fluency and cold-start instant gratification</td>
+</tr>
+<tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;">
+<td style="padding: 8px 12px;"><strong>Self-Regulatory Risk</strong></td>
+<td style="padding: 8px 12px;">Filter bubble fatigue and moderate privacy concerns</td>
+<td style="padding: 8px 12px;">Accelerated ego depletion and overt surveillance reactance</td>
+</tr>
+</tbody>
+</table>
+<div style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; text-align: left;"><em>Note</em>: Synthesizes technological transitions documented across the 866-study corpus (2018-2026).</div>
 </div>
 
-### 4.2. Algorithmic Stimuli and the Cognitive Pathway (P1, P2)
-**Perceived Personalization (PP)** reflects the extent to which a consumer perceives that a digital platform tailors its product offerings to their idiosyncratic preferences and browsing telemetry (Shanahan et al., 2019; Srinivasan et al., 2002). According to Cognitive Fit Theory (Vessey, 1991), when an external system presents information that directly matches an individual's internal mental schema, the cognitive effort required to process that information is minimized. High personalization creates feelings of psychological intimacy and perceived platform intelligence (Al-Natour et al., 2011). When users encounter recommendations that accurately reflect their taste profiles, their subjective shopping efficiency rises, generating positive cognitive appraisal and cumulative satisfaction (Xiao & Benbasat, 2007).
+<div class="academic-figure-container" style="text-align:center; margin: 2rem 0; padding: 1.5rem; background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+<div style="font-weight: 700; font-size: 1.05rem; color: #0f172a; margin-bottom: 0.5rem;">Figure 3: Dynamic &amp; Multiplicative Dual-Path S-O-R Conceptual Framework</div>
+<div style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem;">Illustrating Inverted-U personalization (P1, P8), multiplicative interaction (P5b), ego depletion (P7), and recursive regret feedback (P9).</div>
+{fig3_svg}
+<div style="font-size: 0.8rem; color: #475569; text-align: justify; margin-top: 1rem; line-height: 1.5;"><em>Note</em>: Dynamic model mapping Gen 1.0/2.0 Stimuli to dual-path Organismic mediators, interacting multiplicatively (Permission x Kinetic Energy) to drive UBI and OIB, governed by Ego Depletion (P7) and a Negative Recursive Feedback Loop (P9).</div>
+</div>
 
-Simultaneously, **Perceived Recommendation Accuracy (ACC)**, the degree to which recommended products correctly match the consumer's functional expectations (Al-Natour et al., 2011), serves as the primary driver of expectancy confirmation (Oliver, 1980). When recommendations consistently fulfill functional requirements without irrelevant noise, consumers experience cognitive ease and confirmation of expectations. Therefore, we advance the following propositions:
-- **Proposition 1 (P1):** *Perceived personalization positively influences cumulative e-satisfaction through enhanced cognitive fluency.*
-- **Proposition 2 (P2):** *Perceived recommendation accuracy positively influences cumulative e-satisfaction through expectancy confirmation.*
+### 4.2. Resolving the Cold-Start Paradox and Endogenous Inverted-U Reactance (P1, P2, P8)
+A persistent temporal paradox in prior e-commerce literature is the reliance on **cumulative e-satisfaction** (which requires repeated cross-session transactions) to explain impulsive purchases on algorithmic discovery feeds such as TikTok Shop and Temu, where consumers frequently buy during **cold-start first encounters**. To reconcile this discrepancy, our framework integrates **In-Session Cognitive Fluency** (immediate processing ease and instant interface satisfaction) alongside cumulative cross-session e-satisfaction (ESAT) (Gallin & Portes, 2024; Shanahan et al., 2019; Srinivasan et al., 2002). According to Cognitive Fit Theory (Vessey, 1991), when an AI agent delivers information aligned with a consumer's mental schema during an active session, mental search friction drops immediately, generating instant cognitive fluency even without prior platform loyalty.
+
+However, rather than assuming a monotonically linear positive effect, we model **Perceived Personalization (PP)** through an **endogenous inverted-U (curvilinear) relationship**. Moderate to high personalization fosters cognitive fluency and e-satisfaction (Xiao & Benbasat, 2007). Conversely, when algorithmic targeting crosses an intrusive privacy threshold, it endogenously triggers **Algorithmic Surveillance Reactance** (the "creepiness factor") within the very same consumer (Brehm, 1966; Kumaran & Shobhana, 2026; Lau et al., 2026). Rather than acting purely as an external moderator, surveillance reactance emerges internally from excessive personalization, eroding trust and re-activating deliberative skepticism. Simultaneously, **Perceived Recommendation Accuracy (ACC)** drives expectancy confirmation (Al-Natour et al., 2011; Oliver, 1980). Therefore, we propose:
+- **Proposition 1 (P1 - Curvilinear Effect):** *Perceived personalization exhibits an inverted-U relationship with in-session cognitive fluency and e-satisfaction, increasing satisfaction up to an optimal threshold before diminishing.*
+- **Proposition 2 (P2):** *Perceived recommendation accuracy positively influences cognitive fluency and e-satisfaction through expectancy confirmation.*
+- **Proposition 8 (P8 - Endogenous Reactance):** *Hyper-personalization beyond the consumer's privacy boundary endogenously triggers algorithmic surveillance reactance, which attenuates cognitive e-satisfaction and suppresses impulsive compliance.*
 
 ### 4.3. Recommendation Novelty and the Affective Pathway (P3)
 While accuracy confirms expectations, accuracy alone can result in monotonous, predictable suggestions that fail to generate impulsive excitement. **Recommendation Novelty & Serendipity (NOV)** (defined as the algorithmic presentation of unexpected yet notably attractive and relevant items (Zhang et al., 2021), introduces hedonic surprise into the shopping journey. According to Environmental Psychology (Mehrabian & Russell, 1974), unexpected positive environmental stimuli provoke an immediate surge in physiological and emotional arousal. When consumers discover appealing items they did not intentionally search for, hedonic curiosity and pleasure are ignited, producing an immediate affective elevation (Lin, 2026). Therefore, we propose:
@@ -505,24 +538,23 @@ In environmental psychology, internal organism states mediate the translation of
 1. **The Cognitive Bridge (Cumulative E-Satisfaction)**: Cumulative e-satisfaction produces a psychological state of affective comfort and disarmed vigilance. When a shopper experiences heightened satisfaction with the algorithmic interface, perceived transaction risk diminishes, cognitive defense mechanisms soften, and trust peaks (Gallin & Portes, 2024; Oliver, 1993; Spreng et al., 1996). This psychological ease creates an open, receptive mindset that amplifies the spontaneous urge to buy impulsively.
 2. **The Affective Bridge (Emotional Arousal)**: Simultaneously, heightened emotional arousal directly stimulates visceral desire. Consumers experiencing hedonic excitement and flow states focus intensely on immediate gratification, diminishing attention to future budgetary constraints (Beatty & Ferrell, 1998; Verhagen & van Dolen, 2011).
 
-Thus, cumulative e-satisfaction and emotional arousal operate as complementary dual pathways: e-satisfaction disarms analytical skepticism, while emotional arousal supplies the motivational fuel (Do Xuan Nguyen & Nguyen, 2026). Therefore, we formally state both the direct and mediating propositions:
-- **Proposition 4 (P4):** *Cumulative e-satisfaction positively influences the urge to buy impulsively by lowering perceived cognitive risk.*
-- **Proposition 4a (P4a - Cognitive Mediation):** *Cumulative e-satisfaction mediates the positive relationship between cognitive algorithmic stimuli (perceived personalization and recommendation accuracy) and the urge to buy impulsively.*
+Thus, e-satisfaction and emotional arousal do not merely add together linearly; they operate as a **multiplicative interaction** (`ESAT x Arousal -> UBI`). Emotional arousal without cognitive comfort leaves consumers hesitant due to perceived transaction risk, whereas cognitive satisfaction without affective arousal yields deliberate loyalty rather than spontaneous impulse buying (Do Xuan Nguyen & Nguyen, 2026). Therefore, we formally state direct, mediating, and multiplicative interaction propositions:
+- **Proposition 4 (P4):** *In-session cognitive fluency and e-satisfaction positively influence the urge to buy impulsively by lowering perceived cognitive risk.*
+- **Proposition 4a (P4a - Cognitive Mediation):** *E-satisfaction mediates the relationship between cognitive algorithmic stimuli (personalization and accuracy) and the urge to buy impulsively.*
 - **Proposition 5 (P5):** *Emotional arousal positively influences the urge to buy impulsively by amplifying visceral hedonic desire.*
 - **Proposition 5a (P5a - Affective Mediation):** *Emotional arousal mediates the positive relationship between recommendation novelty/serendipity and the urge to buy impulsively.*
+- **Proposition 5b (P5b - Multiplicative Interaction):** *E-satisfaction (permission structure) and emotional arousal (kinetic energy) interact multiplicatively to amplify the urge to buy impulsively, such that impulsive urges peak when both states are simultaneously high.*
 
 ### 4.5. The Urge-to-Behavior Transition (P6)
 The **urge to buy impulsively (UBI)** represents an acute, felt state of spontaneous desire that precedes transactional execution (Beatty & Ferrell, 1998; Rook & Fisher, 1995). In digital retail environments characterized by frictionless checkout architectures (e.g., Apple Pay, 1-click ordering, saved biometric credentials), the temporal latency between experiencing an impulse and executing payment is compressed to seconds. Extant empirical literature consistently validates that felt impulsive urges represent the most proximate psychological determinant of actual impulse buying behavior (Badgaiyan & Verma, 2015; Zheng et al., 2019). We therefore advance:
 - **Proposition 6 (P6):** *The urge to buy impulsively positively influences online impulse buying behavior.*
 
-### 4.6. Psychological Boundary Conditions: Ego Depletion and Surveillance Reactance (P7, P8)
-A fundamental flaw of prior marketing models is the assumption of a static, deterministic link between impulsive urges and checkout execution. We establish two critical psychological boundary conditions:
+### 4.6. Ego Depletion Boundary Condition (P7) and Negative Recursive Feedback Loop (P9)
+A persistent limitation of static S-O-R models is treating impulsive checkout as a terminal endpoint rather than an ongoing cyclic process. First, grounded in Baumeister's (2002) Strength Model of Self-Control and Sweller's (1988) Cognitive Load Theory, human willpower depletes under sustained cognitive exertion (*Ego Depletion*; Baumeister et al., 2007). Under heavy digital fatigue or rapid Generation 2.0 conversational persuasion, consumers lose executive inhibition to suppress impulsive urges (Akram et al., 2020; Kulal et al., 2026; Zhang et al., 2026). Addressing the psychological replication debate (Hagger et al., 2016), we conceptualize ego depletion as heightened heuristic susceptibility during high-frequency digital choice overload. Therefore:
+- **Proposition 7 (P7):** *Ego depletion positively moderates the relationship between the urge to buy impulsively and online impulse buying behavior, such that the relationship is stronger under high depletion.*
 
-1. **Ego Depletion as an Enhancer of Urge Translation (P7)**: According to Baumeister's (2002) Strength Model of Self-Control, human willpower operates as a finite resource that depletes upon exertion (*Ego Depletion*; Baumeister et al., 2007). Consumers with intact self-regulatory resources possess the executive capacity to suppress spontaneous urges through deliberative cognitive override (resisting temptation by weighing long-term financial goals). However, under heavy cognitive load (Sweller, 1988) or digital fatigue (e.g., late-night smartphone browsing), self-regulatory resources are depleted (Akram et al., 2020; Kulal et al., 2026). In this state, consumers lose the executive inhibition necessary to suppress impulsive urges. Addressing the psychological replication debate (Hagger et al., 2016), we conceptualize ego depletion not as an absolute physiological exhaustion, but as a heightened susceptibility to cognitive heuristics in high-friction digital choice environments. Therefore, we propose:
-   - **Proposition 7 (P7):** *Ego depletion positively moderates the relationship between the urge to buy impulsively and online impulse buying behavior, such that the relationship is stronger under high depletion.*
-
-2. **Algorithmic Surveillance Reactance as a Suppressor (P8)**: Conversely, when personalization crosses the threshold into perceived invasiveness, consumers perceive that their autonomy is compromised (Brehm, 1966). This evokes psychological reactance and perceived algorithmic surveillance, which re-activates analytical vigilance, dampens both cognitive e-satisfaction and affective arousal across the Stimulus-Organism bridge, and suppresses impulsive checkout (Kumaran & Shobhana, 2026; Lau et al., 2026; Xiao & Benbasat, 2018). Therefore, we propose:
-   - **Proposition 8 (P8):** *Algorithmic surveillance reactance negatively moderates the positive influence of algorithmic stimuli on consumer organismic states, attenuating both cumulative e-satisfaction and emotional arousal.*
+Second, we introduce a **Negative Recursive Feedback Loop (P9)** connecting short-term conversion to long-term platform equity. When platforms exploit ego depletion to trigger unbudgeted purchases, consumers frequently experience **post-purchase regret** and cognitive dissonance once self-regulatory clarity returns. This negative emotional aftermath erodes cumulative e-satisfaction in subsequent shopping sessions and primes heightened vigilance against future algorithmic surveillance (Kumaran & Shobhana, 2026). Thus:
+- **Proposition 9 (P9 - Recursive Feedback Loop):** *Online impulse buying executed under high ego depletion induces post-purchase regret, which negatively feeds back to erode future cumulative e-satisfaction and amplify algorithmic surveillance reactance.*
 """
 
 # ==============================================================================
@@ -533,18 +565,13 @@ print("\n[MODULE 5] Drafting Section 5: Discussion & 5-Pillar Agenda...")
 MODULE_5_TEXT = """
 ## 5. DISCUSSION, FUTURE RESEARCH AGENDA, AND MANAGERIAL IMPLICATIONS
 
-### 5.1. Theoretical Contributions
-This study delivers four fundamental theoretical contributions to the disciplines of electronic commerce, marketing psychology, and information systems:
+### 5.1. Theoretical Paradigm Shift: From Static Conversion to Dynamic Algorithmic Well-being
+Rather than viewing algorithmic retailing through an isolated, static conversion lens, this review repositions consumer impulse buying research from a **Static Conversion Optimization Paradigm** toward a **Dynamic Algorithmic Well-being Paradigm**. Our conceptual synthesis makes three integrated advances. First, by contrasting Generation 1.0 collaborative filtering with Generation 2.0 conversational Generative AI (Table 4), we specify how anthropomorphic social agency and micro-latency persuasion compress deliberative evaluation while accelerating cognitive fatigue (Huang & Ahmad, 2026; Pang et al., 2026). Second, we demonstrate that cognitive fluency and e-satisfaction act as a **cognitive permission structure** that interacts multiplicatively with **emotional arousal (visceral kinetic energy)** to trigger impulsive urges ($P_{5b}$), resolving the cold-start temporal paradox by differentiating in-session fluency from cross-session cumulative satisfaction (Do Xuan Nguyen & Nguyen, 2026). Third, by modeling surveillance reactance as an endogenous inverted-U consequence of hyper-personalization ($P_1, P_8$) and integrating a **Negative Recursive Feedback Loop ($P_9$)**, we demonstrate that short-term impulse gains achieved by exploiting ego depletion impose a long-term penalty on customer trust and cumulative satisfaction (Akram et al., 2020; Hagger et al., 2016; Sweller, 1988).
 
-1. **Resolving the S-O-R Stimulus Fragmentation in Algorithmic Commerce**: While traditional retail studies conceptualized environmental stimuli as passive website design elements (Eroglu et al., 2001), this review establishes a multidimensional typology of dynamic algorithmic stimuli (Personalization, Accuracy, Novelty/Serendipity). By untangling the distinct psychological effects of predictive accuracy versus serendipity, we provide a unified taxonomy bridging technical recommendation engineering and consumer behavior (Al-Natour et al., 2011; Zhang et al., 2021).
-2. **Formulating the Dual-Path Cognitive-Affective Organismic Model**: We dismantle the monolithic view of internal consumer states by demonstrating that AI recommendations trigger dual organismic pathways. We resolve the historical debate between Oliver's (1980, 1993) cognitive expectancy-disconfirmation model and Beatty & Ferrell's (1998) affective arousal framework, demonstrating that cumulative e-satisfaction provides the cognitive permission structure (disarming analytical vigilance) while emotional arousal provides the visceral kinetic energy for impulse buying.
-3. **Uncovering the "Dark Side" Thematic Cluster (Surveillance Reactance & Dark Patterns)**: Our bibliometric discovery of Cluster 4 (Yellow) exposes the critical tension between hyper-personalization and consumer privacy. We integrate Brehm's (1966) Psychological Reactance Theory into algorithmic commerce, demonstrating that over-personalization can backfire into perceived surveillance, eroding consumer trust and triggering avoidance behaviors (Komiak & Benbasat, 2006; Kumaran & Shobhana, 2026; Xiao & Benbasat, 2018).
-4. **Theoretically Hedging the Intention-Behavior Gap via Self-Control Depletion**: We bridge the long-standing intention-behavior gap by contextualizing Baumeister's (2002) Strength Model of Self-Control within Sweller's (1988) Cognitive Load Theory. In doing so, we address the replication crisis in ego depletion scholarship (Hagger et al., 2016), explaining how digital retailing interfaces manipulate cognitive fatigue to accelerate the transition from impulsive urge to financial transaction (Akram et al., 2020).
-
-### 5.2. Managerial and Ethical Implications: The Exploitation-Exploration Trade-Off
-For retail executives, digital product managers, and algorithm architects, our findings yield actionable strategic guidance:
-- **Calibrating the March (1991) Exploitation-Exploration Ratio**: Retailers often fall into the trap of over-optimizing for collaborative filtering accuracy, resulting in sterile recommendation feeds. Drawing on James March's (1991) organizational learning paradigm, algorithms should dynamically balance *exploitation* (recommending high-accuracy items matching historical purchases) with *exploration* (injecting serendipitous, unexpected items). Empirical evidence indicates that an adaptive exploration ratio stimulates hedonic arousal and curiosity, driving spontaneous basket building without inducing filter bubble fatigue (Li et al., 2025).
-- **Ethical Algorithmic Guardrails and "Cooling-Off" Architecture**: Retail platforms face mounting regulatory scrutiny regarding algorithmic dark patterns and exploitative nudging (Tobon & Abril, 2024). Retailers should proactively implement **ethical cooling-off mechanisms**, such as non-intrusive budget check-ins, delayed one-click checkout for high-value impulsive additions, and transparent recommendation explanations ("*Why am I seeing this?*"). Far from dampening sales, transparent algorithms cultivate durable, long-term cumulative e-satisfaction and brand equity, mitigating post-purchase remorse and return rates.
+### 5.2. Managerial and Ethical Implications: Tiered "Ethical Friction" for Sustainable CLV
+For retail executives and algorithm architects, our dynamic model elevates ethical design from mere legal compliance to a core **Customer Lifetime Value (CLV)** retention strategy:
+- **Calibrating the March (1991) Exploitation-Exploration Ratio**: Drawing on James March's (1991) organizational learning paradigm, platforms must balance *exploitation* (high-accuracy matching) with *exploration* (serendipitous discovery) to stimulate curiosity without crossing the inverted-U surveillance threshold (Li et al., 2025).
+- **Tiered "Ethical Friction" Architecture**: Rather than applying blanket checkout delays that harm user experience, platforms should deploy **tiered ethical friction** calibrated by product regret risk. For *low-regret, low-ticket consumables* (e.g., everyday groceries, routine accessories), frictionless one-click checkout maximizes convenience without eroding future satisfaction. Conversely, for *high-regret, high-involvement discretionary items* (e.g., luxury goods, electronics, recurring subscriptions) encountered during late-night sessions or rapid browsing streaks indicative of ego depletion, platforms should insert smart cooling-off nudges, transparent recommendation rationales ("*Why am I seeing this?*"), and optional 24-hour cart locks (Tobon & Abril, 2024). Protecting consumers from depletion-induced regret safeguards long-term cumulative e-satisfaction, reduces costly product returns, and sustains durable brand equity.
 
 ### 5.3. An Actionable 5-Pillar Future Research Agenda
 To guide scholarship over the coming decade, we articulate a comprehensive **5-Pillar Future Research Agenda**, accompanied by explicit empirical research questions in Table 3:
