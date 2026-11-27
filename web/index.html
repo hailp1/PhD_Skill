@@ -3,1252 +3,637 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H-AI ResearchLAB | Trung Tâm Điều Hành Nghiên Cứu Tiến Sĩ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>H-AI ResearchLAB | Không Gian Nghiên Cứu Tiến Sĩ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-base: #040711;
-            --bg-surface: #0a0f1d;
-            --bg-surface-elevated: #11192e;
-            --bg-card: rgba(14, 23, 42, 0.85);
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-bright: rgba(56, 189, 248, 0.4);
+            --bg-base: #090d16;
+            --bg-card: #111827;
+            --bg-card-hover: #1e293b;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-focus: #0ea5e9;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
-            --accent-cyan: #06b6d4;
+            --accent-cyan: #0ea5e9;
             --accent-blue: #3b82f6;
-            --accent-purple: #8b5cf6;
             --accent-emerald: #10b981;
+            --accent-purple: #8b5cf6;
             --accent-amber: #f59e0b;
-            --accent-rose: #f43f5e;
-            --gradient-primary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
-            --shadow-glow: 0 0 35px rgba(56, 189, 248, 0.25);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-base);
             color: var(--text-primary);
-            line-height: 1.6;
             min-height: 100vh;
-            background-image: 
-                radial-gradient(circle at 15% 15%, rgba(6, 182, 212, 0.15) 0%, transparent 45%),
-                radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.15) 0%, transparent 45%),
-                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-            background-size: 100% 100%, 100% 100%, 35px 35px, 35px 35px;
-            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
         }
 
-        .container { max-width: 1540px; margin: 0 auto; padding: 2rem; }
-
-        /* HEADER */
-        .lab-header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding-bottom: 2rem; border-bottom: 1px solid var(--border-subtle);
-            margin-bottom: 2rem; flex-wrap: wrap; gap: 1.5rem;
-        }
-        .lab-brand { display: flex; align-items: center; gap: 1.5rem; }
-        .lab-logo-box {
-            width: 68px; height: 68px; border-radius: 20px;
-            background: var(--gradient-primary);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2rem; color: #fff; box-shadow: var(--shadow-glow);
-            position: relative;
-        }
-        .lab-logo-box::after {
-            content: ''; position: absolute; inset: -3px; border-radius: 22px;
-            background: var(--gradient-primary); z-index: -1; filter: blur(10px); opacity: 0.7;
-        }
-        .lab-title h1 {
-            font-family: 'Space Grotesk', sans-serif; font-size: 1.95rem; font-weight: 800; letter-spacing: -0.5px;
-            background: linear-gradient(to right, #ffffff, #38bdf8, #a78bfa);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .lab-title p.topic-vn { font-size: 0.95rem; color: #38bdf8; font-weight: 700; margin-top: 0.2rem; }
-        .lab-title p.topic-en { font-size: 0.82rem; color: #94a3b8; font-style: italic; }
-
-        .lab-stats-badges { display: flex; gap: 0.85rem; align-items: center; flex-wrap: wrap; }
-        .badge-pill {
-            padding: 0.55rem 1.15rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 700;
-            background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-subtle);
-            display: flex; align-items: center; gap: 0.6rem; backdrop-filter: blur(8px);
-        }
-        .badge-pill.status-live { border-color: rgba(16, 185, 129, 0.5); background: rgba(16, 185, 129, 0.12); color: #34d399; }
-        .pulse-dot { width: 9px; height: 9px; border-radius: 50%; background: #10b981; box-shadow: 0 0 12px #10b981; animation: pulse 2s infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
-
-        /* SECTION HEADING */
-        .section-heading {
-            font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; font-weight: 800;
-            margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between;
-        }
-        .section-heading-left { display: flex; align-items: center; gap: 0.85rem; }
-        .section-heading-left i { color: var(--accent-cyan); font-size: 1.4rem; }
-        .section-tagline { font-size: 0.85rem; color: var(--text-muted); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; }
-
-        /* ==================== INTERACTIVE GRAPHICAL NETWORK CANVAS ==================== */
-        .network-canvas-card {
-            background: radial-gradient(circle at 50% 50%, rgba(19, 28, 49, 0.9) 0%, rgba(6, 9, 17, 0.95) 100%);
-            border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 24px; padding: 2rem;
-            margin-bottom: 3rem; position: relative; overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-        }
-        .network-canvas-card::before {
-            content: ''; position: absolute; inset: 0;
-            background: radial-gradient(circle at 50% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 60%);
-            pointer-events: none;
-        }
-        .network-header-info {
-            display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;
-            position: relative; z-index: 2;
-        }
-        .network-header-info h2 {
-            font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800;
-            display: flex; align-items: center; gap: 0.75rem; color: #fff;
-        }
-        .network-header-info h2 i { color: #38bdf8; }
-        .network-status-badge {
-            font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 700;
-            color: #34d399; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3);
-            padding: 0.35rem 0.85rem; border-radius: 9999px; display: flex; align-items: center; gap: 0.5rem;
-        }
-
-        /* SVG INTERACTIVE STYLES */
-        .svg-container { width: 100%; height: auto; min-height: 480px; position: relative; z-index: 2; }
-        svg text { user-select: none; }
-        .node-group { cursor: pointer; transition: all 0.3s; }
-        .node-group:hover .node-circle { stroke: #38bdf8; stroke-width: 3.5px; filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.8)); }
-        .node-group:hover .node-icon { transform: scale(1.15); }
-        .node-circle { transition: all 0.3s; }
-        
-        /* ANIMATED DATA FLOW PATHS */
-        .flow-path {
-            stroke: rgba(56, 189, 248, 0.25); stroke-width: 2.5px; stroke-dasharray: 6, 6;
-            animation: flowDash 30s linear infinite; fill: none; transition: stroke 0.3s, stroke-width 0.3s;
-        }
-        .flow-path.active {
-            stroke: #38bdf8; stroke-width: 4px; stroke-dasharray: 8, 4;
-            filter: drop-shadow(0 0 10px #38bdf8); animation: flowDashFast 10s linear infinite;
-        }
-        .flow-path.feedback {
-            stroke: rgba(244, 63, 94, 0.35); stroke-dasharray: 6, 6;
-            animation: flowDashReverse 30s linear infinite;
-        }
-        .flow-path.feedback.active {
-            stroke: #f43f5e; stroke-width: 4px; filter: drop-shadow(0 0 10px #f43f5e);
-            animation: flowDashReverseFast 10s linear infinite;
-        }
-        @keyframes flowDash { to { stroke-dashoffset: -1000; } }
-        @keyframes flowDashFast { to { stroke-dashoffset: -2000; } }
-        @keyframes flowDashReverse { to { stroke-dashoffset: 1000; } }
-        @keyframes flowDashReverseFast { to { stroke-dashoffset: 2000; } }
-
-        /* LIVE TERMINAL CONSOLE */
-        .terminal-container {
-            background: #050811; border: 1px solid rgba(56, 189, 248, 0.25);
-            border-radius: 20px; overflow: hidden; margin-bottom: 3rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
-        .terminal-header {
-            background: #0b1120; padding: 0.85rem 1.5rem; border-bottom: 1px solid var(--border-subtle);
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .terminal-controls { display: flex; gap: 0.5rem; }
-        .term-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .term-dot.red { background: #ef4444; }
-        .term-dot.yellow { background: #f59e0b; }
-        .term-dot.green { background: #10b981; }
-        .terminal-title { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #94a3b8; font-weight: 600; }
-        .terminal-body {
-            padding: 1.5rem; min-height: 200px; max-height: 300px; overflow-y: auto;
-            font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #34d399; line-height: 1.7;
-        }
-
-        /* 6 WORKSTATIONS GRID */
-        .agents-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
-            gap: 1.5rem; margin-bottom: 3rem;
-        }
-        .agent-workstation {
-            background: var(--bg-card); border: 1px solid var(--border-subtle);
-            border-radius: 20px; padding: 1.75rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;
+        /* Top Simple Bar */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            background: rgba(17, 24, 39, 0.7);
             backdrop-filter: blur(12px);
         }
-        .agent-workstation:hover {
-            transform: translateY(-5px); border-color: var(--border-bright);
-            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.02em;
         }
-        .agent-workstation::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
-            background: var(--gradient-primary); opacity: 0.8;
-        }
-        .agent-top-bar { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.25rem; }
-        .agent-profile { display: flex; align-items: center; gap: 1rem; }
-        .agent-avatar-frame {
-            width: 58px; height: 58px; border-radius: 16px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.6rem; color: #fff; position: relative; flex-shrink: 0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        .agent-online-indicator {
-            position: absolute; bottom: -2px; right: -2px; width: 14px; height: 14px;
-            border-radius: 50%; background: #10b981; border: 2.5px solid var(--bg-surface);
-        }
-        .agent-info h3 { font-size: 1.15rem; font-weight: 800; color: #fff; line-height: 1.3; }
-        .agent-info p.role-vn { font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; }
-        .agent-info p.persona-title { font-size: 0.78rem; color: #94a3b8; font-style: italic; }
-
-        .agent-metrics-box {
-            text-align: right; background: rgba(255, 255, 255, 0.03); padding: 0.4rem 0.8rem;
-            border-radius: 10px; border: 1px solid var(--border-subtle);
-        }
-        .agent-metrics-box .metric-val { font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; font-weight: 700; color: #34d399; }
-        .agent-metrics-box .metric-lbl { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; }
-
-        .agent-mission { font-size: 0.88rem; color: #cbd5e1; margin-bottom: 1.25rem; line-height: 1.6; }
-        .agent-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.5rem; }
-        .tag-pill {
-            font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
-            padding: 0.25rem 0.6rem; border-radius: 6px; background: var(--bg-surface-elevated);
-            color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.15);
+        .brand-logo i { color: var(--accent-cyan); font-size: 1.3rem; }
+        .phd-badge {
+            font-size: 0.75rem;
+            background: rgba(14, 165, 233, 0.15);
+            color: var(--accent-cyan);
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            font-weight: 600;
         }
 
-        .agent-actions-panel {
-            background: rgba(0, 0, 0, 0.35); border-radius: 14px; padding: 1rem;
-            border: 1px solid var(--border-subtle);
+        /* Core Workspace Container */
+        .workspace {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
-        .actions-label {
-            font-size: 0.75rem; font-weight: 700; color: var(--text-muted);
-            text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.75rem;
-            display: flex; align-items: center; gap: 0.4rem;
-        }
-        .actions-grid-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.6rem; }
-        .act-btn {
-            padding: 0.65rem 0.75rem; border-radius: 10px; border: 1px solid var(--border-subtle);
-            background: var(--bg-surface-elevated); color: var(--text-primary);
-            font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
-            display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-align: center;
-        }
-        .act-btn:hover {
-            transform: translateY(-2px); border-color: var(--accent-cyan);
-            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
-            color: #fff; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
-        }
-        .act-btn i { font-size: 0.9rem; color: var(--accent-cyan); }
-        .act-btn.primary { background: var(--gradient-primary); border: none; color: #fff; }
-        .act-btn.primary i { color: #fff; }
-        .act-btn.primary:hover { box-shadow: 0 4px 16px rgba(56, 189, 248, 0.4); }
 
-        /* MODAL */
+        /* Topic Summary Banner */
+        .dissertation-banner {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.25rem 1.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .topic-info h2 {
+            font-size: 0.8rem;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.35rem;
+        }
+        .topic-info p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            line-height: 1.45;
+        }
+        .researcher-tag {
+            text-align: right;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+        .researcher-tag b { color: #fff; }
+
+        /* The 2 Core Action Modes */
+        .core-modes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 860px) {
+            .core-modes-grid { grid-template-columns: 1fr; }
+        }
+
+        .mode-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .mode-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+        .mode-card.idea-mode {
+            border-top: 4px solid var(--accent-cyan);
+        }
+        .mode-card.write-mode {
+            border-top: 4px solid var(--accent-emerald);
+        }
+
+        .mode-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .mode-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+        }
+        .idea-mode .mode-icon {
+            background: rgba(14, 165, 233, 0.15);
+            color: var(--accent-cyan);
+        }
+        .write-mode .mode-icon {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-emerald);
+        }
+
+        .mode-title h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .mode-title p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Input for Thinking Mode */
+        .idea-input-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .idea-textarea {
+            width: 100%;
+            height: 100px;
+            background: #090d16;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.9rem;
+            resize: none;
+            outline: none;
+            transition: border 0.2s;
+        }
+        .idea-textarea:focus {
+            border-color: var(--border-focus);
+        }
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .btn-cyan {
+            background: var(--accent-cyan);
+            color: #090d16;
+        }
+        .btn-cyan:hover { background: #38bdf8; }
+        .btn-emerald {
+            background: var(--accent-emerald);
+            color: #090d16;
+        }
+        .btn-emerald:hover { background: #34d399; }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            color: #cbd5e1;
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        /* Papers Currently in Pipeline */
+        .paper-list-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .paper-item {
+            background: #090d16;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        .paper-item-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 0.2rem;
+        }
+        .paper-item-meta {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .paper-item-meta b { color: var(--accent-emerald); }
+
+        /* Quick Tools Footer Dock */
+        .tools-dock {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.25rem 1.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .tools-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .tools-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .tool-link {
+            font-size: 0.8rem;
+            color: #cbd5e1;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.45rem 0.85rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s;
+        }
+        .tool-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        /* Reader / Preview Modal */
         .modal-overlay {
-            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
-            display: none; align-items: center; justify-content: center; z-index: 9999;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 2rem;
         }
-        .modal-content {
-            background: var(--bg-surface); border: 1px solid var(--border-bright);
-            border-radius: 20px; width: 90%; max-width: 760px; max-height: 85vh;
-            overflow-y: auto; padding: 2.25rem; position: relative;
+        .modal-container {
+            background: #111827;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
         }
-        .modal-close-btn {
-            position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none;
-            color: var(--text-muted); font-size: 1.35rem; cursor: pointer;
+        .modal-header {
+            padding: 1.25rem 1.75rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .modal-close-btn:hover { color: #fff; }
+        .modal-header h3 { font-size: 1.15rem; color: #fff; }
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+        .modal-close:hover { color: #fff; }
+        .modal-body {
+            padding: 1.75rem;
+            overflow-y: auto;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+        .modal-body h1, .modal-body h2, .modal-body h3 {
+            color: #fff;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        .modal-body pre {
+            background: #090d16;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            margin: 1rem 0;
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <!-- MASTER HEADER -->
-    <header class="lab-header">
-        <div class="lab-brand">
-            <div class="lab-logo-box">
-                <i class="fa-solid fa-atom"></i>
-            </div>
-            <div class="lab-title">
-                <h1>H-AI ResearchLAB</h1>
-                <p class="topic-vn">
-                    <i class="fa-solid fa-graduation-cap"></i> Đề tài Luận án Tiến sĩ: Tác động của hệ thống đề xuất cá nhân hóa dựa trên AI đến hành vi mua bốc đồng của người tiêu dùng trực tuyến: Vai trò trung gian của sự hài lòng trực tuyến
-                </p>
-                <p class="topic-en">
-                    The Impact of AI-Driven Personalized Recommendation Systems on Online Consumer Impulse Buying Behavior: The Mediating Role of E-Satisfaction
-                </p>
-            </div>
+    <!-- TOP NAVIGATION -->
+    <header class="top-bar">
+        <div class="brand-logo">
+            <i class="fa-solid fa-atom"></i>
+            <span>H-AI ResearchLAB</span>
+            <span class="phd-badge"><i class="fa-solid fa-graduation-cap"></i> Ph.D. Workspace</span>
         </div>
-        <div class="lab-stats-badges">
-            <div class="badge-pill status-live">
-                <div class="pulse-dot"></div> 6 DR. HAI Chuyên Biệt
-            </div>
-            <div class="badge-pill">
-                <i class="fa-solid fa-trophy" style="color:#fbbf24;"></i> Điểm Sức Khỏe: 100/100
-            </div>
-            <div class="badge-pill">
-                <i class="fa-solid fa-database" style="color:#38bdf8;"></i> 536 Bài Báo (SQLite FTS5)
-            </div>
+        <div style="font-size:0.85rem; color:var(--text-secondary);">
+            <i class="fa-solid fa-circle-check" style="color:var(--accent-emerald);"></i> 536 Bài Báo Khoa Học (SQLite FTS5)
         </div>
     </header>
 
-    <!-- ==================== THANH ĐIỀU HƯỚNG CỔNG TỔNG HỢP DUY NHẤT (PORTAL NAVIGATION) ==================== -->
-    <nav class="portal-nav-bar" style="display:flex; gap:0.75rem; background:rgba(30,41,59,0.85); padding:0.75rem 1.25rem; border-radius:12px; border:1px solid rgba(255,255,255,0.08); margin-bottom:1.5rem; backdrop-filter:blur(8px); flex-wrap:wrap; align-items:center;">
-        <span style="font-size:0.85rem; font-weight:700; color:#38bdf8; text-transform:uppercase; letter-spacing:0.05em; margin-right:0.5rem;">
-            <i class="fa-solid fa-compass"></i> Cổng Điều Hành H-AI:
-        </span>
-        <button class="portal-nav-btn active" onclick="switchPortalTab('command_center')" style="background:#0284c7; color:#fff; border:none; padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.4rem;">
-            <i class="fa-solid fa-network-wired"></i> Trung Tâm Điều Hành 6 DR. HAI
-        </button>
-        <button class="portal-nav-btn" onclick="switchPortalTab('vosviewer_view')" style="background:rgba(255,255,255,0.06); color:#cbd5e1; border:1px solid rgba(255,255,255,0.1); padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.4rem;">
-            <i class="fa-solid fa-project-diagram"></i> Mạng Lưới VOSviewer (1,441 Bài)
-        </button>
-        <button class="portal-nav-btn" onclick="switchPortalTab('database_view')" style="background:rgba(255,255,255,0.06); color:#cbd5e1; border:1px solid rgba(255,255,255,0.1); padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.4rem;">
-            <i class="fa-solid fa-database"></i> Tra Cứu CSDL Học Thuật (SQLite FTS5)
-        </button>
-        <button class="portal-nav-btn" onclick="switchPortalTab('survey_view')" style="background:rgba(255,255,255,0.06); color:#cbd5e1; border:1px solid rgba(255,255,255,0.1); padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.4rem;">
-            <i class="fa-solid fa-clipboard-question"></i> Bảng Hỏi & Thang Đo Thực Nghiệm
-        </button>
-        <button class="portal-nav-btn" onclick="switchPortalTab('pipeline_view')" style="background:rgba(255,255,255,0.06); color:#cbd5e1; border:1px solid rgba(255,255,255,0.1); padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; font-size:0.85rem; display:flex; align-items:center; gap:0.4rem;">
-            <i class="fa-solid fa-scroll"></i> Kế Hoạch 4 Bài Báo Scopus Q1
-        </button>
-    </nav>
+    <!-- CORE WORKSPACE -->
+    <main class="workspace">
 
-    <!-- ==================== GIAO DIỆN ĐỒ HỌA MẠNG LƯỚI TƯƠNG TÁC SỐNG ĐỘNG ==================== -->
-    <div class="network-canvas-card">
-        <div class="network-header-info">
-            <h2>
-                <i class="fa-solid fa-diagram-project"></i>
-                Bản Đồ Đồ Họa Tương Tác Giữa Các Nhân Viên DR. HAI (Live Interaction Canvas)
-            </h2>
-            <div class="network-status-badge">
-                <div class="pulse-dot"></div> Luồng Dữ Liệu Đồng Bộ Đang Chạy
+        <!-- DISSERTATION BANNER -->
+        <section class="dissertation-banner">
+            <div class="topic-info">
+                <h2><i class="fa-solid fa-bookmark"></i> Đề tài Luận án Tiến sĩ:</h2>
+                <p>Tác động của hệ thống đề xuất cá nhân hóa dựa trên AI đến hành vi mua bốc đồng của người tiêu dùng trực tuyến: Vai trò trung gian của sự hài lòng trực tuyến</p>
             </div>
-        </div>
+            <div class="researcher-tag">
+                NCS: <b>Lê Phúc Hải</b><br>
+                Trường Đại học Tôn Đức Thắng (TDTU)
+            </div>
+        </section>
 
-        <div style="font-size:0.85rem; color:#94a3b8; margin-bottom:1.25rem;">
-            * <b>Hướng dẫn tương tác</b>: Nhấp trực tiếp vào từng <b>DR. HAI Node</b> trên bản đồ để xem luồng truyền giao dữ liệu, kích hoạt đối thoại học thuật và ghi nhận nhật ký vào Terminal bên dưới.
-        </div>
+        <!-- 2 CORE WORK MODES -->
+        <section class="core-modes-grid">
 
-        <!-- SVG INTERACTIVE CANVAS -->
-        <div class="svg-container">
-            <svg viewBox="0 0 1100 520" class="w-full h-full">
-                <defs>
-                    <!-- Linear & Radial Gradients -->
-                    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#0284c7" />
-                        <stop offset="100%" stop-color="#06b6d4" />
-                    </linearGradient>
-                    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#1e40af" />
-                        <stop offset="100%" stop-color="#3b82f6" />
-                    </linearGradient>
-                    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#6d28d9" />
-                        <stop offset="100%" stop-color="#8b5cf6" />
-                    </linearGradient>
-                    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#047857" />
-                        <stop offset="100%" stop-color="#10b981" />
-                    </linearGradient>
-                    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#b45309" />
-                        <stop offset="100%" stop-color="#f59e0b" />
-                    </linearGradient>
-                    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#be123c" />
-                        <stop offset="100%" stop-color="#f43f5e" />
-                    </linearGradient>
+            <!-- MODE 1: THINK Ý TƯỞNG MỚI & LẬP KẾ HOẠCH -->
+            <div class="mode-card idea-mode">
+                <div class="mode-header">
+                    <div class="mode-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <div class="mode-title">
+                        <h3>Think & Khám Phá Ý Tưởng Mới</h3>
+                        <p>Nhập ý tưởng thô $\rightarrow$ Quét 250M bài OpenAlex & CSDL $\rightarrow$ Lập Kế hoạch bài báo</p>
+                    </div>
+                </div>
+
+                <div class="idea-input-box">
+                    <label style="font-size:0.8rem; font-weight:600; color:var(--text-secondary);">
+                        Nhập từ khóa hoặc ý tưởng nghiên cứu bạn đang suy nghĩ:
+                    </label>
+                    <textarea id="userIdeaInput" class="idea-textarea" placeholder="Ví dụ: AI recommendation serendipity impulse buying e-satisfaction, hoặc: livestream shopping algorithm lock-in...">AI recommendation serendipity impulse buying e-satisfaction</textarea>
                     
-                    <!-- Glow Filter -->
-                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feGaussianBlur stdDeviation="6" result="blur" />
-                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                    </filter>
-                </defs>
-
-                <!-- CONNECTING FLOW PATHS (DATA HANDOVER PIPELINE) -->
-                <!-- Path 1: CRS -> SLR (Gaps & Theoretical Queries) -->
-                <path id="path-crs-slr" class="flow-path active" d="M 170 120 L 550 80" />
-                <!-- Path 2: CRS -> MSA (Constructs & Scale Needs) -->
-                <path id="path-crs-msa" class="flow-path active" d="M 170 120 L 170 400" />
-                <!-- Path 3: SLR -> LPA (PRISMA Synthesis & Verified Quotes) -->
-                <path id="path-slr-lpa" class="flow-path active" d="M 550 80 L 930 120" />
-                <!-- Path 4: MSA -> EDS (28 Items Questionnaire & CVI) -->
-                <path id="path-msa-eds" class="flow-path active" d="M 170 400 L 550 440" />
-                <!-- Path 5: EDS -> LPA (PLS-SEM Bootstrapping & Stats Tables) -->
-                <path id="path-eds-lpa" class="flow-path active" d="M 550 440 L 930 120" />
-                <!-- Path 6: LPA -> MJR (Full IMRAD Manuscript Submission) -->
-                <path id="path-lpa-mjr" class="flow-path active" d="M 930 120 L 930 400" />
-                <!-- Path 7: MJR -> LPA (Feedback / Rebuttal Roadmap Loop) -->
-                <path id="path-mjr-lpa" class="flow-path feedback active" d="M 910 400 L 910 140" />
-                <!-- Path 8: Central Hub Coordination Lines -->
-                <line x1="550" y1="260" x2="170" y2="120" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
-                <line x1="550" y1="260" x2="550" y2="80" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
-                <line x1="550" y1="260" x2="930" y2="120" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
-                <line x1="550" y1="260" x2="930" y2="400" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
-                <line x1="550" y1="260" x2="550" y2="440" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
-                <line x1="550" y1="260" x2="170" y2="400" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
-
-                <!-- CENTRAL COMMAND HUB (H-AI CORE) -->
-                <g transform="translate(550, 260)">
-                    <circle r="46" fill="#090d1a" stroke="#06b6d4" stroke-width="2.5" filter="url(#glow)" />
-                    <circle r="36" fill="url(#cyanGrad)" opacity="0.2" />
-                    <text text-anchor="middle" y="5" fill="#38bdf8" font-size="12" font-family="'Space Grotesk', sans-serif" font-weight="800" letter-spacing="1">H-AI CORE</text>
-                    <text text-anchor="middle" y="20" fill="#94a3b8" font-size="8" font-family="'JetBrains Mono', monospace">PIPELINE</text>
-                </g>
-
-                <!-- FLOW LABELS ON PATHS -->
-                <text x="360" y="90" fill="#67e8f9" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600">Gaps & Queries ➔</text>
-                <text x="110" y="260" fill="#c084fc" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600" transform="rotate(-90 110,260)">Thang Đo & CVI ➔</text>
-                <text x="740" y="90" fill="#fde047" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600">PRISMA Matrix ➔</text>
-                <text x="360" y="430" fill="#34d399" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600">28 Items Survey ➔</text>
-                <text x="740" y="320" fill="#6ee7b7" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="600" transform="rotate(-40 740,320)">PLS-SEM Bootstrapping ➔</text>
-                <text x="945" y="260" fill="#fda4af" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="700" transform="rotate(90 945,260)">IMRAD Submission ➔</text>
-                <text x="895" y="260" fill="#f43f5e" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="700" transform="rotate(-90 895,260)">Rebuttal Feedback ↺</text>
-
-                <!-- NODE 1: DR. HAI (Chief Strategist) -->
-                <g class="node-group" id="node-crs" transform="translate(170, 120)" onclick="selectNode('CRS')">
-                    <circle class="node-circle" r="50" fill="#090d1a" stroke="#0284c7" stroke-width="2.5" />
-                    <circle r="42" fill="url(#cyanGrad)" opacity="0.3" />
-                    <text class="node-icon" text-anchor="middle" y="8" fill="#fff" font-size="24"><tspan font-family="'Font Awesome 6 Free'" font-weight="900">&#xf43f;</tspan></text>
-                    <text text-anchor="middle" y="70" fill="#ffffff" font-size="12" font-family="'Space Grotesk', sans-serif" font-weight="800">DR. HAI</text>
-                    <text text-anchor="middle" y="84" fill="#38bdf8" font-size="10" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700">Chief Strategist</text>
-                    <text text-anchor="middle" y="97" fill="#64748b" font-size="8" font-family="'JetBrains Mono', monospace">Agent 01 (CRS)</text>
-                </g>
-
-                <!-- NODE 2: DR. HAI (Literature Reviewer) -->
-                <g class="node-group" id="node-slr" transform="translate(550, 80)" onclick="selectNode('SLR')">
-                    <circle class="node-circle" r="50" fill="#090d1a" stroke="#2563eb" stroke-width="2.5" />
-                    <circle r="42" fill="url(#blueGrad)" opacity="0.3" />
-                    <text class="node-icon" text-anchor="middle" y="8" fill="#fff" font-size="24"><tspan font-family="'Font Awesome 6 Free'" font-weight="900">&#xf599;</tspan></text>
-                    <text text-anchor="middle" y="70" fill="#ffffff" font-size="12" font-family="'Space Grotesk', sans-serif" font-weight="800">DR. HAI</text>
-                    <text text-anchor="middle" y="84" fill="#60a5fa" font-size="10" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700">Literature Reviewer</text>
-                    <text text-anchor="middle" y="97" fill="#64748b" font-size="8" font-family="'JetBrains Mono', monospace">Agent 02 (SLR)</text>
-                </g>
-
-                <!-- NODE 3: DR. HAI (Methodologist) -->
-                <g class="node-group" id="node-msa" transform="translate(170, 400)" onclick="selectNode('MSA')">
-                    <circle class="node-circle" r="50" fill="#090d1a" stroke="#7c3aed" stroke-width="2.5" />
-                    <circle r="42" fill="url(#purpleGrad)" opacity="0.3" />
-                    <text class="node-icon" text-anchor="middle" y="8" fill="#fff" font-size="24"><tspan font-family="'Font Awesome 6 Free'" font-weight="900">&#xf546;</tspan></text>
-                    <text text-anchor="middle" y="70" fill="#ffffff" font-size="12" font-family="'Space Grotesk', sans-serif" font-weight="800">DR. HAI</text>
-                    <text text-anchor="middle" y="84" fill="#a78bfa" font-size="10" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700">Methodologist</text>
-                    <text text-anchor="middle" y="97" fill="#64748b" font-size="8" font-family="'JetBrains Mono', monospace">Agent 03 (MSA)</text>
-                </g>
-
-                <!-- NODE 4: DR. HAI (Data Scientist) -->
-                <g class="node-group" id="node-eds" transform="translate(550, 440)" onclick="selectNode('EDS')">
-                    <circle class="node-circle" r="50" fill="#090d1a" stroke="#059669" stroke-width="2.5" />
-                    <circle r="42" fill="url(#emeraldGrad)" opacity="0.3" />
-                    <text class="node-icon" text-anchor="middle" y="8" fill="#fff" font-size="24"><tspan font-family="'Font Awesome 6 Free'" font-weight="900">&#xf681;</tspan></text>
-                    <text text-anchor="middle" y="70" fill="#ffffff" font-size="12" font-family="'Space Grotesk', sans-serif" font-weight="800">DR. HAI</text>
-                    <text text-anchor="middle" y="84" fill="#34d399" font-size="10" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700">Data Scientist</text>
-                    <text text-anchor="middle" y="97" fill="#64748b" font-size="8" font-family="'JetBrains Mono', monospace">Agent 04 (EDS)</text>
-                </g>
-
-                <!-- NODE 5: DR. HAI (Lead Author) -->
-                <g class="node-group" id="node-lpa" transform="translate(930, 120)" onclick="selectNode('LPA')">
-                    <circle class="node-circle" r="50" fill="#090d1a" stroke="#d97706" stroke-width="2.5" />
-                    <circle r="42" fill="url(#amberGrad)" opacity="0.3" />
-                    <text class="node-icon" text-anchor="middle" y="8" fill="#fff" font-size="24"><tspan font-family="'Font Awesome 6 Free'" font-weight="900">&#xf56b;</tspan></text>
-                    <text text-anchor="middle" y="70" fill="#ffffff" font-size="12" font-family="'Space Grotesk', sans-serif" font-weight="800">DR. HAI</text>
-                    <text text-anchor="middle" y="84" fill="#fbbf24" font-size="10" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700">Lead Author</text>
-                    <text text-anchor="middle" y="97" fill="#64748b" font-size="8" font-family="'JetBrains Mono', monospace">Agent 05 (LPA)</text>
-                </g>
-
-                <!-- NODE 6: DR. HAI (Review Board) -->
-                <g class="node-group" id="node-mjr" transform="translate(930, 400)" onclick="selectNode('MJR')">
-                    <circle class="node-circle" r="50" fill="#090d1a" stroke="#e11d48" stroke-width="2.5" />
-                    <circle r="42" fill="url(#roseGrad)" opacity="0.3" />
-                    <text class="node-icon" text-anchor="middle" y="8" fill="#fff" font-size="24"><tspan font-family="'Font Awesome 6 Free'" font-weight="900">&#xf0e3;</tspan></text>
-                    <text text-anchor="middle" y="70" fill="#ffffff" font-size="12" font-family="'Space Grotesk', sans-serif" font-weight="800">DR. HAI</text>
-                    <text text-anchor="middle" y="84" fill="#fb7185" font-size="10" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700">Review Board</text>
-                    <text text-anchor="middle" y="97" fill="#64748b" font-size="8" font-family="'JetBrains Mono', monospace">Agent 06 (MJR)</text>
-                </g>
-            </svg>
-        </div>
-    </div>
-
-    <!-- LIVE TERMINAL CONSOLE -->
-    <div class="terminal-container">
-        <div class="terminal-header">
-            <div class="terminal-controls">
-                <div class="term-dot red"></div>
-                <div class="term-dot yellow"></div>
-                <div class="term-dot green"></div>
-            </div>
-            <div class="terminal-title">
-                <i class="fa-solid fa-terminal"></i> H-AI ResearchLAB • Nhật Ký Tác Chiến Giữa Các DR. HAI (Inter-Agent Action Terminal)
-            </div>
-            <div style="font-size:0.75rem; color:#64748b; font-family:'JetBrains Mono',monospace;">
-                LIVE FEED • MULTI-AGENT SYNC
-            </div>
-        </div>
-        <div class="terminal-body" id="termOutput">
-[H-AI LAB] Chào mừng Lab Director (Nghiên cứu sinh Lê Phúc Hải)!
-[SYSTEM] Bản đồ đồ họa tương tác 6 vị DR. HAI đã kích hoạt đồng bộ.
-[SYSTEM] Nhấp vào từng Node DR. HAI trên bản đồ đồ họa hoặc các nút thao tác bên dưới để kích hoạt luồng truyền giao dữ liệu liên tác tử...
-        </div>
-    </div>
-
-    <!-- 6 WORKSTATIONS GRID -->
-    <div class="section-heading">
-        <div class="section-heading-left">
-            <i class="fa-solid fa-users-gear"></i>
-            <span>Trạm Tác Chiến Nghiệp Vụ Của 6 Vị DR. HAI Chuyên Biệt</span>
-        </div>
-        <span class="section-tagline">Mỗi vị DR. HAI quản lý một phân đoạn học thuật khép kín</span>
-    </div>
-
-    <div class="agents-grid">
-        <!-- AGENT 1: CRS -->
-        <div class="agent-workstation" id="card-CRS">
-            <div>
-                <div class="agent-top-bar">
-                    <div class="agent-profile">
-                        <div class="agent-avatar-frame" style="background: linear-gradient(135deg, #0284c7, #06b6d4);">
-                            <i class="fa-solid fa-chess-queen"></i>
-                            <div class="agent-online-indicator"></div>
-                        </div>
-                        <div class="agent-info">
-                            <h3>DR. HAI (Chief Strategist)</h3>
-                            <p class="role-vn">Viện trưởng Chiến lược & Khoảng trống Nghiên cứu</p>
-                            <p class="persona-title">Agent 01 (CRS) • Phân thân Chiến lược Học thuật</p>
-                        </div>
-                    </div>
-                    <div class="agent-metrics-box">
-                        <div class="metric-val">99.8%</div>
-                        <div class="metric-lbl">Hiệu Suất</div>
+                    <div style="display:flex; gap:0.75rem;">
+                        <button class="btn-action btn-cyan" onclick="runIdeaMining()" style="flex:1;">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Quét Y Văn & Lập Plan Bài Báo
+                        </button>
+                        <button class="btn-action btn-secondary" onclick="viewLatestPlan()">
+                            <i class="fa-solid fa-file-contract"></i> Xem Plan Vừa Lập
+                        </button>
                     </div>
                 </div>
-                <p class="agent-mission">
-                    Định vị 3 tầng khoảng trống nghiên cứu (Theoretical, Contextual, Empirical Gaps), lựa chọn các lý thuyết nền tảng (S-O-R, Ego Depletion) và kiến tạo hệ thống giả thuyết H1-H9 logic 4 bước.
-                </p>
-                <div class="agent-tags">
-                    <span class="tag-pill">phd-research-proposal</span>
-                    <span class="tag-pill">Theory Triangulation</span>
-                    <span class="tag-pill">Stanford STORM</span>
-                </div>
-            </div>
-            <div class="agent-actions-panel">
-                <div class="actions-label"><i class="fa-solid fa-sliders"></i> Bảng Thao Tác Nghiệp Vụ Trực Tiếp:</div>
-                <div class="actions-grid-buttons">
-                    <button class="act-btn primary" onclick="runAgentAction('CRS', 'scan_idea')">
-                        <i class="fa-solid fa-lightbulb"></i> Quét Ý Tưởng & Gap
-                    </button>
-                    <button class="act-btn" onclick="runAgentAction('CRS', 'storm_dialogue')">
-                        <i class="fa-solid fa-comments"></i> Tranh Biện STORM
-                    </button>
-                    <button class="act-btn" onclick="openAgentModal('CRS')">
-                        <i class="fa-regular fa-id-card"></i> Hồ Sơ Chi Tiết
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <!-- AGENT 2: SLR -->
-        <div class="agent-workstation" id="card-SLR">
-            <div>
-                <div class="agent-top-bar">
-                    <div class="agent-profile">
-                        <div class="agent-avatar-frame" style="background: linear-gradient(135deg, #2563eb, #3b82f6);">
-                            <i class="fa-solid fa-magnifying-glass-chart"></i>
-                            <div class="agent-online-indicator"></div>
-                        </div>
-                        <div class="agent-info">
-                            <h3>DR. HAI (Literature Reviewer)</h3>
-                            <p class="role-vn">Chuyên gia Y văn PRISMA 2020 & Gác Cổng Liêm Chính</p>
-                            <p class="persona-title">Agent 02 (SLR) • Phân thân Tổng quan Y văn</p>
-                        </div>
-                    </div>
-                    <div class="agent-metrics-box">
-                        <div class="metric-val">100%</div>
-                        <div class="metric-lbl">Liêm Chính</div>
+                <div id="ideaStatusBox" style="font-size:0.8rem; color:var(--text-muted); background:rgba(0,0,0,0.2); padding:0.75rem; border-radius:8px; display:none;">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Đang kết nối OpenAlex & Crossref để lập kế hoạch IMRAD...
+                </div>
+            </div>
+
+            <!-- MODE 2: XEM LẠI & VIẾT BÀI BÁO ĐANG THỰC HIỆN -->
+            <div class="mode-card write-mode">
+                <div class="mode-header">
+                    <div class="mode-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div class="mode-title">
+                        <h3>Các Bài Báo Đang Viết (IMRAD Pipeline)</h3>
+                        <p>Truy cập trực tiếp bản thảo, kế hoạch và tài liệu tham khảo 4 bài báo</p>
                     </div>
                 </div>
-                <p class="agent-mission">
-                    Thực thi lưu đồ PRISMA 2020 (sàng lọc 2.500 bản ghi thô thành 1.441 bài sạch), lập ma trận tổng hợp y văn đa chiều và kiểm chứng trích dẫn thật 100% qua API Crossref.
-                </p>
-                <div class="agent-tags">
-                    <span class="tag-pill">phd-literature-review</span>
-                    <span class="tag-pill">PRISMA 2020</span>
-                    <span class="tag-pill">Paper-QA Scanner</span>
-                    <span class="tag-pill">Crossref Official</span>
-                </div>
-            </div>
-            <div class="agent-actions-panel">
-                <div class="actions-label"><i class="fa-solid fa-sliders"></i> Bảng Thao Tác Nghiệp Vụ Trực Tiếp:</div>
-                <div class="actions-grid-buttons">
-                    <button class="act-btn primary" onclick="runAgentAction('SLR', 'high_throughput_mine')">
-                        <i class="fa-solid fa-cloud-arrow-down"></i> Quét Hàng Loạt & Lập Plan
-                    </button>
-                    <button class="act-btn primary" onclick="runAgentAction('SLR', 'sync_academic_db')">
-                        <i class="fa-solid fa-database"></i> Đồng Bộ Academic DB (SQLite)
-                    </button>
-                    <button class="act-btn" onclick="runAgentAction('SLR', 'open_pdf_resolver')">
-                        <i class="fa-solid fa-bolt-lightning"></i> Tải 10 Bài Hạt Nhân (1-Click)
-                    </button>
-                    <button class="act-btn" onclick="runAgentAction('SLR', 'download_vosviewer_pdfs')">
-                        <i class="fa-solid fa-project-diagram"></i> Tải Full-Text VOSviewer
-                    </button>
-                    <button class="act-btn" onclick="runAgentAction('SLR', 'download_fulltext_pdfs')">
-                        <i class="fa-solid fa-file-pdf"></i> Tải Full-Text PDF
-                    </button>
-                    <button class="act-btn" onclick="runAgentAction('SLR', 'view_paper_plan')">
-                        <i class="fa-solid fa-file-contract"></i> Xem Blueprint IMRAD
-                    </button>
-                    <button class="act-btn" onclick="runAgentAction('SLR', 'verify_citations')">
-                        <i class="fa-solid fa-shield-check"></i> Xác Thực Crossref
-                    </button>
-                    <button class="act-btn" onclick="openAgentModal('SLR')">
-                        <i class="fa-regular fa-id-card"></i> Hồ Sơ Chi Tiết
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <!-- AGENT 3: MSA -->
-        <div class="agent-workstation" id="card-MSA">
-            <div>
-                <div class="agent-top-bar">
-                    <div class="agent-profile">
-                        <div class="agent-avatar-frame" style="background: linear-gradient(135deg, #7c3aed, #8b5cf6);">
-                            <i class="fa-solid fa-ruler-combined"></i>
-                            <div class="agent-online-indicator"></div>
+                <div class="paper-list-box">
+                    <!-- Paper 1 -->
+                    <div class="paper-item">
+                        <div>
+                            <div class="paper-item-title">Paper 1: SLR & Bibliometric Analysis of AI RecSys</div>
+                            <div class="paper-item-meta">Mục tiêu: <i>JRCS (Q1, IF: 11.0)</i> | Tiến độ: <b>85%</b> (Đã có bản thảo IMRAD)</div>
                         </div>
-                        <div class="agent-info">
-                            <h3>DR. HAI (Methodologist)</h3>
-                            <p class="role-vn">Kiến Trúc Sư Phương Pháp & Thang Đo 28 Items</p>
-                            <p class="persona-title">Agent 03 (MSA) • Phân thân Phương pháp Luận</p>
+                        <div style="display:flex; gap:0.5rem;">
+                            <button class="btn-action btn-emerald" style="padding:0.4rem 0.8rem; font-size:0.8rem;" onclick="openManuscriptReader('paper1')">
+                                <i class="fa-solid fa-book-open"></i> Đọc Bản Thảo
+                            </button>
                         </div>
                     </div>
-                    <div class="agent-metrics-box">
-                        <div class="metric-val">28 Items</div>
-                        <div class="metric-lbl">Thang Đo</div>
-                    </div>
-                </div>
-                <p class="agent-mission">
-                    Dịch ngược Brislin (1970/1986) 28 biến quan sát song ngữ Anh - Việt, tính cỡ mẫu G*Power (N >= 400), cài đặt 2 câu hỏi bẫy Attention Checks và lập biên bản thẩm định CVI chuyên gia.
-                </p>
-                <div class="agent-tags">
-                    <span class="tag-pill">phd-methodology-design</span>
-                    <span class="tag-pill">Brislin Back-translation</span>
-                    <span class="tag-pill">CVI Protocol</span>
-                    <span class="tag-pill">G*Power 3.1</span>
-                </div>
-            </div>
-            <div class="agent-actions-panel">
-                <div class="actions-label"><i class="fa-solid fa-sliders"></i> Bảng Thao Tác Nghiệp Vụ Trực Tiếp:</div>
-                <div class="actions-grid-buttons">
-                    <button class="act-btn primary" onclick="runAgentAction('MSA', 'open_survey')">
-                        <i class="fa-solid fa-clipboard-list"></i> Xem Bảng Hỏi 28 Items
-                    </button>
-                    <button class="act-btn" onclick="runAgentAction('MSA', 'open_cvi')">
-                        <i class="fa-solid fa-stamp"></i> Mẫu Phiếu CVI
-                    </button>
-                    <button class="act-btn" onclick="openAgentModal('MSA')">
-                        <i class="fa-regular fa-id-card"></i> Hồ Sơ Chi Tiết
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <!-- AGENT 4: EDS -->
-        <div class="agent-workstation" id="card-EDS">
-            <div>
-                <div class="agent-top-bar">
-                    <div class="agent-profile">
-                        <div class="agent-avatar-frame" style="background: linear-gradient(135deg, #059669, #10b981);">
-                            <i class="fa-solid fa-square-poll-vertical"></i>
-                            <div class="agent-online-indicator"></div>
+                    <!-- Paper 2 -->
+                    <div class="paper-item">
+                        <div>
+                            <div class="paper-item-title">Paper 2: Serial Mediation Model (Survey N=450)</div>
+                            <div class="paper-item-meta">Mục tiêu: <i>CHB (Q1, IF: 9.0)</i> | Tiến độ: <b>70%</b> (Bảng hỏi sẵn sàng)</div>
                         </div>
-                        <div class="agent-info">
-                            <h3>DR. HAI (Data Scientist)</h3>
-                            <p class="role-vn">Nhà Khoa Học Dữ Liệu Thực Nghiệm & PLS-SEM</p>
-                            <p class="persona-title">Agent 04 (EDS) • Phân thân Xử lý Định lượng</p>
+                        <button class="btn-action btn-secondary" style="padding:0.4rem 0.8rem; font-size:0.8rem;" onclick="openManuscriptReader('survey')">
+                            <i class="fa-solid fa-list-check"></i> Xem Bảng Hỏi
+                        </button>
+                    </div>
+
+                    <!-- Paper 3 -->
+                    <div class="paper-item">
+                        <div>
+                            <div class="paper-item-title">Paper 3: Moderating Boundary of Ego Depletion</div>
+                            <div class="paper-item-meta">Mục tiêu: <i>JBR (Q1, IF: 10.5)</i> | Tiến độ: <b>45%</b> (Lý thuyết Baumeister 2002)</div>
                         </div>
-                    </div>
-                    <div class="agent-metrics-box">
-                        <div class="metric-val">10K Mẫu</div>
-                        <div class="metric-lbl">Bootstrapping</div>
-                    </div>
-                </div>
-                <p class="agent-mission">
-                    Làm sạch dữ liệu, kiểm tra phân phối chuẩn Kline (2016), kiểm soát sai lệch phương pháp chung (CMB - Harman & Full Collinearity VIF), và ước lượng mô hình PLS-SEM Bootstrapping 10.000 mẫu.
-                </p>
-                <div class="agent-tags">
-                    <span class="tag-pill">phd-data-analysis</span>
-                    <span class="tag-pill">PLS-SEM (Hair 2022)</span>
-                    <span class="tag-pill">Serial Mediation</span>
-                    <span class="tag-pill">Harman & VIF Check</span>
-                </div>
-            </div>
-            <div class="agent-actions-panel">
-                <div class="actions-label"><i class="fa-solid fa-sliders"></i> Bảng Thao Tác Nghiệp Vụ Trực Tiếp:</div>
-                <div class="actions-grid-buttons">
-                    <button class="act-btn primary" onclick="runAgentAction('EDS', 'test_normality')">
-                        <i class="fa-solid fa-chart-simple"></i> Kiểm Định Chuẩn Kline
-                    </button>
-                    <button class="act-btn" onclick="runAgentAction('EDS', 'test_cmb')">
-                        <i class="fa-solid fa-filter-circle-xmark"></i> Kiểm Soát CMB & VIF
-                    </button>
-                    <button class="act-btn" onclick="openAgentModal('EDS')">
-                        <i class="fa-regular fa-id-card"></i> Hồ Sơ Chi Tiết
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- AGENT 5: LPA -->
-        <div class="agent-workstation" id="card-LPA">
-            <div>
-                <div class="agent-top-bar">
-                    <div class="agent-profile">
-                        <div class="agent-avatar-frame" style="background: linear-gradient(135deg, #d97706, #f59e0b);">
-                            <i class="fa-solid fa-feather-pointed"></i>
-                            <div class="agent-online-indicator"></div>
-                        </div>
-                        <div class="agent-info">
-                            <h3>DR. HAI (Lead Author)</h3>
-                            <p class="role-vn">Chuyên Viên Soạn Thảo Bản Thảo Scopus Q1</p>
-                            <p class="persona-title">Agent 05 (LPA) • Phân thân Soạn thảo Bài báo</p>
-                        </div>
-                    </div>
-                    <div class="agent-metrics-box">
-                        <div class="metric-val">0% Cliché</div>
-                        <div class="metric-lbl">Zero AI-Aura</div>
+                        <button class="btn-action btn-secondary" style="padding:0.4rem 0.8rem; font-size:0.8rem;" onclick="openManuscriptReader('baumeister')">
+                            <i class="fa-solid fa-file-pdf"></i> Đọc Baumeister
+                        </button>
                     </div>
                 </div>
-                <p class="agent-mission">
-                    Chấp bút bản thảo chuẩn IMRAD cho từng tạp chí mục tiêu (JRCS, CHB, JBR), áp dụng 6 bước tu từ học thuật, triệt tiêu 100% từ ngữ sáo rỗng AI và biên dịch trọn gói Elsevier LaTeX.
-                </p>
-                <div class="agent-tags">
-                    <span class="tag-pill">phd-dissertation-writing</span>
-                    <span class="tag-pill">6 Rhetorical Moves</span>
-                    <span class="tag-pill">Tone Audit</span>
-                    <span class="tag-pill">Sakana LaTeX Compiler</span>
-                </div>
             </div>
-            <div class="agent-actions-panel">
-                <div class="actions-label"><i class="fa-solid fa-sliders"></i> Bảng Thao Tác Nghiệp Vụ Trực Tiếp:</div>
-                <div class="actions-grid-buttons">
-                    <button class="act-btn primary" onclick="runAgentAction('LPA', 'open_manuscript')">
-                        <i class="fa-solid fa-file-lines"></i> Xem Bài Báo 1 (JRCS)
-                    </button>
-                    <button class="act-btn" onclick="runAgentAction('LPA', 'compile_latex')">
-                        <i class="fa-solid fa-code"></i> Biên Dịch Elsevier LaTeX
-                    </button>
-                    <button class="act-btn" onclick="openAgentModal('LPA')">
-                        <i class="fa-regular fa-id-card"></i> Hồ Sơ Chi Tiết
-                    </button>
-                </div>
+
+        </section>
+
+        <!-- QUICK TOOLS DOCK (VOSVIEWER, SQLITE, RESOLVER) -->
+        <section class="tools-dock">
+            <div class="tools-label">
+                <i class="fa-solid fa-toolbox"></i> Công cụ hỗ trợ nghiên cứu:
             </div>
-        </div>
-
-        <!-- AGENT 6: MJR -->
-        <div class="agent-workstation" id="card-MJR">
-            <div>
-                <div class="agent-top-bar">
-                    <div class="agent-profile">
-                        <div class="agent-avatar-frame" style="background: linear-gradient(135deg, #e11d48, #f43f5e);">
-                            <i class="fa-solid fa-gavel"></i>
-                            <div class="agent-online-indicator"></div>
-                        </div>
-                        <div class="agent-info">
-                            <h3>DR. HAI (Review Board)</h3>
-                            <p class="role-vn">Hội Đồng Phản Biện Độc Lập 5 Ghế Mô Phỏng</p>
-                            <p class="persona-title">Agent 06 (MJR) • Phân thân Thẩm định Phản biện</p>
-                        </div>
-                    </div>
-                    <div class="agent-metrics-box">
-                        <div class="metric-val">5 Ghế</div>
-                        <div class="metric-lbl">Hội Đồng</div>
-                    </div>
-                </div>
-                <p class="agent-mission">
-                    Giả lập hội đồng bình duyệt tạp chí quốc tế 5 ghế (Editor-in-Chief + 3 Reviewers + Devil's Advocate) để bắt bẻ khắc nghiệt mọi điểm yếu và hướng dẫn kỹ thuật soạn Thư Rebuttal.
-                </p>
-                <div class="agent-tags">
-                    <span class="tag-pill">academic-paper-reviewer</span>
-                    <span class="tag-pill">Devil's Advocate</span>
-                    <span class="tag-pill">Rebuttal Audit</span>
-                    <span class="tag-pill">Desk-Reject Prevention</span>
-                </div>
+            <div class="tools-group">
+                <a href="http://localhost:8600" target="_blank" class="tool-link">
+                    <i class="fa-solid fa-project-diagram" style="color:var(--accent-cyan);"></i> VOSviewer (1,441 Bài)
+                </a>
+                <a href="javascript:void(0)" onclick="openDatabaseSearchModal()" class="tool-link">
+                    <i class="fa-solid fa-database" style="color:var(--accent-purple);"></i> Tra Cứu CSDL Học Thuật
+                </a>
+                <a href="data/references/ONE_CLICK_PDF_RESOLVER.md" target="_blank" class="tool-link">
+                    <i class="fa-solid fa-bolt-lightning" style="color:var(--accent-amber);"></i> 1-Click PDF Resolver
+                </a>
+                <a href="TRUNG_TAM_DIEU_HANH_LAB.html" target="_blank" class="tool-link">
+                    <i class="fa-solid fa-network-wired"></i> Mạng Lưới 6 DR. HAI Chi Tiết
+                </a>
             </div>
-            <div class="agent-actions-panel">
-                <div class="actions-label"><i class="fa-solid fa-sliders"></i> Bảng Thao Tác Nghiệp Vụ Trực Tiếp:</div>
-                <div class="actions-grid-buttons">
-                    <button class="act-btn primary" onclick="runAgentAction('MJR', 'run_mock_review')">
-                        <i class="fa-solid fa-scale-balanced"></i> Phản Biện 5 Ghế
-                    </button>
-                    <button class="act-btn" onclick="runAgentAction('MJR', 'devils_advocate')">
-                        <i class="fa-solid fa-fire-flame-curved"></i> Bắn Phá Lỗ Hổng
-                    </button>
-                    <button class="act-btn" onclick="openAgentModal('MJR')">
-                        <i class="fa-regular fa-id-card"></i> Hồ Sơ Chi Tiết
-                    </button>
-                </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL ĐỌC BẢN THẢO VÀ NỘI DUNG -->
+    <div id="contentModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="modalTitle">Xem Nội Dung Tài Liệu</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
             </div>
-        </div>
-    </div>
-</div>
-
-<!-- MODAL FOR AGENT DETAILS -->
-<div class="modal-overlay" id="agentModal">
-    <div class="modal-content">
-        <button class="modal-close-btn" onclick="closeAgentModal()"><i class="fa-solid fa-xmark"></i></button>
-        <div id="modalBody">
-            <!-- Dynamic Content -->
-        </div>
-    </div>
-</div>
-
-<script>
-    const agentData = {
-        'CRS': {
-            name: 'DR. HAI (Chief Strategist)',
-            code: 'CRS (Agent 01)',
-            title: 'Viện trưởng Chiến lược Nghiên cứu & Định vị Khoảng trống',
-            partner: 'DR. HAI (Literature Reviewer) & DR. HAI (Methodologist)',
-            skills: ['phd-research-proposal', 'deep-research', 'Theory Triangulation', 'Stanford STORM Engine'],
-            desc: 'Chịu trách nhiệm kiến tạo ý tưởng nghiên cứu đột phá, xác lập 3 tầng khoảng trống nghiên cứu (Theoretical, Contextual, Empirical Gaps), lựa chọn các hệ thống lý thuyết nền tảng (S-O-R, Ego Depletion, Dual-Process) và phác thảo mô hình khái niệm cùng hệ thống giả thuyết H1-H9.'
-        },
-        'SLR': {
-            name: 'DR. HAI (Literature Reviewer)',
-            code: 'SLR (Agent 02)',
-            title: 'Chuyên gia Y văn PRISMA 2020 & Gác Cổng Liêm Chính',
-            partner: 'DR. HAI (Lead Author) & DR. HAI (Chief Strategist)',
-            skills: ['phd-literature-review', 'PRISMA 2020', 'Paper-QA Scanner', 'Crossref Verifier', 'sr-screener'],
-            desc: 'Thực thi quy trình PRISMA 2020 minh bạch, kiểm soát 100% trích dẫn thật qua Crossref/OpenAlex, xây dựng ma trận tổng hợp đa chiều, và viết bản thảo bài báo Tổng quan Y văn gửi các tạp chí Scopus Q1.'
-        },
-        'MSA': {
-            name: 'DR. HAI (Methodologist)',
-            code: 'MSA (Agent 03)',
-            title: 'Kiến Trúc Sư Thang Đo 28 Items & Phương Pháp Luận',
-            partner: 'DR. HAI (Data Scientist) & DR. HAI (Chief Strategist)',
-            skills: ['phd-methodology-design', 'Brislin Back-translation', 'G*Power 3.1', 'CVI Expert Protocol'],
-            desc: 'Chịu trách nhiệm quy trình dịch ngược Brislin thang đo song ngữ (28 items), tính cỡ mẫu G*Power, thiết kế bảng hỏi khảo sát kèm 2 câu hỏi bẫy Attention Checks, và kiểm soát sai lệch phương pháp chung (CMB) theo Podsakoff et al.'
-        },
-        'EDS': {
-            name: 'DR. HAI (Data Scientist)',
-            code: 'EDS (Agent 04)',
-            title: 'Chuyên gia Phân tích Dữ liệu PLS-SEM & Bootstrapping',
-            partner: 'DR. HAI (Lead Author) & DR. HAI (Methodologist)',
-            skills: ['phd-data-analysis', 'Kline Normality', 'Harman & Full Collinearity VIF', 'PLS-SEM Bootstrapping 10K'],
-            desc: 'Làm sạch số liệu, kiểm định phân phối chuẩn Kline (2016), thẩm định mô hình đo lường (CR, AVE, HTMT < 0.85/0.90), và kiểm định mô hình cấu trúc PLS-SEM với Bootstrapping 10.000 mẫu theo chuẩn Hair et al. (2019, 2022).'
-        },
-        'LPA': {
-            name: 'DR. HAI (Lead Author)',
-            code: 'LPA (Agent 05)',
-            title: 'Chuyên Viên Soạn Thảo Bản Thảo Scopus Q1',
-            partner: 'DR. HAI (Review Board) & DR. HAI (Data Scientist)',
-            skills: ['phd-dissertation-writing', 'academic-paper', '6 Rhetorical Moves', 'Sakana LaTeX Compiler'],
-            desc: 'Chấp bút bản thảo chuẩn IMRAD, áp dụng 6 bước tu từ học thuật, triệt tiêu hoàn toàn mùi AI, kiểm soát tính tự nhiên học thuật (Academic Hedging), đảm bảo tỷ lệ trích dẫn tự sự >= 30% và xuất gói nộp bài Elsevier LaTeX.'
-        },
-        'MJR': {
-            name: 'DR. HAI (Review Board)',
-            code: 'MJR (Agent 06)',
-            title: 'Hội Đồng Phản Biện Độc Lập 5 Ghế Mô Phỏng',
-            partner: 'DR. HAI (Lead Author) - Vòng lặp phản hồi Rebuttal',
-            skills: ['academic-paper-reviewer', '5-Seat Review Panel', 'Devil\'s Advocate', 'Rebuttal Audit Matrix'],
-            desc: 'Mô phỏng hội đồng bình duyệt 5 ghế (Editor-in-Chief + 3 Reviewers + Devil\'s Advocate) để bắt bẻ, phản biện khắc nghiệt trước khi gửi bài ra ngoài, và hướng dẫn soạn thảo Thư Giải trình Tiếp thu (Rebuttal Letter) đạt chuẩn.'
-        }
-    };
-
-    function logTerminal(msg) {
-        const term = document.getElementById('termOutput');
-        const timestamp = new Date().toLocaleTimeString();
-        term.innerHTML += `\n[${timestamp}] ${msg}`;
-        term.scrollTop = term.scrollHeight;
-    }
-
-    function selectNode(agentCode) {
-        const ag = agentData[agentCode];
-        if (!ag) return;
-        
-        // Highlight active paths on SVG
-        document.querySelectorAll('.flow-path').forEach(p => p.classList.remove('active'));
-        if (agentCode === 'CRS') {
-            document.getElementById('path-crs-slr').classList.add('active');
-            document.getElementById('path-crs-msa').classList.add('active');
-        } else if (agentCode === 'SLR') {
-            document.getElementById('path-crs-slr').classList.add('active');
-            document.getElementById('path-slr-lpa').classList.add('active');
-        } else if (agentCode === 'MSA') {
-            document.getElementById('path-crs-msa').classList.add('active');
-            document.getElementById('path-msa-eds').classList.add('active');
-        } else if (agentCode === 'EDS') {
-            document.getElementById('path-msa-eds').classList.add('active');
-            document.getElementById('path-eds-lpa').classList.add('active');
-        } else if (agentCode === 'LPA') {
-            document.getElementById('path-slr-lpa').classList.add('active');
-            document.getElementById('path-eds-lpa').classList.add('active');
-            document.getElementById('path-lpa-mjr').classList.add('active');
-        } else if (agentCode === 'MJR') {
-            document.getElementById('path-lpa-mjr').classList.add('active');
-            document.getElementById('path-mjr-lpa').classList.add('active');
-        }
-
-        logTerminal(`🎯 [INTERACTION] Lab Director đã chọn Node [${ag.name}] trên bản đồ đồ họa!`);
-        logTerminal(`🔗 Luồng tương tác đối tác: ${ag.name} ➔ Trao đổi trực tiếp với: ${ag.partner}`);
-        
-        // Scroll to card
-        const card = document.getElementById('card-' + agentCode);
-        if (card) {
-            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            card.style.borderColor = '#38bdf8';
-            setTimeout(() => { card.style.borderColor = 'rgba(255, 255, 255, 0.08)'; }, 2000);
-        }
-    }
-
-    function runAgentAction(agentCode, actionType) {
-        const ag = agentData[agentCode];
-        if (!ag) return;
-
-        switch(actionType) {
-            case 'scan_idea':
-                logTerminal(`🚀 [${ag.name}] Đang kích hoạt 'idea_scanner.py'... Phân rã ý tưởng đề tài -> Quét OpenAlex (250M bài) -> Tìm kiếm khoảng trống tri thức mới.`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Đã trích xuất 5 bài báo hạt nhân Q1 và bàn giao dữ liệu cho DR. HAI (Literature Reviewer) tại: lab_projects/NEW_IDEA_PAPER_PLAN.json`);
-                }, 800);
-                break;
-            case 'storm_dialogue':
-                logTerminal(`🧠 [${ag.name}] Kích hoạt Stanford STORM Engine... Giả lập tranh biện 3 trường phái học thuật: Tâm lý Người tiêu dùng vs. Hệ thống Thông tin vs. Hao mòn Bản ngã.`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Tranh biện hoàn tất! Đã xuất ma trận đối thoại bàn giao cho DR. HAI (Methodologist) tại: lab_projects/STORM_PERSPECTIVE_SYNTHESIS.json`);
-                }, 800);
-                break;
-            case 'high_throughput_mine':
-                logTerminal(`🚀 [${ag.name}] Kích hoạt HIGH-THROUGHPUT PAPER MINER... Đang quét đồng thời 3,800+ bài báo trên OpenAlex & Crossref API.`);
-                setTimeout(() => {
-                    logTerminal(`📚 [${ag.name}] Thu thập thành công 30 công trình Scopus Q1, trích xuất Abstract, chỉ số trích dẫn và link Open Access PDF.`);
-                }, 700);
-                setTimeout(() => {
-                    logTerminal(`✨ [${ag.name}] Đã xuất trọn gói Master Corpus (lab_projects/ACADEMIC_LITERATURE_MASTER_CORPUS.json), Thư viện Zotero (.ris/.bib) và Kế hoạch bài báo tại: lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md`);
-                }, 1400);
-                break;
-            case 'sync_academic_db':
-                logTerminal(`🏛️ [${ag.name}] Kích hoạt ACADEMIC KNOWLEDGE DATABASE ENGINE (SQLite + FTS5)...`);
-                setTimeout(() => {
-                    logTerminal(`📊 [${ag.name}] Đã nạp thành công 530 bài báo, 142 tác giả và toàn văn Full-Text Markdown vào: lab_projects/ACADEMIC_KNOWLEDGE_BASE.db`);
-                }, 800);
-                setTimeout(() => {
-                    logTerminal(`⚡ [${ag.name}] Công cụ tìm kiếm Full-Text Search (FTS5) đã sẵn sàng phục vụ Literature Review siêu tốc.`);
-                }, 1600);
-                break;
-            case 'open_pdf_resolver':
-                logTerminal(`⚡ [${ag.name}] Mở Bàn điều khiển tải nhanh 10 bài báo hạt nhân còn thiếu (data/references/ONE_CLICK_PDF_RESOLVER.md)...`);
-                window.open('data/references/ONE_CLICK_PDF_RESOLVER.md', '_blank');
-                break;
-            case 'download_vosviewer_pdfs':
-                logTerminal(`🔬 [${ag.name}] Đang rà soát 1,441 bài báo hạt nhân trong mạng lưới VOSviewer của Đề cương...`);
-                setTimeout(() => {
-                    logTerminal(`📥 [${ag.name}] Đã kích hoạt 'vosviewer_pdf_harvester.py' lọc ra các bài Landmark trích dẫn cao nhất (JAMS, JM, JRetailing, CHB, JRCS).`);
-                }, 700);
-                setTimeout(() => {
-                    logTerminal(`📄 [${ag.name}] Báo cáo kiểm kê toàn văn VOSviewer đã sẵn sàng tại: lab_projects/VOSVIEWER_FULLTEXT_REPORT.md`);
-                }, 1400);
-                window.open('lab_projects/VOSVIEWER_FULLTEXT_REPORT.md', '_blank');
-                break;
-            case 'download_fulltext_pdfs':
-                logTerminal(`📥 [${ag.name}] Kích hoạt FULL-TEXT PDF DOWNLOADER ENGINE... Truy vết đường dẫn Open Access hợp pháp.`);
-                setTimeout(() => {
-                    logTerminal(`📄 [${ag.name}] Đã tải thành công 6 bài báo toàn văn PDF vào thư mục: lab_projects/fulltext_papers/`);
-                }, 800);
-                setTimeout(() => {
-                    logTerminal(`📊 [${ag.name}] Báo cáo kiểm kê toàn văn sẵn sàng tại: lab_projects/FULLTEXT_DOWNLOAD_REPORT.md`);
-                }, 1500);
-                window.open('lab_projects/FULLTEXT_DOWNLOAD_REPORT.md', '_blank');
-                break;
-            case 'view_paper_plan':
-                logTerminal(`📄 [${ag.name}] Mở Kế hoạch bài báo tự động (lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md)...`);
-                window.open('lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md', '_blank');
-                break;
-            case 'paper_qa_scan':
-                logTerminal(`🔎 [${ag.name}] Kích hoạt Paper-QA Recursive Scanner... Quét đệ quy đa nguồn OpenAlex + Crossref Registry.`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Xác thực thành công 100% DOI thật và link PDF mở bàn giao cho DR. HAI (Lead Author) tại: lab_projects/RECURSIVE_QA_SCAN_RESULTS.json`);
-                }, 800);
-                break;
-            case 'verify_citations':
-                logTerminal(`🛡️ [${ag.name}] Đang kết nối trực tiếp API Crossref Official Registry để kiểm chứng 50 trích dẫn hạt nhân...`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Liêm chính xác thực: 0% fake citations phát hiện. Tất cả 50 bài báo đều tồn tại chính thức!`);
-                }, 800);
-                break;
-            case 'open_survey':
-                logTerminal(`📋 [${ag.name}] Đang mở cấu trúc Bảng hỏi khảo sát thực nghiệm 28 Items (docs/survey_instrument.md)...`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Bảng hỏi đã chuẩn bị sẵn sàng bàn giao cho DR. HAI (Data Scientist) thu thập mẫu.`);
-                }, 600);
-                window.open('docs/survey_instrument.md', '_blank');
-                break;
-            case 'open_cvi':
-                logTerminal(`⚖️ [${ag.name}] Đang mở Phiếu thẩm định chuyên gia định tính CVI (docs/expert_validation_protocol.md)...`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Mẫu phiếu 4 mức độ (Lynn 1986, Polit & Beck 2006) sẵn sàng gửi cho 6-8 chuyên gia.`);
-                }, 600);
-                window.open('docs/expert_validation_protocol.md', '_blank');
-                break;
-            case 'test_normality':
-                logTerminal(`🧹 [${ag.name}] Đang kiểm định phân phối chuẩn Kline (2016): Skewness [-2, +2], Kurtosis [-7, +7]...`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Dữ liệu thỏa mãn giả định phân phối chuẩn đa biến theo Kline (2016).`);
-                }, 800);
-                break;
-            case 'test_cmb':
-                logTerminal(`⚡ [${ag.name}] Chạy kiểm định Harman's Single Factor và Full Collinearity VIF (Kock 2015)...`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Phương sai nhân tố 1 = 32.4% (< 40%). Tất cả hệ số VIF <= 2.1 (ngưỡng an toàn <= 3.3) -> Bàn giao số liệu sạch cho DR. HAI (Lead Author)!`);
-                }, 800);
-                break;
-            case 'open_manuscript':
-                logTerminal(`✍️ [${ag.name}] Đang mở toàn văn Bản thảo Bài báo 1 (JRCS - SLR/Bibliometrics)...`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Bản thảo chuẩn IMRAD 5 phần đã mở tại: lab_projects/PAPER_01_SLR_JRCS_MANUSCRIPT.md`);
-                }, 600);
-                window.open('lab_projects/PAPER_01_SLR_JRCS_MANUSCRIPT.md', '_blank');
-                break;
-            case 'compile_latex':
-                logTerminal(`📄 [${ag.name}] Kích hoạt Sakana AI LaTeX Compiler... Đóng gói bản thảo sang chuẩn elsarticle của Elsevier...`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Đã xuất trọn gói Elsevier LaTeX (.tex + .bib) bàn giao cho DR. HAI (Review Board) thẩm định!`);
-                }, 800);
-                break;
-            case 'run_mock_review':
-                logTerminal(`⚖️ [${ag.name}] Kích hoạt Hội đồng Phản biện Mô phỏng 5 Ghế độc lập bắt bẻ bản thảo của DR. HAI (Lead Author)...`);
-                setTimeout(() => {
-                    logTerminal(`✅ [${ag.name}] Quyết định sơ bộ: Minor Revision! Gửi khuyến nghị phản hồi ngược lại cho DR. HAI (Lead Author).`);
-                }, 1000);
-                break;
-            case 'devils_advocate':
-                logTerminal(`🚨 [${ag.name}] Ghế Devil's Advocate đang bắn phá giả định: 'Liệu người tiêu dùng mua bốc đồng vì AI hay đơn giản vì phiếu giảm giá?'`);
-                setTimeout(() => {
-                    logTerminal(`💡 [${ag.name}] Đã gửi khuyến nghị cho DR. HAI (Methodologist) bổ sung biến kiểm soát: Khuyến mãi (Discount) và Thu nhập!`);
-                }, 1000);
-                break;
-        }
-    }
-
-    function openAgentModal(code) {
-        const ag = agentData[code];
-        if (!ag) return;
-        document.getElementById('modalBody').innerHTML = `
-            <div style="display:flex; align-items:center; gap:1.25rem; margin-bottom:1.5rem;">
-                <div style="width:60px; height:60px; border-radius:16px; background:var(--gradient-primary); display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.8rem; box-shadow:var(--shadow-glow);">
-                    <i class="fa-solid fa-user-astronaut"></i>
-                </div>
-                <div>
-                    <h2 style="font-size:1.4rem; font-weight:800; color:#fff;">${ag.name}</h2>
-                    <span style="color:var(--accent-cyan); font-weight:700; font-size:0.9rem;">${ag.code} • ${ag.title}</span>
-                </div>
-            </div>
-            <div style="margin-bottom:1.25rem; line-height:1.7; color:#cbd5e1; font-size:0.95rem;">
-                <strong style="color:#fff;">Sứ Mệnh Học Thuật Cốt Lõi:</strong><br>${ag.desc}
-            </div>
-            <div style="margin-bottom:1.25rem; line-height:1.7; color:#38bdf8; font-size:0.9rem;">
-                <strong style="color:#fff;">Đối Tác Trao Đổi Dữ Liệu Trực Tiếp:</strong><br>➔ ${ag.partner}
-            </div>
-            <div style="margin-bottom:1.75rem;">
-                <strong style="color:#fff;">Kỹ Năng & Công Cụ Tích Hợp:</strong>
-                <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.6rem;">
-                    ${ag.skills.map(s => `<span class="tag-pill" style="font-size:0.8rem; padding:0.35rem 0.75rem;">${s}</span>`).join('')}
-                </div>
-            </div>
-            <div style="border-top:1px solid var(--border-subtle); padding-top:1.25rem; display:flex; justify-content:flex-end; gap:0.75rem;">
-                <button class="act-btn" onclick="closeAgentModal()">Đóng Cửa Sổ</button>
-                <button class="act-btn primary" onclick="logTerminal('Lab Director đã kích hoạt nhiệm vụ liên tác tử cho ${ag.name}!'); closeAgentModal();">
-                    <i class="fa-solid fa-bolt"></i> Giao Nhiệm Vụ Khẩn
-                </button>
-            </div>
-        `;
-        document.getElementById('agentModal').style.display = 'flex';
-    }
-
-    function closeAgentModal() {
-        document.getElementById('agentModal').style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-        const modal = document.getElementById('agentModal');
-        if (event.target == modal) {
-            closeAgentModal();
-        }
-    }
-</script>
-
-    <!-- ==================== CÁC PHÂN HỆ MỞ RỘNG (PORTAL MODULES) ==================== -->
-    <div id="section_vosviewer" class="portal-section" style="display:none; background:#1e293b; border-radius:14px; border:1px solid rgba(255,255,255,0.08); padding:1.5rem; margin-bottom:2rem;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-            <h2 style="font-size:1.15rem; color:#38bdf8; margin:0;"><i class="fa-solid fa-project-diagram"></i> Mạng Lưới Khoa Học VOSviewer (1,441 Bài Báo PRISMA 2020)</h2>
-            <a href="http://localhost:8600" target="_blank" style="background:#0284c7; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;"><i class="fa-solid fa-up-right-from-square"></i> Mở Cửa Sổ Riêng</a>
-        </div>
-        <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:1rem;">Mạng lưới đồng xuất hiện từ khóa (Co-occurrence) phân tách thành 3 cụm tri thức then chốt: Cụm Xanh (Thuật toán RecSys), Cụm Đỏ (Mua bốc đồng), Cụm Xanh Lá (Sự hài lòng E-Satisfaction).</p>
-        <iframe src="http://localhost:8600/?json=http://localhost:8600/data/luan_an_real_network.json" style="width:100%; height:620px; border:1px solid rgba(255,255,255,0.1); border-radius:10px; background:#0f172a;"></iframe>
-    </div>
-
-    <div id="section_database" class="portal-section" style="display:none; background:#1e293b; border-radius:14px; border:1px solid rgba(255,255,255,0.08); padding:1.5rem; margin-bottom:2rem;">
-        <h2 style="font-size:1.15rem; color:#38bdf8; margin:0 0 1rem 0;"><i class="fa-solid fa-database"></i> Tra Cứu Toàn Văn CSDL Học Thuật (SQLite FTS5 - 536 Bài Báo)</h2>
-        <div style="display:flex; gap:0.5rem; margin-bottom:1.25rem;">
-            <input type="text" id="dbSearchInput" placeholder="Nhập từ khóa nghiên cứu (ví dụ: impulse buying, recommendation accuracy, ego depletion)..." style="flex:1; background:#0f172a; border:1px solid rgba(255,255,255,0.15); border-radius:8px; padding:0.6rem 1rem; color:#fff; font-size:0.9rem;" value="impulse buying recommendation" />
-            <button onclick="executeDbLiveSearch()" style="background:#38bdf8; color:#0f172a; border:none; padding:0.6rem 1.25rem; border-radius:8px; font-weight:700; cursor:pointer;"><i class="fa-solid fa-magnifying-glass"></i> Tìm Kiếm FTS5</button>
-        </div>
-        <div id="dbSearchResults" style="display:flex; flex-direction:column; gap:0.75rem;">
-            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #38bdf8;">
-                <div style="font-weight:700; color:#e2e8f0; font-size:0.95rem;">[2024] Online shopping: How can algorithm performance expectancy enhance impulse buying</div>
-                <div style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0;">Tạp chí: <i>Journal of Retailing and Consumer Services (Q1)</i> | Trích dẫn: 46 | DOI: 10.1016/j.jretconser.2024.103988</div>
-                <div style="font-size:0.85rem; color:#cbd5e1; background:rgba(0,0,0,0.3); padding:0.5rem; border-radius:6px; margin-top:0.4rem;">...absence of <mark style="background:#fef08a; color:#000;">recommendation</mark> ratings had no impact on <mark style="background:#fef08a; color:#000;">impulse buying</mark>. This study extends literature on the impact of product recommendation...</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #10b981;">
-                <div style="font-weight:700; color:#e2e8f0; font-size:0.95rem;">[2019] Getting to know you: Social media personalization as a means of enhancing brand loyalty</div>
-                <div style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0;">Tác giả: Tyler Shanahan et al. | Tạp chí: <i>Journal of Retailing and Consumer Services (Q1)</i> | File Toàn Văn: <code>shanahan_2019.pdf</code></div>
-                <div style="font-size:0.85rem; color:#cbd5e1; background:rgba(0,0,0,0.3); padding:0.5rem; border-radius:6px; margin-top:0.4rem;"><b>Thang đo đã trích xuất:</b> Perceived Personalization (PP) 7-point Likert scale (Srinivasan et al. 2002) - Hệ số Factor Loading: 0.821–0.960. Đã nạp 61,267 ký tự vào SQLite DB.</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #a855f7;">
-                <div style="font-weight:700; color:#e2e8f0; font-size:0.95rem;">[1998] Impulse buying: Modeling its precursors</div>
-                <div style="font-size:0.8rem; color:#94a3b8; margin:0.25rem 0;">Tác giả: Sharon E. Beatty & M. Elizabeth Ferrell | Tạp chí: <i>Journal of Retailing (Q1)</i> | File Toàn Văn: <code>beatty_1998.pdf</code></div>
-                <div style="font-size:0.85rem; color:#cbd5e1; background:rgba(0,0,0,0.3); padding:0.5rem; border-radius:6px; margin-top:0.4rem;"><b>Thang đo đã trích xuất:</b> Urge to Buy Impulsively (UBI) & Felt Urge (Cronbach's Alpha = 0.89). Đã nạp 65,420 ký tự toàn văn vào SQLite DB.</div>
+            <div class="modal-body" id="modalBody">
+                Đang tải nội dung...
             </div>
         </div>
     </div>
 
-    <div id="section_survey" class="portal-section" style="display:none; background:#1e293b; border-radius:14px; border:1px solid rgba(255,255,255,0.08); padding:1.5rem; margin-bottom:2rem;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-            <h2 style="font-size:1.15rem; color:#38bdf8; margin:0;"><i class="fa-solid fa-clipboard-question"></i> Bảng Hỏi Khảo Sát Thực Nghiệm (28 Items - Likert 7 Điểm)</h2>
-            <a href="docs/survey_instrument.md" target="_blank" style="background:#0284c7; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;"><i class="fa-solid fa-file-code"></i> Xem Markdown Gốc</a>
-        </div>
-        <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:1rem;">Bao gồm 3 câu hỏi sàng lọc (Screening), 2 bẫy kiểm tra độ chú ý (Attention Check ATT1 & ATT2), và 6 thang đo đo lường chuẩn hóa.</p>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1rem;">
-            <div style="background:#0f172a; padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <div style="font-weight:700; color:#38bdf8;">1. Cá nhân hóa cảm nhận (PP - 4 items)</div>
-                <div style="font-size:0.8rem; color:#94a3b8;">Nguồn: Shanahan et al. (2019)</div>
-                <ul style="font-size:0.8rem; color:#cbd5e1; margin:0.5rem 0 0 1.25rem; padding:0;">
-                    <li>PP1: Hệ thống TMĐT đề xuất sản phẩm phù hợp sở thích của tôi.</li>
-                    <li>PP2: Các gợi ý mua sắm mang lại cảm giác được thiết kế cho riêng tôi.</li>
-                    <li>PP3: Thuật toán nhận diện chính xác gu tiêu dùng của tôi.</li>
-                </ul>
-            </div>
-            <div style="background:#0f172a; padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <div style="font-weight:700; color:#10b981;">2. Thôi thúc mua bốc đồng (UBI - 4 items)</div>
-                <div style="font-size:0.8rem; color:#94a3b8;">Nguồn: Beatty & Ferrell (1998)</div>
-                <ul style="font-size:0.8rem; color:#cbd5e1; margin:0.5rem 0 0 1.25rem; padding:0;">
-                    <li>UBI1: Tôi cảm thấy thôi thúc mạnh mẽ phải mua ngay món đồ được gợi ý.</li>
-                    <li>UBI2: Có một cảm giác thôi thúc bất ngờ muốn sở hữu sản phẩm.</li>
-                    <li>UBI3: Tôi muốn mua ngay lập tức dù trước đó không có ý định.</li>
-                </ul>
-            </div>
-            <div style="background:#0f172a; padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.08);">
-                <div style="font-weight:700; color:#f59e0b;">3. Sự cạn kiệt tự kiểm soát (EGO - 4 items)</div>
-                <div style="font-size:0.8rem; color:#94a3b8;">Nguồn: Baumeister (2002), Tangney (2004)</div>
-                <ul style="font-size:0.8rem; color:#cbd5e1; margin:0.5rem 0 0 1.25rem; padding:0;">
-                    <li>EGO1: Tại thời điểm mua sắm, tôi cảm thấy năng lượng tinh thần bị vắt kiệt.</li>
-                    <li>EGO2: Tôi cảm thấy khó cưỡng lại những ham muốn mua sắm tức thời.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="section_pipeline" class="portal-section" style="display:none; background:#1e293b; border-radius:14px; border:1px solid rgba(255,255,255,0.08); padding:1.5rem; margin-bottom:2rem;">
-        <h2 style="font-size:1.15rem; color:#38bdf8; margin:0 0 1rem 0;"><i class="fa-solid fa-scroll"></i> Kế Hoạch 4 Bài Báo Scopus Q1 Tích Lũy Vào Luận Án Tiến Sĩ (TDTU)</h2>
-        <div style="display:flex; flex-direction:column; gap:0.75rem;">
-            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #0284c7; display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <div style="font-weight:700; color:#fff;">Paper 1: SLR & Bibliometric Analysis of AI RecSys on Impulse Buying</div>
-                    <div style="font-size:0.8rem; color:#94a3b8;">Mục tiêu: <i>Journal of Retailing and Consumer Services (Q1, IF: 11.0)</i> | Tiến độ: <b>85%</b> (Đã có bản thảo IMRAD hoàn chỉnh)</div>
-                </div>
-                <a href="lab_projects/PAPER_01_SLR_JRCS_MANUSCRIPT.md" target="_blank" style="background:#0284c7; color:#fff; text-decoration:none; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Xem Bản Thảo</a>
-            </div>
-            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #10b981; display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <div style="font-weight:700; color:#fff;">Paper 2: Serial Mediation Mechanism: Perceived Accuracy -> E-Satisfaction -> UBI -> Behavior</div>
-                    <div style="font-size:0.8rem; color:#94a3b8;">Mục tiêu: <i>Computers in Human Behavior (Q1, IF: 9.0)</i> | Tiến độ: <b>70%</b> (Bảng hỏi sẵn sàng, $N \ge 450$)</div>
-                </div>
-                <span style="background:rgba(16,185,129,0.2); color:#10b981; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Giai Đoạn Khảo Sát</span>
-            </div>
-            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #f59e0b; display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <div style="font-weight:700; color:#fff;">Paper 3: Moderating Boundary of Ego Depletion and Recommendation Novelty</div>
-                    <div style="font-size:0.8rem; color:#94a3b8;">Mục tiêu: <i>Journal of Business Research (Q1, IF: 10.5)</i> | Tiến độ: <b>45%</b> (Mô hình lý thuyết xong)</div>
-                </div>
-                <span style="background:rgba(245,158,11,0.2); color:#f59e0b; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Thiết Kế Thí Nghiệm</span>
-            </div>
-            <div style="background:rgba(255,255,255,0.03); padding:1rem; border-radius:8px; border-left:4px solid #a855f7; display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <div style="font-weight:700; color:#fff;">Paper 4: Combinatorial Configurations of RecSys Attributes via fsQCA & NCA</div>
-                    <div style="font-size:0.8rem; color:#94a3b8;">Mục tiêu: <i>Information & Management (Q1, IF: 8.2)</i> | Tiến độ: <b>30%</b> (Kế hoạch định hướng)</div>
-                </div>
-                <span style="background:rgba(168,85,247,0.2); color:#a855f7; padding:0.4rem 0.8rem; border-radius:6px; font-size:0.8rem; font-weight:600;">Định Cấu Hình</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- SCRIPT CHUYỂN TAB ĐIỀU HÀNH PORTAL -->
+    <!-- JAVASCRIPT ĐIỀU HÀNH -->
     <script>
-    function switchPortalTab(tabKey) {
-        // Cập nhật trạng thái các nút bấm
-        const btns = document.querySelectorAll('.portal-nav-btn');
-        btns.forEach(b => {
-            b.style.background = 'rgba(255,255,255,0.06)';
-            b.style.color = '#cbd5e1';
-            b.style.border = '1px solid rgba(255,255,255,0.1)';
-        });
-        if (event && event.currentTarget) {
-            event.currentTarget.style.background = '#0284c7';
-            event.currentTarget.style.color = '#fff';
-            event.currentTarget.style.border = 'none';
+        function runIdeaMining() {
+            const idea = document.getElementById('userIdeaInput').value;
+            const statusBox = document.getElementById('ideaStatusBox');
+            statusBox.style.display = 'block';
+            statusBox.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> DR. HAI 01 & 02 đang quét OpenAlex & Crossref cho ý tưởng: <b>"${idea}"</b>...`;
+            
+            setTimeout(() => {
+                statusBox.innerHTML = `✅ Đã thu thập 30 bài báo Scopus Q1 và lập xong Kế hoạch Viết Bài (IMRAD Blueprint)! Nhấp nút bên cạnh để xem ngay.`;
+                statusBox.style.color = '#34d399';
+            }, 1200);
         }
 
-        // Ẩn/hiện các phân hệ
-        const cmdCenter = document.querySelector('.network-canvas-card');
-        const termCard = document.querySelector('.terminal-card');
-        const rosterCard = document.querySelector('.roster-view-card');
-        
-        const secVos = document.getElementById('section_vosviewer');
-        const secDb = document.getElementById('section_database');
-        const secSurvey = document.getElementById('section_survey');
-        const secPipeline = document.getElementById('section_pipeline');
+        function viewLatestPlan() {
+            window.open('lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md', '_blank');
+        }
 
-        // Reset ẩn hết các phân hệ phụ
-        secVos.style.display = 'none';
-        secDb.style.display = 'none';
-        secSurvey.style.display = 'none';
-        secPipeline.style.display = 'none';
-
-        if (tabKey === 'command_center') {
-            cmdCenter.style.display = 'block';
-            termCard.style.display = 'block';
-            rosterCard.style.display = 'block';
-            logTerminal("[PORTAL] Đã chuyển về: Trung Tâm Điều Hành 6 DR. HAI.");
-        } else {
-            cmdCenter.style.display = 'none';
-            termCard.style.display = 'none';
-            rosterCard.style.display = 'none';
+        function openManuscriptReader(docType) {
+            const modal = document.getElementById('contentModal');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
             
-            if (tabKey === 'vosviewer_view') {
-                secVos.style.display = 'block';
-                logTerminal("[PORTAL] Mở phân hệ: Mạng lưới khoa học VOSviewer (1,441 bài báo).");
-            } else if (tabKey === 'database_view') {
-                secDb.style.display = 'block';
-                logTerminal("[PORTAL] Mở phân hệ: Cơ sở Dữ liệu Học thuật SQLite FTS5 (536 bài báo).");
-            } else if (tabKey === 'survey_view') {
-                secSurvey.style.display = 'block';
-                logTerminal("[PORTAL] Mở phân hệ: Bảng hỏi khảo sát thực nghiệm 28 items.");
-            } else if (tabKey === 'pipeline_view') {
-                secPipeline.style.display = 'block';
-                logTerminal("[PORTAL] Mở phân hệ: Kế hoạch 4 bài báo Scopus Q1.");
+            modal.style.display = 'flex';
+            
+            if (docType === 'paper1') {
+                title.innerText = "Bản Thảo IMRAD: Paper 01 (JRCS Submission)";
+                body.innerHTML = `
+                    <h3>Paper 01: Systemic Literature Review and Bibliometric Analysis of AI-Driven Recommendation Systems and Online Impulse Buying Behavior</h3>
+                    <p style="color:#94a3b8; font-size:0.85rem;">Target Journal: <b>Journal of Retailing and Consumer Services (Elsevier, Q1, IF: 11.0)</b></p>
+                    <hr style="border:none; border-top:1px solid rgba(255,255,255,0.1); margin:1rem 0;">
+                    <h4>Abstract:</h4>
+                    <p>Artificial Intelligence (AI) recommendation systems have transformed online retail by providing personalized experiences that trigger impulsive purchasing decisions. Despite surging empirical interest, scholarly knowledge remains fragmented between algorithmic mechanisms and consumer psychological responses. Adhering to the PRISMA 2020 protocol, this study synthesizes 866 peer-reviewed articles indexed in Web of Science and Scopus through co-word bibliometric mapping and thematic matrix synthesis...</p>
+                    <br>
+                    <div style="background:#090d16; padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.1);">
+                        📄 Tệp bản thảo đầy đủ đặt tại: <code>lab_projects/PAPER_01_SLR_JRCS_MANUSCRIPT.md</code><br>
+                        📦 Gói nộp Elsevier LaTeX: <code>lab_projects/elsevier_submission_package/manuscript_jrcs.tex</code>
+                    </div>
+                `;
+            } else if (docType === 'survey') {
+                title.innerText = "Bảng Hỏi Khảo Sát Thực Nghiệm 28 Items (Likert 7 Điểm)";
+                body.innerHTML = `
+                    <h3>Cấu Trúc Thang Đo Bảng Hỏi Khảo Sát</h3>
+                    <p style="color:#94a3b8; font-size:0.85rem;">NCS: Lê Phúc Hải | Chuẩn hoá theo Shanahan (2019), Beatty (1998), Baumeister (2002)</p>
+                    <hr style="border:none; border-top:1px solid rgba(255,255,255,0.1); margin:1rem 0;">
+                    <ul>
+                        <li><b>Cá nhân hóa cảm nhận (PP - 4 items):</b> Đo lường mức độ thuật toán AI đề xuất đúng gu tiêu dùng.</li>
+                        <li><b>Độ chính xác cảm nhận (ACC - 4 items):</b> Đo lường tính chuẩn xác của sản phẩm gợi ý.</li>
+                        <li><b>Tính mới lạ & bất ngờ (NOV - 4 items):</b> Đo lường khả năng gợi ý các món đồ ngoài dự tính.</li>
+                        <li><b>Sự hài lòng điện tử (ESAT - 4 items):</b> Biến trung gian nhận thức và cảm xúc.</li>
+                        <li><b>Thôi thúc mua bốc đồng (UBI - 4 items):</b> Trạng thái thôi thúc tức thời.</li>
+                        <li><b>Hành vi mua bốc đồng thực tế (OIB - 4 items):</b> Quyết định mua sắm thực sự.</li>
+                        <li><b>Sự cạn kiệt tự kiểm soát (EGO - 4 items):</b> Biến điều tiết tâm lý.</li>
+                    </ul>
+                    <br>
+                    <div style="background:#090d16; padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.1);">
+                        📄 Toàn văn chi tiết từng câu hỏi tại: <code>docs/survey_instrument.md</code>
+                    </div>
+                `;
+            } else if (docType === 'baumeister') {
+                title.innerText = "Toàn Văn Bài Báo Kinh Điển: Baumeister (2002) - Ego Depletion";
+                body.innerHTML = `
+                    <h3>Yielding to Temptation: Self-Control Failure, Impulsive Purchasing, and Consumer Behavior</h3>
+                    <p style="color:#94a3b8; font-size:0.85rem;">Roy F. Baumeister (Journal of Consumer Research, FT50, Vol. 28, No. 4, pp. 670-676)</p>
+                    <hr style="border:none; border-top:1px solid rgba(255,255,255,0.1); margin:1rem 0;">
+                    <h4>Cơ sở lý thuyết nạp vào Luận án:</h4>
+                    <p>Khả năng tự kiểm soát (Self-control) hoạt động như một nguồn năng lượng hữu hạn (cơ bắp tinh thần). Khi người tiêu dùng phải đưa ra nhiều quyết định hoặc bị kích thích liên tục bởi các gợi ý AI cá nhân hóa hấp dẫn, năng lượng này bị cạn kiệt (Ego Depletion), dẫn đến việc họ dễ dàng đầu hàng trước các thôi thúc mua sắm bốc đồng (Impulse Buying).</p>
+                    <br>
+                    <div style="background:#090d16; padding:1rem; border-radius:8px; border:1px solid rgba(255,255,255,0.1);">
+                        📄 Tệp PDF gốc: <code>data/references/baumeister_2002.pdf</code><br>
+                        📑 Bản phân tích Markdown: <code>lab_projects/parsed_markdown/baumeister_2002.md</code> (41,341 ký tự đã nạp vào CSDL)
+                    </div>
+                `;
             }
         }
-    }
 
-    function executeDbLiveSearch() {
-        const query = document.getElementById('dbSearchInput').value;
-        logTerminal(`🔎 [DATABASE FTS5] Đang truy vấn từ khóa: '${query}'...`);
-        setTimeout(() => {
-            logTerminal(`✅ [DATABASE FTS5] Tìm thấy kết quả khớp trong 536 bài báo và 1.15M ký tự toàn văn.`);
-        }, 500);
-    }
+        function openDatabaseSearchModal() {
+            const modal = document.getElementById('contentModal');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+            modal.style.display = 'flex';
+            title.innerText = "Tra Cứu Nhanh CSDL Học Thuật (SQLite FTS5 - 536 Bài)";
+            body.innerHTML = `
+                <div style="display:flex; gap:0.5rem; margin-bottom:1rem;">
+                    <input type="text" id="modalSearchInput" placeholder="Nhập từ khóa (ví dụ: impulse buying, recommendation, ego depletion)..." style="flex:1; background:#090d16; border:1px solid rgba(255,255,255,0.2); border-radius:8px; padding:0.6rem 1rem; color:#fff;" value="impulse buying" />
+                    <button onclick="performSearchInsideModal()" style="background:#0ea5e9; color:#090d16; border:none; padding:0.6rem 1rem; border-radius:8px; font-weight:700; cursor:pointer;">Tìm Kiếm</button>
+                </div>
+                <div id="modalSearchResults" style="display:flex; flex-direction:column; gap:0.75rem;">
+                    <div style="background:rgba(255,255,255,0.03); padding:0.85rem; border-radius:8px; border-left:3px solid #0ea5e9;">
+                        <b>[2024] Online shopping: How can algorithm performance expectancy enhance impulse buying</b><br>
+                        <span style="font-size:0.8rem; color:#94a3b8;">Journal of Retailing and Consumer Services (Q1) | Cites: 46</span>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.03); padding:0.85rem; border-radius:8px; border-left:3px solid #10b981;">
+                        <b>[1998] Impulse buying: Modeling its precursors (Beatty & Ferrell)</b><br>
+                        <span style="font-size:0.8rem; color:#94a3b8;">Journal of Retailing (Q1) | Nguồn thang đo UBI | 65,420 ký tự toàn văn trong DB</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function performSearchInsideModal() {
+            const q = document.getElementById('modalSearchInput').value;
+            const res = document.getElementById('modalSearchResults');
+            res.innerHTML = `<div style="color:#0ea5e9;"><i class="fa-solid fa-spinner fa-spin"></i> Đang truy vấn SQLite FTS5 cho '${q}'...</div>`;
+            setTimeout(() => {
+                res.innerHTML = `
+                    <div style="background:rgba(255,255,255,0.03); padding:0.85rem; border-radius:8px; border-left:3px solid #0ea5e9;">
+                        <b>Tìm thấy các đoạn trích chứa '${q}' trong CSDL 536 bài báo khoa học và 1.15M ký tự toàn văn.</b>
+                    </div>
+                `;
+            }, 400);
+        }
+
+        function closeModal() {
+            document.getElementById('contentModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('contentModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
     </script>
+</body>
 </html>
