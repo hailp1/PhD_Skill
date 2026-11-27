@@ -563,6 +563,9 @@
                     <button class="act-btn primary" onclick="runAgentAction('SLR', 'high_throughput_mine')">
                         <i class="fa-solid fa-cloud-arrow-down"></i> Quét Hàng Loạt & Lập Plan
                     </button>
+                    <button class="act-btn primary" onclick="runAgentAction('SLR', 'open_pdf_resolver')">
+                        <i class="fa-solid fa-bolt-lightning"></i> Tải 10 Bài Hạt Nhân (1-Click)
+                    </button>
                     <button class="act-btn" onclick="runAgentAction('SLR', 'download_vosviewer_pdfs')">
                         <i class="fa-solid fa-project-diagram"></i> Tải Full-Text VOSviewer
                     </button>
@@ -901,6 +904,10 @@
                 setTimeout(() => {
                     logTerminal(`✨ [${ag.name}] Đã xuất trọn gói Master Corpus (lab_projects/ACADEMIC_LITERATURE_MASTER_CORPUS.json), Thư viện Zotero (.ris/.bib) và Kế hoạch bài báo tại: lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md`);
                 }, 1400);
+                break;
+            case 'open_pdf_resolver':
+                logTerminal(`⚡ [${ag.name}] Mở Bàn điều khiển tải nhanh 10 bài báo hạt nhân còn thiếu (data/references/ONE_CLICK_PDF_RESOLVER.md)...`);
+                window.open('data/references/ONE_CLICK_PDF_RESOLVER.md', '_blank');
                 break;
             case 'download_vosviewer_pdfs':
                 logTerminal(`🔬 [${ag.name}] Đang rà soát 1,441 bài báo hạt nhân trong mạng lưới VOSviewer của Đề cương...`);
