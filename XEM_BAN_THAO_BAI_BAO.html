@@ -797,7 +797,7 @@
                 div.id = 'doc_item_' + key;
                 div.onclick = () => selectDocument(key);
 
-                const icon = iconsMap[key] || 'fa-solid fa-file-lines';
+                const icon = iconsMap[key] || (key.startsWith('paper') ? 'fa-solid fa-file-invoice' : 'fa-solid fa-file-lines');
 
                 div.innerHTML = `
                     <div class="doc-item-title"><i class="${icon}"></i> ${item.title}</div>
