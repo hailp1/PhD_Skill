@@ -15,31 +15,40 @@ sys.path.append(os.path.join(WORKSPACE, ".agents", "skills", "phd-dissertation-w
 from academic_qa_gate import AcademicQAGate
 from academic_tone_audit import audit_academic_text
 
+def audit_paper_status(fpath, ptype):
+    if not os.path.exists(fpath):
+        return "Chưa Khởi Tạo"
+    g = AcademicQAGate(fpath, paper_type=ptype)
+    g.run_full_audit()
+    with open(fpath, "r", encoding="utf-8", errors="ignore") as f:
+        t_res = audit_academic_text(f.read())
+    t_score = t_res["naturalness_score"]
+    print(f"\n[TONE GATE - {ptype.upper()}] Academic Naturalness Score: {t_score}/100 (Em-dashes: {t_res['em_dash_count']})")
+    if len(g.red_flags) == 0 and g.score >= 90 and t_score >= 80:
+        return f"Hoàn Thiện 100% (QA: {g.score}/100 | Tone: {t_score}/100)"
+    return f"Cần Chỉnh Sửa (QA: {g.score}/100 | Tone: {t_score}/100 | Flags: {len(g.red_flags)})"
+
 MANUSCRIPT_FILE = os.path.join(WORKSPACE, "lab_projects", "PAPER_01_SLR_JRCS_MANUSCRIPT.md")
+PAPER2_FILE = os.path.join(WORKSPACE, "lab_projects", "PAPER_02_EMPIRICAL_CHB_MANUSCRIPT.md")
 
-# Run BOTH Academic QA Gate and Academic Tone Audit to dynamically determine status
-gate = AcademicQAGate(MANUSCRIPT_FILE)
-gate.run_full_audit()
-
-with open(MANUSCRIPT_FILE, "r", encoding="utf-8", errors="ignore") as f:
-    tone_res = audit_academic_text(f.read())
-
-tone_score = tone_res["naturalness_score"]
-print(f"\n[TONE GATE] Academic Naturalness Score: {tone_score}/100 (Em-dashes: {tone_res['em_dash_count']})")
-
-if len(gate.red_flags) == 0 and gate.score >= 90 and tone_score >= 80:
-    paper1_status = f"Hoàn Thiện 100% (QA: {gate.score}/100 | Tone: {tone_score}/100)"
-else:
-    paper1_status = f"Cần Chỉnh Sửa (QA: {gate.score}/100 | Tone: {tone_score}/100 | Flags: {len(gate.red_flags)})"
+paper1_status = audit_paper_status(MANUSCRIPT_FILE, "slr")
+paper2_status = audit_paper_status(PAPER2_FILE, "empirical")
 
 print(f"\n[PACKAGER] Dynamic Status for Paper 1: {paper1_status}")
+print(f"[PACKAGER] Dynamic Status for Paper 2: {paper2_status}")
 
 docs_to_pack = {
     'paper1': (
         'lab_projects/PAPER_01_SLR_JRCS_MANUSCRIPT.md',
-        'Bản Thảo IMRAD: Paper 01 (JRCS Submission)',
+        'Paper 01: SLR & Bibliometrics (JRCS Q1)',
         'JRCS Q1 (IF: 11.0)',
         paper1_status
+    ),
+    'paper2': (
+        'lab_projects/PAPER_02_EMPIRICAL_CHB_MANUSCRIPT.md',
+        'Paper 02: Empirical Protocol (CHB Q1)',
+        'CHB Q1 (IF: 9.0)',
+        paper2_status
     ),
     'plan': (
         'lab_projects/AUTOMATED_PAPER_WRITING_PLAN.md',

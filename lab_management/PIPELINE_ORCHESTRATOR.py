@@ -20,9 +20,11 @@ IDEA_SCANNER_SCRIPT = os.path.join(WORKSPACE_DIR, "lab_management", "idea_scanne
 STORM_SCRIPT = os.path.join(WORKSPACE_DIR, "lab_management", "storm_perspective_dialogue.py")
 QA_GATE_SCRIPT = os.path.join(WORKSPACE_DIR, "lab_management", "academic_qa_gate.py")
 TONE_AUDIT_SCRIPT = os.path.join(WORKSPACE_DIR, ".agents", "skills", "phd-dissertation-writing", "scripts", "academic_tone_audit.py")
-MANUSCRIPT_FILE = os.path.join(WORKSPACE_DIR, "lab_projects", "PAPER_01_SLR_JRCS_MANUSCRIPT.md")
+MANUSCRIPT_FILE_1 = os.path.join(WORKSPACE_DIR, "lab_projects", "PAPER_01_SLR_JRCS_MANUSCRIPT.md")
+MANUSCRIPT_FILE_2 = os.path.join(WORKSPACE_DIR, "lab_projects", "PAPER_02_EMPIRICAL_CHB_MANUSCRIPT.md")
 PACKAGER_SCRIPT = os.path.join(WORKSPACE_DIR, "lab_management", "pack_docs_bundle.py")
 MODULAR_ENGINE_SCRIPT = os.path.join(WORKSPACE_DIR, "lab_management", "modular_manuscript_engine.py")
+PAPER2_ENGINE_SCRIPT = os.path.join(WORKSPACE_DIR, "lab_management", "paper2_empirical_engine.py")
 
 def load_json(path):
     if not os.path.exists(path):
@@ -77,23 +79,35 @@ def execute_autonomous_pipeline(paper_num=1):
     print("Search String: Agnostic 2-Pillar Boolean Query (No confirmation bias). Verified.")
     print("VOSviewer Mapping: 4 Thematic Clusters (Red, Green, Blue, Yellow). Verified.")
 
-    # Stage 3: Lead Paper Author (LPA) - Modular Manuscript Compilation
+    # Select Paper-Specific Engine, Manuscript Path, and Audit Rules
+    if paper_num == 2:
+        target_file = MANUSCRIPT_FILE_2
+        target_type = "empirical"
+        author_script = PAPER2_ENGINE_SCRIPT
+        stage3_name = "Empirical Registered Protocol Drafting (CHB - Q1)"
+    else:
+        target_file = MANUSCRIPT_FILE_1
+        target_type = "slr"
+        author_script = MODULAR_ENGINE_SCRIPT
+        stage3_name = "Modular Manuscript Drafting & 3-Role Review (JRCS - Q1)"
+
+    # Stage 3: Lead Paper Author (LPA)
     success = run_agent_stage(
         stage_code="3 - LPA",
-        stage_name="Modular Manuscript Drafting & 3-Role Review",
+        stage_name=stage3_name,
         agent_code="LPA",
-        command=MODULAR_ENGINE_SCRIPT
+        command=author_script
     )
     if not success:
         print("\n⛔ PIPELINE HALTED: Lead Paper Author module encountered errors.")
         sys.exit(1)
 
-    # Stage 4: Mock Journal Review Panel (MJR) - Adversarial 5-Gate Audit + Anti-AI Tone Gate
+    # Stage 4: Mock Journal Review Panel (MJR) - Adversarial 6-Gate Audit + Anti-AI Tone Gate
     success_qa = run_agent_stage(
         stage_code="4A - MJR (Methodology & Integrity)",
-        stage_name="Adversarial Peer Review & 5-Gate Quality Audit",
+        stage_name=f"Adversarial Peer Review & 6-Gate Quality Audit ({target_type.upper()})",
         agent_code="MJR",
-        command=QA_GATE_SCRIPT
+        command=f"{QA_GATE_SCRIPT} --file {target_file} --type {target_type}"
     )
     if not success_qa:
         print("\n⛔ PIPELINE HALTED: Manuscript failed Mock Journal Review (QA Gate). Correct Red Flags before release.")
@@ -103,7 +117,7 @@ def execute_autonomous_pipeline(paper_num=1):
         stage_code="4B - MJR (Academic Style & Anti-AI)",
         stage_name="Academic Naturalness & Anti-AI Tone Audit (Strict Gate >= 80/100)",
         agent_code="MJR",
-        command=f"{TONE_AUDIT_SCRIPT} --file {MANUSCRIPT_FILE} --strict"
+        command=f"{TONE_AUDIT_SCRIPT} --file {target_file} --strict"
     )
     if not success_tone:
         print("\n⛔ PIPELINE HALTED: Manuscript failed Academic Tone Audit (Score < 80 or Em-dashes > 0).")

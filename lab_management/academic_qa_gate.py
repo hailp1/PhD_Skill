@@ -14,8 +14,9 @@ MANUSCRIPT_PATH = os.path.join(WORKSPACE_DIR, "lab_projects", "PAPER_01_SLR_JRCS
 CORPUS_CSV = os.path.join(WORKSPACE_DIR, "data", "processed", "dimensions_clean_included.csv")
 
 class AcademicQAGate:
-    def __init__(self, manuscript_path=MANUSCRIPT_PATH):
+    def __init__(self, manuscript_path=MANUSCRIPT_PATH, paper_type="slr"):
         self.manuscript_path = manuscript_path
+        self.paper_type = paper_type.lower()
         self.text = ""
         self.red_flags = []
         self.warnings = []
@@ -32,7 +33,10 @@ class AcademicQAGate:
             self.text = re.sub(r'data:image/[^"]+', '', raw)
 
     def audit_prisma_search_query(self):
-        """Gate 1: Check for Confirmation Bias & Broken Syntax in Boolean Search."""
+        """Gate 1: Check for Confirmation Bias & Broken Syntax in Boolean Search (SLR only)."""
+        if self.paper_type != "slr":
+            print("[CHECK 1] Skipping PRISMA Boolean check (Empirical Protocol paper)...")
+            return
         print("[CHECK 1] Auditing PRISMA Boolean Search Strategy...")
         # Check if search string contains circular variables
         search_match = re.search(r'(?:Boolean query|search string|Search Strategy)[^\n]*\n+```[^\n]*\n([\s\S]*?)```', self.text, re.IGNORECASE)
@@ -53,7 +57,13 @@ class AcademicQAGate:
                 self.score -= 10
 
     def audit_vosviewer_methodology(self):
-        """Gate 2: Check for VOSviewer Metric Consistency & Graph Topology."""
+        """Gate 2: Check for VOSviewer Metric Consistency & Graph Topology (SLR) or Brislin/G*Power (Empirical)."""
+        if self.paper_type != "slr":
+            print("[CHECK 2] Auditing Empirical Methodology (G*Power, Brislin & PLS-SEM)...")
+            if not re.search(r'G\*Power|Brislin|PLS-SEM', self.text, re.IGNORECASE):
+                self.red_flags.append("EMPIRICAL METHODOLOGY MISSING: Must specify G*Power, Brislin back-translation, or PLS-SEM protocol.")
+                self.score -= 15
+            return
         print("[CHECK 2] Auditing VOSviewer Terminology & Graph Logic...")
         # Check if co-word mentions citations threshold instead of occurrences
         if re.search(r'co-word[^\n]*threshold of [^\n]*citations', self.text, re.IGNORECASE):
@@ -66,13 +76,18 @@ class AcademicQAGate:
             self.score -= 5
 
     def audit_hypotheses_vs_propositions(self):
-        """Gate 3: Ensure SLR / Conceptual Paper Uses Propositions (P) not Hypotheses (H)."""
+        """Gate 3: Ensure SLR uses Propositions (P) while Empirical uses Hypotheses (H)."""
         print("[CHECK 3] Auditing Hypotheses vs. Propositions Standard...")
-        # SLR papers cannot formulate empirical testable hypotheses without primary data or MASEM
-        h_pattern = re.findall(r'\bH[1-6][a-z]?\b\s*:', self.text)
-        if h_pattern:
-            self.red_flags.append(f"METHODOLOGY MISMATCH: Found {len(h_pattern)} Hypotheses (e.g. {h_pattern[:3]}). SLR/Conceptual paper must use Propositions (P1-P6) unless MASEM is conducted.")
-            self.score -= 15
+        if self.paper_type == "slr":
+            h_pattern = re.findall(r'\bH[1-6][a-z]?\b\s*:', self.text)
+            if h_pattern:
+                self.red_flags.append(f"METHODOLOGY MISMATCH: Found {len(h_pattern)} Hypotheses (e.g. {h_pattern[:3]}). SLR/Conceptual paper must use Propositions (P1-P9) unless MASEM is conducted.")
+                self.score -= 15
+        else:
+            h_found = re.findall(r'\bH[1-9][a-z]?\b', self.text)
+            if len(h_found) < 4:
+                self.red_flags.append("EMPIRICAL HYPOTHESES MISSING: Empirical paper must formulate explicit testable Hypotheses (H1-H9).")
+                self.score -= 15
 
     def audit_citation_hallucinations_and_typos(self):
         """Gate 4: Check for Known Hallucinated Citations, Typos, and Mismatches."""
@@ -114,11 +129,12 @@ class AcademicQAGate:
         """Gate 5: Check Reference Depth (>=80), Zero Al-typos, Zero Em-dashes, Zero HTML Leaks."""
         print("[CHECK 5] Auditing Reference Depth, Formatting & HTML Render Safety...")
         # Check reference count (supports both clean APA paragraphs and legacy '- ' lines)
+        min_refs = 80 if self.paper_type == "slr" else 25
         ref_section = re.search(r'## REFERENCES([\s\S]*)$', self.text)
         if ref_section:
             ref_lines = [l.strip() for l in ref_section.group(1).strip().split('\n') if l.strip() and not l.strip().startswith('#')]
-            if len(ref_lines) < 80:
-                self.red_flags.append(f"REFERENCE DEPTH DEFICIT: Found {len(ref_lines)} references. Q1 Full SLR requires >= 80 verified references.")
+            if len(ref_lines) < min_refs:
+                self.red_flags.append(f"REFERENCE DEPTH DEFICIT: Found {len(ref_lines)} references. Requires >= {min_refs} verified references.")
                 self.score -= 15
 
         # Check Al-Driven typo (case-sensitive)
@@ -204,6 +220,11 @@ class AcademicQAGate:
         return len(self.red_flags) == 0
 
 if __name__ == "__main__":
-    gate = AcademicQAGate()
+    import argparse
+    parser = argparse.ArgumentParser(description="H-AI Lab Academic QA Gate")
+    parser.add_argument("--file", type=str, default=MANUSCRIPT_PATH, help="Path to manuscript")
+    parser.add_argument("--type", type=str, default="slr", choices=["slr", "empirical"], help="Paper type")
+    args = parser.parse_args()
+    gate = AcademicQAGate(manuscript_path=args.file, paper_type=args.type)
     passed = gate.run_full_audit()
     sys.exit(0 if passed else 1)
