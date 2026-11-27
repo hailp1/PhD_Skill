@@ -581,6 +581,9 @@
                 <a href="data/references/ONE_CLICK_PDF_RESOLVER.md" target="_blank" class="btn btn-outline" style="font-size:0.8rem; padding:0.4rem 0.75rem;">
                     <i class="fa-solid fa-bolt-lightning" style="color:#d97706;"></i> 1-Click PDF Resolver
                 </a>
+                <button class="btn btn-outline" style="font-size:0.8rem; padding:0.4rem 0.75rem;" onclick="openOsfModal()">
+                    <i class="fa-solid fa-earth-americas" style="color:#0284c7;"></i> Kết Nối OSF (Open Science)
+                </button>
                 <a href="TRUNG_TAM_DIEU_HANH_LAB.html" target="_blank" class="btn btn-outline" style="font-size:0.8rem; padding:0.4rem 0.75rem;">
                     <i class="fa-solid fa-network-wired"></i> Mạng Lưới 6 DR. HAI Chi Tiết
                 </a>
@@ -696,6 +699,65 @@
                     </div>
                 `;
             }, 300);
+        }
+
+        function openOsfModal() {
+            const modal = document.getElementById('docViewerModal');
+            const titleEl = document.getElementById('docViewerTitle');
+            const contentEl = document.getElementById('docViewerContent');
+
+            titleEl.innerHTML = `<i class="fa-solid fa-earth-americas" style="color:#0284c7;"></i> Kết Nối Kho Nghiên Cứu Mở OSF (Open Science Framework)`;
+            contentEl.innerHTML = `
+                <div style="display:flex; flex-direction:column; gap:1.25rem;">
+                    <div style="background:#e0f2fe; border:1px solid #7dd3fc; padding:1.2rem; border-radius:10px; color:#0369a1;">
+                        <h4 style="margin-bottom:0.4rem; font-size:1rem;"><i class="fa-solid fa-certificate"></i> Vai trò của OSF (Open Science Framework - https://osf.io)</h4>
+                        <p style="font-size:0.875rem; line-height:1.6; color:#0c4a6e;">
+                            OSF là nền tảng quốc tế tiêu chuẩn do <b>Center for Open Science (COS)</b> vận hành. Với nghiên cứu sinh Tiến sĩ, OSF dùng để:
+                            <br>• <b>Đăng ký trước đề cương (Preregistration)</b>: Khẳng định bản quyền ý tưởng, chống HARKing và p-hacking.
+                            <br>• <b>Chia sẻ Dữ liệu Mở (Open Data & Open Materials)</b>: Đăng tải bảng hỏi 28 câu, ma trận PRISMA và tập dữ liệu để lấy <b>Huy hiệu Khoa học Mở (Open Science Badge)</b> khi nộp vào các tạp chí Scopus Q1.
+                            <br>• <b>Cấp mã DOI chính thức miễn phí</b>: Nhận DOI định danh trích dẫn vĩnh viễn cho bản thảo working paper của bạn.
+                        </p>
+                    </div>
+
+                    <div style="background:#ffffff; border:1px solid var(--border-color); padding:1.2rem; border-radius:10px;">
+                        <h4 style="font-size:0.95rem; font-weight:700; color:var(--text-main); margin-bottom:0.75rem;">
+                            <i class="fa-solid fa-key" style="color:#f59e0b;"></i> Bước 1: Lấy OSF Personal Access Token (PAT)
+                        </h4>
+                        <ol style="font-size:0.875rem; color:var(--text-sub); line-height:1.7; padding-left:1.2rem;">
+                            <li>Đăng nhập tài khoản trên <a href="https://osf.io" target="_blank" style="color:var(--primary); font-weight:600;">https://osf.io</a> (hoặc tạo tài khoản miễn phí).</li>
+                            <li>Truy cập trang tạo Token cá nhân: <a href="https://osf.io/settings/tokens/" target="_blank" style="color:var(--primary); font-weight:600;">https://osf.io/settings/tokens/</a></li>
+                            <li>Bấm <b>"Create Token"</b>, đặt tên token (ví dụ: <code>H-AI Lab Ph.D.</code>), tích chọn quyền: <b><code>osf.full_write</code></b>.</li>
+                            <li>Sao chép chuỗi mã Token bí mật được cấp.</li>
+                        </ol>
+                    </div>
+
+                    <div style="background:#ffffff; border:1px solid var(--border-color); padding:1.2rem; border-radius:10px;">
+                        <h4 style="font-size:0.95rem; font-weight:700; color:var(--text-main); margin-bottom:0.75rem;">
+                            <i class="fa-solid fa-terminal" style="color:#0284c7;"></i> Bước 2: Kết Nối & Đẩy Hồ Sơ Luận Án Lên OSF
+                        </h4>
+                        <p style="font-size:0.85rem; color:var(--text-sub); margin-bottom:0.75rem;">
+                            Chỉ cần gửi mã Token của bạn cho trợ lý AI trong khung chat, hoặc chạy lệnh 1 dòng lệnh PowerShell trong thư mục dự án:
+                        </p>
+                        <div style="background:#0f172a; color:#f8fafc; padding:0.85rem 1rem; border-radius:8px; font-family:'JetBrains Mono', monospace; font-size:0.85rem; overflow-x:auto;">
+                            python lab_management/osf_client_sync.py set-token &lt;TOKEN_CỦA_BẠN&gt;<br>
+                            python lab_management/osf_client_sync.py create "AI Recommendation & Impulse Buying - TDTU PhD"
+                        </div>
+                    </div>
+
+                    <div style="background:#f8fafc; border:1px solid var(--border-color); padding:1rem; border-radius:10px;">
+                        <h4 style="font-size:0.9rem; font-weight:700; color:var(--text-main); margin-bottom:0.5rem;">
+                            <i class="fa-solid fa-cloud-arrow-up" style="color:var(--emerald);"></i> Danh sách tài liệu sẽ được đẩy tự động lên OSF:
+                        </h4>
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.8rem; color:var(--text-sub);">
+                            <div>✓ <code>PAPER_01_SLR_JRCS_MANUSCRIPT_DRAFT.md</code></div>
+                            <div>✓ <code>SURVEY_INSTRUMENT_SCALE_28_ITEMS.md</code></div>
+                            <div>✓ <code>PRISMA_2020_REVIEW_PROTOCOL.md</code></div>
+                            <div>✓ <code>ACADEMIC_LITERATURE_CORPUS_DATA.json</code></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            modal.style.display = 'flex';
         }
 
         function closeViewerModal() {
