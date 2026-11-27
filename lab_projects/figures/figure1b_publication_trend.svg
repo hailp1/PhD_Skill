@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="100%" height="auto" style="font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif; background:#ffffff;">
+  <defs>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="barGen2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title Header -->
+  <rect x="20" y="12" width="840" height="38" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="440" y="36" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">ANNUAL PUBLICATION TRAJECTORY OF THE INCLUDED CORPUS (N = 866, 2018-2026)</text>
+
+  <!-- Phase Background Shading -->
+  <rect x="75" y="65" width="230" height="250" fill="#f8fafc" opacity="0.7"/>
+  <text x="190" y="82" text-anchor="middle" font-size="9.5" font-weight="700" fill="#64748b">PHASE 1: FOUNDATIONAL (n=34)</text>
+
+  <rect x="315" y="65" width="245" height="250" fill="#f0f9ff" opacity="0.6"/>
+  <text x="437" y="82" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0369a1">PHASE 2: EXPANSION (n=102)</text>
+
+  <rect x="570" y="65" width="275" height="250" fill="#f0fdfa" opacity="0.7"/>
+  <text x="707" y="82" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0f766e">PHASE 3: GEN-AI 2.0 (n=730)</text>
+
+  <!-- Grid Lines (Y max = 400; base y = 315; height = 220 => 1 unit = 0.55 px) -->
+  <line x1="70" y1="315" x2="845" y2="315" stroke="#475569" stroke-width="1.5"/>
+  <line x1="70" y1="260" x2="845" y2="260" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="62" y="264" text-anchor="end" font-size="10" fill="#64748b">100</text>
+  <line x1="70" y1="205" x2="845" y2="205" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="62" y="209" text-anchor="end" font-size="10" fill="#64748b">200</text>
+  <line x1="70" y1="150" x2="845" y2="150" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="62" y="154" text-anchor="end" font-size="10" fill="#64748b">300</text>
+  <line x1="70" y1="95" x2="845" y2="95" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="62" y="99" text-anchor="end" font-size="10" fill="#64748b">400</text>
+  <text x="62" y="319" text-anchor="end" font-size="10" fill="#64748b">0</text>
+
+  <!-- Bars: x positions spaced ~82px apart starting at x=95, width=44 -->
+  <!-- 2018: 6 => h=3.3 => y=311.7 -->
+  <rect x="95" y="311" width="44" height="4" rx="2" fill="url(#barGrad)"/>
+  <text x="117" y="305" text-anchor="middle" font-size="10.5" font-weight="800" fill="#0f172a">6</text>
+  <text x="117" y="334" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2018</text>
+
+  <!-- 2019: 11 => h=6.05 => y=308.95 -->
+  <rect x="177" y="309" width="44" height="6" rx="2" fill="url(#barGrad)"/>
+  <text x="199" y="303" text-anchor="middle" font-size="10.5" font-weight="800" fill="#0f172a">11</text>
+  <text x="199" y="334" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2019</text>
+
+  <!-- 2020: 17 => h=9.35 => y=305.65 -->
+  <rect x="259" y="305" width="44" height="10" rx="2" fill="url(#barGrad)"/>
+  <text x="281" y="299" text-anchor="middle" font-size="10.5" font-weight="800" fill="#0f172a">17</text>
+  <text x="281" y="334" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2020</text>
+
+  <!-- 2021: 25 => h=13.75 => y=301.25 -->
+  <rect x="341" y="301" width="44" height="14" rx="2" fill="url(#barGrad)"/>
+  <text x="363" y="295" text-anchor="middle" font-size="10.5" font-weight="800" fill="#0f172a">25</text>
+  <text x="363" y="334" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2021</text>
+
+  <!-- 2022: 35 => h=19.25 => y=295.75 -->
+  <rect x="423" y="296" width="44" height="19" rx="2" fill="url(#barGrad)"/>
+  <text x="445" y="290" text-anchor="middle" font-size="10.5" font-weight="800" fill="#0f172a">35</text>
+  <text x="445" y="334" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2022</text>
+
+  <!-- 2023: 42 => h=23.1 => y=291.9 -->
+  <rect x="505" y="292" width="44" height="23" rx="2" fill="url(#barGrad)"/>
+  <text x="527" y="286" text-anchor="middle" font-size="10.5" font-weight="800" fill="#0f172a">42</text>
+  <text x="527" y="334" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2023</text>
+
+  <!-- 2024: 122 => h=67.1 => y=247.9 -->
+  <rect x="587" y="248" width="44" height="67" rx="3" fill="url(#barGen2)"/>
+  <text x="609" y="241" text-anchor="middle" font-size="11" font-weight="800" fill="#0f766e">122</text>
+  <text x="609" y="334" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2024</text>
+
+  <!-- 2025: 233 => h=128.15 => y=186.85 -->
+  <rect x="669" y="187" width="44" height="128" rx="3" fill="url(#barGen2)"/>
+  <text x="691" y="180" text-anchor="middle" font-size="11" font-weight="800" fill="#0f766e">233</text>
+  <text x="691" y="334" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2025</text>
+
+  <!-- 2026*: 375 => h=206.25 => y=108.75 -->
+  <rect x="751" y="109" width="44" height="206" rx="3" fill="url(#barGen2)"/>
+  <text x="773" y="102" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0f766e">375*</text>
+  <text x="773" y="334" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">2026*</text>
+
+  <!-- Smooth Growth Curve Overlay -->
+  <polyline points="117,311 199,309 281,305 363,301 445,296 527,292 609,248 691,187 773,109" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4,3"/>
+  <circle cx="117" cy="311" r="3.5" fill="#d97706"/>
+  <circle cx="199" cy="309" r="3.5" fill="#d97706"/>
+  <circle cx="281" cy="305" r="3.5" fill="#d97706"/>
+  <circle cx="363" cy="301" r="3.5" fill="#d97706"/>
+  <circle cx="445" cy="296" r="3.5" fill="#d97706"/>
+  <circle cx="527" cy="292" r="3.5" fill="#d97706"/>
+  <circle cx="609" cy="248" r="4" fill="#d97706"/>
+  <circle cx="691" cy="187" r="4" fill="#d97706"/>
+  <circle cx="773" cy="109" r="4.5" fill="#d97706"/>
+
+  <!-- Footer Note inside SVG -->
+  <text x="440" y="362" text-anchor="middle" font-size="9.5" fill="#64748b">*2026 includes 365 articles published through Nov 2026 plus 10 indexed 2027 early-access papers (Total N = 866).</text>
+</svg>

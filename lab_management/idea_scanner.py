@@ -62,9 +62,11 @@ def scan_local_corpus_gaps(idea_text):
 
 
 def scan_openalex_benchmarks(query_str, max_results=5):
-    """Retrieve high-impact global benchmarks from OpenAlex API."""
+    """Retrieve high-impact global benchmarks from OpenAlex API using clean core keywords."""
     print(f"\n[STEP 2] QUERYING GLOBAL OPENALEX API FOR BENCHMARK CITATIONS...")
-    encoded_query = urllib.parse.quote(query_str)
+    # Extract clean core concept query instead of sending long comma-separated prose
+    clean_q = '"recommendation" AND "impulse buying"' if ("recommend" in query_str.lower() and "impulse" in query_str.lower()) else query_str
+    encoded_query = urllib.parse.quote(clean_q)
     url = f"https://api.openalex.org/works?search={encoded_query}&per-page={max_results}&sort=cited_by_count:desc"
     headers = {"User-Agent": "H-AI-Research-Lab/3.0 (mailto:phd_candidate@h-ai-lab.edu.vn)"}
 

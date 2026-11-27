@@ -12,9 +12,11 @@ import json
 WORKSPACE = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 MANUSCRIPT_PATH = os.path.join(WORKSPACE, "lab_projects", "PAPER_01_SLR_JRCS_MANUSCRIPT.md")
 FIG1_SVG_PATH = os.path.join(WORKSPACE, "lab_projects", "figures", "figure1_prisma_flow_diagram.svg")
+FIG1B_SVG_PATH = os.path.join(WORKSPACE, "lab_projects", "figures", "figure1b_publication_trend.svg")
 FIG2_PNG_PATH = os.path.join(WORKSPACE, "lab_projects", "figures", "figure2_vosviewer_real_network_cropped.png")
 FIG3_SVG_PATH = os.path.join(WORKSPACE, "lab_projects", "figures", "figure3_theoretical_sor_model.svg")
 VERIFIED_REFS_PATH = os.path.join(WORKSPACE, "lab_management", "clean_apa_corpus_refs.json")
+GAP_PLAN_PATH = os.path.join(WORKSPACE, "lab_projects", "NEW_IDEA_PAPER_PLAN.json")
 
 def get_base64_image(path):
     import base64
@@ -84,8 +86,8 @@ In contemporary digital retailing ecosystems, consumers no longer navigate stati
 
 A primary behavioral outcome of this algorithmic immersion is the notable increase in **online impulse buying (OIB)** (defined as sudden, hedonically complex, and unplanned purchase decisions characterized by diminished deliberative cognitive evaluation) (Beatty & Ferrell, 1998; Rook & Fisher, 1995). Modern electronic commerce analytics reveal that between 40% and 60% of digital transactions involve an impulsive component, heavily catalyzed by algorithmic discovery feeds, flash recommendations, and frictionless one-click checkout infrastructures (Chan et al., 2017; Zheng et al., 2019). While practitioners celebrate predictive personalization as an engine of customer lifetime value and transaction velocity, consumer psychologists express growing scholarly concern regarding the ethical boundaries of algorithmic nudging, choice architecture manipulation, and the systematic erosion of consumer self-regulatory willpower (Baumeister, 2002; Kumaran & Shobhana, 2026; Sweller, 1988).
 
-### 1.2. Problem Statement and Theoretical Fault Lines
-Despite an explosion of empirical scholarship over the past decade, literature examining the nexus of AI recommendation systems and impulsive buying remains siloed across computer science, information systems (IS), and consumer psychology. A systematic examination reveals three fundamental theoretical fault lines:
+### 1.2. Problem Statement, Quantitative Corpus Gaps, and Theoretical Fault Lines
+Despite substantial growth in empirical scholarship over the past decade, literature examining the nexus of AI recommendation systems and impulsive buying remains siloed across computer science, information systems (IS), and consumer psychology. An automated quantitative gap audit of our deduplicated corpus ($N = 1,441$) highlights stark empirical blind spots: while 9.58% ($n = 138$) of studies invoke general S-O-R framing, only **1.73%** ($n = 25$) test multiplicative cognitive-affective interactions, **1.32%** ($n = 19$) model curvilinear (inverted-U) personalization thresholds, **1.04%** ($n = 15$) examine algorithmic surveillance reactance, **2.50%** ($n = 36$) trace post-purchase regret feedback, and a mere **0.42%** ($n = 6$) integrate ego depletion as a self-regulatory boundary condition. A systematic examination reveals three core theoretical fault lines:
 
 1. **Theoretical Fragmentation of Algorithmic Stimuli (The S-O-R Disconnect)**:  
    While the classical Stimulus-Organism-Response (S-O-R) paradigm (Mehrabian & Russell, 1974; Jacoby, 2002) provides an established environmental psychology foundation, early retail studies operationalized "Stimuli" primarily as static website atmospherics (e.g., color, layout, navigation structure; Eroglu et al., 2001). In algorithmic commerce, stimuli are dynamic, adaptive, and agentic. Crucially, literature exhibits sharp disagreement on whether algorithmic attributes, specifically *Perceived Personalization (PP)*, *Perceived Recommendation Accuracy (ACC)*, and *Recommendation Novelty & Serendipity (NOV)*, operate harmoniously or create conflicting psychological appraisals (Al-Natour et al., 2011; Ampadu et al., 2022; Shanahan et al., 2019; Zhang et al., 2021).
@@ -171,16 +173,24 @@ Figure 1 documents the end-to-end PRISMA 2020 selection flow, detailing exact at
 # ==============================================================================
 print("\n[MODULE 3] Drafting Section 3: Bibliometric & Thematic Results...")
 
+fig1b_svg = get_clean_svg(FIG1B_SVG_PATH)
 fig2_b64 = get_base64_image(FIG2_PNG_PATH)
 
 MODULE_3_TEXT = f"""
 ## 3. BIBLIOMETRIC AND THEMATIC RESULTS
 
 ### 3.1. Performance Analysis: Publication Trajectories and Leading Outlets
-Bibliometric performance analysis conducted strictly on our **866 final included studies** (2018–2026) reveals a rapid growth trajectory across three distinct developmental phases:
+Bibliometric performance analysis conducted strictly on our **866 final included studies** (2018–2026) reveals a rapid growth trajectory across three distinct developmental phases, visually illustrated in Figure 2A:
 - **Foundational Phase (2018–2020)**: Characterized by exploratory output totaling **34 studies** (3.9%; averaging 11.3 publications annually), focusing predominantly on collaborative filtering accuracy and early personalization cues (Shanahan et al., 2019; Xiao & Benbasat, 2018; Zheng et al., 2019).
 - **Expansion Phase (2021–2023)**: Rapid acceleration totaling **102 studies** (11.8%; averaging 34.0 publications annually), catalyzed by the integration of deep neural networks, mobile social commerce, and pandemic-induced digital retail migration (Ampadu et al., 2022; Hallikainen et al., 2022; Redine et al., 2022; Zhang et al., 2021; Zhu et al., 2023).
 - **Maturation and Generative Phase (2024–2026)**: High-velocity scholarly output totaling **730 studies** (84.3%; averaging 243.3 publications annually through November 2026), driven by Generative AI, conversational recommender agents, livestreaming curation, and algorithmic dark patterns (Gallin & Portes, 2024; Lin, 2026; Pang et al., 2026; Shamim & Misra, 2025).
+
+<div class="academic-figure-container" style="text-align:center; margin: 2rem 0; padding: 1.5rem; background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+<div style="font-weight: 700; font-size: 1.05rem; color: #0f172a; margin-bottom: 0.5rem;">Figure 2A: Annual Publication Growth Trajectory of the Included Corpus (N = 866, 2018-2026)</div>
+<div style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem;">Illustrating the three developmental phases from Foundational (n=34) and Expansion (n=102) to Generative AI 2.0 (n=730).</div>
+{fig1b_svg}
+<div style="font-size: 0.8rem; color: #475569; text-align: justify; margin-top: 1rem; line-height: 1.5;"><em>Note</em>: Yearly distribution computed strictly on the final included synthesis corpus ($N = 866$) across January 2018 to November 2026.</div>
+</div>
 
 Table 1A presents the quantitative publication trajectory across the 866 included studies, while Table 1B ranks the Top 10 core dissemination outlets within the final corpus, confirming *Journal of Theoretical and Applied Electronic Commerce Research* ($n = 40$) and *Journal of Retailing and Consumer Services* ($n = 40$) as the leading academic venues.
 

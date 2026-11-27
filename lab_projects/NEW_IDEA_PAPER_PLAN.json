@@ -51,43 +51,43 @@
   "openalex_benchmarks": [
     {
       "rank": 1,
-      "title": "Personal Values and Sustainable Consumerism: Performance Trends, Intellectual Structure, and Future Research Fronts",
-      "year": 2024,
-      "citations": 52,
-      "journal": "Journal of Consumer Behaviour",
-      "doi": "https://doi.org/10.1002/cb.2436"
+      "title": "Food waste within food supply chains: quantification and potential for change to 2050",
+      "year": 2010,
+      "citations": 4382,
+      "journal": "Philosophical Transactions of the Royal Society B Biological Sciences",
+      "doi": "https://doi.org/10.1098/rstb.2010.0126"
     },
     {
       "rank": 2,
-      "title": "Business cycles, interest rates and market volatility : estimation and forecasting using DSGE macroeconomic models under partial information",
-      "year": 2018,
-      "citations": 3,
-      "journal": "London Met Repository (London Metropolitan University)",
-      "doi": null
+      "title": "How to SHIFT Consumer Behaviors to be More Sustainable: A Literature Review and Guiding Framework",
+      "year": 2019,
+      "citations": 3588,
+      "journal": "Journal of Marketing",
+      "doi": "https://doi.org/10.1177/0022242919825649"
     },
     {
       "rank": 3,
-      "title": "Perceived Interactivity and Purchase Intentions on Short-Video Platforms: Parallel Mediation by Trust and Self-Control among Chinese Undergraduates",
-      "year": 2026,
-      "citations": 0,
-      "journal": "International Journal of Computer Information Systems and Industrial Management Applications",
-      "doi": "https://doi.org/10.70917/ijcisim-2026-4143"
+      "title": "Impact of Covid-19 on consumer behavior: Will the old habits return or die?",
+      "year": 2020,
+      "citations": 2516,
+      "journal": "Journal of Business Research",
+      "doi": "https://doi.org/10.1016/j.jbusres.2020.05.059"
     },
     {
       "rank": 4,
-      "title": "English for natural sciences : підручник для студентів вищих навчальних закладів природничих спеціальностей",
-      "year": 2021,
-      "citations": 0,
-      "journal": "Electronic Kyiv-Mohyla Academy Institutional Repository (National University of Kyiv-Mohyla Academy)",
-      "doi": null
+      "title": "Influencers on Instagram: Antecedents and consequences of opinion leadership",
+      "year": 2018,
+      "citations": 2386,
+      "journal": "Journal of Business Research",
+      "doi": "https://doi.org/10.1016/j.jbusres.2018.07.005"
     },
     {
       "rank": 5,
-      "title": "MMB & DFT 2014 : Proceedings of the International Workshops ; Modeling, Analysis and Management of Social Networks and their Applications (SOCNET 2014) & Demand Modeling and Quantitative Analysis of Future Generation Energy Networks and Energy-Efficient Systems (FGENET 2014)",
-      "year": 2014,
-      "citations": 0,
-      "journal": "Schriften aus der Fakultät Wirtschaftsinformatik und Angewandte Informatik der Otto-Friedrich-Universität Bamberg.",
-      "doi": "https://doi.org/10.20378/irb-2869"
+      "title": "Taking Stock of Self-Control: A Meta-Analysis of How Trait Self-Control Relates to a Wide Range of Behaviors",
+      "year": 2011,
+      "citations": 2122,
+      "journal": "Personality and Social Psychology Review",
+      "doi": "https://doi.org/10.1177/1088868311418749"
     }
   ]
 }
