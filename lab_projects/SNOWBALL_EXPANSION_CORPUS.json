@@ -1,0 +1,520 @@
+{
+  "expanded_queries": [
+    {
+      "gap": "ego_depletion",
+      "coverage_pct": 0.69,
+      "expanded_query": "(\"ego depletion\" OR \"self-regulatory depletion\" OR \"decision fatigue\") AND (\"impulse buying\" OR \"impulsive purchase\")",
+      "seed_keywords": [
+        "ego depletion",
+        "cognitive load",
+        "decision fatigue",
+        "self-control failure"
+      ]
+    },
+    {
+      "gap": "surveillance_reactance",
+      "coverage_pct": 1.27,
+      "expanded_query": "(\"algorithmic surveillance\" OR \"psychological reactance\" OR \"dark patterns\") AND (\"personalization\" OR \"recommender\")",
+      "seed_keywords": [
+        "algorithmic surveillance",
+        "psychological reactance",
+        "privacy fatigue",
+        "dark patterns"
+      ]
+    },
+    {
+      "gap": "post_purchase_regret",
+      "coverage_pct": 3.58,
+      "expanded_query": "(\"post-purchase regret\" OR \"cognitive dissonance\") AND (\"impulse buying\" OR \"e-commerce\") AND (\"satisfaction\" OR \"return\")",
+      "seed_keywords": [
+        "post-purchase regret",
+        "cognitive dissonance",
+        "product returns",
+        "CLV erosion"
+      ]
+    },
+    {
+      "gap": "inverted_u_nonlinear",
+      "coverage_pct": 1.5,
+      "expanded_query": "(\"inverted-U\" OR \"curvilinear\" OR \"threshold effect\") AND (\"personalization\" OR \"recommendation\") AND \"privacy\"",
+      "seed_keywords": [
+        "inverted-U effect",
+        "curvilinear personalization",
+        "privacy threshold"
+      ]
+    },
+    {
+      "gap": "multiplicative_interaction",
+      "coverage_pct": 2.19,
+      "expanded_query": "(\"interaction effect\" OR \"moderated mediation\") AND (\"e-satisfaction\" OR \"cognitive\") AND (\"arousal\" OR \"impulse buying\")",
+      "seed_keywords": [
+        "cognitive-affective interaction",
+        "moderated mediation",
+        "permission structure"
+      ]
+    }
+  ],
+  "net_new_papers_count": 28,
+  "top_emerging_keywords": [
+    "Psychology",
+    "Computer science",
+    "Cognition",
+    "Context (archaeology)",
+    "Business",
+    "Perspective (graphical)",
+    "Feeling",
+    "Self-control",
+    "Control (management)",
+    "Social psychology",
+    "PsycINFO",
+    "Extant taxon",
+    "Medicine",
+    "Service (business)",
+    "Advertising"
+  ],
+  "snowball_papers": [
+    {
+      "rank": 1,
+      "title": "How to SHIFT Consumer Behaviors to be More Sustainable: A Literature Review and Guiding Framework",
+      "year": 2019,
+      "citations": 3588,
+      "journal": "Journal of Marketing",
+      "doi": "10.1177/0022242919825649",
+      "concepts": [
+        "Sustainable consumption",
+        "Context (archaeology)",
+        "Feeling",
+        "Process (computing)",
+        "Consumer behaviour"
+      ],
+      "source_gap": "ego_depletion"
+    },
+    {
+      "rank": 2,
+      "title": "Yielding to Temptation: Self‐Control Failure, Impulsive Purchasing, and Consumer Behavior",
+      "year": 2002,
+      "citations": 2196,
+      "journal": "Journal of Consumer Research",
+      "doi": "10.1086/338209",
+      "concepts": [
+        "Temptation",
+        "Self-control",
+        "Control (management)",
+        "Purchasing",
+        "Feeling"
+      ],
+      "source_gap": "ego_depletion"
+    },
+    {
+      "rank": 3,
+      "title": "Taking Stock of Self-Control: A Meta-Analysis of How Trait Self-Control Relates to a Wide Range of Behaviors",
+      "year": 2011,
+      "citations": 2122,
+      "journal": "Personality and Social Psychology Review",
+      "doi": "10.1177/1088868311418749",
+      "concepts": [
+        "Self-control",
+        "Psychology",
+        "Control (management)",
+        "Warrant",
+        "Social psychology"
+      ],
+      "source_gap": "ego_depletion"
+    },
+    {
+      "rank": 4,
+      "title": "Theoretical explanations for maintenance of behaviour change: a systematic review of behaviour theories",
+      "year": 2016,
+      "citations": 1841,
+      "journal": "Health Psychology Review",
+      "doi": "10.1080/17437199.2016.1151372",
+      "concepts": [
+        "PsycINFO",
+        "Behavior change",
+        "Behaviour change",
+        "Psychological intervention",
+        "Psychology"
+      ],
+      "source_gap": "ego_depletion"
+    },
+    {
+      "rank": 5,
+      "title": "Anomalies: Intertemporal Choice",
+      "year": 1989,
+      "citations": 1045,
+      "journal": "The Journal of Economic Perspectives",
+      "doi": "10.1257/jep.3.4.181",
+      "concepts": [
+        "Economics",
+        "Intertemporal choice",
+        "Sign (mathematics)",
+        "Interest rate",
+        "Microeconomics"
+      ],
+      "source_gap": "ego_depletion"
+    },
+    {
+      "rank": 6,
+      "title": "Impulse buying: a meta-analytic review",
+      "year": 2019,
+      "citations": 967,
+      "journal": "Journal of the Academy of Marketing Science",
+      "doi": "10.1007/s11747-019-00670-w",
+      "concepts": [
+        "Impulse (physics)",
+        "Business",
+        "Marketing",
+        "Physics",
+        "Quantum mechanics"
+      ],
+      "source_gap": "ego_depletion"
+    },
+    {
+      "rank": 1,
+      "title": "GPT-4o System Card",
+      "year": 2024,
+      "citations": 11694,
+      "journal": "arXiv",
+      "doi": "10.48550/arxiv.2410.21276",
+      "concepts": [
+        "Computer science"
+      ],
+      "source_gap": "surveillance_reactance"
+    },
+    {
+      "rank": 2,
+      "title": "Using social and behavioural science to support COVID-19 pandemic response",
+      "year": 2020,
+      "citations": 5996,
+      "journal": "Nature Human Behaviour",
+      "doi": "10.1038/s41562-020-0884-z",
+      "concepts": [
+        "Pandemic",
+        "Coronavirus disease 2019 (COVID-19)",
+        "Coping (psychology)",
+        "Behavioural sciences",
+        "Public health"
+      ],
+      "source_gap": "surveillance_reactance"
+    },
+    {
+      "rank": 3,
+      "title": "The nature of procrastination: A meta-analytic and theoretical review of quintessential self-regulatory failure.",
+      "year": 2007,
+      "citations": 5535,
+      "journal": "Psychological Bulletin",
+      "doi": "10.1037/0033-2909.133.1.65",
+      "concepts": [
+        "Procrastination",
+        "Psychology",
+        "Conscientiousness",
+        "Expectancy theory",
+        "Hyperbolic discounting"
+      ],
+      "source_gap": "surveillance_reactance"
+    },
+    {
+      "rank": 4,
+      "title": "A Thematic Exploration of Digital, Social Media, and Mobile Marketing: Research Evolution from 2000 to 2015 and an Agenda for Future Inquiry",
+      "year": 2016,
+      "citations": 1916,
+      "journal": "Journal of Marketing",
+      "doi": "10.1509/jm.15.0415",
+      "concepts": [
+        "Facilitator",
+        "Social media",
+        "Public relations",
+        "Marketing research",
+        "Extant taxon"
+      ],
+      "source_gap": "surveillance_reactance"
+    },
+    {
+      "rank": 5,
+      "title": "Consumers and Artificial Intelligence: An Experiential Perspective",
+      "year": 2020,
+      "citations": 1862,
+      "journal": "Journal of Marketing",
+      "doi": "10.1177/0022242920953847",
+      "concepts": [
+        "Value (mathematics)",
+        "Experiential learning",
+        "Scholarship",
+        "Perspective (graphical)",
+        "Bridge (graph theory)"
+      ],
+      "source_gap": "surveillance_reactance"
+    },
+    {
+      "rank": 6,
+      "title": "Fear control and danger control: A test of the extended parallel process model (EPPM)",
+      "year": 1994,
+      "citations": 1698,
+      "journal": "Communication Monographs",
+      "doi": "10.1080/03637759409376328",
+      "concepts": [
+        "Fear appeal",
+        "Psychology",
+        "Context (archaeology)",
+        "Reactance",
+        "Cognition"
+      ],
+      "source_gap": "surveillance_reactance"
+    },
+    {
+      "rank": 1,
+      "title": "Validation Guidelines for IS Positivist Research",
+      "year": 2004,
+      "citations": 3619,
+      "journal": "Communications of the Association for Information Systems",
+      "doi": "10.17705/1cais.01324",
+      "concepts": [
+        "Heuristics",
+        "Positivism",
+        "Construct (python library)",
+        "Construct validity",
+        "Reliability (semiconductor)"
+      ],
+      "source_gap": "post_purchase_regret"
+    },
+    {
+      "rank": 3,
+      "title": "The Technology Acceptance Model: Past, Present, and Future",
+      "year": 2003,
+      "citations": 3550,
+      "journal": "Communications of the Association for Information Systems",
+      "doi": "10.17705/1cais.01250",
+      "concepts": [
+        "Technology acceptance model",
+        "Field (mathematics)",
+        "Management science",
+        "Computer science",
+        "Engineering ethics"
+      ],
+      "source_gap": "post_purchase_regret"
+    },
+    {
+      "rank": 4,
+      "title": "Revealing the theoretical basis of gamification: A systematic review and analysis of theory in research on gamification, serious games and game-based learning",
+      "year": 2021,
+      "citations": 1583,
+      "journal": "Computers in Human Behavior",
+      "doi": "10.1016/j.chb.2021.106963",
+      "concepts": [
+        "Relevance (law)",
+        "Perspective (graphical)",
+        "Variety (cybernetics)",
+        "Computer science",
+        "Psychology"
+      ],
+      "source_gap": "post_purchase_regret"
+    },
+    {
+      "rank": 5,
+      "title": "Customer experiences in the age of artificial intelligence",
+      "year": 2020,
+      "citations": 1345,
+      "journal": "Computers in Human Behavior",
+      "doi": "10.1016/j.chb.2020.106548",
+      "concepts": [
+        "Personalization",
+        "Structural equation modeling",
+        "Customer experience",
+        "Knowledge management",
+        "Psychology"
+      ],
+      "source_gap": "post_purchase_regret"
+    },
+    {
+      "rank": 6,
+      "title": "The privacy paradox – Investigating discrepancies between expressed privacy concerns and actual online behavior – A systematic literature review",
+      "year": 2017,
+      "citations": 1227,
+      "journal": "Telematics and Informatics",
+      "doi": "10.1016/j.tele.2017.04.013",
+      "concepts": [
+        "Context (archaeology)",
+        "Irrational number",
+        "Computer science",
+        "Internet privacy",
+        "Focus (optics)"
+      ],
+      "source_gap": "post_purchase_regret"
+    },
+    {
+      "rank": 2,
+      "title": "Our future: a Lancet commission on adolescent health and wellbeing",
+      "year": 2016,
+      "citations": 5057,
+      "journal": "The Lancet",
+      "doi": "10.1016/s0140-6736(16)00579-1",
+      "concepts": [
+        "Commission",
+        "Political science",
+        "Medicine",
+        "Psychology",
+        "Family medicine"
+      ],
+      "source_gap": "inverted_u_nonlinear"
+    },
+    {
+      "rank": 3,
+      "title": "Service Quality Delivery through Web Sites: A Critical Review of Extant Knowledge",
+      "year": 2002,
+      "citations": 3904,
+      "journal": "Journal of the Academy of Marketing Science",
+      "doi": "10.1177/009207002236911",
+      "concepts": [
+        "Extant taxon",
+        "Business",
+        "Service delivery framework",
+        "Service (business)",
+        "Service quality"
+      ],
+      "source_gap": "inverted_u_nonlinear"
+    },
+    {
+      "rank": 4,
+      "title": "Holistic Evaluation of Language Models",
+      "year": 2022,
+      "citations": 3213,
+      "journal": "arXiv",
+      "doi": "10.48550/arxiv.2211.09110",
+      "concepts": [
+        "Computer science",
+        "Transparency (behavior)",
+        "Language model",
+        "Robustness (evolution)",
+        "Mainstream"
+      ],
+      "source_gap": "inverted_u_nonlinear"
+    },
+    {
+      "rank": 5,
+      "title": "Brave new world: service robots in the frontline",
+      "year": 2018,
+      "citations": 2899,
+      "journal": "Journal of service management",
+      "doi": "10.1108/josm-04-2018-0119",
+      "concepts": [
+        "Service (business)",
+        "Robot",
+        "Robotics",
+        "Computer science",
+        "Service design"
+      ],
+      "source_gap": "inverted_u_nonlinear"
+    },
+    {
+      "rank": 6,
+      "title": "On the Use of the Mass Media for Important Things",
+      "year": 1973,
+      "citations": 2341,
+      "journal": "American Sociological Review",
+      "doi": "10.2307/2094393",
+      "concepts": [
+        "Mass media",
+        "Sociology",
+        "Business",
+        "Advertising"
+      ],
+      "source_gap": "inverted_u_nonlinear"
+    },
+    {
+      "rank": 1,
+      "title": "Servant Leadership: A systematic review and call for future research",
+      "year": 2018,
+      "citations": 3065,
+      "journal": "The Leadership Quarterly",
+      "doi": "10.1016/j.leaqua.2018.07.004",
+      "concepts": [
+        "Servant leadership",
+        "CLARITY",
+        "Nomological network",
+        "Servant",
+        "Leadership studies"
+      ],
+      "source_gap": "multiplicative_interaction"
+    },
+    {
+      "rank": 2,
+      "title": "Toward a Theory of Intrinsically Motivating Instruction*",
+      "year": 1981,
+      "citations": 2995,
+      "journal": "Cognitive Science",
+      "doi": "10.1207/s15516709cog0504_2",
+      "concepts": [
+        "Curiosity",
+        "Fantasy",
+        "Psychology",
+        "Cognition",
+        "Cognitive psychology"
+      ],
+      "source_gap": "multiplicative_interaction"
+    },
+    {
+      "rank": 3,
+      "title": "Integrating psychological and neurobiological considerations regarding the development and maintenance of specific Internet-use disorders: An Interaction of Person-Affect-Cognition-Execution (I-PACE) model",
+      "year": 2016,
+      "citations": 2663,
+      "journal": "Neuroscience & Biobehavioral Reviews",
+      "doi": "10.1016/j.neubiorev.2016.08.033",
+      "concepts": [
+        "Psychology",
+        "Pace",
+        "The Internet",
+        "Addiction",
+        "Cognition"
+      ],
+      "source_gap": "multiplicative_interaction"
+    },
+    {
+      "rank": 4,
+      "title": "Heart Rate Variability, Prefrontal Neural Function, and Cognitive Performance: The Neurovisceral Integration Perspective on Self-regulation, Adaptation, and Health",
+      "year": 2009,
+      "citations": 2417,
+      "journal": "Annals of Behavioral Medicine",
+      "doi": "10.1007/s12160-009-9101-z",
+      "concepts": [
+        "Perspective (graphical)",
+        "Adaptation (eye)",
+        "Cognition",
+        "Psychology",
+        "Health psychology"
+      ],
+      "source_gap": "multiplicative_interaction"
+    },
+    {
+      "rank": 5,
+      "title": "Consequences of maternal postpartum depression: A systematic review of maternal and infant outcomes",
+      "year": 2019,
+      "citations": 2141,
+      "journal": "Women s Health",
+      "doi": "10.1177/1745506519844044",
+      "concepts": [
+        "Postpartum depression",
+        "Breastfeeding",
+        "Medicine",
+        "PsycINFO",
+        "Postpartum period"
+      ],
+      "source_gap": "multiplicative_interaction"
+    },
+    {
+      "rank": 6,
+      "title": "When Good Brands Do Bad",
+      "year": 2004,
+      "citations": 2081,
+      "journal": "Journal of Consumer Research",
+      "doi": "10.1086/383419",
+      "concepts": [
+        "Friendship",
+        "Psychology",
+        "Social psychology",
+        "Personality",
+        "Advertising"
+      ],
+      "source_gap": "multiplicative_interaction"
+    }
+  ]
+}

@@ -31,6 +31,27 @@
       "pct": 2.19
     }
   },
+  "snowball_expansion_summary": {
+    "queries_executed": 5,
+    "net_new_papers_harvested": 28,
+    "top_emerging_keywords": [
+      "Psychology",
+      "Computer science",
+      "Cognition",
+      "Context (archaeology)",
+      "Business",
+      "Perspective (graphical)",
+      "Feeling",
+      "Self-control",
+      "Control (management)",
+      "Social psychology",
+      "PsycINFO",
+      "Extant taxon",
+      "Medicine",
+      "Service (business)",
+      "Advertising"
+    ]
+  },
   "recommended_theoretical_elevations": [
     "Incorporate Curvilinear (Inverted-U) threshold modeling for personalization-privacy reactance.",
     "Add Negative Recursive Feedback Loop (Post-Purchase Regret -> Erodes Future E-Satisfaction).",
@@ -41,7 +62,7 @@
   "recommended_methods": [
     "PLS-SEM / CB-SEM with Interaction & Quadratic (Inverted-U) Terms",
     "fsQCA (Configurational Asymmetry) & Necessary Condition Analysis (NCA)",
-    "Dual-Task Experimental Ego Depletion Manipulation"
+    "Cross-Lagged Panel Modeling (RI-CLPM) for Recursive Regret Loops"
   ],
   "target_journals": [
     "Journal of Retailing and Consumer Services (Elsevier, Q1, IF: 11.0)",
@@ -55,7 +76,14 @@
       "year": 2010,
       "citations": 4382,
       "journal": "Philosophical Transactions of the Royal Society B Biological Sciences",
-      "doi": "https://doi.org/10.1098/rstb.2010.0126"
+      "doi": "10.1098/rstb.2010.0126",
+      "concepts": [
+        "Food waste",
+        "Developing country",
+        "Supply chain",
+        "Food supply",
+        "Business"
+      ]
     },
     {
       "rank": 2,
@@ -63,7 +91,14 @@
       "year": 2019,
       "citations": 3588,
       "journal": "Journal of Marketing",
-      "doi": "https://doi.org/10.1177/0022242919825649"
+      "doi": "10.1177/0022242919825649",
+      "concepts": [
+        "Sustainable consumption",
+        "Context (archaeology)",
+        "Feeling",
+        "Process (computing)",
+        "Consumer behaviour"
+      ]
     },
     {
       "rank": 3,
@@ -71,7 +106,14 @@
       "year": 2020,
       "citations": 2516,
       "journal": "Journal of Business Research",
-      "doi": "https://doi.org/10.1016/j.jbusres.2020.05.059"
+      "doi": "10.1016/j.jbusres.2020.05.059",
+      "concepts": [
+        "Demographics",
+        "Coronavirus disease 2019 (COVID-19)",
+        "Marketing",
+        "Business",
+        "Work (physics)"
+      ]
     },
     {
       "rank": 4,
@@ -79,7 +121,14 @@
       "year": 2018,
       "citations": 2386,
       "journal": "Journal of Business Research",
-      "doi": "https://doi.org/10.1016/j.jbusres.2018.07.005"
+      "doi": "10.1016/j.jbusres.2018.07.005",
+      "concepts": [
+        "Influencer marketing",
+        "Opinion leadership",
+        "Context (archaeology)",
+        "Psychology",
+        "Originality"
+      ]
     },
     {
       "rank": 5,
@@ -87,7 +136,14 @@
       "year": 2011,
       "citations": 2122,
       "journal": "Personality and Social Psychology Review",
-      "doi": "https://doi.org/10.1177/1088868311418749"
+      "doi": "10.1177/1088868311418749",
+      "concepts": [
+        "Self-control",
+        "Psychology",
+        "Control (management)",
+        "Warrant",
+        "Social psychology"
+      ]
     }
   ]
 }
