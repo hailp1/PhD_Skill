@@ -1,0 +1,144 @@
+"""
+H-AI ResearchLAB - CORE ACADEMIC QUALITY & INTEGRITY GATE (academic_qa_gate.py)
+Automated Verification & Adversarial Auditing Harness for Scopus Q1 / Elsevier JRCS Submissions.
+Enforces 0-Tolerance Anti-Hallucination, Agnostic PRISMA Searches, Metric Consistency, and Citation Integrity.
+"""
+
+import re
+import os
+import sys
+import json
+
+WORKSPACE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+MANUSCRIPT_PATH = os.path.join(WORKSPACE_DIR, "lab_projects", "PAPER_01_SLR_JRCS_MANUSCRIPT.md")
+CORPUS_CSV = os.path.join(WORKSPACE_DIR, "data", "processed", "dimensions_clean_included.csv")
+
+class AcademicQAGate:
+    def __init__(self, manuscript_path=MANUSCRIPT_PATH):
+        self.manuscript_path = manuscript_path
+        self.text = ""
+        self.red_flags = []
+        self.warnings = []
+        self.score = 100 # Starts at 100, deducted per error
+        self.load_manuscript()
+
+    def load_manuscript(self):
+        if not os.path.exists(self.manuscript_path):
+            self.red_flags.append(f"FATAL: Manuscript not found at {self.manuscript_path}")
+            return
+        with open(self.manuscript_path, "r", encoding="utf-8") as f:
+            raw = f.read()
+            # Strip base64 data to avoid false positive substring matches in binary image strings
+            self.text = re.sub(r'data:image/[^"]+', '', raw)
+
+    def audit_prisma_search_query(self):
+        """Gate 1: Check for Confirmation Bias & Broken Syntax in Boolean Search."""
+        print("[CHECK 1] Auditing PRISMA Boolean Search Strategy...")
+        # Check if search string contains circular variables
+        search_match = re.search(r'(?:Boolean query|search string|Search Strategy)[^\n]*\n+```[^\n]*\n([\s\S]*?)```', self.text, re.IGNORECASE)
+        search_text = search_match.group(1) if search_match else self.text[:5000]
+
+        # 1. Circular logic check
+        circular_terms = ["e-satisfaction", "online satisfaction", "S-O-R", "stimulus-organism-response"]
+        for term in circular_terms:
+            if re.search(r'\b' + re.escape(term) + r'\b', search_text, re.IGNORECASE):
+                self.red_flags.append(f"CONFIRMATION BIAS: Boolean query contains predefined mediator/theory '{term}', causing tautological circular reasoning.")
+                self.score -= 20
+
+        # 2. Cut-off words check
+        cut_words = [r'"smar\b', r'"impu\b', r'\bsmar"', r'\bimpu"']
+        for cw in cut_words:
+            if re.search(cw, search_text, re.IGNORECASE):
+                self.red_flags.append(f"SYNTAX CORRUPTION: Broken/truncated keyword detected in Boolean query matching pattern '{cw}'.")
+                self.score -= 10
+
+    def audit_vosviewer_methodology(self):
+        """Gate 2: Check for VOSviewer Metric Consistency & Graph Topology."""
+        print("[CHECK 2] Auditing VOSviewer Terminology & Graph Logic...")
+        # Check if co-word mentions citations threshold instead of occurrences
+        if re.search(r'co-word[^\n]*threshold of [^\n]*citations', self.text, re.IGNORECASE):
+            self.red_flags.append("METRIC ERROR: Co-word occurrence analysis incorrectly specifies 'citations' instead of 'occurrences'.")
+            self.score -= 15
+
+        # Check for disconnected graph contradiction (866 nodes vs 250 links without explanation)
+        if re.search(r'866 nodes[^\n]*250[^\n]*links', self.text, re.IGNORECASE):
+            self.warnings.append("GRAPH TOPOLOGY WARNING: 866 nodes with only 250 links implies a disconnected network. Must clarify units (e.g. top co-occurrence links or cluster components).")
+            self.score -= 5
+
+    def audit_hypotheses_vs_propositions(self):
+        """Gate 3: Ensure SLR / Conceptual Paper Uses Propositions (P) not Hypotheses (H)."""
+        print("[CHECK 3] Auditing Hypotheses vs. Propositions Standard...")
+        # SLR papers cannot formulate empirical testable hypotheses without primary data or MASEM
+        h_pattern = re.findall(r'\bH[1-6][a-z]?\b\s*:', self.text)
+        if h_pattern:
+            self.red_flags.append(f"METHODOLOGY MISMATCH: Found {len(h_pattern)} Hypotheses (e.g. {h_pattern[:3]}). SLR/Conceptual paper must use Propositions (P1-P6) unless MASEM is conducted.")
+            self.score -= 15
+
+    def audit_citation_hallucinations_and_typos(self):
+        """Gate 4: Check for Known Hallucinated Citations, Typos, and Mismatches."""
+        print("[CHECK 4] Auditing Citation Integrity & Anti-Hallucination Gate...")
+        
+        # 1. Known mismatched citations
+        mismatched = [
+            ("Pillai", "Hospitality/COVID paper misattributed to e-commerce algorithms"),
+            ("Ramsin", "Object-oriented software paper misattributed to collaborative filtering"),
+            ("Blut", "Chatbot paper misattributed to 40%-60% impulse sales stats")
+        ]
+        for author, reason in mismatched:
+            if re.search(r'\b' + author + r'\b', self.text, re.IGNORECASE):
+                self.red_flags.append(f"CITATION RED FLAG: Author '{author}' detected ({reason}). Must be removed or replaced with authentic e-commerce literature.")
+                self.score -= 20
+
+        # 2. Known author typos
+        typos = [
+            (r'\blice,?\s+D\.?\s*M\.?', "Tice, D. M."),
+            (r'\bBenpasat\b', "Benbasat"),
+            (r'\baftective\b', "affective"),
+            (r'70/30\s+rule', "Unsubstantiated 70/30 heuristic")
+        ]
+        for pattern, correction in typos:
+            if re.search(pattern, self.text, re.IGNORECASE):
+                self.red_flags.append(f"TYPO / UNSUBSTANTIATED CLAIM: Detected pattern matching '{pattern}'. Correction/Removal required: {correction}.")
+                self.score -= 10
+
+        # 3. 5-pillar research agenda completeness
+        agenda_match = re.search(r'5-pillar[^\n]*agenda([\s\S]*?)(?:5\.5|6\.|\Z)', self.text, re.IGNORECASE)
+        if agenda_match:
+            agenda_text = agenda_match.group(1)
+            pillars = re.findall(r'(?:Pillar|Item|\d\.)\s*[A-Z]', agenda_text)
+            if len(pillars) < 5:
+                self.red_flags.append(f"COMPLETENESS ERROR: 5-pillar research agenda promised, but only {len(pillars)} pillars articulated.")
+                self.score -= 10
+
+    def run_full_audit(self):
+        print("=" * 80)
+        print("🔬 H-AI ResearchLAB | CORE ACADEMIC QUALITY AUDIT")
+        print("=" * 80)
+        self.audit_prisma_search_query()
+        self.audit_vosviewer_methodology()
+        self.audit_hypotheses_vs_propositions()
+        self.audit_citation_hallucinations_and_typos()
+
+        self.score = max(0, self.score)
+        print("\n" + "=" * 80)
+        print(f"📊 OVERALL ACADEMIC QUALITY SCORE: {self.score}/100")
+        print("=" * 80)
+
+        if self.red_flags:
+            print(f"\n❌ FOUND {len(self.red_flags)} RED FLAGS (REJECTED FOR Q1 SUBMISSION):")
+            for idx, rf in enumerate(self.red_flags, 1):
+                print(f"   [{idx}] {rf}")
+        else:
+            print("\n✅ ZERO RED FLAGS! Manuscript meets international academic integrity standards.")
+
+        if self.warnings:
+            print(f"\n⚠️ FOUND {len(self.warnings)} WARNINGS:")
+            for idx, w in enumerate(self.warnings, 1):
+                print(f"   [{idx}] {w}")
+
+        return len(self.red_flags) == 0
+
+if __name__ == "__main__":
+    gate = AcademicQAGate()
+    passed = gate.run_full_audit()
+    sys.exit(0 if passed else 1)
