@@ -1,7 +1,7 @@
 # BẢN PHÂN TÍCH TOÀN VĂN: SHANAHAN_2019
 - **Nguồn tệp gốc:** `shanahan_2019.pdf`
-- **Thời gian nạp:** 27/11/2026 17:53:07
-- **Tổng số trang:** 9 trang | **Số bảng trích xuất:** 0
+- **Thời gian nạp:** 27/11/2026 19:24:46
+- **Tổng số trang:** 9 trang
 
 ---
 

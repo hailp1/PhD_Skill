@@ -1,7 +1,7 @@
 # BẢN PHÂN TÍCH TOÀN VĂN: BEATTY_1998
 - **Nguồn tệp gốc:** `beatty_1998.pdf`
-- **Thời gian nạp:** 27/11/2026 17:53:24
-- **Tổng số trang:** 23 trang | **Số bảng trích xuất:** 0
+- **Thời gian nạp:** 27/11/2026 19:24:46
+- **Tổng số trang:** 23 trang
 
 ---
 
