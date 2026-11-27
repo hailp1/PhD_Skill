@@ -29,4 +29,15 @@ for k, (fpath, title, tag, status) in docs_to_pack.items():
 with open('lab_projects/DOCUMENTS_BUNDLE.json', 'w', encoding='utf-8') as f:
     json.dump(bundle, f, ensure_ascii=False, indent=2)
 
-print("Generated lab_projects/DOCUMENTS_BUNDLE.json successfully!")
+# Also generate DOCS_INLINE.js for instant 0ms offline reader
+js_content = "window.INLINE_DOCS_BUNDLE = " + json.dumps(bundle, ensure_ascii=False, indent=2) + ";\n"
+with open('lab_projects/DOCS_INLINE.js', 'w', encoding='utf-8') as f:
+    f.write(js_content)
+
+# If web directory exists, copy there too
+import shutil
+if os.path.exists('web/lab_projects'):
+    shutil.copy('lab_projects/DOCUMENTS_BUNDLE.json', 'web/lab_projects/DOCUMENTS_BUNDLE.json')
+    shutil.copy('lab_projects/DOCS_INLINE.js', 'web/lab_projects/DOCS_INLINE.js')
+
+print("Generated lab_projects/DOCUMENTS_BUNDLE.json and lab_projects/DOCS_INLINE.js successfully!")
