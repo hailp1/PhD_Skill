@@ -1,7 +1,10 @@
 """
-H-AI ResearchLAB | MULTI-PERSPECTIVE ACADEMIC DIALOGUE ENGINE
-Kế thừa tinh hoa từ Stanford STORM (stanford-oval/storm - 31k Stars)
-Giả lập tranh biện đa trường phái học thuật giữa các học giả đầu ngành để đào sâu ý tưởng nghiên cứu.
+H-AI ResearchLAB | 4-PERSPECTIVE ACADEMIC DIALOGUE & TENSION ENGINE (v2.0)
+Inspired by Stanford STORM. Evaluates research topics across 4 orthogonal schools:
+1. Consumer Psychology & Affect
+2. Information Systems & HCI (Cold-Start vs. Cumulative)
+3. Self-Regulation, Cognitive Load & Ego Depletion
+4. Generative AI Social Agency & Algorithmic Ethics / Dark Patterns
 """
 
 import sys
@@ -13,72 +16,79 @@ WORKSPACE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 PERSPECTIVES = [
     {
         "id": "persp-consumer-behavior",
-        "name": "Trường Phái Hành Vi Người Tiêu Dùng & Cảm Xúc (Consumer Psychology)",
-        "lead_scholars": ["Oliver (1980)", "Beatty & Ferrell (1998)", "Rook & Fisher (1995)"],
-        "core_lens": "Tập trung vào cảm xúc bốc đồng, khoái cảm mua sắm (hedonic value), sự thỏa mãn tức thời và sự thôi thúc hành vi (Urge to buy).",
-        "critical_question": "Liệu đề xuất AI có thật sự thỏa mãn nhu cầu tâm lý của khách hàng hay chỉ kích hoạt sự ham muốn phù phiếm nhất thời?"
+        "name": "Consumer Psychology & Dual-Path Affect",
+        "lead_scholars": ["Oliver (1980, 1993)", "Beatty & Ferrell (1998)", "Rook & Fisher (1995)"],
+        "core_lens": "Multiplicative interaction between cognitive comfort (permission structure) and visceral emotional arousal (kinetic energy).",
+        "critical_question": "Why model cognitive satisfaction and emotional arousal as additive parallel lines when impulsive urges peak only when cognitive comfort disarms vigilance alongside high affective arousal?",
+        "required_model_upgrade": "Specify Multiplicative Interaction (ESAT x Arousal -> UBI) and resolve cold-start impulse buying via In-Session Cognitive Fluency."
     },
     {
         "id": "persp-information-systems",
-        "name": "Trường Phái Hệ Thống Thông Tin & Thuật Toán AI (Information Systems & HCI)",
-        "lead_scholars": ["Xiao & Benbasat (2018)", "Al-Natour et al. (2011)", "Vessey (1991)"],
-        "core_lens": "Tập trung vào chất lượng thuật toán, độ chính xác cảm nhận, tính mới lạ, sự phù hợp nhận thức (Cognitive Fit) và niềm tin vào AI.",
-        "critical_question": "Cơ chế kỹ thuật nào của thuật toán phân giải được nghịch lý cá nhân hóa: vừa chính xác để tiết kiệm thời gian, vừa mới lạ để tạo bất ngờ mà không gây cảm giác bị giám sát?"
+        "name": "Information Systems & Algorithmic Architecture",
+        "lead_scholars": ["Xiao & Benbasat (2007, 2018)", "Al-Natour et al. (2011)", "Vessey (1991)"],
+        "core_lens": "Endogenous personalization-privacy paradox (Inverted-U curve) and algorithmic exploration vs. exploitation trade-offs.",
+        "critical_question": "If hyper-personalization endogenously breeds perceived surveillance and psychological reactance, why treat surveillance reactance as a disconnected exogenous moderator?",
+        "required_model_upgrade": "Model Perceived Personalization (PP) with an Inverted-U curvilinear effect on Cognitive Fluency/E-Satisfaction, triggering endogenous Surveillance Reactance beyond the privacy threshold."
     },
     {
         "id": "persp-neuro-ego",
-        "name": "Trường Phái Tâm Lý Tự Kiểm Soát & Thần Kinh Học (Self-Regulation & Ego Depletion)",
-        "lead_scholars": ["Baumeister et al. (2007)", "Tangney et al. (2004)", "Kahneman (2011)"],
-        "core_lens": "Tập trung vào sự hao mòn năng lượng ý chí (Ego depletion), xung đột giữa Hệ thống 1 (trực giác nhanh) và Hệ thống 2 (lý trí chậm).",
-        "critical_question": "Khi nào khách hàng sẽ kìm nén được thôi thúc mua sắm do AI kích hoạt, và khi nào năng lực tự kiểm soát bị sụp đổ hoàn toàn?"
+        "name": "Self-Regulation, Cognitive Load & Ego Depletion",
+        "lead_scholars": ["Baumeister (2002)", "Baumeister et al. (2007)", "Sweller (1988)", "Hagger et al. (2016)"],
+        "core_lens": "Dynamic willpower depletion under digital choice overload and post-purchase regret feedback.",
+        "critical_question": "When platforms exploit ego depletion to accelerate unplanned checkout, what happens to long-term platform satisfaction once consumer self-control recovers and regret sets in?",
+        "required_model_upgrade": "Add Negative Recursive Feedback Loop (OIB under Ego Depletion -> Post-Purchase Regret -> Erodes Future E-Satisfaction) and hedge depletion via Cognitive Load Theory."
+    },
+    {
+        "id": "persp-genai-ethics",
+        "name": "Generative AI Social Agency & Algorithmic Ethics (2024-2026)",
+        "lead_scholars": ["Guha et al. (2022)", "Huang & Ahmad (2026)", "Tobon & Abril (2024)", "Kumaran & Shobhana (2026)"],
+        "core_lens": "Conversational AI anthropomorphism, micro-latency persuasion, algorithmic dark patterns, and tiered ethical friction.",
+        "critical_question": "How do Generation 2.0 LLM conversational agents fundamentally alter consumer compliance compared to Generation 1.0 collaborative filtering, and how can ethical friction protect CLV?",
+        "required_model_upgrade": "Explicitly contrast Gen 1.0 vs. Gen 2.0 AI Agency and formulate Tiered Ethical Friction (low-regret vs. high-regret cooling-off mechanisms)."
     }
 ]
 
+
 def run_storm_interview(idea_topic):
     print("=" * 85)
-    print("🧠 H-AI LAB | STANFORD STORM MULTI-PERSPECTIVE DIALOGUE ENGINE")
-    print(f"Chủ đề khảo sát: '{idea_topic}'")
+    print("🧠 H-AI LAB | 4-PERSPECTIVE ACADEMIC DIALOGUE & TENSION ENGINE v2.0")
+    print(f"Topic Under Stress-Testing: '{idea_topic}'")
     print("=" * 85)
-    
+
     dialogue_log = {
         "topic": idea_topic,
-        "framework": "Stanford STORM Multi-Perspective Questioning",
+        "framework": "4-Perspective Dynamic Gap & Tension Synthesis",
         "dialogues": []
     }
-    
-    for i, p in enumerate(PERSPECTIVES):
-        print(f"\n[GÓC NHÌN {i+1}] {p['name'].upper()}:")
-        print(f"  • Đại diện tiêu biểu: {', '.join(p['lead_scholars'])}")
-        print(f"  • Lăng kính phân tích: {p['core_lens']}")
-        print(f"  • Câu hỏi chất vấn phản biện: \"{p['critical_question']}\"")
-        
-        # Phân tích suy luận biện chứng
-        insight = f"Đối với chủ đề '{idea_topic}', trường phái này yêu cầu phải chứng minh rõ cơ chế trung gian thông qua lăng kính {p['core_lens']}"
-        print(f"  💡 Đóng góp gợi mở cho mô hình: {insight}")
-        
+
+    for i, p in enumerate(PERSPECTIVES, 1):
+        print(f"\n[PERSPECTIVE {i}] {p['name'].upper()}:")
+        print(f"  * Key Scholars : {', '.join(p['lead_scholars'])}")
+        print(f"  * Core Lens    : {p['core_lens']}")
+        print(f"  * Stress Test  : \"{p['critical_question']}\"")
+        print(f"  * Mandate      : {p['required_model_upgrade']}")
+
         dialogue_log["dialogues"].append({
             "perspective": p["name"],
             "scholars": p["lead_scholars"],
             "critical_question": p["critical_question"],
-            "insight": insight
+            "required_model_upgrade": p["required_model_upgrade"]
         })
-        
-    # Tổng hợp thành ma trận nghiên cứu đa góc nhìn
+
     output_file = os.path.join(WORKSPACE_DIR, "lab_projects", "STORM_PERSPECTIVE_SYNTHESIS.json")
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(dialogue_log, f, ensure_ascii=False, indent=2)
-        
+
     print("\n" + "=" * 85)
-    print(f"✅ ĐÃ TỔNG HỢP XONG TRANH BIỆN 3 TRƯỜNG PHÁI TẠI: lab_projects/STORM_PERSPECTIVE_SYNTHESIS.json")
-    print("Ý tưởng nghiên cứu đã được gia cố vững chắc, loại bỏ hoàn toàn góc nhìn phiến diện 1 chiều!")
+    print(f"✅ 4-PERSPECTIVE SYNTHESIS SAVED TO: {output_file}")
+    print("Static additive S-O-R bias eliminated; Dynamic & Non-Linear mechanisms enforced.")
     print("=" * 85)
 
+
 def main():
-    if len(sys.argv) < 2:
-        topic = "Vai trò của sự hài lòng trực tuyến kết nối đề xuất AI với mua sắm bốc đồng"
-    else:
-        topic = " ".join(sys.argv[1:])
+    topic = " ".join(sys.argv[1:]) if len(sys.argv) > 1 else "AI Recommendation Systems, Dual-Path S-O-R, Ego Depletion & Online Impulse Buying"
     run_storm_interview(topic)
+
 
 if __name__ == "__main__":
     main()

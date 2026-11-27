@@ -1,57 +1,93 @@
 {
-  "idea_input": "AI recommendation e-satisfaction impulse buying",
-  "proposed_title_en": "Investigating Ai Recommendation E-Satisfaction Impulse Buying: A Cognitive-Affective Perspective",
-  "theoretical_framework": "Stimulus-Organism-Response (S-O-R) & Cognitive Fit Theory",
-  "recommended_method": "Quantitative Survey (N >= 400) + PLS-SEM Bootstrapping",
-  "target_journals": [
-    "Journal of Retailing and Consumer Services (Q1)",
-    "Computers in Human Behavior (Q1)"
+  "idea_input": "AI recommendation systems, dual-path organismic states, ego depletion, and online impulse buying",
+  "anti_sor_fatigue_protocol": "ACTIVE (Dynamic, Non-Linear, Multiplicative & Recursive Modeling)",
+  "quantitative_corpus_gaps": {
+    "sor_framework": {
+      "count": 138,
+      "pct": 9.58
+    },
+    "genai_conversational": {
+      "count": 97,
+      "pct": 6.73
+    },
+    "ego_depletion": {
+      "count": 6,
+      "pct": 0.42
+    },
+    "surveillance_reactance": {
+      "count": 15,
+      "pct": 1.04
+    },
+    "post_purchase_regret": {
+      "count": 36,
+      "pct": 2.5
+    },
+    "inverted_u_nonlinear": {
+      "count": 19,
+      "pct": 1.32
+    },
+    "multiplicative_interaction": {
+      "count": 25,
+      "pct": 1.73
+    }
+  },
+  "recommended_theoretical_elevations": [
+    "Incorporate Curvilinear (Inverted-U) threshold modeling for personalization-privacy reactance.",
+    "Add Negative Recursive Feedback Loop (Post-Purchase Regret -> Erodes Future E-Satisfaction).",
+    "Test Ego Depletion & Cognitive Load as boundary conditions (hedged against replication debates).",
+    "Differentiate Gen 2.0 Conversational Social Agency from Gen 1.0 Collaborative Filtering.",
+    "Model Multiplicative Interaction (Permission Structure x Kinetic Energy) instead of additive-only S-O-R."
   ],
-  "retrieved_evidence": [
+  "recommended_methods": [
+    "PLS-SEM / CB-SEM with Interaction & Quadratic (Inverted-U) Terms",
+    "fsQCA (Configurational Asymmetry) & Necessary Condition Analysis (NCA)",
+    "Dual-Task Experimental Ego Depletion Manipulation"
+  ],
+  "target_journals": [
+    "Journal of Retailing and Consumer Services (Elsevier, Q1, IF: 11.0)",
+    "Journal of Business Research (Elsevier, Q1, IF: 10.5)",
+    "Computers in Human Behavior (Elsevier, Q1, IF: 9.0)"
+  ],
+  "openalex_benchmarks": [
     {
       "rank": 1,
-      "title": "Setting the future of digital and social media marketing research: Perspectives and research propositions",
-      "year": 2020,
-      "citations": 5901,
-      "journal": "International Journal of Information Management",
-      "doi": "https://doi.org/10.1016/j.ijinfomgt.2020.102168",
-      "open_access_pdf": "https://www.sciencedirect.com/science/article/pii/S0268401220308082/pdf"
+      "title": "Personal Values and Sustainable Consumerism: Performance Trends, Intellectual Structure, and Future Research Fronts",
+      "year": 2024,
+      "citations": 52,
+      "journal": "Journal of Consumer Behaviour",
+      "doi": "https://doi.org/10.1002/cb.2436"
     },
     {
       "rank": 2,
-      "title": "Understanding anthropomorphism in service provision: a meta-analysis of physical robots, chatbots, and other AI",
-      "year": 2021,
-      "citations": 1551,
-      "journal": "Journal of the Academy of Marketing Science",
-      "doi": "https://doi.org/10.1007/s11747-020-00762-y",
-      "open_access_pdf": "https://link.springer.com/content/pdf/10.1007/s11747-020-00762-y.pdf"
+      "title": "Business cycles, interest rates and market volatility : estimation and forecasting using DSGE macroeconomic models under partial information",
+      "year": 2018,
+      "citations": 3,
+      "journal": "London Met Repository (London Metropolitan University)",
+      "doi": null
     },
     {
       "rank": 3,
-      "title": "Personal determinants of organic food consumption: a review",
-      "year": 2009,
-      "citations": 1466,
-      "journal": "British Food Journal",
-      "doi": "https://doi.org/10.1108/00070700910992961",
-      "open_access_pdf": "https://biblio.ugent.be/publication/682843/file/6819387.pdf"
+      "title": "Perceived Interactivity and Purchase Intentions on Short-Video Platforms: Parallel Mediation by Trust and Self-Control among Chinese Undergraduates",
+      "year": 2026,
+      "citations": 0,
+      "journal": "International Journal of Computer Information Systems and Industrial Management Applications",
+      "doi": "https://doi.org/10.70917/ijcisim-2026-4143"
     },
     {
       "rank": 4,
-      "title": "What is XR? Towards a Framework for Augmented and Virtual Reality",
-      "year": 2022,
-      "citations": 1291,
-      "journal": "Computers in Human Behavior",
-      "doi": "https://doi.org/10.1016/j.chb.2022.107289",
-      "open_access_pdf": "https://www.sciencedirect.com/science/article/pii/S074756322200111X/pdf"
+      "title": "English for natural sciences : підручник для студентів вищих навчальних закладів природничих спеціальностей",
+      "year": 2021,
+      "citations": 0,
+      "journal": "Electronic Kyiv-Mohyla Academy Institutional Repository (National University of Kyiv-Mohyla Academy)",
+      "doi": null
     },
     {
       "rank": 5,
-      "title": "Metaverse marketing: How the metaverse will shape the future of consumer research and practice",
-      "year": 2022,
-      "citations": 1203,
-      "journal": "Psychology and Marketing",
-      "doi": "https://doi.org/10.1002/mar.21767",
-      "open_access_pdf": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mar.21767"
+      "title": "MMB & DFT 2014 : Proceedings of the International Workshops ; Modeling, Analysis and Management of Social Networks and their Applications (SOCNET 2014) & Demand Modeling and Quantitative Analysis of Future Generation Energy Networks and Energy-Efficient Systems (FGENET 2014)",
+      "year": 2014,
+      "citations": 0,
+      "journal": "Schriften aus der Fakultät Wirtschaftsinformatik und Angewandte Informatik der Otto-Friedrich-Universität Bamberg.",
+      "doi": "https://doi.org/10.20378/irb-2869"
     }
   ]
 }

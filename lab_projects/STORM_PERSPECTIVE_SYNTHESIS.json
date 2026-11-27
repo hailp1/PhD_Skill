@@ -1,36 +1,48 @@
 {
-  "topic": "Vai trò của sự hài lòng trực tuyến kết nối đề xuất AI với mua sắm bốc đồng",
-  "framework": "Stanford STORM Multi-Perspective Questioning",
+  "topic": "AI Recommendation Systems, Dual-Path S-O-R, Ego Depletion & Online Impulse Buying",
+  "framework": "4-Perspective Dynamic Gap & Tension Synthesis",
   "dialogues": [
     {
-      "perspective": "Trường Phái Hành Vi Người Tiêu Dùng & Cảm Xúc (Consumer Psychology)",
+      "perspective": "Consumer Psychology & Dual-Path Affect",
       "scholars": [
-        "Oliver (1980)",
+        "Oliver (1980, 1993)",
         "Beatty & Ferrell (1998)",
         "Rook & Fisher (1995)"
       ],
-      "critical_question": "Liệu đề xuất AI có thật sự thỏa mãn nhu cầu tâm lý của khách hàng hay chỉ kích hoạt sự ham muốn phù phiếm nhất thời?",
-      "insight": "Đối với chủ đề 'Vai trò của sự hài lòng trực tuyến kết nối đề xuất AI với mua sắm bốc đồng', trường phái này yêu cầu phải chứng minh rõ cơ chế trung gian thông qua lăng kính Tập trung vào cảm xúc bốc đồng, khoái cảm mua sắm (hedonic value), sự thỏa mãn tức thời và sự thôi thúc hành vi (Urge to buy)."
+      "critical_question": "Why model cognitive satisfaction and emotional arousal as additive parallel lines when impulsive urges peak only when cognitive comfort disarms vigilance alongside high affective arousal?",
+      "required_model_upgrade": "Specify Multiplicative Interaction (ESAT x Arousal -> UBI) and resolve cold-start impulse buying via In-Session Cognitive Fluency."
     },
     {
-      "perspective": "Trường Phái Hệ Thống Thông Tin & Thuật Toán AI (Information Systems & HCI)",
+      "perspective": "Information Systems & Algorithmic Architecture",
       "scholars": [
-        "Xiao & Benbasat (2018)",
+        "Xiao & Benbasat (2007, 2018)",
         "Al-Natour et al. (2011)",
         "Vessey (1991)"
       ],
-      "critical_question": "Cơ chế kỹ thuật nào của thuật toán phân giải được nghịch lý cá nhân hóa: vừa chính xác để tiết kiệm thời gian, vừa mới lạ để tạo bất ngờ mà không gây cảm giác bị giám sát?",
-      "insight": "Đối với chủ đề 'Vai trò của sự hài lòng trực tuyến kết nối đề xuất AI với mua sắm bốc đồng', trường phái này yêu cầu phải chứng minh rõ cơ chế trung gian thông qua lăng kính Tập trung vào chất lượng thuật toán, độ chính xác cảm nhận, tính mới lạ, sự phù hợp nhận thức (Cognitive Fit) và niềm tin vào AI."
+      "critical_question": "If hyper-personalization endogenously breeds perceived surveillance and psychological reactance, why treat surveillance reactance as a disconnected exogenous moderator?",
+      "required_model_upgrade": "Model Perceived Personalization (PP) with an Inverted-U curvilinear effect on Cognitive Fluency/E-Satisfaction, triggering endogenous Surveillance Reactance beyond the privacy threshold."
     },
     {
-      "perspective": "Trường Phái Tâm Lý Tự Kiểm Soát & Thần Kinh Học (Self-Regulation & Ego Depletion)",
+      "perspective": "Self-Regulation, Cognitive Load & Ego Depletion",
       "scholars": [
+        "Baumeister (2002)",
         "Baumeister et al. (2007)",
-        "Tangney et al. (2004)",
-        "Kahneman (2011)"
+        "Sweller (1988)",
+        "Hagger et al. (2016)"
       ],
-      "critical_question": "Khi nào khách hàng sẽ kìm nén được thôi thúc mua sắm do AI kích hoạt, và khi nào năng lực tự kiểm soát bị sụp đổ hoàn toàn?",
-      "insight": "Đối với chủ đề 'Vai trò của sự hài lòng trực tuyến kết nối đề xuất AI với mua sắm bốc đồng', trường phái này yêu cầu phải chứng minh rõ cơ chế trung gian thông qua lăng kính Tập trung vào sự hao mòn năng lượng ý chí (Ego depletion), xung đột giữa Hệ thống 1 (trực giác nhanh) và Hệ thống 2 (lý trí chậm)."
+      "critical_question": "When platforms exploit ego depletion to accelerate unplanned checkout, what happens to long-term platform satisfaction once consumer self-control recovers and regret sets in?",
+      "required_model_upgrade": "Add Negative Recursive Feedback Loop (OIB under Ego Depletion -> Post-Purchase Regret -> Erodes Future E-Satisfaction) and hedge depletion via Cognitive Load Theory."
+    },
+    {
+      "perspective": "Generative AI Social Agency & Algorithmic Ethics (2024-2026)",
+      "scholars": [
+        "Guha et al. (2022)",
+        "Huang & Ahmad (2026)",
+        "Tobon & Abril (2024)",
+        "Kumaran & Shobhana (2026)"
+      ],
+      "critical_question": "How do Generation 2.0 LLM conversational agents fundamentally alter consumer compliance compared to Generation 1.0 collaborative filtering, and how can ethical friction protect CLV?",
+      "required_model_upgrade": "Explicitly contrast Gen 1.0 vs. Gen 2.0 AI Agency and formulate Tiered Ethical Friction (low-regret vs. high-regret cooling-off mechanisms)."
     }
   ]
 }

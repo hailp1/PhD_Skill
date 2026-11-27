@@ -16,6 +16,8 @@ REGISTRY_FILE = os.path.join(WORKSPACE_DIR, "lab_agents", "AGENTS_REGISTRY.json"
 PIPELINE_FILE = os.path.join(WORKSPACE_DIR, "lab_management", "RESEARCH_PROJECTS_PIPELINE.json")
 
 # Core Engine Modules
+IDEA_SCANNER_SCRIPT = os.path.join(WORKSPACE_DIR, "lab_management", "idea_scanner.py")
+STORM_SCRIPT = os.path.join(WORKSPACE_DIR, "lab_management", "storm_perspective_dialogue.py")
 QA_GATE_SCRIPT = os.path.join(WORKSPACE_DIR, "lab_management", "academic_qa_gate.py")
 TONE_AUDIT_SCRIPT = os.path.join(WORKSPACE_DIR, ".agents", "skills", "phd-dissertation-writing", "scripts", "academic_tone_audit.py")
 MANUSCRIPT_FILE = os.path.join(WORKSPACE_DIR, "lab_projects", "PAPER_01_SLR_JRCS_MANUSCRIPT.md")
@@ -49,10 +51,26 @@ def execute_autonomous_pipeline(paper_num=1):
     print(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 80)
 
-    # Stage 1: Chief Research Strategist (CRS) - Research Gap & Topic Verification
-    print("\n[STAGE 1 - CRS] Verifying Research Gap, Target Journal & Ethical Charter...")
-    print("Target Journal: Journal of Retailing and Consumer Services (Elsevier, IF: 11.0, Q1)")
-    print("Theoretical Gap: Algorithmic Curation vs Impulsive Urges (Dual-Path S-O-R). Verified.")
+    # Stage 1: Chief Research Strategist (CRS) - Data-Driven Gap Scan & 4-Perspective Stress Test
+    success_gap = run_agent_stage(
+        stage_code="1A - CRS (Quantitative Gap Scan)",
+        stage_name="Data-Driven Corpus Gap Detection & Anti-SOR-Fatigue Check",
+        agent_code="CRS",
+        command=IDEA_SCANNER_SCRIPT
+    )
+    if not success_gap:
+        print("\n⛔ PIPELINE HALTED: Stage 1A Gap Scanner failed.")
+        sys.exit(1)
+
+    success_storm = run_agent_stage(
+        stage_code="1B - CRS (4-Perspective Debate)",
+        stage_name="4-Perspective Academic Tension Stress Testing",
+        agent_code="CRS",
+        command=STORM_SCRIPT
+    )
+    if not success_storm:
+        print("\n⛔ PIPELINE HALTED: Stage 1B Multi-Perspective Dialogue failed.")
+        sys.exit(1)
 
     # Stage 2: Systematic Reviewer & Bibliometrician (SLR & EDS) - PRISMA Protocol & VOSviewer
     print("\n[STAGE 2 - SLR & EDS] Validating PRISMA 2020 Search String & Cluster Mapping...")
