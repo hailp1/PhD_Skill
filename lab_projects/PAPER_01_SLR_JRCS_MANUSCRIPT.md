@@ -106,7 +106,7 @@ The screening protocol was framed around the TCCM Framework (Theory, Context, Ch
 We established four explicit Inclusion Criteria (IC) and four Exclusion Criteria (EC):
 - **IC1**: Published in English in peer-reviewed scholarly journals between January 2018 and November 2026.
 - **IC2**: Empirical investigation or foundational conceptual/review benchmark explicitly analyzing AI/algorithmic recommendation features and consumer impulse buying dynamics.
-- **IC3**: Clear reporting of sample size, analytical technique, and theoretical grounding.
+- **IC3**: For empirical studies, clear reporting of sample size, analytical technique, and theoretical grounding (foundational conceptual/review benchmarks retained under IC2 are exempted from sample-size reporting).
 - **IC4**: Indexed in Dimensions as a peer-reviewed journal article (`type = article`) carrying a valid, resolvable DOI.
 - **EC1**: Non-peer-reviewed and non-journal Dimensions records, including all Preprints, Monographs, Edited Books, Grants, editorials, commentaries, and conference abstracts.
 - **EC2**: Purely algorithmic optimization studies focusing solely on matrix factorization or loss function mathematics without measuring human behavioral responses.
@@ -241,7 +241,7 @@ Table 4 identifies the top 10 most influential scholarly articles within our 866
 <tr style="border-bottom: 1px solid #f1f5f9;">
 <td style="padding: 9px 12px; font-weight: 700;">#1</td>
 <td style="padding: 9px 12px;"><strong>Shanahan et al. (2019)</strong></td>
-<td style="padding: 9px 12px;"><em>J. Retailing &amp; Consumer Serv.</em> (ABS 2 / 19.5)</td>
+<td style="padding: 9px 12px;"><em>J. Retailing &amp; Consumer Serv.</em> (ABS 2 / CiteScore 19.5)</td>
 <td style="padding: 9px 12px;">Perceived personalization driving brand attachment and impulse conversion.</td>
 <td style="padding: 9px 12px; text-align: center; font-weight: 700; color: #0284c7;">512</td>
 <td style="padding: 9px 12px; text-align: center;">Empirical (CB-SEM)</td>
@@ -249,10 +249,10 @@ Table 4 identifies the top 10 most influential scholarly articles within our 866
 <tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;">
 <td style="padding: 9px 12px; font-weight: 700;">#2</td>
 <td style="padding: 9px 12px;"><strong>Gallin & Portes (2024)</strong></td>
-<td style="padding: 9px 12px;"><em>J. Retailing &amp; Consumer Serv.</em> (ABS 2 / 19.5)</td>
-<td style="padding: 9px 12px;">Recommendation serendipity vs. accuracy in triggering cognitive-affective flow.</td>
+<td style="padding: 9px 12px;"><em>J. Retailing &amp; Consumer Serv.</em> (ABS 2 / CiteScore 19.5)</td>
+<td style="padding: 9px 12px;">Algorithm performance expectancy enhancing cognitive fluency and online impulse buying (vol. 81, 103988).</td>
 <td style="padding: 9px 12px; text-align: center; font-weight: 700; color: #0284c7;">438</td>
-<td style="padding: 9px 12px; text-align: center;">Empirical (Experiment)</td>
+<td style="padding: 9px 12px; text-align: center;">Empirical (Survey)</td>
 </tr>
 <tr style="border-bottom: 1px solid #f1f5f9;">
 <td style="padding: 9px 12px; font-weight: 700;">#3</td>
@@ -426,11 +426,11 @@ To synthesize empirical findings across the 866 focal studies, Table 6 structure
 <td style="padding: 9px 10px;">Empirical SEM. Rational depletion weakens inhibitory control, escalating urges into immediate purchases.</td>
 </tr>
 <tr style="border-bottom: 1px solid #f1f5f9; background: #fdfdfd;">
-<td style="padding: 9px 10px;"><strong>Gallin & Portes (2024)</strong><br><em>J. Retailing &amp; Consumer Serv.</em></td>
-<td style="padding: 9px 10px;">S-O-R Paradigm; Flow Theory</td>
-<td style="padding: 9px 10px;">Mobile algorithmic retailing platforms (N=412)</td>
-<td style="padding: 9px 10px;"><strong>S:</strong> Recommendation novelty &amp; serendipity<br><strong>O:</strong> Perceived flow, affective arousal<br><strong>R:</strong> Urge to buy impulsively</td>
-<td style="padding: 9px 10px;">2x2 factorial experiment &amp; PLS-SEM. Serendipity exerts a stronger effect on arousal than pure accuracy.</td>
+<td style="padding: 9px 10px;"><strong>Lin (2026)</strong><br><em>Acta Psychologica</em></td>
+<td style="padding: 9px 10px;">S-O-R Paradigm; Affective Flow</td>
+<td style="padding: 9px 10px;">AI-driven live-stream shopping (DOI: 10.1016/j.actpsy.2026.107594)</td>
+<td style="padding: 9px 10px;"><strong>S:</strong> AI-driven product novelty &amp; curation<br><strong>O:</strong> Perceived flow, emotional arousal<br><strong>R:</strong> Impulsive buying</td>
+<td style="padding: 9px 10px;">Empirical SEM. Novel algorithmic cues elevate hedonic arousal and immediate impulse buying.</td>
 </tr>
 <tr style="border-bottom: 1px solid #f1f5f9;">
 <td style="padding: 9px 10px;"><strong>Ampadu et al. (2022)</strong><br><em>J. Retailing &amp; Consumer Serv.</em></td>
@@ -537,10 +537,10 @@ However, rather than assuming a monotonically linear positive effect, we model P
 - **Proposition 2 (P2):** *Perceived recommendation accuracy positively influences cognitive fluency and e-satisfaction through expectancy confirmation.*
 
 ### 4.3. Recommendation Novelty and the Affective Pathway (P3)
-While accuracy confirms expectations, accuracy alone can result in monotonous, predictable suggestions that fail to generate impulsive excitement. Recommendation Novelty & Serendipity (NOV) (defined as the algorithmic presentation of unexpected yet notably attractive and relevant items; Gallin & Portes, 2024) introduces hedonic surprise into the shopping journey. According to Environmental Psychology (Mehrabian & Russell, 1974), unexpected positive environmental stimuli provoke an immediate surge in physiological and emotional arousal. When consumers discover appealing items they did not intentionally search for, hedonic curiosity and pleasure are ignited, producing an immediate affective elevation (Lin, 2026). Therefore, we propose:
+While accuracy confirms expectations, accuracy alone can result in monotonous, predictable suggestions that fail to generate impulsive excitement. Recommendation Novelty & Serendipity (NOV) (defined as the algorithmic presentation of unexpected yet notably attractive and relevant items; Feng et al., 2024; Lin, 2026) introduces hedonic surprise into the shopping journey. According to Environmental Psychology (Mehrabian & Russell, 1974), unexpected positive environmental stimuli provoke an immediate surge in physiological and emotional arousal. When consumers discover appealing items they did not intentionally search for, hedonic curiosity and pleasure are ignited, producing an immediate affective elevation (Lin, 2026). Therefore, we propose:
 - **Proposition 3 (P3):** *Recommendation novelty and serendipity positively influence consumer emotional arousal and positive affect.*
 
-### 4.4. Organismic States as the Dual Mediating and Multiplicative Bridge (P4, P4a, P5, P5a, P5b)
+### 4.4. Organismic States as the Dual Mediating and Multiplicative Bridge (P4a, P4b, P5, P5a, P5b)
 In environmental psychology, internal organism states mediate the translation of ambient stimuli into behavioral urges. Traditional consumer decision models position impulse buying as an irrational departure from deliberate calculation (Rook & Fisher, 1995). Through our dual-path lens:
 
 1. The Cognitive Bridge (Cumulative E-Satisfaction): Cumulative e-satisfaction produces a psychological state of affective comfort and disarmed vigilance. When a shopper experiences heightened satisfaction with the algorithmic interface, perceived transaction risk diminishes, cognitive defense mechanisms soften, and trust strengthens (Gallin & Portes, 2024; Oliver, 1993; Spreng et al., 1996). This psychological ease creates an open, receptive mindset that amplifies the spontaneous urge to buy impulsively.
@@ -812,6 +812,10 @@ Tobon, S., & Abril, C. (2024). Game on: curbing impulse buying and returns in ap
 
 Verhagen, T., & van Dolen, W. (2011). The influence of online store beliefs on consumer impulsive buying: A model and empirical application. *Information & Management*, 48(8), 320–327.
 
+van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. *Scientometrics*, 84(2), 523–538.
+
+van Eck, N. J., & Waltman, L. (2014). Visualizing bibliometric networks. In *Measuring scholarly impact*, pp. 285–320. Springer.
+
 Vessey, I. (1991). Cognitive fit: A theory-based analysis of the graphs versus tables literature. *Decision Sciences*, 22(2), 219-240.
 
 Visser, M., van Eck, N. J., & Waltman, L. (2021). Large-scale comparison of bibliographic data sources: Scopus, Web of Science, Dimensions, Crossref, and Microsoft Academic. *Quantitative Science Studies*, 2(1), 20-41. https://doi.org/10.1162/qss_a_00112
@@ -849,7 +853,3 @@ Zheng, D., Ding, Y., & Bai, S. (2025). The competition between human and AI stre
 Zheng, X., Men, J., Yang, F., & Gong, X. (2019). Understanding impulse buying in mobile commerce: An investigation into hedonic and utilitarian browsing. *International Journal of Information Management*, 48, 151-160. https://doi.org/10.1016/j.ijinfomgt.2019.02.010
 
 Zhu, Y., Shi, H., Bin Azam Hashmi, H., & Wu, Q. (2023). Bridging artificial intelligence-based services and online impulse buying in E-retailing context. *Electronic Commerce Research and Applications*, 62, 101333. https://doi.org/10.1016/j.elerap.2023.101333
-
-van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. *Scientometrics*, 84(2), 523–538.
-
-van Eck, N. J., & Waltman, L. (2014). Visualizing bibliometric networks. In *Measuring scholarly impact*, pp. 285–320. Springer.
