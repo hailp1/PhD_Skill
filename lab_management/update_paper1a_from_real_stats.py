@@ -169,7 +169,29 @@ Bibliometric performance analysis conducted on our {n_inc} final included studie
         for i, c in enumerate(st["top_cited"], 1)
     )
 
-    tables_2_3_4 = f"""Table 2 presents the quantitative publication trajectory across the {n_inc} included studies, while Table 3 ranks the Top 10 core dissemination outlets within the final corpus, confirming *Journal of Theoretical and Applied Electronic Commerce Research* ($n = {st['top_journals'][0]['count']}$) and *Journal of Retailing and Consumer Services* ($n = {st['top_journals'][1]['count']}$) as the leading academic venues.
+    top_countries = st.get("top_countries", [])
+    tot_countries = st.get("total_countries", 0)
+    max_c_cnt = max((x["count"] for x in top_countries), default=1)
+    c_bars = []
+    for idx_c, item in enumerate(top_countries):
+        cy = 72 + idx_c * 28
+        bw = max(6.0, (item["count"] / max_c_cnt) * 480.0)
+        bcol = "#0f766e" if item["country"] == "Vietnam" else "#0284c7"
+        tcol = "#0f766e" if item["country"] == "Vietnam" else "#0f172a"
+        fw = "800" if item["country"] in ("China", "Vietnam") else "600"
+        c_bars.append(
+            f'<text x="175" y="{cy + 14}" text-anchor="end" font-size="11" font-weight="{fw}" fill="{tcol}">{idx_c + 1}. {item["country"]}</text> '
+            f'<rect x="185" y="{cy}" width="{bw:.1f}" height="20" rx="3" fill="{bcol}"/> '
+            f'<text x="{192 + bw:.1f}" y="{cy + 14}" font-size="10.5" font-weight="700" fill="{tcol}">{item["count"]} ({item["pct"]:.1f}%)</text>'
+        )
+    fig3_country = f"""<div class="academic-figure-container" style="text-align:center; margin: 2rem 0; padding: 1.5rem; background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+<div style="font-weight: 700; font-size: 1.05rem; color: #0f172a; margin-bottom: 0.5rem;">Figure 3: Geographic Distribution: Top 12 Contributing Countries (N = {n_inc}, {tot_countries} Countries)</div>
+<div style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem;">Article-level affiliation frequency across {tot_countries} unique countries represented in the Dimensions corpus (2018–2026).</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 435" width="100%" height="auto" style="font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif; background:#ffffff;"> <rect x="20" y="12" width="780" height="36" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/> <text x="410" y="35" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">TOP 12 CONTRIBUTING COUNTRIES BY ARTICLE AFFILIATION (N = {n_inc})</text> {' '.join(c_bars)} <text x="410" y="420" text-anchor="middle" font-size="9.5" fill="#64748b">Note: Counts reflect unique country appearances per article from Dimensions affiliation metadata ({tot_countries} countries total).</text> </svg>
+<div style="font-size: 0.8rem; color: #475569; text-align: justify; margin-top: 1rem; line-height: 1.5;"><em>Note</em>: Geographic output spans {tot_countries} countries, led by China ($n = {top_countries[0]['count']}$), India ($n = {top_countries[1]['count']}$), and Indonesia ($n = {top_countries[2]['count']}$), with Southeast Asian digital commerce markets prominently represented.</div>
+</div>"""
+
+    tables_2_3_4 = f"""Table 2 presents the quantitative publication trajectory across the {n_inc} included studies, Table 3 ranks the Top 10 core dissemination outlets, and Figure 3 maps the geographic distribution across {tot_countries} contributing countries, confirming *Journal of Retailing and Consumer Services* ($n = {st['top_journals'][0]['count']}$) and *Journal of Theoretical and Applied Electronic Commerce Research* ($n = {st['top_journals'][1]['count']}$) as the leading academic venues.
 
 <div class="academic-figure-container" style="margin: 2rem 0; overflow-x: auto;">
 <div style="font-weight: 700; font-size: 1rem; color: #0f172a; margin-bottom: 0.5rem; text-align: left;">Table 2: Annual Publication Trajectory of the Final Included Corpus (N = {n_inc}, 2018–2026)</div>
@@ -211,6 +233,8 @@ Bibliometric performance analysis conducted on our {n_inc} final included studie
 <div style="font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; text-align: left;"><em>Note</em>: Counts reflect exact outlet frequencies within the final included corpus ($N = {n_inc}$).</div>
 </div>
 
+{fig3_country}
+
 Table 4 identifies the top 10 most influential scholarly articles within our {n_inc}-article focal corpus, ranked directly by Dimensions citation count.
 
 <div class="academic-figure-container" style="margin: 2rem 0; overflow-x: auto;">
@@ -249,10 +273,10 @@ Table 4 identifies the top 10 most influential scholarly articles within our {n_
         return ", ".join(f"{t['term']} ({t['occ']} / TLS {t['tls']})" for t in c["top_terms"])
 
     sec32_block = f"""### 3.2. Science Mapping: The 4-Cluster Architecture of Algorithmic Commerce
-Using VOSviewer-compatible co-word network analysis (van Eck & Waltman, 2010, 2014) with full counting and association strength normalization at a minimum threshold of $T = 3$ occurrences across the {n_inc} included titles and abstracts, {tot_terms} high-frequency domain concepts met the inclusion threshold, generating {tot_links} co-occurrence links across four thematic clusters (Table 5 and Figure 3):
+Using VOSviewer-compatible co-word network analysis (van Eck & Waltman, 2010, 2014) with full counting and association strength normalization at a minimum threshold of $T = 3$ occurrences across the {n_inc} included titles and abstracts, {tot_terms} high-frequency domain concepts met the inclusion threshold, generating {tot_links} co-occurrence links across four thematic clusters (Table 5 and Figure 4):
 
 <div class="academic-figure-container" style="text-align:center; margin: 2rem 0; padding: 1.5rem; background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-<div style="font-weight: 700; font-size: 1.05rem; color: #0f172a; margin-bottom: 0.5rem;">Figure 3: Co-Occurrence Network Map of AI Recommendation Systems and Impulse Buying (N = {n_inc})</div>
+<div style="font-weight: 700; font-size: 1.05rem; color: #0f172a; margin-bottom: 0.5rem;">Figure 4: Co-Occurrence Network Map of AI Recommendation Systems and Impulse Buying (N = {n_inc})</div>
 <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem;">Empirical co-word network generated directly from the {n_inc} included Dimensions records ({tot_terms} domain concepts, {tot_links} links, full counting).</div>
 <img src="data:image/png;base64,{fig3_b64}" alt="Co-Occurrence Network Map" style="max-width: 100%; height: auto; border-radius: 8px;" />
 <div style="font-size: 0.8rem; color: #475569; text-align: justify; margin-top: 1rem; line-height: 1.5;"><em>Note</em>: Nodes represent domain concepts ($T \\ge 3$ occurrences); node size indicates occurrence frequency; edge thickness reflects co-occurrence weight. Cluster 4 (Amber) exhibits the newest average publication year (APY = {c4['apy']}).</div>
@@ -288,7 +312,10 @@ Using VOSviewer-compatible co-word network analysis (van Eck & Waltman, 2010, 20
         count=1,
     )
 
-    # 7. Remaining 866 occurrences in prose + Data Availability + Appendix A
+    # 7. Remaining 866 occurrences + Figure 4 -> Figure 5 shift for S-O-R Framework
+    text = text.replace("illustrated in Figure 4.", "illustrated in Figure 5.")
+    text = text.replace("Figure 4: Dynamic Dual-Path S-O-R Conceptual Framework", "Figure 5: Dynamic Dual-Path S-O-R Conceptual Framework")
+    text = text.replace("FIGURE 4. DYNAMIC", "FIGURE 5. DYNAMIC")
     text = text.replace("across the 866 focal studies", f"across the {n_inc} focal studies")
     text = text.replace("across the 866-study corpus", f"across the {n_inc}-study corpus")
     text = text.replace("across all 866 records", f"across all {n_inc} records")

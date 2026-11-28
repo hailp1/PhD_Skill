@@ -83,6 +83,69 @@
       "pct": 1.4
     }
   ],
+  "total_countries": 84,
+  "top_countries": [
+    {
+      "country": "China",
+      "count": 317,
+      "pct": 27.5
+    },
+    {
+      "country": "India",
+      "count": 149,
+      "pct": 12.9
+    },
+    {
+      "country": "Indonesia",
+      "count": 142,
+      "pct": 12.3
+    },
+    {
+      "country": "Malaysia",
+      "count": 103,
+      "pct": 8.9
+    },
+    {
+      "country": "United States",
+      "count": 83,
+      "pct": 7.2
+    },
+    {
+      "country": "Taiwan",
+      "count": 57,
+      "pct": 4.9
+    },
+    {
+      "country": "Vietnam",
+      "count": 56,
+      "pct": 4.9
+    },
+    {
+      "country": "United Kingdom",
+      "count": 52,
+      "pct": 4.5
+    },
+    {
+      "country": "Australia",
+      "count": 39,
+      "pct": 3.4
+    },
+    {
+      "country": "South Korea",
+      "count": 38,
+      "pct": 3.3
+    },
+    {
+      "country": "Pakistan",
+      "count": 31,
+      "pct": 2.7
+    },
+    {
+      "country": "Saudi Arabia",
+      "count": 28,
+      "pct": 2.4
+    }
+  ],
   "top_cited": [
     {
       "authors": "Donthu et al.",

@@ -189,6 +189,13 @@ def main():
         "phase3_2024_2026": sum(yr_counts[y] for y in (2024, 2025, 2026)),
     }
     top_journals = Counter((r.get("Source title/Anthology title") or "").strip() for r in included).most_common(10)
+    country_counts = Counter()
+    for r in included:
+        raw_c = (r.get("Authors Affiliations - Country of Research organization") or "").strip()
+        if raw_c:
+            for c_name in set(x.strip() for x in raw_c.split(";") if x.strip()):
+                country_counts[c_name] += 1
+    top_countries = country_counts.most_common(12)
     top_cited = sorted(included, key=lambda x: int(x.get("Times cited") or 0), reverse=True)[:10]
 
     # Co-occurrence network (full counting, T >= 3)
@@ -312,6 +319,8 @@ def main():
         "yearly_counts": {str(y): yr_counts[y] for y in range(2018, 2027)},
         "phases": phases,
         "top_journals": [{"journal": j, "count": c, "pct": round(c / n_inc * 100, 1)} for j, c in top_journals],
+        "total_countries": len(country_counts),
+        "top_countries": [{"country": cn, "count": c, "pct": round(c / n_inc * 100, 1)} for cn, c in top_countries],
         "top_cited": [
             {
                 "authors": (r.get("Authors") or "").split(";")[0].split(",")[0].strip() + (" et al." if ";" in (r.get("Authors") or "") else ""),
