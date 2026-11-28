@@ -299,6 +299,15 @@ def main():
             "pct": round((n_match / n_inc) * 100, 2) if n_inc else 0.0,
         })
 
+    def fmt_authors(raw_auth):
+        parts = [a.strip() for a in (raw_auth or "").split(";") if a.strip()]
+        surnames = [p.split(",")[0].strip() for p in parts]
+        if len(surnames) == 1:
+            return surnames[0]
+        if len(surnames) == 2:
+            return f"{surnames[0]} & {surnames[1]}"
+        return f"{surnames[0]} et al."
+
     stats = {
         "export_date": "2026-11-28",
         "source_file": "Dimensions-Publication-2026-11-28_08-40-19.csv",
@@ -323,7 +332,7 @@ def main():
         "top_countries": [{"country": cn, "count": c, "pct": round(c / n_inc * 100, 1)} for cn, c in top_countries],
         "top_cited": [
             {
-                "authors": (r.get("Authors") or "").split(";")[0].split(",")[0].strip() + (" et al." if ";" in (r.get("Authors") or "") else ""),
+                "authors": fmt_authors(r.get("Authors")),
                 "year": r.get("PubYear"),
                 "journal": r.get("Source title/Anthology title"),
                 "title": r.get("Title"),

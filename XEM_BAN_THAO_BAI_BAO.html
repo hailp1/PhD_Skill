@@ -659,6 +659,11 @@
                 widows: 3 !important;
                 text-align: justify !important;
             }
+            #references ~ p {
+                text-align: left !important;
+                padding-left: 2.2em !important;
+                text-indent: -2.2em !important;
+            }
             .html2pdf__page-break {
                 page-break-before: always !important;
                 break-before: always !important;
@@ -953,7 +958,8 @@
 
             const fragment = document.createDocumentFragment();
             headings.forEach((h, idx) => {
-                const anchorId = h.id || ('sec_anchor_' + idx);
+                const rawText = h.innerText.replace(/^#+\s*/, '').trim();
+                const anchorId = rawText.toUpperCase() === 'REFERENCES' ? 'references' : ('sec_anchor_' + idx);
                 h.id = anchorId;
                 
                 const link = document.createElement('a');
