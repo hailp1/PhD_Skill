@@ -72,29 +72,20 @@ The remainder of this paper is structured as follows. Section 2 delineates the s
 ### 2.1. Methodological Design and Agnostic Search Strategy
 To prevent confirmation bias, the identification strategy adhered to an agnostic three-block Boolean structure covering technological stimuli (AI recommendation engines), behavioral outcomes (impulse purchasing), and digital retail contexts. Theoretical frameworks (such as S-O-R) and mediating constructs (such as e-satisfaction) were intentionally excluded from search strings so thematic clusters emerged inductively (Paul & Criado, 2020).
 
-Searches were executed on November 28, 2026 in the Dimensions scholarly database (`full data` indexing, bibliographic export format), selected for its extensive coverage of interdisciplinary research across artificial intelligence, data science, and applied digital commerce. Large-scale bibliometric benchmarks by Thelwall (2018) and Visser et al. (2021) demonstrate that Dimensions achieves publication coverage comparable to, and in technology and applied computing domains often broader than, Scopus and Web of Science. Because Dimensions indexes diverse document types, rigorous programmatic filtering was applied to isolate peer-reviewed journal articles with valid Digital Object Identifiers (DOIs). The standardized conceptual Boolean query is shown below:
+Searches were executed on November 28, 2026 in the Dimensions scholarly database (`full data` search scope, bibliographic export format), selected for its extensive coverage of interdisciplinary research across artificial intelligence, data science, and applied digital commerce. Large-scale bibliometric benchmarks by Thelwall (2018) and Visser et al. (2021) demonstrate that Dimensions achieves publication coverage comparable to, and in technology and applied computing domains often broader than, Scopus and Web of Science. Because Dimensions indexes diverse document types, rigorous programmatic filtering was applied to isolate peer-reviewed journal articles with valid Digital Object Identifiers (DOIs). The exact Boolean query executed in Dimensions (`full data`) is shown below:
 
 ```text
-TITLE-ABS-KEY (
-  (
-    "artificial intelligence" OR "AI" OR "recommendation system*"
-    OR "recommender system*" OR "algorithmic recommendation*"
-    OR "personalized recommendation*" OR "deep learning recommendation*"
-    OR "collaborative filtering"
-  )
-  AND
-  (
-    "impulse buying" OR "impulsive buying" OR "impulse purchase*"
-    OR "spontaneous purchase*" OR "unplanned purchase*"
-    OR "urge to buy impulsively"
-  )
-  AND
-  (
-    "e-commerce" OR "online shopping" OR "digital retailing"
-    OR "electronic commerce" OR "social commerce" OR "mobile commerce"
-  )
-)
+("artificial intelligence" OR "AI" OR "recommendation system*" OR "recommender system*" OR "algorithmic recommendation*" OR "personalized recommendation*" OR "deep learning recommendation*" OR "collaborative filtering")
+AND
+("impulse buying" OR "impulsive buying" OR "impulse purchase*" OR "spontaneous purchase*" OR "unplanned purchase*" OR "urge to buy impulsively")
+AND
+("e-commerce" OR "online shopping" OR "digital retailing" OR "electronic commerce" OR "social commerce" OR "mobile commerce")
 ```
+
+To ensure disciplinary relevance and temporal precision at the database-retrieval stage, three native Dimensions interface filters were applied simultaneously:
+- **Publication Type**: `Article`.
+- **Fields of Research (ANZSRC 2020)**: `3506 Marketing` OR `35 Commerce, Management, Tourism and Services` OR `3503 Business Systems In Context` OR `3504 Commercial Services`.
+- **Publication Year**: `2018` OR `2019` OR `2020` OR `2021` OR `2022` OR `2023` OR `2024` OR `2025` OR `2026`.
 
 ### 2.2. Eligibility Criteria and TCCM Framework Framing
 The screening protocol was framed around the TCCM Framework (Theory, Context, Characteristics, Methodology), recognized as a widely adopted framework for systematic reviews in marketing and retailing (Paul & Rosado-Serrano, 2019; Paul & Criado, 2020):
