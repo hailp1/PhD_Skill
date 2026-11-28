@@ -137,7 +137,7 @@ Figure 1 documents the end-to-end PRISMA 2020 selection flow, detailing exact at
 ### 3.1. Performance Analysis: Publication Trajectories and Leading Outlets
 Bibliometric performance analysis conducted on our 866 final included studies (2018–2026) reveals a rapid growth trajectory across three distinct developmental phases, visually illustrated in Figure 2:
 - Foundational Phase (2018–2020): Characterized by exploratory output totaling 34 studies (3.9%; averaging 11.3 publications annually), focusing predominantly on collaborative filtering accuracy and early personalization cues (Shanahan et al., 2019; Xiao & Benbasat, 2018; Zheng et al., 2019).
-- Expansion Phase (2021–2023): Rapid acceleration totaling 102 studies (11.8%; averaging 34.0 publications annually), catalyzed by the integration of deep neural networks, mobile social commerce, and pandemic-induced digital retail migration (Ampadu et al., 2022; Hallikainen et al., 2022; Redine et al., 2022; Gallin & Portes, 2024; Zhu et al., 2023).
+- Expansion Phase (2021–2023): Rapid acceleration totaling 102 studies (11.8%; averaging 34.0 publications annually), catalyzed by the integration of deep neural networks, mobile social commerce, and pandemic-induced digital retail migration (Ampadu et al., 2022; Hallikainen et al., 2022; Redine et al., 2022; Zhu et al., 2023).
 - Maturation and Generative Phase (2024–2026): High-velocity scholarly output totaling 730 studies (84.3%; averaging 243.3 publications annually through November 2026), driven by Generative AI, conversational recommender agents, livestreaming curation, and algorithmic dark patterns (Gallin & Portes, 2024; Lin, 2026; Pang et al., 2026; Shamim & Misra, 2025).
 
 <div class="academic-figure-container" style="text-align:center; margin: 2rem 0; padding: 1.5rem; background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
@@ -779,7 +779,6 @@ Paul, J., & Criado, A. R. (2020). The art of writing literature review: What do 
 
 Paul, J., & Rosado-Serrano, A. (2019). Gradual internationalization vs born-global/international new venture models: A review and research agenda. *International Marketing Review*, 36(6), 830-858. https://doi.org/10.1108/IMR-10-2018-0280
 
-
 Redine, A., Deshpande, S., Jebarajakirthy, C., & Surachartkumtonkun, J. (2022). Impulse buying: A systematic literature review and future research directions. *International Journal of Consumer Studies*, 47, 3-41. https://doi.org/10.1111/ijcs.12862
 
 Ronda, L., Tobon, S., & Abril, C. (2026). Reconceptualising Social Media Impulse Buying Through a Recursive Temporal SOR Perspective. *International Journal of Consumer Studies*, 50. https://doi.org/10.1111/ijcs.70256
@@ -810,11 +809,11 @@ Thelwall, M. (2018). Dimensions: A competitor to Scopus and the Web of Science?.
 
 Tobon, S., & Abril, C. (2024). Game on: curbing impulse buying and returns in apparel e-tailers. *Review of Managerial Science*, 19, 1783-1817. https://doi.org/10.1007/s11846-024-00808-3
 
-Verhagen, T., & van Dolen, W. (2011). The influence of online store beliefs on consumer impulsive buying: A model and empirical application. *Information & Management*, 48(8), 320–327.
-
 van Eck, N. J., & Waltman, L. (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. *Scientometrics*, 84(2), 523–538.
 
 van Eck, N. J., & Waltman, L. (2014). Visualizing bibliometric networks. In *Measuring scholarly impact*, pp. 285–320. Springer.
+
+Verhagen, T., & van Dolen, W. (2011). The influence of online store beliefs on consumer impulsive buying: A model and empirical application. *Information & Management*, 48(8), 320–327.
 
 Vessey, I. (1991). Cognitive fit: A theory-based analysis of the graphs versus tables literature. *Decision Sciences*, 22(2), 219-240.
 
