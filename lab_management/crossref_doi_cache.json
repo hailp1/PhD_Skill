@@ -1938,5 +1938,27 @@
     "title": "A hot/cool-system analysis of delay of gratification: Dynamics of willpower.",
     "journal": "Psychological Review",
     "retracted": false
+  },
+  "10.1016/j.joi.2018.03.006": {
+    "ok": true,
+    "doi": "10.1016/j.joi.2018.03.006",
+    "authors": [
+      "thelwall"
+    ],
+    "title": "Dimensions: A competitor to Scopus and the Web of Science?",
+    "journal": "Journal of Informetrics",
+    "retracted": false
+  },
+  "10.1162/qss_a_00112": {
+    "ok": true,
+    "doi": "10.1162/qss_a_00112",
+    "authors": [
+      "visser",
+      "van eck",
+      "waltman"
+    ],
+    "title": "Large-scale comparison of bibliographic data sources: Scopus, Web of\n                    Science, Dimensions, Crossref, and Microsoft Academic",
+    "journal": "Quantitative Science Studies",
+    "retracted": false
   }
 }

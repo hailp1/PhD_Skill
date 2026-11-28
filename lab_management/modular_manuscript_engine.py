@@ -104,6 +104,18 @@ SEMINAL_REFS = [
         "ref_line": "Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., ... Moher, D. (2021). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. *BMJ*, *372*, n71. https://doi.org/10.1136/bmj.n71",
     },
     {
+        "key": ("Thelwall", "2018"),
+        "in_text": "Thelwall (2018)",
+        "paren": "(Thelwall, 2018)",
+        "ref_line": "Thelwall, M. (2018). Dimensions: A competitor to Scopus and the Web of Science?. *Journal of Informetrics*, *12*(2), 430-435. https://doi.org/10.1016/j.joi.2018.03.006",
+    },
+    {
+        "key": ("Visser", "2021"),
+        "in_text": "Visser et al. (2021)",
+        "paren": "(Visser et al., 2021)",
+        "ref_line": "Visser, M., van Eck, N. J., & Waltman, L. (2021). Large-scale comparison of bibliographic data sources: Scopus, Web of Science, Dimensions, Crossref, and Microsoft Academic. *Quantitative Science Studies*, *2*(1), 20-41. https://doi.org/10.1162/qss_a_00112",
+    },
+    {
         "key": ("Paul", "2021"),
         "in_text": "Paul et al. (2021)",
         "paren": "(Paul et al., 2021)",
@@ -361,12 +373,12 @@ TITLE-ABS-KEY (
 )
 ```
 
-Database harvesting combined two complementary bibliographic sources covering 2018 through 2026: (1) an established Dimensions core export ($n = {prisma['identified_dimensions']:,}$ records), and (2) an expanded multi-query OpenAlex harvest ($n = {prisma['identified_openalex']:,}$ records) targeting emerging 2024-2026 themes including generative shopping assistants, algorithmic privacy reactance, ego depletion, and livestreaming commerce. Consistent with methodological recommendations from {cite_list(sec2_refs[:3], narrative=True)}, combining structured metadata registries increases coverage of recent open-access and interdisciplinary retail scholarship.
+Database harvesting combined two complementary bibliographic sources covering 2018 through 2026: (1) an established **Dimensions** core export ($n = {prisma['identified_dimensions']:,}$ records), justified by large-scale scientometric benchmarks showing Dimensions achieves coverage comparable to or exceeding Scopus in applied technology and computing domains (Thelwall, 2018; Visser et al., 2021), and (2) an expanded multi-query **OpenAlex** harvest ($n = {prisma['identified_openalex']:,}$ records) targeting emerging 2024-2026 themes. Consistent with methodological insights from {cite_list(sec2_refs[:3], narrative=True)}, combining structured metadata registries increases coverage while requiring strict document-type filtering to remove preprints, monographs, edited books, and grants.
 
 ### 2.2 Deduplication and Deterministic Eligibility Screening
 
 Merging both data streams yielded {prisma['total_identified']:,} gross records. Automated normalization of Digital Object Identifiers (DOIs) and punctuation-stripped titles removed {prisma['duplicates_removed']:,} duplicate entries, leaving {prisma['unique_screened']:,} unique records for title and abstract screening. We then applied three deterministic exclusion criteria:
-* **EC1 (Non-Journal Outlets):** Conference proceedings, workshops, book chapters, and unrefereed preprints were excluded ($n = {prisma['excluded_non_journal']:,}$), ensuring that only peer-reviewed journal articles entered the synthesis.
+* **EC1 (Non-Journal Outlets & Grey Literature):** Preprints, monographs, edited books, research grants, conference proceedings, and workshops were excluded ($n = {prisma['excluded_non_journal']:,}$), ensuring that only peer-reviewed journal articles with valid DOIs entered the synthesis.
 * **EC2 (Off-Topic Scope):** Articles lacking explicit intersection between consumer retail/shopping contexts and AI/algorithmic/digital recommendation cues were excluded ($n = {prisma['excluded_off_topic']:,}$).
 * **EC3 (Metadata & Window Completeness):** Records published outside the 2018-2026 window or containing insufficient abstract text (< 35 words) for reliable text-mining were excluded ($n = {prisma['excluded_meta_window']:,}$).
 
@@ -520,7 +532,7 @@ Building on the TCCM gaps in Table 2 and recent directions highlighted by {cite_
 
 ### 5.4 Limitations and Conclusion
 
-In accordance with PRISMA 2020 Item 23c (Page et al., 2021), several limitations bound this review. First, applying **EC1 (exclusion of conference proceedings)** ensured peer-reviewed journal rigor across all {n_inc:,} included articles, yet it necessarily omitted cutting-edge computer science workshops and flagship recommender conferences (such as ACM RecSys, SIGIR, KDD, and CHI) where novel GenAI architectures often debut prior to journal publication. Second, our reproducible text-mining gap audit operated on titles and abstracts rather than full-text PDFs; consequently, studies that tested quadratic or interaction terms solely in robustness tables without mentioning them in the abstract may be conservatively undercounted. Third, restricting inclusion to English-language journal outlets may underrepresent regional insights from non-English livestreaming markets. Despite these boundaries, this review provides a transparent, quantitatively grounded foundation and an actionable theoretical roadmap for understanding how AI-enabled retail balances persuasive personalization against consumer cognitive welfare.
+In accordance with PRISMA 2020 Item 23c (Page et al., 2021), several limitations bound this review. First, this study relies on **Dimensions** and **OpenAlex** to leverage their comprehensive interdisciplinary coverage bridging artificial intelligence and digital commerce (Thelwall, 2018; Visser et al., 2021); future studies may cross-validate these patterns against **Scopus** and **Web of Science Core Collection** where institutional access permits. Second, applying **EC1 (exclusion of preprints, monographs, books, grants, and conference proceedings)** ensured peer-reviewed journal rigor across all {n_inc:,} included articles, yet omitted computer science venues (ACM RecSys, SIGIR, KDD, CHI). Third, our reproducible text-mining gap audit operated on titles and abstracts rather than full-text PDFs; consequently, studies testing quadratic or interaction terms solely in robustness tables may be conservatively undercounted. Fourth, restricting inclusion to English-language journal outlets may underrepresent non-English regional insights.
 
 ---
 
