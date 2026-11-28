@@ -1860,5 +1860,83 @@
     "title": "Impulse buying: Modeling its precursors",
     "journal": "Journal of Retailing",
     "retracted": false
+  },
+  "10.17705/1jais.00267": {
+    "ok": true,
+    "doi": "10.17705/1jais.00267",
+    "authors": [
+      "al-natour",
+      "benbasat",
+      "cenfetelli"
+    ],
+    "title": "The Adoption of Online Shopping Assistants: Perceived Similarity as an Antecedent to Evaluative Beliefs",
+    "journal": "Journal of the Association for Information Systems",
+    "retracted": false
+  },
+  "10.1016/j.ijinfomgt.2019.08.002": {
+    "ok": true,
+    "doi": "10.1016/j.ijinfomgt.2019.08.002",
+    "authors": [
+      "dwivedi",
+      "hughes",
+      "ismagilova",
+      "aarts",
+      "coombs",
+      "crick",
+      "duan",
+      "dwivedi",
+      "edwards",
+      "eirug",
+      "galanos",
+      "ilavarasan",
+      "janssen",
+      "jones",
+      "kar",
+      "kizgin",
+      "kronemann",
+      "lal",
+      "lucini",
+      "medaglia",
+      "le meunier-fitzhugh",
+      "le meunier-fitzhugh",
+      "misra",
+      "mogaji",
+      "sharma",
+      "singh",
+      "raghavan",
+      "raman",
+      "rana",
+      "samothrakis",
+      "spencer",
+      "tamilmani",
+      "tubadji",
+      "walton",
+      "williams"
+    ],
+    "title": "Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy",
+    "journal": "International Journal of Information Management",
+    "retracted": false
+  },
+  "10.1086/208573": {
+    "ok": true,
+    "doi": "10.1086/208573",
+    "authors": [
+      "hoch",
+      "loewenstein"
+    ],
+    "title": "Time-inconsistent Preferences and Consumer Self-Control",
+    "journal": "Journal of Consumer Research",
+    "retracted": false
+  },
+  "10.1037/0033-295x.106.1.3": {
+    "ok": true,
+    "doi": "10.1037/0033-295x.106.1.3",
+    "authors": [
+      "metcalfe",
+      "mischel"
+    ],
+    "title": "A hot/cool-system analysis of delay of gratification: Dynamics of willpower.",
+    "journal": "Psychological Review",
+    "retracted": false
   }
 }
