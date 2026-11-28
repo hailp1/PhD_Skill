@@ -1,6 +1,7 @@
 {
   "export_date": "2026-11-28",
   "source_file": "Dimensions-Publication-2026-11-28_08-40-19.csv",
+  "sha256": "508f0b3af60b1d339d8a570ea71a9665894c49c19fb058bfd52f0b51cb84493a",
   "prisma": {
     "raw_identified": 2500,
     "duplicates_removed": 0,
@@ -13,7 +14,11 @@
     "eligible_ta_screened": 2446,
     "excluded_ec3_non_retail": 310,
     "excluded_ec2_off_topic": 984,
-    "final_included": 1152
+    "final_included_broad": 1152,
+    "final_included_core": 84,
+    "ta_ai_only": 309,
+    "ta_impulse_only": 386,
+    "ta_genai_llm": 15
   },
   "yearly_counts": {
     "2018": 10,
@@ -26,10 +31,26 @@
     "2025": 313,
     "2026": 358
   },
+  "core_yearly_counts": {
+    "2018": 0,
+    "2019": 1,
+    "2020": 1,
+    "2021": 3,
+    "2022": 3,
+    "2023": 5,
+    "2024": 6,
+    "2025": 34,
+    "2026": 31
+  },
   "phases": {
     "phase1_2018_2020": 53,
     "phase2_2021_2023": 233,
     "phase3_2024_2026": 866
+  },
+  "core_phases": {
+    "phase1_2018_2020": 2,
+    "phase2_2021_2023": 11,
+    "phase3_2024_2026": 71
   },
   "top_journals": [
     {
@@ -81,6 +102,58 @@
       "journal": "Electronic Commerce Research",
       "count": 16,
       "pct": 1.4
+    }
+  ],
+  "core_top_journals": [
+    {
+      "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
+      "count": 3,
+      "pct": 3.6
+    },
+    {
+      "journal": "International Journal of Consumer Studies",
+      "count": 3,
+      "pct": 3.6
+    },
+    {
+      "journal": "Sustainability",
+      "count": 3,
+      "pct": 3.6
+    },
+    {
+      "journal": "Asia Pacific Journal of Marketing and Logistics",
+      "count": 3,
+      "pct": 3.6
+    },
+    {
+      "journal": "PLOS ONE",
+      "count": 2,
+      "pct": 2.4
+    },
+    {
+      "journal": "Electronic Commerce Research",
+      "count": 2,
+      "pct": 2.4
+    },
+    {
+      "journal": "Journal of Retailing and Consumer Services",
+      "count": 2,
+      "pct": 2.4
+    },
+    {
+      "journal": "International Journal of Accounting and Economics Studies",
+      "count": 2,
+      "pct": 2.4
+    },
+    {
+      "journal": "Journal of Computer Information Systems",
+      "count": 2,
+      "pct": 2.4
+    },
+    {
+      "journal": "Journal of ASIAN Behavioural Studies",
+      "count": 2,
+      "pct": 2.4
     }
   ],
   "total_countries": 84,
@@ -146,17 +219,96 @@
       "pct": 2.4
     }
   ],
-  "top_cited": [
+  "top_cited_core": [
+    {
+      "authors": "Chen et al.",
+      "year": "2019",
+      "journal": "Information & Management",
+      "title": "How do product recommendations affect impulse buying? An empirical study on WeChat social commerce",
+      "doi": "10.1016/j.im.2018.09.002",
+      "citations": 370
+    },
+    {
+      "authors": "Zhang et al.",
+      "year": "2023",
+      "journal": "Information Systems Frontiers",
+      "title": "How Do Virtual AI Streamers Influence Viewers’ Livestream Shopping Behavior? The Effects of Persuasive Factors and the Mediating Role of Arousal",
+      "doi": "10.1007/s10796-023-10425-2",
+      "citations": 108
+    },
+    {
+      "authors": "Ampadu et al.",
+      "year": "2022",
+      "journal": "Journal of Retailing and Consumer Services",
+      "title": "Online personalized recommended product quality and e-impulse buying: A conditional mediation analysis",
+      "doi": "10.1016/j.jretconser.2021.102789",
+      "citations": 100
+    },
+    {
+      "authors": "Shi et al.",
+      "year": "2023",
+      "journal": "Electronic Commerce Research",
+      "title": "The influence of atmospheric cues and social presence on consumers' impulse buying behaviors in e-commerce live streaming",
+      "doi": "10.1007/s10660-023-09793-3",
+      "citations": 76
+    },
+    {
+      "authors": "Liu et al.",
+      "year": "2020",
+      "journal": "Asia Pacific Journal of Marketing and Logistics",
+      "title": "Mobile shopping platform characteristics as consumer behavior determinants",
+      "doi": "10.1108/apjml-05-2019-0308",
+      "citations": 74
+    },
+    {
+      "authors": "Cui et al.",
+      "year": "2022",
+      "journal": "Journal of Global Information Management",
+      "title": "Investigating the Key Drivers of Impulsive Buying Behavior in Live Streaming",
+      "doi": "10.4018/jgim.314226",
+      "citations": 69
+    },
+    {
+      "authors": "Gao & Liang",
+      "year": "2025",
+      "journal": "Sustainability",
+      "title": "The Impact of AI-Powered Try-On Technology on Online Consumers’ Impulsive Buying Intention: The Moderating Role of Brand Trust",
+      "doi": "10.3390/su17072789",
+      "citations": 54
+    },
+    {
+      "authors": "Jain & Gandhi",
+      "year": "2021",
+      "journal": "International Journal of Innovation Science",
+      "title": "Impact of artificial intelligence on impulse buying behaviour of Indian shoppers in fashion retail outlets",
+      "doi": "10.1108/ijis-10-2020-0181",
+      "citations": 51
+    },
+    {
+      "authors": "Saad & Choura",
+      "year": "2022",
+      "journal": "European Journal of Marketing",
+      "title": "Towards better interaction between salespeople and consumers: the role of virtual recommendation agent",
+      "doi": "10.1108/ejm-11-2021-0892",
+      "citations": 47
+    },
+    {
+      "authors": "Abbott et al.",
+      "year": "2023",
+      "journal": "Journal of Consumer Behaviour",
+      "title": "The role of dark pattern stimuli and personality in online impulse shopping: An application of S‐O‐R theory",
+      "doi": "10.1002/cb.2208",
+      "citations": 36
+    }
+  ],
+  "top_cited_broad": [
     {
       "authors": "Donthu & Gustafsson",
       "year": "2020",
       "journal": "Journal of Business Research",
       "title": "Effects of COVID-19 on business and research",
       "doi": "10.1016/j.jbusres.2020.06.008",
-      "citations": 1836,
-      "volume": "117",
-      "issue": "",
-      "pagination": "284-289"
+      "citations": 1836
     },
     {
       "authors": "Sheth",
@@ -164,10 +316,7 @@
       "journal": "Journal of Business Research",
       "title": "Impact of Covid-19 on consumer behavior: Will the old habits return or die?",
       "doi": "10.1016/j.jbusres.2020.05.059",
-      "citations": 1646,
-      "volume": "117",
-      "issue": "",
-      "pagination": "280-283"
+      "citations": 1646
     },
     {
       "authors": "Chen et al.",
@@ -175,10 +324,7 @@
       "journal": "Information & Management",
       "title": "How do product recommendations affect impulse buying? An empirical study on WeChat social commerce",
       "doi": "10.1016/j.im.2018.09.002",
-      "citations": 370,
-      "volume": "56",
-      "issue": "2",
-      "pagination": "236-248"
+      "citations": 370
     },
     {
       "authors": "Chopdar & Balakrishnan",
@@ -186,10 +332,7 @@
       "journal": "International Journal of Information Management",
       "title": "Consumers response towards mobile commerce applications: S-O-R approach",
       "doi": "10.1016/j.ijinfomgt.2020.102106",
-      "citations": 349,
-      "volume": "53",
-      "issue": "",
-      "pagination": "102106"
+      "citations": 349
     },
     {
       "authors": "Hu et al.",
@@ -197,10 +340,7 @@
       "journal": "International Journal of Electronic Commerce",
       "title": "Social Support, Source Credibility, Social Influence, and Impulsive Purchase Behavior in Social Commerce",
       "doi": "10.1080/10864415.2019.1619905",
-      "citations": 334,
-      "volume": "23",
-      "issue": "3",
-      "pagination": "297-327"
+      "citations": 334
     },
     {
       "authors": "Gao et al.",
@@ -208,10 +348,7 @@
       "journal": "Journal of Retailing and Consumer Services",
       "title": "How do virtual streamers affect purchase intention in the live streaming context? A presence perspective",
       "doi": "10.1016/j.jretconser.2023.103356",
-      "citations": 316,
-      "volume": "73",
-      "issue": "",
-      "pagination": "103356"
+      "citations": 316
     },
     {
       "authors": "Leong et al.",
@@ -219,10 +356,7 @@
       "journal": "Journal of Business Research",
       "title": "Predicting the antecedents of trust in social commerce – A hybrid structural equation modeling with neural network approach",
       "doi": "10.1016/j.jbusres.2019.11.056",
-      "citations": 278,
-      "volume": "110",
-      "issue": "",
-      "pagination": "24-40"
+      "citations": 278
     },
     {
       "authors": "Redine et al.",
@@ -230,10 +364,7 @@
       "journal": "International Journal of Consumer Studies",
       "title": "Impulse buying: A systematic literature review and future research directions",
       "doi": "10.1111/ijcs.12862",
-      "citations": 273,
-      "volume": "47",
-      "issue": "1",
-      "pagination": "3-41"
+      "citations": 273
     },
     {
       "authors": "Wu et al.",
@@ -241,10 +372,7 @@
       "journal": "Information & Management",
       "title": "How does scarcity promotion lead to impulse purchase in the online market? A field experiment",
       "doi": "10.1016/j.im.2020.103283",
-      "citations": 268,
-      "volume": "58",
-      "issue": "1",
-      "pagination": "103283"
+      "citations": 268
     },
     {
       "authors": "Yin & Qiu",
@@ -252,13 +380,190 @@
       "journal": "Sustainability",
       "title": "AI Technology and Online Purchase Intention: Structural Equation Model Based on Perceived Value",
       "doi": "10.3390/su13105671",
-      "citations": 235,
-      "volume": "13",
-      "issue": "10",
-      "pagination": "5671"
+      "citations": 235
     }
   ],
-  "vosviewer": {
+  "inductive_network": {
+    "corpus_n": 84,
+    "min_df": 5,
+    "active_terms": 38,
+    "edges": 463,
+    "clusters": {
+      "1": {
+        "terms_count": 17,
+        "occurrences": 301,
+        "tls": 1687,
+        "apy": 2024.76,
+        "top_terms": [
+          {
+            "term": "impulse buying",
+            "occ": 71,
+            "tls": 352,
+            "apy": 2024.83
+          },
+          {
+            "term": "consumer buying behavior",
+            "occ": 42,
+            "tls": 249,
+            "apy": 2024.71
+          },
+          {
+            "term": "consumer behavior",
+            "occ": 30,
+            "tls": 188,
+            "apy": 2024.8
+          },
+          {
+            "term": "impulse purchase",
+            "occ": 29,
+            "tls": 153,
+            "apy": 2025.07
+          },
+          {
+            "term": "personalized recommendation",
+            "occ": 21,
+            "tls": 118,
+            "apy": 2024.71
+          }
+        ]
+      },
+      "2": {
+        "terms_count": 8,
+        "occurrences": 86,
+        "tls": 488,
+        "apy": 2025.21,
+        "top_terms": [
+          {
+            "term": "artificial intelligence",
+            "occ": 31,
+            "tls": 184,
+            "apy": 2025.19
+          },
+          {
+            "term": "ai recommendation",
+            "occ": 11,
+            "tls": 62,
+            "apy": 2025.55
+          },
+          {
+            "term": "s-o-r framework",
+            "occ": 10,
+            "tls": 55,
+            "apy": 2025.3
+          },
+          {
+            "term": "recommendation system",
+            "occ": 9,
+            "tls": 48,
+            "apy": 2024.67
+          },
+          {
+            "term": "digital commerce",
+            "occ": 7,
+            "tls": 42,
+            "apy": 2025.57
+          }
+        ]
+      },
+      "3": {
+        "terms_count": 6,
+        "occurrences": 49,
+        "tls": 302,
+        "apy": 2025.04,
+        "top_terms": [
+          {
+            "term": "purchase intention",
+            "occ": 12,
+            "tls": 66,
+            "apy": 2024.92
+          },
+          {
+            "term": "marketing strategies",
+            "occ": 10,
+            "tls": 69,
+            "apy": 2024.6
+          },
+          {
+            "term": "trust",
+            "occ": 9,
+            "tls": 55,
+            "apy": 2025.44
+          },
+          {
+            "term": "marketing practices",
+            "occ": 7,
+            "tls": 42,
+            "apy": 2025.0
+          },
+          {
+            "term": "brand loyalty",
+            "occ": 6,
+            "tls": 39,
+            "apy": 2025.17
+          }
+        ]
+      },
+      "4": {
+        "terms_count": 5,
+        "occurrences": 29,
+        "tls": 177,
+        "apy": 2025.69,
+        "top_terms": [
+          {
+            "term": "recommendation algorithm",
+            "occ": 7,
+            "tls": 45,
+            "apy": 2025.43
+          },
+          {
+            "term": "fear of missing out (fomo)",
+            "occ": 6,
+            "tls": 37,
+            "apy": 2025.67
+          },
+          {
+            "term": "tiktok shop",
+            "occ": 6,
+            "tls": 26,
+            "apy": 2025.67
+          },
+          {
+            "term": "purposive sampling",
+            "occ": 5,
+            "tls": 30,
+            "apy": 2026.0
+          },
+          {
+            "term": "aims to analyze",
+            "occ": 5,
+            "tls": 39,
+            "apy": 2025.8
+          }
+        ]
+      },
+      "5": {
+        "terms_count": 2,
+        "occurrences": 14,
+        "tls": 108,
+        "apy": 2025.07,
+        "top_terms": [
+          {
+            "term": "purchase decisions",
+            "occ": 8,
+            "tls": 57,
+            "apy": 2024.88
+          },
+          {
+            "term": "influencing consumer",
+            "occ": 6,
+            "tls": 51,
+            "apy": 2025.33
+          }
+        ]
+      }
+    }
+  },
+  "theory_concept_map": {
     "active_terms": 26,
     "edges": 293,
     "clusters": {
@@ -394,40 +699,68 @@
   },
   "regex_audit": [
     {
-      "category": "S-O-R Framing Mentions",
+      "category": "S-O-R Theoretical Framing",
       "pattern": "stimulus-organism-response|s-o-r|sor model|sor framework",
-      "count": 160,
-      "pct": 13.89
+      "broad_count": 160,
+      "broad_pct": 13.89,
+      "core_count": 17,
+      "core_pct": 20.24
     },
     {
-      "category": "Regret / Dissonance / Return Mentions",
-      "pattern": "post-purchase regret|cognitive dissonance|regret|product return",
-      "count": 48,
-      "pct": 4.17
+      "category": "Privacy / Surveillance Mentions",
+      "pattern": "\\bprivacy\\b|\\bsurveillance\\b",
+      "broad_count": 51,
+      "broad_pct": 4.43,
+      "core_count": 8,
+      "core_pct": 9.52
     },
     {
-      "category": "Interaction / Moderated Mediation Mentions",
-      "pattern": "interaction effect|multiplicative|moderated mediation|moderating effect",
-      "count": 91,
-      "pct": 7.9
+      "category": "Psychological Reactance / Manipulative Intent",
+      "pattern": "\\breactance\\b|\\bmanipulative intent\\b|\\bintrusiveness\\b|\\bcreepiness\\b",
+      "broad_count": 9,
+      "broad_pct": 0.78,
+      "core_count": 1,
+      "core_pct": 1.19
     },
     {
-      "category": "Curvilinear / Threshold Mentions",
+      "category": "Curvilinear / Inverted-U / Threshold Effects",
       "pattern": "inverted-u|inverted u|curvilinear|threshold effect|quadratic|non-linear|nonlinear",
-      "count": 17,
-      "pct": 1.48
+      "broad_count": 17,
+      "broad_pct": 1.48,
+      "core_count": 0,
+      "core_pct": 0.0
     },
     {
-      "category": "Privacy / Reactance / Dark-Pattern Mentions",
-      "pattern": "privacy|surveillance|reactance|dark pattern",
-      "count": 59,
-      "pct": 5.12
+      "category": "Cognitive-Affective Multiplicative Interaction",
+      "pattern": "multiplicative|cognitive.?affective interaction|synergistic interaction",
+      "broad_count": 0,
+      "broad_pct": 0.0,
+      "core_count": 0,
+      "core_pct": 0.0
     },
     {
-      "category": "Ego Depletion / Cognitive Load Mentions",
-      "pattern": "ego depletion|self-regulatory|decision fatigue|cognitive load",
-      "count": 17,
-      "pct": 1.48
+      "category": "Ego Depletion / Self-Regulatory Fatigue / Cognitive Load",
+      "pattern": "ego depletion|rational depletion|self-regulatory|decision fatigue|cognitive load",
+      "broad_count": 17,
+      "broad_pct": 1.48,
+      "core_count": 4,
+      "core_pct": 4.76
+    },
+    {
+      "category": "Post-Purchase Regret / Dissonance / Returns",
+      "pattern": "post-purchase regret|cognitive dissonance|post-purchase dissonance|\\bregret\\b|product return",
+      "broad_count": 49,
+      "broad_pct": 4.25,
+      "core_count": 7,
+      "core_pct": 8.33
+    },
+    {
+      "category": "Generative AI / LLM / Conversational Agents",
+      "pattern": "\\bgenerative ai\\b|\\bgenai\\b|\\bchatgpt\\b|\\blarge language model\\b|\\bllm\\b|conversational agent",
+      "broad_count": 15,
+      "broad_pct": 1.3,
+      "core_count": 0,
+      "core_pct": 0.0
     }
   ]
 }

@@ -1,0 +1,39 @@
+id	label	cluster	weight<Occurrences>	weight<Total link strength>	score<Avg. pub. year>
+1	impulse buying	1	71	352	2024.83
+2	consumer buying behavior	1	42	249	2024.71
+3	artificial intelligence	2	31	184	2025.19
+4	consumer behavior	1	30	188	2024.8
+5	impulse purchase	1	29	153	2025.07
+6	personalized recommendation	1	21	118	2024.71
+7	online shopping	1	19	103	2024.95
+8	e-commerce	1	17	108	2025.35
+9	purchase intention	3	12	66	2024.92
+10	live streaming	1	11	57	2024.27
+11	ai recommendation	2	11	62	2025.55
+12	s-o-r framework	2	10	55	2025.3
+13	marketing strategies	3	10	69	2024.6
+14	systematic review	1	10	57	2025.3
+15	online impulse buying	1	9	45	2024.56
+16	recommendation system	2	9	48	2024.67
+17	trust	3	9	55	2025.44
+18	purchase decisions	5	8	57	2024.88
+19	shopping experience	1	8	50	2024.75
+20	digital commerce	2	7	42	2025.57
+21	recommendation algorithm	4	7	45	2025.43
+22	product recommendations	2	7	43	2024.43
+23	marketing practices	3	7	42	2025.0
+24	brand loyalty	3	6	39	2025.17
+25	urge to buy impulsively	1	6	28	2022.67
+26	digital marketing	1	6	43	2025.17
+27	has become	1	6	37	2024.17
+28	fear of missing out (fomo)	4	6	37	2025.67
+29	user experience	2	6	30	2025.17
+30	tiktok shop	4	6	26	2025.67
+31	influencing consumer	5	6	51	2025.33
+32	have been	1	6	34	2023.33
+33	sor framework	2	5	24	2026.0
+34	consumer decision-making	3	5	31	2025.4
+35	media platforms	1	5	28	2023.6
+36	psychological factors	1	5	37	2025.6
+37	purposive sampling	4	5	30	2026.0
+38	aims to analyze	4	5	39	2025.8
