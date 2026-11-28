@@ -109,9 +109,9 @@ Adhering to the PRISMA 2020 statement (Page et al., 2021), the data collection a
     p1, p2, p3 = ph["phase1_2018_2020"], ph["phase2_2021_2023"], ph["phase3_2024_2026"]
     sec31_intro = f"""### 3.1. Performance Analysis: Publication Trajectories and Leading Outlets
 Bibliometric performance analysis conducted on our {n_inc} final included studies (2018–2026) reveals a rapid growth trajectory across three distinct developmental phases, visually illustrated in Figure 2:
-- Foundational Phase (2018–2020): Exploratory output totaling {p1} studies ({p1/n_inc*100:.1f}%; averaging {p1/3:.1f} publications annually), focusing on collaborative filtering accuracy and early personalization cues (Akram et al., 2018; Chen et al., 2019; Liu et al., 2020; Xiao & Benbasat, 2018).
-- Expansion Phase (2021–2023): Acceleration totaling {p2} studies ({p2/n_inc*100:.1f}%; averaging {p2/3:.1f} publications annually), catalyzed by social commerce, livestreaming, and mobile shopping personalization (Ampadu et al., 2022; Chopdar et al., 2022; Redine et al., 2022; Shi et al., 2023; Zafar et al., 2021; Zhang et al., 2023; Zhu et al., 2023).
-- Maturation and Generative Phase (2024–2026): High-velocity scholarly output totaling {p3} studies ({p3/n_inc*100:.1f}%; averaging {p3/3:.1f} publications annually through November 2026), driven by Generative AI, conversational agents, livestreaming curation, and algorithmic dark patterns (Gallin & Portes, 2024; Lin, 2026; Ngo et al., 2024; Pang et al., 2026; Shamim & Misra, 2025)."""
+- Foundational Phase (2018–2020): Exploratory output totaling {p1} studies ({p1/n_inc*100:.1f}%; averaging {p1/3:.1f} publications annually), focusing on collaborative filtering accuracy and early personalization cues (Akram et al., 2018; Chen et al., 2019; Lin et al., 2020; Xiao et al., 2019; Xiao & Benbasat, 2018; Zhang et al., 2018; Zhu et al., 2020).
+- Expansion Phase (2021–2023): Acceleration totaling {p2} studies ({p2/n_inc*100:.1f}%; averaging {p2/3:.1f} publications annually), catalyzed by social commerce, livestreaming, and mobile shopping personalization (Ampadu et al., 2022; Bag et al., 2021; Chopdar et al., 2022; Hu & Ma, 2023; Redine et al., 2022; Yin & Qiu, 2021; Zhu et al., 2023).
+- Maturation and Generative Phase (2024–2026): High-velocity scholarly output totaling {p3} studies ({p3/n_inc*100:.1f}%; averaging {p3/3:.1f} publications annually through November 2026), driven by Generative AI, conversational agents, livestreaming curation, and algorithmic dark patterns (Gallin & Portes, 2024; Lin, 2026; Pang et al., 2026; Shamim & Misra, 2025)."""
 
     text = re.sub(
         r"### 3\.1\. Performance Analysis: Publication Trajectories and Leading Outlets[\s\S]*?<div class=\"academic-figure-container\"[^\n]*?>\s*<div[^>]*?>Figure 2:",
@@ -120,14 +120,21 @@ Bibliometric performance analysis conducted on our {n_inc} final included studie
         count=1,
     )
 
-    # Rebuild Figure 2 SVG cleanly (scale Y max = 55; base y = 315; height = 210 => 1 unit = 3.818 px)
+    # Rebuild Figure 2 SVG cleanly with dynamic Y-axis scaling
     years_order = [str(y) for y in range(2018, 2027)]
+    max_yr = max(yc.values()) if yc else 1
+    y_scale = 200.0 / max_yr
+    grid_step = 50 if max_yr > 60 else 20
+    grid_lines = []
+    for gv in range(grid_step, max_yr + 1, grid_step):
+        gy = 315 - gv * y_scale
+        grid_lines.append(f'<line x1="70" y1="{gy:.1f}" x2="845" y2="{gy:.1f}" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/> <text x="62" y="{gy + 4:.1f}" text-anchor="end" font-size="10" fill="#64748b">{gv}</text>')
     bars_svg = []
     poly_pts = []
     xs = [95 + i * 82 for i in range(9)]
     for i, yr in enumerate(years_order):
         cnt = yc[yr]
-        h = max(3.0, cnt * 3.8)
+        h = max(3.0, cnt * y_scale)
         y_top = 315 - h
         grad = "url(#barGen2)" if int(yr) >= 2024 else "url(#barGrad)"
         tcol = "#0f766e" if int(yr) >= 2024 else "#0f172a"
@@ -142,7 +149,7 @@ Bibliometric performance analysis conducted on our {n_inc} final included studie
     new_fig2 = f"""<div class="academic-figure-container" style="text-align:center; margin: 2rem 0; padding: 1.5rem; background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
 <div style="font-weight: 700; font-size: 1.05rem; color: #0f172a; margin-bottom: 0.5rem;">Figure 2: Annual Publication Growth Trajectory of the Included Corpus (N = {n_inc}, 2018-2026)</div>
 <div style="font-size: 0.85rem; color: #64748b; margin-bottom: 1.25rem;">Illustrating the three developmental phases from Foundational (n={p1}) and Expansion (n={p2}) to Generative AI 2.0 (n={p3}).</div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="100%" height="auto" style="font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif; background:#ffffff;"> <defs> <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1"> <stop offset="0%" stop-color="#0284c7"/> <stop offset="100%" stop-color="#38bdf8"/> </linearGradient> <linearGradient id="barGen2" x1="0" y1="0" x2="0" y2="1"> <stop offset="0%" stop-color="#0f766e"/> <stop offset="100%" stop-color="#14b8a6"/> </linearGradient> </defs> <rect x="20" y="12" width="840" height="38" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/> <text x="440" y="36" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">ANNUAL PUBLICATION TRAJECTORY OF THE INCLUDED CORPUS (N = {n_inc}, 2018-2026)</text> <rect x="75" y="65" width="230" height="250" fill="#f8fafc" opacity="0.7"/> <text x="190" y="82" text-anchor="middle" font-size="9.5" font-weight="700" fill="#64748b">PHASE 1: FOUNDATIONAL (n={p1})</text> <rect x="315" y="65" width="245" height="250" fill="#f0f9ff" opacity="0.6"/> <text x="437" y="82" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0369a1">PHASE 2: EXPANSION (n={p2})</text> <rect x="570" y="65" width="275" height="250" fill="#f0fdfa" opacity="0.7"/> <text x="707" y="82" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0f766e">PHASE 3: GEN-AI 2.0 (n={p3})</text> <line x1="70" y1="315" x2="845" y2="315" stroke="#475569" stroke-width="1.5"/> <line x1="70" y1="239" x2="845" y2="239" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/> <text x="62" y="243" text-anchor="end" font-size="10" fill="#64748b">20</text> <line x1="70" y1="163" x2="845" y2="163" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/> <text x="62" y="167" text-anchor="end" font-size="10" fill="#64748b">40</text> <text x="62" y="319" text-anchor="end" font-size="10" fill="#64748b">0</text> {' '.join(bars_svg)} <polyline points="{' '.join(poly_pts)}" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4,3"/> <text x="440" y="362" text-anchor="middle" font-size="9.5" fill="#64748b">Yearly counts computed directly on the N = {n_inc} peer-reviewed Dimensions corpus (2018-2026).</text> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="100%" height="auto" style="font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif; background:#ffffff;"> <defs> <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1"> <stop offset="0%" stop-color="#0284c7"/> <stop offset="100%" stop-color="#38bdf8"/> </linearGradient> <linearGradient id="barGen2" x1="0" y1="0" x2="0" y2="1"> <stop offset="0%" stop-color="#0f766e"/> <stop offset="100%" stop-color="#14b8a6"/> </linearGradient> </defs> <rect x="20" y="12" width="840" height="38" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/> <text x="440" y="36" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">ANNUAL PUBLICATION TRAJECTORY OF THE INCLUDED CORPUS (N = {n_inc}, 2018-2026)</text> <rect x="75" y="65" width="230" height="250" fill="#f8fafc" opacity="0.7"/> <text x="190" y="82" text-anchor="middle" font-size="9.5" font-weight="700" fill="#64748b">PHASE 1: FOUNDATIONAL (n={p1})</text> <rect x="315" y="65" width="245" height="250" fill="#f0f9ff" opacity="0.6"/> <text x="437" y="82" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0369a1">PHASE 2: EXPANSION (n={p2})</text> <rect x="570" y="65" width="275" height="250" fill="#f0fdfa" opacity="0.7"/> <text x="707" y="82" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0f766e">PHASE 3: GEN-AI 2.0 (n={p3})</text> <line x1="70" y1="315" x2="845" y2="315" stroke="#475569" stroke-width="1.5"/> {' '.join(grid_lines)} <text x="62" y="319" text-anchor="end" font-size="10" fill="#64748b">0</text> {' '.join(bars_svg)} <polyline points="{' '.join(poly_pts)}" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4,3"/> <text x="440" y="362" text-anchor="middle" font-size="9.5" fill="#64748b">Yearly counts computed directly on the N = {n_inc} peer-reviewed Dimensions corpus (2018-2026).</text> </svg>
 <div style="font-size: 0.8rem; color: #475569; text-align: justify; margin-top: 1rem; line-height: 1.5;"><em>Note</em>: Yearly distribution computed on the final included synthesis corpus ($N = {n_inc}$) across January 2018 to November 2026.</div>
 </div>"""
     text = re.sub(
@@ -317,19 +324,20 @@ The complete PRISMA 2020 screening ledger (`paper1a_osf_screening_log.csv`, docu
     # 8. Add new Top-10 cited references if not present in ## REFERENCES
     new_refs = [
         ("Akram", "2018", "Akram, U., Hui, P., Khan, M. K., Yan, C., & Akram, Z. (2018). Factors Affecting Online Impulse Buying: Evidence from Chinese Social Commerce Environment. *Sustainability*, 10(2), 352. https://doi.org/10.3390/su10020352"),
+        ("Bag", "2021", "Bag, S., Srivastava, G., Al Bashir, M., Kumari, S., Giannakis, M., & Chowdhury, A. H. (2021). Journey of customers in this digital era: Understanding the role of artificial intelligence technologies in user engagement and conversion. *Benchmarking: An International Journal*, 29(7), 2074-2098. https://doi.org/10.1108/bij-07-2021-0415"),
         ("Chen", "2019", "Chen, Y., Lu, Y., Wang, B., & Pan, Z. (2019). How do product recommendations affect impulse buying? An empirical study on WeChat social commerce. *Information & Management*, 56(2), 236-248. https://doi.org/10.1016/j.im.2018.09.002"),
         ("Chopdar", "2022", "Chopdar, P. K., Paul, J., Korfiatis, N., & Lytras, M. D. (2022). Examining the role of consumer impulsiveness in multiple app usage behavior among mobile shoppers. *Journal of Business Research*, 140, 657-669. https://doi.org/10.1016/j.jbusres.2021.11.031"),
-        ("Cui", "2022", "Cui, Y., Liu, Y., & Gu, M. (2022). Investigating the Key Drivers of Impulsive Buying Behavior in Live Streaming. *Journal of Global Information Management*, 30(1), 1-18. https://doi.org/10.4018/jgim.314226"),
-        ("Gao", "2025", "Gao, Y., & Liang, J. (2025). The Impact of AI-Powered Try-On Technology on Online Consumers’ Impulsive Buying Intention: The Moderating Role of Brand Trust. *Sustainability*, 17(7), 2789. https://doi.org/10.3390/su17072789"),
-        ("Liu", "2020", "Liu, Y., Li, Q., Edu, T., Jozsa, L., & Negricea, I. C. (2020). Mobile shopping platform characteristics as consumer behavior determinants. *Asia Pacific Journal of Marketing and Logistics*, 32(7), 1565-1587. https://doi.org/10.1108/apjml-05-2019-0308"),
-        ("Ngo", "2024", "Ngo, T. T. A., Nguyen, H. L. T., Nguyen, H. P., Mai, H. T. A., Mai, T. H. T., & Hoang, P. L. (2024). A comprehensive study on factors influencing online impulse buying behavior: Evidence from Shopee video platform. *Heliyon*, 10(15), e35743. https://doi.org/10.1016/j.heliyon.2024.e35743"),
-        ("Shi", "2023", "Shi, W., Li, F., & Hu, M. (2023). The influence of atmospheric cues and social presence on consumers' impulse buying behaviors in e-commerce live streaming. *Electronic Commerce Research*, 25(4), 3325-3353. https://doi.org/10.1007/s10660-023-09793-3"),
-        ("Zafar", "2021", "Zafar, A. U., Shen, J., Shahzad, M., & Islam, T. (2021). Relation of impulsive urges and sustainable purchase decisions in the personalized environment of social media. *Sustainable Production and Consumption*, 25, 591-603. https://doi.org/10.1016/j.spc.2020.11.020"),
-        ("Zhang", "2023", "Zhang, X., Shi, Y., Li, T., Guan, Y., & Cui, X. (2023). How Do Virtual AI Streamers Influence Viewers’ Livestream Shopping Behavior? The Effects of Persuasive Factors and the Mediating Role of Arousal. *Information Systems Frontiers*, 26(5), 1803-1834. https://doi.org/10.1007/s10796-023-10425-2"),
+        ("Hu", "2023", "Hu, H., & Ma, F. (2023). Human-like bots are not humans: The weakness of sensory language for virtual streamers in livestream commerce. *Journal of Retailing and Consumer Services*, 75, 103541. https://doi.org/10.1016/j.jretconser.2023.103541"),
+        ("Lin", "2020", "Lin, J., Guo, J., Turel, O., & Liu, S. (2020). Purchasing organic food with social commerce: An integrated food-technology consumption values perspective. *International Journal of Information Management*, 51, 102033. https://doi.org/10.1016/j.ijinfomgt.2019.11.001"),
+        ("Xiao", "2019", "Xiao, L., Guo, F., Yu, F., & Liu, S. (2019). The Effects of Online Shopping Context Cues on Consumers’ Purchase Intention for Cross-Border E-Commerce Sustainability. *Sustainability*, 11(10), 2777. https://doi.org/10.3390/su11102777"),
+        ("Yin", "2021", "Yin, J., & Qiu, X. (2021). AI Technology and Online Purchase Intention: Structural Equation Model Based on Perceived Value. *Sustainability*, 13(10), 5671. https://doi.org/10.3390/su13105671"),
+        ("Zhang", "2018", "Zhang, H., Zhao, L., & Gupta, S. (2018). The role of online product recommendations on customer decision making and loyalty in social shopping communities. *International Journal of Information Management*, 38(1), 150-166. https://doi.org/10.1016/j.ijinfomgt.2017.07.006"),
+        ("Zhu", "2020", "Zhu, B., Kowatthanakul, S., & Satanasavapak, P. (2020). Generation Y consumer online repurchase intention in Bangkok. *International Journal of Retail & Distribution Management*, 48(1), 53-69. https://doi.org/10.1108/ijrdm-04-2018-0071"),
     ]
     parts = text.split("## REFERENCES")
     body_part, ref_part = parts[0], parts[1]
-    ref_lines = [l.strip() for l in ref_part.strip().split("\n") if l.strip() and not l.strip().startswith("Abdelsalam,")]
+    drop_prefixes = ("Abdelsalam,", "Cui, Y.,", "Gao, Y.,", "Liu, Y.,", "Ngo, T. T. A., Nguyen, H. L. T.", "Shi, W.,", "Zafar,", "Zhang, X., Shi,")
+    ref_lines = [l.strip() for l in ref_part.strip().split("\n") if l.strip() and not l.strip().startswith(drop_prefixes)]
     for auth, yr, ref_str in new_refs:
         if not any(rl.startswith(auth) and f"({yr})" in rl for rl in ref_lines):
             ref_lines.append(ref_str)

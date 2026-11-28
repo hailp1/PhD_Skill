@@ -44,15 +44,16 @@ AI_RE = re.compile(
     r"artificial intelligence|\bAI\b|recommend|algorithm|personaliz|chatbot|conversational agent|generative",
     re.I,
 )
-IMP_RE = re.compile(r"impuls|unplanned|spontaneous|urge to buy", re.I)
+IMP_RE = re.compile(
+    r"impuls|unplanned|spontaneous|urge to buy|compulsive|habit|buying behavior|purchase intention|purchasing behavior|consumer behavior|consumer decision",
+    re.I,
+)
 ECOM_RE = re.compile(
-    r"e-commerce|ecommerce|online shop|digital retail|electronic commerce|social commerce|"
-    r"mobile commerce|live.?stream|livestream|online retail|online store|online consumer|"
-    r"online purchase|online buy|shopping",
+    r"consumer|customer|shopper|buyer|purchas|buying|e-commerce|ecommerce|retail|shopping|social commerce|mobile commerce|live.?stream|livestream|marketplace|marketing|brand|digital platform|habit",
     re.I,
 )
 NON_RETAIL_RE = re.compile(
-    r"clinical|patient|hospital|psychiatric|mental health|psychotherapy|cancer|diabetes|neurolog|mri|eeg|surgical|nursing",
+    r"cancer|tumor|surgical|chemotherapy|radiology|pathology|icu|sepsis|cardiac|stroke|epilepsy|alzheimer",
     re.I,
 )
 
@@ -153,12 +154,12 @@ def main():
         txt = f"{title} {abstract}"
         if NON_RETAIL_RE.search(txt):
             counts["EXCLUDE_EC3_NON_RETAIL"] += 1
-            log_rows.append([pub_id, doi, yr_str, source, title, cited, "EXCLUDE", "EC3_NON_RETAIL", "Clinical/medical non-retail context"])
+            log_rows.append([pub_id, doi, yr_str, source, title, cited, "EXCLUDE", "EC3_NON_RETAIL", "Clinical/medical domain unrelated to consumer behavior"])
             continue
 
         if not (AI_RE.search(txt) and IMP_RE.search(txt) and ECOM_RE.search(txt)):
             counts["EXCLUDE_EC2_OFF_TOPIC"] += 1
-            log_rows.append([pub_id, doi, yr_str, source, title, cited, "EXCLUDE", "EC2_OFF_TOPIC", "Missing concurrent AI/recommender + impulse + digital commerce nexus in T/A"])
+            log_rows.append([pub_id, doi, yr_str, source, title, cited, "EXCLUDE", "EC2_OFF_TOPIC", "Missing concurrent AI/recommender + impulse/habit/buying + consumer/commerce nexus in T/A"])
             continue
 
         counts["INCLUDE"] += 1
