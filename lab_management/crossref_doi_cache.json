@@ -1960,5 +1960,114 @@
     "title": "Large-scale comparison of bibliographic data sources: Scopus, Web of\n                    Science, Dimensions, Crossref, and Microsoft Academic",
     "journal": "Quantitative Science Studies",
     "retracted": false
+  },
+  "10.1109/access.2020.2993671": {
+    "ok": true,
+    "doi": "10.1109/access.2020.2993671",
+    "authors": [
+      "abdelsalam",
+      "salim",
+      "alias",
+      "husain"
+    ],
+    "title": "Understanding Online Impulse Buying Behavior in Social Commerce: A Systematic Literature Review",
+    "journal": "IEEE Access",
+    "retracted": false
+  },
+  "10.3390/su10020352": {
+    "ok": true,
+    "doi": "10.3390/su10020352",
+    "authors": [
+      "akram",
+      "hui",
+      "khan",
+      "yan",
+      "akram"
+    ],
+    "title": "Factors Affecting Online Impulse Buying: Evidence from Chinese Social Commerce Environment",
+    "journal": "Sustainability",
+    "retracted": false
+  },
+  "10.1016/j.im.2018.09.002": {
+    "ok": true,
+    "doi": "10.1016/j.im.2018.09.002",
+    "authors": [
+      "chen",
+      "lu",
+      "wang",
+      "pan"
+    ],
+    "title": "How do product recommendations affect impulse buying? An empirical study on WeChat social commerce",
+    "journal": "Information &amp; Management",
+    "retracted": false
+  },
+  "10.1016/j.jbusres.2021.11.031": {
+    "ok": true,
+    "doi": "10.1016/j.jbusres.2021.11.031",
+    "authors": [
+      "chopdar",
+      "paul",
+      "korfiatis",
+      "lytras"
+    ],
+    "title": "Examining the role of consumer impulsiveness in multiple app usage behavior among mobile shoppers",
+    "journal": "Journal of Business Research",
+    "retracted": false
+  },
+  "10.1108/apjml-05-2019-0308": {
+    "ok": true,
+    "doi": "10.1108/apjml-05-2019-0308",
+    "authors": [
+      "liu",
+      "li",
+      "edu",
+      "jozsa",
+      "negricea"
+    ],
+    "title": "Mobile shopping platform characteristics as consumer behavior determinants",
+    "journal": "Asia Pacific Journal of Marketing and Logistics",
+    "retracted": false
+  },
+  "10.1016/j.heliyon.2024.e35743": {
+    "ok": true,
+    "doi": "10.1016/j.heliyon.2024.e35743",
+    "authors": [
+      "ngo",
+      "nguyen",
+      "nguyen",
+      "mai",
+      "mai",
+      "hoang"
+    ],
+    "title": "A comprehensive study on factors influencing online impulse buying behavior: Evidence from Shopee video platform",
+    "journal": "Heliyon",
+    "retracted": false
+  },
+  "10.1016/j.spc.2020.11.020": {
+    "ok": true,
+    "doi": "10.1016/j.spc.2020.11.020",
+    "authors": [
+      "zafar",
+      "shen",
+      "shahzad",
+      "islam"
+    ],
+    "title": "Relation of impulsive urges and sustainable purchase decisions in the personalized environment of social media",
+    "journal": "Sustainable Production and Consumption",
+    "retracted": false
+  },
+  "10.1007/s10796-023-10425-2": {
+    "ok": true,
+    "doi": "10.1007/s10796-023-10425-2",
+    "authors": [
+      "zhang",
+      "shi",
+      "li",
+      "guan",
+      "cui"
+    ],
+    "title": "How Do Virtual AI Streamers Influence Viewers’ Livestream Shopping Behavior? The Effects of Persuasive Factors and the Mediating Role of Arousal",
+    "journal": "Information Systems Frontiers",
+    "retracted": false
   }
 }

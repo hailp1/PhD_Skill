@@ -127,7 +127,7 @@ class AcademicQAGate:
                 self.score -= 10
 
         # 3. 5-pillar research agenda completeness
-        agenda_match = re.search(r'5-pillar[^\n]*agenda([\s\S]*?)(?:5\.5|6\.|\Z)', self.text, re.IGNORECASE)
+        agenda_match = re.search(r'5-Pillar Future Research Agenda([\s\S]*?)(?:\n#{2,3}\s+(?:5\.4|5\.5|6\.)|\Z)', self.text, re.IGNORECASE)
         if agenda_match:
             agenda_text = agenda_match.group(1)
             pillars = re.findall(r'(?:Pillar|Item|\d\.)\s*[A-Z]', agenda_text)
