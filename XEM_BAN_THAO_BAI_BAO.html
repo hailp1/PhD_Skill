@@ -965,8 +965,6 @@
                 const link = document.createElement('a');
                 link.href = '#' + anchorId;
                 link.className = h.tagName.toLowerCase() === 'h3' ? 'toc-link sub' : 'toc-link';
-                // Lấy tiêu đề gọn gàng
-                const rawText = h.innerText.replace(/^#+\s*/, '').trim();
                 link.innerText = rawText.length > 35 ? rawText.substring(0, 35) + '...' : rawText;
                 link.title = rawText;
                 link.onclick = (e) => {
