@@ -119,6 +119,7 @@ class AcademicQAGate:
             (r'Zheng[^\n]{0,100}2019[^\n]{0,120}social support and credibility', "Zheng et al. (2019) IJIM 48 is about hedonic/utilitarian browsing, not social support"),
             (r'\b100%\s+verified\b|\bgold\s+standard\b|\bexceptionally\s+high\b', "Remove self-praise / unsubstantiated boastful phrasing"),
             (r'Arousal\s*>\s*UBI', "Invalid math '>' notation for causal arrow; use '->' or equation format"),
+            (r'2027\s+early-access', "Out-of-window 2027 early-access records must be excluded from 2018-2026 corpus"),
         ]
         for pattern, correction in typos:
             if re.search(pattern, self.text, re.IGNORECASE):
@@ -170,6 +171,27 @@ class AcademicQAGate:
                 self.red_flags.append(f"RENDERING LEAK: Figure/Table block #{idx} contains blank lines that break marked.js HTML parsing.")
                 self.score -= 15
 
+        # Check KaTeX double-escaped \\rightarrow inside markdown math
+        if r'$\\rightarrow$' in body_prose or r'\\rightarrow' in body_prose:
+            self.red_flags.append(r"KATEX SYNTAX ERROR: Detected '$\\rightarrow$' (double backslash) in prose/tables. Use single backslash '$\rightarrow$'.")
+            self.score -= 10
+
+        # Check sequential Table & Figure caption numbering
+        for kind in ("Table", "Figure"):
+            captions = re.findall(rf'(?:^|\n|<div[^>]*>|\*\*)\s*{kind}\s+(\d+[A-Z]?)\s*:', body_prose)
+            seen = set()
+            prev_num = 0
+            for cap in captions:
+                if cap in seen:
+                    self.red_flags.append(f"NUMBERING DUPLICATE: Duplicate '{kind} {cap}:' caption detected.")
+                    self.score -= 10
+                seen.add(cap)
+                num_val = int(re.match(r'\d+', cap).group(0))
+                if num_val < prev_num:
+                    self.red_flags.append(f"NUMBERING ORDER ERROR: '{kind} {cap}' appears after '{kind} {prev_num}'.")
+                    self.score -= 10
+                prev_num = num_val
+
     def audit_two_way_citations(self):
         """Gate 6: Strict 1-to-1 Two-Way Citation Parity & Pure APA 7th Format."""
         print("[CHECK 6] Auditing Two-Way Citation Parity & APA 7th Format...")
@@ -201,6 +223,24 @@ class AcademicQAGate:
             self.score -= 15
         if uncited_refs:
             self.red_flags.append(f"REFERENCE PADDING ERROR: Found {len(uncited_refs)} uncited references in References list (e.g. {uncited_refs[:5]}).")
+            self.score -= 20
+
+        # Reverse parity check: Body -> References (ensure cited works exist in References)
+        clean_body = re.sub(r'<svg[\s\S]*?</svg>', '', body)
+        cited_pairs = set()
+        for m in re.finditer(r'\b([A-Z][A-Za-z\-]+)(?:\s+(?:et\s+al\.|&\s+[A-Z][A-Za-z\-]+))?(?:\'s)?\s*\((\d{4}[a-z]?)\)', clean_body):
+            cited_pairs.add((m.group(1), m.group(2)))
+        for m in re.finditer(r'\(([A-Z][A-Za-z\-]+)(?:\s+(?:et\s+al\.|&\s+[A-Z][A-Za-z\-]+))?,\s*(\d{4}[a-z]?)\)', clean_body):
+            cited_pairs.add((m.group(1), m.group(2)))
+        missing_in_refs = []
+        refs_lower = refs_sec.lower()
+        for auth, yr in sorted(cited_pairs):
+            if auth in ("Regulation", "Figure", "Table", "Proposition", "Cluster", "Phase", "Pillar", "Study", "Wave", "Time", "Item"):
+                continue
+            if not re.search(r'\b' + re.escape(auth.lower()) + r'[^\n]{0,220}\b' + yr + r'\b', refs_lower):
+                missing_in_refs.append(f"{auth} ({yr})")
+        if missing_in_refs:
+            self.red_flags.append(f"MISSING IN REFERENCES: Cited in body but absent from References: {missing_in_refs[:5]}")
             self.score -= 20
 
         # Live/Cached Crossref DOI, Retraction & Collision Gate
