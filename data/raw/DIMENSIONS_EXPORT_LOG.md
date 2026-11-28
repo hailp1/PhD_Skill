@@ -4,10 +4,10 @@
 ---
 
 ## 1. Thông tin File Dữ liệu Gốc (Source Metadata)
-- **Tên file gốc:** `Dimensions-Publication-2026-11-28_08-04-54.csv` *(gốc tại thư mục dự án)* và `Dimensions-Publication-2026-11-28_08-12-01.csv` *(bản xuất đầy đủ trường thư mục VOSviewer)*.
-- **File chuẩn hóa lưu trữ trong Pipeline:** [dimensions_raw_export.csv](file:///d:/SE_Project/khoahoc/data/raw/dimensions_raw_export.csv) (sao chép nguyên vẹn từ `Dimensions-Publication-2026-11-28_08-12-01.csv`).
+- **Tên file gốc:** `Dimensions-Publication-2026-11-28_08-40-19.csv` *(xuất ngày 28/11/2026 lúc 08:40:19, lọc sẵn `Article` và `2018–2026` trên Dimensions)*.
+- **File chuẩn hóa lưu trữ trong Pipeline:** [dimensions_raw_export.csv](file:///d:/SE_Project/khoahoc/data/raw/dimensions_raw_export.csv) (sao chép nguyên vẹn từ `Dimensions-Publication-2026-11-28_08-40-19.csv`).
 - **Cơ sở dữ liệu:** Dimensions (`https://app.dimensions.ai`), Digital Science & Research Solutions Inc.
-- **Ngày xuất (Export Date):** `2026-11-28` (`08:12:01 UTC+7` / `Nov 28, 2026`).
+- **Ngày xuất (Export Date):** `2026-11-28` (`08:40:19 UTC+7` / `Nov 28, 2026`).
 - **Tổng số bản ghi thô (Raw Records):** `2,500` bản ghi (trần xuất 2,500 dòng/lần ở chế độ Bibliometric / VOSviewer Export).
 - **Định dạng xuất (Export Format):** Full Bibliometric / VOSviewer CSV (`skiprows=1`, dòng 1 chứa metadata/disclaimer của Dimensions).
 - **Các cột dữ liệu (15 trường):**

@@ -70,11 +70,18 @@ def main():
     # 3. Section 2.1 date & Section 2.3 screening funnel
     text = text.replace("executed on November 15, 2026 in the Dimensions scholarly database (`title_abstract` / full-data indexing)",
                         "executed on November 28, 2026 in the Dimensions scholarly database (`full data` indexing, bibliographic export format)")
+    n_prescreen = p["excluded_ic1_window"] + p["excluded_ec1_non_journal"] + p["excluded_no_abstract_retracted"]
+    n_ta_excl = p["excluded_ec3_non_retail"] + p["excluded_ec2_off_topic"]
+    ic1_note = (
+        "0 out-of-window records (100% within 2018-2026)"
+        if p["excluded_ic1_window"] == 0
+        else f"{p['excluded_ic1_window']} out-of-window records"
+    )
     sec23_repl = f"""### 2.3. The 4-Stage Screening Funnel ({p['raw_identified']:,} to {n_inc} Articles)
 Adhering to the PRISMA 2020 statement (Page et al., 2021), the data collection and screening process progressed through four transparent, auditable stages implemented via reproducible Python rule-based filtering (`run_full_slr_from_dimensions.py`) followed by manual verification of all included records:
 1. Identification: Database retrieval from Dimensions on November 28, 2026 yielded {p['raw_identified']:,} initial records with valid DOIs (`0` duplicate DOIs detected under EC4).
-2. Pre-Screen Filtering (Window, Venue & Quality): Programmatic filtering against IC1 and EC1–EC2 removed {p['excluded_ic1_window']} out-of-window records (88 pre-2018; 2 missing publication year; 10 early-access 2027), {p['excluded_ec1_non_journal']} conference proceedings, book chapters/series, and preprints, {p['no_abstract']} records lacking abstracts, and {p['retracted']} retracted notices (`n = 636` total pre-screen exclusions), leaving {p['eligible_ta_screened']:,} eligible peer-reviewed journal articles.
-3. Title & Abstract Screening: Deterministic lexical screening against EC2 and EC3 excluded {p['excluded_ec3_non_retail']} clinical/medical non-retail studies and {p['excluded_ec2_off_topic']:,} off-topic records lacking the concurrent AI/recommender, impulse buying, and digital commerce nexus in Title/Abstract (`n = 1,749` T/A exclusions).
+2. Pre-Screen Filtering (Window, Venue & Quality): Programmatic filtering against IC1 and EC1–EC2 confirmed {ic1_note}, and removed {p['excluded_ec1_non_journal']} conference/book-series/preprint records, {p['no_abstract']} records lacking abstracts, and {p['retracted']} retracted notices (`n = {n_prescreen}` total pre-screen exclusions), leaving {p['eligible_ta_screened']:,} eligible peer-reviewed journal articles.
+3. Title & Abstract Screening: Deterministic lexical screening against EC2 and EC3 excluded {p['excluded_ec3_non_retail']} clinical/medical non-retail studies and {p['excluded_ec2_off_topic']:,} off-topic records lacking the concurrent AI/recommender, impulse buying, and digital commerce nexus in Title/Abstract (`n = {n_ta_excl:,}` T/A exclusions).
 4. Eligibility Audit & Final Inclusion: Independent human verification of all {n_inc} remaining records confirmed 100% compliance with IC1–IC4 (`0` additional full-text exclusions), establishing the final synthesis corpus of {n_inc} peer-reviewed journal articles (2018-2026). All {n_inc} included articles were analyzed via co-word network mapping ($T \\ge 3$ occurrences across Title + Abstract, full counting, association strength normalization, yielding {st['vosviewer']['active_terms']} structural terms and {st['vosviewer']['edges']} co-occurrence links). An automated Python script scanned Title and Abstract fields across all {n_inc} included records using the regular-expression dictionary in Appendix A (`1 = present`, `0 = absent`). Full-text two-coder construct coding remains a priority step for future meta-analytic extensions.
 
 ### 2.4. PRISMA 2020 Flow Diagram"""
@@ -309,10 +316,11 @@ The complete PRISMA 2020 screening ledger (`paper1a_osf_screening_log.csv`, docu
 
     # 8. Add new Top-10 cited references if not present in ## REFERENCES
     new_refs = [
-        ("Abdelsalam", "2020", "Abdelsalam, S., Salim, N., Alias, R. A., & Husain, O. (2020). Understanding Online Impulse Buying Behavior in Social Commerce: A Systematic Literature Review. *IEEE Access*, 8, 89041-89058. https://doi.org/10.1109/access.2020.2993671"),
         ("Akram", "2018", "Akram, U., Hui, P., Khan, M. K., Yan, C., & Akram, Z. (2018). Factors Affecting Online Impulse Buying: Evidence from Chinese Social Commerce Environment. *Sustainability*, 10(2), 352. https://doi.org/10.3390/su10020352"),
         ("Chen", "2019", "Chen, Y., Lu, Y., Wang, B., & Pan, Z. (2019). How do product recommendations affect impulse buying? An empirical study on WeChat social commerce. *Information & Management*, 56(2), 236-248. https://doi.org/10.1016/j.im.2018.09.002"),
         ("Chopdar", "2022", "Chopdar, P. K., Paul, J., Korfiatis, N., & Lytras, M. D. (2022). Examining the role of consumer impulsiveness in multiple app usage behavior among mobile shoppers. *Journal of Business Research*, 140, 657-669. https://doi.org/10.1016/j.jbusres.2021.11.031"),
+        ("Cui", "2022", "Cui, Y., Liu, Y., & Gu, M. (2022). Investigating the Key Drivers of Impulsive Buying Behavior in Live Streaming. *Journal of Global Information Management*, 30(1), 1-18. https://doi.org/10.4018/jgim.314226"),
+        ("Gao", "2025", "Gao, Y., & Liang, J. (2025). The Impact of AI-Powered Try-On Technology on Online Consumers’ Impulsive Buying Intention: The Moderating Role of Brand Trust. *Sustainability*, 17(7), 2789. https://doi.org/10.3390/su17072789"),
         ("Liu", "2020", "Liu, Y., Li, Q., Edu, T., Jozsa, L., & Negricea, I. C. (2020). Mobile shopping platform characteristics as consumer behavior determinants. *Asia Pacific Journal of Marketing and Logistics*, 32(7), 1565-1587. https://doi.org/10.1108/apjml-05-2019-0308"),
         ("Ngo", "2024", "Ngo, T. T. A., Nguyen, H. L. T., Nguyen, H. P., Mai, H. T. A., Mai, T. H. T., & Hoang, P. L. (2024). A comprehensive study on factors influencing online impulse buying behavior: Evidence from Shopee video platform. *Heliyon*, 10(15), e35743. https://doi.org/10.1016/j.heliyon.2024.e35743"),
         ("Shi", "2023", "Shi, W., Li, F., & Hu, M. (2023). The influence of atmospheric cues and social presence on consumers' impulse buying behaviors in e-commerce live streaming. *Electronic Commerce Research*, 25(4), 3325-3353. https://doi.org/10.1007/s10660-023-09793-3"),
@@ -321,7 +329,7 @@ The complete PRISMA 2020 screening ledger (`paper1a_osf_screening_log.csv`, docu
     ]
     parts = text.split("## REFERENCES")
     body_part, ref_part = parts[0], parts[1]
-    ref_lines = [l.strip() for l in ref_part.strip().split("\n") if l.strip()]
+    ref_lines = [l.strip() for l in ref_part.strip().split("\n") if l.strip() and not l.strip().startswith("Abdelsalam,")]
     for auth, yr, ref_str in new_refs:
         if not any(rl.startswith(auth) and f"({yr})" in rl for rl in ref_lines):
             ref_lines.append(ref_str)

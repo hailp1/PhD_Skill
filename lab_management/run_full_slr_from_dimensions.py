@@ -293,7 +293,7 @@ def main():
 
     stats = {
         "export_date": "2026-11-28",
-        "source_file": "Dimensions-Publication-2026-11-28_08-12-01.csv",
+        "source_file": "Dimensions-Publication-2026-11-28_08-40-19.csv",
         "prisma": {
             "raw_identified": n_raw,
             "duplicates_removed": dup_count,

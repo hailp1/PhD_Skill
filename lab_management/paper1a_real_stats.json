@@ -1,49 +1,49 @@
 {
   "export_date": "2026-11-28",
-  "source_file": "Dimensions-Publication-2026-11-28_08-12-01.csv",
+  "source_file": "Dimensions-Publication-2026-11-28_08-40-19.csv",
   "prisma": {
     "raw_identified": 2500,
     "duplicates_removed": 0,
     "unique_records": 2500,
-    "excluded_ic1_window": 100,
-    "excluded_ec1_non_journal": 498,
-    "excluded_no_abstract_retracted": 38,
-    "no_abstract": 27,
-    "retracted": 11,
-    "eligible_ta_screened": 1864,
-    "excluded_ec3_non_retail": 54,
-    "excluded_ec2_off_topic": 1695,
-    "final_included": 115
+    "excluded_ic1_window": 0,
+    "excluded_ec1_non_journal": 45,
+    "excluded_no_abstract_retracted": 9,
+    "no_abstract": 7,
+    "retracted": 2,
+    "eligible_ta_screened": 2446,
+    "excluded_ec3_non_retail": 47,
+    "excluded_ec2_off_topic": 2282,
+    "final_included": 117
   },
   "yearly_counts": {
     "2018": 1,
     "2019": 1,
-    "2020": 2,
-    "2021": 2,
+    "2020": 1,
+    "2021": 1,
     "2022": 4,
-    "2023": 11,
-    "2024": 12,
-    "2025": 33,
-    "2026": 49
+    "2023": 9,
+    "2024": 13,
+    "2025": 41,
+    "2026": 46
   },
   "phases": {
-    "phase1_2018_2020": 4,
-    "phase2_2021_2023": 17,
-    "phase3_2024_2026": 94
+    "phase1_2018_2020": 3,
+    "phase2_2021_2023": 14,
+    "phase3_2024_2026": 100
   },
   "top_journals": [
     {
       "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
-      "count": 5,
-      "pct": 4.3
+      "count": 6,
+      "pct": 5.1
     },
     {
       "journal": "Journal of Retailing and Consumer Services",
       "count": 4,
-      "pct": 3.5
+      "pct": 3.4
     },
     {
-      "journal": "Acta Psychologica",
+      "journal": "International Review of Management and Marketing",
       "count": 3,
       "pct": 2.6
     },
@@ -68,17 +68,17 @@
       "pct": 2.6
     },
     {
-      "journal": "Frontiers in Psychology",
+      "journal": "Journal of Promotion Management",
       "count": 2,
       "pct": 1.7
     },
     {
-      "journal": "Behavioral Sciences",
+      "journal": "Journal of ASIAN Behavioural Studies",
       "count": 2,
       "pct": 1.7
     },
     {
-      "journal": "International Review of Management and Marketing",
+      "journal": "Journal of Business Research",
       "count": 2,
       "pct": 1.7
     }
@@ -107,17 +107,6 @@
       "pagination": "352"
     },
     {
-      "authors": "Abdelsalam et al.",
-      "year": "2020",
-      "journal": "IEEE Access",
-      "title": "Understanding Online Impulse Buying Behavior in Social Commerce: A Systematic Literature Review",
-      "doi": "10.1109/access.2020.2993671",
-      "citations": 164,
-      "volume": "8",
-      "issue": "",
-      "pagination": "89041-89058"
-    },
-    {
       "authors": "Chopdar et al.",
       "year": "2022",
       "journal": "Journal of Business Research",
@@ -127,17 +116,6 @@
       "volume": "140",
       "issue": "",
       "pagination": "657-669"
-    },
-    {
-      "authors": "Zafar et al.",
-      "year": "2021",
-      "journal": "Sustainable Production and Consumption",
-      "title": "Relation of impulsive urges and sustainable purchase decisions in the personalized environment of social media",
-      "doi": "10.1016/j.spc.2020.11.020",
-      "citations": 121,
-      "volume": "25",
-      "issue": "",
-      "pagination": "591-603"
     },
     {
       "authors": "Zhang et al.",
@@ -193,114 +171,148 @@
       "volume": "32",
       "issue": "7",
       "pagination": "1565-1587"
+    },
+    {
+      "authors": "Cui et al.",
+      "year": "2022",
+      "journal": "Journal of Global Information Management",
+      "title": "Investigating the Key Drivers of Impulsive Buying Behavior in Live Streaming",
+      "doi": "10.4018/jgim.314226",
+      "citations": 69,
+      "volume": "30",
+      "issue": "1",
+      "pagination": "1-18"
+    },
+    {
+      "authors": "Gao et al.",
+      "year": "2025",
+      "journal": "Sustainability",
+      "title": "The Impact of AI-Powered Try-On Technology on Online Consumers’ Impulsive Buying Intention: The Moderating Role of Brand Trust",
+      "doi": "10.3390/su17072789",
+      "citations": 54,
+      "volume": "17",
+      "issue": "7",
+      "pagination": "2789"
     }
   ],
   "vosviewer": {
     "active_terms": 25,
-    "edges": 232,
+    "edges": 239,
     "clusters": {
       "1": {
         "terms_count": 8,
-        "occurrences": 207,
-        "tls": 894,
+        "occurrences": 215,
+        "tls": 952,
         "apy": 2024.99,
         "top_terms": [
           {
             "term": "personalized recommendation",
-            "occ": 54,
-            "tls": 218,
-            "apy": 2024.72
+            "occ": 61,
+            "tls": 257,
+            "apy": 2024.87
           },
           {
             "term": "artificial intelligence",
-            "occ": 45,
-            "tls": 197,
-            "apy": 2025.33
+            "occ": 51,
+            "tls": 230,
+            "apy": 2025.27
           },
           {
             "term": "algorithmic curation",
             "occ": 32,
-            "tls": 137,
-            "apy": 2025.56
+            "tls": 129,
+            "apy": 2025.38
           },
           {
             "term": "live streaming",
-            "occ": 27,
-            "tls": 125,
-            "apy": 2024.96
+            "occ": 26,
+            "tls": 121,
+            "apy": 2024.88
           }
         ]
       },
       "2": {
         "terms_count": 6,
-        "occurrences": 92,
-        "tls": 448,
-        "apy": 2024.86,
+        "occurrences": 99,
+        "tls": 480,
+        "apy": 2025.01,
         "top_terms": [
           {
             "term": "trust",
-            "occ": 27,
-            "tls": 127,
-            "apy": 2024.96
-          },
-          {
-            "term": "S-O-R framework",
-            "occ": 24,
-            "tls": 119,
-            "apy": 2024.46
+            "occ": 35,
+            "tls": 168,
+            "apy": 2025.11
           },
           {
             "term": "cognitive fit / fluency",
-            "occ": 20,
-            "tls": 110,
+            "occ": 18,
+            "tls": 109,
             "apy": 2025.5
           },
           {
-            "term": "e-satisfaction",
-            "occ": 9,
-            "tls": 30,
+            "term": "S-O-R framework",
+            "occ": 18,
+            "tls": 88,
             "apy": 2024.67
+          },
+          {
+            "term": "e-satisfaction",
+            "occ": 13,
+            "tls": 49,
+            "apy": 2024.85
           }
         ]
       },
       "3": {
         "terms_count": 7,
-        "occurrences": 205,
-        "tls": 916,
-        "apy": 2024.61,
+        "occurrences": 198,
+        "tls": 900,
+        "apy": 2024.74,
         "top_terms": [
           {
             "term": "impulse buying",
-            "occ": 77,
-            "tls": 311,
-            "apy": 2024.56
+            "occ": 81,
+            "tls": 340,
+            "apy": 2024.85
           },
           {
             "term": "emotional arousal",
             "occ": 41,
-            "tls": 192,
-            "apy": 2025.32
+            "tls": 197,
+            "apy": 2025.2
           },
           {
             "term": "scarcity & urgency",
             "occ": 28,
-            "tls": 128,
+            "tls": 121,
             "apy": 2025.11
           },
           {
             "term": "flow experience",
-            "occ": 19,
+            "occ": 17,
             "tls": 93,
-            "apy": 2024.68
+            "apy": 2024.47
           }
         ]
       },
       "4": {
         "terms_count": 4,
-        "occurrences": 18,
-        "tls": 92,
-        "apy": 2025.56,
+        "occurrences": 28,
+        "tls": 146,
+        "apy": 2025.57,
         "top_terms": [
+          {
+            "term": "privacy concerns",
+            "occ": 9,
+            "tls": 48,
+            "apy": 2025.44
+          },
+          {
+            "term": "post-purchase regret",
+            "occ": 8,
+            "tls": 34,
+            "apy": 2025.75
+          },
           {
             "term": "self-control",
             "occ": 6,
@@ -308,22 +320,10 @@
             "apy": 2025.67
           },
           {
-            "term": "post-purchase regret",
-            "occ": 6,
-            "tls": 27,
-            "apy": 2025.67
-          },
-          {
-            "term": "privacy concerns",
-            "occ": 3,
-            "tls": 16,
-            "apy": 2025.33
-          },
-          {
             "term": "ego depletion / fatigue",
-            "occ": 3,
-            "tls": 14,
-            "apy": 2025.33
+            "occ": 5,
+            "tls": 29,
+            "apy": 2025.4
           }
         ]
       }
@@ -333,38 +333,38 @@
     {
       "category": "S-O-R Framing Mentions",
       "pattern": "stimulus-organism-response|s-o-r|sor model|sor framework",
-      "count": 27,
-      "pct": 23.48
+      "count": 21,
+      "pct": 17.95
     },
     {
       "category": "Regret / Dissonance / Return Mentions",
       "pattern": "post-purchase regret|cognitive dissonance|regret|product return",
       "count": 8,
-      "pct": 6.96
+      "pct": 6.84
     },
     {
       "category": "Interaction / Moderated Mediation Mentions",
       "pattern": "interaction effect|multiplicative|moderated mediation|moderating effect",
-      "count": 9,
-      "pct": 7.83
+      "count": 7,
+      "pct": 5.98
     },
     {
       "category": "Curvilinear / Threshold Mentions",
       "pattern": "inverted-u|inverted u|curvilinear|threshold effect|quadratic|non-linear|nonlinear",
       "count": 2,
-      "pct": 1.74
+      "pct": 1.71
     },
     {
       "category": "Privacy / Reactance / Dark-Pattern Mentions",
       "pattern": "privacy|surveillance|reactance|dark pattern",
-      "count": 8,
-      "pct": 6.96
+      "count": 11,
+      "pct": 9.4
     },
     {
       "category": "Ego Depletion / Cognitive Load Mentions",
       "pattern": "ego depletion|self-regulatory|decision fatigue|cognitive load",
-      "count": 3,
-      "pct": 2.61
+      "count": 4,
+      "pct": 3.42
     }
   ]
 }
