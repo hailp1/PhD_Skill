@@ -368,9 +368,10 @@ def main():
 
     md = f"""# AI-Driven Personalized Recommendation Systems and Online Consumer Impulse Buying Behavior: A Systematic Literature Review and Bibliometric Network Analysis
 
-**Target Journal:** Journal of Retailing and Consumer Services (Elsevier)  
-**Article Type:** Review Article (Systematic Literature Review, Multi-Method Bibliometric Analysis, and Evidence-Based Research Agenda)  
-**Submission Protocol:** Blinded Manuscript for Double-Blind Peer Review
+**Author:** Le Phuc Hai (Lê Phúc Hải)  
+**Affiliation:** NCSKIT.org (Independent Research Group)  
+**ORCID:** [https://orcid.org/0009-0004-1215-5023](https://orcid.org/0009-0004-1215-5023)  
+**Correspondence:** [hailp@ncskit.org](mailto:hailp@ncskit.org)
 
 ---
 

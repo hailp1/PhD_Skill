@@ -1,5 +1,10 @@
 # Algorithmic Persuasion, Cognitive Depletion, and Online Impulse Buying: A Systematic Review and Dynamic Dual-Path S-O-R Framework (2018-2026)
 
+**Author:** Le Phuc Hai (Lê Phúc Hải)  
+**Affiliation:** NCSKIT.org (Independent Research Group)  
+**ORCID:** [https://orcid.org/0009-0004-1215-5023](https://orcid.org/0009-0004-1215-5023)  
+**Correspondence:** [hailp@ncskit.org](mailto:hailp@ncskit.org)
+
 ---
 
 ## HIGHLIGHTS

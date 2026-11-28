@@ -1,5 +1,10 @@
 # Decoding the Generative AI Recommendation-Impulse Buying Link: An Empirical Registered Protocol Testing Curvilinear Surveillance Reactance, Multiplicative Mediation, and Ego Depletion
 
+**Author:** Le Phuc Hai (Lê Phúc Hải)  
+**Affiliation:** NCSKIT.org (Independent Research Group)  
+**ORCID:** [https://orcid.org/0009-0004-1215-5023](https://orcid.org/0009-0004-1215-5023)  
+**Correspondence:** [hailp@ncskit.org](mailto:hailp@ncskit.org)
+
 ---
 
 ## HIGHLIGHTS

@@ -291,9 +291,10 @@ def main():
 
     md = f"""# Algorithmic Persuasion, Cognitive Depletion, and the Personalization-Privacy Paradox in AI-Enabled Retail: A Systematic Review and Integrative Dual-Path S-O-R Framework (2018-2026)
 
-**Target Journal:** Journal of Retailing and Consumer Services (Elsevier)  
-**Article Type:** Review Article (Full Systematic Literature Review, Science Mapping, and Conceptual Propositions)  
-**Submission Protocol:** Blinded Manuscript for Double-Blind Peer Review
+**Author:** Le Phuc Hai (Lê Phúc Hải)  
+**Affiliation:** NCSKIT.org (Independent Research Group)  
+**ORCID:** [https://orcid.org/0009-0004-1215-5023](https://orcid.org/0009-0004-1215-5023)  
+**Correspondence:** [hailp@ncskit.org](mailto:hailp@ncskit.org)
 
 ---
 
