@@ -104,12 +104,14 @@ class AcademicQAGate:
                 self.red_flags.append(f"CITATION RED FLAG: Author '{author}' detected ({reason}). Must be removed or replaced with authentic e-commerce literature.")
                 self.score -= 20
 
-        # 2. Known author typos & reviewer-flagged metadata hallucinations
+        # 2. Known author typos, retracted/predatory leaks, & reviewer-flagged metadata hallucinations
         typos = [
             (r'\blice,?\s+D\.?\s*M\.?', "Tice, D. M."),
             (r'\bBenpasat\b', "Benbasat"),
             (r'\baftective\b', "affective"),
             (r'70/30\s+rule', "Unsubstantiated 70/30 heuristic"),
+            (r'RETRACTED ARTICLE|retraction notice', "Retracted article cited in manuscript"),
+            (r'\bZenodo\b|\bOALib\b|\bIJARSCT\b|\bIJRSI\b|World Journal of Advanced Research', "Non-peer-reviewed preprint or predatory outlet leaked into corpus"),
             (r'Xiao[^\n]{0,80}2007[^\n]{0,120}ACM Computing Surveys', "Xiao & Benbasat (2007) was published in MIS Quarterly 31(1), not ACM Computing Surveys"),
             (r'Guha[^\n]{0,120}2022[^\n]{0,120}Journal of the Academy of Marketing Science', "Guha et al. (2021) was published in Journal of Retailing 97(1), not JAMS 2022"),
             (r'Mariani[^\n]{0,80}Bontis[^\n]{0,40}2023', "Mariani, Perez-Vega, & Wirtz (2022) P&M 39(4), not Bontis 2023"),
@@ -200,6 +202,17 @@ class AcademicQAGate:
         if uncited_refs:
             self.red_flags.append(f"REFERENCE PADDING ERROR: Found {len(uncited_refs)} uncited references in References list (e.g. {uncited_refs[:5]}).")
             self.score -= 20
+
+        # Live/Cached Crossref DOI, Retraction & Collision Gate
+        try:
+            from crossref_ref_auditor import audit_manuscript_dois
+            doi_issues = audit_manuscript_dois(self.manuscript_path)
+            if doi_issues:
+                for di in doi_issues[:5]:
+                    self.red_flags.append(f"CROSSREF GATE: {di}")
+                self.score -= 20
+        except Exception as e:
+            self.warnings.append(f"Crossref DOI gate skipped: {e}")
 
     def run_full_audit(self):
         print("=" * 80)
