@@ -1,0 +1,347 @@
+{
+  "prisma": {
+    "gross_pool": 2457,
+    "duplicates_removed": 677,
+    "unique_screened": 1780,
+    "excluded_ec1_non_journal": 50,
+    "excluded_ec2_off_topic": 45,
+    "excluded_ec2_missing_pillar": 1494,
+    "excluded_ec3_window_meta": 12,
+    "final_core_included": 179
+  },
+  "annual_trend": [
+    {
+      "year": 2018,
+      "count": 0,
+      "pct": 0.0,
+      "cum_pct": 0.0
+    },
+    {
+      "year": 2019,
+      "count": 0,
+      "pct": 0.0,
+      "cum_pct": 0.0
+    },
+    {
+      "year": 2020,
+      "count": 4,
+      "pct": 2.23,
+      "cum_pct": 2.23
+    },
+    {
+      "year": 2021,
+      "count": 0,
+      "pct": 0.0,
+      "cum_pct": 2.23
+    },
+    {
+      "year": 2022,
+      "count": 6,
+      "pct": 3.35,
+      "cum_pct": 5.59
+    },
+    {
+      "year": 2023,
+      "count": 14,
+      "pct": 7.82,
+      "cum_pct": 13.41
+    },
+    {
+      "year": 2024,
+      "count": 19,
+      "pct": 10.61,
+      "cum_pct": 24.02
+    },
+    {
+      "year": 2025,
+      "count": 52,
+      "pct": 29.05,
+      "cum_pct": 53.07
+    },
+    {
+      "year": 2026,
+      "count": 84,
+      "pct": 46.93,
+      "cum_pct": 100.0
+    }
+  ],
+  "top_journals": [
+    {
+      "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
+      "count": 11,
+      "pct": 6.15,
+      "total_citations": 98,
+      "quality_tier": "ABDC: B | ABS: 1 | SJR: Q1"
+    },
+    {
+      "journal": "Frontiers in Psychology",
+      "count": 6,
+      "pct": 3.35,
+      "total_citations": 335,
+      "quality_tier": "SJR: Q1/Q2 (Non-ABS)"
+    },
+    {
+      "journal": "Journal of Retailing and Consumer Services",
+      "count": 5,
+      "pct": 2.79,
+      "total_citations": 261,
+      "quality_tier": "ABDC: A | ABS: 2 | SJR: Q1"
+    },
+    {
+      "journal": "International Review of Management and Marketing",
+      "count": 3,
+      "pct": 1.68,
+      "total_citations": 4,
+      "quality_tier": "SJR Indexed"
+    },
+    {
+      "journal": "Sustainability",
+      "count": 3,
+      "pct": 1.68,
+      "total_citations": 182,
+      "quality_tier": "SJR: Q1/Q2 (Non-ABS)"
+    },
+    {
+      "journal": "Asia Pacific Journal of Marketing and Logistics",
+      "count": 3,
+      "pct": 1.68,
+      "total_citations": 77,
+      "quality_tier": "ABDC: A | ABS: 1 | SJR: Q1"
+    },
+    {
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "count": 3,
+      "pct": 1.68,
+      "total_citations": 2,
+      "quality_tier": "SJR Indexed"
+    },
+    {
+      "journal": "Acta Psychologica",
+      "count": 2,
+      "pct": 1.12,
+      "total_citations": 57,
+      "quality_tier": "SJR: Q2 (Non-ABS)"
+    },
+    {
+      "journal": "Behavioral Sciences",
+      "count": 2,
+      "pct": 1.12,
+      "total_citations": 2,
+      "quality_tier": "SJR: Q2 (Non-ABS)"
+    },
+    {
+      "journal": "Young Consumers",
+      "count": 2,
+      "pct": 1.12,
+      "total_citations": 64,
+      "quality_tier": "SJR Indexed"
+    }
+  ],
+  "top_cited_core": [
+    {
+      "doi": "10.1016/j.jbusres.2022.04.013",
+      "year": 2022,
+      "title": "Why do consumers buy impulsively during live streaming? A deep learning-based dual-stage SEM-ANN analysis",
+      "journal": "Journal of Business Research",
+      "authors": "Lo, Pei-San; Dwivedi, Yogesh Kumar; Tan, Garry Wei‐Han; Ooi, Keng‐Boon; Aw, Eugene Cheng‐Xi; Metri, Bhimaraya A.",
+      "citations": 577
+    },
+    {
+      "doi": "10.1177/21582440231172678",
+      "year": 2023,
+      "title": "Exploring Factors Affecting Consumer’s Impulse Buying Behavior in Live-Streaming Shopping: An Interactive Research Based Upon SOR Model",
+      "journal": "SAGE Open",
+      "authors": "Huo, Chunhui; Wang, Xiaorui; Sadiq, Muhammad Waqas; Pang, Ming",
+      "citations": 240
+    },
+    {
+      "doi": "10.3389/fpsyg.2022.905531",
+      "year": 2022,
+      "title": "Research on the Impact of Marketing Strategy on Consumers’ Impulsive Purchase Behavior in Livestreaming E-commerce",
+      "journal": "Frontiers in Psychology",
+      "authors": "Chen, Bing; Wang, Lei; Rasool, Hassan; Wang, Jun",
+      "citations": 168
+    },
+    {
+      "doi": "10.1109/access.2020.2993671",
+      "year": 2020,
+      "title": "Understanding Online Impulse Buying Behavior in Social Commerce: A Systematic Literature Review",
+      "journal": "IEEE Access",
+      "authors": "Abdelsalam, Samah; Salim, Naomie; Alias, Rose Alinda; Husain, Omayma",
+      "citations": 164
+    },
+    {
+      "doi": "10.1007/s10796-023-10425-2",
+      "year": 2023,
+      "title": "How Do Virtual AI Streamers Influence Viewers’ Livestream Shopping Behavior? The Effects of Persuasive Factors and the Mediating Role of Arousal",
+      "journal": "Information Systems Frontiers",
+      "authors": "Zhang, Xianfeng; Shi, Yuxue; Li, Ting (Tina); Guan, Yuxian; Cui, Xinlei",
+      "citations": 108
+    },
+    {
+      "doi": "10.3390/su14127110",
+      "year": 2022,
+      "title": "Effects of Interface Design and Live Atmosphere on Consumers’ Impulse-Buying Behaviour from the Perspective of Human–Computer Interaction",
+      "journal": "Sustainability",
+      "authors": "Yang, Jinjing; Cao, Cong; Ye, Chensang; Shi, Yangyan",
+      "citations": 106
+    },
+    {
+      "doi": "10.1016/j.jretconser.2021.102789",
+      "year": 2022,
+      "title": "Online personalized recommended product quality and e-impulse buying: A conditional mediation analysis",
+      "journal": "Journal of Retailing and Consumer Services",
+      "authors": "Ampadu, Seth; Jiang, Yuanchun; Debrah, Emmanuel; Antwi, Collins Opoku; Amankwa, Eric; Gyamfi, Samuel Adu; Amoako, Richard",
+      "citations": 100
+    },
+    {
+      "doi": "10.1002/cb.2287",
+      "year": 2023,
+      "title": "Post‐purchase effects of impulse buying: A review and research agenda",
+      "journal": "Journal of Consumer Behaviour",
+      "authors": "Beikverdi, Lana; Sipilä, Jenni; Tarkiainen, Anssi",
+      "citations": 100
+    },
+    {
+      "doi": "10.1007/s00779-020-01460-w",
+      "year": 2020,
+      "title": "RETRACTED ARTICLE: Research on mobile impulse purchase intention in the perspective of system users during COVID-19",
+      "journal": "Personal and Ubiquitous Computing",
+      "authors": "Zhang, Wei; Leng, Xuemei; Liu, Siyu",
+      "citations": 98
+    },
+    {
+      "doi": "10.1108/intr-04-2023-0260",
+      "year": 2024,
+      "title": "Inducing shoppers’ impulsive buying tendency in live-streaming: integrating signaling theory with social exchange theory",
+      "journal": "Internet Research",
+      "authors": "Luo, Xi; Cheah, Jun‐Hwa; Lim, Xin‐Jean; Ramayah, T.; Dwivedi, Yogesh Kumar",
+      "citations": 94
+    },
+    {
+      "doi": "10.1016/j.jretconser.2024.103707",
+      "year": 2024,
+      "title": "Is ‘she’ more impulsive (to pleasure) than ‘him’ during livestream e-commerce shopping?",
+      "journal": "Journal of Retailing and Consumer Services",
+      "authors": "Huang, Qianru; Dastane, Omkar; Cham, Tat-Huei; Cheah, Jun-Hwa",
+      "citations": 91
+    },
+    {
+      "doi": "10.1016/j.heliyon.2024.e28347",
+      "year": 2024,
+      "title": "Impulse buying behavior during livestreaming: Moderating effects of scarcity persuasion and price perception",
+      "journal": "Heliyon",
+      "authors": "Feng, Zhitan; Al Mamun, Abdullah; Masukujjaman, Mohammad; Wu, Mengling; Yang, Qing",
+      "citations": 88
+    }
+  ],
+  "evidence_coding": {
+    "theory_sor": {
+      "count": 48,
+      "pct": 26.82
+    },
+    "theory_self_regulation": {
+      "count": 15,
+      "pct": 8.38
+    },
+    "ctx_livestream": {
+      "count": 71,
+      "pct": 39.66
+    },
+    "meth_pls_sem": {
+      "count": 47,
+      "pct": 26.26
+    },
+    "meth_experiment": {
+      "count": 20,
+      "pct": 11.17
+    },
+    "meth_longitudinal": {
+      "count": 8,
+      "pct": 4.47
+    },
+    "ctx_genai_chatbot": {
+      "count": 11,
+      "pct": 6.15
+    },
+    "ctx_social_commerce": {
+      "count": 27,
+      "pct": 15.08
+    },
+    "mech_regret": {
+      "count": 10,
+      "pct": 5.59
+    },
+    "theory_tam_utaut": {
+      "count": 7,
+      "pct": 3.91
+    },
+    "theory_flow": {
+      "count": 7,
+      "pct": 3.91
+    },
+    "theory_reactance_privacy": {
+      "count": 1,
+      "pct": 0.56
+    },
+    "mech_interaction": {
+      "count": 3,
+      "pct": 1.68
+    },
+    "mech_nonlinear_u": {
+      "count": 1,
+      "pct": 0.56
+    }
+  },
+  "bibliometrics": {
+    "kw_nodes": 20,
+    "kw_edges": 145,
+    "kw_clusters_res10": 3,
+    "kw_clusters_res125": 5,
+    "bc_nodes": 73,
+    "bc_edges": 817,
+    "bc_clusters": 4,
+    "top_cocited_dois": [
+      {
+        "doi": "10.1086/209105",
+        "co_citations": 27
+      },
+      {
+        "doi": "10.1016/s0022-4359(99)80092-x",
+        "co_citations": 24
+      },
+      {
+        "doi": "10.1177/002224378101800104",
+        "co_citations": 24
+      },
+      {
+        "doi": "10.1007/s11747-019-00670-w",
+        "co_citations": 21
+      },
+      {
+        "doi": "10.1007/s11747-014-0403-8",
+        "co_citations": 19
+      },
+      {
+        "doi": "10.1037/0021-9010.88.5.879",
+        "co_citations": 19
+      },
+      {
+        "doi": "10.1108/ebr-11-2018-0203",
+        "co_citations": 19
+      },
+      {
+        "doi": "10.1016/j.im.2016.06.001",
+        "co_citations": 19
+      },
+      {
+        "doi": "10.1086/209452",
+        "co_citations": 18
+      },
+      {
+        "doi": "10.1108/ijwis-02-2021-0012",
+        "co_citations": 16
+      }
+    ]
+  }
+}

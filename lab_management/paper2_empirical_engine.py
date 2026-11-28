@@ -232,7 +232,7 @@ While generative artificial intelligence (AI) recommendation agents increasingly
 ## 1. INTRODUCTION
 
 ### 1.1. Research Motivation and Empirical Imperative
-Digital retailing interfaces have transitioned from static product catalogs to dynamic, conversational AI recommendation agents capable of real-time preference adaptation (Guha et al., 2022; Huang & Ahmad, 2026; Pang et al., 2026). Although practitioner accounts frequently link predictive personalization to elevated conversion rates, empirical consumer psychology suggests that algorithmic nudging operates through complex cognitive and affective trade-offs (Chan et al., 2017; Zhang et al., 2021). Quantitative gap scanning across our expanded corpus ($N = {n_corpus:,}$ studies) reveals that only {mult_pct:.2f}% of extant studies test multiplicative cognitive-affective interactions, {inv_pct:.2f}% evaluate curvilinear personalization thresholds, {surv_pct:.2f}% model surveillance reactance, {long_pct:.2f}% employ longitudinal panel designs, and merely {ego_pct:.2f}% incorporate ego depletion as a regulatory boundary (Akram et al., 2020; Kumaran & Shobhana, 2026).
+Digital retailing interfaces have transitioned from static product catalogs to dynamic, conversational AI recommendation agents capable of real-time preference adaptation (Guha et al., 2021; Huang & Ahmad, 2026; Pang et al., 2026). Although practitioner accounts frequently link predictive personalization to elevated conversion rates, empirical consumer psychology suggests that algorithmic nudging operates through complex cognitive and affective trade-offs (Chan et al., 2017; Zhang et al., 2021). Quantitative gap scanning across our expanded corpus ($N = {n_corpus:,}$ studies) reveals that only {mult_pct:.2f}% of extant studies test multiplicative cognitive-affective interactions, {inv_pct:.2f}% evaluate curvilinear personalization thresholds, {surv_pct:.2f}% model surveillance reactance, {long_pct:.2f}% employ longitudinal panel designs, and merely {ego_pct:.2f}% incorporate ego depletion as a regulatory boundary (Akram et al., 2020; Kumaran & Shobhana, 2026).
 
 To address these empirical blind spots without post-hoc theorizing, this study establishes a pre-registered empirical protocol designed to test nine formal hypotheses ($H_1$ through $H_9$, alongside mediation hypotheses $H_{{4a}}$, $H_{{5a}}$ and interaction hypothesis $H_{{5b}}$) in active digital retail settings. We examine how AI recommendation attributes simultaneously foster in-session cognitive fluency and hedonic arousal while risking endogenous privacy backlash when personalization crosses consumer comfort thresholds (Gallin & Portes, 2024; Xiao & Benbasat, 2018).
 
@@ -409,7 +409,7 @@ Faul, F., Erdfelder, E., Buchner, A., & Lang, A. G. (2009). Statistical power an
 
 Gallin, S., & Portes, A. (2024). Online shopping: How can algorithm performance expectancy enhance impulse buying? *Journal of Retailing and Consumer Services*, 81, 103988. https://doi.org/10.1016/j.jretconser.2024.103988
 
-Guha, A., Grewal, D., Kopalle, P. K., et al. (2022). How artificial intelligence will transform the future of retailing and customer journeys. *Journal of the Academy of Marketing Science*, 49(1), 219-241.
+Guha, A., Grewal, D., Kopalle, P. K., Haenlein, M., Schneider, M. J., Jung, H., Moustafa, R., Hegde, D. R., & Hawkins, G. (2021). How artificial intelligence will transform the future of retailing. *Journal of Retailing*, 97(1), 28-41. https://doi.org/10.1016/j.jretai.2021.01.005
 
 Hagger, M. S., Chatzisarantis, N. L., Alberts, H., et al. (2016). A multilab preregistered replication of the ego-depletion effect. *Perspectives on Psychological Science*, 11(4), 546-573.
 
@@ -463,7 +463,7 @@ Verhagen, T., & van Dolen, W. (2011). The influence of online store beliefs on c
 
 Vessey, I. (1991). Cognitive fit: A theory-based analysis of the graphs versus tables literature. *Decision Sciences*, 22(2), 219-240.
 
-Xiao, B., & Benbasat, I. (2007). E-commerce product recommendation agents: Use, characteristics, and impact. *ACM Computing Surveys*, 39(4), 1-47.
+Xiao, B., & Benbasat, I. (2007). E-commerce product recommendation agents: Use, characteristics, and impact. *MIS Quarterly*, 31(1), 137-209. https://doi.org/10.2307/25148784
 
 Xiao, B., & Benbasat, I. (2018). An empirical examination of the influence of biased recommendation agents on users' decision making. *Information Systems Research*, 29(4), 931-952.
 

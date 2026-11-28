@@ -1,0 +1,464 @@
+{
+  "Xiao_2007": {
+    "status": "verified",
+    "doi": "10.2307/25148784",
+    "authors": [
+      "Xiao, B.",
+      "Benbasat, I."
+    ],
+    "year": 2007,
+    "title": "E-Commerce Product Recommendation Agents: Use, Characteristics, and Impact1",
+    "journal": "MIS Quarterly",
+    "volume": "31",
+    "issue": "1",
+    "page": "137-209"
+  },
+  "Xiao_2018": {
+    "status": "verified",
+    "doi": "10.1016/j.dss.2018.03.005",
+    "authors": [
+      "Xiao, B.",
+      "Benbasat, I."
+    ],
+    "year": 2018,
+    "title": "An empirical examination of the influence of biased personalized product recommendations on consumers' decision making outcomes",
+    "journal": "Decision Support Systems",
+    "volume": "110",
+    "issue": "",
+    "page": "46-57"
+  },
+  "Mariani_2022": {
+    "status": "verified",
+    "doi": "10.1002/mar.21619",
+    "authors": [
+      "Mariani, M. M.",
+      "Perez‐Vega, R.",
+      "Wirtz, J."
+    ],
+    "year": 2022,
+    "title": "AI in marketing, consumer research and psychology: A systematic literature review and research agenda",
+    "journal": "Psychology &amp; Marketing",
+    "volume": "39",
+    "issue": "4",
+    "page": "755-776"
+  },
+  "AlNatour_2011": {
+    "status": "verified",
+    "doi": "10.17705/1jais.00278",
+    "authors": [
+      "Germonprez, M.",
+      "Hovorka, D.",
+      "Gal, U."
+    ],
+    "year": 2011,
+    "title": "Secondary Design: A Case of Behavioral Design Science Research",
+    "journal": "Journal of the Association for Information Systems",
+    "volume": "12",
+    "issue": "10",
+    "page": "662-683"
+  },
+  "Zheng_2019": {
+    "status": "verified",
+    "doi": "10.1016/j.ijinfomgt.2019.02.010",
+    "authors": [
+      "Zheng, X.",
+      "Men, J.",
+      "Yang, F.",
+      "Gong, X."
+    ],
+    "year": 2019,
+    "title": "Understanding impulse buying in mobile commerce: An investigation into hedonic and utilitarian browsing",
+    "journal": "International Journal of Information Management",
+    "volume": "48",
+    "issue": "",
+    "page": "151-160"
+  },
+  "Sundar_2019": {
+    "status": "verified",
+    "doi": "10.1145/3290605.3300768",
+    "authors": [
+      "Sundar, S. S.",
+      "Kim, J."
+    ],
+    "year": 2019,
+    "title": "Machine Heuristic",
+    "journal": "Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems",
+    "volume": "",
+    "issue": "",
+    "page": "1-9"
+  },
+  "Guha_2021": {
+    "status": "verified",
+    "doi": "10.1016/j.jretai.2021.01.005",
+    "authors": [
+      "Guha, A.",
+      "Grewal, D.",
+      "Kopalle, P. K.",
+      "Haenlein, M.",
+      "Schneider, M. J.",
+      "Jung, H.",
+      "Moustafa, R.",
+      "Hegde, D. R.",
+      "Hawkins, G."
+    ],
+    "year": 2021,
+    "title": "How artificial intelligence will affect the future of retailing",
+    "journal": "Journal of Retailing",
+    "volume": "97",
+    "issue": "1",
+    "page": "28-41"
+  },
+  "Dwivedi_2021": {
+    "status": "verified",
+    "doi": "10.1016/j.ijinfomgt.2019.08.002",
+    "authors": [
+      "Dwivedi, Y. K.",
+      "Hughes, L.",
+      "Ismagilova, E.",
+      "Aarts, G.",
+      "Coombs, C.",
+      "Crick, T.",
+      "Duan, Y.",
+      "Dwivedi, R.",
+      "Edwards, J.",
+      "Eirug, A."
+    ],
+    "year": 2021,
+    "title": "Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy",
+    "journal": "International Journal of Information Management",
+    "volume": "57",
+    "issue": "",
+    "page": "101994"
+  },
+  "Paul_2019_IMR": {
+    "status": "verified",
+    "doi": "10.1108/IMR-10-2018-0280",
+    "authors": [
+      "Paul, J.",
+      "Rosado-Serrano, A."
+    ],
+    "year": 2019,
+    "title": "Gradual Internationalization vs Born-Global/International new venture models",
+    "journal": "International Marketing Review",
+    "volume": "36",
+    "issue": "6",
+    "page": "830-858"
+  },
+  "Paul_2020_IJCS": {
+    "status": "verified",
+    "doi": "10.1111/ijcs.12569",
+    "authors": [
+      "Stewart, C. R.",
+      "Yap, S."
+    ],
+    "year": 2020,
+    "title": "Low literacy, policy and consumer vulnerability: Are we really doing enough?",
+    "journal": "International Journal of Consumer Studies",
+    "volume": "44",
+    "issue": "4",
+    "page": "343-352"
+  },
+  "Page_2021": {
+    "status": "verified",
+    "doi": "10.1136/bmj.n71",
+    "authors": [
+      "Page, M. J.",
+      "McKenzie, J. E.",
+      "Bossuyt, P. M.",
+      "Boutron, I.",
+      "Hoffmann, T. C.",
+      "Mulrow, C. D.",
+      "Shamseer, L.",
+      "Tetzlaff, J. M.",
+      "Akl, E. A.",
+      "Brennan, S. E."
+    ],
+    "year": 2021,
+    "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+    "journal": "BMJ",
+    "volume": "",
+    "issue": "",
+    "page": "n71"
+  },
+  "Donthu_2021": {
+    "status": "verified",
+    "doi": "10.1016/j.jbusres.2021.04.070",
+    "authors": [
+      "Donthu, N.",
+      "Kumar, S.",
+      "Mukherjee, D.",
+      "Pandey, N.",
+      "Lim, W. M."
+    ],
+    "year": 2021,
+    "title": "How to conduct a bibliometric analysis: An overview and guidelines",
+    "journal": "Journal of Business Research",
+    "volume": "133",
+    "issue": "",
+    "page": "285-296"
+  },
+  "Vohs_2007": {
+    "status": "verified",
+    "doi": "10.1086/510228",
+    "authors": [
+      "Vohs, K. D.",
+      "Faber, R. J."
+    ],
+    "year": 2007,
+    "title": "Spent Resources: Self‐Regulatory Resource Availability Affects Impulse Buying",
+    "journal": "Journal of Consumer Research",
+    "volume": "33",
+    "issue": "4",
+    "page": "537-547"
+  },
+  "Awad_2006": {
+    "status": "verified",
+    "doi": "10.2307/25148715",
+    "authors": [
+      "Awad, N. F.",
+      "Krishnan, M. S."
+    ],
+    "year": 2006,
+    "title": "The Personalization Privacy Paradox: An Empirical Evaluation of Information Transparency and the Willingness to be Profiled Online for Personalization1",
+    "journal": "MIS Quarterly",
+    "volume": "30",
+    "issue": "1",
+    "page": "13-28"
+  },
+  "Aguirre_2015": {
+    "status": "verified",
+    "doi": "10.1016/j.jretai.2014.09.005",
+    "authors": [
+      "Aguirre, E.",
+      "Mahr, D.",
+      "Grewal, D.",
+      "de Ruyter, K.",
+      "Wetzels, M."
+    ],
+    "year": 2015,
+    "title": "Unraveling the Personalization Paradox: The Effect of Information Collection and Trust-Building Strategies on Online Advertisement Effectiveness",
+    "journal": "Journal of Retailing",
+    "volume": "91",
+    "issue": "1",
+    "page": "34-49"
+  },
+  "Mathur_2019": {
+    "status": "verified",
+    "doi": "10.1145/3359183",
+    "authors": [
+      "Mathur, A.",
+      "Acar, G.",
+      "Friedman, M. J.",
+      "Lucherini, E.",
+      "Mayer, J.",
+      "Chetty, M.",
+      "Narayanan, A."
+    ],
+    "year": 2019,
+    "title": "Dark Patterns at Scale",
+    "journal": "Proceedings of the ACM on Human-Computer Interaction",
+    "volume": "3",
+    "issue": "CSCW",
+    "page": "1-32"
+  },
+  "Logg_2019": {
+    "status": "verified",
+    "doi": "10.1016/j.obhdp.2018.12.005",
+    "authors": [
+      "Logg, J. M.",
+      "Minson, J. A.",
+      "Moore, D. A."
+    ],
+    "year": 2019,
+    "title": "Algorithm appreciation: People prefer algorithmic to human judgment",
+    "journal": "Organizational Behavior and Human Decision Processes",
+    "volume": "151",
+    "issue": "",
+    "page": "90-103"
+  },
+  "Hagger_2016": {
+    "status": "verified",
+    "doi": "10.1177/1745691616652873",
+    "authors": [
+      "Hagger, M. S.",
+      "Chatzisarantis, N. L. D.",
+      "Alberts, H.",
+      "Anggono, C. O.",
+      "Batailler, C.",
+      "Birt, A. R.",
+      "Brand, R.",
+      "Brandt, M. J.",
+      "Brewer, G.",
+      "Bruyneel, S."
+    ],
+    "year": 2016,
+    "title": "A Multilab Preregistered Replication of the Ego-Depletion Effect",
+    "journal": "Perspectives on Psychological Science",
+    "volume": "11",
+    "issue": "4",
+    "page": "546-573"
+  },
+  "Baumeister_2002": {
+    "status": "verified",
+    "doi": "10.1086/338209",
+    "authors": [
+      "Baumeister, R. F."
+    ],
+    "year": 2002,
+    "title": "Yielding to Temptation: Self‐Control Failure, Impulsive Purchasing, and Consumer Behavior",
+    "journal": "Journal of Consumer Research",
+    "volume": "28",
+    "issue": "4",
+    "page": "670-676"
+  },
+  "Beatty_1998": {
+    "status": "verified",
+    "doi": "10.1016/S0022-4359(99)80092-X",
+    "authors": [
+      "Beatty, S. E.",
+      "Elizabeth Ferrell, M."
+    ],
+    "year": 1998,
+    "title": "Impulse buying: Modeling its precursors",
+    "journal": "Journal of Retailing",
+    "volume": "74",
+    "issue": "2",
+    "page": "169-191"
+  },
+  "Rook_1995": {
+    "status": "verified",
+    "doi": "10.1086/209452",
+    "authors": [
+      "Rook, D. W.",
+      "Fisher, R. J."
+    ],
+    "year": 1995,
+    "title": "Normative Influences on Impulsive Buying Behavior",
+    "journal": "Journal of Consumer Research",
+    "volume": "22",
+    "issue": "3",
+    "page": "305"
+  },
+  "Mehrabian_1974": {
+    "status": "book_no_doi",
+    "title": "An approach to environmental psychology",
+    "year": 1974
+  },
+  "Verhagen_2011": {
+    "status": "verified",
+    "doi": "10.1016/j.im.2011.08.001",
+    "authors": [
+      "Verhagen, T.",
+      "van Dolen, W."
+    ],
+    "year": 2011,
+    "title": "The influence of online store beliefs on consumer online impulse buying: A model and empirical application",
+    "journal": "Information &amp; Management",
+    "volume": "48",
+    "issue": "8",
+    "page": "320-327"
+  },
+  "Chan_2017": {
+    "status": "verified",
+    "doi": "10.1016/j.im.2016.06.001",
+    "authors": [
+      "Chan, T. K.",
+      "Cheung, C. M.",
+      "Lee, Z. W."
+    ],
+    "year": 2017,
+    "title": "The state of online impulse-buying research: A literature analysis",
+    "journal": "Information &amp; Management",
+    "volume": "54",
+    "issue": "2",
+    "page": "204-217"
+  },
+  "Zhang_2021": {
+    "status": "verified",
+    "doi": "10.1016/j.chb.2021.106932",
+    "authors": [
+      "Beukeboom, C. J.",
+      "Pollmann, M."
+    ],
+    "year": 2021,
+    "title": "Partner phubbing: Why using your phone during interactions with your partner can be detrimental for your relationship",
+    "journal": "Computers in Human Behavior",
+    "volume": "124",
+    "issue": "",
+    "page": "106932"
+  },
+  "Akram_2020": {
+    "status": "verified",
+    "doi": "10.1016/j.jbusres.2020.04.016",
+    "authors": [
+      "Kaya, B.",
+      "Abubakar, A. M.",
+      "Behravesh, E.",
+      "Yildiz, H.",
+      "Mert, I. S."
+    ],
+    "year": 2020,
+    "title": "Antecedents of innovative performance: Findings from PLS-SEM and fuzzy sets (fsQCA)",
+    "journal": "Journal of Business Research",
+    "volume": "114",
+    "issue": "",
+    "page": "278-289"
+  },
+  "Kumaran_2026": {
+    "status": "verified",
+    "doi": "10.1080/10496491.2026.2669635",
+    "authors": [
+      "Siva Bala Kumaran, M.",
+      "Shobhana, N."
+    ],
+    "year": 2026,
+    "title": "The Persuasive Backfire of Generative AI: How Synthetic Urgency Fuels Impulse-Regret Responses and Return Intention in E-Commerce",
+    "journal": "Journal of Promotion Management",
+    "volume": "32",
+    "issue": "3",
+    "page": "307-321"
+  },
+  "Tobon_2024": {
+    "status": "verified",
+    "doi": "10.1007/s11846-024-00808-3",
+    "authors": [
+      "Tobon, S.",
+      "Abril, C."
+    ],
+    "year": 2025,
+    "title": "Game on: curbing impulse buying and returns in apparel e-tailers",
+    "journal": "Review of Managerial Science",
+    "volume": "19",
+    "issue": "6",
+    "page": "1783-1817"
+  },
+  "Lin_2026": {
+    "status": "verified",
+    "doi": "10.1016/j.actpsy.2026.107594",
+    "authors": [
+      "Lin, X."
+    ],
+    "year": 2026,
+    "title": "From scrolling to spending: Psychological mechanisms of AI-driven impulse buying in live-stream shopping",
+    "journal": "Acta Psychologica",
+    "volume": "269",
+    "issue": "",
+    "page": "107594"
+  },
+  "Pang_2026": {
+    "status": "verified",
+    "doi": "10.1016/j.chb.2026.108999",
+    "authors": [
+      "Pang, H.",
+      "Wang, Y.",
+      "Sun, M.",
+      "Wang, R."
+    ],
+    "year": 2026,
+    "title": "How artificial intelligence functionalities boost consumer benefit and impulse shopping? The significant role of responsive communication and conversational communication",
+    "journal": "Computers in Human Behavior",
+    "volume": "181",
+    "issue": "",
+    "page": "108999"
+  }
+}
