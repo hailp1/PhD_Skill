@@ -104,12 +104,19 @@ class AcademicQAGate:
                 self.red_flags.append(f"CITATION RED FLAG: Author '{author}' detected ({reason}). Must be removed or replaced with authentic e-commerce literature.")
                 self.score -= 20
 
-        # 2. Known author typos
+        # 2. Known author typos & reviewer-flagged metadata hallucinations
         typos = [
             (r'\blice,?\s+D\.?\s*M\.?', "Tice, D. M."),
             (r'\bBenpasat\b', "Benbasat"),
             (r'\baftective\b', "affective"),
-            (r'70/30\s+rule', "Unsubstantiated 70/30 heuristic")
+            (r'70/30\s+rule', "Unsubstantiated 70/30 heuristic"),
+            (r'Xiao[^\n]{0,80}2007[^\n]{0,120}ACM Computing Surveys', "Xiao & Benbasat (2007) was published in MIS Quarterly 31(1), not ACM Computing Surveys"),
+            (r'Guha[^\n]{0,120}2022[^\n]{0,120}Journal of the Academy of Marketing Science', "Guha et al. (2021) was published in Journal of Retailing 97(1), not JAMS 2022"),
+            (r'Mariani[^\n]{0,80}Bontis[^\n]{0,40}2023', "Mariani, Perez-Vega, & Wirtz (2022) P&M 39(4), not Bontis 2023"),
+            (r'Sundar[^\n]{0,80}2019[^\n]{0,120}Computers in Human Behavior', "Sundar & Kim (2019) was published at CHI '19, not CHB"),
+            (r'Zheng[^\n]{0,100}2019[^\n]{0,120}social support and credibility', "Zheng et al. (2019) IJIM 48 is about hedonic/utilitarian browsing, not social support"),
+            (r'\b100%\s+verified\b|\bgold\s+standard\b|\bexceptionally\s+high\b', "Remove self-praise / unsubstantiated boastful phrasing"),
+            (r'Arousal\s*>\s*UBI', "Invalid math '>' notation for causal arrow; use '->' or equation format"),
         ]
         for pattern, correction in typos:
             if re.search(pattern, self.text, re.IGNORECASE):
@@ -147,6 +154,11 @@ class AcademicQAGate:
         em_dashes = len(re.findall(r'—', body_prose))
         if em_dashes > 0:
             self.red_flags.append(f"AI STYLE MARKER: Detected {em_dashes} em-dashes ('—') in manuscript body. Replace with scholarly commas/parentheses.")
+            self.score -= 10
+
+        # Check PRISMA 2020 Limitations presence for SLR
+        if self.paper_type == "slr" and not re.search(r'^#{2,3}\s+.*Limitations\b', self.text, re.MULTILINE | re.IGNORECASE):
+            self.red_flags.append("PRISMA 2020 DEFICIT: Missing dedicated Limitations subsection (Item 23c).")
             self.score -= 10
 
         # Check blank lines inside academic-figure-container (causes marked.js raw HTML leak)

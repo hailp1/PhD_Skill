@@ -80,3 +80,13 @@ Hệ thống tích hợp hai tầng kỹ năng chuyên sâu:
 
 3. **Xử lý Dữ liệu Thực nghiệm & Mô hình Cấu trúc (PLS-SEM Toolkit)**:
    - [research_data_toolkit.py](file:///d:/SE_Project/khoahoc/.agents/skills/phd-data-analysis/scripts/research_data_toolkit.py): Thống kê mô tả, kiểm tra phân phối chuẩn Kline (2016), Harman's Single Factor test (CMB), Cronbach's Alpha và ma trận tương quan.
+
+---
+
+## 4. QUY CHUẨN PHẢN BIỆN Q1 TỪ THỰC TIỄN (Q1 REVIEWER LESSONS LEARNED)
+Mọi bản thảo mới (`Paper 1A`, `Paper 1B`, `Paper 2`, `Paper 3`, `Paper 4`...) bắt buộc tuân thủ 5 nguyên tắc rút ra từ phản biện Q1:
+1. **Một Danh tính Rõ ràng (Single Paper Identity)**: Bài SLR + Bibliometric chỉ đề xuất *Evidence-Based Future Research Agenda* rút ra trực tiếp từ mã hóa thực chứng; không tự nhận khung suy luận chưa kiểm định là kết quả đã chứng minh. Việc kiểm định mô hình toán học thuộc về bài Empirical.
+2. **Kỷ luật Corpus & Minh bạch OSF**: Mọi bài SLR phải công bố nhật ký sàng lọc (`osf_screening_log.csv`), phân tách *Core Corpus* vs. *Broad Corpus*, tuyệt đối không lẫn bài review/ngoài ngành vào danh sách *Top Cited Core Corpus*, và loại triệt để bản ghi ngoài khung năm (vd: `2027 early-access` khi khung là `2018-2026`).
+3. **Xác thực 100% DOI qua Crossref Trước khi Viết**: Tuyệt đối không trích dẫn tên tạp chí, năm, số trang từ trí nhớ; mọi tài liệu nền tảng đều phải kiểm chứng qua [citation_verifier.py](file:///d:/SE_Project/khoahoc/.agents/skills/phd-literature-review/scripts/citation_verifier.py) hoặc API Crossref.
+4. **Độ chính xác Khái niệm & Khả năng Bác bỏ (Falsifiability)**: Tách bạch *In-Session Cognitive Fluency*, *Algorithmic Trust*, và *Post-Purchase Satisfaction vs. Regret*; mọi cấu trúc trung gian/phản hồi (*Surveillance Reactance*, *Post-Purchase Regret*) phải là node đo được; nêu rõ giả thuyết cạnh tranh ($b_3 > 0$ vs. $b_3 < 0$) và xử lý trung thực tranh luận tái lập của *Ego Depletion*.
+5. **Triệt tiêu Từ ngữ Tự khen & Đánh số Tuần tự**: Cấm tuyệt đối các cụm tự khen (*gold standard, 100% verified, exceptionally high, never been systematically, first and only*) và giữ đánh số `Table 1..N`, `Figure 1..N` tuần tự.

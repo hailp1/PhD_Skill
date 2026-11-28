@@ -43,6 +43,10 @@ EN_AI_CLICHES = [
     r"\bpivotal\b",
     r"\bindispensable\b",
     r"\bremarkably\b",
+    r"\bgold\s+standard\b",
+    r"\b100%\s+verified\b",
+    r"\bexceptionally\s+high\b",
+    r"\bnever\s+been\s+systematically\b",
 ]
 
 # 2. Vietnamese AI Clichés & Sáo Rỗng Báo Chí / Dịch Máy Gượng Gạo
