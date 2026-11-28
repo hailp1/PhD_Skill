@@ -44,18 +44,18 @@
   },
   "AlNatour_2011": {
     "status": "verified",
-    "doi": "10.17705/1jais.00278",
+    "doi": "10.17705/1jais.00267",
     "authors": [
-      "Germonprez, M.",
-      "Hovorka, D.",
-      "Gal, U."
+      "Al-Natour, S.",
+      "Benbasat, I.",
+      "Cenfetelli, R."
     ],
     "year": 2011,
-    "title": "Secondary Design: A Case of Behavioral Design Science Research",
+    "title": "The Adoption of Online Shopping Assistants: Perceived Similarity as an Antecedent to Evaluative Beliefs",
     "journal": "Journal of the Association for Information Systems",
     "volume": "12",
-    "issue": "10",
-    "page": "662-683"
+    "issue": "5",
+    "page": "347-374"
   },
   "Zheng_2019": {
     "status": "verified",
@@ -144,19 +144,19 @@
     "issue": "6",
     "page": "830-858"
   },
-  "Paul_2020_IJCS": {
+  "Paul_Criado_2020": {
     "status": "verified",
-    "doi": "10.1111/ijcs.12569",
+    "doi": "10.1016/j.ibusrev.2020.101717",
     "authors": [
-      "Stewart, C. R.",
-      "Yap, S."
+      "Paul, J.",
+      "Criado, A. R."
     ],
     "year": 2020,
-    "title": "Low literacy, policy and consumer vulnerability: Are we really doing enough?",
-    "journal": "International Journal of Consumer Studies",
-    "volume": "44",
+    "title": "The art of writing literature review: What do we know and what do we need to know?",
+    "journal": "International Business Review",
+    "volume": "29",
     "issue": "4",
-    "page": "343-352"
+    "page": "101717"
   },
   "Page_2021": {
     "status": "verified",
@@ -372,37 +372,6 @@
     "volume": "54",
     "issue": "2",
     "page": "204-217"
-  },
-  "Zhang_2021": {
-    "status": "verified",
-    "doi": "10.1016/j.chb.2021.106932",
-    "authors": [
-      "Beukeboom, C. J.",
-      "Pollmann, M."
-    ],
-    "year": 2021,
-    "title": "Partner phubbing: Why using your phone during interactions with your partner can be detrimental for your relationship",
-    "journal": "Computers in Human Behavior",
-    "volume": "124",
-    "issue": "",
-    "page": "106932"
-  },
-  "Akram_2020": {
-    "status": "verified",
-    "doi": "10.1016/j.jbusres.2020.04.016",
-    "authors": [
-      "Kaya, B.",
-      "Abubakar, A. M.",
-      "Behravesh, E.",
-      "Yildiz, H.",
-      "Mert, I. S."
-    ],
-    "year": 2020,
-    "title": "Antecedents of innovative performance: Findings from PLS-SEM and fuzzy sets (fsQCA)",
-    "journal": "Journal of Business Research",
-    "volume": "114",
-    "issue": "",
-    "page": "278-289"
   },
   "Kumaran_2026": {
     "status": "verified",

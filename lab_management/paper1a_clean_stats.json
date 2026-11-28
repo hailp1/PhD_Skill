@@ -3,11 +3,11 @@
     "gross_pool": 2457,
     "duplicates_removed": 677,
     "unique_screened": 1780,
-    "excluded_ec1_non_journal": 50,
+    "excluded_ec1_non_journal": 64,
     "excluded_ec2_off_topic": 45,
-    "excluded_ec2_missing_pillar": 1494,
-    "excluded_ec3_window_meta": 12,
-    "final_core_included": 179
+    "excluded_ec2_missing_pillar": 1477,
+    "excluded_ec3_window_meta": 27,
+    "final_core_included": 167
   },
   "annual_trend": [
     {
@@ -24,44 +24,44 @@
     },
     {
       "year": 2020,
-      "count": 4,
-      "pct": 2.23,
-      "cum_pct": 2.23
+      "count": 3,
+      "pct": 1.8,
+      "cum_pct": 1.8
     },
     {
       "year": 2021,
       "count": 0,
       "pct": 0.0,
-      "cum_pct": 2.23
+      "cum_pct": 1.8
     },
     {
       "year": 2022,
       "count": 6,
-      "pct": 3.35,
-      "cum_pct": 5.59
+      "pct": 3.59,
+      "cum_pct": 5.39
     },
     {
       "year": 2023,
-      "count": 14,
-      "pct": 7.82,
-      "cum_pct": 13.41
+      "count": 13,
+      "pct": 7.78,
+      "cum_pct": 13.17
     },
     {
       "year": 2024,
-      "count": 19,
-      "pct": 10.61,
-      "cum_pct": 24.02
+      "count": 18,
+      "pct": 10.78,
+      "cum_pct": 23.95
     },
     {
       "year": 2025,
-      "count": 52,
-      "pct": 29.05,
-      "cum_pct": 53.07
+      "count": 49,
+      "pct": 29.34,
+      "cum_pct": 53.29
     },
     {
       "year": 2026,
-      "count": 84,
-      "pct": 46.93,
+      "count": 78,
+      "pct": 46.71,
       "cum_pct": 100.0
     }
   ],
@@ -69,71 +69,71 @@
     {
       "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
       "count": 11,
-      "pct": 6.15,
+      "pct": 6.59,
       "total_citations": 98,
       "quality_tier": "ABDC: B | ABS: 1 | SJR: Q1"
     },
     {
       "journal": "Frontiers in Psychology",
       "count": 6,
-      "pct": 3.35,
+      "pct": 3.59,
       "total_citations": 335,
       "quality_tier": "SJR: Q1/Q2 (Non-ABS)"
     },
     {
       "journal": "Journal of Retailing and Consumer Services",
       "count": 5,
-      "pct": 2.79,
+      "pct": 2.99,
       "total_citations": 261,
       "quality_tier": "ABDC: A | ABS: 2 | SJR: Q1"
     },
     {
       "journal": "International Review of Management and Marketing",
       "count": 3,
-      "pct": 1.68,
+      "pct": 1.8,
       "total_citations": 4,
       "quality_tier": "SJR Indexed"
     },
     {
       "journal": "Sustainability",
       "count": 3,
-      "pct": 1.68,
+      "pct": 1.8,
       "total_citations": 182,
       "quality_tier": "SJR: Q1/Q2 (Non-ABS)"
     },
     {
       "journal": "Asia Pacific Journal of Marketing and Logistics",
       "count": 3,
-      "pct": 1.68,
+      "pct": 1.8,
       "total_citations": 77,
       "quality_tier": "ABDC: A | ABS: 1 | SJR: Q1"
     },
     {
-      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
-      "count": 3,
-      "pct": 1.68,
-      "total_citations": 2,
-      "quality_tier": "SJR Indexed"
-    },
-    {
       "journal": "Acta Psychologica",
       "count": 2,
-      "pct": 1.12,
+      "pct": 1.2,
       "total_citations": 57,
       "quality_tier": "SJR: Q2 (Non-ABS)"
     },
     {
       "journal": "Behavioral Sciences",
       "count": 2,
-      "pct": 1.12,
+      "pct": 1.2,
       "total_citations": 2,
       "quality_tier": "SJR: Q2 (Non-ABS)"
     },
     {
       "journal": "Young Consumers",
       "count": 2,
-      "pct": 1.12,
+      "pct": 1.2,
       "total_citations": 64,
+      "quality_tier": "SJR Indexed"
+    },
+    {
+      "journal": "Journal of Promotion Management",
+      "count": 2,
+      "pct": 1.2,
+      "total_citations": 6,
       "quality_tier": "SJR Indexed"
     }
   ],
@@ -203,14 +203,6 @@
       "citations": 100
     },
     {
-      "doi": "10.1007/s00779-020-01460-w",
-      "year": 2020,
-      "title": "RETRACTED ARTICLE: Research on mobile impulse purchase intention in the perspective of system users during COVID-19",
-      "journal": "Personal and Ubiquitous Computing",
-      "authors": "Zhang, Wei; Leng, Xuemei; Liu, Siyu",
-      "citations": 98
-    },
-    {
       "doi": "10.1108/intr-04-2023-0260",
       "year": 2024,
       "title": "Inducing shoppers’ impulsive buying tendency in live-streaming: integrating signaling theory with social exchange theory",
@@ -233,86 +225,94 @@
       "journal": "Heliyon",
       "authors": "Feng, Zhitan; Al Mamun, Abdullah; Masukujjaman, Mohammad; Wu, Mengling; Yang, Qing",
       "citations": 88
+    },
+    {
+      "doi": "10.3389/fpsyg.2023.1104349",
+      "year": 2023,
+      "title": "Understanding consumer impulse buying in livestreaming commerce: The product involvement perspective",
+      "journal": "Frontiers in Psychology",
+      "authors": "Gong, Xiaoxiao; Jiang, Xuetao",
+      "citations": 87
     }
   ],
   "evidence_coding": {
     "theory_sor": {
-      "count": 48,
-      "pct": 26.82
+      "count": 46,
+      "pct": 27.54
     },
     "theory_self_regulation": {
-      "count": 15,
+      "count": 14,
       "pct": 8.38
     },
     "ctx_livestream": {
-      "count": 71,
-      "pct": 39.66
+      "count": 70,
+      "pct": 41.92
     },
     "meth_pls_sem": {
-      "count": 47,
-      "pct": 26.26
+      "count": 44,
+      "pct": 26.35
     },
     "meth_experiment": {
-      "count": 20,
-      "pct": 11.17
+      "count": 18,
+      "pct": 10.78
     },
     "meth_longitudinal": {
-      "count": 8,
-      "pct": 4.47
+      "count": 7,
+      "pct": 4.19
     },
     "ctx_genai_chatbot": {
-      "count": 11,
-      "pct": 6.15
+      "count": 9,
+      "pct": 5.39
     },
     "ctx_social_commerce": {
       "count": 27,
-      "pct": 15.08
+      "pct": 16.17
     },
     "mech_regret": {
       "count": 10,
-      "pct": 5.59
+      "pct": 5.99
     },
     "theory_tam_utaut": {
-      "count": 7,
-      "pct": 3.91
+      "count": 5,
+      "pct": 2.99
     },
     "theory_flow": {
       "count": 7,
-      "pct": 3.91
+      "pct": 4.19
     },
     "theory_reactance_privacy": {
       "count": 1,
-      "pct": 0.56
+      "pct": 0.6
     },
     "mech_interaction": {
       "count": 3,
-      "pct": 1.68
+      "pct": 1.8
     },
     "mech_nonlinear_u": {
       "count": 1,
-      "pct": 0.56
+      "pct": 0.6
     }
   },
   "bibliometrics": {
     "kw_nodes": 20,
-    "kw_edges": 145,
-    "kw_clusters_res10": 3,
-    "kw_clusters_res125": 5,
-    "bc_nodes": 73,
-    "bc_edges": 817,
-    "bc_clusters": 4,
+    "kw_edges": 142,
+    "kw_clusters_res10": 2,
+    "kw_clusters_res125": 4,
+    "bc_nodes": 69,
+    "bc_edges": 779,
+    "bc_clusters": 3,
     "top_cocited_dois": [
       {
         "doi": "10.1086/209105",
-        "co_citations": 27
-      },
-      {
-        "doi": "10.1016/s0022-4359(99)80092-x",
-        "co_citations": 24
+        "co_citations": 25
       },
       {
         "doi": "10.1177/002224378101800104",
         "co_citations": 24
+      },
+      {
+        "doi": "10.1016/s0022-4359(99)80092-x",
+        "co_citations": 23
       },
       {
         "doi": "10.1007/s11747-019-00670-w",
@@ -327,15 +327,15 @@
         "co_citations": 19
       },
       {
-        "doi": "10.1108/ebr-11-2018-0203",
-        "co_citations": 19
-      },
-      {
         "doi": "10.1016/j.im.2016.06.001",
         "co_citations": 19
       },
       {
         "doi": "10.1086/209452",
+        "co_citations": 18
+      },
+      {
+        "doi": "10.1108/ebr-11-2018-0203",
         "co_citations": 18
       },
       {

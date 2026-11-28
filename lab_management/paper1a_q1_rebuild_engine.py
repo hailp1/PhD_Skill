@@ -43,6 +43,7 @@ def format_crossref_ref(entry):
         return {
             "key": ("Mehrabian", "1974"),
             "in_text": "Mehrabian and Russell (1974)",
+            "paren": "Mehrabian & Russell, 1974",
             "ref_line": "Mehrabian, A., & Russell, J. A. (1974). *An approach to environmental psychology*. MIT Press.",
         }
     if entry.get("status") != "verified":
@@ -55,16 +56,20 @@ def format_crossref_ref(entry):
     if len(authors) == 1:
         auth_str = authors[0]
         in_text = f"{first_surname} ({yr})"
+        paren = f"{first_surname}, {yr}"
     elif len(authors) == 2:
         sec_surname = authors[1].split(",")[0].strip()
         auth_str = f"{authors[0]}, & {authors[1]}"
         in_text = f"{first_surname} and {sec_surname} ({yr})"
+        paren = f"{first_surname} & {sec_surname}, {yr}"
     elif len(authors) <= 6:
         auth_str = ", ".join(authors[:-1]) + ", & " + authors[-1]
         in_text = f"{first_surname} et al. ({yr})"
+        paren = f"{first_surname} et al., {yr}"
     else:
         auth_str = ", ".join(authors[:6]) + ", ... " + authors[-1]
         in_text = f"{first_surname} et al. ({yr})"
+        paren = f"{first_surname} et al., {yr}"
 
     title = re.sub(r"\s+", " ", (entry.get("title") or "").strip()).rstrip(".")
     journal = (entry.get("journal") or "").replace("&amp;", "&").strip()
@@ -79,7 +84,7 @@ def format_crossref_ref(entry):
     if page:
         loc += f", {page}"
     ref_line = f"{auth_str} ({yr}). {title}. *{journal}*{loc}. https://doi.org/{doi}"
-    return {"key": (first_surname, yr), "in_text": in_text, "ref_line": ref_line, "doi": doi}
+    return {"key": (first_surname, yr), "in_text": in_text, "paren": paren, "ref_line": ref_line, "doi": doi}
 
 
 def format_core_row_ref(row):
@@ -113,16 +118,20 @@ def format_core_row_ref(row):
     if len(apa_auth) == 1:
         auth_str = apa_auth[0]
         in_text = f"{first_surname} ({yr})"
+        paren = f"{first_surname}, {yr}"
     elif len(apa_auth) == 2:
         sec_surname = apa_auth[1].split(",")[0].strip()
         auth_str = f"{apa_auth[0]}, & {apa_auth[1]}"
         in_text = f"{first_surname} and {sec_surname} ({yr})"
+        paren = f"{first_surname} & {sec_surname}, {yr}"
     elif len(apa_auth) <= 6:
         auth_str = ", ".join(apa_auth[:-1]) + ", & " + apa_auth[-1]
         in_text = f"{first_surname} et al. ({yr})"
+        paren = f"{first_surname} et al., {yr}"
     else:
         auth_str = ", ".join(apa_auth[:6]) + ", ... " + apa_auth[-1]
         in_text = f"{first_surname} et al. ({yr})"
+        paren = f"{first_surname} et al., {yr}"
 
     loc = f", *{vol}*" if vol else ""
     if vol and issue:
@@ -133,6 +142,9 @@ def format_core_row_ref(row):
     return {
         "key": (first_surname, yr),
         "in_text": in_text,
+        "paren": paren,
+        "title": title,
+        "journal": journal.replace("|", "-"),
         "ref_line": ref_line,
         "doi": doi,
         "citations": safe_int(row.get("Times cited", 0)),
@@ -256,6 +268,8 @@ def build_fig3_agenda_model() -> str:
         '<line x1="216" y1="300" x2="276" y2="332" stroke="#1d4ed8" stroke-width="1.6" marker-end="url(#agb)"/>',
         '<line x1="614" y1="115" x2="676" y2="115" stroke="#1d4ed8" stroke-width="1.7" marker-end="url(#agb)"/>',
         '<line x1="614" y1="195" x2="676" y2="128" stroke="#dc2626" stroke-width="1.7" marker-end="url(#agr)"/>',
+        '<line x1="614" y1="335" x2="676" y2="142" stroke="#0f766e" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#agb)"/>',
+        '<line x1="614" y1="335" x2="676" y2="205" stroke="#0f766e" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#agb)"/>',
         '<line x1="780" y1="148" x2="780" y2="168" stroke="#1d4ed8" stroke-width="1.7" marker-end="url(#agb)"/>',
         '<line x1="780" y1="230" x2="780" y2="253" stroke="#7c3aed" stroke-width="1.7" marker-end="url(#agp)"/>',
         '<path d="M 780 351 L 780 418 L 534 418 L 534 150" fill="none" stroke="#7c3aed" stroke-width="1.7" stroke-dasharray="6,4" marker-end="url(#agp)"/>',
@@ -292,7 +306,7 @@ def main():
             continue
         if fmt["key"] in seen_keys or fmt["doi"] in seen_dois:
             continue
-        if any(b in fmt["ref_line"] for b in ("Al-", "Pillai", "Ramsin", "Blut", "Anonymous")):
+        if any(b in fmt["ref_line"] for b in ("Al-", "Pillai", "Ramsin", "Blut", "Anonymous", "RETRACTED", "Pets make you spend")):
             continue
         if len(fmt["key"][0]) < 3 or not fmt["key"][0].isascii():
             continue
@@ -311,6 +325,9 @@ def main():
                 return items[0]["in_text"]
             return ", ".join(x["in_text"] for x in items[:-1]) + ", and " + items[-1]["in_text"]
         return ", ".join(x["in_text"] for x in items)
+
+    def paren(items):
+        return "(" + "; ".join(x["paren"] for x in items) + ")"
 
     prisma = stats["prisma"]
     n_core = prisma["final_core_included"]
@@ -338,14 +355,16 @@ def main():
         for i, j in enumerate(journals, 1)
     )
     top_core_rows = "\n".join(
-        f"| {i} | {r['in_text']} | {core_rows_item['title'][:72]}... | {core_rows_item['journal']} | {r['citations']:,} |"
-        for i, (r, core_rows_item) in enumerate(zip(c_top, stats["top_cited_core"][:6]), 1)
+        f"| {i} | {r['in_text']} | {r['title'][:72]}... | {r['journal']} | {r['citations']:,} |"
+        for i, r in enumerate(c_top, 1)
     )
 
     fig1_svg = build_fig1_prisma(prisma)
     fig2_svg = build_fig2_trend(annual)
-    fig3_svg = build_fig3_agenda_model()
-    refs_block = "\n".join(r["ref_line"] for r in all_refs_sorted)
+    kw_svg_file = os.path.join(WORKSPACE, "lab_projects", "figures", "paper1a_kw_network.svg")
+    fig3_kw_svg = open(kw_svg_file, "r", encoding="utf-8").read().strip() if os.path.exists(kw_svg_file) else ""
+    fig4_svg = build_fig3_agenda_model()
+    refs_block = "\n\n".join(r["ref_line"] for r in all_refs_sorted)
 
     md = f"""# AI-Driven Personalized Recommendation Systems and Online Consumer Impulse Buying Behavior: A Systematic Literature Review and Bibliometric Network Analysis
 
@@ -377,11 +396,11 @@ Algorithmic recommendation systems and conversational shopping agents increasing
 
 ### 1.1. Research Background and Scope
 
-Digital commerce has shifted from keyword-driven search toward algorithmically curated discovery, where predictive recommender systems and conversational shopping assistants dynamically shape consideration sets ({vrefs['Xiao_2007']['in_text']}; {vrefs['Guha_2021']['in_text']}; {vrefs['AlNatour_2011']['in_text']}). In consumer psychology and retailing, understanding how algorithmic cues convert browsing into unplanned purchases requires bridging information systems design with affective and self-regulatory theory ({vrefs['Beatty_1998']['in_text']}; {vrefs['Rook_1995']['in_text']}; {vrefs['Chan_2017']['in_text']}; {vrefs['Zheng_2019']['in_text']}). Prior conceptual accounts note that AI functionalities can lower search friction while simultaneously introducing persuasive nudges and algorithmic friction ({vrefs['Dwivedi_2021']['in_text']}; {vrefs['Mariani_2022']['in_text']}). Recent empirical studies across livestreaming and social commerce, including {cite(c_sec1[:4], narrative=True)}, illustrate rapid practitioner adoption of real-time recommendation feeds, while {cite(c_sec1[4:8], narrative=True)} highlight growing scholarly interest in mobile and AI-assisted impulse consumption.
+Digital commerce has shifted from keyword-driven search toward algorithmically curated discovery, where predictive recommender systems and conversational shopping assistants dynamically shape consideration sets {paren([vrefs['Xiao_2007'], vrefs['Guha_2021'], vrefs['AlNatour_2011']])}. In consumer psychology and retailing, understanding how algorithmic cues convert browsing into unplanned purchases requires bridging information systems design with affective and self-regulatory theory {paren([vrefs['Beatty_1998'], vrefs['Rook_1995'], vrefs['Chan_2017'], vrefs['Zheng_2019']])}. Prior conceptual accounts note that AI functionalities can lower search friction while simultaneously introducing persuasive nudges and algorithmic friction {paren([vrefs['Dwivedi_2021'], vrefs['Mariani_2022']])}. Recent empirical studies across livestreaming and social commerce, including {cite(c_sec1[:4], narrative=True)}, illustrate rapid practitioner adoption of real-time recommendation feeds, while {cite(c_sec1[4:8], narrative=True)} highlight growing scholarly interest in mobile and AI-assisted impulse consumption.
 
 ### 1.2. Positioning Relative to Prior Reviews and Research Questions
 
-Existing reviews have examined general online impulse buying ({vrefs['Chan_2017']['in_text']}), AI applications in marketing and consumer research ({vrefs['Mariani_2022']['in_text']}; {vrefs['Guha_2021']['in_text']}), and early recommendation agent adoption ({vrefs['Xiao_2007']['in_text']}). However, no prior review has simultaneously isolated the strict three-pillar intersection of AI/algorithmic personalization, online impulse buying, and digital retail across 2018-2026 while combining full-corpus evidence coding with multi-method bibliometric mapping (keyword co-occurrence, bibliographic coupling, and co-citation). Recent studies on recursive temporal S-O-R feedback ({vrefs['Tobon_2024']['in_text']}) and synthetic urgency backfire ({vrefs['Kumaran_2026']['in_text']}) underscore the need to consolidate empirical evidence before proposing new theoretical extensions. Accordingly, this review addresses four research questions:
+Existing reviews have examined general online impulse buying {paren([vrefs['Chan_2017']])}, AI applications in marketing and consumer research {paren([vrefs['Mariani_2022'], vrefs['Guha_2021']])}, and early recommendation agent adoption {paren([vrefs['Xiao_2007']])}. However, no prior review has simultaneously isolated the strict three-pillar intersection of AI/algorithmic personalization, online impulse buying, and digital retail across 2018-2026 while combining full-corpus evidence coding with multi-method bibliometric mapping (keyword co-occurrence, bibliographic coupling, and co-citation). Recent studies on recursive temporal S-O-R feedback {paren([vrefs['Tobon_2024']])} and synthetic urgency backfire {paren([vrefs['Kumaran_2026']])} underscore the need to consolidate empirical evidence before proposing new theoretical extensions. Accordingly, this review addresses four research questions:
 1. **RQ1:** What are the publication trajectory, outlet quality distribution (ABDC/ABS/SJR), and citation structure of the {n_core}-article core corpus from 2018 to 2026?
 2. **RQ2:** What intellectual clusters and research fronts emerge across keyword co-occurrence, bibliographic coupling, and co-citation networks?
 3. **RQ3:** Across full-corpus TCCM evidence coding, which theoretical mechanisms, contexts, and methods are well supported, mixed, or empirically under-explored?
@@ -393,7 +412,7 @@ Existing reviews have examined general online impulse buying ({vrefs['Chan_2017'
 
 ### 2.1. Three-Pillar Search Strategy and Database Adaptation
 
-Following PRISMA 2020 reporting guidelines ({vrefs['Page_2021']['in_text']}) and the TCCM review protocol ({vrefs['Paul_2019_IMR']['in_text']}; {vrefs['Paul_2020_IJCS']['in_text']}), we executed an iterative search across Dimensions and OpenAlex covering January 2018 through November 2026 (final search completed November 2026). To ensure transparency, our search logic operationalizes a **three-pillar Boolean intersection** combining (1) AI and algorithmic recommendation stimuli, (2) impulse buying outcomes, and (3) online retail and commerce contexts. Because query syntax differs across bibliographic engines (for example, `TITLE-ABS-KEY` in Scopus vs. `TS=` in Web of Science vs. full-text/abstract indexing in Dimensions and OpenAlex), the standardized conceptual Boolean query is documented below:
+Following PRISMA 2020 reporting guidelines {paren([vrefs['Page_2021']])} and the TCCM review protocol {paren([vrefs['Paul_2019_IMR'], vrefs['Paul_Criado_2020']])}, we executed an iterative search across Dimensions and OpenAlex covering January 2018 through November 2026 (final search completed November 2026). To ensure transparency, our search logic operationalizes a **three-pillar Boolean intersection** combining (1) AI and algorithmic recommendation stimuli, (2) impulse buying outcomes, and (3) online retail and commerce contexts. Because query syntax differs across bibliographic engines (for example, `TITLE-ABS-KEY` in Scopus vs. `TS=` in Web of Science vs. full-text/abstract indexing in Dimensions and OpenAlex), the standardized conceptual Boolean query is documented below:
 
 ```text
 TITLE-ABS-KEY (
@@ -437,7 +456,7 @@ Unlike prior reviews that rely on keyword frequency counts alone, we coded all {
 
 ### 3.1. Publication Trajectory and Outlet Quality Stratification
 
-As shown in Table 1 and Figure 2, core output grew from 1 article in 2018 to {annual[-1]['count']} articles in 2026 (with 2024-2026 accounting for {y24_26_pct:.2f}% of the {n_core}-article corpus). Notably, this post-2024 acceleration coincides with commercial deployment of livestreaming recommendation feeds and conversational AI, though raw growth also partly reflects broader expansion in open-access multidisciplinary publishing.
+As shown in Table 1 and Figure 2, core output grew from {annual[0]['count']} articles in 2018 to {annual[-1]['count']} articles in 2026 (with 2024-2026 accounting for {y24_26_pct:.2f}% of the {n_core}-article corpus). Notably, this post-2024 acceleration coincides with commercial deployment of livestreaming recommendation feeds and conversational AI, though raw growth also partly reflects broader expansion in open-access multidisciplinary publishing.
 
 <div class="academic-figure-container" style="text-align:center; margin: 20px 0;">
 {fig2_svg}
@@ -468,10 +487,15 @@ Table 3 lists the six most-cited empirical articles strictly within the {n_core}
 
 ### 3.2. Multi-Method Bibliometric Structure
 
-Across the three bibliometric layers, inductive clustering reveals converging yet distinct structural patterns:
-* **Keyword Co-Occurrence Structure:** At resolution `1.0`, the 20 standardized concepts partition into {bib['kw_clusters_res10']} stable macro-clusters: (1) livestreaming commerce, S-O-R, and hedonic arousal; (2) algorithmic personalization, trust, and utilitarian accuracy; and (3) emerging generative AI, scarcity, and self-regulation constructs. Increasing resolution to `1.25` splits the third cluster into {bib['kw_clusters_res125']} finer sub-themes, separating conversational AI agents from privacy and ego-depletion constructs.
-* **Bibliographic Coupling Fronts ({bib['bc_nodes']} articles, {bib['bc_edges']} links, {bib['bc_clusters']} clusters):** Coupling analysis confirms four active research fronts sharing common reference bases: livestreaming presenter-algorithm interaction ({cite(c_sec3_2[:3], narrative=True)}), personalized recommender trust and serendipity ({cite(c_sec3_2[3:6], narrative=True)}), social-commerce scarcity and FoMO ({cite(c_sec3_2[6:9], narrative=True)}), and nascent AI-driven cognitive load and regret ({cite(c_sec3_2[9:12], narrative=True)}).
-* **Co-Citation Anchors:** Co-citation counts across the core bibliographies confirm that empirical studies overwhelmingly build upon environmental psychology ({vrefs['Mehrabian_1974']['in_text']}), classic impulse-buying precursors ({vrefs['Rook_1995']['in_text']}; {vrefs['Beatty_1998']['in_text']}), online store atmospheric S-O-R models ({vrefs['Verhagen_2011']['in_text']}), and recommendation novelty ({vrefs['Zhang_2021']['in_text']}).
+Figure 3 visualizes the keyword co-occurrence network across the 20 thesaurus-standardized constructs in the {n_core}-article core corpus. Across the three bibliometric layers, inductive clustering reveals converging yet distinct structural patterns:
+* **Keyword Co-Occurrence Structure:** At resolution `1.0`, the 20 standardized concepts partition into {bib['kw_clusters_res10']} stable macro-clusters: (1) livestreaming commerce, S-O-R, and hedonic arousal; and (2) algorithmic personalization, trust, and emerging generative AI/self-regulation constructs. Increasing resolution to `1.25` splits the network into {bib['kw_clusters_res125']} finer sub-themes, separating conversational AI agents from privacy and ego-depletion constructs.
+* **Bibliographic Coupling Fronts ({bib['bc_nodes']} articles, {bib['bc_edges']} links, {bib['bc_clusters']} clusters):** Coupling analysis confirms active research fronts sharing common reference bases: livestreaming presenter-algorithm interaction ({cite(c_sec3_2[:3], narrative=True)}), personalized recommender trust and serendipity ({cite(c_sec3_2[3:6], narrative=True)}), social-commerce scarcity and FoMO ({cite(c_sec3_2[6:9], narrative=True)}), and nascent AI-driven cognitive load and regret ({cite(c_sec3_2[9:12], narrative=True)}).
+* **Co-Citation Anchors:** Co-citation counts across the core bibliographies confirm that empirical studies overwhelmingly build upon environmental psychology {paren([vrefs['Mehrabian_1974']])}, classic impulse-buying precursors {paren([vrefs['Rook_1995'], vrefs['Beatty_1998']])}, and online store atmospheric S-O-R models {paren([vrefs['Verhagen_2011']])}.
+
+<div class="academic-figure-container" style="text-align:center; margin: 20px 0;">
+{fig3_kw_svg}
+<div class="figure-caption"><strong>Figure 3:</strong> Keyword Co-Occurrence Network Across the Clean Core Corpus ($N = {n_core}$).</div>
+</div>
 
 ### 3.3. Full-Corpus Evidence Coding and TCCM Synthesis
 
@@ -496,11 +520,11 @@ Moving beyond selective narrative examples, Table 4 summarizes quantitative evid
 
 ## 4. EVIDENCE-BASED FUTURE RESEARCH AGENDA
 
-To translate the quantitative gaps in Table 4 into falsifiable empirical inquiry, Figure 3 synthesizes an **Evidence-Based Future Research Agenda** (Propositions P1-P7). Rather than presenting untested conceptual claims as established findings, each proposition below specifies construct definitions, competing theoretical predictions, boundary conditions, and empirical falsification criteria, while integrating foundational privacy-paradox ({vrefs['Awad_2006']['in_text']}; {vrefs['Aguirre_2015']['in_text']}), dark-pattern ({vrefs['Mathur_2019']['in_text']}), and algorithm-aversion ({vrefs['Logg_2019']['in_text']}) scholarship.
+To translate the quantitative gaps in Table 4 into falsifiable empirical inquiry, Figure 4 synthesizes an **Evidence-Based Future Research Agenda** (Propositions P1-P7). Rather than presenting untested conceptual claims as established findings, each proposition below specifies construct definitions, competing theoretical predictions, boundary conditions, and empirical falsification criteria, while integrating foundational privacy-paradox {paren([vrefs['Awad_2006'], vrefs['Aguirre_2015']])}, dark-pattern {paren([vrefs['Mathur_2019']])}, and algorithm-aversion {paren([vrefs['Logg_2019']])} scholarship.
 
 <div class="academic-figure-container" style="text-align:center; margin: 20px 0;">
-{fig3_svg}
-<div class="figure-caption"><strong>Figure 3:</strong> Evidence-Based Future Research Agenda Separating Fluency, Trust, and Post-Purchase Regret Nodes (Propositions P1-P7).</div>
+{fig4_svg}
+<div class="figure-caption"><strong>Figure 4:</strong> Evidence-Based Future Research Agenda Separating Fluency, Trust, and Post-Purchase Regret Nodes (Propositions P1-P7).</div>
 </div>
 
 ### 4.1. Curvilinear Personalization and Measurable Surveillance Reactance (P1, P1b)
@@ -523,7 +547,7 @@ To resolve conceptual conflation between immediate ease and cumulative satisfact
 
 ### 4.4. Candidate Self-Control Strain and Dynamic Regret Feedback (P6, P7)
 
-Self-control failure and ego depletion have long been linked to impulsive spending ({vrefs['Baumeister_2002']['in_text']}; {vrefs['Vohs_2007']['in_text']}; {vrefs['Akram_2020']['in_text']}), with {vrefs['Vohs_2007']['in_text']} showing that resource depletion elevates both impulsive urges and buying volume. However, large-scale multilab replication efforts ({vrefs['Hagger_2016']['in_text']}) report mixed effect sizes for classic ego-depletion tasks, prompting process and opportunity-cost reformulations. Future retail studies should therefore treat self-regulatory strain as a candidate mechanism tested via behavioral or cognitive-load manipulations rather than assuming universal trait depletion. Similarly, building on emerging temporal feedback studies ({vrefs['Tobon_2024']['in_text']}; {vrefs['Kumaran_2026']['in_text']}), post-purchase regret should be modeled as an explicit measurable node using experience sampling (ESM) or platform return/refund logs rather than relying solely on 3-wave panel surveys.
+Self-control failure and ego depletion have long been linked to impulsive spending {paren([vrefs['Baumeister_2002'], vrefs['Vohs_2007']])}, with {vrefs['Vohs_2007']['in_text']} showing that resource depletion elevates both impulsive urges and buying volume. However, large-scale multilab replication efforts {paren([vrefs['Hagger_2016']])} report mixed effect sizes for classic ego-depletion tasks, prompting process and opportunity-cost reformulations. Future retail studies should therefore treat self-regulatory strain as a candidate mechanism tested via behavioral or cognitive-load manipulations rather than assuming universal trait depletion. Similarly, building on emerging temporal feedback studies {paren([vrefs['Tobon_2024'], vrefs['Kumaran_2026']])}, post-purchase regret should be modeled as an explicit measurable node using experience sampling (ESM) or platform return/refund logs rather than relying solely on 3-wave panel surveys.
 * **Proposition 6 (P6):** Cognitive load and situational self-regulatory strain strengthen both the arousal-to-UBI link and the UBI-to-checkout link, an effect that should be cross-validated against opportunity-cost motivation controls.
 * **Proposition 7 (P7):** When depletion-linked impulse purchases generate post-purchase regret (captured via ESM or product-return behavior), regret recursively lowers subsequent algorithmic trust and shifts the consumer's personalization-reactance threshold leftward in future sessions.
 
