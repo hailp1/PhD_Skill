@@ -157,9 +157,9 @@ def main():
             log_rows.append([pub_id, doi, yr_str, source, title, cited, "EXCLUDE", "EC3_NON_RETAIL", "Clinical/medical domain unrelated to consumer behavior"])
             continue
 
-        if not (AI_RE.search(txt) and IMP_RE.search(txt) and ECOM_RE.search(txt)):
+        if not (IMP_RE.search(txt) and ECOM_RE.search(txt)):
             counts["EXCLUDE_EC2_OFF_TOPIC"] += 1
-            log_rows.append([pub_id, doi, yr_str, source, title, cited, "EXCLUDE", "EC2_OFF_TOPIC", "Missing concurrent AI/recommender + impulse/habit/buying + consumer/commerce nexus in T/A"])
+            log_rows.append([pub_id, doi, yr_str, source, title, cited, "EXCLUDE", "EC2_OFF_TOPIC", "Missing impulse/habit/buying + consumer/commerce nexus in T/A (only AI or neither)"])
             continue
 
         counts["INCLUDE"] += 1

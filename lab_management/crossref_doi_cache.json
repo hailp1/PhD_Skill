@@ -2180,5 +2180,88 @@
     "title": "Generation Y consumer online repurchase intention in Bangkok",
     "journal": "International Journal of Retail &amp; Distribution Management",
     "retracted": false
+  },
+  "10.1016/j.ijinfomgt.2020.102106": {
+    "ok": true,
+    "doi": "10.1016/j.ijinfomgt.2020.102106",
+    "authors": [
+      "chopdar",
+      "balakrishnan"
+    ],
+    "title": "Consumers response towards mobile commerce applications: S-O-R approach",
+    "journal": "International Journal of Information Management",
+    "retracted": false
+  },
+  "10.1016/j.jbusres.2020.06.008": {
+    "ok": true,
+    "doi": "10.1016/j.jbusres.2020.06.008",
+    "authors": [
+      "donthu",
+      "gustafsson"
+    ],
+    "title": "Effects of COVID-19 on business and research",
+    "journal": "Journal of Business Research",
+    "retracted": false
+  },
+  "10.1016/j.jretconser.2023.103356": {
+    "ok": true,
+    "doi": "10.1016/j.jretconser.2023.103356",
+    "authors": [
+      "gao",
+      "jiang",
+      "guo"
+    ],
+    "title": "How do virtual streamers affect purchase intention in the live streaming context? A presence perspective",
+    "journal": "Journal of Retailing and Consumer Services",
+    "retracted": false
+  },
+  "10.1080/10864415.2019.1619905": {
+    "ok": true,
+    "doi": "10.1080/10864415.2019.1619905",
+    "authors": [
+      "hu",
+      "chen",
+      "davison"
+    ],
+    "title": "Social Support, Source Credibility, Social Influence, and Impulsive Purchase Behavior in Social Commerce",
+    "journal": "International Journal of Electronic Commerce",
+    "retracted": false
+  },
+  "10.1016/j.jbusres.2019.11.056": {
+    "ok": true,
+    "doi": "10.1016/j.jbusres.2019.11.056",
+    "authors": [
+      "leong",
+      "hew",
+      "ooi",
+      "chong"
+    ],
+    "title": "Predicting the antecedents of trust in social commerce – A hybrid structural equation modeling with neural network approach",
+    "journal": "Journal of Business Research",
+    "retracted": false
+  },
+  "10.1016/j.jbusres.2020.05.059": {
+    "ok": true,
+    "doi": "10.1016/j.jbusres.2020.05.059",
+    "authors": [
+      "sheth"
+    ],
+    "title": "Impact of Covid-19 on consumer behavior: Will the old habits return or die?",
+    "journal": "Journal of Business Research",
+    "retracted": false
+  },
+  "10.1016/j.im.2020.103283": {
+    "ok": true,
+    "doi": "10.1016/j.im.2020.103283",
+    "authors": [
+      "wu",
+      "xin",
+      "li",
+      "yu",
+      "guo"
+    ],
+    "title": "How does scarcity promotion lead to impulse purchase in the online market? A field experiment",
+    "journal": "Information &amp; Management",
+    "retracted": false
   }
 }

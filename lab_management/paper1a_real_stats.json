@@ -12,78 +12,100 @@
     "retracted": 2,
     "eligible_ta_screened": 2446,
     "excluded_ec3_non_retail": 310,
-    "excluded_ec2_off_topic": 1773,
-    "final_included": 363
+    "excluded_ec2_off_topic": 984,
+    "final_included": 1152
   },
   "yearly_counts": {
-    "2018": 3,
-    "2019": 6,
-    "2020": 4,
-    "2021": 13,
-    "2022": 15,
-    "2023": 27,
-    "2024": 50,
-    "2025": 113,
-    "2026": 132
+    "2018": 10,
+    "2019": 11,
+    "2020": 32,
+    "2021": 46,
+    "2022": 65,
+    "2023": 122,
+    "2024": 195,
+    "2025": 313,
+    "2026": 358
   },
   "phases": {
-    "phase1_2018_2020": 13,
-    "phase2_2021_2023": 55,
-    "phase3_2024_2026": 295
+    "phase1_2018_2020": 53,
+    "phase2_2021_2023": 233,
+    "phase3_2024_2026": 866
   },
   "top_journals": [
     {
-      "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
-      "count": 21,
-      "pct": 5.8
+      "journal": "Journal of Retailing and Consumer Services",
+      "count": 62,
+      "pct": 5.4
     },
     {
-      "journal": "Journal of Retailing and Consumer Services",
-      "count": 16,
-      "pct": 4.4
+      "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
+      "count": 54,
+      "pct": 4.7
     },
     {
       "journal": "Asia Pacific Journal of Marketing and Logistics",
-      "count": 15,
-      "pct": 4.1
+      "count": 48,
+      "pct": 4.2
     },
     {
       "journal": "Sustainability",
-      "count": 13,
-      "pct": 3.6
-    },
-    {
-      "journal": "International Journal of Consumer Studies",
-      "count": 10,
-      "pct": 2.8
-    },
-    {
-      "journal": "Electronic Commerce Research",
-      "count": 8,
-      "pct": 2.2
+      "count": 36,
+      "pct": 3.1
     },
     {
       "journal": "Journal of Consumer Behaviour",
-      "count": 7,
-      "pct": 1.9
+      "count": 27,
+      "pct": 2.3
+    },
+    {
+      "journal": "International Journal of Consumer Studies",
+      "count": 24,
+      "pct": 2.1
+    },
+    {
+      "journal": "International Review of Management and Marketing",
+      "count": 17,
+      "pct": 1.5
+    },
+    {
+      "journal": "Cogent Business & Management",
+      "count": 17,
+      "pct": 1.5
     },
     {
       "journal": "PLOS ONE",
-      "count": 6,
-      "pct": 1.7
+      "count": 16,
+      "pct": 1.4
     },
     {
-      "journal": "Young Consumers",
-      "count": 6,
-      "pct": 1.7
-    },
-    {
-      "journal": "International Journal of Retail & Distribution Management",
-      "count": 5,
+      "journal": "Electronic Commerce Research",
+      "count": 16,
       "pct": 1.4
     }
   ],
   "top_cited": [
+    {
+      "authors": "Donthu et al.",
+      "year": "2020",
+      "journal": "Journal of Business Research",
+      "title": "Effects of COVID-19 on business and research",
+      "doi": "10.1016/j.jbusres.2020.06.008",
+      "citations": 1836,
+      "volume": "117",
+      "issue": "",
+      "pagination": "284-289"
+    },
+    {
+      "authors": "Sheth",
+      "year": "2020",
+      "journal": "Journal of Business Research",
+      "title": "Impact of Covid-19 on consumer behavior: Will the old habits return or die?",
+      "doi": "10.1016/j.jbusres.2020.05.059",
+      "citations": 1646,
+      "volume": "117",
+      "issue": "",
+      "pagination": "280-283"
+    },
     {
       "authors": "Chen et al.",
       "year": "2019",
@@ -96,6 +118,72 @@
       "pagination": "236-248"
     },
     {
+      "authors": "Chopdar et al.",
+      "year": "2020",
+      "journal": "International Journal of Information Management",
+      "title": "Consumers response towards mobile commerce applications: S-O-R approach",
+      "doi": "10.1016/j.ijinfomgt.2020.102106",
+      "citations": 349,
+      "volume": "53",
+      "issue": "",
+      "pagination": "102106"
+    },
+    {
+      "authors": "Hu et al.",
+      "year": "2019",
+      "journal": "International Journal of Electronic Commerce",
+      "title": "Social Support, Source Credibility, Social Influence, and Impulsive Purchase Behavior in Social Commerce",
+      "doi": "10.1080/10864415.2019.1619905",
+      "citations": 334,
+      "volume": "23",
+      "issue": "3",
+      "pagination": "297-327"
+    },
+    {
+      "authors": "Gao et al.",
+      "year": "2023",
+      "journal": "Journal of Retailing and Consumer Services",
+      "title": "How do virtual streamers affect purchase intention in the live streaming context? A presence perspective",
+      "doi": "10.1016/j.jretconser.2023.103356",
+      "citations": 316,
+      "volume": "73",
+      "issue": "",
+      "pagination": "103356"
+    },
+    {
+      "authors": "Leong et al.",
+      "year": "2020",
+      "journal": "Journal of Business Research",
+      "title": "Predicting the antecedents of trust in social commerce – A hybrid structural equation modeling with neural network approach",
+      "doi": "10.1016/j.jbusres.2019.11.056",
+      "citations": 278,
+      "volume": "110",
+      "issue": "",
+      "pagination": "24-40"
+    },
+    {
+      "authors": "Redine et al.",
+      "year": "2022",
+      "journal": "International Journal of Consumer Studies",
+      "title": "Impulse buying: A systematic literature review and future research directions",
+      "doi": "10.1111/ijcs.12862",
+      "citations": 273,
+      "volume": "47",
+      "issue": "1",
+      "pagination": "3-41"
+    },
+    {
+      "authors": "Wu et al.",
+      "year": "2021",
+      "journal": "Information & Management",
+      "title": "How does scarcity promotion lead to impulse purchase in the online market? A field experiment",
+      "doi": "10.1016/j.im.2020.103283",
+      "citations": 268,
+      "volume": "58",
+      "issue": "1",
+      "pagination": "103283"
+    },
+    {
       "authors": "Yin et al.",
       "year": "2021",
       "journal": "Sustainability",
@@ -105,106 +193,24 @@
       "volume": "13",
       "issue": "10",
       "pagination": "5671"
-    },
-    {
-      "authors": "Bag et al.",
-      "year": "2021",
-      "journal": "Benchmarking An International Journal",
-      "title": "Journey of customers in this digital era: Understanding the role of artificial intelligence technologies in user engagement and conversion",
-      "doi": "10.1108/bij-07-2021-0415",
-      "citations": 230,
-      "volume": "29",
-      "issue": "7",
-      "pagination": "2074-2098"
-    },
-    {
-      "authors": "Zhu et al.",
-      "year": "2020",
-      "journal": "International Journal of Retail & Distribution Management",
-      "title": "Generation Y consumer online repurchase intention in Bangkok",
-      "doi": "10.1108/ijrdm-04-2018-0071",
-      "citations": 222,
-      "volume": "48",
-      "issue": "1",
-      "pagination": "53-69"
-    },
-    {
-      "authors": "Akram et al.",
-      "year": "2018",
-      "journal": "Sustainability",
-      "title": "Factors Affecting Online Impulse Buying: Evidence from Chinese Social Commerce Environment",
-      "doi": "10.3390/su10020352",
-      "citations": 175,
-      "volume": "10",
-      "issue": "2",
-      "pagination": "352"
-    },
-    {
-      "authors": "Xiao et al.",
-      "year": "2019",
-      "journal": "Sustainability",
-      "title": "The Effects of Online Shopping Context Cues on Consumers’ Purchase Intention for Cross-Border E-Commerce Sustainability",
-      "doi": "10.3390/su11102777",
-      "citations": 170,
-      "volume": "11",
-      "issue": "10",
-      "pagination": "2777"
-    },
-    {
-      "authors": "Zhang et al.",
-      "year": "2018",
-      "journal": "International Journal of Information Management",
-      "title": "The role of online product recommendations on customer decision making and loyalty in social shopping communities",
-      "doi": "10.1016/j.ijinfomgt.2017.07.006",
-      "citations": 157,
-      "volume": "38",
-      "issue": "1",
-      "pagination": "150-166"
-    },
-    {
-      "authors": "Chopdar et al.",
-      "year": "2022",
-      "journal": "Journal of Business Research",
-      "title": "Examining the role of consumer impulsiveness in multiple app usage behavior among mobile shoppers",
-      "doi": "10.1016/j.jbusres.2021.11.031",
-      "citations": 141,
-      "volume": "140",
-      "issue": "",
-      "pagination": "657-669"
-    },
-    {
-      "authors": "Hu et al.",
-      "year": "2023",
-      "journal": "Journal of Retailing and Consumer Services",
-      "title": "Human-like bots are not humans: The weakness of sensory language for virtual streamers in livestream commerce",
-      "doi": "10.1016/j.jretconser.2023.103541",
-      "citations": 138,
-      "volume": "75",
-      "issue": "",
-      "pagination": "103541"
-    },
-    {
-      "authors": "Lin et al.",
-      "year": "2020",
-      "journal": "International Journal of Information Management",
-      "title": "Purchasing organic food with social commerce: An integrated food-technology consumption values perspective",
-      "doi": "10.1016/j.ijinfomgt.2019.11.001",
-      "citations": 133,
-      "volume": "51",
-      "issue": "",
-      "pagination": "102033"
     }
   ],
   "vosviewer": {
     "active_terms": 26,
-    "edges": 271,
+    "edges": 293,
     "clusters": {
       "1": {
         "terms_count": 8,
-        "occurrences": 545,
-        "tls": 1718,
-        "apy": 2024.87,
+        "occurrences": 843,
+        "tls": 2328,
+        "apy": 2024.74,
         "top_terms": [
+          {
+            "term": "live streaming",
+            "occ": 254,
+            "tls": 596,
+            "apy": 2024.85
+          },
           {
             "term": "artificial intelligence",
             "occ": 159,
@@ -218,112 +224,106 @@
             "apy": 2024.68
           },
           {
-            "term": "live streaming",
-            "occ": 67,
-            "tls": 213,
-            "apy": 2024.85
-          },
-          {
-            "term": "algorithmic curation",
-            "occ": 61,
-            "tls": 211,
-            "apy": 2025.21
+            "term": "social commerce",
+            "occ": 103,
+            "tls": 249,
+            "apy": 2023.88
           }
         ]
       },
       "2": {
         "terms_count": 6,
-        "occurrences": 310,
-        "tls": 1076,
-        "apy": 2024.87,
+        "occurrences": 911,
+        "tls": 2416,
+        "apy": 2024.55,
         "top_terms": [
           {
             "term": "trust",
-            "occ": 108,
-            "tls": 372,
-            "apy": 2024.97
+            "occ": 268,
+            "tls": 663,
+            "apy": 2024.54
           },
           {
             "term": "cognitive fit / fluency",
-            "occ": 54,
-            "tls": 216,
-            "apy": 2025.24
+            "occ": 176,
+            "tls": 523,
+            "apy": 2024.73
+          },
+          {
+            "term": "perceived value",
+            "occ": 145,
+            "tls": 377,
+            "apy": 2024.18
           },
           {
             "term": "S-O-R framework",
-            "occ": 48,
-            "tls": 183,
-            "apy": 2024.85
-          },
-          {
-            "term": "e-satisfaction",
-            "occ": 40,
-            "tls": 122,
-            "apy": 2024.72
+            "occ": 144,
+            "tls": 450,
+            "apy": 2024.83
           }
         ]
       },
       "3": {
         "terms_count": 7,
-        "occurrences": 287,
-        "tls": 1118,
-        "apy": 2024.7,
+        "occurrences": 981,
+        "tls": 2705,
+        "apy": 2024.5,
         "top_terms": [
           {
             "term": "impulse buying",
-            "occ": 88,
-            "tls": 343,
-            "apy": 2024.74
+            "occ": 341,
+            "tls": 855,
+            "apy": 2024.5
           },
           {
             "term": "emotional arousal",
-            "occ": 84,
-            "tls": 308,
-            "apy": 2024.99
+            "occ": 219,
+            "tls": 633,
+            "apy": 2024.76
           },
           {
-            "term": "flow experience",
-            "occ": 36,
-            "tls": 147,
-            "apy": 2024.58
+            "term": "hedonic motivation",
+            "occ": 139,
+            "tls": 371,
+            "apy": 2024.09
           },
           {
             "term": "scarcity & urgency",
-            "occ": 33,
-            "tls": 130,
-            "apy": 2025.24
+            "occ": 108,
+            "tls": 329,
+            "apy": 2024.92
           }
         ]
       },
       "4": {
         "terms_count": 5,
-        "occurrences": 64,
-        "tls": 272,
-        "apy": 2025.25,
+        "occurrences": 175,
+        "tls": 529,
+        "apy": 2024.92,
         "top_terms": [
           {
             "term": "privacy concerns",
-            "occ": 29,
-            "tls": 116,
-            "apy": 2025.24
+            "occ": 51,
+            "tls": 164,
+            "apy": 2024.73
           },
           {
             "term": "post-purchase regret",
-            "occ": 12,
-            "tls": 51,
-            "apy": 2025.42
-          },
-          {
-            "term": "ego depletion / fatigue",
-            "occ": 9,
-            "tls": 36,
-            "apy": 2025.0
+            "occ": 50,
+            "tls": 152,
+            "apy": 2025.06
           },
           {
             "term": "self-control",
-            "occ": 8,
-            "tls": 40,
-            "apy": 2025.75
+            "occ": 38,
+            "tls": 99,
+            "apy": 2024.95
+          },
+          {
+            "term": "ego depletion / fatigue",
+            "occ": 22,
+            "tls": 70,
+            "apy": 2025.09
           }
         ]
       }
@@ -333,38 +333,38 @@
     {
       "category": "S-O-R Framing Mentions",
       "pattern": "stimulus-organism-response|s-o-r|sor model|sor framework",
-      "count": 53,
-      "pct": 14.6
+      "count": 160,
+      "pct": 13.89
     },
     {
       "category": "Regret / Dissonance / Return Mentions",
       "pattern": "post-purchase regret|cognitive dissonance|regret|product return",
-      "count": 11,
-      "pct": 3.03
+      "count": 48,
+      "pct": 4.17
     },
     {
       "category": "Interaction / Moderated Mediation Mentions",
       "pattern": "interaction effect|multiplicative|moderated mediation|moderating effect",
-      "count": 32,
-      "pct": 8.82
+      "count": 91,
+      "pct": 7.9
     },
     {
       "category": "Curvilinear / Threshold Mentions",
       "pattern": "inverted-u|inverted u|curvilinear|threshold effect|quadratic|non-linear|nonlinear",
-      "count": 6,
-      "pct": 1.65
+      "count": 17,
+      "pct": 1.48
     },
     {
       "category": "Privacy / Reactance / Dark-Pattern Mentions",
       "pattern": "privacy|surveillance|reactance|dark pattern",
-      "count": 31,
-      "pct": 8.54
+      "count": 59,
+      "pct": 5.12
     },
     {
       "category": "Ego Depletion / Cognitive Load Mentions",
       "pattern": "ego depletion|self-regulatory|decision fatigue|cognitive load",
-      "count": 8,
-      "pct": 2.2
+      "count": 17,
+      "pct": 1.48
     }
   ]
 }
