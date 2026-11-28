@@ -1,4 +1,4 @@
-# Algorithmic Persuasion, Cognitive Depletion, and Online Impulse Buying: A Systematic Review and Dynamic Dual-Path S-O-R Framework (2018-2026)
+# AI-Driven Personalized Recommendation Systems and Online Consumer Impulse Buying Behavior: A Systematic Literature Review and Bibliometric Network Analysis
 
 **Author:** Le Phuc Hai (Lê Phúc Hải)  
 **Affiliation:** NCSKIT.org (Independent Research Group)  
