@@ -953,7 +953,7 @@
 
             const fragment = document.createDocumentFragment();
             headings.forEach((h, idx) => {
-                const anchorId = 'sec_anchor_' + idx;
+                const anchorId = h.id || ('sec_anchor_' + idx);
                 h.id = anchorId;
                 
                 const link = document.createElement('a');
