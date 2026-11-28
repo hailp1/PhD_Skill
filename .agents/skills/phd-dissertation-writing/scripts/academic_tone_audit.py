@@ -182,6 +182,17 @@ def audit_academic_text(text: str) -> dict:
     # Analyze mechanical enumeration
     enum_issues = analyze_enumeration_patterns(lines)
     issues.extend(enum_issues)
+
+    # Analyze excessive inline bolding (visual AI hallmark)
+    inline_bolds = len(re.findall(r"\*\*[^*\n]{2,60}\*\*", clean_text))
+    if inline_bolds > 60:
+        issues.append({
+            "line": 1,
+            "type": "AI Visual Formatting (Excessive Inline Bolding)",
+            "matched": f"{inline_bolds} inline **bold** spans detected",
+            "context": "Lạm dụng in đậm giữa đoạn văn (indiscriminate inline bolding) là dấu ấn thị giác điển hình của văn phong AI.",
+            "suggestion": "Gỡ bỏ in đậm ở các cụm khái niệm trong câu văn xuôi; chỉ giữ in đậm cho tiêu đề mục, nhãn bảng/hình (Table X, Figure X) hoặc mã giả thuyết/mệnh đề (H1, P1)."
+        })
     
     # Sentence length statistics
     sentence_delimiters = re.split(r"[.!?]\s+", clean_text)
